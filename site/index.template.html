@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two roads to 200 camels</title>
+<meta name="description" content="Abbasid three-TC economy engine on patch 16.2: Culture or Administrative wing at Castle, minute by minute, re-simulated live.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4EFE6;--paper-2:#EDE6D8;--ink:#1B1A17;--ink-2:#4A463F;--ink-3:#8B8578;--rule:#D8D0C0;
+  --a:#2EA7C7;--b:#E09A2E;--food:#E25A3C;--wood:#2BA089;--gold:#D4A02C;--stone:#8A93F0;--builders:#8B8578;
+  --display:"Fraunces",Georgia,serif;--mono:"IBM Plex Mono",ui-monospace,monospace;--sans:"IBM Plex Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.4}
+body{padding:0 32px 48px}
+header{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding:30px 0 18px;border-bottom:2px solid var(--ink)}
+h1{font-family:var(--display);font-weight:700;overflow-wrap:anywhere;font-size:clamp(34px,4vw,58px);line-height:1;margin:0 0 10px;letter-spacing:-0.01em}
+header p{margin:0;max-width:64ch;color:var(--ink-2);font-size:17px}
+.finish{display:flex;gap:28px;flex-wrap:wrap}
+.finish div{text-align:right}
+.finish .t{font-family:var(--mono);font-weight:600;font-size:44px;line-height:1;transition:opacity .2s}
+.finish .l{font-size:14px;color:var(--ink-2);margin-top:4px;display:flex;align-items:center;justify-content:flex-end;gap:8px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block;flex:none}
+/* controls */
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;padding:16px 0 6px;border-bottom:1px solid var(--rule)}
+.scen{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.scen h2{font-family:var(--display);font-weight:500;font-size:18px;margin:0 10px 0 0;display:flex;align-items:center;gap:8px;width:100%}
+.scen h2 span.hint{font-family:var(--sans);font-size:13px;color:var(--ink-3);font-weight:400;margin-left:auto}
+label.f{display:flex;flex-direction:column;gap:2px;font-size:12px;color:var(--ink-3)}
+select,input[type=number]{font:inherit;font-size:14px;color:var(--ink);background:var(--paper-2);border:1px solid var(--rule);border-radius:6px;padding:4px 8px}
+input[type=number]{width:72px;font-family:var(--mono)}
+.adv{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:flex-end}
+.adv summary{font-family:var(--display);font-size:16px;cursor:pointer;color:var(--ink-2)}
+.topline{position:sticky;top:0;z-index:4;background:var(--paper);padding:8px 0 4px;border-bottom:1px solid var(--rule);margin-top:6px}
+.topline h2{font-family:var(--display);font-weight:500;font-size:18px;margin:0 0 2px;display:flex;align-items:baseline;gap:14px}
+.topline h2 small{font-family:var(--sans);font-size:13px;color:var(--ink-3);font-weight:400}
+.board{display:grid;grid-template-columns:minmax(0,1fr) 500px;gap:28px;margin-top:18px}
+.board>*{min-width:0}
+.panel{position:relative;margin-bottom:10px}
+.panel h2{font-family:var(--display);font-weight:500;font-size:22px;margin:0 0 6px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.panel h2 small{font-family:var(--sans);font-size:14px;color:var(--ink-3);font-weight:400}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px}
+.chip{border:1px solid var(--rule);background:transparent;color:var(--ink-2);font:inherit;font-size:14px;padding:4px 12px;border-radius:999px;cursor:pointer;transition:background .12s ease-out,color .12s ease-out}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip .sw{width:10px;height:10px;margin-right:6px;vertical-align:1px}
+svg{display:block;width:100%;overflow:visible}
+.axis text,.lane-label,.rowlab{font-family:var(--mono);font-size:12px;fill:var(--ink-3)}
+.grid{stroke:var(--rule);stroke-width:1}
+.line{fill:none;stroke-width:2.25;stroke-linejoin:round;stroke-linecap:round}
+.line.thin{stroke-width:1.5;stroke-dasharray:5 4}
+.area{opacity:.85}
+.cursor{stroke:var(--ink);stroke-width:1;stroke-dasharray:2 3;pointer-events:none}
+.hit{fill:transparent;cursor:crosshair}
+.mk{cursor:pointer}
+.mk:hover .core{filter:brightness(.8)}
+.mk.sel .core{stroke:var(--ink);stroke-width:2}
+.dl{font-family:var(--mono);font-size:12px;fill:var(--ink-2)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:12px;line-height:1.5;padding:8px 10px;border-radius:6px;max-width:320px;opacity:0;transition:opacity .12s ease-out;z-index:5}
+.tip b{color:#fff;font-weight:600}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+aside{position:sticky;top:212px;align-self:start;background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;max-height:calc(100vh - 224px);overflow:auto}
+.techlist{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule)}
+.techlist h4{margin:0 0 6px;font-family:var(--display);font-weight:500;font-size:17px}
+.techlist table{font-size:12.5px}
+.techlist td,.techlist th{padding:3px 6px;border-bottom:1px solid var(--rule)}
+.techlist tr.cat td{font-family:var(--display);font-size:14px;padding-top:8px;border-bottom:1px solid var(--ink)}
+.st{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:12px;white-space:nowrap}
+.st i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--c);background:transparent;display:inline-block;flex:none}
+.st.done i{background:var(--c)}
+.st.research i{background:linear-gradient(90deg,var(--c) var(--p),transparent var(--p))}
+.st.locked{color:var(--ink-3)}.st.locked i{border-color:var(--rule)}
+.st.avail{color:var(--ink-2)}
+aside h3{font-family:var(--display);font-weight:500;font-size:20px;margin:0 0 2px}
+aside .at{font-family:var(--mono);font-size:30px;font-weight:600;line-height:1;margin:0 0 14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.col h4{margin:0 0 8px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:13.5px;color:var(--ink-2)}
+.kv b{font-family:var(--mono);font-weight:600;color:var(--ink);text-align:right}
+.kv .wide{grid-column:1/-1;font-family:var(--mono);font-size:12.5px;color:var(--ink-2);margin:2px 0 4px}
+.kv .wide span{color:var(--ink-3);margin-right:6px}
+.bars{display:grid;gap:4px;margin:8px 0 2px}
+.bar{display:grid;grid-template-columns:44px 1fr 48px;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.bar i{display:block;height:8px;border-radius:4px;background:var(--c);width:var(--w);min-width:2px;transition:width .35s ease-in-out}
+.bar b{text-align:right;color:var(--ink)}
+.ev{margin-top:16px;padding-top:14px;border-top:1px solid var(--rule)}
+.ev .k{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.ev .n{font-family:var(--display);font-size:20px;margin:2px 0 8px}
+.ev dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px}
+.ev dt{color:var(--ink-3)}.ev dd{margin:0}
+/* tables */
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{text-align:left;font-weight:600;color:var(--ink-2);padding:6px 8px;border-bottom:1px solid var(--ink);font-size:12.5px}
+td{padding:5px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.m,th.m{font-family:var(--mono);white-space:nowrap}
+td.r,th.r{text-align:right}
+tr.cat td{font-family:var(--display);font-size:16px;padding-top:14px;border-bottom:1px solid var(--ink);color:var(--ink)}
+.log{max-height:520px;overflow:auto;border:1px solid var(--rule);border-radius:8px}
+.log tr{cursor:pointer}.log tr:hover td{background:var(--paper-2)}
+.log td.why,.log td.res{color:var(--ink-2)}
+details.notes{margin-top:28px;border-top:1px solid var(--rule);padding-top:12px;color:var(--ink-2);font-size:14px;max-width:96ch}
+details.notes summary{cursor:pointer;font-family:var(--display);font-size:18px;color:var(--ink)}
+details.notes li{margin:4px 0}
+@media (max-width:1100px){.board{grid-template-columns:1fr}aside{position:static;max-height:none}.controls{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.topline{position:static}}
+@media (max-width:640px){body{padding:0 16px 32px}header{grid-template-columns:1fr}.finish div{text-align:left}.finish .l{justify-content:flex-start}.two{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Two roads to 200 camels</h1>
+    <p>Abbasid, three Town Centers, patch 16.2. Every number is re-simulated in your browser from cost, rate and time; change any setting and the page recomputes. Hover the charts, click any marker or log row.</p>
+  </div>
+  <div class="finish" id="finish"></div>
+</header>
+
+<section class="controls" id="controls"></section>
+
+<section class="topline">
+  <h2>What happened <small>ages large, techs above the line, buildings below. Move along it; everything below follows the cursor.</small></h2>
+  <div id="c-events"></div>
+  <div class="tip" id="tip"></div>
+</section>
+
+<main class="board">
+  <section>
+    <div class="panel"><h2>Resources per minute <small>gathered plus Algebra, before spending</small></h2><div class="chips" id="res-chips"></div><div id="c-res"></div></div>
+    <div class="panel"><h2>Units at the cursor <small>what one villager and one Camel Rider are, on each path, at this minute</small></h2><div class="two-col" id="c-units"></div></div>
+    <div class="panel"><h2>Villager split <small>who gathers what, builders in grey</small></h2><div class="two-col" id="c-split"></div></div>
+    <div class="panel"><h2>Growth <small>villagers dashed, camels solid</small></h2><div id="c-growth"></div></div>
+    <div class="panel"><h2>Buildings <small>Town Centers, stables, blacksmiths, farms</small></h2><div id="c-bld"></div></div>
+    <div class="panel"><h2>Resources spent <small>cumulative, by what it bought</small></h2><div class="two-col" id="c-spent"></div></div>
+    <div class="panel"><h2>Technology <small>bar from research start to done, dot when it first became available; hover for what it has earned back by the cursor minute</small></h2><div id="c-tech"></div></div>
+    <div class="panel"><h2>Action log</h2><div class="chips" id="log-chips"></div><div class="log" id="t-log"></div></div>
+  </section>
+  <aside id="inspector"></aside>
+</main>
+
+<details class="notes">
+  <summary>How these numbers are made</summary>
+  <ul id="notes">
+    <li>Gather rate per villager = C / (C/r + 2d/v + t_turn): carry C (10, 25 hunted), raw rate r from the game, walking speed v 1.125 tiles/s, one-way distance d, drop-off overhead t_turn fitted to the only published measurements (0.3 s). Techs multiply r; Golden Age tier 1 multiplies the result by 1.15 (1.225 with the Administrative wing).</li>
+    <li>Villagers cost 50 food (30 after Fresh Foodstuffs) and take 20 s per Town Center; a camel costs 130/45/45 and takes 35 s per stable (28 s with Military Academy, less with City Planning stacking). Research runs one tech per building at the times in the game data. Ages are the wing costs with a 100 s build; Preservation of Knowledge takes 20% off techs and wings researched after it.</li>
+    <li>Allocation is a deficit controller: villagers are split by what the next planned purchases still lack. The plan is the standard 3 TC opening; stables are added while every stable is busy and resources bank. Map: 16 sheep at the TC, 8 orchard bushes at 1 tile, 8 deer at 1.5, wood 1.5, gold and stone 1 tile (estimates, editable above).</li>
+    <li>Payback for an eco tech is the first minute at which the extra resources it produced (same villagers, with and without it) exceed its price. Military techs have no payback: they buy fighting power, not resources.</li>
+    <li>Simulated plan on patch 16.2.10604, not a recorded game. Not yet verified against a live match.</li>
+  </ul>
+</details>
+
+<script>/*__ENGINE__*/</script>
+<script>
+const E = window.AoE4Engine;
+const R = ["food","wood","gold","stone"];
+const COL = ["var(--a)","var(--b)"];
+const RCOL = {food:"var(--food)",wood:"var(--wood)",gold:"var(--gold)",stone:"var(--stone)",builders:"var(--builders)"};
+const WINGS = ["economic","culture","admin","military"];
+const WNAME = {economic:"Economic",culture:"Culture",admin:"Administrative",military:"Military"};
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const mm = t => t==null?"--":`${Math.floor(t/60)}:${String(Math.round(t%60)).padStart(2,"0")}`;
+let cursorT = 600, resView = "total", pvView = "farm", logCat = "all", selEvent = null, S = [], TMAX = 1200, firstDraw = true;
+
+// ----- scenario settings
+const CFG = [
+  {label:"Culture at Castle", wings:["economic","culture","admin"], vilTarget:200, stables:5, maxStables:8, blacksmiths:2, ecoFeudal:"feudal", cpFarmAdj:0},
+  {label:"Administrative at Castle", wings:["economic","admin","military"], vilTarget:200, stables:5, maxStables:8, blacksmiths:2, ecoFeudal:"feudal", cpFarmAdj:3},
+];
+const GLOBAL = { wood_d:1.5, gold_d:1.0, berries_d:1.0, sheep:20, farClusters:2, far_d:1.5, deerPacks:1, escortCamels:10, t_turn:0.3, idle:0.05, cpTcAdj:2, stackWalk:0.25, ecoMode:"skip3" };
+
+function buildControls(){
+  const host=document.getElementById("controls"); host.innerHTML="";
+  CFG.forEach((c,i)=>{
+    const d=document.createElement("div"); d.className="scen";
+    d.innerHTML=`<h2><span class="sw" style="background:${COL[i]}"></span>${c.label}<span class="hint">${i?"":"settings re-run the engine as you change them"}</span></h2>`
+      + ["Feudal","Castle","Imperial"].map((a,k)=>`<label class="f">${a} wing<select data-s="${i}" data-k="wing${k}">${WINGS.map(w=>`<option value="${w}" ${c.wings[k]===w?"selected":""}>${WNAME[w]}</option>`).join("")}</select></label>`).join("")
+      + `<label class="f">villagers<select data-s="${i}" data-k="vilTarget"><option value="200" ${c.vilTarget===200?"selected":""}>never stop</option><option value="140" ${c.vilTarget===140?"selected":""}>stop at 140</option><option value="120" ${c.vilTarget===120?"selected":""}>stop at 120</option><option value="100" ${c.vilTarget===100?"selected":""}>stop at 100</option></select></label>`
+      + `<label class="f">stables planned<input type="number" min="1" max="12" data-s="${i}" data-k="stables" value="${c.stables}"></label>`
+      + `<label class="f">auto-add up to<input type="number" min="1" max="14" data-s="${i}" data-k="maxStables" value="${c.maxStables}"></label>`
+      + `<label class="f">blacksmiths<select data-s="${i}" data-k="blacksmiths"><option value="1" ${c.blacksmiths===1?"selected":""}>1</option><option value="2" ${c.blacksmiths===2?"selected":""}>2</option></select></label>`
+      + `<label class="f">Feudal eco techs<select data-s="${i}" data-k="ecoFeudal"><option value="feudal" ${c.ecoFeudal==="feudal"?"selected":""}>in Feudal</option><option value="after_castle" ${c.ecoFeudal==="after_castle"?"selected":""}>after Castle (after PoK if Culture)</option></select></label>`
+      + `<label class="f">City Planning on farms<select data-s="${i}" data-k="cpFarmAdj"><option value="0" ${c.cpFarmAdj===0?"selected":""}>no</option><option value="3" ${c.cpFarmAdj===3?"selected":""}>farm grid</option></select></label>`;
+    host.appendChild(d);
+  });
+  const adv=document.createElement("div"); adv.className="adv"; adv.innerHTML=`<span style="font-family:var(--display);font-size:16px;color:var(--ink-2);margin-right:6px">Map and model</span>`
+    + `<label class="f">wood distance (tiles)<input type="number" step="0.5" min="0" max="12" data-g="wood_d" value="${GLOBAL.wood_d}"></label>`
+    + `<label class="f">gold distance<input type="number" step="0.5" min="0" max="12" data-g="gold_d" value="${GLOBAL.gold_d}"></label>`
+    + `<label class="f">close berries distance<input type="number" step="0.5" min="0" max="12" data-g="berries_d" value="${GLOBAL.berries_d}"></label>`
+    + `<label class="f">far berry clusters<input type="number" min="0" max="4" data-g="farClusters" value="${GLOBAL.farClusters}"></label>`
+    + `<label class="f">far cluster distance (with its mill)<input type="number" step="0.5" min="0" max="12" data-g="far_d" value="${GLOBAL.far_d}"></label>`
+    + `<label class="f">deer packs<input type="number" min="0" max="4" data-g="deerPacks" value="${GLOBAL.deerPacks}"></label>`
+    + `<label class="f">far food needs camels<input type="number" min="0" max="40" data-g="escortCamels" value="${GLOBAL.escortCamels}"></label>`
+    + `<label class="f">sheep<input type="number" min="0" max="40" data-g="sheep" value="${GLOBAL.sheep}"></label>`
+    + `<label class="f">drop-off overhead t_turn (s)<input type="number" step="0.1" min="0" max="5" data-g="t_turn" value="${GLOBAL.t_turn}"></label>`
+    + `<label class="f">average idle (fraction)<input type="number" step="0.01" min="0" max="0.5" data-g="idle" value="${GLOBAL.idle}"></label>`
+    + `<label class="f">TC stacking (City Planning)<select data-g="cpTcAdj"><option value="0">not touching</option><option value="1.33">row of 3 (+10.7%)</option><option value="2" selected>triangle (+16%)</option></select></label>`
+    + `<label class="f">stacking walk penalty (tiles)<input type="number" step="0.05" min="0" max="2" data-g="stackWalk" value="${GLOBAL.stackWalk}"></label>`
+    + `<label class="f">eco techs<select data-g="ecoMode"><option value="skip3" selected>tiers 1-2, skip tier 3</option><option value="asap">all three tiers</option><option value="late">tier 2 after Imperial, skip 3</option></select></label>`;
+  host.appendChild(adv);
+  host.querySelectorAll("select,input").forEach(el=>el.addEventListener("change",()=>{
+    if(el.dataset.s!=null){ const c=CFG[+el.dataset.s]; const k=el.dataset.k; if(k.startsWith("wing")) c.wings[+k[4]]=el.value; else c[k]=isNaN(+el.value)?el.value:+el.value; }
+    else { GLOBAL[el.dataset.g]=isNaN(+el.value)?el.value:+el.value; }
+    runAll(); drawAll();
+  }));
+}
+function runAll(){
+  S = CFG.map(c=>{ const r=E.simulate(Object.assign({}, c, {ecoMode:GLOBAL.ecoMode, t_turn:GLOBAL.t_turn, idle:GLOBAL.idle, cpTcAdj:GLOBAL.cpTcAdj, stackWalk:GLOBAL.stackWalk, escortCamels:GLOBAL.escortCamels, map:{wood_d:GLOBAL.wood_d, gold_d:GLOBAL.gold_d, berries:[8,350,GLOBAL.berries_d], berriesFar:[GLOBAL.farClusters,8,350,GLOBAL.far_d], deerPacks:GLOBAL.deerPacks, sheep:[GLOBAL.sheep,200,0]}})); r.label=c.label; r.done=r.milestones.DONE||r.minutes[r.minutes.length-1].t; return r; });
+  TMAX = Math.max(...S.map(s=>s.done))+40;
+}
+
+// ----- svg helpers
+const svgEl=(n,a={})=>{const e=document.createElementNS("http://www.w3.org/2000/svg",n);for(const k in a)e.setAttribute(k,a[k]);return e;};
+const niceMax=v=>{if(v<=0)return 1;const p=Math.pow(10,Math.floor(Math.log10(v)));const m=v/p;return (m<=1?1:m<=2?2:m<=2.5?2.5:m<=5?5:10)*p;};
+function frame(host,H,yMax,yTicks,pad={l:52,r:16,t:10,b:26},xMax=TMAX){
+  const W=Math.floor(host.getBoundingClientRect().width)||900; const svg=svgEl("svg",{viewBox:`0 0 ${W} ${H}`,height:H});
+  const x=t=>pad.l+(t/xMax)*(W-pad.l-pad.r); const y=v=>pad.t+(1-v/yMax)*(H-pad.t-pad.b);
+  const g=svgEl("g",{class:"axis"});
+  for(let m=0;m*60<=xMax;m+=2){const X=x(m*60);g.appendChild(svgEl("line",{class:"grid",x1:X,x2:X,y1:pad.t,y2:H-pad.b,opacity:m%4?0.5:1}));const tx=svgEl("text",{x:X,y:H-8,"text-anchor":"middle"});tx.textContent=m+"′";g.appendChild(tx);}
+  for(const v of yTicks){const Y=y(v);g.appendChild(svgEl("line",{class:"grid",x1:pad.l,x2:W-pad.r,y1:Y,y2:Y}));const tx=svgEl("text",{x:pad.l-8,y:Y+4,"text-anchor":"end"});tx.textContent=v>=1000?(v/1000)+"k":Math.round(v*10)/10;g.appendChild(tx);}
+  svg.appendChild(g);
+  const cur=svgEl("line",{class:"cursor",x1:x(cursorT),x2:x(cursorT),y1:pad.t,y2:H-pad.b}); svg.appendChild(cur);
+  const hit=svgEl("rect",{class:"hit",x:pad.l,y:0,width:W-pad.l-pad.r,height:H});
+  hit.addEventListener("pointermove",e=>{const r=svg.getBoundingClientRect();setCursor(((e.clientX-r.left)/r.width*W-pad.l)/(W-pad.l-pad.r)*xMax);});
+  svg.appendChild(hit); const f={svg,x,y,W,H,pad,cur}; frames.push(f); return f;
+}
+let frames=[];
+function drawLine(f,pts,color,cls="line",delay=0){
+  if(!pts.length) return; const d=pts.map((p,i)=>(i?"L":"M")+f.x(p[0]).toFixed(1)+" "+f.y(p[1]).toFixed(1)).join(" ");
+  const p=svgEl("path",{d,class:cls,stroke:color}); f.svg.insertBefore(p,f.cur);
+  if(!reduce&&firstDraw&&!cls.includes("thin")){const L=2400;p.style.strokeDasharray=L;p.style.strokeDashoffset=L;p.animate([{strokeDashoffset:L},{strokeDashoffset:0}],{duration:700,delay,easing:"ease-out",fill:"forwards"});}
+  return p;
+}
+function drawArea(f,top,bottom,color,opacity=.85){
+  const d=top.map((p,i)=>(i?"L":"M")+f.x(p[0]).toFixed(1)+" "+f.y(p[1]).toFixed(1)).join(" ")+" "+bottom.slice().reverse().map(p=>"L"+f.x(p[0]).toFixed(1)+" "+f.y(p[1]).toFixed(1)).join(" ")+"Z";
+  const p=svgEl("path",{d,fill:color,class:"area",opacity}); f.svg.insertBefore(p,f.cur); return p;
+}
+function label(f,x,y,text,color){const t=svgEl("text",{class:"dl",x,y,fill:color});t.textContent=text;f.svg.insertBefore(t,f.cur);}
+function endLabels(f,ends){ if(ends.length===2&&Math.abs(ends[0].y-ends[1].y)<14){const mid=(ends[0].y+ends[1].y)/2;const hi=ends[0].y<ends[1].y?0:1;ends[hi].y=mid-8;ends[1-hi].y=mid+8;} const xr=Math.max(...ends.map(e=>e.x)); ends.forEach(e=>label(f,xr,e.y,e.text,e.c)); }
+function chips(hostId,items,current,onpick){const host=document.getElementById(hostId);host.innerHTML="";items.forEach(([k,n,c])=>{const b=document.createElement("button");b.className="chip";b.setAttribute("aria-pressed",k===current);b.innerHTML=(c?`<span class="sw" style="background:${c}"></span>`:"")+n;b.onclick=()=>{[...host.children].forEach(x=>x.setAttribute("aria-pressed",false));b.setAttribute("aria-pressed",true);onpick(k);};host.appendChild(b);});}
+
+// ----- panels
+function mTotal(m,k){return k==="total"?R.reduce((a,r)=>a+m.income[r]+(m.algebra[r]||0),0):m.income[k]+(m.algebra[k]||0);}
+function drawRes(){
+  const host=document.getElementById("c-res"); host.innerHTML="";
+  const all=S.flatMap(s=>s.minutes.map(m=>mTotal(m,resView))); const yMax=niceMax(Math.max(...all)*1.05);
+  const f=frame(host,240,yMax,[0,.25,.5,.75,1].map(v=>v*yMax));
+  const ends=S.map((s,i)=>{const pts=s.minutes.map(m=>[m.t,mTotal(m,resView)]);drawLine(f,pts,COL[i],"line",i*120);const l=pts[pts.length-1];return {x:f.x(l[0])+6,y:f.y(l[1])+4,text:Math.round(l[1])+"/min",c:COL[i]};});
+  endLabels(f,ends); host.appendChild(f.svg);
+}
+function drawPV(){
+  const host=document.getElementById("c-pv"); host.innerHTML="";
+  const all=S.flatMap(s=>s.minutes.map(m=>m.perVil[pvView])); const yMax=niceMax(Math.max(...all)*1.1);
+  const f=frame(host,170,yMax,[0,.5,1].map(v=>v*yMax));
+  const ends=S.map((s,i)=>{const pts=s.minutes.map(m=>[m.t,m.perVil[pvView]]);drawLine(f,pts,COL[i],"line",i*120);const l=pts[pts.length-1];return {x:f.x(l[0])+6,y:f.y(l[1])+4,text:l[1]+"/min",c:COL[i]};});
+  endLabels(f,ends); host.appendChild(f.svg);
+}
+function drawSplit(){
+  const host=document.getElementById("c-split"); host.innerHTML="";
+  S.forEach((s,i)=>{
+    const d=document.createElement("div"); const h=document.createElement("div"); h.className="lane-label"; h.innerHTML=`<span class="sw" style="background:${COL[i]};width:10px;height:10px"></span> <span style="font-family:var(--mono);font-size:12px;color:var(--ink-3)">${s.label}</span>`; d.appendChild(h);
+    const yMax=niceMax(Math.max(...s.minutes.map(m=>m.vil))*1.05); const f=frame(d,190,yMax,[0,.5,1].map(v=>v*yMax));
+    let base=s.minutes.map(m=>[m.t,0]);
+    for(const k of ["food","wood","gold","stone","builders"]){const top=s.minutes.map((m,j)=>[m.t,base[j][1]+m.split[k]]);drawArea(f,top,base,RCOL[k]);base=top;}
+    const last=s.minutes[s.minutes.length-1]; let acc=0; for(const k of ["food","wood","gold","stone"]){const v=last.split[k]; if(v>4) label(f,f.x(last.t)+6,f.y(acc+v/2)+4,`${v} ${k}`,RCOL[k]); acc+=v;}
+    d.appendChild(f.svg); host.appendChild(d);
+  });
+}
+function drawGrowth(){
+  const host=document.getElementById("c-growth"); host.innerHTML=""; frames=frames.filter(f=>f.svg.isConnected);
+  const f=frame(host,220,200,[0,50,100,150,200]);
+  S.forEach((s,i)=>{drawLine(f,s.minutes.map(m=>[m.t,m.vil]),COL[i],"line thin");drawLine(f,s.minutes.map(m=>[m.t,m.camels]),COL[i],"line",200+i*120);});
+  const l=S[0].minutes[S[0].minutes.length-1]; label(f,f.x(l.t)+6,f.y(l.vil)+4,"villagers","var(--ink-3)"); label(f,f.x(l.t)+6,f.y(l.camels)+4,"camels","var(--ink-3)");
+  const m14=S.map(s=>minuteAt(s,Math.min(cursorT,s.done))); label(f,f.pad.l+8,f.pad.t+14,`at ${mm(cursorT)}: ${S.map((s,i)=>s.label.replace(" at Castle","")+" "+m14[i].vil+" vil / "+m14[i].camels+" camels").join("   ·   ")}`,"var(--ink-2)");
+  host.appendChild(f.svg);
+}
+function drawMil(){
+  const host=document.getElementById("c-mil"); host.innerHTML="";
+  const yMax=niceMax(Math.max(1,...S.flatMap(s=>s.minutes.map(m=>m.produced)))*1.1);
+  const f=frame(host,170,yMax,[0,yMax/2,yMax].map(v=>Math.round(v*10)/10));
+  S.forEach((s,i)=>{const pts=[];s.minutes.forEach((m,j)=>{const t0=j?s.minutes[j-1].t:0;pts.push([t0,m.produced],[m.t,m.produced]);});drawLine(f,pts,COL[i],"line");
+    const fc=s.milestones.first_camel; if(fc!=null){f.svg.insertBefore(svgEl("circle",{cx:f.x(fc),cy:f.y(0),r:5,fill:COL[i],stroke:"var(--paper)","stroke-width":1.5}),f.cur);label(f,f.x(fc)+8,f.y(0)-6-(i?0:12),`first camel ${mm(fc)}`,COL[i]);}
+    const l=s.minutes[s.minutes.length-1]; label(f,f.x(l.t)+6,f.y(l.produced)+4+(i?10:-4),`${s.summary.camels} total`,COL[i]);});
+  host.appendChild(f.svg);
+}
+function drawBld(){
+  const host=document.getElementById("c-bld"); host.innerHTML="";
+  const rows=[["tcs","Town Centers",4],["stables","stables",14],["blacksmiths","blacksmiths",3],["farms","farms",null]];
+  rows.forEach(([k,n,ymax])=>{
+    const d=document.createElement("div"); d.style.display="grid"; d.style.gridTemplateColumns="110px 1fr"; d.style.alignItems="center";
+    const lab=document.createElement("div"); lab.className="rowlab"; lab.style.cssText="font-family:var(--mono);font-size:12px;color:var(--ink-3)"; lab.textContent=n; d.appendChild(lab);
+    const c=document.createElement("div"); const yMax=ymax||niceMax(Math.max(...S.flatMap(s=>s.minutes.map(m=>m[k])))*1.05);
+    const f=frame(c,70,yMax,[yMax],{l:52,r:16,t:8,b:18});
+    S.forEach((s,i)=>{const pts=[];s.minutes.forEach((m,j)=>{if(j){pts.push([m.t,s.minutes[j-1][k]]);}pts.push([m.t,m[k]]);});drawLine(f,pts,COL[i],"line");const l=s.minutes[s.minutes.length-1];label(f,f.x(l.t)+6+(i?34:0),f.y(l[k])+4,l[k],COL[i]);});
+    c.appendChild(f.svg); d.appendChild(c); host.appendChild(d);
+  });
+}
+const CATS=[["villagers","villagers","#9B8B6E"],["units","camels","#1B1A17"],["buildings_prod","production buildings","#5C6B8A"],["buildings_eco","eco buildings and farms","#B9A77E"],["techs_mil","military techs","#8E3B46"],["techs_eco","eco techs","#3E7C59"],["ages","age-ups","#C9A227"]];
+function drawSpent(){
+  const host=document.getElementById("c-spent"); host.innerHTML="";
+  const yMax=niceMax(Math.max(...S.flatMap(s=>s.minutes.map(m=>Object.values(m.spentCat).reduce((a,b)=>a+b,0))))*1.05);
+  S.forEach((s,i)=>{
+    const d=document.createElement("div"); const h=document.createElement("div"); h.innerHTML=`<span class="sw" style="background:${COL[i]};width:10px;height:10px"></span> <span style="font-family:var(--mono);font-size:12px;color:var(--ink-3)">${s.label}</span>`; d.appendChild(h);
+    const f=frame(d,230,yMax,[0,.5,1].map(v=>v*yMax)); let base=s.minutes.map(m=>[m.t,0]);
+    for(const [k,n,c] of CATS){const top=s.minutes.map((m,j)=>[m.t,base[j][1]+m.spentCat[k]]);drawArea(f,top,base,c,.8);base=top;}
+    const last=s.minutes[s.minutes.length-1]; let acc=0; for(const [k,n,c] of CATS){const v=last.spentCat[k]; if(v>yMax*0.06) label(f,f.x(last.t)+6,f.y(acc+v/2)+4,`${Math.round(v/100)/10}k ${n}`,"var(--ink-2)"); acc+=v;}
+    d.appendChild(f.svg); host.appendChild(d);
+  });
+}
+const TCAT=[["wing","House of Wisdom"],["economy","Economy"],["blacksmith","Blacksmith"],["camel","Stable"],["university","Madrasa"]];
+function drawTech(){
+  const host=document.getElementById("c-tech"); host.innerHTML="";
+  const names=[]; TCAT.forEach(([c,n])=>{const list=Object.keys(E.TECH).filter(k=>E.TECH[k][5]===c&&S.some(s=>s.techs.find(t=>t.name===k).start!=null));if(list.length){names.push(["cat",n]);list.forEach(k=>names.push(["t",k]));}});
+  const rowH=16, pad={l:190,r:16,t:8,b:26}, H=pad.t+pad.b+names.length*rowH;
+  const f=frame(host,H,1,[],pad);
+  names.forEach(([kind,n],i)=>{
+    const Y=pad.t+i*rowH+rowH/2;
+    const t=svgEl("text",{class:"rowlab",x:pad.l-8,y:Y+4,"text-anchor":"end"}); if(kind==="cat"){t.setAttribute("style","font-family:var(--display);font-size:13px;fill:var(--ink)");} t.textContent=n; f.svg.insertBefore(t,f.cur);
+    if(kind==="cat") return;
+    S.forEach((s,si)=>{const rec=s.techs.find(x=>x.name===n); if(rec.available!=null){f.svg.insertBefore(svgEl("circle",{cx:f.x(rec.available),cy:Y+(si?3:-3),r:2.2,fill:COL[si],opacity:.55}),f.cur);} if(rec.start==null) return;
+      const r=svgEl("rect",{x:f.x(rec.start),y:Y+(si?0:-6),width:Math.max(2,f.x(rec.end??s.done)-f.x(rec.start)),height:6,rx:2,fill:COL[si],class:"mk"});
+      r.addEventListener("pointerenter",ev=>{const mt=Math.max(60,Math.floor(cursorT/60)*60); const g=rec.gainAt?rec.gainAt[mt]:null; const earned=g!=null?`<br>earned back by ${mm(mt)}: ${g} of ${Math.round(rec.paid)} (${Math.round(100*g/rec.paid)}%)`:(E.TECH[n][5]==="blacksmith"||E.TECH[n][5]==="camel"||E.TECH[n][5]==="university"?"<br>military: buys strength, not resources":""); showTip(ev,`<b>${n}</b> · ${s.label}<br>${E.EFFECT[n]||""}<br>start ${mm(rec.start)} · done ${mm(rec.end)} · ${Math.round(rec.duration)} s · ${Math.round(rec.paid)} res${earned}`);}); r.addEventListener("pointerleave",hideTip);
+      f.svg.insertBefore(r,f.cur);});
+  });
+  host.appendChild(f.svg);
+}
+function drawTechTable_unused(){
+  const host=document.getElementById("t-tech"); let html=`<table><thead><tr><th>tech</th>${S.map((s,i)=>`<th class="m" colspan="3" style="color:${COL[i]}">${s.label}</th>`).join("")}</tr><tr><th></th>${S.map(()=>`<th class="m">start → done</th><th class="m r">paid</th><th class="m r">paid back</th>`).join("")}</tr></thead><tbody>`;
+  TCAT.forEach(([c,n])=>{const list=Object.keys(E.TECH).filter(k=>E.TECH[k][5]===c&&S.some(s=>s.techs.find(t=>t.name===k).start!=null)); if(!list.length) return; html+=`<tr class="cat"><td colspan="${1+3*S.length}">${n}</td></tr>`;
+    list.forEach(k=>{html+=`<tr><td>${k}<div style="color:var(--ink-3);font-size:12px">${E.EFFECT[k]||""}</div></td>`+S.map(s=>{const r=s.techs.find(t=>t.name===k); if(r.start==null) return `<td class="m" colspan="3" style="color:var(--ink-3)">not researched</td>`; const pb=r.payback!=null?mm(r.payback):(r.gain!=null?`${Math.round(100*r.gain/r.paid)}% by end`:r.saved!=null?`${Math.round(100*r.saved/r.paid)}% by end`:(k==="algebra"?"income":(E.TECH[k][5]==="economy"||E.TECH[k][5]==="wing"||k==="agriculture"?"—":"military")));return `<td class="m">${mm(r.start)} → ${mm(r.end)}</td><td class="m r">${Math.round(r.paid)}</td><td class="m r">${pb}</td>`;}).join("")+"</tr>";});
+  });
+  host.innerHTML=html+"</tbody></table>";
+}
+const SHOW=e=>["age","golden","tech","build","army","vil"].includes(e.kind)||(e.kind==="done"&&/Age$/.test(e.label));
+function drawEvents(){
+  const host=document.getElementById("c-events"); host.innerHTML="";
+  const H=168,laneY=[46,118]; const f=frame(host,H,1,[],{l:52,r:16,t:6,b:24});
+  S.forEach((s,i)=>{
+    const Y=laneY[i]; f.svg.insertBefore(svgEl("line",{x1:f.pad.l,x2:f.W-f.pad.r,y1:Y,y2:Y,stroke:COL[i],"stroke-width":2}),f.cur);
+    const lt=svgEl("text",{class:"lane-label",x:f.pad.l,y:Y-32}); lt.textContent=s.label; f.svg.insertBefore(lt,f.cur);
+    s.events.filter(SHOW).forEach(e=>{
+      const X=f.x(e.t); const g=svgEl("g",{class:"mk",tabindex:0,role:"button","aria-label":`${mm(e.t)} ${e.label}`}); let core;
+      if(e.kind==="age"||e.kind==="done"){core=svgEl("path",{class:"core",d:`M${X} ${Y-11}L${X+9} ${Y}L${X} ${Y+11}L${X-9} ${Y}Z`,fill:e.kind==="age"?"var(--paper)":COL[i],stroke:COL[i],"stroke-width":2});}
+      else if(e.kind==="golden"){core=svgEl("path",{class:"core",d:`M${X} ${Y-27}l4 6l7 1l-5 5l1 7l-7-4l-7 4l1-7l-5-5l7-1z`,fill:"var(--gold)",stroke:"var(--paper)","stroke-width":1});}
+      else if(e.kind==="tech"){core=svgEl("rect",{class:"core",x:X-2,y:Y-20,width:4,height:13,rx:2,fill:e.cat==="economy"||e.cat==="wing"?"var(--wood)":COL[i]});}
+      else if(e.kind==="build"){core=svgEl("rect",{class:"core",x:X-2,y:Y+7,width:4,height:10,rx:2,fill:COL[i],opacity:.7});}
+      else {core=svgEl("circle",{class:"core",cx:X,cy:Y+24,r:3,fill:"var(--ink-3)"});}
+      g.appendChild(core);
+      if(e.kind==="age"){const t=svgEl("text",{class:"dl",x:X,y:Y+27,"text-anchor":"middle"});t.textContent=e.label.split(" ")[0];g.appendChild(t);}
+      const open=()=>{selEvent=e;cursorT=e.t;updateCursor();drawInspector();document.querySelectorAll(".mk.sel").forEach(m=>m.classList.remove("sel"));g.classList.add("sel");};
+      g.addEventListener("click",open); g.addEventListener("keydown",ev=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();open();}});
+      g.addEventListener("pointerenter",ev=>showTip(ev,`<b>${mm(e.t)}</b> ${e.label}<br>${e.trigger}<br>${e.effect}${Object.keys(e.cost).length?"<br>cost "+Object.entries(e.cost).map(([r,v])=>v+" "+r).join(", "):""}`)); g.addEventListener("pointerleave",hideTip);
+      f.svg.insertBefore(g,f.cur);
+    });
+  });
+  host.appendChild(f.svg);
+}
+const LOGCATS=[["all","All"],["age","Ages"],["building","Buildings"],["economy","Eco techs"],["wing","Wing techs"],["blacksmith","Blacksmith"],["camel","Stable techs"],["university","Madrasa"],["production","Production"],["golden","Golden Age"]];
+function drawLog(){
+  const host=document.getElementById("t-log");
+  let html=`<table><thead><tr><th class="m">time</th><th></th><th>action</th><th>why now</th><th>result</th><th class="m r">cost</th></tr></thead><tbody>`;
+  const rows=S.flatMap((s,i)=>s.events.filter(e=>e.kind!=="done"||/Age$/.test(e.label)).filter(e=>logCat==="all"||e.cat===logCat).map(e=>({e,i}))).sort((a,b)=>a.e.t-b.e.t);
+  rows.forEach(({e,i})=>{html+=`<tr data-t="${e.t}" data-s="${i}"><td class="m">${mm(e.t)}</td><td><span class="sw" style="background:${COL[i]};width:10px;height:10px"></span></td><td>${e.label}</td><td class="why">${e.trigger}</td><td class="res">${e.effect}</td><td class="m r">${Object.entries(e.cost).map(([r,v])=>v+" "+r[0]).join(" ")}</td></tr>`;});
+  host.innerHTML=html+"</tbody></table>";
+  host.querySelectorAll("tr[data-t]").forEach(tr=>tr.addEventListener("click",()=>{const s=S[+tr.dataset.s];selEvent=s.events.find(e=>e.t===+tr.dataset.t);cursorT=+tr.dataset.t;updateCursor();drawInspector();}));
+}
+// ----- unit cards
+function techsAt(s,t){return s.techs.filter(r=>r.end!=null&&r.end<=t).map(r=>r.name);}
+function drawUnits(){
+  const host=document.getElementById("c-units"); host.innerHTML="";
+  S.forEach((s,i)=>{
+    const done=techsAt(s,cursorT), m=minuteAt(s,cursorT), eco=done.filter(n=>E.ECO_TECH[n]); const P=s.params; const gm=m.gatherMult*(1-P.idle);
+    const rows=[["sheep (at TC)",0],["berries (orchard)",P.map.berries[2]],["deer",P.map.deer[2]],["farm",0.33],["wood",P.map.wood_d],["gold",P.map.gold_d],["stone",P.map.stone_d]];
+    const rate=(res,d,techs)=>{const key=res.split(" ")[0]; let r=E.rEff(key,d,techs,P,key==="berries"?"abbasid":undefined); if(key==="farm"){ if(done.includes("agriculture")) r*=1.15; if(done.includes("city-planning")) r*=1+0.08*P.cpFarmAdj; } return r;};
+    const tr=rows.map(([res,d])=>{const key=res.split(" ")[0]; const raw=E.RAW[key]*(key==="berries"?1.25:1); const walk=rate(res,d,[]); const tech=rate(res,d,eco); const now=tech*gm; return `<tr><td>${res}</td><td class="m r">${d}</td><td class="m r">${(60*raw).toFixed(0)}</td><td class="m r">${(60*walk).toFixed(1)}</td><td class="m r">${(60*tech).toFixed(1)}</td><td class="m r"><b>${(60*now).toFixed(1)}</b></td></tr>`;}).join("");
+    const vt=E.UNIT.villager; const wb=done.includes("wheelbarrow");
+    const mods=[["Wheelbarrow",wb,"carry +5, speed +15%"],["Horticulture",done.includes("horticulture"),"food +10%"],["Fertilization",done.includes("fertilization"),"food +10%"],["Double Broadax",done.includes("double-broadax"),"wood +15%"],["Lumber Preservation",done.includes("lumber-preservation"),"wood +15%"],["Specialized Pick",done.includes("specialized-pick"),"gold/stone +15%"],["Shaft Mining",done.includes("shaft-mining"),"gold/stone +15%"],["Agriculture",done.includes("agriculture"),"farms +15%"],["City Planning",done.includes("city-planning"),P.cpFarmAdj?`farm grid +${Math.round(8*P.cpFarmAdj)}%`:"stacked buildings only"],["Golden Age",m.golden>=1,`tier ${m.golden}, gather ×${m.gatherMult}`],["idle",true,`−${Math.round(P.idle*100)}%`]];
+    // camel
+    const elite=done.includes("elite-camel-riders"), cu=E.UNIT.camel; const melee=["bloomery","decarbonization","damascus-steel"].filter(n=>done.includes(n)).length, marm=["fitted-leatherwork","insulated-helm","master-smiths"].filter(n=>done.includes(n)).length+(done.includes("camel-rider-shields")?3:0)+(done.includes("camel-rider-barding")?2:0), rarm=["iron-undermesh","wedge-rivets","angled-surfaces"].filter(n=>done.includes(n)).length+(done.includes("camel-rider-barding")?2:0);
+    const hp=Math.round(cu.hp[elite?1:0]*(done.includes("biology")?1.25:1)); const dmgMult=m.golden>=3?1+0.15*(s.params.wings.includes("admin")&&m.golden>=3?1.5:1):1; const dmg=((cu.dmg[elite?1:0]+melee)*dmgMult).toFixed(1); const spd=(cu.speed*(done.includes("camel-handling")?1.15:1)).toFixed(2);
+    let ttime=cu.time*(done.includes("military-academy")?0.8:1); if(done.includes("city-planning")) ttime/=1+0.08*P.cpStableAdj;
+    const camelAvail=m.age>=3;
+    host.innerHTML+=`<div><h4 style="margin:0 0 6px;display:flex;gap:8px;align-items:center"><span class="sw" style="background:${COL[i]}"></span>${s.label} · ${mm(cursorT)}</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div style="background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;padding:12px 14px">
+          <div style="font-family:var(--display);font-size:19px">Villager</div>
+          <div class="kv" style="margin:6px 0"><span>hp</span><b>${vt.hp}</b><span>speed</span><b>${(vt.speed*(wb?1.15:1)).toFixed(3)} t/s</b><span>carry</span><b>${vt.carry+(wb?5:0)} (hunt ${vt.carryHunt+(wb?5:0)})</b><span>cost</span><b>${done.includes("fresh-foodstuffs")?"30 food":"50 food"}</b><span>train</span><b>${(20/(done.includes("city-planning")?1+0.08*P.cpTcAdj:1)).toFixed(1)} s × ${m.tcs} TC</b></div>
+          <table><thead><tr><th>gathers</th><th class="r">d</th><th class="r">raw</th><th class="r">walk</th><th class="r">+techs</th><th class="r">now</th></tr></thead><tbody>${tr}</tbody></table>
+          <div style="font-size:12px;color:var(--ink-3);margin-top:4px">per minute per villager; walk = C/(C/r + 2d/v + t_turn); now = with Golden Age and idle</div>
+          <div style="font-size:12.5px;margin-top:6px">${mods.map(([n,on,e])=>`<span class="st ${on?"done":"locked"}" style="--c:${COL[i]};margin:2px 8px 2px 0"><i></i>${n}${on?" · "+e:""}</span>`).join("")}</div>
+        </div>
+        <div style="background:var(--paper-2);border:1px solid var(--rule);border-radius:10px;padding:12px 14px;${camelAvail?"":"opacity:.55"}">
+          <div style="font-family:var(--display);font-size:19px">${elite?"Elite ":""}Camel Rider ${camelAvail?"":"<small style='font-family:var(--sans);font-size:12px;color:var(--ink-3)'>(Castle Age)</small>"}</div>
+          <div class="kv" style="margin:6px 0"><span>hp</span><b>${hp}</b><span>melee damage</span><b>${dmg} / ${cu.period} s</b><span>vs cavalry</span><b>+${cu.bonusCav[elite?1:0]}</b><span>armour melee / ranged</span><b>${marm} / ${rarm}</b><span>speed</span><b>${spd} t/s</b><span>cost</span><b>${cu.cost}</b><span>train</span><b>${ttime.toFixed(1)} s × ${m.stables} stables${done.includes("city-planning")?` (stacked, +${Math.round(8*P.cpStableAdj)}%)`:""}</b><span>aura</span><b>enemy cavalry −20% dmg</b></div>
+          <div style="font-size:12.5px;margin-top:6px">${[["Bloomery","bloomery"],["Decarbonization","decarbonization"],["Damascus Steel","damascus-steel"],["Fitted Leatherwork","fitted-leatherwork"],["Insulated Helm","insulated-helm"],["Master Smiths","master-smiths"],["Iron Undermesh","iron-undermesh"],["Wedge Rivets","wedge-rivets"],["Angled Surfaces","angled-surfaces"],["Camel Shields","camel-rider-shields"],["Camel Barding","camel-rider-barding"],["Camel Handling","camel-handling"],["Elite","elite-camel-riders"],["Biology","biology"],["Military Academy","military-academy"]].map(([n,k])=>`<span class="st ${done.includes(k)?"done":"locked"}" style="--c:${COL[i]};margin:2px 8px 2px 0"><i></i>${n}</span>`).join("")}${m.golden>=3?`<span class="st done" style="--c:var(--gold)"><i></i>Golden Age tier 3 dmg +${Math.round(15*(s.params.wings.includes("admin")?1.5:1))}%</span>`:""}</div>
+        </div>
+      </div></div>`;
+  });
+}
+// ----- tooltip / cursor / inspector
+const tip=document.getElementById("tip");
+function showTip(ev,html){tip.innerHTML=html;tip.style.opacity=1;const sec=tip.parentElement.getBoundingClientRect();tip.style.left=Math.min(ev.clientX-sec.left+14,sec.width-330)+"px";tip.style.top=(ev.clientY-sec.top+12)+"px";}
+function hideTip(){tip.style.opacity=0;}
+function setCursor(t){cursorT=Math.max(0,Math.min(TMAX,t));selEvent=null;updateCursor();drawInspector();drawUnits();}
+function updateCursor(){for(const f of frames){const X=f.x(cursorT);f.cur.setAttribute("x1",X);f.cur.setAttribute("x2",X);} if(S.length) drawGrowth();}
+document.addEventListener("keydown",e=>{if(e.target.tagName==="INPUT"||e.target.tagName==="SELECT")return;if(e.key==="ArrowRight")setCursor(Math.floor(cursorT/60)*60+60);if(e.key==="ArrowLeft")setCursor(Math.ceil(cursorT/60)*60-60);});
+const minuteAt=(s,t)=>s.minutes.reduce((b,m)=>Math.abs(m.t-t)<Math.abs(b.t-t)?m:b,s.minutes[0]);
+const stateAt=(s,t)=>{let last={vil:6,camels:0,pop:6,age:1,stock:{food:200,wood:200,gold:100,stone:0}};for(const e of s.events){if(e.t>t)break;last=e;}return last;};
+function drawInspector(){
+  const a=document.getElementById("inspector");
+  const cols=S.map((s,i)=>{const m=minuteAt(s,cursorT),st=stateAt(s,cursorT);const tot=R.reduce((q,r)=>q+m.income[r]+(m.algebra[r]||0),0);
+    const bars=R.map(r=>{const v=m.income[r]+(m.algebra[r]||0);return `<div class="bar"><span>${r}</span><i style="--c:${RCOL[r]};--w:${Math.max(2,100*v/Math.max(1,tot))}%"></i><b>${v}</b></div>`;}).join("");
+    const ageN={1:"Dark",2:"Feudal",3:"Castle",4:"Imperial"}[st.age];
+    return `<div class="col"><h4><span class="sw" style="background:${COL[i]}"></span>${s.label}</h4>
+      <div class="kv"><span>age</span><b>${ageN}</b><span>villagers</span><b>${st.vil}</b><span>camels</span><b>${st.camels}</b><span>pop</span><b>${st.pop}</b><span>TC·stable·smith</span><b>${m.tcs} / ${m.stables} / ${m.blacksmiths}</b><span>farms</span><b>${m.farms}</b><span>Golden Age</span><b>tier ${m.golden} (×${m.gatherMult})</b><span>techs done</span><b>${m.techs}</b></div>
+      <div class="bars">${bars}<div class="bar"><span>total</span><i style="--c:var(--ink-3);--w:100%"></i><b>${tot}</b></div></div>
+      <div class="kv"><div class="wide"><span>villagers on</span>${["food","wood","gold","stone"].map(r=>`${m.split[r]} ${r[0]}`).join(" · ")}${m.split.builders?` · ${m.split.builders} building`:""}</div><div class="wide"><span>food from</span>${Object.entries(m.sources).filter(([k,v])=>v).map(([k,v])=>`${v} ${k}`).join(" · ")||"—"}</div><div class="wide"><span>food left</span>${Object.entries(m.stockLeft).filter(([k,v])=>v>0).map(([k,v])=>`${v} ${k}`).join(" · ")||"none, farms only"}</div><div class="wide"><span>camels this minute</span>${m.produced}</div><div class="wide"><span>per villager</span>${["farm","wood","gold"].map(k=>`${m.perVil[k]} ${k}`).join(" · ")}</div><div class="wide"><span>banked</span>${R.map(r=>st.stock[r]+" "+r[0]).join(" · ")}</div></div></div>`;}).join("");
+  let ev="";
+  if(selEvent){ev=`<div class="ev"><div class="k">${mm(selEvent.t)} · ${selEvent.cat}</div><div class="n">${selEvent.label}</div><dl><dt>why now</dt><dd>${selEvent.trigger}</dd><dt>result</dt><dd>${selEvent.effect}</dd>${Object.keys(selEvent.cost).length?`<dt>cost</dt><dd>${Object.entries(selEvent.cost).map(([r,v])=>v+" "+r).join(", ")}</dd>`:""}<dt>stock after</dt><dd>${R.map(r=>selEvent.stock[r]+" "+r[0]).join(" · ")}</dd></dl></div>`;}
+  else{ev=`<div class="ev"><div class="k">around ${mm(cursorT)}</div>`+S.map((s,i)=>{const near=s.events.filter(e=>SHOW(e)&&Math.abs(e.t-cursorT)<=60).slice(0,5);return near.length?`<div style="margin-top:6px"><span class="sw" style="background:${COL[i]};width:10px;height:10px"></span> `+near.map(e=>`<span style="font-family:var(--mono);font-size:13px">${mm(e.t)}</span> ${e.label}`).join("<br><span style='display:inline-block;width:16px'></span>")+"</div>":"";}).join("")+`</div>`;}
+  const techRows=[]; TCAT.forEach(([c,n])=>{const list=Object.keys(E.TECH).filter(k=>E.TECH[k][5]===c&&S.some(s=>{const r=s.techs.find(t=>t.name===k);return r.planned||r.start!=null;})); if(!list.length) return; techRows.push(`<tr class="cat"><td>${n}</td>${S.map(()=>"<td></td>").join("")}</tr>`);
+    list.forEach(k=>{techRows.push(`<tr><td title="${E.EFFECT[k]||""}">${k}</td>`+S.map((s,i)=>{const r=s.techs.find(t=>t.name===k); let cls="locked",txt="locked",p=0; if(r.end!=null&&r.end<=cursorT){cls="done";txt="done "+mm(r.end);} else if(r.start!=null&&r.start<=cursorT){cls="research";p=Math.round(100*(cursorT-r.start)/r.duration);txt=`researching ${p}%`;} else if(!r.planned&&r.start==null){cls="locked";txt="not in plan";} else if(r.available!=null&&r.available<=cursorT){cls="avail";txt="available";} return `<td><span class="st ${cls}" style="--c:${COL[i]};--p:${p}%"><i></i>${txt}</span></td>`;}).join("")+"</tr>");});});
+  const techHtml=`<div class="techlist"><h4>Technology at ${mm(cursorT)}</h4><table><thead><tr><th>tech</th>${S.map((s,i)=>`<th style="color:${COL[i]}">${s.label.replace(" at Castle","")}</th>`).join("")}</tr></thead><tbody>${techRows.join("")}</tbody></table></div>`;
+  a.innerHTML=`<h3>At minute</h3><div class="at">${mm(cursorT)}</div><div class="two">${cols}</div>${ev}${techHtml}`;
+}
+function drawHeader(){document.getElementById("finish").innerHTML=S.map((s,i)=>`<div><div class="t">${mm(s.done)}</div><div class="l"><span class="sw" style="background:${COL[i]}"></span>${s.label} · ${s.summary.villagers} vil + ${s.summary.camels} camels · first camel ${mm(s.milestones.first_camel)}</div></div>`).join("");}
+function drawAll(){
+  frames=[]; drawHeader();
+  chips("res-chips",[["total","Total"],...R.map(r=>[r,r[0].toUpperCase()+r.slice(1),RCOL[r]])],resView,k=>{resView=k;drawRes();});
+
+  chips("log-chips",LOGCATS,logCat,k=>{logCat=k;drawLog();});
+  drawRes(); drawUnits(); drawSplit(); drawGrowth(); drawBld(); drawSpent(); drawTech(); drawEvents(); drawLog(); drawInspector(); firstDraw=false;
+}
+buildControls(); runAll(); drawAll();
+let rt; addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{firstDraw=false;drawAll();},150);});
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+{
+  "ab": {
+    "id": "abbasid_dynasty",
+    "name": "Abbasid Dynasty",
+    "abbr": "ab",
+    "slug": "abbasid",
+    "attribName": "abbasid",
+    "expansion": [
+      "base"
+    ]
+  },
+  "ay": {
+    "id": "ayyubids",
+    "name": "Ayyubids",
+    "abbr": "ay",
+    "slug": "ayyubids",
+    "attribName": "abbasid_ha_01",
+    "expansion": [
+      "sultans-ascend"
+    ]
+  },
+  "by": {
+    "id": "byzantines",
+    "name": "Byzantines",
+    "abbr": "by",
+    "slug": "byzantines",
+    "attribName": "byzantine",
+    "expansion": [
+      "sultans-ascend"
+    ]
+  },
+  "ch": {
+    "id": "chinese",
+    "name": "Chinese",
+    "abbr": "ch",
+    "slug": "chinese",
+    "attribName": "chinese",
+    "expansion": [
+      "base"
+    ]
+  },
+  "de": {
+    "id": "delhi_sultanate",
+    "name": "Delhi Sultanate",
+    "abbr": "de",
+    "slug": "delhi",
+    "attribName": "sultanate",
+    "expansion": [
+      "base"
+    ]
+  },
+  "en": {
+    "id": "english",
+    "name": "English",
+    "abbr": "en",
+    "slug": "english",
+    "attribName": "english",
+    "expansion": [
+      "base"
+    ]
+  },
+  "fr": {
+    "id": "french",
+    "name": "French",
+    "abbr": "fr",
+    "slug": "french",
+    "attribName": "french",
+    "expansion": [
+      "base"
+    ]
+  },
+  "gol": {
+    "id": "golden_horde",
+    "name": "Golden Horde",
+    "abbr": "gol",
+    "slug": "goldenhorde",
+    "attribName": "mongol_ha_gol",
+    "expansion": [
+      "dynasties-of-the-east"
+    ]
+  },
+  "hr": {
+    "id": "holy_roman_empire",
+    "name": "Holy Roman Empire",
+    "abbr": "hr",
+    "slug": "hre",
+    "attribName": "hre",
+    "expansion": [
+      "base"
+    ]
+  },
+  "hl": {
+    "id": "house_of_lancaster",
+    "name": "House of Lancaster",
+    "abbr": "hl",
+    "slug": "lancaster",
+    "attribName": "lancaster",
+    "expansion": [
+      "knights-of-cross-and-rose"
+    ]
+  },
+  "ja": {
+    "id": "japanese",
+    "name": "Japanese",
+    "abbr": "ja",
+    "slug": "japanese",
+    "attribName": "japanese",
+    "expansion": [
+      "sultans-ascend"
+    ]
+  },
+  "je": {
+    "id": "jeanne_darc",
+    "name": "Jeanne d'Arc",
+    "abbr": "je",
+    "slug": "jeannedarc",
+    "attribName": "french_ha_01",
+    "expansion": [
+      "sultans-ascend"
+    ]
+  },
+  "jin": {
+    "id": "jin_dynasty",
+    "name": "Jin Dynasty",
+    "abbr": "jin",
+    "slug": "jindynasty",
+    "attribName": "jin_dynasty",
+    "expansion": [
+      "yue-feis-legacy"
+    ]
+  },
+  "kt": {
+    "id": "knights_templar",
+    "name": "Knights Templar",
+    "abbr": "kt",
+    "slug": "templar",
+    "attribName": "templar",
+    "expansion": [
+      "knights-of-cross-and-rose"
+    ]
+  },
+  "mac": {
+    "id": "macedonian_dynasty",
+    "name": "Macedonian Dynasty",
+    "abbr": "mac",
+    "slug": "macedonian",
+    "attribName": "byzantine_ha_mac",
+    "expansion": [
+      "dynasties-of-the-east"
+    ]
+  },
+  "ma": {
+    "id": "malians",
+    "name": "Malians",
+    "abbr": "ma",
+    "slug": "malians",
+    "attribName": "malian",
+    "expansion": [
+      "base"
+    ]
+  },
+  "mo": {
+    "id": "mongols",
+    "name": "Mongols",
+    "abbr": "mo",
+    "slug": "mongols",
+    "attribName": "mongol",
+    "expansion": [
+      "base"
+    ]
+  },
+  "od": {
+    "id": "order_of_the_dragon",
+    "name": "Order of the Dragon",
+    "abbr": "od",
+    "slug": "orderofthedragon",
+    "attribName": "hre_ha_01",
+    "expansion": [
+      "sultans-ascend"
+    ]
+  },
+  "ot": {
+    "id": "ottomans",
+    "name": "Ottomans",
+    "abbr": "ot",
+    "slug": "ottomans",
+    "attribName": "ottoman",
+    "expansion": [
+      "base"
+    ]
+  },
+  "ru": {
+    "id": "rus",
+    "name": "Rus",
+    "abbr": "ru",
+    "slug": "rus",
+    "attribName": "rus",
+    "expansion": [
+      "base"
+    ]
+  },
+  "sen": {
+    "id": "sengoku_daimyo",
+    "name": "Sengoku Daimyo",
+    "abbr": "sen",
+    "slug": "sengoku",
+    "attribName": "japanese_ha_sen",
+    "expansion": [
+      "dynasties-of-the-east"
+    ]
+  },
+  "tug": {
+    "id": "tughlaq_dynasty",
+    "name": "Tughlaq Dynasty",
+    "abbr": "tug",
+    "slug": "tughlaq",
+    "attribName": "sultanate_ha_tug",
+    "expansion": [
+      "dynasties-of-the-east"
+    ]
+  },
+  "zx": {
+    "id": "zhu_xis_legacy",
+    "name": "Zhu Xi's Legacy",
+    "abbr": "zx",
+    "slug": "zhuxi",
+    "attribName": "chinese_ha_01",
+    "expansion": [
+      "sultans-ascend"
+    ]
+  }
+}

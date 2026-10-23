@@ -1,0 +1,34 @@
+== top 8 overall:
+  military admin    culture  vil 120 eco minimal cp3.0 bs2 DONE 17:26 techs 17:24 pop200 17:26 | feudal 4:14 tc3 7:36 castle 9:33 imp 15:03 | GA 5:49/9:28/10:19 | spent 43970
+  military admin    culture  vil 140 eco minimal cp3.0 bs2 DONE 17:26 techs 17:24 pop200 17:26 | feudal 4:14 tc3 7:36 castle 9:33 imp 15:03 | GA 5:49/9:28/10:19 | spent 43970
+  military admin    economic vil 120 eco minimal cp3.0 bs2 DONE 17:28 techs 17:28 pop200 17:26 | feudal 4:14 tc3 7:36 castle 9:33 imp 15:03 | GA 5:49/9:28/10:19 | spent 44275
+  military admin    economic vil 140 eco minimal cp3.0 bs2 DONE 17:28 techs 17:28 pop200 17:26 | feudal 4:14 tc3 7:36 castle 9:33 imp 15:03 | GA 5:49/9:28/10:19 | spent 44275
+  culture  admin    economic vil 120 eco minimal cp3.0 bs2 DONE 17:29 techs 16:47 pop200 17:29 | feudal 4:14 tc3 7:32 castle 9:18 imp 14:00 | GA 6:23/9:42/10:49 | spent 41772
+  culture  admin    economic vil 140 eco minimal cp3.0 bs2 DONE 17:29 techs 16:47 pop200 17:29 | feudal 4:14 tc3 7:32 castle 9:18 imp 14:00 | GA 6:23/9:42/10:49 | spent 41772
+  culture  admin    economic vil 120 eco late    cp3.0 bs2 DONE 17:31 techs 17:06 pop200 17:31 | feudal 4:14 tc3 7:32 castle 9:18 imp 14:00 | GA 6:23/9:42/10:49 | spent 44932
+  culture  admin    economic vil 140 eco late    cp3.0 bs2 DONE 17:31 techs 17:06 pop200 17:31 | feudal 4:14 tc3 7:32 castle 9:18 imp 14:00 | GA 6:23/9:42/10:49 | spent 44932
+== City Planning farms adjacency 0.0: best per feudal wing
+  economic admin    culture  vil 140 eco late    cp0.0 bs2 DONE 17:52 techs 17:25 pop200 17:52 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:39 | GA 6:23/9:38/10:35 | spent 46020
+  culture  admin    economic vil 120 eco minimal cp0.0 bs2 DONE 17:33 techs 17:05 pop200 17:33 | feudal 4:14 tc3 7:32 castle 9:18 imp 14:13 | GA 6:23/9:42/10:45 | spent 42325
+  admin    culture  economic vil 120 eco late    cp0.0 bs2 DONE 17:37 techs 17:23 pop200 17:37 | feudal 4:14 tc3 7:30 castle 9:40 imp 14:54 | GA 6:23/9:38/10:33 | spent 46075
+  military culture  admin    vil 140 eco minimal cp0.0 bs2 DONE 17:45 techs 17:02 pop200 17:45 | feudal 4:14 tc3 7:36 castle 9:33 imp 14:25 | GA 5:49/9:28/10:35 | spent 42180
+== City Planning farms adjacency 3.0: best per feudal wing
+  economic admin    military vil 120 eco late    cp3.0 bs2 DONE 17:44 techs 17:42 pop200 17:44 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:46 | GA 6:23/9:38/10:35 | spent 46880
+  culture  admin    economic vil 120 eco minimal cp3.0 bs2 DONE 17:29 techs 16:47 pop200 17:29 | feudal 4:14 tc3 7:32 castle 9:18 imp 14:00 | GA 6:23/9:42/10:49 | spent 41772
+  admin    military economic vil 120 eco minimal cp3.0 bs2 DONE 17:33 techs 17:33 pop200 17:31 | feudal 4:14 tc3 7:30 castle 9:40 imp 15:08 | GA 6:23/9:38/10:19 | spent 43832
+  military admin    culture  vil 120 eco minimal cp3.0 bs2 DONE 17:26 techs 17:24 pop200 17:26 | feudal 4:14 tc3 7:36 castle 9:33 imp 15:03 | GA 5:49/9:28/10:19 | spent 43970
+== castle wing with economic feudal (cp 0 unless admin):
+  cp0.0 economic culture  admin    vil 140 eco asap    cp0.0 bs2 DONE 18:02 techs 17:09 pop200 18:02 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:29 | GA 6:23/9:38/10:50 | spent 44082
+  cp3.0 economic culture  admin    vil 140 eco asap    cp3.0 bs2 DONE 18:02 techs 17:03 pop200 18:02 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:29 | GA 6:23/9:38/10:50 | spent 44082
+  cp0.0 economic admin    culture  vil 140 eco late    cp0.0 bs2 DONE 17:52 techs 17:25 pop200 17:52 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:39 | GA 6:23/9:38/10:35 | spent 46020
+  cp3.0 economic admin    military vil 120 eco late    cp3.0 bs2 DONE 17:44 techs 17:42 pop200 17:44 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:46 | GA 6:23/9:38/10:35 | spent 46880
+  cp0.0 economic military admin    vil 140 eco minimal cp0.0 bs2 DONE 18:02 techs 17:07 pop200 18:02 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:40 | GA 6:23/8:56/10:26 | spent 42095
+  cp3.0 economic military admin    vil 140 eco late    cp3.0 bs2 DONE 18:01 techs 17:58 pop200 18:01 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:40 | GA 6:23/8:56/10:26 | spent 46112
+== eco timing (economic/culture/admin, 120, cp0):
+  economic culture  admin    vil 120 eco asap    cp0.0 bs2 DONE 18:20 techs 17:09 pop200 18:20 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:29 | GA 6:23/9:38/10:50 | spent 44600
+  economic culture  admin    vil 120 eco asap    cp0.0 bs1 DONE 19:15 techs 19:15 pop200 18:29 | feudal 4:14 tc3 7:30 castle 9:45 imp 12:34 | GA 6:23/9:42/11:11 | spent 44220
+  economic culture  admin    vil 120 eco late    cp0.0 bs2 DONE 18:15 techs 17:17 pop200 18:15 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:27 | GA 6:23/9:38/10:46 | spent 44460
+  economic culture  admin    vil 120 eco late    cp0.0 bs1 DONE 19:15 techs 19:15 pop200 18:28 | feudal 4:14 tc3 7:30 castle 9:45 imp 12:34 | GA 6:23/9:42/11:11 | spent 44587
+  economic culture  admin    vil 120 eco minimal cp0.0 bs2 DONE 18:15 techs 16:46 pop200 18:15 | feudal 4:14 tc3 7:30 castle 9:45 imp 14:27 | GA 6:23/9:38/10:46 | spent 41020
+  economic culture  admin    vil 120 eco minimal cp0.0 bs1 DONE 19:15 techs 19:15 pop200 18:25 | feudal 4:14 tc3 7:30 castle 9:45 imp 12:34 | GA 6:23/9:42/11:11 | spent 40780
+== villagers (best per):

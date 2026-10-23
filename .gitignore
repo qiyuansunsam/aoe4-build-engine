@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+site/dist/
+site/shots/
+site/_page.js
+site/_patch_*.py
+engine/_patch_*.py
+server.log
+*.tmp
+.wrangler/
+node_modules/

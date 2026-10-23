@@ -1,0 +1,31 @@
+feudal   castle   imperial vil eco     DONE  techs pop200 | feudal tc3  castle imp  | golden1/2/3       | spent
+military admin    culture  120 minimal cp3.0 17:26 17:24 17:26 | 4:14 7:36 9:33 15:03 | 5:49 9:28 10:19 | 43970
+military admin    culture  140 minimal cp3.0 17:26 17:24 17:26 | 4:14 7:36 9:33 15:03 | 5:49 9:28 10:19 | 43970
+military admin    economic 120 minimal cp3.0 17:28 17:28 17:26 | 4:14 7:36 9:33 15:03 | 5:49 9:28 10:19 | 44275
+military admin    economic 140 minimal cp3.0 17:28 17:28 17:26 | 4:14 7:36 9:33 15:03 | 5:49 9:28 10:19 | 44275
+culture  admin    economic 120 minimal cp3.0 17:29 16:47 17:29 | 4:14 7:32 9:18 14:00 | 6:23 9:42 10:49 | 41772
+culture  admin    economic 140 minimal cp3.0 17:29 16:47 17:29 | 4:14 7:32 9:18 14:00 | 6:23 9:42 10:49 | 41772
+culture  admin    economic 120 late    cp3.0 17:31 17:06 17:31 | 4:14 7:32 9:18 14:00 | 6:23 9:42 10:49 | 44932
+culture  admin    economic 140 late    cp3.0 17:31 17:06 17:31 | 4:14 7:32 9:18 14:00 | 6:23 9:42 10:49 | 44932
+culture  admin    military 120 late    cp3.0 17:31 16:48 17:31 | 4:14 7:32 9:18 14:00 | 6:23 9:42 10:49 | 44590
+culture  admin    military 120 minimal cp3.0 17:31 16:44 17:31 | 4:14 7:32 9:18 14:00 | 6:23 9:42 10:49 | 41950
+culture  admin    military 140 late    cp3.0 17:31 16:48 17:31 | 4:14 7:32 9:18 14:00 | 6:23 9:42 10:49 | 44590
+culture  admin    military 140 minimal cp3.0 17:31 16:44 17:31 | 4:14 7:32 9:18 14:00 | 6:23 9:42 10:49 | 41950
+culture  admin    economic 120 minimal cp0.0 17:33 17:05 17:33 | 4:14 7:32 9:18 14:13 | 6:23 9:42 10:45 | 42325
+culture  admin    economic 140 minimal cp0.0 17:33 17:05 17:33 | 4:14 7:32 9:18 14:13 | 6:23 9:42 10:45 | 42325
+admin    military economic 120 minimal cp3.0 17:33 17:33 17:31 | 4:14 7:30 9:40 15:08 | 6:23 9:38 10:19 | 43832
+
+best per (feudal, castle):
+  military admin    -> imperial culture  vil 120 eco minimal DONE 17:26 techs 17:24 pop200 17:26
+  culture  admin    -> imperial economic vil 120 eco minimal DONE 17:29 techs 16:47 pop200 17:29
+  admin    military -> imperial economic vil 120 eco minimal DONE 17:33 techs 17:33 pop200 17:31
+  admin    culture  -> imperial economic vil 120 eco late    DONE 17:35 techs 16:49 pop200 17:35
+  admin    economic -> imperial culture  vil 120 eco late    DONE 17:41 techs 17:23 pop200 17:41
+  culture  military -> imperial admin    vil 120 eco asap    DONE 17:43 techs 16:46 pop200 17:43
+  economic admin    -> imperial military vil 120 eco late    DONE 17:44 techs 17:42 pop200 17:44
+  military culture  -> imperial admin    vil 140 eco minimal DONE 17:45 techs 17:02 pop200 17:45
+  culture  economic -> imperial admin    vil 140 eco minimal DONE 17:53 techs 16:27 pop200 17:53
+  military economic -> imperial admin    vil 140 eco late    DONE 18:00 techs 17:50 pop200 18:00
+  economic military -> imperial admin    vil 140 eco late    DONE 18:01 techs 17:58 pop200 18:01
+  economic culture  -> imperial admin    vil 140 eco asap    DONE 18:02 techs 17:09 pop200 18:02
+EXIT 0
