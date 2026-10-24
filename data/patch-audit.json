@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-23",
+  "status": "installed-build-matches-latest-released-notes",
+  "installed": {
+    "patch": "16.3.11308",
+    "steamBuildId": "24231237",
+    "executableVersion": "16.3.11308.0",
+    "executablePath": "C:/Program Files (x86)/Steam/steamapps/common/Age of Empires IV/RelicCardinal.exe",
+    "evidence": "Windows executable ProductVersion read without launching the game.",
+    "archiveSha256": "03b8e431c91920535fa65cdae340ee206f31bbdfbb1740feddb4a0430625a977"
+  },
+  "latestReleased": {
+    "version": "16.3.11308",
+    "url": "https://www.ageofempires.com/news/age-of-empires-iv-patch-16-2-10884/",
+    "notesPublishedAt": "2026-06-18",
+    "releaseDate": null,
+    "dateNote": "Hotfix appended to older notes; no separate publication date stated.",
+    "summary": "The appended hotfix addresses a console startup crash. No balance changes are listed for it.",
+    "balanceChangesListed": false
+  },
+  "preview": {
+    "version": "17.0",
+    "status": "announced-not-released",
+    "publishedAt": "2026-10-22",
+    "scheduledRelease": "2026-10-29",
+    "url": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+    "appliedToCatalog": false,
+    "summary": "Upcoming changes remain separate from installed facts. Re-extract after the game updates."
+  },
+  "checks": [
+    {
+      "id": "building_town_center_abb",
+      "name": "Town Center",
+      "field": "buildTimeSeconds",
+      "installed": 150,
+      "announcedPrevious": 150,
+      "announcedNext": 165,
+      "status": "matches-pre-release-value",
+      "source": {
+        "asset": "attrib/ebps/races/abbasid/buildings/building_town_center_abb.rgd",
+        "pbgid": 199641,
+        "sha256": "66779ebfcf0c68ff7decd1b647b6691221be56c32d3d5da966c8b94e03194ee0"
+      },
+      "notesUrl": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "applied": false,
+      "reason": "17.0 is a preview scheduled for 2026-10-29; audit date is 2026-10-23."
+    },
+    {
+      "id": "unit_landsknecht_3_hre",
+      "name": "Landsknecht",
+      "field": "cost.food",
+      "installed": 60,
+      "announcedPrevious": 60,
+      "announcedNext": 50,
+      "status": "matches-pre-release-value",
+      "source": {
+        "asset": "attrib/ebps/races/hre/units/unit_landsknecht_3_hre.rgd",
+        "pbgid": 136940,
+        "sha256": "bc0ce2409ea63e0b9cc3af5232021219ba4001c60b4a5ef666ff3d2cf7a1f5b3"
+      },
+      "notesUrl": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "applied": false,
+      "reason": "17.0 is a preview scheduled for 2026-10-29; audit date is 2026-10-23."
+    },
+    {
+      "id": "unit_landsknecht_3_hre_ha_01",
+      "name": "Gilded Landsknecht",
+      "field": "cost.food",
+      "installed": 120,
+      "announcedPrevious": 120,
+      "announcedNext": 100,
+      "status": "matches-pre-release-value",
+      "source": {
+        "asset": "attrib/ebps/races/hre_ha_01/units/unit_landsknecht_3_hre_ha_01.rgd",
+        "pbgid": 5959292,
+        "sha256": "c7ee3376ed2aa457a800bf46bdd0d96279fac8f7736d85b98311d88c7fead2d4"
+      },
+      "notesUrl": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "applied": false,
+      "reason": "17.0 is a preview scheduled for 2026-10-29; audit date is 2026-10-23."
+    },
+    {
+      "id": "upgrade_teardrop_shields_byz",
+      "name": "Teardrop Shields",
+      "field": "cost.food",
+      "installed": 100,
+      "announcedPrevious": 100,
+      "announcedNext": 150,
+      "status": "matches-pre-release-value",
+      "source": {
+        "asset": "attrib/upgrade/races/byzantine/research/upgrade_teardrop_shields_byz.rgd",
+        "pbgid": 2104320,
+        "sha256": "61e9a803b3b9a2b1ecab56518fd766bdaf7bc92f64f49eeb4949716975eade91"
+      },
+      "notesUrl": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "applied": false,
+      "reason": "17.0 is a preview scheduled for 2026-10-29; audit date is 2026-10-23."
+    },
+    {
+      "id": "upgrade_teardrop_shields_byz",
+      "name": "Teardrop Shields",
+      "field": "cost.gold",
+      "installed": 250,
+      "announcedPrevious": 250,
+      "announcedNext": 350,
+      "status": "matches-pre-release-value",
+      "source": {
+        "asset": "attrib/upgrade/races/byzantine/research/upgrade_teardrop_shields_byz.rgd",
+        "pbgid": 2104320,
+        "sha256": "61e9a803b3b9a2b1ecab56518fd766bdaf7bc92f64f49eeb4949716975eade91"
+      },
+      "notesUrl": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "applied": false,
+      "reason": "17.0 is a preview scheduled for 2026-10-29; audit date is 2026-10-23."
+    }
+  ],
+  "verification": {
+    "mode": "all-populated-base-fields",
+    "tests": "python -X utf8 scripts/test_game_catalog.py",
+    "scope": [
+      "unit health, cost, train time, armor, movement and population",
+      "building health, armor, cost and build time",
+      "technology cost, time, scalar properties and targeting",
+      "weapon damage, type, bonuses, ranges and timing fields",
+      "all visible playable civilization records",
+      "source IDs, archive fingerprint and duplicate-key preservation"
+    ],
+    "unitForms": 1291,
+    "buildings": 795,
+    "technologies": 1269
+  },
+  "limitations": [
+    "Source-field agreement is not proof of effective in-match totals. Entity definitions may already bake in civilization-specific changes.",
+    "Conditional state-tree actions, aura stacking and complete animation attack periods remain unresolved.",
+    "No verified blanket claim that AoE4 World is inaccurate; no external database values replace installed facts.",
+    "The preview checks are selected cross-checks, not an exhaustive transcription of every future balance change.",
+    "Historical simulation parameters use a separate ruleset and are not silently upgraded by this database audit."
+  ]
+}

@@ -1,0 +1,70 @@
+{{Upcoming|October 29th 2026|Raiders of the North}}
+{{Stub}}
+{{Infobox AoE4 unit
+|Image = <gallery>
+</gallery>
+|Intro = {{4icons|Raiders of the North}}
+|Type = Light ranged gunpowder cavalry
+|Civilization = {{4icons|Scots}}
+|Age = {{4icons|Imperial Age}}
+|Building = 
+}}
+<!--
+|Food = 
+|Gold = 
+|Time = 
+|HP = <small>(Regular)</small><br/ > <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|MROF =  seconds
+|Speed =  tiles/second
+|Pop = 1
+|MDamage =  <small>(Regular)</small><br/ > <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|Armor = 0
+|PierceArmor = 0
+|LOS = 
+|UpTo = 
+|UpTime = 
+|UpCost = 
+|MBonus =  <small>(Regular)</small><br/ > vs Heavy <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|Ability =
+}}
+-->
+The '''Border Reiver''' is an upcoming unique [[Ranged cavalry unit (Age of Empires IV)|ranged cavalry unit]] in ''[[Age of Empires IV: Raiders of the North]]'' available to the [[Scots]]. It can be created starting in the [[Imperial Age (Age of Empires IV)|Imperial Age]]. It excels at raiding enemy perimeters and countering enemy ranged cavalry.
+<!--
+== Ability ==
+
+== Tactics ==
+-->
+== Further statistics ==
+{{S&W
+|Size = 60
+|S = [[Ranged cavalry unit (Age of Empires IV)|Ranged cavalry]]
+|C =
+}}
+<!--
+{{Boosts|Technologies
+|Attack = 
+|Armor = {{4icons|Fitted Leatherwork}} (+1 melee)<br />{{4icons|Insulated Helm}} (+1 melee)<br />{{4icons|Master Smiths}} (+1 melee)<br />{{4icons|Iron Undermesh}} (+1 ranged)<br />{{4icons|Wedge Rivets}} (+1 ranged)<br />{{4icons|Angled Surfaces}} (+1 ranged) 
+|HP = {{4icons|Biology}} (+25%)
+|Creation = {{4icons|Military Academy}} (+33%)
+|Ability = 
+{{Boosts|Aura and ability enhancements
+|Creation = 
+|Attack = 
+|Speed =
+|Ability = 
+|Resists = 
+}}
+
+== Dialogue lines ==
+{{Main|/Dialogue lines}}
+-->
+== Gallery ==
+<gallery>
+Border Reiver Civ Page.webp|A group of Border Reivers skirmishing against enemy Spearmen
+</gallery>
+
+{{Units List (Age of Empires IV)}}
+[[Category:Ranged cavalry]]
+[[Category:Gunpowder cavalry]]
+[[Category:Scots]]
+[[Category:Raiders of the North]]

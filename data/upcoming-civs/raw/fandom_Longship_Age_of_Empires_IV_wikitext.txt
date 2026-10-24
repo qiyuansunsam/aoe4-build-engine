@@ -1,0 +1,69 @@
+{{for|unit in [[Age of Empires IV: Raiders of the North]]|the unit in Age of Empires II|Longship (Age of Empires II)}}
+{{Upcoming|October 29th 2026|Raiders of the North}}
+{{Stub}}
+{{Infobox AoE4 unit
+|Name = Longship
+|Image = 
+|Intro = {{4icons|Raiders of the North}}
+|Type = Ship
+|Civilization = {{4icons|Vikings}}
+|Age = {{4icons|Feudal Age}}
+|Food = 
+|Gold = 
+|Building = {{4icons|Dock}}
+}}
+<!--
+|Time = 
+|HP = <small>(Regular)</small><br/ ><small>(Veteran)</small><br/ ><small>(Elite)</small>
+|MROF =  seconds
+|Speed =  tiles/second
+|Pop = 1
+|MDamage =  <small>(Regular)</small><br/ ><small>(Veteran)</small><br/ ><small>(Elite)</small>
+|Armor = 0
+|PierceArmor = 0
+|LOS = 
+|UpTo = 
+|UpTime = 
+|UpCost = 
+|MBonus =  <small>(Regular)</small><br/ >vs Heavy <small>(Veteran)</small><br/ ><small>(Elite)</small>
+|Ability =
+}}
+-->
+The '''Longship''' is an upcoming unique variant of the [[Archer ship (Age of Empires IV)|archer ship]] in ''[[Age of Empires IV: Raiders of the North]]'' available to the [[Vikings (Age of Empires IV)|Vikings]]. It can transport units, with each passenger increasing the Longship's hit points and causing it to fire an additional arrow.
+<!--
+== Ability ==
+
+== Tactics ==
+-->
+== Further statistics ==
+{{S&W
+|Size = 100
+|S = [[incendiary ship]]s
+|W = [[springald ship]]s
+}}
+<!--
+{{Boosts|Technologies
+|Size = 100
+|Armor = {{4icons|Armored Hull}} (+1 ranged)<br />{{4icons|Shipwrights}} (+1 ranged)
+|Attack = {{4icons|Steeled Arrow}} (+1)<br />{{4icons|Balanced Projectiles}} (+1)<br />{{4icons|Platecutter Point}} (+1)
+|HP = {{4icons|Armored Hull}} (+20%)<br />{{4icons|Shipwrights}} (+20%)
+|Creation = {{4icons|Military Academy}} (+33%)
+|Other = {{4icons|Heated Shot}} (Arrows light enemy Ships on fire, dealing 30 damage over 10 seconds)
+}}
+{{Boosts|Aura and ability enhancements
+}}
+
+== Dialogue lines ==
+{{Main|/Dialogue lines}}
+-->
+== Gallery ==
+<gallery>
+Longship Civ Page.webp|Several Longships near a Viking port
+Longship AoE4 Discord Promo.png|Different variants of the Longship
+</gallery>
+
+{{Units List (Age of Empires IV)}}
+[[Category:Warships]]
+[[Category:Ships in Age of Empires IV]]
+[[Category:Vikings (Age of Empires IV)]]
+[[Category:Raiders of the North]]

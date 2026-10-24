@@ -1,0 +1,5 @@
+{
+  "note": "UI uplift variant files shipped in the default build. Switch a/b per area and rebuild with: python -X utf8 site/build.py. Gallery: site/uplift/gallery.html (python -X utf8 site/uplift/make_gallery.py).",
+  "css": ["site/uplift/chart-a.css", "site/uplift/shell-b.css", "site/uplift/rail-b.css"],
+  "js": ["site/uplift/chart-a.js", "site/uplift/shell-b.js", "site/uplift/rail-b.js"]
+}

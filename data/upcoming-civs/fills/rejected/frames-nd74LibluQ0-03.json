@@ -1,0 +1,23 @@
+{
+ "transcribedBy": "opus-agent frame read nd74LibluQ0#3 + blind re-read",
+ "fills": [
+  {
+   "civ": "vikings",
+   "kind": "unit",
+   "name": "Scout",
+   "field": "trainTimeSeconds",
+   "value": 23,
+   "variant": null,
+   "frame": "C:/Users/Sam/projects/aoe4-build-crafter/.cache/upcoming-frames/nd74LibluQ0/s_01485.jpg",
+   "timestamp": "24:45",
+   "quote": "23s",
+   "confidence": "inferred",
+   "newItem": "Standard Scout trained at the Town Center",
+   "note": "Faded; second digit read as 3 after enhancement.",
+   "verdict": "rejected",
+   "blindValue": null,
+   "tieReason": "",
+   "videoId": "nd74LibluQ0"
+  }
+ ]
+}

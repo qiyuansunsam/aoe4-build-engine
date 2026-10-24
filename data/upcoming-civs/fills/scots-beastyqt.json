@@ -1,0 +1,1618 @@
+{
+ "civ": "scots",
+ "transcribedBy": "opus-agent: BeastyqtSC2 c_oaynL66jY",
+ "videoId": "c_oaynL66jY",
+ "fills": [
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Cattle",
+   "field": "cost.food",
+   "value": 75,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "4:56",
+   "quote": "And the cattle cost 7525 and you can garrison eight villagers and I'm assuming two cattle, right?",
+   "confidence": "inferred",
+   "note": "caption runs the two numbers together ('7525') and names no resource; split as 75 food / 25 gold by the food-first cost order"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Cattle",
+   "field": "cost.gold",
+   "value": 25,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "4:56",
+   "quote": "And the cattle cost 7525 and you can garrison eight villagers and I'm assuming two cattle, right?",
+   "confidence": "inferred",
+   "note": "second number of '7525'; resource not spoken"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Cattle",
+   "field": "age",
+   "value": "Dark",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "5:25",
+   "quote": "But this is basically cow boom in dark age.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Cattle",
+   "field": "building",
+   "value": "Tower House",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "3:57",
+   "quote": "And these are the towers that you can create. Tower houses. Produces highland cattle.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Pikeman",
+   "field": "hp",
+   "value": 100,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "9:56",
+   "quote": "Oh, hard hardened pikemen. Excuse my So, they have 100 HP, 000 armor.",
+   "confidence": "heard",
+   "note": "Hardened tier, read in Feudal | variant tagged 2026-10-24: tier/upgrade reading, not base",
+   "variant": "Hardened"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Pikeman",
+   "field": "armor.melee",
+   "value": 0,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "9:56",
+   "quote": "So, they have 100 HP, 000 armor.",
+   "confidence": "inferred",
+   "note": "caption '000 armor' read as 0 melee / 0 ranged; Hardened tier | variant tagged 2026-10-24: tier/upgrade reading, not base",
+   "variant": "Hardened"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Pikeman",
+   "field": "armor.ranged",
+   "value": 0,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "9:56",
+   "quote": "So, they have 100 HP, 000 armor.",
+   "confidence": "inferred",
+   "note": "caption '000 armor' read as 0 melee / 0 ranged; Hardened tier | variant tagged 2026-10-24: tier/upgrade reading, not base",
+   "variant": "Hardened"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Cateran",
+   "field": "hp",
+   "value": 110,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:46",
+   "quote": "And they cost only food. Wait, that's really strong. 110 HP, 10 damage.",
+   "confidence": "heard",
+   "note": "Feudal tier"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Cateran",
+   "field": "damage",
+   "value": 10,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:35",
+   "quote": "10 damage plus 10 plus four versus worker and 17 torch damage.",
+   "confidence": "heard",
+   "note": "Feudal tier; repeated at 10:46 '110 HP, 10 damage'. Castle 12, Imperial 20 in unmappedFacts"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Cateran",
+   "field": "cost.food",
+   "value": 90,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "30:24",
+   "quote": "catarans. These guys cost only food. 90 food. They do 20 damage per hit.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Cateran",
+   "field": "cost.wood",
+   "value": 0,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:46",
+   "quote": "And they cost only food.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Cateran",
+   "field": "cost.gold",
+   "value": 0,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:46",
+   "quote": "And they cost only food.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Cateran",
+   "field": "cost.stone",
+   "value": 0,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:46",
+   "quote": "And they cost only food.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Cateran",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:26",
+   "quote": "And then we got a new unit, Katerin. Kadaran.",
+   "confidence": "inferred",
+   "note": "shown in the Feudal Age unit pass (chapter 'Feudal Units & Upgrades'); age word not spoken"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Gallowglass",
+   "field": "hp",
+   "value": 180,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "22:56",
+   "quote": "They have 180 HP with 32 base armor and they do 21 damage and they have spear wall of course.",
+   "confidence": "heard",
+   "note": "Castle tier"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Gallowglass",
+   "field": "armor.melee",
+   "value": 3,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "22:56",
+   "quote": "They have 180 HP with 32 base armor",
+   "confidence": "inferred",
+   "note": "'32 base armor' read as 3 melee / 2 ranged"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Gallowglass",
+   "field": "armor.ranged",
+   "value": 2,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "22:56",
+   "quote": "They have 180 HP with 32 base armor",
+   "confidence": "inferred",
+   "note": "'32 base armor' read as 3 melee / 2 ranged"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Gallowglass",
+   "field": "damage",
+   "value": 21,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "23:03",
+   "quote": "base armor and they do 21 damage and they have spear wall of course.",
+   "confidence": "heard",
+   "note": "read after he started Castle blacksmith upgrades at 21:52 ('Let's get the blacksmith upgrades as well'), so it may include +damage upgrades; Corvinus reads base 19 | variant tagged 2026-10-24: tier/upgrade reading, not base",
+   "variant": "with blacksmith upgrades"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Gallowglass",
+   "field": "cost.food",
+   "value": 140,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "23:09",
+   "quote": "What do they cost? 1480. I mean that is expensive",
+   "confidence": "inferred",
+   "note": "caption '1480' split as 140 food / 80 gold; resources not spoken"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Gallowglass",
+   "field": "cost.gold",
+   "value": 80,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "23:09",
+   "quote": "What do they cost? 1480. I mean that is expensive",
+   "confidence": "inferred",
+   "note": "caption '1480' split as 140 food / 80 gold; resources not spoken"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Gallowglass",
+   "field": "age",
+   "value": "Castle",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "22:11",
+   "quote": "Okay, but we have a new unit which are gallow ass",
+   "confidence": "inferred",
+   "note": "first appears after reaching Castle (chapter 'Castle Units')"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Border Reiver",
+   "field": "armor.ranged",
+   "value": 4,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "25:42",
+   "quote": "No, you can't. Wait, what? Four ranged armor.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Border Reiver",
+   "field": "damage",
+   "value": 19,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "25:48",
+   "quote": "Pistol 19 damage plus 10 versus ranged cavalry.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Border Reiver",
+   "field": "speed",
+   "value": 1.69,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "26:03",
+   "quote": "Oh, and they have torch attack by the way. 169 moving speed.",
+   "confidence": "heard",
+   "note": "spoken 'one sixty-nine'; repeated at 33:42 '169 movement speed'"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Border Reiver",
+   "field": "age",
+   "value": "Imperial",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "25:09",
+   "quote": "Master border reavers. So, these are apparently Imperial units that you can get now with this uh with this thing.",
+   "confidence": "heard",
+   "note": "musterable earlier (Castle) via the Mustering Hall after Snowdoun Gate"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Border Reiver",
+   "field": "building",
+   "value": "Archery Range",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:43",
+   "quote": "over here in archer ranges. We can make border reavers ravers and taxmen.",
+   "confidence": "heard",
+   "note": "also musterable at the Mustering Hall (25:09)"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Kirkman",
+   "field": "cost.gold",
+   "value": 150,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "7:20",
+   "quote": "Wow, Kirkman. 30 second production time, 150 gold.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Kirkman",
+   "field": "trainTimeSeconds",
+   "value": 30,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "7:20",
+   "quote": "Wow, Kirkman. 30 second production time, 150 gold.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Kirkman",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "6:45",
+   "quote": "Does not apply to landmarks. trans early access to Kirkman that can create fish ponds.",
+   "confidence": "inferred",
+   "note": "Feudal only via Stone of Destiny; otherwise Castle via Monastery (26:25 'you can build these fish ponds in castle, but if you go for this landmark, you can build them in feudal')"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Kirkman",
+   "field": "building",
+   "value": "Monastery",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "26:14",
+   "quote": "we got monastery that we didn't build. siege workshop and we got a keep. So, this is where you recruit your monks, your Kirkmen, and now you can go get relics with them, too.",
+   "confidence": "heard",
+   "note": "in Feudal (Stone of Destiny) they appeared before any Monastery existed, presumably from the landmark (7:20)"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Ghillie",
+   "field": "building",
+   "value": "Tower House",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "4:48",
+   "quote": "So, you can produce a scout out of it.",
+   "confidence": "heard",
+   "note": "said while inspecting a Tower House. At 1:44 the unique scout is also shown next to villagers at game start, so the Town Center likely produces it too (not stated)"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Ghillie",
+   "field": "age",
+   "value": "Dark",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "1:44",
+   "quote": "They have a unique scout.",
+   "confidence": "inferred",
+   "note": "available at game start"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Archer",
+   "field": "cost.food",
+   "value": 45,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "13:16",
+   "quote": "Archers 4535. Wait, they cost less wood than food.",
+   "confidence": "heard",
+   "note": "'4535' split as 45 food / 35 wood, supported by 'they cost less wood than food'"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Archer",
+   "field": "cost.wood",
+   "value": 35,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "13:16",
+   "quote": "Archers 4535. Wait, they cost less wood than food.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Archer",
+   "field": "damage",
+   "value": 6,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "13:36",
+   "quote": "So, normal archers have five plus five plus five. These guys got uh six plus five. 6 plus five.",
+   "confidence": "heard",
+   "note": "Feudal tier; Imperial 14 +9 vs melee infantry in unmappedFacts"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Archer",
+   "field": "range",
+   "value": 4.5,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "13:48",
+   "quote": "Normally, it's five tiles. Okay, so you have 0.5 less tiles, but more damage.",
+   "confidence": "heard",
+   "note": "5 - 0.5 as stated; Imperial 5.5 'total' in unmappedFacts"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Highland Archer",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "18:06",
+   "quote": "So, three structures unlocks mastering of Highland Archers adds a must charge.",
+   "confidence": "inferred",
+   "note": "Highland Archers trained and mustered during the Feudal pass"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Tacksman",
+   "field": "age",
+   "value": "Imperial",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:43",
+   "quote": "over here in archer ranges. We can make border reavers ravers and taxmen. We didn't make these.",
+   "confidence": "inferred",
+   "note": "first seen in Imperial; at 33:16 'So, these are the imperial units and these are their final stats.'"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Tacksman",
+   "field": "building",
+   "value": "Archery Range",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:43",
+   "quote": "over here in archer ranges. We can make border reavers ravers and taxmen.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Man-at-Arms (standard, with Lochaber Axes)",
+   "field": "cost.food",
+   "value": 90,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:13",
+   "quote": "We got early men at arms, which cost 9020.",
+   "confidence": "inferred",
+   "note": "caption '9020' split as 90 food / 20 gold; standard Man-at-Arms is 100 food / 20 gold, so this may be a caption error"
+  },
+  {
+   "civ": "scots",
+   "kind": "unit",
+   "name": "Man-at-Arms (standard, with Lochaber Axes)",
+   "field": "cost.gold",
+   "value": 20,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:13",
+   "quote": "We got early men at arms, which cost 9020.",
+   "confidence": "inferred"
+  },
+  {
+   "civ": "scots",
+   "kind": "building",
+   "name": "Tower House",
+   "field": "population",
+   "value": 15,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "4:08",
+   "quote": "Can be upgraded with weaponry and fortifications. Attacks while garrison increases max pop by 15.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "building",
+   "name": "Tower House",
+   "field": "garrison",
+   "value": 8,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "4:56",
+   "quote": "you can garrison eight villagers and I'm assuming two cattle, right?",
+   "confidence": "heard",
+   "note": "8 unit slots; cattle slots separate (see Tower House replaces Outpost.cap)"
+  },
+  {
+   "civ": "scots",
+   "kind": "building",
+   "name": "Tower House",
+   "field": "age",
+   "value": "Dark",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "4:29",
+   "quote": "So why would you not just always build this another house? Maybe because you don't have enough wood in dark age.",
+   "confidence": "inferred",
+   "note": "built and used in Dark Age"
+  },
+  {
+   "civ": "scots",
+   "kind": "building",
+   "name": "Mustering Hall",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "0:35",
+   "quote": "Master units quickly at the mustering hole from feudal age.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "building",
+   "name": "Fishpond",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "26:25",
+   "quote": "So, you can build these fish ponds in castle, but if you go for this landmark, you can build them in feudal",
+   "confidence": "heard",
+   "note": "Feudal with Stone of Destiny; Castle otherwise"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Barmkins",
+   "field": "effectValue",
+   "value": 4,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "12:43",
+   "quote": "Barkins tower houses are granted lands to construct barkins offering four additional garrison slots for island Catalin events of raids.",
+   "confidence": "heard",
+   "note": "+4 Highland Cattle garrison slots per Tower House"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Barmkins",
+   "field": "building",
+   "value": "Tower House",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "12:43",
+   "quote": "So now we can upgrade areroslits right here. We'll upgrade on this one. Barkins tower houses are granted lands",
+   "confidence": "inferred",
+   "note": "read from the Tower House's upgrade panel, as far as the commentary shows"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Barmkins",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "12:43",
+   "quote": "Barkins tower houses are granted lands to construct barkins offering four additional garrison slots",
+   "confidence": "inferred",
+   "note": "seen during the Feudal pass"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Basket-Hilted Broadswords",
+   "field": "effectValue",
+   "value": 25,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "29:09",
+   "quote": "Catarans will Scottish brawlers and and dirks increasing attack speed by 25%. And melee armor by two.",
+   "confidence": "heard",
+   "note": "+25% Cateran attack speed, +2 melee armor (name not spoken; 'new upgrade for catarans' in Imperial)"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Basket-Hilted Broadswords",
+   "field": "age",
+   "value": "Imperial",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "29:09",
+   "quote": "Um, okay. We have a new upgrade for uh uh catarans.",
+   "confidence": "inferred",
+   "note": "appears in the Imperial upgrade pass"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Birlinn Crews",
+   "field": "effectValue",
+   "value": 50,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "12:02",
+   "quote": "Berlin crews masters of or sail galleys gain 50% movement speed and 20% attack speed.",
+   "confidence": "heard",
+   "note": "+50% galley movement speed, +20% attack speed"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Birlinn Crews",
+   "field": "building",
+   "value": "Dock",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "11:46",
+   "quote": "dock. They seem to have everything completely normal. Unless I am missing something, everything looks standard. And they have a unique upgrade. Berlin crews",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Birlinn Crews",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "12:02",
+   "quote": "And they have a unique upgrade. Berlin crews masters of or sail",
+   "confidence": "inferred",
+   "note": "seen at the Dock during the Feudal pass; not shown whether it was researchable then"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Cateran's Trail",
+   "field": "effectValue",
+   "value": 15,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "16:28",
+   "quote": "Cataran's trail. Katar increases the move and speed of infantry by 15%. Infantry heal for one sec, one health per second in stealth forest while out of combat.",
+   "confidence": "heard",
+   "note": "+15% nearby infantry movement speed; infantry heal 1 HP/s in Stealth Forest out of combat"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Cateran's Trail",
+   "field": "building",
+   "value": "Mustering Hall",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "16:28",
+   "quote": "Cataran's trail. Katar increases the move and speed of infantry by 15%.",
+   "confidence": "heard",
+   "note": "read in the Mustering Hall tech list"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Cateran's Trail",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "16:28",
+   "quote": "Cataran's trail. Katar increases the move and speed of infantry by 15%.",
+   "confidence": "inferred",
+   "note": "listed in the Mustering Hall during Feudal"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Clan Traditions",
+   "field": "effectValue",
+   "value": 15,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:51",
+   "quote": "Melee infantry damage increased by 15%. Highland ambush bonus duration is increased by 10.",
+   "confidence": "inferred",
+   "note": "tech name not spoken; matched to Clan Traditions by its effect. +15% melee infantry damage, Highland Ambush duration +10 (unit not stated)"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Clan Traditions",
+   "field": "cost.food",
+   "value": 1200,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:43",
+   "quote": "Okay, so you can see this is reduced to 375. This is 1,200. And it looks like all lowland techs are gold cost and all highland techs are food costs.",
+   "confidence": "inferred",
+   "note": "pairing of '1,200' with Clan Traditions is from reading order; food from 'all highland techs are food costs'; full price (no Highland landmark built)"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Clan Traditions",
+   "field": "age",
+   "value": "Castle",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:51",
+   "quote": "Melee infantry damage increased by 15%. Highland ambush bonus duration is increased by 10.",
+   "confidence": "inferred",
+   "note": "read during Castle Age"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Clan Traditions",
+   "field": "building",
+   "value": "Mustering Hall",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:43",
+   "quote": "And it looks like all lowland techs are gold cost and all highland techs are food costs.",
+   "confidence": "inferred"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Fermtouns and Pastures",
+   "field": "effectValue",
+   "value": 20,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "12:16",
+   "quote": "New upgrade, firm towns and pastures. Villagers gather from farms 20% faster and highland cattle gather from berry bushes 20% faster.",
+   "confidence": "heard",
+   "note": "+20% farm gather and +20% cattle berry gather"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Fermtouns and Pastures",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "12:33",
+   "quote": "It is expensive for feudal",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Feuds Aside",
+   "field": "effectValue",
+   "value": 20,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:34",
+   "quote": "The Highlands share their gunpowder stores among all region, increasing the attack speed of taxmen, border reavers, and gunpowder siege engines by 20%.",
+   "confidence": "inferred",
+   "note": "tech name not spoken; matched to Feuds Aside by its effect"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Feuds Aside",
+   "field": "cost.food",
+   "value": 2400,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:43",
+   "quote": "So, it cost 2,400 if you didn't go for the highland landmarks",
+   "confidence": "inferred",
+   "note": "resource not spoken (highland techs cost food per 24:51); full price without Highland landmarks"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Feuds Aside",
+   "field": "age",
+   "value": "Imperial",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:34",
+   "quote": "The Highlands share their gunpowder stores among all region",
+   "confidence": "inferred",
+   "note": "read in Imperial"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Feuds Aside",
+   "field": "building",
+   "value": "Mustering Hall",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:43",
+   "quote": "So, it cost 2,400 if you didn't go for the highland landmarks",
+   "confidence": "inferred",
+   "note": "regional (Highland) tech, so Mustering Hall"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Fortified Tower Houses",
+   "field": "effectValue",
+   "value": 5,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "21:07",
+   "quote": "All towers fortified themselves with stone increase their fire armor by five.",
+   "confidence": "heard",
+   "note": "+5 fire armor"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Fortified Tower Houses",
+   "field": "cost.stone",
+   "value": 200,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "21:12",
+   "quote": "So, you can't get more HP because they already got giga HP, but instead you can get fire armor for 200 stone.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Fortified Tower Houses",
+   "field": "building",
+   "value": "Tower House",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "21:04",
+   "quote": "In tower houses, we have unique to Scots.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Fortified Tower Houses",
+   "field": "age",
+   "value": "Castle",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "21:04",
+   "quote": "In tower houses, we have unique to Scots. All towers fortified themselves with stone",
+   "confidence": "inferred",
+   "note": "first seen in the Castle pass"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Lion's Duty",
+   "field": "effectValue",
+   "value": 1,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "16:10",
+   "quote": "Infantry gain one armor when near near landmarks, keeps towerhouses and stonewall house stonewall towers. That is giga strong.",
+   "confidence": "inferred",
+   "note": "tech name not spoken; matched by effect. At 16:46 'All infantry gains one one armor', possibly +1 melee and +1 ranged"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Lion's Duty",
+   "field": "building",
+   "value": "Mustering Hall",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "16:10",
+   "quote": "Okay, so this is lowland tech. Infantry gain one armor when near near landmarks",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Lion's Duty",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "16:10",
+   "quote": "Okay, so this is lowland tech. Infantry gain one armor",
+   "confidence": "inferred",
+   "note": "listed in the Mustering Hall during Feudal"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Lochaber Axes",
+   "field": "effectValue",
+   "value": 3,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "23:18",
+   "quote": "lockabber axes metadatarms equipped lockab lockabber axes gaining three damage and four anti-avalry damage. Men at- arms brace against cavalry charges.",
+   "confidence": "heard",
+   "note": "+3 damage, +4 bonus vs cavalry, Men-at-Arms can brace"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Lochaber Axes",
+   "field": "age",
+   "value": "Castle",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "23:18",
+   "quote": "unique upgrade lock lockabber axes",
+   "confidence": "inferred",
+   "note": "seen in the Castle pass"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Snaphance Locks",
+   "field": "effectValue",
+   "value": 5,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "29:23",
+   "quote": "They look pretty same except shap shapance locks with new shapance mechanism. Taxmen and border reavers gain five damage against melee infantry and gain a brief increase of their movement speed after firing their weapon u in a jify.",
+   "confidence": "inferred",
+   "note": "+5 damage vs melee infantry for Tacksmen and Border Reivers plus a brief speed boost after firing; this differs from the wiki 'replaces Serpentine Powder' text, and the speaker may be reading two techs together"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Snaphance Locks",
+   "field": "age",
+   "value": "Imperial",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "29:23",
+   "quote": "except shap shapance locks with new shapance mechanism",
+   "confidence": "inferred",
+   "note": "Imperial upgrade pass"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Stew Ponds",
+   "field": "effectValue",
+   "value": 1,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:31",
+   "quote": "Two ponds increases fish pond capacity by one and increases the gatherings of workers their fishbs from 10 to 20%.",
+   "confidence": "heard",
+   "note": "+1 Fishpond capacity; nearby-worker gather bonus 10% -> 20%"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Stew Ponds",
+   "field": "age",
+   "value": "Castle",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:31",
+   "quote": "Two ponds increases fish pond capacity by one",
+   "confidence": "inferred",
+   "note": "read in Castle"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Stew Ponds",
+   "field": "building",
+   "value": "Mustering Hall",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:43",
+   "quote": "Okay, so you can see this is reduced to 375. This is 1,200. And it looks like all lowland techs are gold cost",
+   "confidence": "inferred",
+   "note": "regional (Lowland) tech list"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Wallace's Rally",
+   "field": "effectValue",
+   "value": 50,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "8:48",
+   "quote": "Wallace Wallace's rally instead of military academy. Wallace's legacy continues to inspire the people, increasing infantry production speed by 50%.",
+   "confidence": "heard",
+   "note": "+50% infantry production speed; new infantry +25% movement speed out of combat for 25 s"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "Wallace's Rally",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "10:05",
+   "quote": "they take 10 seconds to produce cuz we got the um the upgrade in feudal that increases production time",
+   "confidence": "inferred",
+   "note": "researched during Feudal at 8:48"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "We Stand Alone",
+   "field": "effectValue",
+   "value": 30,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:17",
+   "quote": "We stand alone. Embrace that bastard masonry of the lowlands. All building health is increased by 30% and imp placement attack speeds are increased by 50%.",
+   "confidence": "heard",
+   "note": "+30% building HP; +50% emplacement attack speed; buildings self-repair 3 HP/s"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "We Stand Alone",
+   "field": "age",
+   "value": "Imperial",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:10",
+   "quote": "And then we have last but not least, we got lowland thing again. We stand alone.",
+   "confidence": "inferred"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "We Stand Alone",
+   "field": "building",
+   "value": "Mustering Hall",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "31:10",
+   "quote": "we got lowland thing again. We stand alone.",
+   "confidence": "inferred",
+   "note": "regional (Lowland) tech"
+  },
+  {
+   "civ": "scots",
+   "kind": "technology",
+   "name": "'Seven Sisters' cannons",
+   "field": "effectValue",
+   "value": 7,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "27:47",
+   "quote": "Are you telling me this thing has seven cannons?",
+   "confidence": "heard",
+   "note": "7 cannon emplacements; per-cannon damage in unmappedFacts"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Abbey of the Isles",
+   "field": "effectValue",
+   "value": 135,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "34:19",
+   "quote": "The relic can be moved to military technology buildings to provide 135% increased research and production speed in addition to area healing.",
+   "confidence": "heard",
+   "note": "+135% research/production speed where the relic sits; heal 1 HP/s, +1 per age"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Abbey of the Isles",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "34:16",
+   "quote": "Let's do that. Let's go for the other landmarks.",
+   "confidence": "inferred",
+   "note": "first landmark of the Highland remake"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Abbey of the Isles",
+   "field": "region",
+   "value": "Highlands",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "19:36",
+   "quote": "do lowlands and then we'll do highlands in the remake.",
+   "confidence": "inferred",
+   "note": "built in the Highland remake"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Stone of Destiny",
+   "field": "effectValue",
+   "value": 30,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "6:22",
+   "quote": "Buildings constructed around the store of destiny have 30% of their construction cost rebated as gold.",
+   "confidence": "heard",
+   "note": "30% of construction cost refunded as gold; does not apply to landmarks"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Stone of Destiny",
+   "field": "age",
+   "value": "Feudal",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "6:13",
+   "quote": "Let's move on to the next thing which is the age of storm of destiny.",
+   "confidence": "inferred",
+   "note": "Dark->Feudal age-up choice"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Stone of Destiny",
+   "field": "region",
+   "value": "Lowlands",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "15:42",
+   "quote": "Ah, so the left side landmarks are lowlands and the right side are highlands. Is that how it works? Lowland technology costs are reduced by 50%.",
+   "confidence": "inferred",
+   "note": "speaker unsure ('Is that how it works?'); the Lowland discount was active after building Stone of Destiny"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Snowdoun Gate",
+   "field": "effectValue",
+   "value": 190,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "19:36",
+   "quote": "Produces total infantry for free with a value of 190 resources per minute.",
+   "confidence": "heard",
+   "note": "free infantry worth 190 resources/min"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Snowdoun Gate",
+   "field": "age",
+   "value": "Castle",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:11",
+   "quote": "Uh, what else do we have in Castle Age? Uh, oh, we have this, of course. Snowdoom Gate.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Snowdoun Gate",
+   "field": "region",
+   "value": "Lowlands",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "24:19",
+   "quote": "Snowdoom Gate. Snow down Gate. Multiple landmarks from the lowlands constructed.",
+   "confidence": "heard"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Snowdoun Gate",
+   "field": "productionTimeSeconds",
+   "value": 52,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "20:11",
+   "quote": "So you can produce pikeman, men at arms, cataran or highland archers. 52 seconds production time.",
+   "confidence": "inferred",
+   "note": "which unit was selected isn't stated; he then waits for 'Three archers' (20:52), so it is probably Highland Archers. Mustering Hall techs speed this up 15% each"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Tower of Skye",
+   "field": "effectValue",
+   "value": 15,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "36:03",
+   "quote": "Tower of Sky acts as a tower house equipped with aeroslits and a sprinkled in placement. Creates a local stealth forest and increases infantry damage by 15% while in stealth forests.",
+   "confidence": "heard",
+   "note": "+15% infantry damage in Stealth Forest"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Tower of Skye",
+   "field": "age",
+   "value": "Castle",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "36:03",
+   "quote": "All right, let's go next. Tower of Sky",
+   "confidence": "inferred",
+   "note": "second landmark of the Highland remake"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Tower of Skye",
+   "field": "region",
+   "value": "Highlands",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "36:46",
+   "quote": "Wait, is that because ah every Highland landmark you create, you can build four more.",
+   "confidence": "inferred"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Dhùn Èideann",
+   "field": "effectValue",
+   "value": 100,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "27:14",
+   "quote": "produces gunpowder siege engine for 100 less gold. Gunpowder siege weapons gain one tile range.",
+   "confidence": "heard",
+   "note": "gunpowder siege -100 gold here; +1 tile range for gunpowder siege; 7 cannons"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Dhùn Èideann",
+   "field": "age",
+   "value": "Imperial",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "26:53",
+   "quote": "So, let us age up once again. Doom 89.",
+   "confidence": "inferred",
+   "note": "'Doom 89' is likely the caption for Dhùn Èideann; Castle->Imperial age-up"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Dhùn Èideann",
+   "field": "region",
+   "value": "Lowlands",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "19:36",
+   "quote": "do lowlands and then we'll do highlands in the remake.",
+   "confidence": "inferred",
+   "note": "third landmark of the Lowland run"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Three Loch Lookout",
+   "field": "effectValue",
+   "value": 75,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "38:20",
+   "quote": "Okay, the number of warriors received from mastering is increased by 75%.",
+   "confidence": "heard",
+   "note": "+75% warriors per muster; also +3 muster charges; can muster a navy near water"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Three Loch Lookout",
+   "field": "age",
+   "value": "Imperial",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "37:43",
+   "quote": "And last but not least, we got three lo lock lock lookout",
+   "confidence": "inferred",
+   "note": "third landmark of the Highland remake"
+  },
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Three Loch Lookout",
+   "field": "region",
+   "value": "Highlands",
+   "videoId": "c_oaynL66jY",
+   "timestamp": "37:34",
+   "quote": "And now if we building hole, by the way, uh these researchers are going to be full price and these ones are going to be discounted.",
+   "confidence": "inferred",
+   "note": "Highland remake landmark"
+  },
+  {
+   "civ": "scots",
+   "kind": "bonus",
+   "name": "Highland Wealth",
+   "field": "effectValue",
+   "value": 1,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "1:17",
+   "quote": "Okay, so we start with a with a cattle right here.",
+   "confidence": "heard",
+   "note": "start with 1 Highland Cattle"
+  },
+  {
+   "civ": "scots",
+   "kind": "bonus",
+   "name": "Highland Cattle grazing",
+   "field": "effectValue",
+   "value": 30,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "3:14",
+   "quote": "So, Highland cattle sustain themselves in berry bushes for food. While eating, they produce food at a rate of 30 per minute.",
+   "confidence": "heard",
+   "note": "30 food per minute per grazing cattle; berries not consumed (5:35)"
+  },
+  {
+   "civ": "scots",
+   "kind": "bonus",
+   "name": "Tower House replaces Outpost",
+   "field": "effectValue",
+   "value": 15,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "4:08",
+   "quote": "Attacks while garrison increases max pop by 15.",
+   "confidence": "heard",
+   "note": "+15 population per Tower House"
+  },
+  {
+   "civ": "scots",
+   "kind": "bonus",
+   "name": "Tower House replaces Outpost",
+   "field": "cap",
+   "value": 2,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "4:56",
+   "quote": "you can garrison eight villagers and I'm assuming two cattle, right?",
+   "confidence": "inferred",
+   "note": "cattle garrison slots per Tower House before Barmkins; speaker is assuming"
+  },
+  {
+   "civ": "scots",
+   "kind": "bonus",
+   "name": "Mustering",
+   "field": "effectValue",
+   "value": 600,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "17:03",
+   "quote": "Call upon land holding vassels to recruit eight pikemen to the mastering hall. can only be used once. 600 food for eight pikemen.",
+   "confidence": "heard",
+   "note": "food per muster charge (Pikeman muster, 8 units) before Mustering Hall tier discounts"
+  },
+  {
+   "civ": "scots",
+   "kind": "bonus",
+   "name": "Fishponds",
+   "field": "effectValue",
+   "value": 40,
+   "videoId": "c_oaynL66jY",
+   "timestamp": "8:15",
+   "quote": "Use a corkman to gather 40 gold per minute from the fish pond.",
+   "confidence": "heard",
+   "note": "40 gold/min per worked Fishpond; nearby workers +10% gather rate (unmappedFacts)"
+  }
+ ],
+ "unmappedFacts": [
+  {
+   "timestamp": "0:53",
+   "quote": "Lowland landmark increase the fish spawn build limit.",
+   "why": "Fishpond limit rises with Lowland landmarks; no per-landmark number read here"
+  },
+  {
+   "timestamp": "1:08",
+   "quote": "Naval arrows slits are 50% cheaper.",
+   "why": "Dock arrow-slit discount; no checklist item (also 4:41 'Aeroslit imp placement cost reduced by 50%')"
+  },
+  {
+   "timestamp": "1:00",
+   "quote": "Destroyed keeps can be repaired for a limited time before being completely destroyed. Destroyed keeps create a scorched earth effect that reduces the combat effectiveness of nearby enemies.",
+   "why": "Castle-ruins bonus; no checklist item"
+  },
+  {
+   "timestamp": "3:28",
+   "quote": "30 per minute is equivalent to 075 villagers.",
+   "why": "speaker's conversion of the cattle trickle"
+  },
+  {
+   "timestamp": "3:36",
+   "quote": "Farms. Farms are 75",
+   "why": "standard Farm wood cost; not a Scots item"
+  },
+  {
+   "timestamp": "4:15",
+   "quote": "So a house increased population. Oh, it doesn't say by how much by 10, right? For 50 wood. So this basically costs 125 wood for a tower, but you can produce the cattle as well.",
+   "why": "Tower House wood cost not read directly. '125 for a tower' reads as Tower House cost minus a 50-wood House, which would be 175 (Corvinus reads 175), but that is arithmetic, so it was not filled"
+  },
+  {
+   "timestamp": "5:16",
+   "quote": "cuz there's six berries here. Can they eat on the same one? No. So, they have to go on the different ones.",
+   "why": "one cattle per berry bush"
+  },
+  {
+   "timestamp": "5:35",
+   "quote": "Do they consume the berries? They do not consume the berries. So the first berry patch, if it has six berries, you will be getting what? 180 food per minute.",
+   "why": "berries not depleted; 180/min is 6 x 30"
+  },
+  {
+   "timestamp": "6:07",
+   "quote": "Corv says every three in-game hours, they consume one berry.",
+   "why": "second-hand from chat; unit unclear"
+  },
+  {
+   "timestamp": "6:29",
+   "quote": "If I make a land a building that's 150 wood, I will get 50 gold back",
+   "why": "speaker's arithmetic (30% of 150 is 45)"
+  },
+  {
+   "timestamp": "7:09",
+   "quote": "But you can get a lot of gold like this for wood and then you can destroy it and then you can rebuild them all again.",
+   "why": "Stone of Destiny rebate exploit observation"
+  },
+  {
+   "timestamp": "8:28",
+   "quote": "While the fish pond is being worked, nearby workers gather resources 10% faster.",
+   "why": "Fishpond gather aura +10%; Fishponds.effectValue holds the 40 gold/min rate"
+  },
+  {
+   "timestamp": "8:36",
+   "quote": "Okay, TC cost the same. Look at you get 210 gold if you build a TC in range.",
+   "why": "Stone of Destiny rebate example (30% of TC cost)"
+  },
+  {
+   "timestamp": "9:05",
+   "quote": "Infantry rally. Oh, infantry rally with 25% increase movement speed. Uh movement speed while out of combat for 25 seconds.",
+   "why": "secondary effect of Wallace's Rally"
+  },
+  {
+   "timestamp": "9:12",
+   "quote": "It does not seem like it it it stacks unless it's bugged",
+   "why": "Fishpond aura does not stack (observed)"
+  },
+  {
+   "timestamp": "9:20",
+   "quote": "Wait, relocate this fishing pond to another location. What? And it costs nothing.",
+   "why": "Fishpond relocation is free; Fishpond build cost not read"
+  },
+  {
+   "timestamp": "10:05",
+   "quote": "So, they do cost five more wood, and they take 10 seconds to produce cuz we got the um the upgrade in feudal that increases production time.",
+   "why": "Pikeman costs +5 wood vs standard Spearman (absolute cost not read); 10 s is with Wallace's Rally +50%, so not the base trainTimeSeconds"
+  },
+  {
+   "timestamp": "10:35",
+   "quote": "10 damage plus 10 plus four versus worker and 17 torch damage.",
+   "why": "Feudal Cateran bonus vs workers and torch damage; caption ambiguous on the bonus"
+  },
+  {
+   "timestamp": "13:08",
+   "quote": "Cattle do not seem to have increased gather rate because of this guy. By the way, there's no buff.",
+   "why": "Fishpond aura does not boost cattle (observed)"
+  },
+  {
+   "timestamp": "14:45",
+   "quote": "You can stealth mode with pro scout on. Okay. But you are 037 movement speed.",
+   "why": "Ghillie stealth movement speed; caption '037' ambiguous"
+  },
+  {
+   "timestamp": "14:55",
+   "quote": "And by the way, cows do not need a drop off point as you can see. And I'm pretty sure this is bugged by the way. I think this is for all cows. 333, right?",
+   "why": "cattle need no drop-off; '333' unclear"
+  },
+  {
+   "timestamp": "15:51",
+   "quote": "Lowland technology costs are reduced by 50%.",
+   "why": "Mustering Hall regional discount for the first Lowland landmark (Mustering.effectValue holds the muster charge cost)"
+  },
+  {
+   "timestamp": "17:12",
+   "quote": "Like 150, 200 resources and and you get them in 5 seconds.",
+   "why": "muster delivery about 5 s; savings estimate"
+  },
+  {
+   "timestamp": "18:06",
+   "quote": "So, three structures unlocks mastering of Highland Archers adds a must charge.",
+   "why": "Mustering Hall tier 1 = 3 military buildings in influence: unlocks Highland Archer muster, +1 charge"
+  },
+  {
+   "timestamp": "18:27",
+   "quote": "Now it is just 600 food flat. This gives nine archers.",
+   "why": "Highland Archer muster: 600 food -> 9 archers"
+  },
+  {
+   "timestamp": "18:38",
+   "quote": "So if we have tier two, which is six structures, cost to master reduced by 20%, adds a master charge.",
+   "why": "Mustering Hall tier 2 = 6 buildings: muster cost -20%, +1 charge"
+  },
+  {
+   "timestamp": "18:55",
+   "quote": "Okay, so now the master charges are 480 food and we got two charges",
+   "why": "muster cost after tier 2"
+  },
+  {
+   "timestamp": "19:02",
+   "quote": "and tier three is cost to muster reduced by 20% again and non-naval mustard units have 20% more health.",
+   "why": "Mustering Hall tier 3 (building count not read)"
+  },
+  {
+   "timestamp": "19:44",
+   "quote": "Technologies research in the mastering hole. Increase infantry production speed at this lama by 15%. When enemies are nearby in infantry hasten their deployment and gain additional 15% production speed.",
+   "why": "Snowdoun Gate secondary effects (repeated at 20:24 as 15%); Corvinus caption says 50% for the first"
+  },
+  {
+   "timestamp": "20:32",
+   "quote": "Oh, and we unlocked master galley ass border reavers and mangels.",
+   "why": "musters for galleys, Border Reivers and mangonels unlocked in Castle after Snowdoun Gate"
+  },
+  {
+   "timestamp": "20:43",
+   "quote": "Oh, and these are more expensive out there. 810 food.",
+   "why": "810 food for one of the new musters; which one is not clear"
+  },
+  {
+   "timestamp": "20:52",
+   "quote": "Three archers.",
+   "why": "Snowdoun Gate batch = 3 Highland Archers"
+  },
+  {
+   "timestamp": "21:21",
+   "quote": "Knights. Their knights cost 140 uh food, 100 gold, which I'm pretty sure is just standard cost.",
+   "why": "standard Knight; not a Scots item"
+  },
+  {
+   "timestamp": "21:52",
+   "quote": "We got Catarans now do 12 + 5 damage versus workers.",
+   "why": "Castle-tier Cateran damage (the damage field holds Feudal 10)"
+  },
+  {
+   "timestamp": "24:24",
+   "quote": "Lowland technology costs are increased are uh costs are further reduced by 50%.",
+   "why": "second Lowland landmark: a further 50% off"
+  },
+  {
+   "timestamp": "24:43",
+   "quote": "Okay, so you can see this is reduced to 375.",
+   "why": "discounted price after two Lowland landmarks, probably Stew Ponds (gold); not a base cost"
+  },
+  {
+   "timestamp": "25:38",
+   "quote": "Wait, can you eat these cows, by the way? No, you can't.",
+   "why": "Highland Cattle cannot be slaughtered for food"
+  },
+  {
+   "timestamp": "27:52",
+   "quote": "The first two do 72 damage. The next two do 42. The next two do 32. The last one does. What? And this does splash damage.",
+   "why": "Seven Sisters per-cannon damage (Corvinus reads 72/72, 44/44, 32/32, 22)"
+  },
+  {
+   "timestamp": "30:02",
+   "quote": "Elite pikemen have 18 damage plus 36 cav plus eight versus elephants. And obviously they have giga range like more than elite crossbowmen.",
+   "why": "Imperial elite tier"
+  },
+  {
+   "timestamp": "30:14",
+   "quote": "Elite men at arms 207 HP 26 damage plus five versus cavalry. And they can uh they can brace",
+   "why": "Imperial elite tier with Lochaber Axes; 31:00 'elite meta arms have nine range armor'"
+  },
+  {
+   "timestamp": "30:24",
+   "quote": "They do 20 damage per hit.",
+   "why": "Imperial-tier Cateran damage"
+  },
+  {
+   "timestamp": "30:37",
+   "quote": "Gias. These are the uh lens shits that can brace 34 damage. 76 armor. Very similar to 67 but not quite.",
+   "why": "Imperial Gallowglass; armor caption ambiguous"
+  },
+  {
+   "timestamp": "30:51",
+   "quote": "Archers, they do 14 damage plus nine versus melee infantry, but they do have less range. 5.5 total.",
+   "why": "Imperial Highland Archer with upgrades"
+  },
+  {
+   "timestamp": "31:26",
+   "quote": "Masons automatically repair buildings whenever they're damaged for three health per second.",
+   "why": "We Stand Alone secondary effect"
+  },
+  {
+   "timestamp": "32:08",
+   "quote": "So, if you lose a keep, you can repair it even after it's destroyed like a landmark.",
+   "why": "keep ruins; no item"
+  },
+  {
+   "timestamp": "32:17",
+   "quote": "Taxman increases other nearby Highlanders damage by one.",
+   "why": "Tacksman aura (+1 damage to nearby Highland warriors); Caterans, Gallowglass and Highland Archers called Highland warriors at 32:24-32:35"
+  },
+  {
+   "timestamp": "32:40",
+   "quote": "Everything is just highland increase highland damage by one. gain movement speed 20% after attacking. And they're basically their hand canoners, right? 160 to 90.",
+   "why": "Tacksman +20% move speed after attacking; '160 to 90' ambiguous (cost or HP)"
+  },
+  {
+   "timestamp": "33:07",
+   "quote": "Increase nearby infantry damage by two after attacking.",
+   "why": "unclear which unit this reads"
+  },
+  {
+   "timestamp": "33:23",
+   "quote": "Health increased. Okay, that's the mastering hole influence.",
+   "why": "mustered Border Reivers get the tier-3 +20% HP"
+  },
+  {
+   "timestamp": "34:53",
+   "quote": "Nearby friendly units non siege heal for one health every second in the presence of the relic. Each age increases the amount of health increased by one.",
+   "why": "Abbey of the Isles healing aura"
+  },
+  {
+   "timestamp": "35:13",
+   "quote": "Wow, you make spearman every six. Wait, you can burger people with this. 4 seconds.",
+   "why": "relic-boosted production time observation; unclear"
+  },
+  {
+   "timestamp": "35:24",
+   "quote": "So now there's a big cool down. There's like a 2minute cool down from swapping this.",
+   "why": "Abbey relic move cooldown about 2 min"
+  },
+  {
+   "timestamp": "36:30",
+   "quote": "The first three style forest from towerhouses come with no cost.",
+   "why": "Tower of Skye: first 3 Tower House Stealth Forests free"
+  },
+  {
+   "timestamp": "36:39",
+   "quote": "Oh, wait. Now we can have 17 cattle. Wait, is that because ah every Highland landmark you create, you can build four more. So you can have 21 cattle",
+   "why": "cattle cap 17 after two Highland landmarks; +4 per Highland landmark (speaker's inference); 21 projected for three. Consistent with Corvinus's Dark Age cap of 9"
+  },
+  {
+   "timestamp": "37:02",
+   "quote": "galley unlock fair's chosen ability. ... Increasing ranged armor of nearby ships. ... Oh, you get like a plus two ranged armor.",
+   "why": "Tower of Skye galley ability +2 ranged armor"
+  },
+  {
+   "timestamp": "37:51",
+   "quote": "has a large line of sight and adds three monster charges for the mastering hole or three lock lookout.",
+   "why": "Three Loch Lookout +3 muster charges"
+  },
+  {
+   "timestamp": "38:25",
+   "quote": "Wait, you can master a navy if constructed next to water. You get four galleys, four hulks, and three cars. That's crazy. can only be used once.",
+   "why": "naval muster yield"
+  }
+ ],
+ "notes": "Clean auto-captions, one line per caption, no rolling duplication. All 18 chapters read. Run order: a Lowland game (Stone of Destiny -> Snowdoun Gate -> 'Doom 89' = Dhun Eideann), then a Highland remake (Abbey of the Isles -> Tower of Skye -> Three Loch Lookout); Highland-remake regions are inferred from that plan. Unit stats come from several tiers: hp/damage/armor fields take the first tier read (Hardened Pikeman and Cateran in Feudal, Gallowglass in Castle); later tiers are in unmappedFacts. Concatenated cost pairs ('7525', '1480', '9020') are split food/gold and marked inferred. The tech names Lion's Duty, Clan Traditions and Feuds Aside are never spoken; they are matched to checklist descriptions by effect text (inferred). Tech ages are the age the speaker was in when the tech appeared (inferred). Discounted Mustering Hall prices (375) are kept out of the cost fields; only full-price ones (1,200 and 2,400 food, no Highland landmark) are filled, as inferred. Speeds are spoken without the decimal point ('169' = 1.69). Not read anywhere: Mustering Hall/Fishpond/Tower House HP, build times and costs (except Tower House pop and garrison), Ghillie cost, Highland Cattle train time and HP."
+}

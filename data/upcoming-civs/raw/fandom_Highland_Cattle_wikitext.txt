@@ -1,0 +1,29 @@
+{{ForNoLink|unit in [[Age of Empires IV: Anniversary Edition]]|the Malian unit|[[Cattle]]|other bovines|[[Cow]]}}
+{{Upcoming|October 29th 2026|Raiders of the North}}
+{{Stub}}
+{{Infobox AoE4 unit
+|Name = Highland Cattle
+|Intro = {{4icons|Raiders of the North}}
+|Civilization = {{4icons|Scots}}
+|Image = 
+|Age = 
+|Gold = 
+|HP = 
+|Armor = 
+|PierceArmor = 
+|Building = 
+|Time = 
+|Limit = 
+}}
+'''Highland Cattle''' are an upcoming unique [[herdable animal]], available to the [[Scots]] in ''[[Age of Empires IV: Raiders of the North]]''. They can be tasked to [[Berry Bush]]es to generate a trickle of food.
+
+== Gallery ==
+<gallery>
+Highland Cattle AoE4 Discord Promo.webp|Highland Cattle eating from Berry Bushes
+</gallery>
+
+{{Units List (Age of Empires IV)}}
+{{Wildlife (AoE4)}}
+[[Category:Scots]]
+[[Category:Herdables]]
+[[Category:Raiders of the North]]

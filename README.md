@@ -1,6 +1,27 @@
-# aoe4-build-engine
+# Mathmatically Correct AoE 4
 
-A theoretical Age of Empires IV economy engine (no game simulation: cost, rate and time arithmetic at 1 s steps) and a dashboard that compares two build paths minute by minute. Current patch target: 16.2.10604. Current civ: Abbasid Dynasty (3 TC camel build). Scots arrive with Update 17.0 on 2026-10-29 and are the next target.
+A local strategy workspace rebuilt from `aoe4-build-engine`: compare theoretical plans, explore upgrades at a selected time, and study sourced historical 4v4 openings. The original local path `C:/Users/Sam/projects/MathmaticallyCorrectAoe4` now links to this checkout. See [context](CONTEXT.md) and [design](DESIGN.md).
+
+```powershell
+./start.ps1
+# Open http://127.0.0.1:8765
+```
+
+Build only: `python -X utf8 site/build.py`. Browser verification after starting: `node site/verify.cjs` and `node site/verify-interactions.cjs`; screenshots, interaction recordings and machine-readable reports are written to `site/shots/`. These checks use the existing Playwright tools in `codex-setup/browser-tools`. `site/crafter.css` and `site/crafter.js` are embedded by the builder; edit these source files rather than generated HTML.
+
+The three data sources stay distinct: installed game rules, downloaded historical match completions, and a theoretical Abbasid simulation. The French, Mongol, Malian and Japanese examples are study references, not simulated plans or current ladder rankings. `data/build-library.json` preserves their provenance. The reusable research workflow is installed at `C:/Users/Sam/.codex/skills/aoe-build-crafter`.
+
+The installed database covers **23 civilizations/variants, 1,291 unit forms, 795 buildings and 1,269 technologies**, decoded directly from Steam build **24231237**, executable patch **16.3.11308**. These are variants, not unique unit families. [Reproduction and source evidence](data/INSTALLED_DATA.md) explain extraction, validation and unresolved dynamic effects. [Patch audit](data/patch-audit.json) separates released rules from the upcoming 17.0 preview. Run `python -X utf8 scripts/test_game_catalog.py` to verify normalized values against decoded records and archive hashes.
+
+The neutral glass interfaces, in white and VS Code dark, have Comparison, Builds, a unified Library (Games and Units & civilizations), Crafter and Guide pages. Build plans apply to either comparison slot and open an independent single-build timeline. Build and game filters normalize patch versions; civilization flags cover all23 installed civilizations and variants. Recorded games preserve missing metrics instead of being resimulated as Abbasid. The tracking rail supports configurable metrics and chart previews on hover. Entire tracked rows can be dragged onto the timeline graph to chart them or into the detail area to inspect them; click and keyboard selection remain available. Individual resource income and cumulative spending are chartable. Events live inside the main graph, with expandable clusters and a compact fixed-height graph and event timeline. Units, resources, research, and spending are selected from comparison rows and sit directly below the graph in an independent left column; authentic game icons and hypothetical upgrade toggles show supported stat changes without changing the build timeline. Custom dropdowns support keyboard navigation. Unsupported model effects are labelled explicitly.
+
+Public deployment (Cloudflare + Fly, read-only): [deploy/README.md](deploy/README.md).
+
+The [local API](server/README.md) serves the app and proxies AI text drafting to the existing loopback CLI proxy. Credentials remain server-side. AI proposals stay unvalidated and are saved only when the user chooses. Backend fixture tests: `python -X utf8 -m unittest discover -s server -p 'test_*.py'`.
+
+## Original engine context
+
+A theoretical Age of Empires IV economy engine (cost, rate and time arithmetic at 1 s steps) compares two build paths minute by minute. Its historical baseline remains 16.2.10604 and its implemented civilization is Abbasid Dynasty (3 TC camel build). This baseline is distinct from the installed database; future patch previews are not applied to either automatically.
 
 ## Layout
 
@@ -16,7 +37,7 @@ A theoretical Age of Empires IV economy engine (no game simulation: cost, rate a
 | `data/` | game data dumps (aoe4world JSON, patch 16.1), fandom wikitext, forum measurements, `PATCH_STATUS.md` (what is stale and what was applied by hand) |
 | `RESULTS_abbasid_wings.md`, `results_wings_grid.csv` | wing-order grid results |
 
-Run locally: `python site/build.py && cd site/dist && python -m http.server 8765`. Engine parity test: `node -e "const E=require('./site/engine.js');console.log(E.simulate({}).milestones)"`.
+Run locally with `./start.ps1` so AI/API routes are available. Static-only hosting does not provide those routes. Engine smoke test: `node -e "const E=require('./site/engine.js');console.log(E.simulate({}).milestones)"`.
 
 ## Run object (the contract a new UI builds against)
 
@@ -56,3 +77,13 @@ Direction for the rebuild:
 ## Model caveats carried
 
 Map distances are estimates (editable), builder formula 3/(n+2) unverified, stacking walk penalty and idle fraction are parameters, no raids beyond the far-food escort rule. See `PARAMS.md` and `data/PATCH_STATUS.md`.
+
+Starting parameters and Reset are compact, non-draggable sidebar controls. Scheduled parameter changes are not implemented; their simulation semantics remain a separate scope decision.
+
+The Library separates installed patch records from the limited audited upcoming-patch changes. Blueprint IDs remain in evidence rather than the record listing. Games carry analyzed/reference tags, while Builds retains reusable plans.
+
+### Comparison and build review
+
+Simulation constraints sit above the comparison tracker: idle fraction, one-way resource distances, handling delay and optional timed worker attrition. Build details prioritize ordered actions and worker splits; Expected outcome holds the secondary graph. Games and Library are separate destinations. Craft build creates a browser-local pending reference draft in Builds; Accept build makes it available to Comparison. Build comments and draft acceptance persist only in the current browser. Recorded matches never carry worker splits or action starts; the app shows an income-share worker estimate and inferred starts (completion minus installed base duration), both labelled as estimates. Population, army value and gathered resources for recorded matches are likewise labelled estimates derived in `site/observed-derived.js`, so every comparison metric, tracker row and detail panel works across civilizations and for future reference builds crafted from Games.
+
+The Games collection now restores 5,812 online matches and10 local replay reports from the previous app. There are816 player perspectives across153 matches with timeline data; other records retain match metadata. Timeline sidecars load on demand. Rebuild after `python scripts/restore_game_collection.py` to copy the sidecars into `site/dist/game-perspectives`.

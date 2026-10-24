@@ -1,0 +1,7 @@
+Source: https://api.github.com/repos/aoe4world/data/contents/civilizations (fetched 2026-10-23)
+Files present: abbasid, ayyubids, byzantines, chinese, civs-index, delhi, english, french, goldenhorde, hre, japanese, jeannedarc, jindynasty, lancaster, macedonian, malians, mongols, orderofthedragon, ottomans, rus, sengoku, templar, tughlaq, zhuxi (.json)
+No vikings.json / scots.json.
+Latest commits (api/commits?per_page=5): 2026-05-04 "Added Jin Dynasty and Season 13 patch 16.1.9737 data" is the newest.
+Branches: attrib-parsing, dlc-kcr-preview, english-free-king, feature/localized, main, patch15.1.6970, patch-fixups, season-3-24916, season-4-pup, season-5-pup, season-5. No Raiders-of-the-North preview branch.
+https://aoe4world.com/explorer/civs is JS-rendered (82 chars of text via curl); https://data.aoe4world.com/civilizations.json returned 404 HTML.
+Conclusion: aoe4world has not published Vikings/Scots data as of 2026-10-23.

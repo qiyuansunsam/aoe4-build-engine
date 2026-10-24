@@ -1,0 +1,61 @@
+{{Upcoming|October 29th 2026|Raiders of the North}}
+{{Stub}}
+{{Infobox AoE4 unit
+|Image = <gallery>
+</gallery>
+|Intro = {{4icons|Raiders of the North}}
+|Type = Religious
+|Civilization = {{4icons|Vikings}}
+|Age = {{4icons|Feudal Age}}
+}}
+<!--
+|Food = 
+|Gold = 
+|Building = {{4icons|Barracks}}
+|Time = 
+|HP = <small>(Regular)</small><br/ > <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|MROF =  seconds
+|Speed =  tiles/second
+|Pop = 1
+|MDamage =  <small>(Regular)</small><br/ > <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|Armor = 0
+|PierceArmor = 0
+|LOS = 
+|UpTo = 
+|UpTime = 
+|UpCost = 
+|MBonus =  <small>(Regular)</small><br/ > vs Heavy <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|Ability =
+}}
+-->
+The '''Völur''' is an upcoming [[Religious unit (Age of Empires IV)|religious unit]] in ''[[Age of Empires IV: Raiders of the North]]'' unique to the [[Vikings (Age of Empires IV)|Vikings]]. It can be sacrificed to establish [[Sacred Grove]]s on [[Relic (Age of Empires IV)|Relics]].
+<!--
+== Ability ==
+
+== Tactics ==
+-->
+== Further statistics ==
+<!--
+{{Boosts|Technologies
+|Armor = {{4icons|Fitted Leatherwork}} (+1 melee)<br />{{4icons|Insulated Helm}} (+1 melee)<br />{{4icons|Master Smiths}} (+1 melee)<br />{{4icons|Iron Undermesh}} (+1 ranged)<br />{{4icons|Wedge Rivets}} (+1 ranged)<br />{{4icons|Angled Surfaces}} (+1 ranged) 
+{{Boosts|Aura and ability enhancements
+|Creation = 
+|Attack = 
+|Speed =
+|Ability = 
+|Resists = [[File:AoE4 WallDefense.png|22px]] [[Stone Wall (Age of Empires IV)#Game mechanics|Wall Defense]] (-25% ranged, -50% siege)
+}}
+
+== Dialogue lines ==
+{{Main|/Dialogue lines}}
+-->
+== Gallery ==
+<gallery>
+Volur Civ Page.webp|A Völur standing next to a Sacred Grove and Relic.
+</gallery>
+
+{{Units List (Age of Empires IV)}}
+<!--[[Category:Healers]]-->
+<!--[[Category:Objects with conversion]]-->
+[[Category:Vikings (Age of Empires IV)]]
+[[Category:Raiders of the North]]

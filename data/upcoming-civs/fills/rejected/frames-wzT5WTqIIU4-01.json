@@ -1,0 +1,39 @@
+{
+ "transcribedBy": "opus-agent frame read wzT5WTqIIU4#1 + blind re-read",
+ "fills": [
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Three Loch Lookout",
+   "field": "effectValue",
+   "value": 75,
+   "variant": null,
+   "frame": "C:/Users/Sam/projects/aoe4-build-crafter/.cache/upcoming-frames/wzT5WTqIIU4/s_01086.jpg",
+   "timestamp": "18:06",
+   "quote": "The number of warriors received from mustering is increased by 75%.",
+   "confidence": "read-on-screen",
+   "note": "Also adds 3 muster charges",
+   "verdict": "rejected",
+   "blindValue": 3,
+   "tieReason": "Both numbers are clearly shown: the Three Loch Lookout card (Age IV Military Landmark, Highlands; 2400 food, 1200 gold, 4m 10s) says it 'adds 3 muster charges for the Mustering Hall or Three Loch Lookout' and 'the number of warriors received from mustering is increased by 75%'. The video overlay repeats this as '+3 MUSTER CHARGES · +75% WARRIORS'. Neither reader misread anything. The landmark has two separate effects, and a single effectValue cannot hold both without guessing which one the field means. Record them as two fields: muster charges +3 and warriors from mustering +75%.",
+   "videoId": "wzT5WTqIIU4"
+  },
+  {
+   "civ": "scots",
+   "kind": "bonus",
+   "name": "Highland Cattle grazing",
+   "field": "interval",
+   "value": 60,
+   "variant": null,
+   "frame": "C:/Users/Sam/projects/aoe4-build-crafter/.cache/upcoming-frames/wzT5WTqIIU4/s_00852.jpg",
+   "timestamp": "14:12",
+   "quote": "produce Food at a rate of 30 per minute",
+   "confidence": "inferred",
+   "note": "The tooltip gives a rate of 30 food per minute, not a tick interval",
+   "verdict": "rejected",
+   "blindValue": null,
+   "tieReason": "The Scots overview (Unique Units > Highland Cattle) says only 'While eating they produce Food at a rate of 30 per minute'. That is a rate (30 food per 60 s). It does not give a tick interval, and none of the frames shows one. Reader A's 60 turns 'per minute' into an interval, which the frame does not state. Record the rate as 30 food/min instead.",
+   "videoId": "wzT5WTqIIU4"
+  }
+ ]
+}

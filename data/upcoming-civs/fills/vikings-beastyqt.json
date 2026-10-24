@@ -1,0 +1,12 @@
+{"civ":"vikings","transcribedBy":"opus-agent: BeastyqtSC2 nd74LibluQ0","videoId":"nd74LibluQ0","fills":[
+ {"civ":"vikings","kind":"bonus","name":"Saga: Dreki's Temple","field":"effectValue","value":50,"videoId":"nd74LibluQ0","timestamp":"05:00","quote":"berserkers 50% faster. There it is. So these are the quests and once you complete them, I'm assuming they get popped right here.","confidence":"heard"},
+ {"civ":"vikings","kind":"landmark","name":"Konungr Hall","field":"effectValue","value":10,"videoId":"nd74LibluQ0","timestamp":"15:00","quote":"villager pop just uncapped. So we have aged up. So feast provides 10 food plus","confidence":"heard"},
+ {"civ":"vikings","kind":"technology","name":"Hamrammr","field":"effectValue","value":50,"videoId":"nd74LibluQ0","timestamp":"21:00","quote":"now it's going to be when the health drops below 50% damage is increased by 40% and it regenerates double.","confidence":"inferred"}
+],
+"unmappedFacts":[
+ {"timestamp":"00:52","quote":"Difficulty one out of three.","why":"civ difficulty rating, no field"},
+ {"timestamp":"15:00","quote":"villager pop just uncapped. So we have aged up.","why":"aging up (Konungr Hall) appears to lift the Villager capacity; no number captured"},
+ {"timestamp":"21:00","quote":"when the health drops below 50% damage is increased by 40% and it regenerates double.","why":"Hamrammr-upgraded Berserkergang: Beastyqt says regen 'double', Corvinus (12:15) reads 'heals 50% more HP' (5.25 vs 3.5 HP/s). Tech name not in the captured line; mapped by chapter 'Unique Upgrades'"},
+ {"timestamp":"33:00","quote":"have 135 HP. They give wood. They get movement speed increase, torch damage increase. Again, they don't have ram, so","why":"Chapter 'Castle Units & Upgrades': a unit (probably Bondi, which 'give wood' via Bondi Forester) has 135 HP, likely the Castle-tier version, not base HP"}
+],
+"notes":"Capture is still mostly broken: of 445 lines only the intro (0:02-0:54) and five mid-video lines (5:00, 12:00, 15:00, 21:00, 33:00) contain speech; everything else is 'N minutes, N seconds' placeholders. Mapping uses the chapter titles in the file (SAGAS, Konungr Hall & Shield Maidens, Unique Upgrades, Castle Units & Upgrades). Re-fetching this transcript would be worth it: chapters 'SHIPS', '20 MAX POP LANDMARK??', 'University Upgrades' and 'Castle Units & Upgrades' likely read unit cards that Corvinus never read."}

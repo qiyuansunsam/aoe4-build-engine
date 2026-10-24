@@ -1,0 +1,101 @@
+{{Upcoming|October 29, 2026|Raiders of the North}}
+{{Civilization tabs}}
+{{Infobox civilization
+|Name = Scots
+|Intro = {{4icons|Raiders of the North}}
+|Image = Scots AoE4.png
+|Continent = Europe
+|Difficulty = 2/3
+|Focus = Infantry, Defense, Mustering
+|Time = 843 - 1707 CE
+|Unit = See [[#Unique units|Unique units]]
+|Building = See [[#Unique buildings|Unique buildings]]
+|Tech = See [[#Unique technologies|Unique technologies]]
+|Theme  = 
+}}
+The '''Scots''' are an upcoming [[Civilization (Age of Empires IV)|civilization]] introduced in ''[[Age of Empires IV: Raiders of the North]]''.
+
+In the series, they previously appeared as the [[Celts]] in ''[[Age of Empires II: The Age of Kings]]'' and the [[House of Stuart]] in ''[[Age of Empires III: Definitive Edition - The Baltic Powers]]''.
+
+== Civilization overview ==
+[[File:CivPortrait-ScotsAoE4.jpg|thumb|300px|center]]
+{{Quote|
+The Scots are a new civilization available with Raiders of the North Expansion for Age of Empires IV.
+
+Scotland is a land shaped by resilience, forged through centuries of conflict and alliance. The union of the Picts and Scoti under Kenneth MacAlpin in 843 laid the foundations of the early Scottish kingdom. The Scottish Wars of Independence (1296-1357) produced heroes such as William Wallace, James "The Black" Douglas, and Robert the Bruce. The legacy of these achievements and struggles continues to shape Scotland’s traditions, culture, and identity.
+
+The Scots field a vast roster of unique infantry that excel around Stealth Forests, seeing directly through them. Produce and protect Highland Cattle as they graze Berry Bushes for bonus Food. Raid with swift warriors or fortify your defenses with a civilization renowned for resilience, tenacity, and battlefield adaptability.|Main civilization page|<ref name=":0">[https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ Scots] on ageofempires.com</ref>}}
+
+== Strengths ==
+{{Quote|
+The Scots build a thriving Food economy through Highland Cattle grazing Berry Bushes. Tower Houses produce and shelter these important cattle, making them vital for the Scots economy and a prime target for enemy raids. Form the legendary Scottish schiltron with Pikemen, supported by Lochaber Axe equipped Men-at-Arms, and the fearless Gallowglass. Together these warriors create a formidable infantry force capable of holding ground and repelling attacks. Construct the Mustering Hall and begin mustering forces rapidly to respond to enemy advances. The Mustering Hall holds powerful technologies from the Lowlands and Highlands of Scotland that greatly reduce in cost when constructing a Landmark from that region. Whether you favor highland aggression, lowland defense, or a mixture of both, the Mustering Hall meets the needs of war.|Main civilization page|<ref name=":0"/>}}
+
+== Civilization bonuses ==
+* '''Highland Ambush:''' Infantry gain increased movement speed while in Stealth Forests and do not receive any vision penalty.
+* '''Highland Wealth:''' Start the game with a Highland Cattle, which generates food over time as it grazes at Berry Bushes.
+
+
+== Landmarks and Age-up options ==
+=== Dark Age ===
+* [[Abbey of the Isles]] - Contains a Saint's Relic that provides an area healing bonus. The relic, along with its healing aura, can be transferred to other buildings to additionally provide increased research and production speed for that building.
+* [[Stone of Destiny]] - Buildings constructed nearby have part of their construction cost refunded as gold. Grants early access to Kirkmen. 
+
+=== Feudal Age ===
+* [[Snowdoun Gate]] - Produces infantry for free.
+* [[Tower of Skye]] - Acts as a Tower House with added emplacements and generates a surrounding Stealth Forest. Also grants other Tower Houses the ability to generate Stealth Forests and increases infantry damage by 15% in Stealth Forest.
+
+=== Castle Age ===
+* [[Dhùn Èideann]] - Defensive landmark equipped with seven cannon attacks. Produces gunpowder siege engines at a lower cost, and with increased range.
+* [[Three Loch Lookout]] - Acts as a Mustering Hall with a large line of sight. Adds extra muster charges and increases the number of warriors received from mustering. Also grants the ability to muster ships if constructed near the water.
+
+== Unique units ==
+* [[Border Reiver]] - Light ranged cavalry that counters other ranged cavalry and attacks buildings with torches.
+* [[Cateran]] - Fast light melee infantry with bonus damage against workers and buildings.
+* [[Gallowglass (Age of Empires IV)|Gallowglass]] - Heavy melee infantry that deals area of effect damage and can brace against cavalry charges.
+* [[Ghillie]] - Variant of the [[Scout (Age of Empires IV)|Scout]] that can enter stealth mode at any time.
+* [[Highland Archer]] - Variant of the [[Archer (Age of Empires IV)|Archer]] with increased damage but less range.
+* [[Highland Cattle]] - Livestock that provides a trickle of food as it eats from Berry Bushes.
+* [[Kirkman]] - Religious unit that can create and gather gold from Fishponds.
+* [[Pikeman (Age of Empires IV)|Pikeman]] - Variant of the [[Spearman (Age of Empires IV)|Spearman]] that has significantly increased melee range.
+* [[Tacksman]] - Variant of the Handcannoneer which enhances the damage of nearby highland warriors.
+
+== Unique buildings ==
+* [[Fishpond]] - Harvestable gold source that also improves the resource gathering of nearby workers
+* [[Mustering Hall]] - Technology building that can also quickly muster armies for a food cost
+* [[Tower House]] - Defensive building that also provides population space and can produce Highland Cattle. Replaces the [[Outpost (Age of Empires IV)|Outpost]].
+
+== Unique technologies ==
+* [[Barmkins]] - Tower Houses gain increased garrison slots for Highland Cattle
+* [[Basket-Hilted Broadswords]] - Increases the attack speed and damage of Caterans.
+* [[Birlinn Crews]] - Galleys gain increased movement speed and attack speed.
+* [[Cateran's Trail]] - Caterans gain the ability to increase the movement speed of nearby infantry. Infantry heal while out of combat and in Stealth Forests.
+* [[Clan Traditions]] - Increases melee infantry damage and the duration of their Highland Ambush bonus.
+* [[Fermtouns and Pastures]] - Villagers and Highland Cattle gather faster from Farms and Berry Bushes respectively.
+* [[Feuds Aside]] - Increases the attack speed of gunpowder units.
+* [[Fortified Tower Houses]] - Grants Tower Houses increased fire armor.
+* [[Lion's Duty]] - Grants infantry increased armor while near landmarks and defensive buildings
+* [[Lochaber Axes]] - Men-at-Arms gain increased damage and can brace against cavalry charges.
+* [[Snaphance Locks]] - Replacement for [[Serpentine Powder]] that has the same effect but also affects Border Reivers.
+* [[Stew Ponds]] - Instantly spawns a Kirkman and increases Fishpond limit. Also further increases gather rates of workers near Fishponds.
+* [[Wallace's Rally]] - Increases infantry production speed and grants them a large, temporary movement speed buff when created.
+* [[We Stand Alone]] - Increases building health and emplacement attack speed, and grants buildings the ability to regenerate hit points.
+
+== Gallery ==
+<gallery>
+Scots Promo Shot Celebrating Age 2026.webp|Various Scottish buildings and units
+Scots Steam 1.jpg|A Scottish town defending a bridge against an English attack
+Scots Steam 3.jpg|The same town from a different vantage, showing additional buildings
+Scots Steam 2.jpg|Scottish buildings in the countryside, featuring the Scottish Heathland biome
+Scots Age 1 Civ Page.webp|The Scots in the Dark Age
+Scots Age 2 Civ Page.webp|The Scots in the Feudal Age
+Scots Age 3 Civ Page.webp|The Scots in the Castle Age
+Scots Age 4 Civ Page.webp|The Scots in the Imperial Age
+</gallery>
+
+== References ==
+{{Reflist}}
+
+{{Civilizations (Age of Empires IV)}}
+[[Category:European civilizations]]
+[[Category:Scots| ]]
+[[Category:Raiders of the North]]

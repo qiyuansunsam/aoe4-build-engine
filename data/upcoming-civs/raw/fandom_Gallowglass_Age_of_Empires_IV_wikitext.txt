@@ -1,0 +1,74 @@
+{{for|unit in [[Age of Empires IV: Raiders of the North]]|the unit in [[Age of Empires III: Definitive Edition - The Baltic Powers]]|Gallowglass (Age of Empires III)}}
+{{Upcoming|October 29th 2026|Raiders of the North}}
+{{Stub}}
+{{Infobox AoE4 unit
+|Name = Gallowglass
+|Image = <gallery>
+</gallery>
+|Intro = {{4icons|Raiders of the North}}
+|Type = Heavy melee infantry
+|Civilization = {{4icons|Scots}}
+|Age = {{4icons|Castle Age}}
+|Building = {{4icons|Barracks}}<br/>[[Mustering Hall]]
+}}
+<!--
+|Age = {{4icons|Feudal Age}}
+|Food = 
+|Gold = 
+|Building = {{4icons|Barracks}}
+|Time = 
+|HP = <small>(Regular)</small><br/ > <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|MROF =  seconds
+|Speed =  tiles/second
+|Pop = 1
+|MDamage =  <small>(Regular)</small><br/ > <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|Armor = 0
+|PierceArmor = 0
+|LOS = 
+|UpTo = 
+|UpTime = 
+|UpCost = 
+|MBonus =  <small>(Regular)</small><br/ > vs Heavy <small>(Veteran)</small><br/ > <small>(Elite)</small>
+|Ability =
+}}
+-->
+The '''Gallowglass''' is an upcoming unique heavy [[Melee infantry unit (Age of Empires IV)|melee infantry unit]] in ''[[Age of Empires IV: Raiders of the North]]'' available to the [[Scots]]. It can be created starting in the [[Castle Age (Age of Empires IV)|Castle Age]] from the [[Barracks (Age of Empires IV)|Barracks]] or [[Mustering Hall]]. It has the ability to brace against incoming cavalry, similar to the [[Spearman (Age of Empires IV)|Spearman]] and its unique variants. It can also deal [[Area of Effect]] damage.
+<!--
+== Ability ==
+
+== Tactics ==
+-->
+== Further statistics ==
+{{S&W
+|Size = 60
+|S = [[Archer (Age of Empires IV)|Archers]], [[Horseman|Horsemen]], [[Spearman (Age of Empires IV)|Spearmen]]
+|W = [[Crossbowman (Age of Empires IV)|Crossbowmen]]
+|C =
+}}
+<!--
+{{Boosts|Technologies
+|Attack = {{4icons|Bloomery}} (+1)<br />{{4icons|Decarbonization}} (+1)<br />{{4icons|Damascus Steel}} (+1)<br />{{4icons|Elite Army Tactics}} (+15%)
+|Armor = {{4icons|Fitted Leatherwork}} (+1 melee)<br />{{4icons|Insulated Helm}} (+1 melee)<br />{{4icons|Master Smiths}} (+1 melee)<br />{{4icons|Iron Undermesh}} (+1 ranged)<br />{{4icons|Wedge Rivets}} (+1 ranged)<br />{{4icons|Angled Surfaces}} (+1 ranged) 
+|HP = {{4icons|Elite Army Tactics}} (+15%)
+|Creation = {{4icons|Military Academy}} (+33%)
+|Ability = {{4icons|Siege Engineering}} (Can build Battering Rams and Siege Towers)}}
+{{Boosts|Aura and ability enhancements
+|Creation = 
+|Attack = 
+|Speed =
+|Ability = 
+|Resists = [[File:AoE4 WallDefense.png|22px]] [[Stone Wall (Age of Empires IV)#Game mechanics|Wall Defense]] (-25% ranged, -50% siege)
+}}
+
+== Dialogue lines ==
+{{Main|/Dialogue lines}}
+-->
+== Gallery ==
+<gallery>
+Gallowglass AoE4 Discord Promo.webp|A group of Gallowglass behind a frontline bracing against a cavalry charge
+</gallery>
+
+{{Units List (Age of Empires IV)}}
+[[Category:Melee infantry]]
+[[Category:Scots]]
+[[Category:Raiders of the North]]

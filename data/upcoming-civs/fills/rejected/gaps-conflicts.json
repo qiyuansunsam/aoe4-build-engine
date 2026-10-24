@@ -1,0 +1,39 @@
+{
+ "transcribedBy": "opus-agent gap hunt conflicts + blind re-read",
+ "fills": [
+  {
+   "civ": "scots",
+   "kind": "landmark",
+   "name": "Snowdoun Gate",
+   "field": "productionTimeSeconds",
+   "value": 80,
+   "variant": null,
+   "videoId": "qlogYcWhKEU",
+   "frame": "C:/Users/Sam/projects/aoe4-build-crafter/.cache/upcoming-frames/qlogYcWhKEU/s_01656.jpg",
+   "timestamp": "27:36",
+   "quote": "A new age begins | PIKEMAN Light Melee Infantry 1m 17s | SNOWDOUN GATE Age III - Military Landmark, Lowlands",
+   "confidence": "inferred",
+   "note": "Default toggle is Pikemen with no production bonuses (HUD 0/3). The landmark finished at game 01:00; at 01:02 the Pikeman timer reads 1m17s and counts down: 32s at 01:46, 18s at 02:00, 01s at 02:15. Population went 7 to 10 (3 Pikemen) at 02:17. A 2-3 s offset gives a cycle of about 80 s, which matches datamined unit_toggle_pikemen_sco 80 s. Each toggle has its own cycle; datamined Highland Archer 76, Cateran 85, Early MAA 104.",
+   "verdict": "rejected",
+   "blindValue": 77,
+   "tieReason": "The 1m 17s on the Pikeman toggle is a live countdown to the next free unit, not a fixed production time. It reads 1m 17s at game time 01:02 (s_01656) and 1m 15s at 01:04 (s_01658). The landmark tooltip in s_01646 says the gate 'Produces toggled infantry for free with a value of 190 resources per minute' and that Mustering Hall techs speed it up by 15%. So the interval depends on which unit is toggled and which techs are researched, and the gate has no single production time. Reader A's 80 appears nowhere on screen. The video was cheat-enabled. The value cannot be determined."
+  },
+  {
+   "civ": "vikings",
+   "kind": "unit",
+   "name": "Villager",
+   "field": "trainTimeSeconds",
+   "value": 20,
+   "variant": "after Falkr's Village Saga reward (-2 s)",
+   "videoId": "BV1Bmnx6ZEBh_p1",
+   "frame": "C:/Users/Sam/projects/aoe4-build-crafter/.cache/upcoming-frames/BV1Bmnx6ZEBh_p1/s_01994.jpg",
+   "timestamp": "33:14",
+   "quote": "Falkr's Village Saga Upgrade 6 Longhouses with attachments. REWARD Villager recruitment speed reduced by 2 seconds and Longhouse attachment cost reduced by 20%.",
+   "confidence": "inferred",
+   "note": "22 - 2 = 20. This is not what the ehO1BOe7wG8 2:46 '20s' shows. That reading is at game 00:27, when no saga can be done. It is mid-countdown: s_00166 reads 20s at 00:27 and s_00168 reads 18s at 00:29.",
+   "verdict": "rejected",
+   "blindValue": null,
+   "tieReason": "This is the Vikings civ overview screen. The Falkr's Village Saga reward only says 'Villager recruitment speed reduced by 2 seconds'. The frame never shows the resulting Viking villager train time. Reader A's 20 is an assumed base value, not the time after the reward, and would only be 18 if the base is assumed to be 20."
+  }
+ ]
+}

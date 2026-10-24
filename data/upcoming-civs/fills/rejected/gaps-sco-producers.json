@@ -1,0 +1,22 @@
+{
+ "transcribedBy": "opus-agent gap hunt sco-producers + blind re-read",
+ "fills": [
+  {
+   "civ": "scots",
+   "kind": "bonus",
+   "name": "Mustering",
+   "field": "cap",
+   "value": 4,
+   "variant": null,
+   "videoId": "wzT5WTqIIU4",
+   "frame": "C:/Users/Sam/projects/aoe4-build-crafter/.cache/upcoming-frames/wzT5WTqIIU4/s_00882.jpg",
+   "timestamp": "14:42",
+   "quote": "Influence: Construct military buildings around the Mustering Hall to increase its level to improve the efficiency of mustering warriors. Tier 1: Unlocks mustering of Highland Archers. Adds a muster charge. Tier 2: Reduces cost to muster. Adds a muster charge. Tier 3: Reduces cost to muster. Adds a muster charge. Mustered warrior health is increased. + (c_oaynL66jY 17:25 s_01045) 'Comes with 1 Muster Charge by default.'",
+   "confidence": "inferred",
+   "note": "No on-screen hard cap exists. The value 4 is per Mustering Hall from its own levels: 1 default charge plus 1 per Influence tier, with 3 tiers. The Mustering Hall charge counter matches. In c_oaynL66jY it reads 1 at 17:25, 0 after Muster Pikemen, 1 at Tier 1 (18:17), 2 at Tier 2 (19:17) and 3 at Tier 3 (20:35); 3 of 4 because one was spent. The Three Loch Lookout landmark adds 3 more ('adds 3 muster charges for the Mustering Hall or Three Loch Lookout', c_oaynL66jY 27:03). Each muster type is one-time use, so usable charges are also bounded by the number of muster types.",
+   "verdict": "rejected",
+   "blindValue": null,
+   "tieReason": "s_00882 (and neighbours s_00886, s_00892, which show the same panel) only shows the Influence text: Tier 1/2/3 each 'Adds a muster charge', and the text is cut off at the scroll arrow. No cap or maximum charge number is shown. Reader A's 4 is a sum (1 default from a different video, c_oaynL66jY, plus 3 tier charges). It is not a stated cap, and it assumes there are no other sources of charges, so it cannot be confirmed from this frame."
+  }
+ ]
+}

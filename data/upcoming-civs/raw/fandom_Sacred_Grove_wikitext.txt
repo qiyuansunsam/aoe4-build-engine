@@ -1,0 +1,44 @@
+{{Upcoming|October 29th 2026|Raiders of the North}}
+{{Stub}}
+{{Infobox building
+|Name = Sacred Grove
+|Image = 
+|Civilization = {{4icons|Vikings}}
+|Intro = {{4icons|Raiders of the North}}
+|Age = {{4icons|Feudal Age}}
+|Type = Religious building
+}}
+<!--
+|Wood = 
+|FireArmor = 0
+|PierceArmor = 50
+|Pop = 
+|Type = Population Building
+|Use = Provides population<br />Drop off Food<br />Research Food-gathering improvements
+|Time = 15 seconds
+|HP =750 
+|Size = 2 x 2 tiles
+}}
+{{Quote|Increases your maximum Population and Villagers can drop off Food at this building. Contains technologies to improve Food gathering.|''Age of Empires IV'' description}}-->
+The '''Sacred Grove''' is a unique [[Building (Age of Empires IV)|building]] in ''[[Age of Empires IV: Raiders of the North]]'' available to the [[Vikings (Age of Empires IV)|Vikings]]. It can be created by a [[Völur]] starting in the Feudal Age. It increases the armor of nearby units and can regenerate hit points when no enemy units are around. Additionally, it can produce [[Berserker]]s.
+
+<!--
+== Further statistics ==
+{{Boosts|Technologies
+|Size = 60
+|HP = {{4icons|Court Architects}} (+30%)
+}}
+{{Boosts|Aura and abilitiy enhancements
+|Size = 60
+}}
+-->
+== Gallery ==
+<gallery>
+Sacred Grove Discord Promo.webp|A Sacred Grove on a Relic
+Sacred Grove Concept Art.webp|Sacred Grove Concept Art
+</gallery>
+
+{{Buildings List (Age of Empires IV)}}
+[[Category:Vikings (Age of Empires IV)]]
+[[Category:Religious buildings]]
+[[Category:Raiders of the North]]

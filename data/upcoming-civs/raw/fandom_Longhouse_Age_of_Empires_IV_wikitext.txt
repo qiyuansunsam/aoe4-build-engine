@@ -1,0 +1,79 @@
+{{for|building in [[Age of Empires IV: Raiders of the North]]|other uses|Longhouse}}
+{{Upcoming|October 29th 2026|Raiders of the North}}
+{{Stub}}
+{{Infobox building
+|Name = Longhouse
+|Image = 
+|Civilization = {{4icons|Vikings}}
+|Intro = {{4icons|Raiders of the North}}
+|Age = {{4icons|Dark Age}}
+|Wood = 150
+|FireArmor = 0
+|PierceArmor = 50
+|Pop = 25
+|Type = Population Building
+|Use = Provides population<br />Drop off Food<br />Research Food-gathering improvements
+|Time = 30 seconds
+|HP = 1000 
+|Size = 4 x 4 tiles
+}}
+{{Quote|Increases your Villager capacity by +10 and your maximum Population by +25. Produces Bondi spearmen but 25% slower. Can be upgrade with one of four possible attachments to increase the versatility of the Longhouse|In-game description}}
+The '''Longhouse''' is a unique [[Building (Age of Empires IV)|building]] in ''[[Age of Empires IV: Raiders of the North]]'' available to the [[Vikings (Age of Empires IV)|Vikings]] starting in the [[Dark Age (Age of Empires IV)|Dark Age]]. It replaces the [[House (Age of Empires IV)|House]]. In addition to providing population, it can also be upgraded with various attachments that have additional effects.
+
+== Attachments ==
+{| class="fandom-table"
+!Attachment
+!Age
+!Research Cost
+!Research Time
+!Limit
+!Effect
+|-
+!'''[[Bee Skeps]]'''
+|{{AoE4Icon|Dark Age}}
+|{{Resources|wood = 200}}
+|20 seconds
+|6
+| - Generates {{Resources|gold = 50}} per minute<br/>- Increases Longhouse health by 500
+|-
+!'''[[Farmstead]]'''
+|{{AoE4Icon|Dark Age}}
+|{{Resources|wood = 200}}
+|2 seconds
+|6
+| - Spawns two improved Farms<br/>- Longhouse becomes food dropoff site<br/>- Increases Longhouse health by 500
+|-
+!'''[[Pasture and Loom]]'''
+|{{AoE4Icon|Feudal Age}}
+|{{Resources|gold = 100|wood = 100}}
+|20 seconds
+|1
+| - Automatically researches melee and ranged armor technologies.<br/>- Increases Longhouse health by 750
+|-
+!'''[[Smithy]]'''
+|{{AoE4Icon|Feudal Age}}
+|{{Resources|gold = 100|wood = 100}}
+|20 seconds
+|1
+| - Automatically researches melee and ranged attack technologies.<br/>- Increases Longhouse health by 750
+|}
+
+== Further statistics ==
+{{Boosts|Technologies
+|Size = 60
+|HP = {{4icons|Court Architects}} (+30%)
+}}
+{{Boosts|Aura and abilitiy enhancements
+|Size = 60
+}}
+
+== Gallery ==
+<gallery>
+Longhouse AoE4 Civ Page.webp|A Longhouse with the Farmstead attachment
+</gallery>
+
+{{Buildings List (Age of Empires IV)}}
+[[Category:Vikings (Age of Empires IV)]]
+[[Category:Houses]]
+[[Category:Raiders of the North]]
+<!--[[Category:Drop-off buildings]]-->

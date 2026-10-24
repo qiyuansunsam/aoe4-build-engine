@@ -1,0 +1,97 @@
+{{Upcoming|October 29, 2026|Raiders of the North}}
+<!--{{For|expansion|the campaign|Raiders of the North (campaign)}}-->
+{{Infobox game
+|Name = ''Age of Empires IV: Raiders of the North''
+|Image = <gallery>
+AoE4 RotN cover photo.jpeg|Landscape
+AoE4 RotN portrait.jpeg|Portrait
+AoE4 RotN no logo cover.jpg|Without logo
+</gallery>
+|Icon = <!--AoE4 RotN icon.png-->
+|Developer = [[File:World's Edge Studio Logo.svg|16px]] [[World's Edge]]<br />[[File:Relic logo small.png|16px]] [[Relic Entertainment]]<br />[[File:FE logo small.png|16px]] [[Forgotten Empires]]<br />[[File:Climax Studios logo small.webp|16px]] {{W|Climax Studios}}
+|Publisher = <!--[[File:Xbox logo small.png|16px]] [[Xbox Game Studios]]-->
+|Genre = Real-time strategy
+|Platform = Windows<br />Xbox<br />PlayStation
+|Windows = October 29, 2026
+|Xbox = October 29, 2026
+|PlayStation5 = October 29, 2026
+|TypeOfGame = Expansion
+|Basegame = {{4icons}}
+|Patch = 
+|Logo = AoE4 RotN logo.png
+}}
+{{Quote|Command two new powerful civilizations: the Vikings and the Scots! Raid, defend, and evolve your strategy with new systems, expanded Crucible missions, and dynamic new battlefield.}}
+'''''Age of Empires IV: Raiders of the North''''' is an upcoming expansion for ''[[Age of Empires IV]]'' which will be released on October 29, 2026. It will add two new civilizations, the [[Vikings (Age of Empires IV)|Vikings]] and the [[Scots]].<ref>[https://store.steampowered.com/app/4336170/Age_of_Empires_IV_Raiders_of_the_North Steam page]</ref>
+
+== Civilizations ==
+''Raiders of the North'' introduces two new fully playable and complete [[Civilization (Age of Empires IV)|civilizations]], the Scots and the Vikings, featuring new units, buildings, gameplay, music, voice acting, architecture, and [[Mastery|masteries]].
+
+=== {{4icons|Scots|30}} ===
+{{Quote|
+The Scots bring strength defined by resilience and control. Built to endure, they thrive in prolonged battles and reward players who can hold the line. Their civilization is defined by disciplined infantry, fortified defenses, and a deep connection to their land.
+
+Their economy thrives through Highland cattle, creating a steady and reliable food source that supports sustained military production. Tower houses and grand castles anchor their territory, forcing opponents to commit fully to every advance.
+
+The Mustering Hall allows Scots players to define their approach. Lean into the resilience of Highland warriors or the structured strength of Lowland forces. This flexibility rewards thoughtful positioning, timing, and control of the battlefield.|Steam page|||<ref>[https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ Scots] on ageofempires.com</ref>}}
+<!--The Scots are a civilization ...-->
+{{-}}
+=== {{4icons|Vikings|30}} ===
+{{Quote|
+The Vikings enter the battlefield with a reputation built on speed, aggression, and adaptability. Their early game is defined by powerful melee infantry and decisive raiding that rewards bold action. Every successful strike against an enemy economy fuels your own, turning early pressure into sustained dominance.
+
+At the center of Viking society stands the Longhouse. More than a structure, it anchors a resilient economy that grows with your people. Through Northern Migration, your population trains for free, allowing you to focus on strategy, expansion, and control of the map.
+
+As the match unfolds, the Viking identity evolves. The transition beyond the Viking Age introduces Knights and Militia Crossbowmen reflecting the rise of organized Scandinavian kingdoms. Their approach adapts, but their core remains. Relentless infantry, strong map control, and the ability to dictate the pace of battle.
+
+Their legacy is carried forward through Heroic Sagas. Great deeds unlock powerful bonuses that shape your strategy and reinforce your momentum. Sacred Groves extend their influence, securing key locations while empowering nearby forces.|Steam page|||<ref>[https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ Vikings] on ageofempires.com</ref>}}
+<!--The Vikings are a civilization ...--><!--
+{{-}}
+-->
+== Maps ==
+The expansion adds two new biomes:
+[[File:Scottish Heathland Preorder Promo.webp|thumb|Scottish Heathland]]
+; Scottish Heathland {{Quote|Mist hangs over the highlands, where heather blooms purple across the moors and old standing stones keep watch over the lochs. Nobody remembers who raised them, and the land has its own ideas about who should rule it.|Official pre-order page description<ref name=":0">https://www.ageofempires.com/news/pre-order-raiders-of-the-north-for-age-of-empires-iv/</ref>}}
+[[File:Tundra Summer Preorder Promo.webp|thumb|Tundra Summer]]
+; Tundra Summer {{Quote|For a few short weeks the frozen north thaws. The land fills with cotton grass and red shrubs, and the lakes shine under a sun that barely sets. Whoever claims this land must do so before winter returns.|Offiical pre-order page description<ref name=":0"/>}}
+
+== [[The Crucible]], Reforged ==
+{{Quote|Raiders of the North also introduces four new Crucible missions designed to test your ability to adapt under pressure. From contested terrain to multi-front invasions, each mission presents new tactical challenges and opportunities.
+
+Crucible now evolves into a shared experience with new and existing missions allowing for co-op play with up to one other player. Whether playing solo or with allies, every run offers meaningful variation and replayability.|Steam page}}
+Raiders of the North introduces significant updates to ''Age of Empires IV'''s Crucible mode. These include:
+* Four new Crucible missions
+* Two-player co-op
+* Two new Crucible modes
+** Conqueror mode
+** Custom mode
+* Unique talent tracks for each civilization
+* 25 new Boons
+* 25 new Mutators
+
+== Gallery ==
+<gallery>
+RotN Promo Viking Camp 1.jpg|A Viking camp featuring Longhouses, a stave church, a trelleborg, and various ships and military units
+RotN Promo Viking Scot Battle.jpg|A battle between various Viking and Scottish infantry units
+RotN Promo Viking English Battle.jpg|A Viking attack on an English town
+RotN Promo Viking Monastery Raid.jpg|A Viking raid on an English Monastery
+RotN Promo Vikings Camp 2.jpg|A close-up of various Viking ships and military units
+RotN Promo Viking Coastal Attack.jpg|A Viking coastal attack on an English town
+Vikings AoE4 Preorder Promo.webp|A walled Viking camp by the sea
+Scots AoE4 Preorder Promo.webp|A Scottish town defending an attack from a bridge
+Crucible Steam 1.jpg|A scene from the updated Crucible mode featuring the Mongols and Tughlaq Dynasty
+Crucible Steam 2.jpg|A scene from the updated Crucible mode featuring the French and Knights Templar
+</gallery>
+
+== Videos ==
+<gallery>
+Age of Empires IV- Raiders of the North Announce Trailer- XBOX Games Showcase 2026
+</gallery>
+
+== References ==
+{{Reflist}}
+
+{{Games}}
+[[Category:Age of Empires IV|*]]
+[[Category:Expansions (Age of Empires IV)|R]]
+[[Category:Raiders of the North| ]]
+{{DISPLAYTITLE:''Age of Empires IV: Raiders of the North''}}

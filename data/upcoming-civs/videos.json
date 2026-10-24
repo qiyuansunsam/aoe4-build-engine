@@ -1,0 +1,117 @@
+{
+  "note": "Early-access / preview videos for Vikings and Scots found with yt-dlp search on 2026-10-24. Transcripts are fetched by scripts/fetch_video_transcripts.py; nothing here is a verified stat.",
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=nd74LibluQ0",
+      "title": "Everything You Need to Know About Vikings in Age of Empires IV",
+      "channel": "BeastyqtSC2",
+      "civ": "vikings",
+      "note": "54 min early-access overview"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=uNw-K34ZDPs",
+      "title": "Civilization Overview - The Vikings",
+      "channel": "Aussie_Drongo",
+      "civ": "vikings",
+      "note": "31 min overview"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ehO1BOe7wG8",
+      "title": "AoE4 Vikings Civilization Guide: Unique Units, Landmarks & Strategy",
+      "channel": "Corvinus1",
+      "civ": "vikings",
+      "note": "36 min guide"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vKPxGYSbN2Q",
+      "title": "Vikings in AoE4: Everything you need to know!",
+      "channel": "LaSh",
+      "civ": "vikings",
+      "note": "39 min"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=qARfRxyhRhA",
+      "title": "AoE4 Vikings vs Rus – FIRST LOOK! | Raiders of the North DLC (Early Access)",
+      "channel": "FitzBro",
+      "civ": "vikings",
+      "note": "early-access match"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=qlogYcWhKEU",
+      "title": "Civilization Overview - The Scots",
+      "channel": "Aussie_Drongo",
+      "civ": "scots",
+      "note": "41 min overview"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=wzT5WTqIIU4",
+      "title": "Scots Are Broken? Every Unit, Landmark & Bonus Explained",
+      "channel": "Corvinus1",
+      "civ": "scots",
+      "note": "20 min"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xjYytU_zXTA",
+      "title": "New AOE 4 Civ SCOTS [Civilization Overview]",
+      "channel": "GiveUAnxiety",
+      "civ": "scots",
+      "note": "44 min overview"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=OCna8RhsP9E",
+      "title": "The Scots Might Be Busted (AOE 4 New Civ Analysis)",
+      "channel": "RTS_Papercut",
+      "civ": "scots",
+      "note": "15 min analysis"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cDG2lTq10DA",
+      "title": "Everything You Need To Know About The Vikings & Scots (AoE4 DLC)",
+      "channel": "Valdy",
+      "civ": "both",
+      "note": "20 min"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=SqDzNbUMXaQ",
+      "title": "Are Vikings & Scots Broken? First Look at the Official Civ Pages (AoE4)",
+      "channel": "Valdy",
+      "civ": "both",
+      "note": "civ page read-through, likely no stats"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=y43dWkM5UUA",
+      "title": "AoE4 Raiders of the North - Vikings & Scots Explained",
+      "channel": "Day One Gaming",
+      "civ": "both",
+      "note": "8 min"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=p_Gt-2kOr6k",
+      "title": "【世紀帝國4】『維京』『蘇格蘭』DLC文明 情報釋出",
+      "channel": "安迪遊戲頻道",
+      "civ": "both",
+      "note": "Traditional Chinese, 35 min"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=fRNhDO3-6Yw",
+      "title": "【世紀帝國４】遲來的全新 DLC 北方掠奪者 2026 文明接露",
+      "channel": "RogerChou",
+      "civ": "both",
+      "note": "Traditional Chinese, 24 min"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=c_oaynL66jY",
+      "title": "Everything You Need to Know About Scots (Beastyqt)",
+      "channel": "BeastyqtSC2",
+      "civ": "scots",
+      "note": "40 min early-access overview; 28:35 Imperial upgrades and final stats"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dSny6uE4j/",
+      "title": "loueMT detailed Vikings civ introduction (bilibili)",
+      "channel": "loueMT",
+      "civ": "vikings",
+      "note": "bilibili, 13 min"
+    }
+  ]
+}

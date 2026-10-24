@@ -1,0 +1,188 @@
+/* rail-a — restrained glass. Scope: comparison rail (#inspector), detail panel (#object-detail),
+   constraints panel (#constraints-panel), Builds / Games / Library list rows. No layout changes. */
+
+:root{--rail-ease:cubic-bezier(.23,1,.32,1);--rail-cell:rgba(255,255,255,.50);--rail-cell-hi:rgba(255,255,255,.80);--rail-rim:rgba(255,255,255,.95);--rail-edge:rgba(64,88,112,.15);--rail-track:rgba(64,88,112,.14);--rail-hover:rgba(37,103,166,.055);--rail-a-tint:rgba(37,103,166,.10);--rail-b-tint:rgba(167,92,42,.10);--rail-a-line:rgba(37,103,166,.40);--rail-b-line:rgba(167,92,42,.40);--rail-ink-soft:rgba(34,43,56,.06)}
+[data-theme=dark]{--rail-cell:rgba(255,255,255,.035);--rail-cell-hi:rgba(255,255,255,.075);--rail-rim:rgba(255,255,255,.10);--rail-edge:rgba(190,210,230,.13);--rail-track:rgba(190,210,230,.14);--rail-hover:rgba(139,197,252,.07);--rail-a-tint:rgba(139,197,252,.13);--rail-b-tint:rgba(240,184,135,.13);--rail-a-line:rgba(139,197,252,.48);--rail-b-line:rgba(240,184,135,.48);--rail-ink-soft:rgba(255,255,255,.05)}
+
+@property --rail-sweep{syntax:'<angle>';inherits:false;initial-value:360deg}
+@keyframes rail-rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes rail-fade{from{opacity:0}to{opacity:1}}
+@keyframes rail-pop{from{opacity:0;transform:translateY(-4px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes rail-tick{from{opacity:.95;transform:scaleX(.15)}to{opacity:0;transform:scaleX(1)}}
+@keyframes rail-sweep{from{--rail-sweep:0deg;opacity:.4}to{--rail-sweep:360deg;opacity:1}}
+
+/* ---------- shared glass cell ---------- */
+#object-detail .stat,#object-detail .resource-card,#object-detail .allocation-grid>div,#object-detail .research-item,#object-detail .upgrade-tile,#object-detail .army-unit-summary,#object-detail .observed-weapon-values>span,#object-detail .observed-tech-detail,#object-detail .catalog-upgrade-groups>details,#catalog-results .catalog-production-group{background:linear-gradient(180deg,var(--rail-cell-hi),var(--rail-cell));border:1px solid var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim)}
+
+/* ---------- comparison rail ---------- */
+#inspector .panel-head h2{font-variant-numeric:tabular-nums;letter-spacing:-.2px}
+#inspector .tracking-menu summary{width:28px;height:28px;display:grid;place-items:center;padding:0;border-radius:50%;border:1px solid var(--rail-edge);background:var(--rail-cell);color:var(--muted);font-size:18px;line-height:1;box-shadow:inset 0 1px 0 var(--rail-rim);transition:background .14s,color .14s,transform .16s var(--rail-ease)}
+#inspector .tracking-menu summary:hover{background:var(--a-soft);color:var(--a)}
+#inspector .tracking-menu summary::-webkit-details-marker{display:none}
+#inspector .tracking-menu[open] summary{transform:rotate(45deg);color:var(--a);background:var(--a-soft)}
+#inspector .tracking-options{border:1px solid var(--glass-rim);border-radius:14px;backdrop-filter:blur(24px) saturate(120%);-webkit-backdrop-filter:blur(24px) saturate(120%);transform-origin:top right}
+#inspector .tracking-options label{border-radius:8px;padding:5px 7px;transition:background .12s,color .12s}
+#inspector .tracking-options label:hover{background:var(--rail-hover);color:var(--text)}
+#inspector .tracking-labels{margin-bottom:6px}
+#inspector .tracking-labels b{justify-self:end;display:inline-block;min-width:22px;padding:1px 7px;border-radius:999px;background:var(--a-soft);color:var(--a);font-weight:500;text-align:center;line-height:1.5}
+#inspector .tracking-labels b:last-child{background:var(--b-soft);color:var(--b)}
+#inspector .compare-track{border-top:1px solid var(--rail-track);transition:background .14s}
+#inspector .compare-track:hover{background:var(--rail-hover)}
+#inspector .compare-track .metric-name{transition:color .12s}
+#inspector .track-row{border-radius:8px;transition:background .14s,color .14s}
+#inspector .track-row b{position:relative;font-variant-numeric:tabular-nums;color:var(--a);opacity:.86;transition:opacity .14s,color .14s}
+#inspector .track-row[data-path="1"] b,#inspector .track-row[data-unit-path="1"] b{color:var(--b)}
+#inspector .compare-track:hover .track-row b{opacity:1}
+#inspector .track-row:hover,#inspector .track-row:focus-visible{background:var(--rail-a-tint)}
+#inspector .track-row[data-path="1"]:hover,#inspector .track-row[data-unit-path="1"]:hover,#inspector .track-row[data-path="1"]:focus-visible,#inspector .track-row[data-unit-path="1"]:focus-visible{background:var(--rail-b-tint)}
+#inspector .track-row:disabled{opacity:.5}
+#inspector .track-row b::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:2px;border-radius:2px;background:currentColor;opacity:0;transform-origin:right}
+#inspector .unit-tracking{border-top:1px solid var(--rail-track)}
+#inspector .unit-tracking>summary,#object-detail .detail-evidence>summary,#constraints-panel .constraint-settings>summary,#constraints-panel .constraint-path>summary,#constraints-panel .loss-assumptions>summary,#constraints-panel .constraint-explanation>summary,#object-detail .catalog-upgrade-groups summary{list-style:none;position:relative;transition:color .12s}
+#inspector .unit-tracking>summary::-webkit-details-marker,#object-detail .detail-evidence>summary::-webkit-details-marker,#constraints-panel summary::-webkit-details-marker,#object-detail .catalog-upgrade-groups summary::-webkit-details-marker{display:none}
+#inspector .unit-tracking>summary,#object-detail .detail-evidence>summary,#constraints-panel .loss-assumptions>summary,#constraints-panel .constraint-explanation>summary{padding-left:16px}
+#inspector .unit-tracking>summary::before,#object-detail .detail-evidence>summary::before,#constraints-panel .loss-assumptions>summary::before,#constraints-panel .constraint-explanation>summary::before{content:'';position:absolute;left:3px;top:50%;width:6px;height:6px;margin-top:-5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg);transition:transform .2s var(--rail-ease)}
+#inspector .unit-tracking[open]>summary::before,#object-detail .detail-evidence[open]>summary::before,#constraints-panel .loss-assumptions[open]>summary::before,#constraints-panel .constraint-explanation[open]>summary::before{transform:rotate(45deg) translate(-1px,-1px)}
+#inspector .unit-tracking>summary:hover,#object-detail .detail-evidence>summary:hover{color:var(--a)}
+#inspector .unit-tracking-list{scrollbar-width:thin}
+
+/* chart link: dim the path that is not hovered in the rail */
+[data-chart-series],[data-chart-marker]{transition:opacity .16s}
+html[data-rail-hover="0"] [data-chart-series="1"],html[data-rail-hover="0"] [data-chart-marker="1"],html[data-rail-hover="1"] [data-chart-series="0"],html[data-rail-hover="1"] [data-chart-marker="0"]{opacity:.28}
+
+/* ---------- detail panel ---------- */
+#object-detail .section-caption h2{letter-spacing:-.4px}
+#object-detail .detail-time{padding:3px 9px;border-radius:999px;background:var(--rail-cell);border:1px solid var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);font-variant-numeric:tabular-nums}
+#object-detail .stat{border-radius:10px}
+#object-detail .stat small{font-size:11px;color:var(--muted)}
+#object-detail .stat strong{font-variant-numeric:tabular-nums;letter-spacing:-.5px;transition:color .14s}
+#object-detail .stat.is-changing strong{color:var(--a)}
+#object-detail .stat-delta{color:var(--a);font-variant-numeric:tabular-nums}
+#object-detail .stat:has(.stat-delta){border-color:var(--rail-a-line);background:linear-gradient(180deg,var(--rail-cell-hi),var(--rail-a-tint))}
+#object-detail .allocation-grid>div{border-radius:9px}
+#object-detail .allocation-grid b{font-variant-numeric:tabular-nums}
+#object-detail .food-sources>span{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);border-radius:999px}
+#object-detail .food-sources b{font-family:var(--mono);font-variant-numeric:tabular-nums}
+#object-detail .upgrade-building-group h4::after{content:'';flex:1;height:1px;background:var(--rail-track);margin-left:4px}
+#object-detail .upgrade-tile{border-radius:10px;transition:transform .12s var(--rail-ease),border-color .14s,background .14s,box-shadow .14s}
+#object-detail .upgrade-tile:has(.upgrade-toggle:not(:disabled):hover){border-color:var(--rail-a-line)}
+#object-detail .upgrade-tile:has(.upgrade-toggle:not(:disabled):active){transform:scale(.98)}
+#object-detail .upgrade-tile.preview{border-color:var(--rail-a-line);background:linear-gradient(180deg,var(--rail-cell-hi),var(--rail-a-tint));box-shadow:inset 0 1px 0 var(--rail-rim),0 0 0 3px var(--rail-a-tint)}
+#object-detail .upgrade-tile.complete .upgrade-toggle small{color:var(--a)}
+#object-detail .upgrade-toggle{transition:color .12s}
+#object-detail .upgrade-info{transition:color .12s,background .12s;border-radius:6px}
+#object-detail .upgrade-info:hover{color:var(--a);background:var(--rail-a-tint)}
+#object-detail progress{appearance:none;-webkit-appearance:none;border:0;border-radius:3px;overflow:hidden;background:var(--rail-track)}
+#object-detail progress::-webkit-progress-bar{background:var(--rail-track);border-radius:3px}
+#object-detail progress::-webkit-progress-value{background:var(--a);border-radius:3px}
+#object-detail progress::-moz-progress-bar{background:var(--a);border-radius:3px}
+#object-detail .research-item{border-radius:10px;transition:border-color .14s,background .14s,transform .12s var(--rail-ease)}
+#object-detail .research-item:hover{border-color:var(--rail-a-line)}
+#object-detail .research-item:active{transform:scale(.98)}
+#object-detail .research-item progress{height:3px;bottom:0;left:0;border-radius:0 0 10px 10px}
+#object-detail .research-item>span:last-of-type{font-variant-numeric:tabular-nums}
+#object-detail .army-unit-tabs [role=tab],#object-detail .unit-picker.observed-unit-tabs>button{border-radius:999px;border-color:transparent;background:transparent;transition:background .14s,border-color .14s,color .14s}
+#object-detail .army-unit-tabs [role=tab]:hover,#object-detail .unit-picker.observed-unit-tabs>button:hover{background:var(--rail-hover);border-color:var(--rail-edge)}
+#object-detail .army-unit-tabs [aria-selected=true],#object-detail .unit-picker.observed-unit-tabs>button[aria-pressed=true]{background:var(--a-soft);border-color:var(--rail-a-line);color:var(--a)}
+#object-detail .army-unit-tabs b{font-variant-numeric:tabular-nums;padding:1px 7px;border-radius:999px;background:var(--rail-ink-soft)}
+#object-detail .army-unit-tabs [aria-selected=true] b{background:var(--surface)}
+#object-detail .army-unit-summary{border-radius:12px}
+#object-detail .army-unit-count,#object-detail .army-selection-meta b{font-variant-numeric:tabular-nums}
+#object-detail .resource-card{border-radius:12px}
+#object-detail .resource-card>strong{font-variant-numeric:tabular-nums;letter-spacing:-.6px}
+#object-detail .resource-card>div{border-top-color:var(--rail-track)}
+#object-detail .resource-card>div b{font-family:var(--mono);font-variant-numeric:tabular-nums}
+#object-detail .resource-card>.game-icon{box-shadow:inset 0 0 0 1px var(--rail-edge)}
+#object-detail .spending-pie{box-shadow:0 0 0 6px var(--rail-cell),0 0 0 7px var(--rail-edge)}
+#object-detail .spending-pie>div{background:var(--surface);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 var(--rail-rim),0 0 0 1px var(--rail-edge)}
+#object-detail .spending-pie strong{font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+#object-detail .spending-legend>div{padding:4px 8px;margin:0 -8px;border-radius:8px;transition:background .12s}
+#object-detail .spending-legend>div:hover{background:var(--rail-hover)}
+#object-detail .spending-legend i{box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+#object-detail .spending-legend dd{font-variant-numeric:tabular-nums}
+#object-detail .detail-evidence{border-top-color:var(--rail-track)}
+#object-detail .catalog-upgrade-groups>details{border-radius:12px}
+#object-detail .catalog-upgrade-groups summary{transition:color .12s}
+#object-detail .catalog-upgrade-groups summary:hover{color:var(--a)}
+#object-detail .catalog-upgrade-groups summary:after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg);margin-right:4px;transition:transform .2s var(--rail-ease)}
+#object-detail .catalog-upgrade-groups details[open] summary:after{transform:rotate(45deg)}
+#object-detail .observed-tech-option{border-radius:9px;transition:background .12s,border-color .12s,transform .12s var(--rail-ease)}
+#object-detail .observed-tech-option:hover{background:var(--rail-hover)}
+#object-detail .observed-tech-option:active{transform:scale(.98)}
+#object-detail .observed-tech-option[aria-pressed="true"],#object-detail .observed-tech-option.selected{border-color:var(--rail-a-line);background:var(--a-soft)}
+#object-detail .observed-tech-detail,#object-detail .observed-weapon-values>span{border-radius:10px}
+#object-detail .observed-weapon-values b{font-variant-numeric:tabular-nums}
+#object-detail .catalog-tags button{border-radius:999px;transition:color .12s,border-color .12s,background .12s}
+#object-detail.empty{border:1px dashed var(--rail-edge);background:var(--rail-cell)}
+#object-detail.drop-active{outline-color:var(--rail-a-line)}
+
+/* ---------- constraints panel ---------- */
+#constraints-panel .constraint-settings>summary:after{content:'';width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg);color:var(--muted);margin-right:5px;transition:transform .2s var(--rail-ease)}
+#constraints-panel .constraint-settings[open]>summary:after{transform:rotate(45deg)}
+#constraints-panel .constraint-path{border-top-color:var(--rail-track)}
+#constraints-panel .constraint-path>summary{border-radius:8px;transition:background .12s}
+#constraints-panel .constraint-path>summary:hover{background:var(--rail-hover)}
+#constraints-panel .constraint-path>summary:after{content:'';width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg);color:var(--muted);margin-right:6px;transition:transform .2s var(--rail-ease)}
+#constraints-panel .constraint-path[open]>summary:after{transform:rotate(45deg)}
+#constraints-panel .path-pill{box-shadow:inset 0 0 0 1px var(--rail-a-line)}
+#constraints-panel .path-pill.b{box-shadow:inset 0 0 0 1px var(--rail-b-line)}
+#constraints-panel .constraint-fields .select-trigger{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);border-radius:9px;transition:border-color .12s,background .12s}
+#constraints-panel .constraint-fields .select-trigger:hover{border-color:var(--rail-a-line)}
+#constraints-panel .constraint-explanation{border-top-color:var(--rail-track)}
+#constraints-panel #reset{color:var(--muted);transition:color .12s}
+#constraints-panel #reset:hover{color:var(--b)}
+
+/* ---------- list pages ---------- */
+#build-results .build-item,#game-results .game-match-compact,#catalog-results .catalog-family.single{position:relative;border-radius:12px;transition:background .16s,box-shadow .16s}
+#build-results .build-item:hover,#catalog-results .catalog-family.single:hover{background:linear-gradient(90deg,var(--rail-a-tint),transparent 55%);box-shadow:inset 2px 0 0 var(--a)}
+#game-results .game-match-compact:hover{background:linear-gradient(90deg,var(--rail-a-tint),transparent 55%);box-shadow:inset 2px 0 0 var(--a)}
+#build-results .build-item{border-bottom-color:var(--rail-track)}
+#build-results .build-item .badge{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);border-radius:999px}
+#build-results .build-actions button{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);transition:background .12s,border-color .12s,color .12s,transform .12s var(--rail-ease)}
+#build-results .build-actions button:hover{border-color:var(--rail-a-line);color:var(--a);background:var(--a-soft)}
+#build-results .build-actions button[data-apply-path="1"]:hover{border-color:var(--rail-b-line);color:var(--b);background:var(--b-soft)}
+#build-results .build-actions button:active{transform:scale(.98)}
+#build-results .civ-flag,#game-results .civ-flag,#catalog-results .civ-flag{border-radius:3px;box-shadow:0 0 0 1px var(--rail-edge)}
+#game-results .match-open-chevron{transition:transform .16s var(--rail-ease),color .16s}
+#game-results .game-match-compact:hover .match-open-chevron{transform:translateX(3px);color:var(--a)}
+#game-results .player-rank{font-family:var(--mono);font-variant-numeric:tabular-nums;padding:1px 7px;border-radius:999px;background:var(--rail-ink-soft)}
+#game-results .match-state:not(:empty){display:inline-block;padding:2px 8px;border-radius:999px;background:var(--a-soft);color:var(--a)}
+#game-results .match-number{font-variant-numeric:tabular-nums}
+#catalog-results .catalog-production-group{border-radius:14px}
+#catalog-results .catalog-production-group>h2 small{padding:1px 8px;border-radius:999px;background:var(--rail-ink-soft);font-variant-numeric:tabular-nums}
+#catalog-results .catalog-family{border-top-color:var(--rail-track)}
+#catalog-results .catalog-object-link .game-icon{border-radius:8px;box-shadow:inset 0 0 0 1px var(--rail-edge);background:var(--rail-cell);transition:box-shadow .14s}
+#catalog-results .catalog-family.single:hover .catalog-object-link .game-icon{box-shadow:inset 0 0 0 1px var(--rail-a-line)}
+#catalog-results .catalog-tags button{border-radius:999px;transition:color .12s,border-color .12s,background .12s}
+#catalog-results .catalog-tags button:hover{background:var(--a-soft)}
+.catalog-patch-toggle{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim)}
+.catalog-patch-toggle button{border-radius:8px;transition:background .14s,color .14s,box-shadow .14s}
+.catalog-patch-toggle button[aria-pressed=true]{background:var(--surface);box-shadow:0 1px 4px rgba(0,0,0,.08),inset 0 1px 0 var(--rail-rim)}
+.catalog-browser-toolbar input,.catalog-browser-toolbar .select-trigger,.library-filter input,.library-filter .select-trigger{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);transition:border-color .12s,background .12s}
+.catalog-browser-toolbar input:hover,.catalog-browser-toolbar .select-trigger:hover,.library-filter input:hover,.library-filter .select-trigger:hover{border-color:var(--rail-a-line)}
+
+/* ---------- motion (transform/opacity only; reduced motion keeps the static state) ---------- */
+@media (prefers-reduced-motion:no-preference){
+#inspector .tracking-menu[open] .tracking-options{animation:rail-pop .18s var(--rail-ease) both}
+#inspector .track-row b.is-changing::after{animation:rail-tick .4s var(--rail-ease) both}
+#object-detail>*{animation:rail-rise .22s var(--rail-ease) both}
+#object-detail .stat,#object-detail .resource-card,#object-detail .allocation-grid>div{animation:rail-fade .2s var(--rail-ease) both;animation-delay:calc(var(--rail-i,0)*40ms)}
+#object-detail .stat:nth-child(2),#object-detail .resource-card:nth-child(2),#object-detail .allocation-grid>div:nth-child(2){--rail-i:1}
+#object-detail .stat:nth-child(3),#object-detail .resource-card:nth-child(3),#object-detail .allocation-grid>div:nth-child(3){--rail-i:2}
+#object-detail .stat:nth-child(4),#object-detail .resource-card:nth-child(4),#object-detail .allocation-grid>div:nth-child(4){--rail-i:3}
+#object-detail .stat:nth-child(5),#object-detail .allocation-grid>div:nth-child(5){--rail-i:4}
+#object-detail .stat:nth-child(6),#object-detail .allocation-grid>div:nth-child(6){--rail-i:5}
+#object-detail .stat:nth-child(7){--rail-i:6}
+#object-detail .stat:nth-child(8){--rail-i:7}
+#object-detail .spending-pie:not(.is-empty){mask:conic-gradient(#000 var(--rail-sweep),transparent 0);-webkit-mask:conic-gradient(#000 var(--rail-sweep),transparent 0);animation:rail-sweep .36s var(--rail-ease) both}
+#object-detail[data-rail-swap=soft] *,#object-detail[data-rail-swap=soft]>*{animation:none}
+#build-results .build-item,#game-results .game-match-compact,#catalog-results .catalog-roster-groups>section,#catalog-results .catalog-family-list>.catalog-family{animation:rail-rise .24s var(--rail-ease) both;animation-delay:calc(var(--rail-i,0)*40ms)}
+#build-results .build-item:nth-child(2),#game-results .game-match-compact:nth-child(2),#catalog-results .catalog-roster-groups>section:nth-child(2),#catalog-results .catalog-family-list>.catalog-family:nth-child(2){--rail-i:1}
+#build-results .build-item:nth-child(3),#game-results .game-match-compact:nth-child(3),#catalog-results .catalog-roster-groups>section:nth-child(3),#catalog-results .catalog-family-list>.catalog-family:nth-child(3){--rail-i:2}
+#build-results .build-item:nth-child(4),#game-results .game-match-compact:nth-child(4),#catalog-results .catalog-roster-groups>section:nth-child(4),#catalog-results .catalog-family-list>.catalog-family:nth-child(4){--rail-i:3}
+#build-results .build-item:nth-child(5),#game-results .game-match-compact:nth-child(5),#catalog-results .catalog-roster-groups>section:nth-child(5),#catalog-results .catalog-family-list>.catalog-family:nth-child(5){--rail-i:4}
+#build-results .build-item:nth-child(6),#game-results .game-match-compact:nth-child(6),#catalog-results .catalog-roster-groups>section:nth-child(6),#catalog-results .catalog-family-list>.catalog-family:nth-child(6){--rail-i:5}
+#build-results .build-item:nth-child(7),#game-results .game-match-compact:nth-child(7),#catalog-results .catalog-roster-groups>section:nth-child(7),#catalog-results .catalog-family-list>.catalog-family:nth-child(7){--rail-i:6}
+#build-results .build-item:nth-child(8),#game-results .game-match-compact:nth-child(8),#catalog-results .catalog-roster-groups>section:nth-child(8),#catalog-results .catalog-family-list>.catalog-family:nth-child(8){--rail-i:7}
+#build-results .build-item:nth-child(n+9),#game-results .game-match-compact:nth-child(n+9),#catalog-results .catalog-roster-groups>section:nth-child(n+9),#catalog-results .catalog-family-list>.catalog-family:nth-child(n+9){--rail-i:8}
+}

@@ -1,0 +1,699 @@
+{
+  "civilization": "Scots",
+  "expansion": "Age of Empires IV: Raiders of the North",
+  "scheduledRelease": "2026-10-29",
+  "status": "announced-not-installed",
+  "fetchedAt": "2026-10-23",
+  "conventions": {
+    "landmarkAge": "age REACHED by building the landmark. The fandom Scots page lists landmarks under the age they are BUILT in (Dark Age: Abbey of the Isles / Stone of Destiny); we normalise to age reached. Official page confirms Stone of Destiny = Feudal, Tower of Skye = Castle, Dhùn Èideann = Imperial.",
+    "region": "Lowlands / Highlands matters: Mustering Hall technologies from a region get 'greatly reduced' cost once a Landmark of that region is built. Region is stated officially only for Stone of Destiny (Lowlands), Tower of Skye (Highlands), Dhùn Èideann (Lowlands); the other three are inferred as the opposite region of their pair.",
+    "confidence": "official = ageofempires.com / Steam store text; wiki = ageofempires.fandom.com (Scots page expanded 2026-10-10 'new info from civ page reveal' and 2026-10-22 by 'Geer of War', no stated source for the landmark/tech lists); community = forum / third-party; inferred = our reading",
+    "videoMining": "2026-10-23/24 sweep. YouTube watch pages via WebFetch return title only; r.jina.ai rendering gives description, chapters and a partial comment set but the transcript never loads ('NaN / NaN', 'Sign in to confirm you're not a bot'); youtubetranscript.com reports YouTube is blocking subtitle fetches; yewtu.be API 403; reddit.com blocked. Numbers therefore come only from chapter titles and named commenters, labelled confidence 'video-transcribed' and NOT confirmed on screen. Early-access footage exists from 2026-10-22 (test server: Beasty, Anotand, Corvinus, FitzBro, Drongo, loueMT)."
+  },
+  "bonuses": [
+    {
+      "name": "Highland Wealth",
+      "text": "Start the game with a Highland Cattle, which generates food over time as it grazes at Berry Bushes. Official page: 'The Scots Dark Age begins with assigning their first Highland Cattle to Berry Bushes near a Tower House'.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots ; https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "official"
+    },
+    {
+      "name": "Highland Cattle grazing",
+      "text": "Highland Cattle graze at Berry Bushes for bonus Food over time WITHOUT depleting them. Trickle rate, cattle cost and train time unknown. Tower Houses produce and shelter (garrison) cattle.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "official"
+    },
+    {
+      "name": "Highland Ambush",
+      "text": "Infantry gain increased movement speed while in Stealth Forests and do not receive any vision penalty (official: Scots infantry 'see directly through' Stealth Forests). Clan Traditions extends the bonus duration.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots ; https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "official"
+    },
+    {
+      "name": "Tower House replaces Outpost",
+      "text": "Tower Houses act as Outposts, increase population capacity, produce Highland Cattle and give cattle unique garrison spaces. Can have an attached barmkin to bring cattle inside. Cost/pop amount unknown.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://www.ageofempires.com/news/celebrating-age-in-2026-where-were-at-and-where-were-going/",
+      "confidence": "official"
+    },
+    {
+      "name": "Mustering",
+      "text": "Mustering Hall musters warriors rapidly by spending Food on 'muster charges'; military buildings within its influence improve mustering. Holds Lowland and Highland technologies that 'greatly reduce in cost' when a Landmark from that region is constructed. Celebrating-2026 post: 'a quick way to field units at a discount'. Charge cost, unit counts and cooldowns unknown.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://www.ageofempires.com/news/celebrating-age-in-2026-where-were-at-and-where-were-going/",
+      "confidence": "official"
+    },
+    {
+      "name": "Fishponds",
+      "text": "Kirkmen create and gather Gold from Fishponds; while Kirkmen work Fishponds, nearby Villager gather rates are also increased. Unlocked by Stone of Destiny (Feudal). Fishpond limit raised by Stew Ponds.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "name": "Starting conditions",
+      "text": "Start with one Highland Cattle (above). Otherwise standard start assumed; starting resources not stated.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "inferred"
+    }
+  ],
+  "landmarks": [
+    {
+      "age": "Feudal",
+      "name": "Abbey of the Isles",
+      "effect": "Contains a Saint's Relic that provides an area healing aura. The relic (with its aura) can be transferred to other buildings to additionally increase that building's research and production speed.",
+      "kind": "economic/support",
+      "region": "Highlands (inferred: pair of Stone of Destiny)",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "age": "Feudal",
+      "name": "Stone of Destiny",
+      "effect": "Buildings constructed within its reach have part of their construction cost refunded as Gold ('feudalization'). Grants early access to Kirkmen (and Fishponds). Rebate percentage unknown.",
+      "kind": "economic",
+      "region": "Lowlands",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "age": "Castle",
+      "name": "Snowdoun Gate",
+      "effect": "Produces infantry for free (rate/which units unknown).",
+      "kind": "military",
+      "region": "Lowlands (inferred: pair of Tower of Skye)",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "age": "Castle",
+      "name": "Tower of Skye",
+      "effect": "Acts as a Tower House with added emplacements and generates a surrounding Stealth Forest. Grants other Tower Houses the ability to generate Stealth Forests and increases infantry damage by 15% in Stealth Forest.",
+      "kind": "military/defensive",
+      "region": "Highlands",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "age": "Imperial",
+      "name": "Dhùn Èideann",
+      "effect": "Defensive landmark with seven cannon attacks ('Seven Sisters'). Produces gunpowder siege engines at lower cost and with increased range.",
+      "kind": "military",
+      "region": "Lowlands",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "age": "Imperial",
+      "name": "Three Loch Lookout",
+      "effect": "Acts as a Mustering Hall with large line of sight. Adds extra muster charges and increases warriors received per muster. Can muster ships if built near water.",
+      "kind": "military",
+      "region": "Highlands (inferred)",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    }
+  ],
+  "uniqueUnits": [
+    {
+      "name": "Highland Cattle",
+      "building": "Tower House",
+      "age": "Dark",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Livestock. Tasked to Berry Bushes to generate a Food trickle without depleting the bush. One at game start. Garrisons in Tower Houses (Barmkins adds slots). Fermtouns and Pastures raises its gather rate.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Highland_Cattle",
+      "confidence": "official"
+    },
+    {
+      "name": "Pikeman",
+      "building": "Barracks (inferred)",
+      "age": "Dark ('Pictish Pikeman stands ready' in Age 1 text)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Spearman variant with significantly increased melee range. Forms the schiltron with Men-at-Arms (Lochaber Axes) and Gallowglass.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "name": "Cateran",
+      "building": "Barracks (inferred; fandom commented-out infobox says Barracks/Feudal)",
+      "age": "unknown (Feudal likely)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Swift light melee infantry; bonus damage vs workers and buildings (torching). Basket-Hilted Broadswords (Imperial) boosts attack speed/damage; Cateran's Trail gives speed aura and forest healing.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Cateran",
+      "confidence": "official"
+    },
+    {
+      "name": "Gallowglass",
+      "building": "Barracks and Mustering Hall",
+      "age": "Castle",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Heavy melee infantry with claymore; area-of-effect damage; can brace against cavalry charges. Fandom S&W: strong vs archers, horsemen, spearmen; weak vs crossbowmen.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Gallowglass_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "name": "Border Reiver",
+      "building": "unknown (Celebrating-2026 post: musterable at Mustering Hall)",
+      "age": "Imperial",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Light ranged gunpowder cavalry with pistols and torches; counters ranged cavalry; raids perimeters. Affected by Snaphance Locks.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Border_Reiver",
+      "confidence": "official"
+    },
+    {
+      "name": "Kirkman",
+      "building": "unknown (religious; early access via Stone of Destiny; Stew Ponds spawns one)",
+      "age": "Feudal (with Stone of Destiny)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Religious unit that creates Fishponds and gathers Gold from them; boosts nearby Villager gather rates while working.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "name": "Ghillie",
+      "building": "Town Center (inferred, Scout variant)",
+      "age": "Dark (inferred)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Scout variant that can enter stealth at any time.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Highland Archer",
+      "building": "Archery Range (inferred)",
+      "age": "Feudal (inferred, Archer variant)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Archer variant with increased damage but less range.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Tacksman",
+      "building": "Archery Range (inferred, Handcannoneer variant)",
+      "age": "Imperial (inferred)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Handcannoneer variant that enhances damage of nearby highland warriors.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Man-at-Arms (standard, with Lochaber Axes)",
+      "building": "Barracks",
+      "age": "Feudal (standard)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Not unique, but Lochaber Axes gives +damage and brace vs cavalry; named in official schiltron text.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "official"
+    }
+  ],
+  "uniqueBuildings": [
+    {
+      "name": "Tower House",
+      "replaces": "Outpost",
+      "age": "Dark",
+      "cost": null,
+      "produces": "Highland Cattle",
+      "effect": "Defensive building (acts as Outpost); provides population space; produces and garrisons Highland Cattle; barmkin attachment for cattle; with Tower of Skye can generate Stealth Forests. Fortified Tower Houses adds fire armor; Barmkins adds cattle garrison slots.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "name": "Mustering Hall",
+      "replaces": null,
+      "age": "Feudal (official Age 2 text)",
+      "cost": null,
+      "produces": "Mustered warriors for Food (muster charges); Gallowglass from Castle; Border Reivers per Celebrating-2026 post",
+      "effect": "Technology building holding Lowland/Highland unique techs (cheaper once matching-region Landmark built). Military buildings in its influence improve mustering. Three Loch Lookout acts as a larger one.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "name": "Fishpond",
+      "replaces": null,
+      "age": "Feudal (via Stone of Destiny / Kirkman)",
+      "cost": null,
+      "produces": "Gold (gathered by Kirkmen)",
+      "effect": "Harvestable gold source that also improves resource gathering of nearby workers. Limit exists (raised by Stew Ponds).",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    }
+  ],
+  "uniqueTechnologies": [
+    {
+      "name": "Barmkins",
+      "age": null,
+      "building": "Mustering Hall (inferred)",
+      "cost": null,
+      "region": null,
+      "effect": "Tower Houses gain increased garrison slots for Highland Cattle.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Basket-Hilted Broadswords",
+      "age": "Imperial",
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Increases attack speed and damage of Caterans.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "name": "Birlinn Crews",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Galleys gain increased movement speed and attack speed.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Cateran's Trail",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Caterans increase movement speed of nearby infantry; infantry heal while out of combat and in Stealth Forests.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Clan Traditions",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Increases melee infantry damage and the duration of their Highland Ambush bonus.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Fermtouns and Pastures",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Villagers gather faster from Farms; Highland Cattle gather faster from Berry Bushes.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Feuds Aside",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Increases attack speed of gunpowder units.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Fortified Tower Houses",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Tower Houses gain increased fire armor.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Lion's Duty",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Infantry gain increased armor near landmarks and defensive buildings.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Lochaber Axes",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Men-at-Arms gain increased damage and can brace against cavalry charges.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "official"
+    },
+    {
+      "name": "Snaphance Locks",
+      "age": "Imperial (inferred: replaces Serpentine Powder)",
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Replaces Serpentine Powder with the same effect, also affecting Border Reivers.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Stew Ponds",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Instantly spawns a Kirkman and increases Fishpond limit; further increases gather rates of workers near Fishponds.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Wallace's Rally",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Increases infantry production speed; newly created infantry get a large temporary movement speed buff.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "We Stand Alone",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "region": null,
+      "effect": "Increases building health and emplacement attack speed; buildings regenerate HP.",
+      "source": "https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "wiki"
+    },
+    {
+      "name": "'Seven Sisters' cannons",
+      "age": "Imperial",
+      "building": "Dhùn Èideann",
+      "cost": null,
+      "region": "Lowlands",
+      "effect": "Landmark cannon emplacements plus increased gunpowder siege range (landmark effect, not a researched tech).",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "official"
+    }
+  ],
+  "economyNotes": [
+    {
+      "text": "Food: start with one Highland Cattle grazing Berry Bushes (non-depleting trickle). More cattle come from Tower Houses. Rate per cattle, cattle cost/time, cattle cap and Tower House cost are all unpublished, so the food curve cannot be modelled yet. The Malian cattle precedent in the installed catalog (90 gold, 15 s) is NOT evidence for Scots values.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "official"
+    },
+    {
+      "text": "Gold: Stone of Destiny (Feudal, Lowlands) refunds part of nearby building costs as gold and unlocks Kirkmen/Fishponds (gold source + nearby gather-rate aura). Percentages unknown.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "official"
+    },
+    {
+      "text": "Military-for-food: Mustering Hall converts Food into muster charges that spawn warriors rapidly; Snowdoun Gate (Castle) produces infantry for free. Both substitute for normal production costs; values unknown.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/ ; https://ageofempires.fandom.com/wiki/Scots",
+      "confidence": "official"
+    },
+    {
+      "text": "Tower House replaces Outpost AND adds population, so house count may be partly replaced by Tower Houses; whether normal Houses still exist is not stated.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "confidence": "inferred"
+    },
+    {
+      "text": "Generic 17.0 change affecting all civs: Town Center construction time 150 -> 165 s. No general age-up cost changes in the 17.0 preview.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "confidence": "official"
+    },
+    {
+      "text": "Age-up and landmark costs, starting resources: not published; standard values would be an assumption.",
+      "source": null,
+      "confidence": "inferred"
+    }
+  ],
+  "openingsCommentary": [
+    {
+      "summary": "Official 'Through the Ages': Age 1 - task the starting cattle to berries near a Tower House, build Tower Houses for pop + cattle production; Pikemen defend. Age 2 - Stone of Destiny (Lowlands), build inside its reach for gold rebate, Kirkman + Fishpond, build Mustering Hall and spend Food on muster charges. Age 3 - Tower of Skye (Highlands) for Stealth Forests, Gallowglass from Barracks/Mustering Hall. Age 4 - Dhùn Èideann, Border Reivers, Basket-Hilted Broadswords, final Mustering Hall techs. Note this showcases a Lowlands-Highlands-Lowlands path, which would pay full price for one region's techs in Feudal/Castle.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/"
+    },
+    {
+      "summary": "Steam / 17.0 notes framing: 'resilient and defensive', 'thrive in prolonged battles', Mustering Hall lets you lean Highland (aggression) or Lowland (defense).",
+      "source": "https://store.steampowered.com/app/4336170/Age_of_Empires_IV_Raiders_of_the_North/"
+    },
+    {
+      "summary": "Official forum threads (286737 and 207081) contain only reactions and speculation (e.g. 'Scots are just another variant', unit-name guesses from screenshots); no stats or openings.",
+      "source": "https://forums.ageofempires.com/t/age-of-empires-iv-raiders-of-the-north/286737"
+    }
+  ],
+  "unknowns": [
+    "Highland Cattle food trickle rate, cost, train time, cap; Tower House cost/pop/build time",
+    "All unit costs, HP, armor, damage, speed, train times (Pikeman, Cateran, Gallowglass, Border Reiver, Kirkman, Ghillie, Highland Archer, Tacksman)",
+    "Muster charge food cost, cooldown, units per charge, which units can be mustered per age",
+    "Stone of Destiny rebate %, Fishpond gold rate and limit, gather-rate aura %",
+    "Snowdoun Gate free-infantry type and interval",
+    "Region (Lowlands/Highlands) of Abbey of the Isles, Snowdoun Gate, Three Loch Lookout, and of each Mustering Hall tech; size of the regional discount",
+    "Ages and costs of all 14 unique technologies",
+    "Whether standard Houses exist alongside Tower Houses",
+    "Starting resources"
+  ],
+  "sources": [
+    {
+      "url": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/scots/",
+      "title": "Scots - official civilization page (Oct 29 banner)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/official_scots_civ_page.txt"
+    },
+    {
+      "url": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "title": "Age of Empires IV Update 17.0 (preview, published 2026-10-22, 'Available October 29')",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/official_update_17_0_notes.txt"
+    },
+    {
+      "url": "https://www.ageofempires.com/news/pre-order-raiders-of-the-north-for-age-of-empires-iv/",
+      "title": "Pre-Order Raiders of the North (2026-09-29)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/official_preorder_news_2026-09-29.txt"
+    },
+    {
+      "url": "https://www.ageofempires.com/news/celebrating-age-in-2026-where-were-at-and-where-were-going/",
+      "title": "Celebrating Age in 2026 (2026-07-30) - Mustering Hall discount, barmkin",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/official_celebrating_age_2026.txt"
+    },
+    {
+      "url": "https://store.steampowered.com/app/4336170/Age_of_Empires_IV_Raiders_of_the_North/",
+      "title": "Steam DLC page (pre-purchase, 29 Oct 2026, A$29.95)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/steam_dlc_page_4336170.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Scots",
+      "title": "Fandom: Scots - pageid 385407, last edit 2026-10-23 (from data/scots_api.json)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_scots_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Gallowglass_(Age_of_Empires_IV)",
+      "title": "Fandom: Gallowglass (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Gallowglass_Age_of_Empires_IV_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Cateran",
+      "title": "Fandom: Cateran (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Cateran_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Border_Reiver",
+      "title": "Fandom: Border Reiver (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Border_Reiver_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Highland_Cattle",
+      "title": "Fandom: Highland Cattle (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Highland_Cattle_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Age_of_Empires_IV:_Raiders_of_the_North",
+      "title": "Fandom: expansion page",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Age_of_Empires_IV_Raiders_of_the_North_wikitext.txt"
+    },
+    {
+      "url": "https://forums.ageofempires.com/t/age-of-empires-iv-raiders-of-the-north/286737",
+      "title": "Official forum thread (community reactions, no data)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/community_forum_thread_286737.json"
+    },
+    {
+      "url": "https://forums.ageofempires.com/t/aoe4-civilization-the-scottish/207081",
+      "title": "Forum fan-concept thread (2022-2026; no official data)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/community_forum_thread_207081_webfetch_summary.txt"
+    },
+    {
+      "url": "https://liquipedia.net/ageofempires/Scots",
+      "title": "Liquipedia Scots - HTTP 403, not readable",
+      "fetchedAt": "2026-10-23",
+      "raw": null
+    },
+    {
+      "url": "https://api.github.com/repos/aoe4world/data/contents/civilizations",
+      "title": "aoe4world/data civilizations folder - no vikings/scots JSON; last commit 2026-05-04",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/github_aoe4world_data_check.txt"
+    }
+  ],
+  "videoSources": [
+    {
+      "url": "https://www.youtube.com/watch?v=c_oaynL66jY",
+      "channel": "BeastyqtSC2",
+      "title": "Everything You Need to Know About Scots in Age of Empires IV",
+      "published": "2026-10-23",
+      "duration": "39:43",
+      "views": 4737,
+      "kind": "early-access walkthrough (unit/tech panels on screen)",
+      "chapters": [
+        "0:00 General Civ Bonuses",
+        "1:22 Unique Scouts?",
+        "2:45 The Cattle",
+        "3:47 Tower Houses",
+        "6:20 Stone of Destiny",
+        "7:35 FISH PONDS?",
+        "9:53 Feudal Units & Upgrades",
+        "14:57 Mustering Hall",
+        "19:36 Snowdoun Gate",
+        "20:56 Castle Units",
+        "22:16 Gallowglass & Unique Upgrades",
+        "25:06 GUNPOWDER CAVALRY",
+        "27:03 THE SEVEN SISTERS",
+        "28:35 Imperial Upgrades & Final Stats",
+        "34:19 Abbey of the Isles",
+        "36:03 STEALTH FOREST SPAWN",
+        "37:45 LOOKOUT?",
+        "38:45 Conclusion"
+      ],
+      "notesFromPage": "22 comments, none captured. No numbers in description/chapters. '28:35 Imperial Upgrades & Final Stats' is the best single place to read unit cards. Chapter '1:22 Unique Scouts?' confirms the Ghillie scout; '36:03 STEALTH FOREST SPAWN' = Tower of Skye; '37:45 LOOKOUT?' = Three Loch Lookout.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=qlogYcWhKEU",
+      "channel": "Aussie_Drongo",
+      "title": "Civilization Overview - The Scots",
+      "published": "2026-10-23",
+      "duration": "41:08",
+      "views": 12000,
+      "kind": "early-access civ overview (likely stat panels)",
+      "chapters": [],
+      "notesFromPage": "Found via channel listing; video page not fetched (call budget). No numbers captured.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV182n46EEDi/",
+      "channel": "CaramelSG (bilibili reupload of Beasty Twitch)",
+      "title": "[AOE4 新DLC测试服] Beasty 2026-10-22 维京/苏格兰文明内容与特性测试 - 1",
+      "published": "2026-10-22",
+      "duration": null,
+      "views": null,
+      "kind": "test-server stream VOD (both civs)",
+      "chapters": [],
+      "notesFromPage": "Listing only; not fetched.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Bmnx6ZEBh/",
+      "channel": "CaramelSG (bilibili reupload of Anotand Twitch, source https://www.twitch.tv/videos/2907670868)",
+      "title": "[AOE4 新DLC测试服] Anotand 2026-10-22 维京/苏格兰文明内容与特性测试 (P1 1:09:53, P2 1:09:51)",
+      "published": "2026-10-23",
+      "duration": "2:19:44",
+      "views": null,
+      "kind": "test-server stream VOD (both civs)",
+      "chapters": [
+        "P1 1:09:53",
+        "P2 1:09:51"
+      ],
+      "notesFromPage": "No numbers in page text.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Lvn46dEbY/",
+      "channel": "CaramelSG (bilibili reupload of Corvinus Twitch)",
+      "title": "[AOE4 新DLC测试服] Corvinus 2026-10-22 维京/苏格兰文明内容与特性测试",
+      "published": "2026-10-22",
+      "duration": null,
+      "views": null,
+      "kind": "test-server stream VOD (both civs)",
+      "chapters": [],
+      "notesFromPage": "Listing only; not fetched.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=KJqVr8NupKs",
+      "channel": "Jeando Tutos (French)",
+      "title": "NOUVELLES INFOS : Les Écossais : Une civ de FOLIE ? Nouveau DLC AOE4 : Raiders of The North",
+      "published": "2026-10-09",
+      "duration": null,
+      "views": 7640,
+      "kind": "explainer from official civ page (no gameplay)",
+      "chapters": [],
+      "notesFromPage": "8 comments, no numbers.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cDG2lTq10DA",
+      "channel": "Valdy (@Valdemar1902)",
+      "title": "Everything You Need To Know About The Vikings & Scots (AoE4 DLC)",
+      "published": "2026-09-30",
+      "duration": null,
+      "views": 14329,
+      "kind": "explainer from official text (no gameplay)",
+      "chapters": [
+        "8:55 The Scots civilization"
+      ],
+      "notesFromPage": "No numbers.",
+      "fetchedAt": "2026-10-23"
+    }
+  ],
+  "videoStats": []
+}

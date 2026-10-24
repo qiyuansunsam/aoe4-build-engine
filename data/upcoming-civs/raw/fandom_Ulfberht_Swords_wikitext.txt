@@ -1,0 +1,25 @@
+{{Upcoming|October 29th 2026|Raiders of the North}}
+{{Stub}}
+{{Techbox
+|Name = Ulfberht Swords
+|Image = 
+|Intro = {{4icons|Raiders of the North}}
+|Age = 
+|Building = {{4icons|Barracks}}
+|Wood = 
+|Gold = 
+|Time = 
+|Stats = 
+|Civilization = {{4icons|Vikings}}
+}}
+'''Ulfberht Swords''' is a unique [[Technology (Age of Empires IV)|technology]] in ''[[Age of Empires IV: Raiders of the North]]'' available to the [[Vikings (Age of Empires IV)|Vikings]] and can be researched at the [[Barracks (Age of Empires IV)|Barracks]]<!-- in the [[Imperial Age (Age of Empires IV)|Imperial Age]]-->. It increases the damage of the [[Hirdman (Age of Empires IV)|Hirdman]].
+
+== Gallery ==
+<gallery>
+Ulfberht Swords Civ Page.webp|A Hirdman attacking with an upgraded sword
+</gallery>
+
+{{Unique techs (Age of Empires IV)}}
+[[Category:Raiders of the North]]
+[[Category:Vikings (Age of Empires IV)]]
+[[Category:Infantry technologies]]

@@ -1,0 +1,22 @@
+{
+ "transcribedBy": "opus-agent frame read ehO1BOe7wG8#0 + blind re-read",
+ "fills": [
+  {
+   "civ": "vikings",
+   "kind": "bonus",
+   "name": "Northern Migration",
+   "field": "interval",
+   "value": 20,
+   "variant": null,
+   "frame": "C:/Users/Sam/projects/aoe4-build-crafter/.cache/upcoming-frames/ehO1BOe7wG8/s_00166.jpg",
+   "timestamp": "2:46",
+   "quote": "VILLAGER Worker 20s",
+   "confidence": "inferred",
+   "note": "Villager tooltip on the TC shows 20s; HUD 6/10 -> 7/10 villagers between game 00:15 and 00:27. The streamer's '22 seconds' and the checklist's 22 do not match the tooltip. Falkr's Village Saga cuts it by 2 s",
+   "verdict": "rejected",
+   "blindValue": null,
+   "tieReason": "s_00166 only shows a Town Center VILLAGER tooltip with a 20s clock and no cost. No Northern Migration text or interval is printed. In the same video the narrator says 'I'm receiving the villager every 22 seconds for free' (02:44), and another video shows a 22s Viking villager. The 20s train-time tooltip therefore cannot be taken as the auto-recruit interval.",
+   "videoId": "ehO1BOe7wG8"
+  }
+ ]
+}

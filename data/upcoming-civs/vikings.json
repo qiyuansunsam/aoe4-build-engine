@@ -1,0 +1,920 @@
+{
+  "civilization": "Vikings",
+  "expansion": "Age of Empires IV: Raiders of the North",
+  "scheduledRelease": "2026-10-29",
+  "status": "announced-not-installed",
+  "fetchedAt": "2026-10-23",
+  "conventions": {
+    "landmarkAge": "age REACHED by building the landmark (Feudal = the Dark Age age-up choice). The fandom Vikings page already uses this convention; the official page confirms Valdemar Castle = Castle Age and Kongens Dør Cathedral = Imperial Age.",
+    "confidence": "official = ageofempires.com / Steam store text; wiki = ageofempires.fandom.com (pages created 2026-10-16..22 by editor 'Geer of War', no stated source for numbers); community = forum / third-party guides; inferred = our reading, not stated anywhere",
+    "videoMining": "2026-10-23/24 sweep. YouTube watch pages via WebFetch return title only; r.jina.ai rendering gives description, chapters and a partial comment set but the transcript never loads ('NaN / NaN', 'Sign in to confirm you're not a bot'); youtubetranscript.com reports YouTube is blocking subtitle fetches; yewtu.be API 403; reddit.com blocked. Numbers therefore come only from chapter titles and named commenters, labelled confidence 'video-transcribed' and NOT confirmed on screen. Early-access footage exists from 2026-10-22 (test server: Beasty, Anotand, Corvinus, FitzBro, Drongo, loueMT)."
+  },
+  "bonuses": [
+    {
+      "name": "Northern Migration",
+      "text": "Viking Villagers are not recruited normally; they are automatically recruited at no cost from Town Centers until the Villager capacity is reached. Longhouses increase the Villager capacity.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Northern Migration (detail)",
+      "text": "Recruitment is at a slower rate than standard Villagers. Villager capacity +10 for each Longhouse constructed. Exact rate, base capacity and whether multiple TCs recruit in parallel are not stated.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Living off the Land",
+      "text": "Infantry can heal themselves by gathering Food from deposits such as Berry Bushes, Deer or Boar. Official page: 'Any damage taken during raids can be healed by using Living of the Land on any Food source.' Heal rate unknown.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "name": "Dock Influence",
+      "text": "Each Longhouse constructed within the influence of a Dock reduces the cost of all ships by 4%, up to a maximum of 16% (four Longhouses).",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Sagas",
+      "text": "Seven Sagas: quests completable at any time (raiding enemy buildings, hunting wild animals, trading, 'and more') that grant permanent economic or military bonuses; completed Sagas are commemorated by carved pillars near the Capital TC. Completion thresholds are not stated anywhere.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Saga: Björn's Forage",
+      "text": "Infantry gain increased health and an improved charge.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Saga: Falkr's Village",
+      "text": "Increases the speed Villagers are recruited and reduces the cost of Longhouse attachments.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Saga: Hrafn's Raid",
+      "text": "Decreases the cost of technology and increases the speed of the Pasture & Loom and Smithy attachments.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Saga: Jörmungandr's Trade",
+      "text": "Reduces the cost of Ships and Siege Weapons.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Saga: Jofurr's Hunt",
+      "text": "Improves Villager gather speed and carry capacity.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Saga: Ulfr's Forester",
+      "text": "Increases torch damage and attack range.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Saga: Dreki's Temple",
+      "text": "Increases recruitment speed of Berserkers at Sacred Groves. Fandom: this Saga is unlocked by the Gullínn Temple landmark.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "name": "Sacred Groves / Hamingja",
+      "text": "A Völur can be sacrificed to establish a Sacred Grove on a Relic. Groves periodically produce Berserkers and give the Hamingja buff to nearby units (fandom: increases armor of nearby units; the Grove regenerates HP when no enemies are near).",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Sacred_Grove",
+      "confidence": "official"
+    },
+    {
+      "name": "Imperial population",
+      "text": "After reaching Imperial Age the Vikings can increase maximum population to 210 regardless of landmark; Folkekirken (via Kongens Dør Cathedral) raises it to 220.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Late-game roster shift",
+      "text": "As the civilization develops it gains access to Knights (Jylland Knights, Castle Age) and 'Militia Crossbowmen' (fandom: Skâne Crossbowman).",
+      "source": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/ ; https://store.steampowered.com/app/4336170/Age_of_Empires_IV_Raiders_of_the_North/",
+      "confidence": "official"
+    },
+    {
+      "name": "Starting conditions",
+      "text": "Not stated anywhere. Standard start (TC, Villagers, Scout, standard resources) is an assumption. Villager capacity at game start is unknown.",
+      "source": null,
+      "confidence": "inferred"
+    }
+  ],
+  "landmarks": [
+    {
+      "age": "Feudal",
+      "name": "Konungr Hall",
+      "effect": "Periodically provides Food and rallies Shield Maidens (official: Shield Maidens are recruited from the Konungr Hall landmark).",
+      "kind": "economic+military",
+      "region": null,
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV) ; https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "wiki"
+    },
+    {
+      "age": "Feudal",
+      "name": "Baugr Fort",
+      "effect": "Acts as a Barracks. Increases Barracks' work rate and reduces their technology costs. Immediately upgrades Bondi and Berserkers.",
+      "kind": "military",
+      "region": null,
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "age": "Castle",
+      "name": "Valdemar Castle",
+      "effect": "Acts as a Keep; grants the Danevirke Wall technology (all existing and new Palisades become Danevirke walls with much higher health and torch resistance). Increases the gold returned by Jylland Knights when killed.",
+      "kind": "military",
+      "region": null,
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "age": "Castle",
+      "name": "Gullínn Temple",
+      "effect": "Acts as a Sacred Grove. Allows Völur to establish Sacred Groves on Sacred Sites (not just Relics) and unlocks the Dreki's Temple Saga.",
+      "kind": "military (production) / map control",
+      "region": null,
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "age": "Imperial",
+      "name": "Kongens Dør Cathedral",
+      "effect": "Acts as a Monastery. +10 population and maximum population. Periodically generates gold for each Longhouse within its slowly expanding aura. Unlocks Folkekirken (official).",
+      "kind": "economic",
+      "region": null,
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "age": "Imperial",
+      "name": "Ríkets Nyckel Castle",
+      "effect": "Acts as a Keep that fires volleys of arrows; recruits Skâne Crossbowmen on completion. +10 population and maximum population. Reduces the cost of all unit tier technologies.",
+      "kind": "military",
+      "region": null,
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    }
+  ],
+  "uniqueUnits": [
+    {
+      "name": "Berserker",
+      "building": "Barracks; also spawned by Sacred Grove",
+      "age": "Dark",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Fast light melee infantry, dual axes, high damage. Berserkergang: at low health, heals and deals bonus damage for a time. Dark Age availability is fandom infobox only. Fandom S&W: strong vs light units, weak vs archers.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Berserker",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Bondi",
+      "building": "Longhouse (25% slower) and Barracks",
+      "age": "Dark (inferred from Spearman replacement)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Replaces the Spearman. Higher health and armor, carries a shield; gains additional health / shield-wall ability when grouped.",
+      "source": "https://www.ageofempires.com/news/celebrating-age-in-2026-where-were-at-and-where-were-going/ ; https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV) ; https://ageofempires.fandom.com/wiki/Longhouse_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "name": "Hirdman",
+      "building": "Barracks (inferred)",
+      "age": "unknown (Man-at-Arms replacement; standard MAA is Feudal)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Replaces the Man-at-Arms: hard hitting, resilient, fast, 'comes with a higher cost'. Buffed by Ulfberht Swords.",
+      "source": "https://www.ageofempires.com/news/celebrating-age-in-2026-where-were-at-and-where-were-going/",
+      "confidence": "official"
+    },
+    {
+      "name": "Jylland Knight",
+      "building": "Stable (inferred)",
+      "age": "Castle",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Cheaper replacement for Lancer/Knight with reduced damage and health; refunds part of its gold cost on death (Valdemar Castle increases the refund).",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "name": "Skâne Crossbowman",
+      "building": "unknown; also recruited on completion of Ríkets Nyckel Castle",
+      "age": "unknown (officially 'Militia Crossbowmen' arrive as society develops)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Cheaper Crossbowman replacement with reduced damage and health.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV) ; https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Shield Maiden",
+      "building": "Konungr Hall (landmark)",
+      "age": "Feudal (landmark age)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Heavy ranged throwing-spear unit. Extra damage and movement speed near allied buildings; 'provide protection to Villagers'.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "name": "Völur",
+      "building": "unknown (religious; Monastery-equivalent not named)",
+      "age": "Feudal",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Religious unit. Moves between Longhouses to boost production of their attachments, or is sacrificed to establish a Sacred Grove on a Relic (on Sacred Sites with Gullínn Temple).",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/V%C3%B6lur",
+      "confidence": "official"
+    },
+    {
+      "name": "Longship",
+      "building": "Dock",
+      "age": "Feudal",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Archer ship that also transports units; each passenger adds health and one extra arrow. Extra Oars tech raises capacity and damage.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Longship_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "name": "Drakkar",
+      "building": "Dock (inferred)",
+      "age": "unknown",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Springald ship that throws nets to slow enemy ships; Snaerisspjot changes weapon to throwing spears (more range/damage).",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Fishing Knarr",
+      "building": "Dock (inferred)",
+      "age": "Dark (inferred from Fishing Boat replacement)",
+      "cost": null,
+      "hp": null,
+      "armor": null,
+      "damage": null,
+      "population": null,
+      "speed": null,
+      "notes": "Fishing Boat replacement that can also transport a small number of units.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    }
+  ],
+  "uniqueBuildings": [
+    {
+      "name": "Longhouse",
+      "replaces": "House",
+      "age": "Dark",
+      "cost": {
+        "food": 0,
+        "wood": 150,
+        "gold": 0,
+        "stone": 0
+      },
+      "buildTime": 30,
+      "hp": 1000,
+      "size": "4x4",
+      "produces": "Bondi (25% slower than Barracks)",
+      "effect": "+10 Villager capacity, +25 maximum population. Can take ONE of four attachments. In-game description quoted by fandom: 'Increases your Villager capacity by +10 and your maximum Population by +25. Produces Bondi spearmen but 25% slower. Can be upgrade with one of four possible attachments'.",
+      "attachments": [
+        {
+          "name": "Bee Skeps",
+          "age": "Dark",
+          "cost": {
+            "wood": 200
+          },
+          "time": 20,
+          "limit": 6,
+          "effect": "Generates 50 gold per minute; +500 Longhouse HP"
+        },
+        {
+          "name": "Farmstead",
+          "age": "Dark",
+          "cost": {
+            "wood": 200
+          },
+          "time": 2,
+          "limit": 6,
+          "effect": "Spawns two improved Farms; Longhouse becomes a Food drop-off; +500 Longhouse HP"
+        },
+        {
+          "name": "Pasture and Loom",
+          "age": "Feudal",
+          "cost": {
+            "wood": 100,
+            "gold": 100
+          },
+          "time": 20,
+          "limit": 1,
+          "effect": "Automatically researches melee and ranged armor technologies over time; +750 Longhouse HP"
+        },
+        {
+          "name": "Smithy",
+          "age": "Feudal",
+          "cost": {
+            "wood": 100,
+            "gold": 100
+          },
+          "time": 20,
+          "limit": 1,
+          "effect": "Automatically researches melee and ranged attack technologies over time; +750 Longhouse HP"
+        }
+      ],
+      "caveats": "All numbers are from the fandom infobox/table created 2026-10-16..22 with no cited source; the infobox 'Use' line ('Drop off Food, Research Food-gathering improvements') looks copied from a Mill template and is not corroborated. Treat every number as provisional until the 17.0 extraction.",
+      "source": "https://ageofempires.fandom.com/wiki/Longhouse_(Age_of_Empires_IV) ; https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Sacred Grove",
+      "replaces": null,
+      "age": "Feudal",
+      "cost": null,
+      "produces": "Berserkers (periodic, free; rate unknown; Dreki's Temple Saga speeds it)",
+      "effect": "Established by sacrificing a Völur on a Relic (Sacred Sites with Gullínn Temple). Hamingja aura: increases armor of nearby units; regenerates HP when no enemies nearby.",
+      "source": "https://ageofempires.fandom.com/wiki/Sacred_Grove ; https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "wiki"
+    }
+  ],
+  "uniqueTechnologies": [
+    {
+      "name": "Bondi Forester",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "effect": "Each Bondi generates a passive trickle of wood.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Danevirke",
+      "age": "Castle (granted by Valdemar Castle)",
+      "building": "Valdemar Castle",
+      "cost": null,
+      "effect": "Palisade Walls become Danevirke Walls with increased HP and fire armor.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Extra Oars",
+      "age": null,
+      "building": "Dock (inferred)",
+      "cost": null,
+      "effect": "Increases Longship transport capacity and weapon damage.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Farmathr",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "effect": "Increases Trader and Trade Ship health and movement speed.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Folkekirken",
+      "age": "Imperial",
+      "building": "Kongens Dør Cathedral",
+      "cost": null,
+      "effect": "Increases population and maximum population (official: to 220).",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Hagl Brodda",
+      "age": "Castle (official narrative)",
+      "building": null,
+      "cost": null,
+      "effect": "Archers fire two additional arrows at random when attacking.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "name": "Hamrammr",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "effect": "Berserkergang triggers at a higher health threshold and heals additional HP.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Leding",
+      "age": null,
+      "building": "Dock (inferred)",
+      "cost": null,
+      "effect": "Dock influence bonus also increases ship production speed per Longhouse in influence.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Leikr Training",
+      "age": "Imperial (official narrative)",
+      "building": "University",
+      "cost": null,
+      "effect": "Increases damage, health and range of melee infantry. Replaces Elite Army Tactics.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "official"
+    },
+    {
+      "name": "Reinforced Keel",
+      "age": null,
+      "building": "Dock (inferred)",
+      "cost": null,
+      "effect": "Increases health and ranged armor of all military ships.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Ship Barding",
+      "age": null,
+      "building": "Dock (inferred)",
+      "cost": null,
+      "effect": "Increases health and ranged armor of all military ships (fandom lists same text as Reinforced Keel; likely a tiered pair).",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Snaerisspjot",
+      "age": null,
+      "building": "Dock (inferred)",
+      "cost": null,
+      "effect": "Drakkar weapon becomes throwing spears with increased range and damage.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Sunstones",
+      "age": null,
+      "building": "Dock (inferred)",
+      "cost": null,
+      "effect": "Increases ship movement speed and line of sight.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Turnshoes",
+      "age": null,
+      "building": null,
+      "cost": null,
+      "effect": "Increases melee infantry movement speed and charge damage.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "name": "Ulfberht Swords",
+      "age": null,
+      "building": "Barracks",
+      "cost": null,
+      "effect": "Increases Hirdman damage.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Ulfberht_Swords",
+      "confidence": "official"
+    }
+  ],
+  "economyNotes": [
+    {
+      "text": "Villagers are free and auto-recruited, gated by Villager capacity (+10 per Longhouse, 150 wood / 30 s each per fandom). This replaces the standard 50-food, 20-second TC queue entirely; the recruitment rate is 'slower than standard' and unpublished, so no villager-count curve can be computed yet.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/ ; https://ageofempires.fandom.com/wiki/Longhouse_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "text": "Longhouse attachments give passive income: Bee Skeps 50 gold/min for 200 wood (limit 6 = up to 300 gold/min for 1,200 wood); Farmstead 200 wood for two improved farms plus a food drop-off (limit 6). Pasture & Loom / Smithy (100w+100g each, Feudal) auto-research Blacksmith armor/attack lines over time, replacing those gold costs. Völur boost attachment production.",
+      "source": "https://ageofempires.fandom.com/wiki/Longhouse_(Age_of_Empires_IV) ; https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "wiki"
+    },
+    {
+      "text": "Sagas with eco effects: Jofurr's Hunt (gather speed + carry), Falkr's Village (faster villager recruitment, cheaper attachments), Hrafn's Raid (cheaper tech, faster auto-research), Jörmungandr's Trade (cheaper ships/siege). Triggers are 'raiding enemy buildings, hunting wild animals, trading, and more' with no thresholds published.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "text": "Other trickles: Konungr Hall (Feudal landmark) periodically provides Food; Bondi Forester gives wood per Bondi; Kongens Dør Cathedral (Imperial) gives gold per Longhouse in aura. Amounts unknown.",
+      "source": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "confidence": "wiki"
+    },
+    {
+      "text": "Infantry heal by gathering food (Living off the Land) - raids can sustain without returning home.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "confidence": "official"
+    },
+    {
+      "text": "Generic 17.0 change affecting all civs: Town Center construction time 150 -> 165 s. No general age-up cost changes listed in the 17.0 preview.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "confidence": "official"
+    },
+    {
+      "text": "Age-up costs, landmark costs and starting resources are not published; standard values (400f/200g Feudal, 1200f/600g Castle, 2400f/1200g Imperial) would be an assumption.",
+      "source": null,
+      "confidence": "inferred"
+    }
+  ],
+  "openingsCommentary": [
+    {
+      "summary": "Official page 'Age 1': build an early Longhouse so Villager recruitment is never interrupted; upgrade Longhouses with Farmsteads or Bee Skeps for Food/Gold; early raids with Bondi and Berserkers, healing on food sources. 'Age 2': Pasture & Loom and Smithy 'usually good to buy early'; Völur to boost Longhouses or found a Sacred Grove on a Relic. 'Age 3': Valdemar Castle for Danevirke walls, Jylland Knights, Hagl Brodda. 'Age 4': pop 210/220, Leikr Training.",
+      "source": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/"
+    },
+    {
+      "summary": "Steam / 17.0 notes framing: early raiding with fast melee infantry and 'early naval dominance'; 'every successful strike against an enemy economy fuels your own' (Sagas).",
+      "source": "https://store.steampowered.com/app/4336170/Age_of_Empires_IV_Raiders_of_the_North/"
+    },
+    {
+      "summary": "Community pre-release guide (aoeinfo.net, updated 2026-10-10): explicitly states no costs, stats or build order exist yet; plans to track villager split, Feudal timing, first-raid timing after release.",
+      "source": "https://aoe4.aoeinfo.net/en/item/3052.html"
+    },
+    {
+      "summary": "Official forum thread (58 posts, Jun-Oct 2026) contains only reactions and speculation (e.g., Longhouse attachment screenshots showing vegetables/honey/meat variants); no stats or openings.",
+      "source": "https://forums.ageofempires.com/t/age-of-empires-iv-raiders-of-the-north/286737"
+    }
+  ],
+  "unknowns": [
+    "Villager auto-recruit interval and starting Villager capacity (defines the whole eco curve)",
+    "Whether additional Town Centers each auto-recruit, and whether Falkr's Village stacks",
+    "All unit costs, HP, armor, damage, speed, train times (Berserker, Bondi, Hirdman, Jylland Knight, Skâne Crossbowman, Shield Maiden, Völur, ships)",
+    "Saga completion thresholds and exact bonus magnitudes",
+    "Sacred Grove Berserker spawn interval, Hamingja aura values, Völur cost",
+    "Landmark costs (standard or not), Konungr Hall food amount/interval",
+    "Technology ages and costs for all 15 unique techs",
+    "Whether fandom Longhouse numbers (150w, 30s, 1000 HP, attachment table) are from a live build",
+    "Starting resources/units"
+  ],
+  "sources": [
+    {
+      "url": "https://www.ageofempires.com/games/age-of-empires-iv/civilizations/vikings/",
+      "title": "Vikings - official civilization page (Oct 29 banner)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/official_vikings_civ_page.txt"
+    },
+    {
+      "url": "https://www.ageofempires.com/news/age-of-empires-iv-update-17-0/",
+      "title": "Age of Empires IV Update 17.0 (preview, published 2026-10-22, 'Available October 29')",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/official_update_17_0_notes.txt"
+    },
+    {
+      "url": "https://www.ageofempires.com/news/pre-order-raiders-of-the-north-for-age-of-empires-iv/",
+      "title": "Pre-Order Raiders of the North (2026-09-29)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/official_preorder_news_2026-09-29.txt"
+    },
+    {
+      "url": "https://www.ageofempires.com/news/celebrating-age-in-2026-where-were-at-and-where-were-going/",
+      "title": "Celebrating Age in 2026 (2026-07-30) - Bondi/Hirdman/Berserker descriptions",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/official_celebrating_age_2026.txt"
+    },
+    {
+      "url": "https://store.steampowered.com/app/4336170/Age_of_Empires_IV_Raiders_of_the_North/",
+      "title": "Steam DLC page (pre-purchase, 29 Oct 2026, A$29.95)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/steam_dlc_page_4336170.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Vikings_(Age_of_Empires_IV)",
+      "title": "Fandom: Vikings (Age of Empires IV) - pageid 385408, last edit 2026-10-23",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_vikings_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Longhouse_(Age_of_Empires_IV)",
+      "title": "Fandom: Longhouse (Age of Empires IV) - created 2026-10-16, numbers added 2026-10-22",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Longhouse_Age_of_Empires_IV_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Berserker",
+      "title": "Fandom: Berserker (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Berserker_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/V%C3%B6lur",
+      "title": "Fandom: Völur (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_V_lur_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Longship_(Age_of_Empires_IV)",
+      "title": "Fandom: Longship (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Longship_Age_of_Empires_IV_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Sacred_Grove",
+      "title": "Fandom: Sacred Grove (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Sacred_Grove_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Ulfberht_Swords",
+      "title": "Fandom: Ulfberht Swords (stub)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Ulfberht_Swords_wikitext.txt"
+    },
+    {
+      "url": "https://ageofempires.fandom.com/wiki/Age_of_Empires_IV:_Raiders_of_the_North",
+      "title": "Fandom: expansion page",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/fandom_Age_of_Empires_IV_Raiders_of_the_North_wikitext.txt"
+    },
+    {
+      "url": "https://forums.ageofempires.com/t/age-of-empires-iv-raiders-of-the-north/286737",
+      "title": "Official forum thread (community reactions, no data)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/community_forum_thread_286737.json"
+    },
+    {
+      "url": "https://aoe4.aoeinfo.net/en/item/3052.html",
+      "title": "aoeinfo.net Vikings pre-release guide (community; states stats pending)",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/community_aoeinfo_vikings_guide.txt"
+    },
+    {
+      "url": "https://api.github.com/repos/aoe4world/data/contents/civilizations",
+      "title": "aoe4world/data civilizations folder - no vikings/scots JSON; last commit 2026-05-04",
+      "fetchedAt": "2026-10-23",
+      "raw": "raw/github_aoe4world_data_check.txt"
+    }
+  ],
+  "videoSources": [
+    {
+      "url": "https://www.youtube.com/watch?v=nd74LibluQ0",
+      "channel": "BeastyqtSC2",
+      "title": "Everything You Need to Know About Vikings in Age of Empires IV",
+      "published": "2026-10-22",
+      "duration": "53:47",
+      "views": 22471,
+      "kind": "early-access walkthrough (unit/tech panels on screen)",
+      "chapters": [
+        "0:00 Introduction",
+        "0:44 Description of a Civ",
+        "1:39 Villager Auto-Queue",
+        "2:37 SAGAS",
+        "5:11 LOOOONGHOUSE",
+        "8:38 Dark Age Military",
+        "10:55 Military EATING Food",
+        "12:54 Dark Age Buildings",
+        "14:09 Konungr Hall & Shield Maidens",
+        "17:24 Feudal Age Upgrades",
+        "19:10 Unique Upgrades",
+        "21:59 Feudal Units",
+        "24:19 Blacksmith?",
+        "26:55 Volur & Sacred Grove",
+        "30:22 Castle Age-Ups",
+        "31:31 Castle Units & Upgrades",
+        "34:42 GROVES ON SACRED SITES?",
+        "38:15 NEW SIEGE ANIMATIONS",
+        "39:12 Imperial Age-Ups",
+        "40:09 OP Archer Ability",
+        "40:38 20 MAX POP LANDMARK??",
+        "42:28 University Upgrades",
+        "43:50 Baugr Fort",
+        "44:11 SHIPS",
+        "46:47 Valdemar Castle",
+        "48:39 MORE SHIPS",
+        "49:50 OP ARCHER LANDMARK",
+        "50:52 EVEN MORE SHIPS",
+        "52:37 Conclusion"
+      ],
+      "notesFromPage": "Description/chapters carry no numbers. 77 comments, ~20 captured: @jsr3299 transcribed the Longship passenger bonus (see videoStats); @KochiyaOcean: 'All Springald ships and warships can shoot on move, but limited to attack angles'. Chapter titles confirm: villager auto-queue, infantry eating food, Sacred Groves on Sacred Sites (Castle), a +20 max-pop Imperial landmark, Hagl Brodda ('OP Archer Ability') at Imperial, Ríkets Nyckel ('OP ARCHER LANDMARK'). Transcript did not load via any remote endpoint.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=uNw-K34ZDPs",
+      "channel": "Aussie_Drongo",
+      "title": "Civilization Overview - The Vikings",
+      "published": "2026-10-22",
+      "duration": "31:18",
+      "views": 41000,
+      "kind": "early-access civ overview (likely stat panels)",
+      "chapters": [],
+      "notesFromPage": "Found via channel listing only; video page not fetched (call budget). No numbers captured.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=qARfRxyhRhA",
+      "channel": "FitzBro",
+      "title": "AoE4 Vikings vs Rus - FIRST LOOK! | Raiders of the North DLC (Early Access)",
+      "published": "2026-10-22",
+      "duration": "36:09",
+      "views": 3251,
+      "kind": "early-access cast game (Vikings vs Rus, player @SAS_y)",
+      "chapters": [],
+      "notesFromPage": "Description: first look at Vikings in competitive play before release. 3 comments, none captured. No numbers.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1dSny6uE4j/",
+      "channel": "loueMT (bilibili; post-production 卡皇骑脸怎么输)",
+      "title": "超详细文明介绍 - 维京 [帝国时代IV] (Ultra-detailed Civilization Introduction - Vikings)",
+      "published": "2026-10-22",
+      "duration": "13:34",
+      "views": null,
+      "kind": "early-access civ introduction in Chinese (pro player)",
+      "chapters": [],
+      "notesFromPage": "Description has no numbers; MT promises a Scots video at 5000 likes. Most promising Chinese-language stat source.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV182n46EEDi/",
+      "channel": "CaramelSG (bilibili reupload of Beasty Twitch)",
+      "title": "[AOE4 新DLC测试服] Beasty 2026-10-22 维京/苏格兰文明内容与特性测试 - 1",
+      "published": "2026-10-22",
+      "duration": null,
+      "views": null,
+      "kind": "test-server stream VOD (both civs)",
+      "chapters": [],
+      "notesFromPage": "Listing only; not fetched.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Bmnx6ZEBh/",
+      "channel": "CaramelSG (bilibili reupload of Anotand Twitch, source https://www.twitch.tv/videos/2907670868)",
+      "title": "[AOE4 新DLC测试服] Anotand 2026-10-22 维京/苏格兰文明内容与特性测试 (P1 1:09:53, P2 1:09:51)",
+      "published": "2026-10-23",
+      "duration": "2:19:44",
+      "views": null,
+      "kind": "test-server stream VOD (both civs)",
+      "chapters": [
+        "P1 1:09:53",
+        "P2 1:09:51"
+      ],
+      "notesFromPage": "Description credits Anotand's 2026-10-22 Twitch stream. No numbers in page text.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Lvn46dEbY/",
+      "channel": "CaramelSG (bilibili reupload of Corvinus Twitch)",
+      "title": "[AOE4 新DLC测试服] Corvinus 2026-10-22 维京/苏格兰文明内容与特性测试",
+      "published": "2026-10-22",
+      "duration": null,
+      "views": null,
+      "kind": "test-server stream VOD (both civs)",
+      "chapters": [],
+      "notesFromPage": "Listing only; not fetched.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1H1WA6kE4x/",
+      "channel": "CaramelSG (bilibili reupload of Beasty Twitch, source https://www.twitch.tv/videos/2896104764)",
+      "title": "[AOE4] Beasty 2026-10-09 北方劫掠者DLC 维京/苏格兰文明细节预览 - 3",
+      "published": "2026-10-13",
+      "duration": "36:34",
+      "views": 1481,
+      "kind": "creator preview stream (official civ-page reveal day, text-based)",
+      "chapters": [],
+      "notesFromPage": "No numbers in page text.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=cDG2lTq10DA",
+      "channel": "Valdy (@Valdemar1902)",
+      "title": "Everything You Need To Know About The Vikings & Scots (AoE4 DLC)",
+      "published": "2026-09-30",
+      "duration": null,
+      "views": 14329,
+      "kind": "explainer from official text (pre-early-access; no gameplay)",
+      "chapters": [
+        "0:00 Announcement overview",
+        "2:42 The Vikings civilization",
+        "8:55 The Scots civilization",
+        "12:54 Cosmetics and masteries",
+        "14:35 Crucible mode update",
+        "15:52 Gameplay analysis and wrap-up"
+      ],
+      "notesFromPage": "No numbers in description or 39 comments.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RFHr4W5UHyo",
+      "channel": "Jeando Tutos (French)",
+      "title": "NOUVELLES INFOS : Les Vikings : Une civ de GROS BOURRINS ? Nouveau DLC AOE4 : Raiders of The North",
+      "published": "2026-10-09",
+      "duration": null,
+      "views": 9244,
+      "kind": "explainer from official civ page (no gameplay)",
+      "chapters": [],
+      "notesFromPage": "No numbers.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=y43dWkM5UUA",
+      "channel": "Day One Gaming",
+      "title": "AoE4 Raiders of the North - Vikings & Scots Explained",
+      "published": "2026-10-02",
+      "duration": null,
+      "views": 4207,
+      "kind": "news explainer (no gameplay)",
+      "chapters": [
+        "1:00 The Vikings",
+        "2:41 The Scots",
+        "6:43 What We Still Don't Know"
+      ],
+      "notesFromPage": "No numbers.",
+      "fetchedAt": "2026-10-23"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=3NeeOb9wHkI",
+      "channel": "LaSh (German)",
+      "title": "Raiders of the North - AoE4 DLC - Endlich sind neue Infos da!",
+      "published": "2026-09-29",
+      "duration": null,
+      "views": 10110,
+      "kind": "news explainer (no gameplay); DLC price EUR 19.99",
+      "chapters": [],
+      "notesFromPage": "No civ numbers.",
+      "fetchedAt": "2026-10-23"
+    }
+  ],
+  "videoStats": [
+    {
+      "name": "Longship",
+      "kind": "unit",
+      "stat": "transport capacity",
+      "value": 16,
+      "unit": "units",
+      "videoUrl": "https://www.youtube.com/watch?v=nd74LibluQ0",
+      "timestamp": "44:11 (SHIPS chapter; exact frame not confirmed)",
+      "transcribedBy": "YouTube commenter @jsr3299 (16 likes) on BeastyqtSC2's video; not confirmed on screen by us",
+      "confidence": "video-transcribed"
+    },
+    {
+      "name": "Longship",
+      "kind": "unit",
+      "stat": "bonus HP per non-villager passenger",
+      "value": 30,
+      "unit": "HP",
+      "videoUrl": "https://www.youtube.com/watch?v=nd74LibluQ0",
+      "timestamp": "44:11 (SHIPS chapter; exact frame not confirmed)",
+      "transcribedBy": "YouTube commenter @jsr3299 on BeastyqtSC2's video",
+      "confidence": "video-transcribed"
+    },
+    {
+      "name": "Longship",
+      "kind": "unit",
+      "stat": "bonus arrows per passenger",
+      "value": 1,
+      "unit": "arrow",
+      "videoUrl": "https://www.youtube.com/watch?v=nd74LibluQ0",
+      "timestamp": "44:11 (SHIPS chapter; exact frame not confirmed)",
+      "transcribedBy": "YouTube commenter @jsr3299 on BeastyqtSC2's video ('full longship gets +480 HP and 16 extra arrows')",
+      "confidence": "video-transcribed"
+    },
+    {
+      "name": "Imperial landmark (Kongens Dør Cathedral or Ríkets Nyckel Castle)",
+      "kind": "landmark",
+      "stat": "max population bonus",
+      "value": 20,
+      "unit": "pop",
+      "videoUrl": "https://www.youtube.com/watch?v=nd74LibluQ0",
+      "timestamp": "40:38",
+      "transcribedBy": "BeastyqtSC2 chapter title '20 MAX POP LANDMARK??' (fandom said +10; which landmark and whether 20 includes Folkekirken is unverified)",
+      "confidence": "video-transcribed"
+    }
+  ]
+}

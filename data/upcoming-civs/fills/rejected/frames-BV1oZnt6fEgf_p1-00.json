@@ -1,0 +1,21 @@
+{
+ "transcribedBy": "opus-agent frame read BV1oZnt6fEgf_p1#0 + blind re-read",
+ "fills": [
+  {
+   "civ": "vikings",
+   "kind": "unit",
+   "name": "Shield Maiden",
+   "field": "attackSpeed",
+   "value": 1.25,
+   "variant": "possibly upgraded",
+   "frame": "C:/Users/Sam/projects/aoe4-build-crafter/.cache/upcoming-frames/BV1oZnt6fEgf_p1/s_00576.jpg",
+   "timestamp": "9:36",
+   "quote": "[attack speed icon] 1.25",
+   "confidence": "read-on-screen",
+   "verdict": "rejected",
+   "blindValue": null,
+   "tieReason": "Zoomed in, the Shield Maiden selection panel shows 78/120 HP, armor 2 and 2, attack 10 +2, and 1.25 next to a winged boot icon. That icon is movement speed, and 1.25 tiles/s is the standard infantry movement speed. No attack-speed value appears in the frame.",
+   "videoId": "BV1oZnt6fEgf_p1"
+  }
+ ]
+}

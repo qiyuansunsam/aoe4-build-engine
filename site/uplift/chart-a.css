@@ -1,0 +1,96 @@
+/* chart-a: restrained glass. Precise instrument on a quiet glass plate. Scope: .chart-pane, #overview-chart,
+   #build-overview-chart, .time-control, event rows, cluster popover, metric listbox. No layout changes. */
+
+.chart-pane,.build-preview-panel{--u-ease:cubic-bezier(.23,1,.32,1);--u-plate:rgba(255,255,255,.34);--u-plate-edge:rgba(96,116,138,.16);--u-ink:34,52,74}
+[data-theme=dark] .chart-pane,[data-theme=dark] .build-preview-panel{--u-plate:rgba(255,255,255,.035);--u-plate-edge:rgba(214,232,250,.12);--u-ink:0,0,0}
+
+/* Pane: rim-lit glass, one soft ambient shadow */
+.comparison-main .chart-pane{background:linear-gradient(168deg,rgba(255,255,255,.74) 0%,rgba(255,255,255,.52) 100%);border-color:var(--glass-rim);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.35),0 28px 64px -32px rgba(var(--u-ink),.28),0 0 0 1px rgba(167,182,193,.18)}
+[data-theme=dark] .comparison-main .chart-pane{background:linear-gradient(168deg,rgba(44,52,63,.72) 0%,rgba(33,40,49,.62) 100%);box-shadow:inset 0 1px 0 rgba(231,243,255,.10),inset 0 -1px 0 rgba(231,243,255,.03),0 28px 64px -28px rgba(0,0,0,.6),0 0 0 1px rgba(214,232,250,.06)}
+
+/* Canvas plate */
+.chart-pane .overview-chart,#build-overview-chart{border-radius:12px;background:linear-gradient(180deg,var(--u-plate),transparent 70%);box-shadow:inset 0 0 0 1px var(--u-plate-edge),inset 0 1px 0 rgba(255,255,255,.55)}
+[data-theme=dark] .chart-pane .overview-chart,[data-theme=dark] #build-overview-chart{box-shadow:inset 0 0 0 1px var(--u-plate-edge),inset 0 1px 0 rgba(255,255,255,.05)}
+
+/* Heading + metric title */
+.chart-pane .chart-heading h2{font-size:26px;letter-spacing:-.012em;font-variant-numeric:tabular-nums}
+.chart-pane #preview-label:not(:empty){font:500 11px var(--mono);letter-spacing:.02em;color:var(--a);background:color-mix(in srgb,var(--a) 12%,transparent);padding:2px 7px;border-radius:999px;top:34px}
+
+/* Time control: a single glass capsule */
+.chart-pane .time-control,.build-preview-panel .time-control,.build-shared-time .time-control{gap:4px;padding:3px;border-radius:999px;background:color-mix(in srgb,var(--subtle) 72%,transparent);box-shadow:inset 0 0 0 1px var(--u-plate-edge,rgba(96,116,138,.16)),inset 0 1px 0 rgba(255,255,255,.6)}
+[data-theme=dark] .chart-pane .time-control,[data-theme=dark] .build-shared-time .time-control{box-shadow:inset 0 0 0 1px rgba(214,232,250,.12),inset 0 1px 0 rgba(255,255,255,.05)}
+.chart-pane .time-control button,.build-shared-time .time-control button{width:28px;height:28px;padding:0;border-radius:50%;font-size:18px;line-height:1;display:grid;place-items:center;color:var(--muted);transition:background .12s,color .12s,transform .1s var(--u-ease)}
+.chart-pane .time-control button:hover,.build-shared-time .time-control button:hover{background:color-mix(in srgb,var(--text) 9%,transparent);color:var(--text)}
+.chart-pane .time-control button:active,.build-shared-time .time-control button:active{transform:scale(.9)}
+.chart-pane .time-control strong,.build-shared-time .time-control strong{font:500 15px/1 var(--mono);font-variant-numeric:tabular-nums;min-width:52px;text-align:center;padding:0 2px}
+#time-input:focus,#build-time:focus{font-family:var(--mono);font-variant-numeric:tabular-nums;border-radius:8px;background:var(--menu)}
+
+/* SVG: axes, grid, series, cursor, markers */
+.u-chart{overflow:visible}
+.u-chart .u-axis{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:11px;fill:var(--muted);letter-spacing:.01em}
+.u-chart .u-grid{stroke:color-mix(in srgb,var(--muted) 20%,transparent);stroke-dasharray:none;stroke-width:1;shape-rendering:crispEdges}
+.u-chart line.u-grid:first-of-type{stroke:color-mix(in srgb,var(--muted) 38%,transparent)}
+.u-chart .u-series{stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.u-chart .u-fill{opacity:.8}
+.u-chart .u-cursor{stroke:color-mix(in srgb,var(--text) 42%,transparent);stroke-dasharray:none;stroke-width:1;shape-rendering:crispEdges}
+.u-chart .u-marker{stroke:var(--menu);stroke-width:2.5;transform-box:fill-box;transform-origin:center;paint-order:stroke}
+.u-chart .u-note{font-family:var(--sans);font-size:13px}
+
+/* Event rows: tinted lane per path, letter in the gutter */
+#overview-chart .graph-events{z-index:1}
+#overview-chart .graph-events::before,#overview-chart .graph-events::after{content:'A';position:absolute;left:8px;right:12px;bottom:60px;height:33px;z-index:-1;border-radius:8px;display:flex;align-items:center;padding-left:9px;font:500 11px var(--mono);color:var(--a);background:linear-gradient(90deg,color-mix(in srgb,var(--a) 9%,transparent),color-mix(in srgb,var(--a) 3%,transparent) 55%,transparent);pointer-events:none}
+#overview-chart .graph-events::after{content:'B';bottom:26px;color:var(--b);background:linear-gradient(90deg,color-mix(in srgb,var(--b) 10%,transparent),color-mix(in srgb,var(--b) 3%,transparent) 55%,transparent)}
+#build-overview-chart .graph-events{z-index:1}
+#build-overview-chart .graph-events::before{content:'';position:absolute;left:8px;right:12px;bottom:23px;height:33px;z-index:-1;border-radius:8px;background:linear-gradient(90deg,color-mix(in srgb,var(--a) 8%,transparent),transparent 60%);pointer-events:none}
+
+/* Event icons: glass chips, tactile hover */
+.graph-event,.graph-event-cluster>summary{background:color-mix(in srgb,var(--menu) 90%,transparent);border-color:color-mix(in srgb,var(--a) 50%,transparent);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 2px 6px -2px rgba(var(--u-ink,34,52,74),.28);transition:transform .14s var(--u-ease,ease-out),box-shadow .14s var(--u-ease,ease-out),border-color .14s}
+.graph-event.b,.graph-event-cluster.b>summary{border-color:color-mix(in srgb,var(--b) 55%,transparent);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 2px 6px -2px rgba(var(--u-ink,34,52,74),.28)}
+[data-theme=dark] .graph-event,[data-theme=dark] .graph-event-cluster>summary{box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 2px 6px -2px rgba(0,0,0,.5)}
+.graph-event:hover,.graph-event:focus-visible{transform:translateX(-50%) scale(1.08);border-color:var(--a);box-shadow:0 0 0 3px color-mix(in srgb,var(--a) 22%,transparent),0 4px 10px -3px rgba(var(--u-ink,34,52,74),.3)}
+.graph-event.b:hover,.graph-event.b:focus-visible{border-color:var(--b);box-shadow:0 0 0 3px color-mix(in srgb,var(--b) 24%,transparent),0 4px 10px -3px rgba(var(--u-ink,34,52,74),.3)}
+.graph-event-cluster>summary:hover,.graph-event-cluster[open]>summary{transform:scale(1.08);border-color:var(--a);box-shadow:0 0 0 3px color-mix(in srgb,var(--a) 22%,transparent)}
+.graph-event-cluster.b>summary:hover,.graph-event-cluster.b[open]>summary{border-color:var(--b);box-shadow:0 0 0 3px color-mix(in srgb,var(--b) 24%,transparent)}
+.event-expand{border-color:var(--u-plate-edge,rgba(96,116,138,.2))}
+
+/* Cluster popover: glass, scale-from-.96 */
+.event-cluster-menu{background:color-mix(in srgb,var(--menu) 96%,transparent);backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%);border-color:var(--glass-rim);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 18px 44px -14px rgba(var(--u-ink,34,52,74),.45),0 0 0 1px rgba(167,182,193,.18);transform-origin:50% 100%}
+[data-theme=dark] .event-cluster-menu{box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 18px 44px -14px rgba(0,0,0,.7),0 0 0 1px rgba(214,232,250,.06)}
+.event-cluster-heading{background:color-mix(in srgb,var(--menu) 96%,transparent);border-bottom-color:var(--u-plate-edge,rgba(96,116,138,.16))}
+.event-cluster-menu button{border-radius:8px;transition:background .12s}
+.event-cluster-menu button:hover,.event-cluster-menu button:focus-visible{background:color-mix(in srgb,var(--text) 7%,transparent)}
+.graph-event-cluster[open] .event-cluster-menu{animation:u-pop .18s var(--u-ease,ease-out) both}
+@keyframes u-pop{from{opacity:0;scale:.96}to{opacity:1;scale:1}}
+
+/* Metric listbox: glass trigger, animated open/close */
+.chart-selectors .select-trigger,.build-preview-panel .select-trigger{background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,.3));border-color:var(--glass-rim);border-radius:10px;font-weight:500;box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 1px 2px rgba(var(--u-ink,34,52,74),.08),0 0 0 1px rgba(167,182,193,.16);transition:box-shadow .14s var(--u-ease),background .14s}
+[data-theme=dark] .chart-selectors .select-trigger,[data-theme=dark] .build-preview-panel .select-trigger{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 1px 2px rgba(0,0,0,.3),0 0 0 1px rgba(214,232,250,.08)}
+.chart-selectors .select-trigger:hover,.build-preview-panel .select-trigger:hover,.chart-selectors .select-trigger[aria-expanded=true]{box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 1px 2px rgba(var(--u-ink,34,52,74),.08),0 0 0 1px color-mix(in srgb,var(--a) 45%,transparent)}
+.chart-selectors .select-trigger>span:last-child,.build-preview-panel .select-trigger>span:last-child{display:inline-block;transition:transform .18s var(--u-ease)}
+.chart-selectors .select-trigger[aria-expanded=true]>span:last-child,.build-preview-panel .select-trigger[aria-expanded=true]>span:last-child{transform:rotate(180deg)}
+.chart-selectors .select-options,.build-preview-panel .select-options{background:color-mix(in srgb,var(--menu) 96%,transparent);backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%);border-color:var(--glass-rim);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 20px 48px -16px rgba(var(--u-ink,34,52,74),.4),0 0 0 1px rgba(167,182,193,.18);transform-origin:top left;transition:opacity .18s var(--u-ease),scale .18s var(--u-ease),translate .18s var(--u-ease),display .18s allow-discrete}
+[data-theme=dark] .chart-selectors .select-options,[data-theme=dark] .build-preview-panel .select-options{box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 20px 48px -16px rgba(0,0,0,.7),0 0 0 1px rgba(214,232,250,.06)}
+.chart-selectors .select-options[hidden],.build-preview-panel .select-options[hidden]{opacity:0;scale:.97;translate:0 -4px}
+@starting-style{.chart-selectors .select-options:not([hidden]),.build-preview-panel .select-options:not([hidden]){opacity:0;scale:.97;translate:0 -4px}}
+.chart-selectors .select-options button,.build-preview-panel .select-options button{transition:background .12s,color .12s}
+.chart-selectors .select-options button[aria-selected=true],.build-preview-panel .select-options button[aria-selected=true]{background:color-mix(in srgb,var(--a) 13%,transparent);color:var(--a);box-shadow:inset 2px 0 0 var(--a)}
+.chart-selectors .select-options button:hover,.build-preview-panel .select-options button:hover{background:color-mix(in srgb,var(--text) 7%,transparent)}
+
+/* One orchestrated reveal when the workspace renders */
+/* fill-mode backwards: a filling transform animation would leave stacking contexts that paint over the metric listbox */
+.chart-pane.u-enter>.panel-head{animation:u-rise .5s var(--u-ease) backwards}
+.chart-pane.u-enter>.chart-heading{animation:u-rise .5s var(--u-ease) .05s backwards}
+.chart-pane.u-enter>.overview-chart{animation:u-rise .5s var(--u-ease) .1s backwards}
+@keyframes u-rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes u-fade{from{opacity:0}to{opacity:1}}
+
+/* Reduced motion: opacity only */
+@media (prefers-reduced-motion:reduce){
+.chart-pane.u-enter>.panel-head,.chart-pane.u-enter>.chart-heading,.chart-pane.u-enter>.overview-chart{animation:u-fade .3s backwards!important}
+.graph-event-cluster[open] .event-cluster-menu{animation:u-fade .18s both!important}
+.chart-selectors .select-options,.build-preview-panel .select-options{transition:opacity .18s,display .18s allow-discrete!important;scale:1!important;translate:none!important}
+.graph-event:hover,.graph-event:focus-visible{transform:translateX(-50%)!important}
+.graph-event-cluster>summary:hover,.graph-event-cluster[open]>summary{transform:none!important}
+.chart-pane .time-control button:active{transform:none!important}
+.chart-selectors .select-trigger>span:last-child{transition:none!important}
+}

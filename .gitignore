@@ -6,6 +6,24 @@ site/_page.js
 site/_patch_*.py
 engine/_patch_*.py
 server.log
+server-error.log
+server/*.log
 *.tmp
 .wrangler/
 node_modules/
+deploy/fly/build/
+deploy/cloudflare/dist/
+
+# downloaded preview videos, frames, OCR (scripts/download_upcoming_videos.py, bili_pipeline.py)
+.cache/
+# evidence frames cited by fills (~340 MB); regenerate from .cache/upcoming-videos with ffmpeg
+data/upcoming-civs/frames/
+# UI variant builds, screenshots and gallery are generated (site/build.py --out, site/uplift/make_gallery.py)
+site/uplift/dist-*/
+site/uplift/shots/
+site/uplift/shots-small/
+site/uplift/gallery.html
+# third-party content kept local in a public repo: full video transcripts and the scraped explorer pages/datasets
+# (re-fetch with scripts/fetch_video_transcripts.py, whisper_transcribe.py, scrape_jeando_explorer.py, extract_jeando_dataset.py)
+data/upcoming-civs/transcripts/
+data/upcoming-civs/raw/jeando/

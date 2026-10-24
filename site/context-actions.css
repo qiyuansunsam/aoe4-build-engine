@@ -1,0 +1,15 @@
+.object-context-menu{position:fixed;z-index:1000;min-width:190px;padding:6px;background:var(--menu);border:1px solid var(--line);box-shadow:0 12px 35px #0003;border-radius:12px;display:grid;gap:3px}
+.object-context-menu>a,.object-context-menu>button{display:block;text-align:left;text-decoration:none;border:0;padding:10px 12px;color:var(--text);font:14px var(--sans);background:transparent;border-radius:7px}
+.object-context-menu>a:hover,.object-context-menu>button:hover{background:var(--a-soft)}
+.build-comments-dialog{width:min(540px,calc(100vw - 32px));max-height:80vh;padding:22px;border-radius:18px;border:1px solid var(--glass-rim);background:var(--menu);color:var(--text);box-shadow:var(--shadow)}
+.build-comments-dialog::backdrop{background:#10172280;backdrop-filter:blur(4px)}
+.comments-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.comments-heading h2{font:600 20px var(--sans);letter-spacing:0}.comments-heading button{padding:3px 9px;font-size:22px;background:transparent;border:0}
+.comments-scope{font-size:13px;margin:6px 0 18px}.build-comments-list{max-height:32vh;overflow:auto;margin-bottom:18px}.build-comments-list article{padding:12px 0;border-top:1px solid var(--line)}.build-comments-list article p{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--text);font-size:14px;margin-top:5px}.build-comments-list small{color:var(--muted);font-size:11px}.comments-empty{font-size:13px}.comment-composer label{margin-bottom:6px}.comment-composer textarea{min-height:100px}.comment-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}.comment-footer small{color:var(--muted);font-size:11px}.comment-error{font-size:13px;color:var(--b)}
+
+.searchable-options{padding:8px;min-width:min(300px,calc(100vw - 48px))}
+.searchable-options .build-option-search{width:100%;font-size:13px;padding:9px 10px;margin:0 0 6px;background:var(--menu)}
+.searchable-options [role=listbox]{display:grid;gap:3px;max-height:260px;overflow-y:auto}
+.searchable-options [role=option]{display:flex;width:100%;align-items:center;gap:8px;text-align:left}
+.searchable-options [role=option][hidden]{display:none}
+.select-no-results{padding:12px 8px;font-size:13px;color:var(--muted)}
+.searchable-options{max-height:none;overflow:visible}.searchable-options [role=listbox]{max-height:min(260px,45vh)}

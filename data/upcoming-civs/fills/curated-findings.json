@@ -1,0 +1,27 @@
+{
+ "transcribedBy": "Claude, from gap-hunt findings (data/upcoming-civs/gap-findings.jsonl, 2026-10-24); each value cites its frames or records",
+ "fills": [
+  {"civ": "vikings", "kind": "technology", "name": "Forge Welding", "field": "researchTimeSeconds", "value": 270, "variant": null, "videoId": "vKPxGYSbN2Q",
+   "frame": "data/upcoming-civs/frames/vKPxGYSbN2Q/s_00759.jpg", "timestamp": "12:39", "confidence": "inferred",
+   "quote": "Smithy completed at game 13:12; countdown 268 at 13:14 and 266 at 13:16; completion at 13:12 + 270 s",
+   "note": "Same 270 s for all six attachment techs (start to completion within 1-2 s). BV1Bmnx6ZEBh_p1 OCR: 'RESEARCHING FORGE WELDING 239' at 13:28, 'Forge Welding completed' at 17:27. The 262 readings were taken 8 s after the start."},
+  {"civ": "vikings", "kind": "technology", "name": "Heavy Tunics", "field": "researchTimeSeconds", "value": 270, "variant": null, "videoId": "vKPxGYSbN2Q",
+   "frame": "data/upcoming-civs/frames/vKPxGYSbN2Q/s_00743.jpg", "timestamp": "12:23", "confidence": "inferred",
+   "quote": "Pasture and Loom completed at game 12:56; 'SARROCK WIRD ENTWICKELT 268' at 12:58; 'Sarrock abgeschlossen' at about 17:26",
+   "note": "German UI: Sarrock = Heavy Tunics."},
+  {"civ": "scots", "kind": "landmark", "name": "Snowdoun Gate", "field": "productionTimeSeconds", "value": "per toggle: Pikeman 80 s, Highland Archer 76 s, Cateran 85 s, Early Man-at-Arms 104 s (3 units per batch)", "variant": null,
+   "videoId": "jeando-datamined", "timestamp": null, "confidence": "datamined",
+   "quote": "unit_toggle_pikemen_sco time 80; unit_toggle_archers_sco 76; unit_toggle_cateran_sco 85; unit_toggle_men_at_arms_sco 104",
+   "note": "Bonus-free check: qlogYcWhKEU game 01:00-02:17, Pikeman toggle counting down from about 1m17s. Mustering Hall techs add +15% production speed here, and nearby enemies another +15%."},
+  {"civ": "scots", "kind": "landmark", "name": "Snowdoun Gate", "field": "productionTimeSeconds", "value": 76, "variant": "Highland Archer toggle", "videoId": "jeando-datamined", "timestamp": null, "confidence": "datamined", "quote": "unit_toggle_archers_sco time 76"},
+  {"civ": "scots", "kind": "landmark", "name": "Snowdoun Gate", "field": "productionTimeSeconds", "value": 80, "variant": "Pikeman toggle", "videoId": "jeando-datamined", "timestamp": null, "confidence": "datamined", "quote": "unit_toggle_pikemen_sco time 80"},
+  {"civ": "scots", "kind": "landmark", "name": "Snowdoun Gate", "field": "productionTimeSeconds", "value": 85, "variant": "Cateran toggle", "videoId": "jeando-datamined", "timestamp": null, "confidence": "datamined", "quote": "unit_toggle_cateran_sco time 85"},
+  {"civ": "scots", "kind": "landmark", "name": "Snowdoun Gate", "field": "productionTimeSeconds", "value": 104, "variant": "Early Man-at-Arms toggle", "videoId": "jeando-datamined", "timestamp": null, "confidence": "datamined", "quote": "unit_toggle_men_at_arms_sco time 104"},
+  {"civ": "scots", "kind": "bonus", "name": "Mustering", "field": "cap", "value": "no fixed cap: 1 charge per Mustering Hall, +1 per Influence tier (tiers at 3/6/10 structures), +3 from Three Loch Lookout", "variant": null,
+   "videoId": "c_oaynL66jY", "timestamp": "17:25", "confidence": "read-on-screen",
+   "quote": "hall charge counter 1, 0 after a muster, then 1, 2, 3 as Influence tiers are reached (c_oaynL66jY 17:25-20:35); tiers at 3/6/10 structures (qlogYcWhKEU 11:30)",
+   "note": "Muster cost falls 20% at Tier 2 and again at Tier 3 (Muster Gallowglass 1350 -> 1080 -> 810)."},
+  {"civ": "vikings", "kind": "technology", "name": "Code of Jylland", "field": "effectText", "value": "Jylland Knights grant 15 more Gold when they are killed.", "variant": null, "videoId": "jeando-datamined", "timestamp": null, "confidence": "datamined",
+   "quote": "upgrade_cavalry_code_of_jutland_vik: Knight Technology, 100 food 50 gold 45 s", "note": "Separate from Valdemar Castle's '+20 Gold when Jylland Knights are killed' (BV182n46EEDi_p1 s_03661)."}
+ ]
+}
