@@ -721,6 +721,8 @@ def analyze_match(gid, recorder, tracked):
         for t_, a_, v_, d_, ao_ in taken:
             attackers_by_minute[int(t_ // 60)].add(ao_)
         peak_attackers_minute = max((len(x) for x in attackers_by_minute.values()), default=0)
+        # Minutes in which at least N distinct enemy players hit anything of this player's (Sam, 2026-10-28).
+        attacked_by = {n: sum(1 for x in attackers_by_minute.values() if len(x) >= n) for n in (2, 3, 4)}
         attackers_mean, attackers_max = owners_per_window([(t, a, v, d, ao) for t, a, v, d, ao in taken if a in military], 4)
         targets_mean, targets_max = owners_per_window([(t, a, v, d, vo) for t, a, v, d, vo in dealt if a in military], 4)
         income_minute = [0.0] * minutes_n
@@ -877,7 +879,7 @@ def analyze_match(gid, recorder, tracked):
             'pressure': {'episodes': len(episodes), 'pressureReceived': round(pressure_total), 'growthLost': round(growth_lost_total), 'growthLostPer1000Pressure': round(growth_lost_total / pressure_total * 1000 / max(1.0, attackers_mean or 1.0), 1) if pressure_total >= 2000 else None, 'pressureMultiplier': round(max(1.0, attackers_mean or 1.0), 2),
                          'villagersLostUnderPressure': vill_lost_pressure, 'villagersLostPer1000Pressure': round(vill_lost_pressure / pressure_total * 1000 / max(1.0, attackers_mean or 1.0), 2) if pressure_total >= 2000 else None,
                          'incomeKeptUnderPressure': round(min(1.0, episode_income_total / expected_income_total), 3) if expected_income_total >= 500 else None,
-                         'attackersAtOnceMean': attackers_mean, 'attackersAtOnceMax': attackers_max, 'peakAttackersPerMinute': peak_attackers_minute, 'targetsAtOnceMean': targets_mean, 'targetsAtOnceMax': targets_max, 'episodeList': episode_rows[:120]},
+                         'attackersAtOnceMean': attackers_mean, 'attackersAtOnceMax': attackers_max, 'peakAttackersPerMinute': peak_attackers_minute, 'minutesAttackedBy2': attacked_by[2], 'minutesAttackedBy3': attacked_by[3], 'minutesAttackedBy4': attacked_by[4], 'targetsAtOnceMean': targets_mean, 'targetsAtOnceMax': targets_max, 'episodeList': episode_rows[:120]},
             'harassment': {'enemyVillagersKilled': len(vill_kills), 'villagerKillValueWeighted': round(vk_weighted), 'villagerKillValuePer10': round(vk_weighted / (max(duration - PVP_FROM, 60.0) / 600)) if duration else None, 'firstVillagerKill': vill_kills[0]['t'] if vill_kills else None,
                            'villagerKillsBefore10': sum(1 for v in vill_kills if v['t'] <= 600), 'villagerKillsBefore15': sum(1 for v in vill_kills if v['t'] <= 900),
                            'raids': len(raids), 'killsPerRaid': round(len(vill_kills) / len(raids), 2) if raids else None, 'assistedVillagerKills': sum(1 for v in vill_kills if v['assists']), 'ownVillagersLost': len(own_vill_lost), 'villagerKills': vill_kills[:200], 'raidList': raids},
@@ -910,7 +912,7 @@ AXES = {
     'Growth': [('growth.populationAt.900', True, 1), ('growth.gatheredBy.900', True, 2), ('growth.weightedGatherPerMinute', True, 1), ('growth.ages.feudal', False, 1), ('growth.ages.castle', False, 1), ('growth.weightedArmyValue', True, 2)],
     'Efficiency': [('efficiency.floatShare', False, 2), ('efficiency.tcEmptyShare', False, 1), ('efficiency.idleVillagerShare', False, 1), ('efficiency.queuedShare', False, 1)],
     'Harassment': [('harassment.villagerKillValuePer10', True, 2), ('harassment.firstVillagerKill', False, 1), ('harassment.killsPerRaid', True, 1)],
-    'Pressure handling': [('pressure.growthLostPer1000Pressure', False, 2), ('pressure.incomeKeptUnderPressure', True, 1), ('pressure.villagersLostPer1000Pressure', False, 1), ('pressure.targetsAtOnceMean', True, 1), ('pressure.peakAttackersPerMinute', True, 1)],
+    'Pressure handling': [('pressure.growthLostPer1000Pressure', False, 2), ('pressure.incomeKeptUnderPressure', True, 1), ('pressure.villagersLostPer1000Pressure', False, 1), ('pressure.targetsAtOnceMean', True, 1), ('pressure.minutesAttackedBy2', True, 1 / 3), ('pressure.minutesAttackedBy3', True, 1 / 3), ('pressure.minutesAttackedBy4', True, 1 / 3)],
     'Multitasking': [('multitasking.meanConcurrentFronts', True, 2), ('multitasking.fightsMicroedShare', True, 1), ('multitasking.allFrontsMicroedShare', True, 1), ('multitasking.combatEfficiency', True, 1)],
     'Reaction': [('reaction.answeredPerMinute', True, 2), ('reaction.responseRate', True, 1), ('reaction.medianLatency', False, 1)],
 }
