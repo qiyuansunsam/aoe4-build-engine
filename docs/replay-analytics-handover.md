@@ -2,6 +2,21 @@
 
 Status: exploratory prototype and data collection, 2026-10-27. Tactical capture of the user's games, automated recurring sync, scoring and radar charts are not complete. No game client was launched. Do not present sample telemetry as user performance.
 
+## Repository and integration context
+
+The deployed `https://mcaoe4.qiyuansunsam.workers.dev/` site belongs to **qiyuansunsam/aoe4-build-engine**, on the `feat/build-crafter` line of development. Base commit for this handover is `053360a`. Worker identity is established by `deploy/cloudflare/wrangler.jsonc` (`name: mcaoe4`); `deploy/README.md` documents the Cloudflare front end and Fly API. `mcaoe4` is the deployed Worker name, not the GitHub repository name. The deployed page also contains build paths under `C:/Users/Sam/projects/aoe4-build-crafter` and the same application title. Cloudflare account-side deployment metadata was not retrieved because local Wrangler authentication had expired.
+
+Integration should extend the existing recorded-game system, not the theoretical Abbasid simulation:
+
+- `server/timeline_download.py` and `server/app.py`: existing serialized on-demand summary download and cache routes. Consult these before introducing a second ingestion service.
+- `scripts/export_game_library.py`, `data/game-library.json` and timeline sidecars: existing recorded-game catalog and perspectives.
+- `site/observed-derived.js`: estimates derived from observed summaries. Keep measured telemetry and estimates distinct.
+- `data/INSTALLED_DATA.md` and the installed catalog: this branch documents extraction of executable patch 16.3.11308, matching the requested games' numeric patch. Reuse and validate those rules before relying on the experiment's unpinned current-web technology values.
+- `server/README.md`: explicitly warns that historical resource fields labelled gathered can actually represent spending. Validate source semantics before using them for upgrade payoff or economic efficiency.
+- `deploy/README.md`: production summary downloading is currently local-only. A scheduled recorder requires a separate Windows game host; it cannot run inside the existing Worker or small Fly Python service.
+
+The other workstation's paths and installed-game evidence do not mean AoE4 is installed on the workstation used for this experiment. This feature branch changes documentation and isolated experiments only; it does not deploy or alter public app behaviour.
+
 ## Objective and confirmed scope
 
 Build a repeatable analysis of the latest 10 completed games **per player**, deduplicating matches shared by players. Keep each player's own ten-game membership when aggregating; a match in one player's ten can be outside another's. Do not replace unavailable matches with older ones silently.

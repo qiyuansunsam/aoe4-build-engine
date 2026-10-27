@@ -17,6 +17,8 @@ The neutral glass interfaces, in white and VS Code dark, have Comparison, Builds
 
 Public deployment (Cloudflare + Fly, read-only): [deploy/README.md](deploy/README.md).
 
+Replay skill analytics exploration: [requirements, findings and handover](docs/replay-analytics-handover.md), with [runnable prototype and collection evidence](experiments/replay_analytics/README.md). Tactical capture of the tracked players' games and calibrated radar scores are pending; this experiment is not wired into the public app.
+
 The [local API](server/README.md) serves the app and proxies AI text drafting to the existing loopback CLI proxy. Credentials remain server-side. AI proposals stay unvalidated and are saved only when the user chooses. Backend fixture tests: `python -X utf8 -m unittest discover -s server -p 'test_*.py'`.
 
 ## Original engine context
