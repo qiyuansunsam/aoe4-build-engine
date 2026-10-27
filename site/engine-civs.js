@@ -474,6 +474,11 @@ function simulateCiv(user) {
     for (const u of spec.start.units || []) rows.push({ pbgid: u.pbgid, name: u.name, balance: u.count, produced: 0, lost: 0 });
     return rows;
   }
+  // Army strength (Sam, 2026-10-28): unit value scaled by the age of the unit's current tier (x1 Dark/Feudal, x1.5 Castle, x2 Imperial) plus
+  // completed military technologies at cost with the same age scale; veterancy (unit-tier) upgrades are excluded.
+  const ageScale = a => a >= 4 ? 2 : a >= 3 ? 1.5 : 1;
+  const armyStrength = () => lines.reduce((s, l) => s + S.army[l.key].count * sum(tierOf(l).cost) * ageScale(tierOf(l).age), 0)
+    + [...S.techs].filter(k => T[k] && T[k].cat === "military").reduce((s, k) => s + sum(T[k].cost) * ageScale(T[k].age), 0);
   function snapshot() {
     const a = allocate(), g = gm(), ws = workerState(a);
     const perVil = { farm: rEff("farm", 0.33) * g * farmNear(), berries: rEff("berries", P.map.berries[2]) * g, sheep: rEff("sheep", 0) * g, wood: rEff("wood", P.map.wood_d) * g, gold: rEff("gold", P.map.gold_d) * g };
@@ -483,7 +488,7 @@ function simulateCiv(user) {
       income: Object.fromEntries(R.map(r => [r, Math.round(S.gathered[r])])), algebra: Object.fromEntries(R.map(r => [r, Math.round(S.passiveGot[r])])),
       stock: Object.fromEntries(R.map(r => [r, Math.round(S.res[r])])), spent: Object.fromEntries(R.map(r => [r, Math.round(S.spent[r])])), spentCat: Object.fromEntries(Object.entries(S.spentCat).map(([k, v]) => [k, Math.round(v)])),
       perVil: Object.fromEntries(Object.entries(perVil).map(([k, v]) => [k, +(60 * v).toFixed(1)])), gatherMult: +g.toFixed(3), techs: [...S.techs].filter(k => !T[k]?.groupOf).length, unitsProduced: S.unitsProduced,
-      armyValue: lines.reduce((s, l) => s + S.army[l.key].count * sum(tierOf(l).cost), 0), unitCounts: unitRows(),
+      armyValue: lines.reduce((s, l) => s + S.army[l.key].count * sum(tierOf(l).cost), 0), armyStrength: Math.round(armyStrength()), unitCounts: unitRows(),
       cattle: M.cattle ? { herd: S.cattle.herd, ranched: S.cattle.ranched, bought: S.cattle.bought } : undefined, ranches: M.cattle ? S.ranches : undefined, pitMines: M.pitMine ? S.pitMines : undefined,
       yorishiro: S.yori ? S.yori.n : undefined, ovooStone: M.ovoo ? Math.round(S.ovooStone) : undefined, landmarks: [...S.landmarks] });
     hook("snapshot", S.minutes[S.minutes.length - 1]);
@@ -498,6 +503,7 @@ function simulateCiv(user) {
   while (S.t < P.tmax) {
     step();
     const allTech = lineTechs.every(k => S.techs.has(k)); if (allTech) mark("all_line_techs");
+    if (pop() >= 150) mark("pop150");
     if (pop() >= POP_MAX) mark("pop200");
     if (allTech && completedV() + armyPopDone() + S.others >= POP_MAX) { mark("DONE"); if (S.t % 60) { const last = S.minutes[S.minutes.length - 1], scale = 60 / (S.t - (last ? last.t : 0)); snapshot(); const f = S.minutes[S.minutes.length - 1]; for (const r of R) { f.income[r] = Math.round(f.income[r] * scale); f.algebra[r] = Math.round(f.algebra[r] * scale); } f.partial = true; } break; }
   }

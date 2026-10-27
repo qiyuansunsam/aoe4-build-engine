@@ -42,7 +42,7 @@ function rawScore(run, obj, build) {
 }
 // The army measure of an army-at-a-time objective (completed line units, or completed army value, at obj.t).
 const metric = (run, obj, build) => { if (build?.metric) return build.metric(run); const m = at(run, obj.t || 900); return obj.kind === "lineAt" ? (m.armyByLine?.[obj.line] || 0) : obj.kind === "valueAt" ? m.armyValue : 0; };
-const describe = (run, obj) => { const m = at(run, obj.t || 900); return { done: run.done ?? null, at: obj.t || 900, line: obj.line ? m.armyByLine?.[obj.line] || 0 : undefined, army: m.army, armyValue: m.armyValue, villagers: m.vil, population: m.pop, age: m.age, ages: [2, 3, 4].map(a => run.milestones["age" + a] ?? null), firstUnit: run.milestones.first_unit ?? null, ...(BY_ID[run.params?.planId]?.describe?.(run) || {}) }; };
+const describe = (run, obj) => { const m = at(run, obj.t || 900); return { done: run.done ?? null, at: obj.t || 900, line: obj.line ? m.armyByLine?.[obj.line] || 0 : undefined, army: m.army, armyValue: m.armyValue, villagers: m.vil, population: m.pop, age: m.age, ages: [2, 3, 4].map(a => run.milestones["age" + a] ?? null), firstUnit: run.milestones.first_unit ?? null, pop150: run.milestones.pop150 ?? null, pop200: run.milestones.pop200 ?? null, ...(BY_ID[run.params?.planId]?.describe?.(run) || {}) }; };
 
 // Shared decision space; each build adds its civilization's choices.
 function commonSpace(civ, opts = {}) {

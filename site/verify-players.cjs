@@ -28,7 +28,7 @@ const zhIndex=await p.evaluate(()=>[...document.querySelectorAll('.axis-mini spa
 let latin=zhIndex.filter(t=>/[A-Za-z]{3}/.test(t.replace(/AoE4 World|ELO/g,'')));assert.deepEqual(latin,[],'index UI text translated: '+latin.join(' | '));
 const first=snapshot.ids.find(id=>(snapshot.analysis[String(id)]||[]).length);
 if(first){await p.goto('http://127.0.0.1:8765/#players/'+first,{waitUntil:'networkidle'});await p.waitForSelector('.axis-block');
-  const zhProfile=await p.evaluate(()=>[...document.querySelectorAll('.summary-heading h2,.axis-block h3,.metric-table th:not([scope=row]),.metric-table th[scope=row] > b,.analysis-games thead th,.result-pill')].map(e=>e.textContent.trim()));
+  const zhProfile=await p.evaluate(()=>[...document.querySelectorAll('.summary-heading h2,.axis-block h3,.metric-table th[scope=row] > b,.analysis-games thead th,.result-pill')].map(e=>e.textContent.trim()));
   latin=[...new Set(zhProfile.filter(t=>/[A-Za-z]{3}/.test(t.replace(/ELO|\bI{1,3}\b/g,''))))];assert.deepEqual(latin,[],'profile UI text translated: '+latin.join(' | '));
   await p.goto('http://127.0.0.1:8765/#players/'+first+'/'+snapshot.analysis[String(first)][0],{waitUntil:'networkidle'});await p.waitForSelector('.evidence-panel');
   const zhMatch=await p.evaluate(()=>[...document.querySelectorAll('.evidence-panel h2,.evidence-block h3,.evidence-block th,.mode-facts dt')].map(e=>e.textContent.trim()));

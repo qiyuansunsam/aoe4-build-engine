@@ -64,3 +64,40 @@
 .weight-hint{display:inline-flex;align-items:center;gap:3px;margin-left:5px;font:500 9px var(--sans);color:var(--muted);cursor:help;white-space:nowrap}.weight-hint i{display:inline-flex;align-items:center;justify-content:center;width:12px;height:12px;border-radius:50%;border:1px solid var(--muted);font:600 8px var(--sans);font-style:normal}.weight-hint:hover{color:var(--a)}.weight-hint:hover i{border-color:var(--a)}
 .weight-hint{position:relative}.weight-hint i{width:auto;height:auto;border:0;font:600 9px var(--sans);font-style:normal;color:var(--a)}.weight-hint::after{content:attr(data-tip);position:absolute;left:0;top:calc(100% + 6px);z-index:30;width:300px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);box-shadow:var(--shadow);font:400 11px/1.45 var(--sans);white-space:normal;opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .12s,transform .12s}.weight-hint:hover::after,.weight-hint:focus::after{opacity:1;transform:none}.metric-table th[scope="row"]{overflow:visible}.metric-table{overflow:visible}.axis-block{overflow:visible}
 .weight-hint{margin-left:4px}
+/* 3x3 axis grid, aligned columns, no per-table header */
+.axis-table{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 20px;columns:auto}.axis-block{margin:0;padding:8px 10px 6px;display:flex;flex-direction:column}.axis-block header{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:0 0 4px;padding-bottom:4px;border-bottom:1px solid var(--line)}.axis-block h3{font:600 12px var(--sans);color:var(--text);margin:0}.axis-block header b{font:500 15px var(--mono)}.metric-table{table-layout:fixed;width:100%}.metric-table th[scope="row"]{width:auto;max-width:none;padding:4px 4px 4px 0;font-weight:500}.metric-table td.metric-value{width:88px;text-align:right;padding:4px 6px}.metric-table td.metric-pct{width:58px;text-align:right;padding:4px 0 4px 6px}.metric-table tr:last-child th,.metric-table tr:last-child td{border-bottom:0}.metric-table td small{display:block;margin:0;font-size:9px;line-height:1.1}
+@media(max-width:1250px){.axis-table{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:800px){.axis-table{grid-template-columns:1fr}}
+.weight-hint::after{width:240px;font-size:10.5px}
+
+/* Axis metric rows (2026-10-27): each axis is a card with a score bar under its header; rows are plain (no header-cell fill),
+   value in mono with its absolute/share below, percentile as a coloured track + number. Band colour: lo (<40) uses --b,
+   hi (>=70) uses --a, mid stays neutral. */
+.axis-table{gap:12px 14px}
+.axis-block{padding:10px 12px 6px;border:1px solid var(--line);border-radius:10px;background:var(--subtle);--pct:var(--muted)}
+.axis-block.hi{--pct:var(--a)}.axis-block.lo{--pct:var(--b)}
+.axis-block header{margin:0;padding:0;border-bottom:0;align-items:baseline}
+.axis-block h3{font:600 12.5px/1.2 var(--sans);letter-spacing:.01em;color:var(--text)}
+.axis-block header b{font:500 16px/1 var(--mono);color:var(--text)}
+.axis-score-track{display:block;height:3px;margin:7px 0 4px;border-radius:2px;background:var(--line);overflow:hidden}
+.axis-score-track i{display:block;height:100%;width:var(--w,0%);border-radius:2px;background:var(--pct);animation:pct-grow .5s ease-out}
+.axis-block .metric-table{border-collapse:collapse;table-layout:fixed;width:100%}
+.axis-block .metric-table th,.axis-block .metric-table td{background:transparent;border-bottom:1px solid color-mix(in srgb,var(--line) 55%,transparent);padding:5px 0;font-size:11px;line-height:1.3;vertical-align:middle;white-space:nowrap}
+.axis-block .metric-table tr:last-child th,.axis-block .metric-table tr:last-child td{border-bottom:0}
+.axis-block .metric-table tr:hover th,.axis-block .metric-table tr:hover td{background:color-mix(in srgb,var(--text) 5%,transparent)}
+.axis-block .metric-table th[scope="row"]{max-width:none;width:auto;padding:5px 8px 5px 4px;font-weight:500;color:var(--muted);white-space:normal;overflow:visible}
+.axis-block .metric-table tr.primary th[scope="row"]{color:var(--text)}.axis-block .metric-table tr.primary th[scope="row"] b{font-weight:600}
+.axis-block .metric-table tr.primary td{font-weight:500}
+.axis-block .metric-table td.metric-value{width:68px;padding:5px 10px 5px 0;text-align:right;font:500 11.5px/1.2 var(--mono);color:var(--text)}
+.axis-block .metric-table td.metric-value small{display:block;margin:1px 0 0;font:400 9.5px/1.15 var(--mono);color:var(--muted)}
+.axis-block .metric-table td.metric-pct{width:88px;padding:5px 4px 5px 0;text-align:right;--pct:var(--muted)}
+.axis-block .metric-table tr.hi td.metric-pct{--pct:var(--a)}.axis-block .metric-table tr.lo td.metric-pct{--pct:var(--b)}
+.pct-track{display:inline-block;vertical-align:middle;width:52px;height:5px;margin-right:8px;border-radius:3px;background:var(--line);overflow:hidden}
+.pct-track i{display:block;height:100%;width:var(--w,0%);border-radius:3px;background:var(--pct);animation:pct-grow .5s ease-out}
+.metric-pct b{display:inline-block;vertical-align:middle;min-width:22px;text-align:right;font:600 11px/1 var(--mono);color:var(--pct)}
+.axis-block .weight-hint{opacity:.55;margin-left:4px}.axis-block tr:hover .weight-hint,.axis-block .weight-hint:focus{opacity:1}
+.axis-block.hl{border-color:var(--a);background:var(--a-soft,#e9f2fd)}
+@keyframes pct-grow{from{width:0}}
+@media(prefers-reduced-motion:reduce){.pct-track i,.axis-score-track i{animation:none}}
+/* Secondary stat beside the value, not under it (Sam, 2026-10-28). */
+.axis-block .metric-table td.metric-value{width:112px}
+.axis-block .metric-table td.metric-value small{display:inline;margin:0 0 0 6px;font-size:9.5px;line-height:1}

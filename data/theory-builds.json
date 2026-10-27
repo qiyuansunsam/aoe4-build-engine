@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-25T09:47:16.519Z",
+ "generatedAt": "2026-10-27T13:10:44.262Z",
  "engine": "site/engine-civs.js",
  "rules": "data/civ-engine-rules.json",
  "patch": "16.3.11308",
@@ -36,7 +36,9 @@
      815,
      1218
     ],
-    "firstUnit": 322
+    "firstUnit": 322,
+    "pop150": 1326,
+    "pop200": 1475
    },
    "lines": [
     "royal-knight"
@@ -120,7 +122,9 @@
      1058,
      1332
     ],
-    "firstUnit": 447
+    "firstUnit": 447,
+    "pop150": 1089,
+    "pop200": 1389
    },
    "lines": [
     "royal-knight"
@@ -203,7 +207,9 @@
      1024,
      1217
     ],
-    "firstUnit": 228
+    "firstUnit": 228,
+    "pop150": 1156,
+    "pop200": 1352
    },
    "lines": [
     "keshik",
@@ -293,7 +299,9 @@
      686,
      927
     ],
-    "firstUnit": 744
+    "firstUnit": 744,
+    "pop150": 980,
+    "pop200": 1096
    },
    "lines": [
     "sofa"
@@ -383,7 +391,9 @@
      611,
      835
     ],
-    "firstUnit": 688
+    "firstUnit": 688,
+    "pop150": 946,
+    "pop200": 1042
    },
    "lines": [
     "onna-bugeisha"
@@ -446,130 +456,153 @@
    }
   },
   {
-   "id": "scots-skye-reivers",
-   "title": "Scots two Town Centers fast Imperial, Stone of Destiny, Tower of Skye, mass Border Reivers",
-   "summary": "Two Town Centers, Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, the Tower of Skye in Castle Age. Stage 1: the earliest Imperial Age. Stage 2: Imperial Age within 30 s of that, then the fastest 200 population with every Border Reiver upgrade (Archery Range Reivers plus one Muster Border Reivers), at most 120 villagers, without Imperial economy technologies. The Imperial landmark, the muster timing, Archery Ranges, Highland Cattle, Tower Houses and every other timing come from the engine search.",
+   "id": "scots-imperial-muster",
+   "title": "Scots Imperial aggression with one muster",
+   "summary": "Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, then the army only from Imperial Age with the single muster fired in Imperial Age (a muster is a one-time trigger). Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the army lines. Castle and Imperial landmarks, Town Centers, the army lines (one to three of Pikeman, Cateran, Man-at-Arms, Gallowglass, Border Reiver) and the mustered line, Highland Cattle, Tower Houses and every timing come from the engine search; no Imperial economy technologies.",
    "civilization": "scots",
    "engine": "civ",
    "patch": "17.0-preview",
    "objective": {
-    "kind": "done",
-    "slack": 30
+    "kind": "done"
    },
-   "lineNames": "Border Reiver",
+   "lineNames": "Pikeman and Cateran",
    "result": {
-    "done": 1165,
+    "done": 1598,
     "at": 900,
-    "army": 36,
-    "armyValue": 5400,
-    "villagers": 71,
-    "population": 113,
+    "army": 81,
+    "armyValue": 7085,
+    "villagers": 84,
+    "population": 180,
     "age": 4,
     "ages": [
-     369,
-     665,
-     714
+     373,
+     573,
+     751
     ],
-    "firstUnit": 782,
-    "castle": 665,
-    "imperial": 714,
-    "muster": [
+    "firstUnit": 659,
+    "pop150": 852,
+    "pop200": 925,
+    "castle": 573,
+    "imperial": 751,
+    "relicsStart": 623,
+    "firstRelic": 703,
+    "musters": [
      {
-      "key": "reivers",
-      "name": "Muster Border Reivers",
-      "start": 775,
-      "units": 21,
-      "food": 1350,
-      "tier": 1,
+      "key": "cateran",
+      "name": "Muster Cateran",
+      "start": 776,
+      "units": 14,
+      "food": 480,
+      "tier": 2,
       "lookout": true,
-      "actionDone": 780,
-      "allOut": 822
+      "actionDone": 781,
+      "allOut": 809
      }
     ],
-    "cattlePeak": 17,
     "hallTier": 2,
-    "fishponds": 1,
+    "cattlePeak": 13,
+    "fishponds": 2,
     "stewPonds": false,
-    "rebateGold": 1913,
-    "kirkmen": 1,
+    "rebateGold": 2700,
+    "kirkmen": 3,
     "armyAt": {
-     "900": {
-      "villagers": 71,
-      "army": 36,
+     "600": {
+      "villagers": 42,
+      "army": 0,
       "byLine": {
-       "border-reiver": 36
+       "pikeman": 0,
+       "cateran": 0
       },
-      "pop": 113
+      "pop": 51
+     },
+     "900": {
+      "villagers": 84,
+      "army": 81,
+      "byLine": {
+       "pikeman": 41,
+       "cateran": 40
+      },
+      "pop": 180
      },
      "1200": {
       "villagers": 90,
-      "army": 108,
+      "army": 106,
       "byLine": {
-       "border-reiver": 108
+       "pikeman": 53,
+       "cateran": 53
       },
       "pop": 200
      },
      "1500": {
       "villagers": 90,
-      "army": 108,
+      "army": 106,
       "byLine": {
-       "border-reiver": 108
+       "pikeman": 53,
+       "cateran": 53
       },
       "pop": 200
      }
     }
    },
-   "planId": "scots-skye-reivers",
+   "planId": "scots-imperial-muster",
    "lines": [
-    "border-reiver"
+    "pikeman",
+    "cateran"
    ],
    "landmarks": {
     "2": "stone-of-destiny",
-    "3": "tower-of-skye",
+    "3": "snowdoun-gate",
     "4": "three-loch-lookout"
    },
    "armyAge": 4,
    "extraTCs": {
     "2": 1,
-    "3": 0
+    "3": 1
    },
    "vilTarget": 90,
    "mech": {
     "musters": [
-     "reivers"
+     "cateran"
     ],
-    "kirkmen": 0,
+    "musterAge": {
+     "pikemen": 4,
+     "cateran": 4,
+     "gallowglass": 4,
+     "reivers": 4
+    },
+    "kirkmen": 1,
     "fishponds": 2,
+    "hallAge": 4,
+    "relics": 3,
+    "relicDistanceTiles": 45,
+    "relicGoldPerMinute": 100,
     "towerHouses": {
      "1": 1,
      "2": 0,
      "3": 0
     },
     "cattle": {
-     "1": 5,
+     "1": 9,
      "2": 9,
-     "3": 9,
-     "4": 21
+     "3": 13,
+     "4": 17
     },
-    "cattleFrom": 240,
-    "hallAge": 3,
-    "musterAge": {
-     "reivers": 4
-    }
+    "cattleFrom": 120,
+    "snowdoun": "cateran"
    },
    "lmBuilders": {
-    "2": 2,
-    "3": 3,
-    "4": 14
+    "2": 3,
+    "3": 12,
+    "4": 12
    },
    "tcBuilders": 10,
    "producers": {
     "1": 0,
-    "2": 6,
-    "3": 6,
-    "4": 4
+    "2": 0,
+    "3": 7,
+    "4": 8
    },
-   "maxProducers": 9,
+   "maxProducers": 10,
    "ecoTechs": {
     "1": [
      "upgrade_unit_town_center_wheelbarrow_1__scots"
@@ -582,104 +615,109 @@
     "2": false,
     "3": false
    },
-   "blacksmiths": 1,
+   "blacksmiths": 0,
    "pauseForAge": true,
-   "window": 6,
-   "woodFloor": 0.5,
-   "goldBias": 1.4,
+   "window": 3,
+   "woodFloor": 0.4,
+   "goldBias": 0.8,
    "civTechs": {
     "upgrade_lowland_tier2_sco": null
    },
-   "producerWood": true
+   "producerWood": true,
+   "bankAware": 240
   },
   {
-   "id": "scots-fc-infantry",
-   "title": "Scots one Town Center fast Castle, mixed melee infantry",
-   "summary": "One Town Center. Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds. Stage 1: the earliest Castle Age with the first military unit out by 5:00. Stage 2: Castle Age within 30 s of that, Kirkmen gathering relics from Castle Age, and the fastest 200 population (at most 120 villagers) with every upgrade of its infantry lines, without Imperial economy technologies. The infantry mix (Pikeman, Cateran, Man-at-Arms, Gallowglass), musters, Castle and Imperial landmarks and timings come from the engine search.",
+   "id": "scots-castle-aggression",
+   "title": "Scots Castle aggression",
+   "summary": "Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, then the army from Castle Age without a Mustering Hall. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the army lines. Castle and Imperial landmarks, Town Centers, the army lines (one to three of Pikeman, Cateran, Man-at-Arms, Gallowglass, Border Reiver), Highland Cattle, Tower Houses and every timing come from the engine search; no Imperial economy technologies.",
    "civilization": "scots",
    "engine": "civ",
    "patch": "17.0-preview",
    "objective": {
-    "kind": "done",
-    "slack": 30,
-    "firstUnitBy": 300
+    "kind": "done"
    },
-   "lineNames": "Pikeman and Man-at-Arms",
+   "lineNames": "Pikeman",
    "result": {
-    "done": 1291,
+    "done": 1517,
     "at": 900,
-    "army": 34,
-    "armyValue": 3315,
-    "villagers": 48,
-    "population": 94,
-    "age": 4,
+    "army": 122,
+    "armyValue": 10370,
+    "villagers": 70,
+    "population": 200,
+    "age": 3,
     "ages": [
-     312,
-     508,
-     856
+     331,
+     605,
+     993
     ],
-    "firstUnit": 299,
-    "firstUnitBy": 300,
-    "castle": 508,
-    "imperial": 856,
-    "relicsStart": 539,
-    "firstRelic": 619,
-    "relicsPlaced": 3,
+    "firstUnit": 622,
+    "pop150": 792,
+    "pop200": 872,
+    "castle": 605,
+    "imperial": 993,
+    "relicsStart": 657,
+    "firstRelic": 737,
     "musters": [],
+    "hallTier": 2,
+    "cattlePeak": 9,
     "fishponds": 2,
     "stewPonds": true,
-    "rebateGold": 1530,
+    "rebateGold": 2213,
     "kirkmen": 4,
     "armyAt": {
      "600": {
-      "villagers": 34,
-      "army": 9,
+      "villagers": 42,
+      "army": 0,
       "byLine": {
-       "pikeman": 5,
-       "man-at-arms": 4
+       "pikeman": 0
       },
-      "pop": 53
+      "pop": 47
      },
      "900": {
-      "villagers": 48,
-      "army": 34,
+      "villagers": 70,
+      "army": 122,
       "byLine": {
-       "pikeman": 17,
-       "man-at-arms": 17
+       "pikeman": 122
       },
-      "pop": 94
+      "pop": 200
      },
      "1200": {
-      "villagers": 63,
-      "army": 106,
+      "villagers": 70,
+      "army": 125,
       "byLine": {
-       "pikeman": 52,
-       "man-at-arms": 54
+       "pikeman": 125
       },
-      "pop": 181
+      "pop": 200
+     },
+     "1500": {
+      "villagers": 70,
+      "army": 125,
+      "byLine": {
+       "pikeman": 125
+      },
+      "pop": 200
      }
     }
    },
-   "planId": "scots-fc-infantry",
+   "planId": "scots-castle-aggression",
    "lines": [
-    "pikeman",
-    "man-at-arms"
+    "pikeman"
    ],
    "landmarks": {
     "2": "stone-of-destiny",
     "3": "snowdoun-gate",
-    "4": "three-loch-lookout"
+    "4": "dhun-eideann"
    },
+   "armyAge": 3,
    "extraTCs": {
-    "2": 0,
+    "2": 1,
     "3": 0
    },
-   "vilTarget": 75,
+   "vilTarget": 70,
    "mech": {
+    "musters": [],
     "kirkmen": 1,
     "fishponds": 2,
-    "musters": [],
-    "firstUnitBy": 300,
     "relics": 3,
     "relicDistanceTiles": 45,
     "relicGoldPerMinute": 100,
@@ -689,32 +727,38 @@
      "3": 0
     },
     "cattle": {
-     "1": 7,
-     "2": 5,
-     "3": 13,
+     "1": 9,
+     "2": 13,
+     "3": 9,
      "4": 13
     },
     "cattleFrom": 60,
-    "snowdoun": "pikeman",
-    "hallAge": 3
+    "snowdoun": "pikeman"
    },
    "lmBuilders": {
-    "2": 5,
-    "3": 12,
+    "2": 6,
+    "3": 7,
     "4": 14
    },
-   "tcBuilders": 2,
+   "tcBuilders": 10,
    "producers": {
     "1": 0,
-    "2": 1,
-    "3": 1,
-    "4": 2
+    "2": 6,
+    "3": 8,
+    "4": 9
    },
-   "maxProducers": 5,
+   "maxProducers": 6,
    "ecoTechs": {
-    "1": [],
-    "2": [],
-    "3": [],
+    "1": [
+     "upgrade_unit_town_center_wheelbarrow_1__scots"
+    ],
+    "2": [
+     "upgrade_econ_resource_food_harvest_rate_2__scots",
+     "upgrade_econ_resource_wood_harvest_rate_2__scots",
+     "upgrade_econ_resource_gold_harvest_rate_2__scots",
+     "upgrade_lowland_and_highland_tier2_sco"
+    ],
+    "3": "all",
     "4": []
    },
    "milTechAge": {
@@ -722,248 +766,276 @@
     "3": true
    },
    "blacksmiths": 0,
-   "pauseForAge": true,
-   "window": 6,
-   "woodFloor": 0.3,
-   "goldBias": 0.6,
-   "armyAge": 1,
-   "civTechs": {
-    "upgrade_lowland_tier2_sco": 3
-   },
-   "producerWood": true,
-   "bankAware": 60
-  },
-  {
-   "id": "scots-fc-infantry-2tc",
-   "title": "Scots fast Castle, mixed melee infantry, extra Town Center",
-   "summary": "One or two extra Town Centers (Feudal or Castle Age). Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds. Stage 1: the earliest Castle Age with the first military unit out by 5:00. Stage 2: Castle Age within 30 s of that, Kirkmen gathering relics from Castle Age, and the fastest 200 population (at most 120 villagers) with every upgrade of its infantry lines, without Imperial economy technologies. The infantry mix (Pikeman, Cateran, Man-at-Arms, Gallowglass), musters, Castle and Imperial landmarks and timings come from the engine search.",
-   "civilization": "scots",
-   "engine": "civ",
-   "patch": "17.0-preview",
-   "objective": {
-    "kind": "done",
-    "slack": 30,
-    "firstUnitBy": 300
-   },
-   "lineNames": "Man-at-Arms and Gallowglass",
-   "result": {
-    "done": 1293,
-    "at": 900,
-    "army": 26,
-    "armyValue": 3960,
-    "villagers": 59,
-    "population": 96,
-    "age": 3,
-    "ages": [
-     242,
-     501,
-     992
-    ],
-    "firstUnit": 269,
-    "firstUnitBy": 300,
-    "castle": 501,
-    "imperial": 992,
-    "relicsStart": 558,
-    "firstRelic": 638,
-    "relicsPlaced": 3,
-    "musters": [
-     {
-      "key": "gallowglass",
-      "name": "Muster Gallowglass",
-      "start": 666,
-      "units": 7,
-      "food": 1350,
-      "tier": 0,
-      "lookout": false,
-      "actionDone": 671,
-      "allOut": 685
-     }
-    ],
-    "fishponds": 2,
-    "stewPonds": true,
-    "rebateGold": 2588,
-    "kirkmen": 4,
-    "armyAt": {
-     "600": {
-      "villagers": 34,
-      "army": 4,
-      "byLine": {
-       "man-at-arms": 4,
-       "gallowglass": 0
-      },
-      "pop": 46
-     },
-     "900": {
-      "villagers": 59,
-      "army": 26,
-      "byLine": {
-       "man-at-arms": 16,
-       "gallowglass": 10
-      },
-      "pop": 96
-     },
-     "1200": {
-      "villagers": 101,
-      "army": 55,
-      "byLine": {
-       "man-at-arms": 26,
-       "gallowglass": 29
-      },
-      "pop": 171
-     }
-    }
-   },
-   "planId": "scots-fc-infantry-2tc",
-   "lines": [
-    "man-at-arms",
-    "gallowglass"
-   ],
-   "landmarks": {
-    "2": "stone-of-destiny",
-    "3": "snowdoun-gate",
-    "4": "dhun-eideann"
-   },
-   "extraTCs": {
-    "2": 0,
-    "3": 2
-   },
-   "vilTarget": 120,
-   "mech": {
-    "kirkmen": 1,
-    "fishponds": 2,
-    "musters": [
-     "gallowglass"
-    ],
-    "firstUnitBy": 300,
-    "relics": 3,
-    "relicDistanceTiles": 45,
-    "relicGoldPerMinute": 100,
-    "towerHouses": {
-     "1": 0,
-     "2": 0,
-     "3": 1
-    },
-    "cattle": {
-     "1": 7,
-     "2": 5,
-     "3": 17,
-     "4": 13
-    },
-    "cattleFrom": 120,
-    "snowdoun": "man-at-arms",
-    "hallAge": 3
-   },
-   "lmBuilders": {
-    "2": 6,
-    "3": 12,
-    "4": 14
-   },
-   "tcBuilders": 8,
-   "producers": {
-    "1": 2,
-    "2": 1,
-    "3": 1,
-    "4": 3
-   },
-   "maxProducers": 4,
-   "ecoTechs": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": []
-   },
-   "milTechAge": {
-    "2": false,
-    "3": true
-   },
-   "blacksmiths": 2,
-   "pauseForAge": true,
+   "pauseForAge": false,
    "window": 3,
-   "woodFloor": 0.3,
+   "woodFloor": 0.35,
    "goldBias": 1.4,
-   "armyAge": 2,
    "civTechs": {
     "upgrade_lowland_tier2_sco": 3
    },
    "producerWood": true,
-   "bankAware": 120
+   "bankAware": 240
   },
   {
-   "id": "vikings-longhouse-boom",
-   "title": "Vikings two-TC Longhouse boom",
-   "summary": "Two Town Centers and fourteen Longhouses, the first six with Bee Skeps: the soonest 200 population (villagers and army) reached in Feudal or Castle Age with all fourteen Longhouses standing, the Gullínn Temple started only once population is 150, then the soonest Imperial Age with every upgrade of the infantry it trains. Baugr Fort, Gullínn Temple; army, villager target and timings come from the engine search.",
+   "id": "vikings-feudal-melee",
+   "title": "Vikings Feudal mixed melee aggression, two Town Centers, six Longhouses",
+   "summary": "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), then mixed melee infantry (at least two of Bondi, Berserker, Hirdman) from Feudal Age. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the infantry lines. Landmarks, the infantry mix, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
    "civilization": "vikings",
    "engine": "civ",
    "patch": "17.0-preview",
    "objective": {
-    "kind": "pop200",
-    "t": 900,
-    "slack": 30
+    "kind": "done"
    },
-   "lineNames": "Bondi and Berserker and Hirdman",
+   "lineNames": "Bondi and Berserker",
    "result": {
-    "done": 1747,
+    "done": 1718,
     "at": 900,
-    "army": 118,
-    "armyValue": 12190,
-    "villagers": 65,
-    "population": 193,
+    "army": 111,
+    "armyValue": 11430,
+    "villagers": 63,
+    "population": 181,
     "age": 2,
     "ages": [
-     367,
-     1135,
-     1205
+     383,
+     1129,
+     1193
     ],
-    "firstUnit": 386,
-    "pop200": 994,
+    "firstUnit": 402,
+    "pop150": 775,
+    "pop200": 933,
     "pop200Age": "Feudal Age",
-    "gullinnStart": 1003,
-    "gullinnStartPop": 200,
-    "atPop200": {
-     "longhouses": 14,
-     "villagers": 74,
-     "army": 126
-    },
-    "longhouses": 14,
+    "castle": 1129,
+    "imperial": 1193,
+    "longhouses": 8,
     "attachments": {
      "bee": 6,
-     "farm": 6,
+     "farm": 0,
      "smithy": 1,
      "loom": 1
     },
-    "villagerCapacity": 150,
+    "villagerCapacity": 90,
     "sagas": [
      "ulfr",
      "falkr",
      "jofurr",
      "dreki"
     ],
-    "groveBerserkers": 0
+    "groveBerserkers": 0,
+    "shieldMaidens": 0,
+    "armyAt": {
+     "600": {
+      "villagers": 39,
+      "army": 36,
+      "byLine": {
+       "bondi": 26,
+       "berserker": 10
+      },
+      "pop": 85
+     },
+     "900": {
+      "villagers": 63,
+      "army": 111,
+      "byLine": {
+       "bondi": 89,
+       "berserker": 22
+      },
+      "pop": 181
+     },
+     "1200": {
+      "villagers": 67,
+      "army": 132,
+      "byLine": {
+       "bondi": 108,
+       "berserker": 24
+      },
+      "pop": 200
+     },
+     "1500": {
+      "villagers": 67,
+      "army": 132,
+      "byLine": {
+       "bondi": 108,
+       "berserker": 24
+      },
+      "pop": 200
+     }
+    }
    },
-   "planId": "vikings-longhouse-boom",
+   "planId": "vikings-feudal-melee",
    "lines": [
     "bondi",
-    "berserker",
-    "hirdman"
+    "berserker"
    ],
    "extraTCs": {
     "2": 1,
     "3": 0
    },
+   "armyAge": 2,
+   "mech": {
+    "lh": {
+     "1": 2,
+     "2": 4,
+     "3": 0,
+     "4": 0
+    },
+    "attach": [
+     "bee",
+     "bee",
+     "bee",
+     "bee",
+     "smithy",
+     "loom",
+     "bee",
+     "bee"
+    ],
+    "gullinnMinPop": 0,
+    "groves": 0,
+    "kongensLonghouses": 0,
+    "callMaidens": true,
+    "lhLead": 99,
+    "lhBuilders": 1,
+    "longhouseBondi": true,
+    "openWood": true,
+    "reserveWood": true,
+    "callMaidensAt": 8
+   },
+   "vilTarget": 150,
    "landmarks": {
     "2": "baugr-fort",
     "3": "gullinn-temple",
-    "4": "kongens-dor-cathedral"
+    "4": "rikets-nyckel-castle"
+   },
+   "lmBuilders": {
+    "2": 2,
+    "3": 2,
+    "4": 10
+   },
+   "tcBuilders": 10,
+   "producers": {
+    "1": 2,
+    "2": 0,
+    "3": 1,
+    "4": 5
+   },
+   "maxProducers": 5,
+   "ecoTechs": {
+    "1": [
+     "upgrade_unit_town_center_wheelbarrow_1__vikings"
+    ],
+    "2": [
+     "upgrade_econ_resource_food_harvest_rate_2__vikings"
+    ],
+    "3": "all",
+    "4": []
+   },
+   "milTechAge": {
+    "2": true,
+    "3": true
+   },
+   "blacksmiths": 2,
+   "pauseForAge": true,
+   "window": 3,
+   "woodFloor": 0.3,
+   "goldBias": 1.2
+  },
+  {
+   "id": "vikings-valdemar-knights",
+   "title": "Vikings Castle Jylland Knight aggression with the Valdemar Castle, two Town Centers, six Longhouses",
+   "summary": "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), the Valdemar Castle in Castle Age, then Jylland Knights from Castle Age. Key metrics: the time to 150 population and the time to 200 population, each with every Jylland Knight upgrade. The Feudal and Imperial landmarks, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
+   "civilization": "vikings",
+   "engine": "civ",
+   "patch": "17.0-preview",
+   "objective": {
+    "kind": "done"
+   },
+   "lineNames": "Jylland Knight",
+   "result": {
+    "done": 1894,
+    "at": 900,
+    "army": 47,
+    "armyValue": 9870,
+    "villagers": 65,
+    "population": 121,
+    "age": 3,
+    "ages": [
+     349,
+     633,
+     1176
+    ],
+    "firstUnit": 664,
+    "pop150": 996,
+    "pop200": 1177,
+    "pop200Age": "Imperial Age",
+    "castle": 633,
+    "imperial": 1176,
+    "longhouses": 8,
+    "attachments": {
+     "bee": 6,
+     "farm": 0,
+     "smithy": 1,
+     "loom": 1
+    },
+    "villagerCapacity": 90,
+    "sagas": [
+     "jofurr",
+     "falkr"
+    ],
+    "groveBerserkers": 0,
+    "shieldMaidens": 7,
+    "armyAt": {
+     "600": {
+      "villagers": 39,
+      "army": 0,
+      "byLine": {
+       "jylland-knight": 0
+      },
+      "pop": 42
+     },
+     "900": {
+      "villagers": 65,
+      "army": 47,
+      "byLine": {
+       "jylland-knight": 47
+      },
+      "pop": 121
+     },
+     "1200": {
+      "villagers": 80,
+      "army": 102,
+      "byLine": {
+       "jylland-knight": 102
+      },
+      "pop": 200
+     },
+     "1500": {
+      "villagers": 80,
+      "army": 104,
+      "byLine": {
+       "jylland-knight": 104
+      },
+      "pop": 200
+     }
+    }
+   },
+   "planId": "vikings-valdemar-knights",
+   "lines": [
+    "jylland-knight"
+   ],
+   "extraTCs": {
+    "2": 1,
+    "3": 0
+   },
+   "armyAge": 3,
+   "landmarks": {
+    "2": "konungr-hall",
+    "3": "valdemar-castle",
+    "4": "rikets-nyckel-castle"
    },
    "mech": {
-    "gullinnMinPop": 150,
-    "groves": 0,
-    "kongensLonghouses": 0,
-    "callMaidens": false,
     "lh": {
-     "1": 2,
-     "2": 12,
-     "3": 0,
+     "1": 5,
+     "2": 0,
+     "3": 1,
      "4": 0
     },
     "attach": [
@@ -973,33 +1045,32 @@
      "bee",
      "bee",
      "bee",
-     "smithy",
      "loom",
-     "farm",
-     "farm",
-     "farm",
-     "farm",
-     "farm",
-     "farm"
+     "smithy"
     ],
-    "lhLead": 99,
-    "lhBuilders": 2,
+    "gullinnMinPop": 0,
+    "groves": 0,
+    "kongensLonghouses": 0,
+    "callMaidens": true,
+    "lhLead": 12,
+    "lhBuilders": 1,
     "longhouseBondi": true,
     "openWood": true,
-    "reserveWood": true
+    "reserveWood": true,
+    "callMaidensAt": 14
    },
-   "vilTarget": 120,
+   "vilTarget": 125,
    "lmBuilders": {
-    "2": 3,
+    "2": 4,
     "3": 3,
-    "4": 9
+    "4": 14
    },
-   "tcBuilders": 8,
+   "tcBuilders": 10,
    "producers": {
     "1": 0,
-    "2": 0,
-    "3": 1,
-    "4": 9
+    "2": 5,
+    "3": 6,
+    "4": 6
    },
    "maxProducers": 9,
    "ecoTechs": {
@@ -1007,292 +1078,19 @@
      "upgrade_unit_town_center_wheelbarrow_1__vikings",
      "upgrade_econ_villager_hunting_gear_1__vikings"
     ],
-    "2": [
-     "upgrade_econ_resource_food_harvest_rate_2__vikings"
-    ],
-    "3": [],
+    "2": "all",
+    "3": "all",
     "4": []
    },
    "milTechAge": {
     "2": true,
-    "3": true
-   },
-   "blacksmiths": 0,
-   "pauseForAge": false,
-   "window": 3,
-   "woodFloor": 0.3,
-   "goldBias": 1.6,
-   "armyAge": 2,
-   "pauseFrom": {
-    "3": 900,
-    "4": 1800
-   }
-  },
-  {
-   "id": "vikings-longhouse-boom-150v",
-   "title": "Vikings Longhouse boom, 150 villagers",
-   "summary": "The same two-Town-Center, fourteen-Longhouse boom with the whole villager capacity filled: 150 villagers and 50 army population reached in Feudal or Castle Age as soon as possible, the Gullínn Temple started only once population is 150, then the soonest Imperial Age with every upgrade of the infantry it trains.",
-   "civilization": "vikings",
-   "engine": "civ",
-   "patch": "17.0-preview",
-   "objective": {
-    "kind": "pop200",
-    "t": 900,
-    "slack": 30
-   },
-   "lineNames": "Bondi",
-   "result": {
-    "done": 2304,
-    "at": 900,
-    "army": 0,
-    "armyValue": 0,
-    "villagers": 69,
-    "population": 72,
-    "age": 2,
-    "ages": [
-     339,
-     1761,
-     1950
-    ],
-    "firstUnit": 1776,
-    "pop200": 1810,
-    "pop200Age": "Castle Age",
-    "gullinnStart": 1713,
-    "gullinnStartPop": 150,
-    "atPop200": {
-     "longhouses": 14,
-     "villagers": 150,
-     "army": 50
-    },
-    "longhouses": 14,
-    "attachments": {
-     "bee": 6,
-     "farm": 6,
-     "smithy": 1,
-     "loom": 1
-    },
-    "villagerCapacity": 150,
-    "sagas": [
-     "falkr",
-     "jofurr",
-     "dreki",
-     "ulfr"
-    ],
-    "groveBerserkers": 0
-   },
-   "planId": "vikings-longhouse-boom-150v",
-   "lines": [
-    "bondi"
-   ],
-   "extraTCs": {
-    "2": 1,
-    "3": 0
-   },
-   "landmarks": {
-    "2": "baugr-fort",
-    "3": "gullinn-temple",
-    "4": "kongens-dor-cathedral"
-   },
-   "mech": {
-    "gullinnMinPop": 150,
-    "groves": 0,
-    "kongensLonghouses": 0,
-    "callMaidens": false,
-    "lh": {
-     "1": 2,
-     "2": 12,
-     "3": 0,
-     "4": 0
-    },
-    "attach": [
-     "bee",
-     "bee",
-     "bee",
-     "bee",
-     "bee",
-     "bee",
-     "loom",
-     "smithy",
-     "farm",
-     "farm",
-     "farm",
-     "farm",
-     "farm",
-     "farm"
-    ],
-    "lhLead": 99,
-    "lhBuilders": 3,
-    "longhouseBondi": true,
-    "openWood": true,
-    "reserveWood": false
-   },
-   "vilTarget": 150,
-   "lmBuilders": {
-    "2": 3,
-    "3": 12,
-    "4": 2
-   },
-   "tcBuilders": 10,
-   "producers": {
-    "1": 0,
-    "2": 4,
-    "3": 6,
-    "4": 8
-   },
-   "maxProducers": 12,
-   "ecoTechs": {
-    "1": [],
-    "2": [
-     "upgrade_econ_resource_gold_harvest_rate_2__vikings"
-    ],
-    "3": [],
-    "4": []
-   },
-   "milTechAge": {
-    "2": false,
     "3": false
    },
-   "blacksmiths": 1,
-   "pauseForAge": false,
-   "window": 3,
-   "woodFloor": 0.25,
-   "goldBias": 1.6,
-   "armyAge": 3,
-   "pauseFrom": {
-    "3": 900,
-    "4": 1200
-   }
-  },
-  {
-   "id": "vikings-jylland-knights",
-   "title": "Jylland Knights by 15:00",
-   "summary": "Jylland Knights by 15:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Jylland Knight upgrade (Elite, Biology, Code of Jylland and the six Smithy and Pasture and Loom tiers). Landmarks, Town Centers, Longhouses and their attachments come from the engine search.",
-   "civilization": "vikings",
-   "engine": "civ",
-   "patch": "17.0-preview",
-   "objective": {
-    "kind": "lineAt",
-    "line": "jylland-knight",
-    "t": 900,
-    "slack": 1
-   },
-   "lineNames": "Jylland Knight",
-   "result": {
-    "done": 1651,
-    "at": 900,
-    "line": 54,
-    "army": 54,
-    "armyValue": 11340,
-    "villagers": 70,
-    "population": 136,
-    "age": 3,
-    "ages": [
-     324,
-     624,
-     1210
-    ],
-    "firstUnit": 655,
-    "longhouses": 8,
-    "attachments": {
-     "bee": 4,
-     "farm": 2,
-     "smithy": 1,
-     "loom": 1
-    },
-    "villagerCapacity": 90,
-    "sagas": [
-     "dreki",
-     "falkr",
-     "jofurr"
-    ],
-    "shieldMaidens": 8,
-    "groveBerserkers": 10,
-    "pop200": 1091
-   },
-   "planId": "vikings-jylland-knights",
-   "lines": [
-    "jylland-knight"
-   ],
-   "mech": {
-    "gullinnMinPop": 0,
-    "groves": 0,
-    "kongensLonghouses": 0,
-    "lh": {
-     "1": 3,
-     "2": 3,
-     "3": 4,
-     "4": 0
-    },
-    "attach": [
-     "bee",
-     "bee",
-     "farm",
-     "farm",
-     "smithy",
-     "loom",
-     "bee",
-     "bee",
-     "bee",
-     "bee",
-     "farm",
-     "farm",
-     "farm",
-     "farm"
-    ],
-    "lhLead": 2,
-    "lhBuilders": 3,
-    "openWood": true,
-    "reserveWood": true,
-    "callMaidens": true,
-    "callMaidensAt": 6
-   },
-   "vilTarget": 150,
-   "landmarks": {
-    "2": "konungr-hall",
-    "3": "gullinn-temple",
-    "4": "kongens-dor-cathedral"
-   },
-   "lmBuilders": {
-    "2": 3,
-    "3": 5,
-    "4": 7
-   },
-   "extraTCs": {
-    "2": 2,
-    "3": 0
-   },
-   "tcBuilders": 10,
-   "producers": {
-    "1": 0,
-    "2": 4,
-    "3": 7,
-    "4": 5
-   },
-   "maxProducers": 12,
-   "ecoTechs": {
-    "1": [
-     "upgrade_unit_town_center_wheelbarrow_1__vikings"
-    ],
-    "2": "all",
-    "3": [],
-    "4": []
-   },
-   "milTechAge": {
-    "2": true,
-    "3": true
-   },
    "blacksmiths": 0,
    "pauseForAge": false,
-   "window": 4,
-   "woodFloor": 0.3,
-   "goldBias": 0.6,
-   "armyAge": 3,
-   "pauseFrom": {
-    "3": 900,
-    "4": 1200
-   },
-   "vilTarget2": null,
-   "vilTarget2At": 900
+   "window": 5,
+   "woodFloor": 0.15,
+   "goldBias": 0.6
   }
  ],
  "method": "Polish: threshold 18 (best army measure over 10 searches minus slack 1); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish."

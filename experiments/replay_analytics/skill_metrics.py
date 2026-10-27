@@ -63,6 +63,12 @@ DEFENSE_RANGE = [(re.compile(r'keep|castle|fortress|citadel', re.I), 40.0), (re.
 MARKS = (300, 480, 600, 720, 900, 1200)
 
 
+# PvP measures averaged by minute count only game time from 6:00 (Sam, 2026-10-28: the pre-contact minutes dilute them).
+PVP_FROM = 360.0
+# Games shorter than this enter neither the percentile pool nor a player profile (Sam, 2026-10-28).
+MIN_GAME_SECONDS = 600.0
+
+
 def weight(t):
     return 1.0 + max(0.0, (1200.0 - t) / 1200.0)
 
@@ -440,7 +446,7 @@ def analyze_match(gid, recorder, tracked):
         # Share of the enemy army killed per minute: value killed in each minute / the enemy players' army value
         # (units only) at that minute x number of enemies, averaged over minutes where the enemy fielded 500+ of army
         shares = []
-        for minute in range(0, int(duration) // 60 + 1):
+        for minute in range(int(PVP_FROM) // 60, int(duration) // 60 + 1):
             t0 = minute * 60
             enemy_army = sum(army_units_only[o][min(len(army_steps) - 1, t0 // 30)] for o in enemies) if army_steps else 0
             if enemy_army < 500:
@@ -687,7 +693,13 @@ def analyze_match(gid, recorder, tracked):
             dur = max(10.0, ep['end'] - ep['start'] + 10)
             lo, hi = ep['start'], ep['start'] + dur
             pre_rate = income_between(lo - 120, lo) / 120.0
-            expected = pre_rate * dur
+            # Expected income keeps the economy's own growth (Sam, 2026-10-28): the rate's slope over the two minutes before
+            # the episode (never negative; the rate at most doubles by the episode's end) carries on through the episode.
+            # pre_rate is the mean over [lo-120, lo], centred 60 s before the episode starts.
+            earlier = income_between(lo - 240, lo - 120) / 120.0 if lo >= 240 else None
+            slope = max(0.0, (pre_rate - earlier) / 120.0) if earlier is not None and earlier > 0 else 0.0
+            slope = min(slope, pre_rate / (60.0 + dur))
+            expected = pre_rate * dur + slope * (60.0 * dur + dur * dur / 2.0)
             actual = income_between(lo, hi)
             shortfall = max(0.0, expected - actual)
             vlost = [r for r in own_vill_lost if lo <= r['t'] <= hi]
@@ -705,6 +717,10 @@ def analyze_match(gid, recorder, tracked):
                 windows[int(row[0] // 10)].add(row[key])
             counts = [len(s) for s in windows.values()]
             return (round(sum(counts) / len(counts), 2), max(counts)) if counts else (None, None)
+        attackers_by_minute = defaultdict(set)
+        for t_, a_, v_, d_, ao_ in taken:
+            attackers_by_minute[int(t_ // 60)].add(ao_)
+        peak_attackers_minute = max((len(x) for x in attackers_by_minute.values()), default=0)
         attackers_mean, attackers_max = owners_per_window([(t, a, v, d, ao) for t, a, v, d, ao in taken if a in military], 4)
         targets_mean, targets_max = owners_per_window([(t, a, v, d, vo) for t, a, v, d, vo in dealt if a in military], 4)
         income_minute = [0.0] * minutes_n
@@ -800,10 +816,13 @@ def analyze_match(gid, recorder, tracked):
         strong_phase = next((t for t, v in zip(army_steps, army_sum[idx]) if peak > 0 and v >= 0.8 * peak), None)
         pres = presence[idx]
         minutes = max(1.0, duration / 60)
-        cell_seconds = sum(len(s) for s in pres)
+        pvp_minutes = max(1.0, (duration - PVP_FROM) / 60)
+        pvp_seconds = max(1, int(duration - PVP_FROM))
+        pvp_sec0 = int(PVP_FROM)
+        cell_seconds = sum(len(s) for s in pres[pvp_sec0:])
         visited = set().union(*pres) if pres else set()
         contested = 0
-        for sec in range(seconds):
+        for sec in range(pvp_sec0, seconds):
             mine = pres[sec]
             if not mine:
                 continue
@@ -843,8 +862,8 @@ def analyze_match(gid, recorder, tracked):
                        'tradeRatio': round(killed['unitW'] / lost['unitW'], 3) if lost['unitW'] else None, 'netValueTraded': round(killed['unitW'] - lost['unitW']), 'enemyValueFielded': round(enemy_fielded), 'enemyCount': len(enemies), 'valueKilledShare': kill_share_per_minute, 'damagePerResource': damage_per_resource, 'armyResources': round(army_resources), 'militaryDamage': round(military_damage),
                        'fights': len(my_fights), 'fightsWithStake': len(with_stake), 'fightsWonPersonal': fights_won, 'teamFightsWon': team_fights_won,
                        'damagePerCombatMinute': round(damage_dealt / (combat.total() / 60), 1) if combat.total() > 30 else None, 'combatSeconds': round(combat.total(), 1), 'firstHostileHitDealt': round(first_dealt[0], 1) if first_dealt else None, 'damage1000At': damage_1000_at},
-            'aggression': {'firstMilitaryInEnemyHalf': first_enemy_half.get(idx), 'enemyHalfSeconds': sum(enemy_half_sec[idx]), 'enemyHalfShare': round(sum(enemy_half_sec[idx]) / seconds, 3)},
-            'map': {'cellSecondsPerMinute': round(cell_seconds / minutes, 1), 'defenseCellsMean': round(sum(defense_cells[idx]) / seconds, 2), 'defenseCellsPeak': max(defense_cells[idx]), 'cellsVisited': len(visited), 'cellsVisitedShare': round(len(visited) / (GRID * GRID), 3), 'contestedCellSecondsPerMinute': round(contested / minutes, 1)},
+            'aggression': {'firstMilitaryInEnemyHalf': first_enemy_half.get(idx), 'enemyHalfSeconds': sum(enemy_half_sec[idx]), 'enemyHalfShare': round(sum(enemy_half_sec[idx][pvp_sec0:]) / pvp_seconds, 3)},
+            'map': {'cellSecondsPerMinute': round(cell_seconds / pvp_minutes, 1), 'defenseCellsMean': round(sum(defense_cells[idx][pvp_sec0:]) / pvp_seconds, 2), 'defenseCellsPeak': max(defense_cells[idx]), 'cellsVisited': len(visited), 'cellsVisitedShare': round(len(visited) / (GRID * GRID), 3), 'contestedCellSecondsPerMinute': round(contested / pvp_minutes, 1)},
             'growth': {'villagersAt': vill_at, 'populationAt': pop_at_marks, 'villagersTrained': len(vill_built), 'lastVillagerAt': round(last_vill, 1) if last_vill else None, 'villagerSeries': villager_series[idx],
                        'gathered': round(gathered), 'gatheredWeighted': round(gathered_w), 'gatherPerMinute': round(gather_pm, 1) if gather_pm is not None else None, 'weightedGatherPerMinute': round(gathered_w / minutes, 1), 'gatheredBy': gathered_by,
                        'ages': {k: round(v, 1) for k, v in ages.items()}, 'ecoTechs': {k: round(v, 1) for k, v in eco.items()},
@@ -858,8 +877,8 @@ def analyze_match(gid, recorder, tracked):
             'pressure': {'episodes': len(episodes), 'pressureReceived': round(pressure_total), 'growthLost': round(growth_lost_total), 'growthLostPer1000Pressure': round(growth_lost_total / pressure_total * 1000 / max(1.0, attackers_mean or 1.0), 1) if pressure_total >= 2000 else None, 'pressureMultiplier': round(max(1.0, attackers_mean or 1.0), 2),
                          'villagersLostUnderPressure': vill_lost_pressure, 'villagersLostPer1000Pressure': round(vill_lost_pressure / pressure_total * 1000 / max(1.0, attackers_mean or 1.0), 2) if pressure_total >= 2000 else None,
                          'incomeKeptUnderPressure': round(min(1.0, episode_income_total / expected_income_total), 3) if expected_income_total >= 500 else None,
-                         'attackersAtOnceMean': attackers_mean, 'attackersAtOnceMax': attackers_max, 'targetsAtOnceMean': targets_mean, 'targetsAtOnceMax': targets_max, 'episodeList': episode_rows[:120]},
-            'harassment': {'enemyVillagersKilled': len(vill_kills), 'villagerKillValueWeighted': round(vk_weighted), 'villagerKillValuePer10': round(vk_weighted / (duration / 600)) if duration else None, 'firstVillagerKill': vill_kills[0]['t'] if vill_kills else None,
+                         'attackersAtOnceMean': attackers_mean, 'attackersAtOnceMax': attackers_max, 'peakAttackersPerMinute': peak_attackers_minute, 'targetsAtOnceMean': targets_mean, 'targetsAtOnceMax': targets_max, 'episodeList': episode_rows[:120]},
+            'harassment': {'enemyVillagersKilled': len(vill_kills), 'villagerKillValueWeighted': round(vk_weighted), 'villagerKillValuePer10': round(vk_weighted / (max(duration - PVP_FROM, 60.0) / 600)) if duration else None, 'firstVillagerKill': vill_kills[0]['t'] if vill_kills else None,
                            'villagerKillsBefore10': sum(1 for v in vill_kills if v['t'] <= 600), 'villagerKillsBefore15': sum(1 for v in vill_kills if v['t'] <= 900),
                            'raids': len(raids), 'killsPerRaid': round(len(vill_kills) / len(raids), 2) if raids else None, 'assistedVillagerKills': sum(1 for v in vill_kills if v['assists']), 'ownVillagersLost': len(own_vill_lost), 'villagerKills': vill_kills[:200], 'raidList': raids},
             'timing': {'ages': {k: round(v, 1) for k, v in ages.items()}, 'wheelbarrow': eco.get('wheelbarrow'), 'firstAttackAdvantage': first_attack_adv, 'firstAttackOwnArmy': round(army_value_at(idx, first_dealt[0])) if first_dealt else None, 'firstAttackEnemyArmy': round(army_value_at(first_dealt[4], first_dealt[0])) if first_dealt else None,
@@ -867,7 +886,7 @@ def analyze_match(gid, recorder, tracked):
             'multitasking': {'meanConcurrentFronts': mean_fronts, 'fightsMicroed': microed if cmds_mine else None, 'fightsMicroedShare': round(microed / len(my_fights), 3) if cmds_mine and len(my_fights) >= 3 else None,
                              'simultaneousFrontWindows': multi_front, 'multiFrontSeconds': round(multi_time), 'allFrontsMicroedShare': round(all_microed_time / multi_time, 3) if cmds_mine and multi_time >= 30 else None,
                              'tcEmptyShareInCombat': round(tc_c_empty / tc_c_known, 3) if tc_c_known > 30 else None, 'idleVillagerShareInCombat': round(idle_in_combat / vill_sec_in_combat, 3) if vill_sec_in_combat > 60 else None, 'productionIdleShareInCombat': round(prod_idle_c / prod_known_c, 3) if prod_known_c > 60 else None, 'combatEfficiency': combat_efficiency, 'villagersPerMinuteInCombat': round(vill_in_combat / (combat_total / 60), 2) if combat_total > 60 else None, 'villagersPerMinuteQuiet': round((len(vill_built) - vill_in_combat) / (quiet_total / 60), 2) if quiet_total > 60 else None},
-            'reaction': {'threats': len(threats), 'economyThreats': sum(1 for t in threats if t['kind'] == 'economy'), 'responded': len(latencies), 'responseRate': round(len(latencies) / len(threats), 3) if threats and cmds_mine else None, 'answeredPerMinute': answered_share_per_minute, 'answeredCountPerMinute': round(len(latencies) / (duration / 60), 3) if cmds_mine and duration else None, 'threatsByAttacker': {str(k): v for k, v in by_attacker.items()},
+            'reaction': {'threats': len(threats), 'economyThreats': sum(1 for t in threats if t['kind'] == 'economy'), 'responded': len(latencies), 'responseRate': round(len(latencies) / len(threats), 3) if threats and cmds_mine else None, 'answeredPerMinute': answered_share_per_minute, 'answeredCountPerMinute': round(len(latencies) / pvp_minutes, 3) if cmds_mine and duration else None, 'threatsByAttacker': {str(k): v for k, v in by_attacker.items()},
                          'medianLatency': round(statistics.median(latencies), 2) if latencies else None, 'p90Latency': round(sorted(latencies)[int(0.9 * (len(latencies) - 1))], 2) if latencies else None, 'threatList': responses[:150] if cmds_mine else threats[:150], 'commandStream': bool(cmds_mine)},
             'fightList': my_fights,
             'kills': kill_rows[:300],
@@ -891,7 +910,7 @@ AXES = {
     'Growth': [('growth.populationAt.900', True, 1), ('growth.gatheredBy.900', True, 2), ('growth.weightedGatherPerMinute', True, 1), ('growth.ages.feudal', False, 1), ('growth.ages.castle', False, 1), ('growth.weightedArmyValue', True, 2)],
     'Efficiency': [('efficiency.floatShare', False, 2), ('efficiency.tcEmptyShare', False, 1), ('efficiency.idleVillagerShare', False, 1), ('efficiency.queuedShare', False, 1)],
     'Harassment': [('harassment.villagerKillValuePer10', True, 2), ('harassment.firstVillagerKill', False, 1), ('harassment.killsPerRaid', True, 1)],
-    'Pressure handling': [('pressure.growthLostPer1000Pressure', False, 2), ('pressure.incomeKeptUnderPressure', True, 1), ('pressure.villagersLostPer1000Pressure', False, 1), ('pressure.targetsAtOnceMean', True, 1)],
+    'Pressure handling': [('pressure.growthLostPer1000Pressure', False, 2), ('pressure.incomeKeptUnderPressure', True, 1), ('pressure.villagersLostPer1000Pressure', False, 1), ('pressure.targetsAtOnceMean', True, 1), ('pressure.peakAttackersPerMinute', True, 1)],
     'Multitasking': [('multitasking.meanConcurrentFronts', True, 2), ('multitasking.fightsMicroedShare', True, 1), ('multitasking.allFrontsMicroedShare', True, 1), ('multitasking.combatEfficiency', True, 1)],
     'Reaction': [('reaction.answeredPerMinute', True, 2), ('reaction.responseRate', True, 1), ('reaction.medianLatency', False, 1)],
 }
@@ -942,10 +961,22 @@ def percentile_rank(values, v, higher):
     return round(100 * (below + 0.5 * equal) / len(values), 1)
 
 
+def fill_results(match, entry):
+    """A player's result comes from the game summary; when the summary is missing (aoe4world refuses the summary page to
+    scripts for some games, 255400269 among them) the manifest's aoe4world game record carries the same win/loss per
+    profile (Sam, 2026-10-28: "this game is a loss, somehow that is not captured")."""
+    results = {p['player'].get('profile_id'): p['player'].get('result') for team in entry['game'].get('teams', []) for p in team if isinstance(p.get('player'), dict)}
+    for m in match['players']:
+        if (m.get('summary') or {}).get('result') is None and results.get(m.get('profileId')) in ('win', 'loss'):
+            m['summary'] = dict(m.get('summary') or {}, result=results[m['profileId']], resultSource='aoe4world game record')
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--only', type=int, nargs='*')
     ap.add_argument('--recorder', type=Path, default=DEFAULT_RECORDER)
+    ap.add_argument('--reuse', action='store_true', help='recompute pools and profiles from the saved per-match results instead of re-analysing recordings')
+    ap.add_argument('--min-pool-games', type=int, default=1, help='games a player needs to enter the percentile pool')
     args = ap.parse_args()
     recorder = args.recorder.resolve()
     manifest = json.loads((DATA / 'latest10-manifest.json').read_text(encoding='utf-8'))
@@ -953,9 +984,18 @@ def main():
     status_path = DATA / 'recording-status.json'
     recorded = json.loads(status_path.read_text(encoding='utf-8'))['matches'] if status_path.exists() else {}
     matches = []
+    saved = json.loads((DATA / 'skill-analysis.json').read_text(encoding='utf-8'))['matches'] if args.reuse and (DATA / 'skill-analysis.json').exists() else []
     for entry in manifest['unique_games']:
         gid = entry['game']['game_id']
         if args.only and gid not in args.only:
+            continue
+        if args.reuse:
+            found = next((m for m in saved if m['gameId'] == gid), None)
+            if found:
+                for m in found['players']:
+                    m.pop('radar', None)
+                fill_results(found, entry)
+                matches.append(found)
             continue
         if not (recorder / 'recordings' / f'aoe4_{gid}.rlog').exists() or not (DATA / f'replay-{gid}.rec').exists():
             continue
@@ -964,6 +1004,7 @@ def main():
             continue
         print('Analyzing', gid, flush=True)
         match = analyze_match(gid, recorder, tracked)
+        fill_results(match, entry)
         levels = {p['player']['profile_id']: (p['player'].get('rank_level') or rank_from_rating(p['player'].get('rating'))) for team in entry['game'].get('teams', []) for p in team if isinstance(p.get('player'), dict)}
         for m in match['players']:
             derive(m)
@@ -1006,6 +1047,8 @@ def main():
     # (Sam: percentiles per player, not per game). Profile radars use these; game pages keep per-game ranks.
     by_player = defaultdict(list)
     for match in matches:
+        if (match.get('durationSeconds') or 0) < MIN_GAME_SECONDS:  # games under 10:00 enter neither the pool nor a profile (Sam, 2026-10-28)
+            continue
         for m in match['players']:
             if m.get('profileId') is not None:
                 by_player[m['profileId']].append(m)
@@ -1015,7 +1058,8 @@ def main():
         vals = [v for v in (get_path(m, path) for m in rows) if v is not None]
         return sum(vals) / len(vals) if vals else None
 
-    player_means = {pid: {path: mean_of(rows, path) for path in paths} for pid, rows in by_player.items()}
+    MIN_POOL_GAMES = args.min_pool_games  # games a player needs to enter the percentile pool
+    player_means = {pid: {path: mean_of(rows, path) for path in paths} for pid, rows in by_player.items() if len(rows) >= MIN_POOL_GAMES}
     player_pool = {path: [pm[path] for pm in player_means.values() if pm[path] is not None] for path in paths}
 
     def player_radar(rows):

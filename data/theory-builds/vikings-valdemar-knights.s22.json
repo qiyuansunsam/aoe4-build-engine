@@ -1,0 +1,967 @@
+{
+ "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": -2174894,
+ "build": {
+  "id": "vikings-valdemar-knights",
+  "title": "Vikings Castle Jylland Knight aggression with the Valdemar Castle, two Town Centers, six Longhouses",
+  "summary": "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), the Valdemar Castle in Castle Age, then Jylland Knights from Castle Age. Key metrics: the time to 150 population and the time to 200 population, each with every Jylland Knight upgrade. The Feudal and Imperial landmarks, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
+  "civilization": "vikings",
+  "engine": "civ",
+  "patch": "17.0-preview",
+  "objective": {
+   "kind": "done"
+  },
+  "lineNames": "Jylland Knight",
+  "result": {
+   "done": 1894,
+   "at": 900,
+   "army": 47,
+   "armyValue": 9870,
+   "villagers": 65,
+   "population": 121,
+   "age": 3,
+   "ages": [
+    349,
+    633,
+    1176
+   ],
+   "firstUnit": 664,
+   "pop150": 996,
+   "pop200": 1177,
+   "pop200Age": "Imperial Age",
+   "castle": 633,
+   "imperial": 1176,
+   "longhouses": 8,
+   "attachments": {
+    "bee": 6,
+    "farm": 0,
+    "smithy": 1,
+    "loom": 1
+   },
+   "villagerCapacity": 90,
+   "sagas": [
+    "jofurr",
+    "falkr"
+   ],
+   "groveBerserkers": 0,
+   "shieldMaidens": 7,
+   "armyAt": {
+    "600": {
+     "villagers": 39,
+     "army": 0,
+     "byLine": {
+      "jylland-knight": 0
+     },
+     "pop": 42
+    },
+    "900": {
+     "villagers": 65,
+     "army": 47,
+     "byLine": {
+      "jylland-knight": 47
+     },
+     "pop": 121
+    },
+    "1200": {
+     "villagers": 80,
+     "army": 102,
+     "byLine": {
+      "jylland-knight": 102
+     },
+     "pop": 200
+    },
+    "1500": {
+     "villagers": 80,
+     "army": 104,
+     "byLine": {
+      "jylland-knight": 104
+     },
+     "pop": 200
+    }
+   }
+  },
+  "planId": "vikings-valdemar-knights",
+  "lines": [
+   "jylland-knight"
+  ],
+  "extraTCs": {
+   "2": 1,
+   "3": 0
+  },
+  "armyAge": 3,
+  "landmarks": {
+   "2": "konungr-hall",
+   "3": "valdemar-castle",
+   "4": "rikets-nyckel-castle"
+  },
+  "mech": {
+   "lh": {
+    "1": 5,
+    "2": 0,
+    "3": 1,
+    "4": 0
+   },
+   "attach": [
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "loom",
+    "smithy"
+   ],
+   "gullinnMinPop": 0,
+   "groves": 0,
+   "kongensLonghouses": 0,
+   "callMaidens": true,
+   "lhLead": 12,
+   "lhBuilders": 1,
+   "longhouseBondi": true,
+   "openWood": true,
+   "reserveWood": true,
+   "callMaidensAt": 14
+  },
+  "vilTarget": 125,
+  "lmBuilders": {
+   "2": 4,
+   "3": 3,
+   "4": 14
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 5,
+   "3": 6,
+   "4": 6
+  },
+  "maxProducers": 9,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1__vikings",
+    "upgrade_econ_villager_hunting_gear_1__vikings"
+   ],
+   "2": "all",
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": true,
+   "3": false
+  },
+  "blacksmiths": 0,
+  "pauseForAge": false,
+  "window": 5,
+  "woodFloor": 0.15,
+  "goldBias": 0.6
+ },
+ "ledger": {
+  "id": "vikings-valdemar-knights",
+  "evaluations": 4224,
+  "seconds": 131,
+  "seed": 22,
+  "objective": {
+   "kind": "done"
+  },
+  "best": {
+   "done": 1894,
+   "at": 900,
+   "army": 47,
+   "armyValue": 9870,
+   "villagers": 65,
+   "population": 121,
+   "age": 3,
+   "ages": [
+    349,
+    633,
+    1176
+   ],
+   "firstUnit": 664,
+   "pop150": 996,
+   "pop200": 1177,
+   "pop200Age": "Imperial Age",
+   "castle": 633,
+   "imperial": 1176,
+   "longhouses": 8,
+   "attachments": {
+    "bee": 6,
+    "farm": 0,
+    "smithy": 1,
+    "loom": 1
+   },
+   "villagerCapacity": 90,
+   "sagas": [
+    "jofurr",
+    "falkr"
+   ],
+   "groveBerserkers": 0,
+   "shieldMaidens": 7,
+   "armyAt": {
+    "600": {
+     "villagers": 39,
+     "army": 0,
+     "byLine": {
+      "jylland-knight": 0
+     },
+     "pop": 42
+    },
+    "900": {
+     "villagers": 65,
+     "army": 47,
+     "byLine": {
+      "jylland-knight": 47
+     },
+     "pop": 121
+    },
+    "1200": {
+     "villagers": 80,
+     "army": 102,
+     "byLine": {
+      "jylland-knight": 102
+     },
+     "pop": 200
+    },
+    "1500": {
+     "villagers": 80,
+     "army": 104,
+     "byLine": {
+      "jylland-knight": 104
+     },
+     "pop": 200
+    }
+   }
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "planId": "vikings-valdemar-knights",
+     "lines": [
+      "jylland-knight"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "armyAge": 3,
+     "landmarks": {
+      "2": "konungr-hall",
+      "3": "valdemar-castle",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "lh": {
+       "1": 5,
+       "2": 0,
+       "3": 1,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "loom",
+       "smithy"
+      ],
+      "gullinnMinPop": 0,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": true,
+      "lhLead": 12,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": true,
+      "callMaidensAt": 14
+     },
+     "vilTarget": 125,
+     "lmBuilders": {
+      "2": 4,
+      "3": 3,
+      "4": 14
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 1,
+      "2": 5,
+      "3": 6,
+      "4": 6
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings",
+       "upgrade_econ_villager_hunting_gear_1__vikings"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": false,
+     "window": 5,
+     "woodFloor": 0.15,
+     "goldBias": 0.6
+    },
+    "result": {
+     "done": 1894,
+     "at": 900,
+     "army": 47,
+     "armyValue": 9870,
+     "villagers": 65,
+     "population": 121,
+     "age": 3,
+     "ages": [
+      349,
+      633,
+      1176
+     ],
+     "firstUnit": 664,
+     "pop150": 996,
+     "pop200": 1177,
+     "pop200Age": "Imperial Age",
+     "castle": 633,
+     "imperial": 1176,
+     "longhouses": 8,
+     "attachments": {
+      "bee": 6,
+      "farm": 0,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 90,
+     "sagas": [
+      "jofurr",
+      "falkr"
+     ],
+     "groveBerserkers": 0,
+     "shieldMaidens": 7,
+     "armyAt": {
+      "600": {
+       "villagers": 39,
+       "army": 0,
+       "byLine": {
+        "jylland-knight": 0
+       },
+       "pop": 42
+      },
+      "900": {
+       "villagers": 65,
+       "army": 47,
+       "byLine": {
+        "jylland-knight": 47
+       },
+       "pop": 121
+      },
+      "1200": {
+       "villagers": 80,
+       "army": 102,
+       "byLine": {
+        "jylland-knight": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 80,
+       "army": 104,
+       "byLine": {
+        "jylland-knight": 104
+       },
+       "pop": 200
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-valdemar-knights",
+     "lines": [
+      "jylland-knight"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "armyAge": 3,
+     "landmarks": {
+      "2": "konungr-hall",
+      "3": "valdemar-castle",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "lh": {
+       "1": 5,
+       "2": 0,
+       "3": 1,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "loom",
+       "smithy"
+      ],
+      "gullinnMinPop": 0,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": true,
+      "lhLead": 12,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": true,
+      "callMaidensAt": 14
+     },
+     "vilTarget": 125,
+     "lmBuilders": {
+      "2": 4,
+      "3": 3,
+      "4": 14
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 5,
+      "3": 6,
+      "4": 6
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings",
+       "upgrade_econ_villager_hunting_gear_1__vikings"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": false,
+     "window": 5,
+     "woodFloor": 0.15,
+     "goldBias": 0.6
+    },
+    "result": {
+     "done": 1894,
+     "at": 900,
+     "army": 47,
+     "armyValue": 9870,
+     "villagers": 65,
+     "population": 121,
+     "age": 3,
+     "ages": [
+      349,
+      633,
+      1176
+     ],
+     "firstUnit": 664,
+     "pop150": 996,
+     "pop200": 1177,
+     "pop200Age": "Imperial Age",
+     "castle": 633,
+     "imperial": 1176,
+     "longhouses": 8,
+     "attachments": {
+      "bee": 6,
+      "farm": 0,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 90,
+     "sagas": [
+      "jofurr",
+      "falkr"
+     ],
+     "groveBerserkers": 0,
+     "shieldMaidens": 7,
+     "armyAt": {
+      "600": {
+       "villagers": 39,
+       "army": 0,
+       "byLine": {
+        "jylland-knight": 0
+       },
+       "pop": 42
+      },
+      "900": {
+       "villagers": 65,
+       "army": 47,
+       "byLine": {
+        "jylland-knight": 47
+       },
+       "pop": 121
+      },
+      "1200": {
+       "villagers": 80,
+       "army": 102,
+       "byLine": {
+        "jylland-knight": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 80,
+       "army": 104,
+       "byLine": {
+        "jylland-knight": 104
+       },
+       "pop": 200
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-valdemar-knights",
+     "lines": [
+      "jylland-knight"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "armyAge": 3,
+     "landmarks": {
+      "2": "konungr-hall",
+      "3": "valdemar-castle",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "lh": {
+       "1": 5,
+       "2": 0,
+       "3": 1,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "loom",
+       "smithy"
+      ],
+      "gullinnMinPop": 0,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": true,
+      "lhLead": 12,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": true,
+      "callMaidensAt": 14
+     },
+     "vilTarget": 125,
+     "lmBuilders": {
+      "2": 4,
+      "3": 3,
+      "4": 14
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 0,
+      "3": 6,
+      "4": 6
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings",
+       "upgrade_econ_villager_hunting_gear_1__vikings"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": false,
+     "window": 5,
+     "woodFloor": 0.15,
+     "goldBias": 0.6
+    },
+    "result": {
+     "done": 1894,
+     "at": 900,
+     "army": 47,
+     "armyValue": 9870,
+     "villagers": 65,
+     "population": 121,
+     "age": 3,
+     "ages": [
+      349,
+      633,
+      1176
+     ],
+     "firstUnit": 664,
+     "pop150": 996,
+     "pop200": 1177,
+     "pop200Age": "Imperial Age",
+     "castle": 633,
+     "imperial": 1176,
+     "longhouses": 8,
+     "attachments": {
+      "bee": 6,
+      "farm": 0,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 90,
+     "sagas": [
+      "jofurr",
+      "falkr"
+     ],
+     "groveBerserkers": 0,
+     "shieldMaidens": 7,
+     "armyAt": {
+      "600": {
+       "villagers": 39,
+       "army": 0,
+       "byLine": {
+        "jylland-knight": 0
+       },
+       "pop": 42
+      },
+      "900": {
+       "villagers": 65,
+       "army": 47,
+       "byLine": {
+        "jylland-knight": 47
+       },
+       "pop": 121
+      },
+      "1200": {
+       "villagers": 80,
+       "army": 102,
+       "byLine": {
+        "jylland-knight": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 80,
+       "army": 104,
+       "byLine": {
+        "jylland-knight": 104
+       },
+       "pop": 200
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-valdemar-knights",
+     "lines": [
+      "jylland-knight"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "armyAge": 3,
+     "landmarks": {
+      "2": "konungr-hall",
+      "3": "valdemar-castle",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "lh": {
+       "1": 5,
+       "2": 0,
+       "3": 1,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "loom",
+       "smithy"
+      ],
+      "gullinnMinPop": 0,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": true,
+      "lhLead": 12,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": true,
+      "callMaidensAt": 14
+     },
+     "vilTarget": 125,
+     "lmBuilders": {
+      "2": 4,
+      "3": 3,
+      "4": 14
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 1,
+      "3": 6,
+      "4": 6
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings",
+       "upgrade_econ_villager_hunting_gear_1__vikings"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": false,
+     "window": 5,
+     "woodFloor": 0.15,
+     "goldBias": 0.6
+    },
+    "result": {
+     "done": 1894,
+     "at": 900,
+     "army": 47,
+     "armyValue": 9870,
+     "villagers": 65,
+     "population": 121,
+     "age": 3,
+     "ages": [
+      349,
+      633,
+      1176
+     ],
+     "firstUnit": 664,
+     "pop150": 996,
+     "pop200": 1177,
+     "pop200Age": "Imperial Age",
+     "castle": 633,
+     "imperial": 1176,
+     "longhouses": 8,
+     "attachments": {
+      "bee": 6,
+      "farm": 0,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 90,
+     "sagas": [
+      "jofurr",
+      "falkr"
+     ],
+     "groveBerserkers": 0,
+     "shieldMaidens": 7,
+     "armyAt": {
+      "600": {
+       "villagers": 39,
+       "army": 0,
+       "byLine": {
+        "jylland-knight": 0
+       },
+       "pop": 42
+      },
+      "900": {
+       "villagers": 65,
+       "army": 47,
+       "byLine": {
+        "jylland-knight": 47
+       },
+       "pop": 121
+      },
+      "1200": {
+       "villagers": 80,
+       "army": 102,
+       "byLine": {
+        "jylland-knight": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 80,
+       "army": 104,
+       "byLine": {
+        "jylland-knight": 104
+       },
+       "pop": 200
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-valdemar-knights",
+     "lines": [
+      "jylland-knight"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "armyAge": 3,
+     "landmarks": {
+      "2": "konungr-hall",
+      "3": "valdemar-castle",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "lh": {
+       "1": 5,
+       "2": 0,
+       "3": 1,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "loom",
+       "smithy"
+      ],
+      "gullinnMinPop": 0,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": true,
+      "lhLead": 12,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": true,
+      "callMaidensAt": 14
+     },
+     "vilTarget": 125,
+     "lmBuilders": {
+      "2": 4,
+      "3": 3,
+      "4": 14
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 2,
+      "3": 6,
+      "4": 6
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings",
+       "upgrade_econ_villager_hunting_gear_1__vikings"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": false,
+     "window": 5,
+     "woodFloor": 0.15,
+     "goldBias": 0.6
+    },
+    "result": {
+     "done": 1894,
+     "at": 900,
+     "army": 47,
+     "armyValue": 9870,
+     "villagers": 65,
+     "population": 121,
+     "age": 3,
+     "ages": [
+      349,
+      633,
+      1176
+     ],
+     "firstUnit": 664,
+     "pop150": 996,
+     "pop200": 1177,
+     "pop200Age": "Imperial Age",
+     "castle": 633,
+     "imperial": 1176,
+     "longhouses": 8,
+     "attachments": {
+      "bee": 6,
+      "farm": 0,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 90,
+     "sagas": [
+      "jofurr",
+      "falkr"
+     ],
+     "groveBerserkers": 0,
+     "shieldMaidens": 7,
+     "armyAt": {
+      "600": {
+       "villagers": 39,
+       "army": 0,
+       "byLine": {
+        "jylland-knight": 0
+       },
+       "pop": 42
+      },
+      "900": {
+       "villagers": 65,
+       "army": 47,
+       "byLine": {
+        "jylland-knight": 47
+       },
+       "pop": 121
+      },
+      "1200": {
+       "villagers": 80,
+       "army": 102,
+       "byLine": {
+        "jylland-knight": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 80,
+       "army": 104,
+       "byLine": {
+        "jylland-knight": 104
+       },
+       "pop": 200
+      }
+     }
+    }
+   }
+  ]
+ }
+}
