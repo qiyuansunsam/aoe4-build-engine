@@ -1,0 +1,289 @@
+{
+  "scope": "Exploratory prototype; not a completed analytics product",
+  "snapshot_at": "2026-10-27T03:02:37.872146+00:00",
+  "latest_per_player": 10,
+  "unique_matches": 19,
+  "available_replays": 18,
+  "available_summaries": 17,
+  "players": {
+    "7195780": {
+      "name": "epsilon",
+      "requested_games": [
+        257307543,
+        257305215,
+        257303286,
+        257300487,
+        257209177,
+        257204293,
+        257203878,
+        257199347,
+        255410440,
+        255406532
+      ],
+      "analyzed_games": [
+        257307543,
+        257305215,
+        257303286,
+        257300487,
+        257209177,
+        257204293,
+        257203878,
+        257199347,
+        255410440,
+        255406532
+      ],
+      "radar_scores": null,
+      "enemy_villagers_killed": null
+    },
+    "1588970": {
+      "name": "inn",
+      "requested_games": [
+        257307543,
+        257305215,
+        257209177,
+        257204293,
+        257203878,
+        257199347,
+        256052058,
+        255410440,
+        255406532,
+        255400269
+      ],
+      "analyzed_games": [
+        257307543,
+        257305215,
+        257209177,
+        257204293,
+        257203878,
+        257199347,
+        255410440,
+        255406532
+      ],
+      "radar_scores": null,
+      "enemy_villagers_killed": null
+    },
+    "7999822": {
+      "name": "Zamia Slayer",
+      "requested_games": [
+        257209177,
+        257204293,
+        257203878,
+        257199347,
+        255410440,
+        255406532,
+        255400269,
+        255379155,
+        255376462,
+        255372778
+      ],
+      "analyzed_games": [
+        257209177,
+        257204293,
+        257203878,
+        257199347,
+        255410440,
+        255406532,
+        255379155,
+        255376462,
+        255372778
+      ],
+      "radar_scores": null,
+      "enemy_villagers_killed": null
+    },
+    "18518902": {
+      "name": "LTYSWLP",
+      "requested_games": [
+        255410440,
+        255406532,
+        255400269,
+        255396566,
+        255379155,
+        255376462,
+        255372778,
+        255369669,
+        255255018,
+        255252569
+      ],
+      "analyzed_games": [
+        255410440,
+        255406532,
+        255379155,
+        255376462,
+        255372778,
+        255396566,
+        255369669,
+        255255018,
+        255252569
+      ],
+      "radar_scores": null,
+      "enemy_villagers_killed": null
+    }
+  },
+  "upstream_sample_only": {
+    "dataset": "Upstream showcase, not your games",
+    "game_id": 245598603,
+    "source": "https://github.com/BigManJohn000/aoe4-replay-viewer",
+    "record_line_counts": {
+      "CAPTURE": 1,
+      "HDR": 1,
+      "PL": 2,
+      "HMH": 1,
+      "HM": 104,
+      "B": 497,
+      "P": 2102,
+      "J": 2102,
+      "N": 1091,
+      "V": 1553,
+      "PQ": 1765,
+      "IS": 1627,
+      "GN": 157,
+      "T": 4203,
+      "READY": 1,
+      "S": 8491,
+      "D": 2805,
+      "GS": 2048,
+      "H": 6951,
+      "X": 688,
+      "CS": 593,
+      "CW": 515,
+      "GA": 210,
+      "GX": 160,
+      "I": 6426,
+      "BI": 1036,
+      "C": 532,
+      "UQ": 137,
+      "K": 1055,
+      "UX": 134,
+      "U": 115,
+      "F": 3604,
+      "A": 1752,
+      "SP": 92,
+      "CX": 23,
+      "FL": 172
+    },
+    "max_heartbeat_gap_seconds": 0.5,
+    "hostile_damage_events_resolved": 15361,
+    "damage_events_with_unresolved_entity": 147,
+    "reported_hostile_damage": {
+      "1": 86576.00999999244,
+      "2": 117695.75000000188
+    },
+    "first_non_scout_military_in_enemy_half_seconds": {
+      "1": 331.75,
+      "2": 472.75
+    },
+    "military_visited_grid_cells": {
+      "2": 193,
+      "1": 196
+    },
+    "military_presence_cell_seconds": {
+      "2": 12911.5,
+      "1": 16400.5
+    },
+    "observed_tc_queue_empty_seconds": {
+      "1": 70.375,
+      "2": 93.375
+    },
+    "observed_tc_queue_known_seconds": {
+      "1": 2100.875,
+      "2": 2091.375
+    },
+    "confirmed_enemy_villagers_killed_by_player": {
+      "1": 69,
+      "2": 23
+    },
+    "villager_deaths_without_confirmed_hostile_finisher": 0,
+    "sample_hostile_hits": [
+      {
+        "time": 360.375,
+        "attacker": 1000006314,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 362.75,
+        "attacker": 1000006314,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 365.125,
+        "attacker": 1000006314,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 366.625,
+        "attacker": 1000006320,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 367.5,
+        "attacker": 1000006314,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 369.0,
+        "attacker": 1000006320,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 369.875,
+        "attacker": 1000006314,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 371.25,
+        "attacker": 1000006216,
+        "victim": 1000006230,
+        "damage": 8.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 371.375,
+        "attacker": 1000006320,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      },
+      {
+        "time": 372.25,
+        "attacker": 1000006314,
+        "victim": 1000006283,
+        "damage": 13.0,
+        "victim_is_villager": false,
+        "attacker_visible_in_last_sample_to_victim": true
+      }
+    ],
+    "caveats": [
+      "16x16 grid; presence is not control or vision",
+      "TC empty time is whole observed match, includes intentional stop; not the final requested TC metric",
+      "Reported damage is not effective damage or a skill rating",
+      "Entity types inferred from blueprint names; validate classifications before scoring",
+      "Visibility sampled, not proof of player attention; damage events are not automatically reaction opportunities"
+    ]
+  },
+  "local_cache": "C:/innomate/scratchpad/mcaoe4-exploration",
+  "full_own_game_telemetry_recorded": false,
+  "recurring_sync_active": false
+}

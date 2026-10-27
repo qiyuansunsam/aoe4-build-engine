@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {parseReplay} from './src/parser/replay.ts';
+const game = process.argv[2] ?? '255410440';
+if (!/^\d+$/.test(game)) throw new Error('Expected numeric game ID');
+const replay = parseReplay(readFileSync(`../replay-${game}.rec`));
+writeFileSync(`../replay-${game}.parsed.json`,JSON.stringify(replay));
+const commands=replay.records.filter(r=>r.record==='tick').flatMap(r=>r.blocks.flatMap(b=>b.commands));
+const counts={};for(const c of commands) counts[c.name]=(counts[c.name]??0)+1;
+const stats={summary:replay.summary,recordCount:replay.records.length,rawRecords:replay.records.filter(r=>r.record==='raw').map(r=>({type:r.type,error:r.error})),commandCount:commands.length,commandsWithRaw:commands.filter(c=>c.raw).length,counts};
+writeFileSync(`../replay-${game}.probe.json`,JSON.stringify(stats,null,2));
+console.log(JSON.stringify({game,commands:commands.length,rawRecords:stats.rawRecords.length,players:replay.summary.players.length}));
