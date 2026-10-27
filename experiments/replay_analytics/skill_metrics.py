@@ -242,6 +242,30 @@ def analyze_match(gid, recorder, tracked):
             return None
         return min(math.dist((x, z), b) for b in enemies) < math.dist((x, z), home)
 
+    # Sides (Sam, 2026-10-28: "4v4 is kinda like 2v2 and 3v3, half scaling when attacked by the middle"): each team splits into
+    # a left and a right half along the front, the line through both teams' base centroids; with an odd team size the middle
+    # player belongs to both halves (half each); a team of two or fewer is a single side. Both teams are ordered on the same
+    # axis, so a left half faces the other team's left half. off_side(a, b): 0 same side, 1 opposite side, 0.5 with a middle.
+    side_of, side_label = {}, {}
+    team_ids = sorted(set(teams.values()))
+    if len(team_ids) == 2 and all(o in bases for o in teams):
+        cent = {t: (statistics.mean(bases[o][0] for o in teams if teams[o] == t), statistics.mean(bases[o][1] for o in teams if teams[o] == t)) for t in team_ids}
+        fx, fz = cent[team_ids[1]][0] - cent[team_ids[0]][0], cent[team_ids[1]][1] - cent[team_ids[0]][1]
+        for t in team_ids:
+            members = sorted((o for o in teams if teams[o] == t), key=lambda o: bases[o][0] * -fz + bases[o][1] * fx)
+            n = len(members)
+            for k, o in enumerate(members):
+                if n <= 2:
+                    side_of[o], side_label[o] = (0.5, 0.5), 'one side'
+                elif n % 2 and k == n // 2:
+                    side_of[o], side_label[o] = (0.5, 0.5), 'middle'
+                else:
+                    side_of[o], side_label[o] = ((1.0, 0.0), 'left') if k < n / 2 else ((0.0, 1.0), 'right')
+
+    def off_side(a, b):
+        sa, sb = side_of.get(a), side_of.get(b)
+        return 0.5 * (abs(sa[0] - sb[0]) + abs(sa[1] - sb[1])) if sa and sb else None
+
     hostile_hits = []
     for h in hits:
         ao, vo = owner_at(h.attacker, h.t), owner_at(h.victim, h.t)
@@ -376,6 +400,11 @@ def analyze_match(gid, recorder, tracked):
         army_resources = fielded_military.get(idx, 0.0) + sum(c for _, c, _ in tech_spend.get(idx, []))
         damage_per_resource = round(military_damage / army_resources, 3) if army_resources >= 500 else None
         damage_taken = sum(d for _, _, _, d, _ in taken)
+        # Time-weighted damage per minute of game time from 6:00 (weight: double at 0:00 to 1 from 20:00; Sam, 2026-10-28).
+        pvp_min = max(1.0, (duration - PVP_FROM) / 60)
+        w_taken = sum(d * weight(t) for t, _, _, d, _ in taken) / pvp_min
+        w_dealt = sum(d * weight(t) for t, a, _, d, _ in dealt if a in military) / pvp_min
+        w_off_side = sum(d * weight(t) * (off_side(idx, ao) or 0.0) for t, _, _, d, ao in taken) / pvp_min if idx in side_of else None
         team_damage = sum(d for t, a, v, d, ao, vo in hostile_hits if teams.get(ao) == teams[idx])
 
         def command_point(c):
@@ -864,7 +893,7 @@ def analyze_match(gid, recorder, tracked):
                        'tradeRatio': round(killed['unitW'] / lost['unitW'], 3) if lost['unitW'] else None, 'netValueTraded': round(killed['unitW'] - lost['unitW']), 'enemyValueFielded': round(enemy_fielded), 'enemyCount': len(enemies), 'valueKilledShare': kill_share_per_minute, 'damagePerResource': damage_per_resource, 'armyResources': round(army_resources), 'militaryDamage': round(military_damage),
                        'fights': len(my_fights), 'fightsWithStake': len(with_stake), 'fightsWonPersonal': fights_won, 'teamFightsWon': team_fights_won,
                        'damagePerCombatMinute': round(damage_dealt / (combat.total() / 60), 1) if combat.total() > 30 else None, 'combatSeconds': round(combat.total(), 1), 'firstHostileHitDealt': round(first_dealt[0], 1) if first_dealt else None, 'damage1000At': damage_1000_at},
-            'aggression': {'firstMilitaryInEnemyHalf': first_enemy_half.get(idx), 'enemyHalfSeconds': sum(enemy_half_sec[idx]), 'enemyHalfShare': round(sum(enemy_half_sec[idx][pvp_sec0:]) / pvp_seconds, 3)},
+            'aggression': {'firstMilitaryInEnemyHalf': first_enemy_half.get(idx), 'enemyHalfSeconds': sum(enemy_half_sec[idx]), 'enemyHalfShare': round(sum(enemy_half_sec[idx][pvp_sec0:]) / pvp_seconds, 3), 'weightedDamageDealtPerMinute': round(w_dealt, 1)},
             'map': {'cellSecondsPerMinute': round(cell_seconds / pvp_minutes, 1), 'defenseCellsMean': round(sum(defense_cells[idx][pvp_sec0:]) / pvp_seconds, 2), 'defenseCellsPeak': max(defense_cells[idx]), 'cellsVisited': len(visited), 'cellsVisitedShare': round(len(visited) / (GRID * GRID), 3), 'contestedCellSecondsPerMinute': round(contested / pvp_minutes, 1)},
             'growth': {'villagersAt': vill_at, 'populationAt': pop_at_marks, 'villagersTrained': len(vill_built), 'lastVillagerAt': round(last_vill, 1) if last_vill else None, 'villagerSeries': villager_series[idx],
                        'gathered': round(gathered), 'gatheredWeighted': round(gathered_w), 'gatherPerMinute': round(gather_pm, 1) if gather_pm is not None else None, 'weightedGatherPerMinute': round(gathered_w / minutes, 1), 'gatheredBy': gathered_by,
@@ -879,7 +908,7 @@ def analyze_match(gid, recorder, tracked):
             'pressure': {'episodes': len(episodes), 'pressureReceived': round(pressure_total), 'growthLost': round(growth_lost_total), 'growthLostPer1000Pressure': round(growth_lost_total / pressure_total * 1000 / max(1.0, attackers_mean or 1.0), 1) if pressure_total >= 2000 else None, 'pressureMultiplier': round(max(1.0, attackers_mean or 1.0), 2),
                          'villagersLostUnderPressure': vill_lost_pressure, 'villagersLostPer1000Pressure': round(vill_lost_pressure / pressure_total * 1000 / max(1.0, attackers_mean or 1.0), 2) if pressure_total >= 2000 else None,
                          'incomeKeptUnderPressure': round(min(1.0, episode_income_total / expected_income_total), 3) if expected_income_total >= 500 else None,
-                         'attackersAtOnceMean': attackers_mean, 'attackersAtOnceMax': attackers_max, 'peakAttackersPerMinute': peak_attackers_minute, 'minutesAttackedBy2': attacked_by[2], 'minutesAttackedBy3': attacked_by[3], 'minutesAttackedBy4': attacked_by[4], 'targetsAtOnceMean': targets_mean, 'targetsAtOnceMax': targets_max, 'episodeList': episode_rows[:120]},
+                         'attackersAtOnceMean': attackers_mean, 'attackersAtOnceMax': attackers_max, 'peakAttackersPerMinute': peak_attackers_minute, 'minutesAttackedBy2': attacked_by[2], 'minutesAttackedBy3': attacked_by[3], 'minutesAttackedBy4': attacked_by[4], 'side': side_label.get(idx), 'weightedDamageTakenPerMinute': round(w_taken, 1), 'offSideDamageTakenPerMinute': round(w_off_side, 1) if w_off_side is not None else None, 'targetsAtOnceMean': targets_mean, 'targetsAtOnceMax': targets_max, 'episodeList': episode_rows[:120]},
             'harassment': {'enemyVillagersKilled': len(vill_kills), 'villagerKillValueWeighted': round(vk_weighted), 'villagerKillValuePer10': round(vk_weighted / (max(duration - PVP_FROM, 60.0) / 600)) if duration else None, 'firstVillagerKill': vill_kills[0]['t'] if vill_kills else None,
                            'villagerKillsBefore10': sum(1 for v in vill_kills if v['t'] <= 600), 'villagerKillsBefore15': sum(1 for v in vill_kills if v['t'] <= 900),
                            'raids': len(raids), 'killsPerRaid': round(len(vill_kills) / len(raids), 2) if raids else None, 'assistedVillagerKills': sum(1 for v in vill_kills if v['assists']), 'ownVillagersLost': len(own_vill_lost), 'villagerKills': vill_kills[:200], 'raidList': raids},
@@ -907,12 +936,12 @@ def analyze_match(gid, recorder, tracked):
 # Radar axes: (metric path, higher is better) — percentile rank within the pool of all player-matches.
 AXES = {
     'Fighting efficiency': [('combat.tradeRatio', True, 2), ('combat.netValueTraded', True, 1), ('combat.damagePerResource', True, 1), ('combat.fightsWonPersonalShare', True, 1)],
-    'Aggression': [('combat.valueKilledShare', True, 2), ('combat.teamDamageShare', True, 1), ('combat.damage1000At', False, 1), ('aggression.enemyHalfShare', True, 1)],
+    'Aggression': [('combat.valueKilledShare', True, 2), ('combat.teamDamageShare', True, 1), ('combat.damage1000At', False, 1), ('aggression.enemyHalfShare', True, 1), ('aggression.weightedDamageDealtPerMinute', True, 1)],
     'Map control': [('map.cellsVisitedShare', True, 2), ('map.defenseCellsMean', True, 1), ('map.contestedCellSecondsPerMinute', True, 1)],
     'Growth': [('growth.populationAt.900', True, 1), ('growth.gatheredBy.900', True, 2), ('growth.weightedGatherPerMinute', True, 1), ('growth.ages.feudal', False, 1), ('growth.ages.castle', False, 1), ('growth.weightedArmyValue', True, 2)],
     'Efficiency': [('efficiency.floatShare', False, 2), ('efficiency.tcEmptyShare', False, 1), ('efficiency.idleVillagerShare', False, 1), ('efficiency.queuedShare', False, 1)],
     'Harassment': [('harassment.villagerKillValuePer10', True, 2), ('harassment.firstVillagerKill', False, 1), ('harassment.killsPerRaid', True, 1)],
-    'Pressure handling': [('pressure.growthLostPer1000Pressure', False, 2), ('pressure.incomeKeptUnderPressure', True, 1), ('pressure.villagersLostPer1000Pressure', False, 1), ('pressure.targetsAtOnceMean', True, 1), ('pressure.minutesAttackedBy2', True, 1 / 3), ('pressure.minutesAttackedBy3', True, 1 / 3), ('pressure.minutesAttackedBy4', True, 1 / 3)],
+    'Pressure handling': [('pressure.growthLostPer1000Pressure', False, 2), ('pressure.incomeKeptUnderPressure', True, 1), ('pressure.villagersLostPer1000Pressure', False, 1), ('pressure.targetsAtOnceMean', True, 1), ('pressure.offSideDamageTakenPerMinute', True, 1), ('pressure.weightedDamageTakenPerMinute', True, 1)],
     'Multitasking': [('multitasking.meanConcurrentFronts', True, 2), ('multitasking.fightsMicroedShare', True, 1), ('multitasking.allFrontsMicroedShare', True, 1), ('multitasking.combatEfficiency', True, 1)],
     'Reaction': [('reaction.answeredPerMinute', True, 2), ('reaction.responseRate', True, 1), ('reaction.medianLatency', False, 1)],
 }
