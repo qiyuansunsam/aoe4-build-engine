@@ -119,8 +119,17 @@ function simulateCiv(user) {
   const ecoAt = age => { const want = P.ecoTechs[age]; const all = Object.keys(T).filter(k => T[k].cat === "economy" && T[k].age === age && !T[k].groupOf && T[k].effects && T[k].effects.length); return want === "all" ? all : (Array.isArray(want) ? want : []).filter(k => T[k]); };
   const producerKeys = [...new Set(lines.flatMap(l => l.producers))];
   const mainProducer = producerKeys.find(k => B[k]) || producerKeys[0];
+  // With a plan line mix (P.lineMix), producers are built in proportion to it: each line's share goes to its first buildable
+  // producer, and the next producer is the building furthest below its share (Sam, 2026-10-28: Tacksmen need Archery Ranges).
+  // Without a line mix every producer is the main one, as before.
+  const prodShare = {};
+  if (P.lineMix) for (const l of lines) { const b = l.producers.find(k => B[k]); if (b && (mix[l.key] || 0) > 0) prodShare[b] = (prodShare[b] || 0) + mix[l.key] * (l.tiers[l.tiers.length - 1].time || 20); }
+  { const tot = Object.values(prodShare).reduce((x, y) => x + y, 0); for (const k in prodShare) prodShare[k] /= tot || 1; } // unit share x train time: slower units need more buildings
+  const pickProducer = counts => { const keys = Object.keys(prodShare); if (keys.length < 2) return keys[0] || mainProducer; const total = keys.reduce((s, k) => s + (counts[k] || 0), 0) + 1;
+    return keys.sort((a, b) => ((counts[a] || 0) / total - prodShare[a]) - ((counts[b] || 0) / total - prodShare[b]))[0]; };
   const plan = [];
   const push = (...items) => plan.push(...items);
+  const planProducer = () => { const c = {}; for (const x of plan) if (x[0] === "b" && producerKeys.includes(x[1])) c[x[1]] = (c[x[1]] || 0) + 1; return pickProducer(c); };
   push(["b", role.berries, "berries"], ["b", role.wood, "wood"]);
   if (canGather("gold")) push(["b", role.gold, "gold"]);
   if (role.deer && P.map.deer[0] > 0) push(["b", role.deer, "deer"]);
@@ -128,11 +137,11 @@ function simulateCiv(user) {
   for (const k of ecoAt(1)) push(["t", k]);
   const civAt = age => Object.entries(P.civTechs || {}).filter(([k, a]) => T[k] && a === age).map(([k]) => ["t", k]);
   push(...civAt(1));
-  if ((P.producers[1] || 0) > 0 && P.armyAge <= 1) for (let i = 0; i < P.producers[1]; i++) push(["b", mainProducer]);
+  if ((P.producers[1] || 0) > 0 && P.armyAge <= 1) for (let i = 0; i < P.producers[1]; i++) push(["b", planProducer()]);
   push(["age", lm(2).key]);
   for (let age = 2; age <= 4; age++) {
     for (let i = 0; i < (P.extraTCs[age] || 0); i++) push(["b", "town-center"]);
-    if (age >= P.armyAge) { const have = plan.filter(x => x[0] === "b" && producerKeys.includes(x[1])).length; for (let i = have; i < (P.producers[age] || 0); i++) push(["b", mainProducer]); }
+    if (age >= P.armyAge) { const have = plan.filter(x => x[0] === "b" && producerKeys.includes(x[1])).length; for (let i = have; i < (P.producers[age] || 0); i++) push(["b", planProducer()]); }
     for (const k of spec.planExtras?.[age] || []) push(k);
     if (P.blacksmiths && spec.blacksmith && B[spec.blacksmith] && !plan.some(x => x[1] === spec.blacksmith) && lineTechs.some(k => T[k].building === spec.blacksmith && T[k].age <= age)) for (let i = 0; i < P.blacksmiths; i++) push(["b", spec.blacksmith]);
     for (const k of ecoAt(age)) push(["t", k]);
@@ -414,8 +423,9 @@ function simulateCiv(user) {
     tryPlan();
     cattleStep(); pitMineStep(); yoriStep(); kuraStep(); hook("step");
     // auto production: income outruns the producers
-    if (mainProducer && B[mainProducer] && S.age >= P.armyAge && S.prod.length >= (P.producers[S.age] || 0) && S.prod.length && S.prod.filter(p => !p.name.startsWith("landmark")).length < P.maxProducers && !S.jobs.some(j => j.name === mainProducer) && !plan.some(x => x[1] === mainProducer)
-      && S.prod.every(x => x.timer > 0) && lines.every(l => can(times(tierOf(l).cost, 3))) && S.res.wood >= B[mainProducer].cost.wood + 100 && pop() + 10 < POP_MAX) startBuild(mainProducer, 1, "resources banking while every producer is busy");
+    const autoProd = P.lineMix ? (() => { const c = {}; for (const q of S.prod) if (!q.name.startsWith("landmark")) c[q.name] = (c[q.name] || 0) + 1; for (const jb of S.jobs) if (producerKeys.includes(jb.name)) c[jb.name] = (c[jb.name] || 0) + 1; return pickProducer(c); })() : mainProducer;
+    if (autoProd && B[autoProd] && S.age >= P.armyAge && S.prod.length >= (P.producers[S.age] || 0) && S.prod.length && S.prod.filter(p => !p.name.startsWith("landmark")).length < P.maxProducers && !S.jobs.some(j => j.name === autoProd) && !plan.some(x => x[1] === autoProd)
+      && S.prod.every(x => x.timer > 0) && lines.every(l => can(times(tierOf(l).cost, 3))) && S.res.wood >= B[autoProd].cost.wood + 100 && pop() + 10 < POP_MAX) startBuild(autoProd, 1, "resources banking while every producer is busy");
     if (B.farm) { let need = S.farmNeed - S.jobs.filter(j => j.name === "farm").length; while (need-- > 0 && startBuild("farm", 1, "food workers need a completed farm")) { /* each plot reserves a builder */ } }
     if (M.pasture) { let need = S.pastureNeed - S.jobs.filter(j => j.name === "pasture").length; while (need-- > 0 && startBuild("pasture", 1, "food workers need pasture sheep")) { /* each pasture reserves a builder */ } }
     // villagers (Mongol Town Centers inside Ovoo influence can train two at once for stone)
@@ -435,7 +445,8 @@ function simulateCiv(user) {
       if (p.timer > 0) { p.timer = Math.max(0, p.timer - 1); if (!p.timer) { const l = lines.find(x => x.key === p.line), a = S.army[p.line]; a.training -= p.batch; a.count += p.batch; a.produced += p.batch; S.unitsProduced += p.batch; ev("done", "unit", tierOf(l).name, "training complete", "unit available", null, { producer: p.name, queue: p.idx, count: p.batch, pbgid: tierOf(l).pbgid, line: l.key }); if (a.produced <= p.batch) mark("first_" + l.key); mark("first_unit"); p.batch = 0; } continue; }
       if (busy[p.name] > 0) { busy[p.name]--; continue; }
       if (savingForAge()) continue;
-      const cands = p.lines.map(k => lines.find(l => l.key === k)).filter(producing);
+      // A line with no share in the plan's mix is never trained (e.g. Border Reivers that only come from a muster).
+      const cands = p.lines.map(k => lines.find(l => l.key === k)).filter(l => producing(l) && (mix[l.key] || 0) > 0);
       if (!cands.length) continue;
       const totalArmy = cands.reduce((s, l) => s + S.army[l.key].count + S.army[l.key].training, 0) + 1;
       const l = cands.sort((x, y) => ((S.army[x.key].count + S.army[x.key].training) / totalArmy - (mix[x.key] || 0)) - ((S.army[y.key].count + S.army[y.key].training) / totalArmy - (mix[y.key] || 0)))[0];

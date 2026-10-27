@@ -1,36 +1,37 @@
 {
  "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
- "score": -1712723,
+ "score": -1914749,
  "build": {
   "id": "vikings-feudal-melee",
   "title": "Vikings Feudal mixed melee aggression, two Town Centers, six Longhouses",
-  "summary": "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), then mixed melee infantry (at least two of Bondi, Berserker, Hirdman) from Feudal Age. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the infantry lines. Landmarks, the infantry mix, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
+  "summary": "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), then all three melee infantry lines from Feudal Age, balanced with Hirdman the largest share and Bondi and Berserker sharing the rest. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the infantry lines. The Hirdman share, landmarks, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
   "civilization": "vikings",
   "engine": "civ",
   "patch": "17.0-preview",
   "objective": {
    "kind": "done"
   },
-  "lineNames": "Bondi and Berserker",
+  "lineNames": "Bondi and Berserker and Hirdman",
   "result": {
-   "done": 1723,
+   "done": 1749,
    "at": 900,
-   "army": 111,
-   "armyValue": 11430,
-   "villagers": 64,
-   "population": 183,
+   "army": 88,
+   "armyValue": 10940,
+   "villagers": 62,
+   "population": 158,
    "age": 2,
    "ages": [
-    354,
-    1017,
-    1157
+    502,
+    1034,
+    1162
    ],
-   "firstUnit": 373,
-   "pop150": 777,
-   "pop200": 934,
-   "pop200Age": "Feudal Age",
-   "castle": 1017,
-   "imperial": 1157,
+   "firstUnit": 517,
+   "pop150": 878,
+   "pop200": 1035,
+   "mixGap": 0.002,
+   "pop200Age": "Castle Age",
+   "castle": 1034,
+   "imperial": 1162,
    "longhouses": 8,
    "attachments": {
     "bee": 6,
@@ -40,47 +41,50 @@
    },
    "villagerCapacity": 90,
    "sagas": [
-    "ulfr",
     "falkr",
-    "dreki",
+    "ulfr",
     "jofurr"
    ],
    "groveBerserkers": 0,
    "shieldMaidens": 0,
    "armyAt": {
     "600": {
-     "villagers": 40,
-     "army": 39,
+     "villagers": 34,
+     "army": 13,
      "byLine": {
-      "bondi": 28,
-      "berserker": 11
+      "bondi": 4,
+      "berserker": 4,
+      "hirdman": 5
      },
-     "pop": 87
+     "pop": 54
     },
     "900": {
-     "villagers": 64,
-     "army": 111,
+     "villagers": 62,
+     "army": 88,
      "byLine": {
-      "bondi": 89,
-      "berserker": 22
+      "bondi": 27,
+      "berserker": 26,
+      "hirdman": 35
      },
-     "pop": 183
+     "pop": 158
     },
     "1200": {
-     "villagers": 68,
-     "army": 131,
+     "villagers": 76,
+     "army": 123,
      "byLine": {
-      "bondi": 107,
-      "berserker": 24
+      "bondi": 37,
+      "berserker": 37,
+      "hirdman": 49
      },
      "pop": 200
     },
     "1500": {
-     "villagers": 68,
-     "army": 131,
+     "villagers": 76,
+     "army": 123,
      "byLine": {
-      "bondi": 107,
-      "berserker": 24
+      "bondi": 37,
+      "berserker": 37,
+      "hirdman": 49
      },
      "pop": 200
     }
@@ -89,8 +93,14 @@
   "planId": "vikings-feudal-melee",
   "lines": [
    "bondi",
-   "berserker"
+   "berserker",
+   "hirdman"
   ],
+  "lineMix": {
+   "hirdman": 0.4,
+   "bondi": 0.3,
+   "berserker": 0.3
+  },
   "extraTCs": {
    "2": 1,
    "3": 0
@@ -98,8 +108,8 @@
   "armyAge": 2,
   "mech": {
    "lh": {
-    "1": 2,
-    "2": 4,
+    "1": 6,
+    "2": 0,
     "3": 0,
     "4": 0
    },
@@ -118,76 +128,81 @@
    "kongensLonghouses": 0,
    "callMaidens": false,
    "lhLead": 99,
-   "lhBuilders": 1,
-   "longhouseBondi": true,
+   "lhBuilders": 2,
+   "longhouseBondi": false,
    "openWood": true,
    "reserveWood": true,
    "callMaidensAt": 8
   },
-  "vilTarget": 80,
+  "vilTarget": 90,
   "landmarks": {
    "2": "baugr-fort",
-   "3": "gullinn-temple",
+   "3": "valdemar-castle",
    "4": "kongens-dor-cathedral"
   },
   "lmBuilders": {
-   "2": 3,
-   "3": 12,
-   "4": 8
+   "2": 2,
+   "3": 6,
+   "4": 14
   },
   "tcBuilders": 10,
   "producers": {
    "1": 1,
-   "2": 0,
-   "3": 8,
-   "4": 3
+   "2": 4,
+   "3": 5,
+   "4": 2
   },
-  "maxProducers": 9,
+  "maxProducers": 6,
   "ecoTechs": {
    "1": [
     "upgrade_unit_town_center_wheelbarrow_1__vikings"
    ],
-   "2": "all",
-   "3": [],
+   "2": [
+    "upgrade_econ_resource_food_harvest_rate_2__vikings",
+    "upgrade_econ_resource_wood_harvest_rate_2__vikings",
+    "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+   ],
+   "3": "all",
    "4": []
   },
   "milTechAge": {
    "2": true,
    "3": true
   },
-  "blacksmiths": 0,
+  "blacksmiths": 1,
   "pauseForAge": false,
-  "window": 3,
-  "woodFloor": 0.25,
-  "goldBias": 0.6
+  "window": 4,
+  "woodFloor": 0.3,
+  "goldBias": 1.4
  },
  "ledger": {
   "id": "vikings-feudal-melee",
-  "evaluations": 4310,
-  "seconds": 157,
+  "evaluations": 4328,
+  "seconds": 125,
   "seed": 22,
   "objective": {
    "kind": "done"
   },
   "best": {
-   "done": 1723,
+   "done": 1749,
    "at": 900,
-   "army": 111,
-   "armyValue": 11430,
-   "villagers": 64,
-   "population": 183,
+   "army": 88,
+   "armyValue": 10940,
+   "villagers": 62,
+   "population": 158,
    "age": 2,
    "ages": [
-    354,
-    1017,
-    1157
+    502,
+    1034,
+    1162
    ],
-   "firstUnit": 373,
-   "pop150": 777,
-   "pop200": 934,
-   "pop200Age": "Feudal Age",
-   "castle": 1017,
-   "imperial": 1157,
+   "firstUnit": 517,
+   "pop150": 878,
+   "pop200": 1035,
+   "mixGap": 0.002,
+   "pop200Age": "Castle Age",
+   "castle": 1034,
+   "imperial": 1162,
    "longhouses": 8,
    "attachments": {
     "bee": 6,
@@ -197,47 +212,50 @@
    },
    "villagerCapacity": 90,
    "sagas": [
-    "ulfr",
     "falkr",
-    "dreki",
+    "ulfr",
     "jofurr"
    ],
    "groveBerserkers": 0,
    "shieldMaidens": 0,
    "armyAt": {
     "600": {
-     "villagers": 40,
-     "army": 39,
+     "villagers": 34,
+     "army": 13,
      "byLine": {
-      "bondi": 28,
-      "berserker": 11
+      "bondi": 4,
+      "berserker": 4,
+      "hirdman": 5
      },
-     "pop": 87
+     "pop": 54
     },
     "900": {
-     "villagers": 64,
-     "army": 111,
+     "villagers": 62,
+     "army": 88,
      "byLine": {
-      "bondi": 89,
-      "berserker": 22
+      "bondi": 27,
+      "berserker": 26,
+      "hirdman": 35
      },
-     "pop": 183
+     "pop": 158
     },
     "1200": {
-     "villagers": 68,
-     "army": 131,
+     "villagers": 76,
+     "army": 123,
      "byLine": {
-      "bondi": 107,
-      "berserker": 24
+      "bondi": 37,
+      "berserker": 37,
+      "hirdman": 49
      },
      "pop": 200
     },
     "1500": {
-     "villagers": 68,
-     "army": 131,
+     "villagers": 76,
+     "army": 123,
      "byLine": {
-      "bondi": 107,
-      "berserker": 24
+      "bondi": 37,
+      "berserker": 37,
+      "hirdman": 49
      },
      "pop": 200
     }
@@ -249,8 +267,14 @@
      "planId": "vikings-feudal-melee",
      "lines": [
       "bondi",
-      "berserker"
+      "berserker",
+      "hirdman"
      ],
+     "lineMix": {
+      "hirdman": 0.4,
+      "bondi": 0.3,
+      "berserker": 0.3
+     },
      "extraTCs": {
       "2": 1,
       "3": 0
@@ -258,8 +282,8 @@
      "armyAge": 2,
      "mech": {
       "lh": {
-       "1": 2,
-       "2": 4,
+       "1": 6,
+       "2": 0,
        "3": 0,
        "4": 0
       },
@@ -268,78 +292,83 @@
        "bee",
        "bee",
        "bee",
-       "smithy",
-       "loom",
        "bee",
-       "bee"
+       "bee",
+       "smithy",
+       "loom"
       ],
       "gullinnMinPop": 0,
       "groves": 0,
       "kongensLonghouses": 0,
-      "callMaidens": true,
+      "callMaidens": false,
       "lhLead": 99,
-      "lhBuilders": 1,
-      "longhouseBondi": true,
+      "lhBuilders": 2,
+      "longhouseBondi": false,
       "openWood": true,
       "reserveWood": true,
       "callMaidensAt": 8
      },
-     "vilTarget": 80,
+     "vilTarget": 90,
      "landmarks": {
       "2": "baugr-fort",
-      "3": "gullinn-temple",
+      "3": "valdemar-castle",
       "4": "kongens-dor-cathedral"
      },
      "lmBuilders": {
-      "2": 3,
-      "3": 12,
-      "4": 8
+      "2": 2,
+      "3": 6,
+      "4": 14
      },
      "tcBuilders": 10,
      "producers": {
       "1": 1,
-      "2": 0,
-      "3": 8,
-      "4": 3
+      "2": 4,
+      "3": 5,
+      "4": 2
      },
-     "maxProducers": 9,
+     "maxProducers": 6,
      "ecoTechs": {
       "1": [
        "upgrade_unit_town_center_wheelbarrow_1__vikings"
       ],
-      "2": "all",
-      "3": [],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__vikings",
+       "upgrade_econ_resource_wood_harvest_rate_2__vikings",
+       "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+      ],
+      "3": "all",
       "4": []
      },
      "milTechAge": {
       "2": true,
       "3": true
      },
-     "blacksmiths": 0,
+     "blacksmiths": 1,
      "pauseForAge": false,
-     "window": 3,
-     "woodFloor": 0.25,
-     "goldBias": 0.6
+     "window": 4,
+     "woodFloor": 0.3,
+     "goldBias": 1.4
     },
     "result": {
-     "done": 1723,
+     "done": 1749,
      "at": 900,
-     "army": 111,
-     "armyValue": 11430,
-     "villagers": 64,
-     "population": 183,
+     "army": 88,
+     "armyValue": 10940,
+     "villagers": 62,
+     "population": 158,
      "age": 2,
      "ages": [
-      354,
-      1017,
-      1157
+      502,
+      1034,
+      1162
      ],
-     "firstUnit": 373,
-     "pop150": 777,
-     "pop200": 934,
-     "pop200Age": "Feudal Age",
-     "castle": 1017,
-     "imperial": 1157,
+     "firstUnit": 517,
+     "pop150": 878,
+     "pop200": 1035,
+     "mixGap": 0.002,
+     "pop200Age": "Castle Age",
+     "castle": 1034,
+     "imperial": 1162,
      "longhouses": 8,
      "attachments": {
       "bee": 6,
@@ -349,47 +378,50 @@
      },
      "villagerCapacity": 90,
      "sagas": [
-      "ulfr",
       "falkr",
-      "dreki",
+      "ulfr",
       "jofurr"
      ],
      "groveBerserkers": 0,
      "shieldMaidens": 0,
      "armyAt": {
       "600": {
-       "villagers": 40,
-       "army": 39,
+       "villagers": 34,
+       "army": 13,
        "byLine": {
-        "bondi": 28,
-        "berserker": 11
+        "bondi": 4,
+        "berserker": 4,
+        "hirdman": 5
        },
-       "pop": 87
+       "pop": 54
       },
       "900": {
-       "villagers": 64,
-       "army": 111,
+       "villagers": 62,
+       "army": 88,
        "byLine": {
-        "bondi": 89,
-        "berserker": 22
+        "bondi": 27,
+        "berserker": 26,
+        "hirdman": 35
        },
-       "pop": 183
+       "pop": 158
       },
       "1200": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       },
       "1500": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       }
@@ -401,8 +433,14 @@
      "planId": "vikings-feudal-melee",
      "lines": [
       "bondi",
-      "berserker"
+      "berserker",
+      "hirdman"
      ],
+     "lineMix": {
+      "hirdman": 0.4,
+      "bondi": 0.3,
+      "berserker": 0.3
+     },
      "extraTCs": {
       "2": 1,
       "3": 0
@@ -410,8 +448,8 @@
      "armyAge": 2,
      "mech": {
       "lh": {
-       "1": 2,
-       "2": 4,
+       "1": 6,
+       "2": 0,
        "3": 0,
        "4": 0
       },
@@ -420,78 +458,83 @@
        "bee",
        "bee",
        "bee",
-       "smithy",
-       "loom",
        "bee",
-       "bee"
+       "bee",
+       "loom",
+       "smithy"
       ],
       "gullinnMinPop": 0,
       "groves": 0,
       "kongensLonghouses": 0,
       "callMaidens": false,
       "lhLead": 99,
-      "lhBuilders": 1,
-      "longhouseBondi": true,
+      "lhBuilders": 2,
+      "longhouseBondi": false,
       "openWood": true,
       "reserveWood": true,
-      "callMaidensAt": 4
+      "callMaidensAt": 8
      },
-     "vilTarget": 80,
+     "vilTarget": 90,
      "landmarks": {
       "2": "baugr-fort",
-      "3": "gullinn-temple",
+      "3": "valdemar-castle",
       "4": "kongens-dor-cathedral"
      },
      "lmBuilders": {
-      "2": 3,
-      "3": 12,
-      "4": 8
+      "2": 2,
+      "3": 6,
+      "4": 14
      },
      "tcBuilders": 10,
      "producers": {
       "1": 1,
-      "2": 0,
-      "3": 8,
-      "4": 3
+      "2": 4,
+      "3": 5,
+      "4": 2
      },
-     "maxProducers": 9,
+     "maxProducers": 6,
      "ecoTechs": {
       "1": [
        "upgrade_unit_town_center_wheelbarrow_1__vikings"
       ],
-      "2": "all",
-      "3": [],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__vikings",
+       "upgrade_econ_resource_wood_harvest_rate_2__vikings",
+       "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+      ],
+      "3": "all",
       "4": []
      },
      "milTechAge": {
       "2": true,
       "3": true
      },
-     "blacksmiths": 0,
+     "blacksmiths": 1,
      "pauseForAge": false,
-     "window": 3,
-     "woodFloor": 0.25,
-     "goldBias": 0.6
+     "window": 4,
+     "woodFloor": 0.3,
+     "goldBias": 1.4
     },
     "result": {
-     "done": 1723,
+     "done": 1749,
      "at": 900,
-     "army": 111,
-     "armyValue": 11430,
-     "villagers": 64,
-     "population": 183,
+     "army": 88,
+     "armyValue": 10940,
+     "villagers": 62,
+     "population": 158,
      "age": 2,
      "ages": [
-      354,
-      1017,
-      1157
+      502,
+      1034,
+      1162
      ],
-     "firstUnit": 373,
-     "pop150": 777,
-     "pop200": 934,
-     "pop200Age": "Feudal Age",
-     "castle": 1017,
-     "imperial": 1157,
+     "firstUnit": 517,
+     "pop150": 878,
+     "pop200": 1035,
+     "mixGap": 0.002,
+     "pop200Age": "Castle Age",
+     "castle": 1034,
+     "imperial": 1162,
      "longhouses": 8,
      "attachments": {
       "bee": 6,
@@ -501,47 +544,50 @@
      },
      "villagerCapacity": 90,
      "sagas": [
-      "ulfr",
       "falkr",
-      "dreki",
+      "ulfr",
       "jofurr"
      ],
      "groveBerserkers": 0,
      "shieldMaidens": 0,
      "armyAt": {
       "600": {
-       "villagers": 40,
-       "army": 39,
+       "villagers": 34,
+       "army": 13,
        "byLine": {
-        "bondi": 28,
-        "berserker": 11
+        "bondi": 4,
+        "berserker": 4,
+        "hirdman": 5
        },
-       "pop": 87
+       "pop": 54
       },
       "900": {
-       "villagers": 64,
-       "army": 111,
+       "villagers": 62,
+       "army": 88,
        "byLine": {
-        "bondi": 89,
-        "berserker": 22
+        "bondi": 27,
+        "berserker": 26,
+        "hirdman": 35
        },
-       "pop": 183
+       "pop": 158
       },
       "1200": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       },
       "1500": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       }
@@ -553,8 +599,14 @@
      "planId": "vikings-feudal-melee",
      "lines": [
       "bondi",
-      "berserker"
+      "berserker",
+      "hirdman"
      ],
+     "lineMix": {
+      "hirdman": 0.4,
+      "bondi": 0.3,
+      "berserker": 0.3
+     },
      "extraTCs": {
       "2": 1,
       "3": 0
@@ -562,18 +614,18 @@
      "armyAge": 2,
      "mech": {
       "lh": {
-       "1": 2,
-       "2": 4,
+       "1": 6,
+       "2": 0,
        "3": 0,
        "4": 0
       },
       "attach": [
        "bee",
        "bee",
-       "bee",
-       "bee",
        "smithy",
        "loom",
+       "bee",
+       "bee",
        "bee",
        "bee"
       ],
@@ -582,68 +634,73 @@
       "kongensLonghouses": 0,
       "callMaidens": false,
       "lhLead": 99,
-      "lhBuilders": 1,
-      "longhouseBondi": true,
+      "lhBuilders": 2,
+      "longhouseBondi": false,
       "openWood": true,
       "reserveWood": true,
-      "callMaidensAt": 6
+      "callMaidensAt": 8
      },
-     "vilTarget": 80,
+     "vilTarget": 90,
      "landmarks": {
       "2": "baugr-fort",
-      "3": "gullinn-temple",
+      "3": "valdemar-castle",
       "4": "kongens-dor-cathedral"
      },
      "lmBuilders": {
-      "2": 3,
-      "3": 12,
-      "4": 8
+      "2": 2,
+      "3": 6,
+      "4": 14
      },
      "tcBuilders": 10,
      "producers": {
       "1": 1,
-      "2": 0,
-      "3": 8,
-      "4": 3
+      "2": 4,
+      "3": 5,
+      "4": 2
      },
-     "maxProducers": 9,
+     "maxProducers": 6,
      "ecoTechs": {
       "1": [
        "upgrade_unit_town_center_wheelbarrow_1__vikings"
       ],
-      "2": "all",
-      "3": [],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__vikings",
+       "upgrade_econ_resource_wood_harvest_rate_2__vikings",
+       "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+      ],
+      "3": "all",
       "4": []
      },
      "milTechAge": {
       "2": true,
       "3": true
      },
-     "blacksmiths": 0,
+     "blacksmiths": 1,
      "pauseForAge": false,
-     "window": 3,
-     "woodFloor": 0.25,
-     "goldBias": 0.6
+     "window": 4,
+     "woodFloor": 0.3,
+     "goldBias": 1.4
     },
     "result": {
-     "done": 1723,
+     "done": 1749,
      "at": 900,
-     "army": 111,
-     "armyValue": 11430,
-     "villagers": 64,
-     "population": 183,
+     "army": 88,
+     "armyValue": 10940,
+     "villagers": 62,
+     "population": 158,
      "age": 2,
      "ages": [
-      354,
-      1017,
-      1157
+      502,
+      1034,
+      1162
      ],
-     "firstUnit": 373,
-     "pop150": 777,
-     "pop200": 934,
-     "pop200Age": "Feudal Age",
-     "castle": 1017,
-     "imperial": 1157,
+     "firstUnit": 517,
+     "pop150": 878,
+     "pop200": 1035,
+     "mixGap": 0.002,
+     "pop200Age": "Castle Age",
+     "castle": 1034,
+     "imperial": 1162,
      "longhouses": 8,
      "attachments": {
       "bee": 6,
@@ -653,47 +710,50 @@
      },
      "villagerCapacity": 90,
      "sagas": [
-      "ulfr",
       "falkr",
-      "dreki",
+      "ulfr",
       "jofurr"
      ],
      "groveBerserkers": 0,
      "shieldMaidens": 0,
      "armyAt": {
       "600": {
-       "villagers": 40,
-       "army": 39,
+       "villagers": 34,
+       "army": 13,
        "byLine": {
-        "bondi": 28,
-        "berserker": 11
+        "bondi": 4,
+        "berserker": 4,
+        "hirdman": 5
        },
-       "pop": 87
+       "pop": 54
       },
       "900": {
-       "villagers": 64,
-       "army": 111,
+       "villagers": 62,
+       "army": 88,
        "byLine": {
-        "bondi": 89,
-        "berserker": 22
+        "bondi": 27,
+        "berserker": 26,
+        "hirdman": 35
        },
-       "pop": 183
+       "pop": 158
       },
       "1200": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       },
       "1500": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       }
@@ -705,8 +765,14 @@
      "planId": "vikings-feudal-melee",
      "lines": [
       "bondi",
-      "berserker"
+      "berserker",
+      "hirdman"
      ],
+     "lineMix": {
+      "hirdman": 0.4,
+      "bondi": 0.3,
+      "berserker": 0.3
+     },
      "extraTCs": {
       "2": 1,
       "3": 0
@@ -714,18 +780,18 @@
      "armyAge": 2,
      "mech": {
       "lh": {
-       "1": 2,
-       "2": 4,
+       "1": 6,
+       "2": 0,
        "3": 0,
        "4": 0
       },
       "attach": [
-       "bee",
-       "bee",
-       "bee",
-       "bee",
        "smithy",
        "loom",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
        "bee",
        "bee"
       ],
@@ -734,68 +800,73 @@
       "kongensLonghouses": 0,
       "callMaidens": false,
       "lhLead": 99,
-      "lhBuilders": 1,
-      "longhouseBondi": true,
+      "lhBuilders": 2,
+      "longhouseBondi": false,
       "openWood": true,
       "reserveWood": true,
-      "callMaidensAt": 10
+      "callMaidensAt": 8
      },
-     "vilTarget": 80,
+     "vilTarget": 90,
      "landmarks": {
       "2": "baugr-fort",
-      "3": "gullinn-temple",
+      "3": "valdemar-castle",
       "4": "kongens-dor-cathedral"
      },
      "lmBuilders": {
-      "2": 3,
-      "3": 12,
-      "4": 8
+      "2": 2,
+      "3": 6,
+      "4": 14
      },
      "tcBuilders": 10,
      "producers": {
       "1": 1,
-      "2": 0,
-      "3": 8,
-      "4": 3
+      "2": 4,
+      "3": 5,
+      "4": 2
      },
-     "maxProducers": 9,
+     "maxProducers": 6,
      "ecoTechs": {
       "1": [
        "upgrade_unit_town_center_wheelbarrow_1__vikings"
       ],
-      "2": "all",
-      "3": [],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__vikings",
+       "upgrade_econ_resource_wood_harvest_rate_2__vikings",
+       "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+      ],
+      "3": "all",
       "4": []
      },
      "milTechAge": {
       "2": true,
       "3": true
      },
-     "blacksmiths": 0,
+     "blacksmiths": 1,
      "pauseForAge": false,
-     "window": 3,
-     "woodFloor": 0.25,
-     "goldBias": 0.6
+     "window": 4,
+     "woodFloor": 0.3,
+     "goldBias": 1.4
     },
     "result": {
-     "done": 1723,
+     "done": 1749,
      "at": 900,
-     "army": 111,
-     "armyValue": 11430,
-     "villagers": 64,
-     "population": 183,
+     "army": 88,
+     "armyValue": 10940,
+     "villagers": 62,
+     "population": 158,
      "age": 2,
      "ages": [
-      354,
-      1017,
-      1157
+      502,
+      1034,
+      1162
      ],
-     "firstUnit": 373,
-     "pop150": 777,
-     "pop200": 934,
-     "pop200Age": "Feudal Age",
-     "castle": 1017,
-     "imperial": 1157,
+     "firstUnit": 517,
+     "pop150": 878,
+     "pop200": 1035,
+     "mixGap": 0.002,
+     "pop200Age": "Castle Age",
+     "castle": 1034,
+     "imperial": 1162,
      "longhouses": 8,
      "attachments": {
       "bee": 6,
@@ -805,47 +876,50 @@
      },
      "villagerCapacity": 90,
      "sagas": [
-      "ulfr",
       "falkr",
-      "dreki",
+      "ulfr",
       "jofurr"
      ],
      "groveBerserkers": 0,
      "shieldMaidens": 0,
      "armyAt": {
       "600": {
-       "villagers": 40,
-       "army": 39,
+       "villagers": 34,
+       "army": 13,
        "byLine": {
-        "bondi": 28,
-        "berserker": 11
+        "bondi": 4,
+        "berserker": 4,
+        "hirdman": 5
        },
-       "pop": 87
+       "pop": 54
       },
       "900": {
-       "villagers": 64,
-       "army": 111,
+       "villagers": 62,
+       "army": 88,
        "byLine": {
-        "bondi": 89,
-        "berserker": 22
+        "bondi": 27,
+        "berserker": 26,
+        "hirdman": 35
        },
-       "pop": 183
+       "pop": 158
       },
       "1200": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       },
       "1500": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       }
@@ -857,8 +931,14 @@
      "planId": "vikings-feudal-melee",
      "lines": [
       "bondi",
-      "berserker"
+      "berserker",
+      "hirdman"
      ],
+     "lineMix": {
+      "hirdman": 0.4,
+      "bondi": 0.3,
+      "berserker": 0.3
+     },
      "extraTCs": {
       "2": 1,
       "3": 0
@@ -866,8 +946,8 @@
      "armyAge": 2,
      "mech": {
       "lh": {
-       "1": 2,
-       "2": 4,
+       "1": 6,
+       "2": 0,
        "3": 0,
        "4": 0
       },
@@ -876,78 +956,83 @@
        "bee",
        "bee",
        "bee",
-       "smithy",
-       "loom",
        "bee",
-       "bee"
+       "smithy",
+       "bee",
+       "loom"
       ],
       "gullinnMinPop": 0,
       "groves": 0,
       "kongensLonghouses": 0,
       "callMaidens": false,
       "lhLead": 99,
-      "lhBuilders": 1,
-      "longhouseBondi": true,
+      "lhBuilders": 2,
+      "longhouseBondi": false,
       "openWood": true,
       "reserveWood": true,
-      "callMaidensAt": 12
+      "callMaidensAt": 8
      },
-     "vilTarget": 80,
+     "vilTarget": 90,
      "landmarks": {
       "2": "baugr-fort",
-      "3": "gullinn-temple",
+      "3": "valdemar-castle",
       "4": "kongens-dor-cathedral"
      },
      "lmBuilders": {
-      "2": 3,
-      "3": 12,
-      "4": 8
+      "2": 2,
+      "3": 6,
+      "4": 14
      },
      "tcBuilders": 10,
      "producers": {
       "1": 1,
-      "2": 0,
-      "3": 8,
-      "4": 3
+      "2": 4,
+      "3": 5,
+      "4": 2
      },
-     "maxProducers": 9,
+     "maxProducers": 6,
      "ecoTechs": {
       "1": [
        "upgrade_unit_town_center_wheelbarrow_1__vikings"
       ],
-      "2": "all",
-      "3": [],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__vikings",
+       "upgrade_econ_resource_wood_harvest_rate_2__vikings",
+       "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+      ],
+      "3": "all",
       "4": []
      },
      "milTechAge": {
       "2": true,
       "3": true
      },
-     "blacksmiths": 0,
+     "blacksmiths": 1,
      "pauseForAge": false,
-     "window": 3,
-     "woodFloor": 0.25,
-     "goldBias": 0.6
+     "window": 4,
+     "woodFloor": 0.3,
+     "goldBias": 1.4
     },
     "result": {
-     "done": 1723,
+     "done": 1749,
      "at": 900,
-     "army": 111,
-     "armyValue": 11430,
-     "villagers": 64,
-     "population": 183,
+     "army": 88,
+     "armyValue": 10940,
+     "villagers": 62,
+     "population": 158,
      "age": 2,
      "ages": [
-      354,
-      1017,
-      1157
+      502,
+      1034,
+      1162
      ],
-     "firstUnit": 373,
-     "pop150": 777,
-     "pop200": 934,
-     "pop200Age": "Feudal Age",
-     "castle": 1017,
-     "imperial": 1157,
+     "firstUnit": 517,
+     "pop150": 878,
+     "pop200": 1035,
+     "mixGap": 0.002,
+     "pop200Age": "Castle Age",
+     "castle": 1034,
+     "imperial": 1162,
      "longhouses": 8,
      "attachments": {
       "bee": 6,
@@ -957,47 +1042,50 @@
      },
      "villagerCapacity": 90,
      "sagas": [
-      "ulfr",
       "falkr",
-      "dreki",
+      "ulfr",
       "jofurr"
      ],
      "groveBerserkers": 0,
      "shieldMaidens": 0,
      "armyAt": {
       "600": {
-       "villagers": 40,
-       "army": 39,
+       "villagers": 34,
+       "army": 13,
        "byLine": {
-        "bondi": 28,
-        "berserker": 11
+        "bondi": 4,
+        "berserker": 4,
+        "hirdman": 5
        },
-       "pop": 87
+       "pop": 54
       },
       "900": {
-       "villagers": 64,
-       "army": 111,
+       "villagers": 62,
+       "army": 88,
        "byLine": {
-        "bondi": 89,
-        "berserker": 22
+        "bondi": 27,
+        "berserker": 26,
+        "hirdman": 35
        },
-       "pop": 183
+       "pop": 158
       },
       "1200": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       },
       "1500": {
-       "villagers": 68,
-       "army": 131,
+       "villagers": 76,
+       "army": 123,
        "byLine": {
-        "bondi": 107,
-        "berserker": 24
+        "bondi": 37,
+        "berserker": 37,
+        "hirdman": 49
        },
        "pop": 200
       }

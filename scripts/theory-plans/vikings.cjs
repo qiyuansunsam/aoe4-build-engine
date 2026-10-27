@@ -15,16 +15,24 @@ const ATTACH = [[...B6, "smithy", "loom"], [...B6, "loom", "smithy"], ["bee", "b
 const sixBees = p => { const a = p.mech?.attach || []; return a.filter(k => k === "bee").length === 6 && a.includes("smithy") && a.includes("loom") && a.length === 8; };
 const MELEE = ["bondi", "berserker", "hirdman"];
 // Mixed melee: at least two of the three Feudal-available melee lines.
-const MELEE_SETS = [["bondi", "berserker"], ["bondi", "hirdman"], ["berserker", "hirdman"], ["bondi", "berserker", "hirdman"]];
+// Sam, 2026-10-28: properly mixed melee, balanced but skewed toward the Man-at-Arms line (Hirdman): all three lines, Hirdman
+// the largest share, Bondi and Berserker sharing the rest equally.
+const MELEE_MIX = [0.4, 0.45, 0.5, 0.55].map(h => ({ hirdman: h, bondi: +((1 - h) / 2).toFixed(4), berserker: +((1 - h) / 2).toFixed(4) }));
+const hirdmanSkewed = mix => (mix?.hirdman || 0) > (mix?.bondi || 0) && (mix?.hirdman || 0) > (mix?.berserker || 0);
 const AGE = { 2: "Feudal Age", 3: "Castle Age", 4: "Imperial Age" };
 const at = (run, t) => run.minutes.filter(m => m.t <= t).at(-1) || run.minutes[0];
 const armyAt = (run, ts) => Object.fromEntries(ts.map(t => { const m = at(run, t); return [t, { villagers: m.vil, army: m.army, byLine: m.armyByLine, pop: m.pop }]; }));
 
 // Key metrics: the time to 150 population and the time to 200 population; both must be reached with every line upgrade (done).
 const POP = (run, n) => run.milestones["pop" + n] ?? null;
-const keyRank = run => { const a = POP(run, 150) ?? 1e5, b = POP(run, 200) ?? 1e5, done = run.done ?? 1e5; return -(a + b) * 1e3 - done; };
+// Realized army against the plan's mix: half the summed share differences over the trained lines at the end (0 = exact mix).
+// A plan more than 10% off its mix ranks below every plan that holds it (Sam, 2026-10-28: armies properly mixed).
+const mixGap = run => { const m = run.minutes.at(-1)?.armyByLine || {}, mix = run.params?.lineMix || {}, ks = Object.keys(mix).filter(k => mix[k] > 0);
+  if (!ks.length) return 0;
+  const tot = ks.reduce((s, k) => s + (m[k] || 0), 0); return tot ? ks.reduce((g, k) => g + Math.abs((m[k] || 0) / tot - mix[k]), 0) / 2 : 1; };
+const keyRank = run => { const a = POP(run, 150) ?? 1e5, b = POP(run, 200) ?? 1e5, done = run.done ?? 1e5; return -(a + b) * 1e3 - done - Math.max(0, mixGap(run) - 0.1) * 1e9; };
 const keyMetric = run => -((POP(run, 150) ?? 1e5) + (POP(run, 200) ?? 1e5));
-const keyDescribe = run => { const v = run.vikings || {}; return { pop150: POP(run, 150), pop200: POP(run, 200), pop200Age: v.pop200Age ? AGE[v.pop200Age] : null,
+const keyDescribe = run => { const v = run.vikings || {}; return { mixGap: +mixGap(run).toFixed(3), pop150: POP(run, 150), pop200: POP(run, 200), pop200Age: v.pop200Age ? AGE[v.pop200Age] : null,
   castle: run.milestones.age3 ?? null, imperial: run.milestones.age4 ?? null, firstUnit: run.milestones.first_unit ?? null,
   longhouses: v.longhouses, attachments: v.attachments, villagerCapacity: v.villagerCapacity, sagas: Object.keys(v.sagas || {}), groveBerserkers: v.groveBerserkers, shieldMaidens: v.shieldMaidens,
   armyAt: armyAt(run, [600, 900, 1200, 1500]) }; };
@@ -38,12 +46,12 @@ module.exports = lib => {
   return [
     { id: "vikings-feudal-melee", civilization: "vikings",
       title: "Vikings Feudal mixed melee aggression, two Town Centers, six Longhouses",
-      summary: "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), then mixed melee infantry (at least two of Bondi, Berserker, Hirdman) from Feudal Age. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the infantry lines. Landmarks, the infantry mix, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
-      base: { lines: ["berserker", "hirdman"], extraTCs: { 2: 1, 3: 0 }, armyAge: 2, mech: { lh: { 1: 2, 2: 3, 3: 1, 4: 0 }, attach: ATTACH[0], gullinnMinPop: 0, groves: 0, kongensLonghouses: 0, callMaidens: false } },
+      summary: "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), then all three melee infantry lines from Feudal Age, balanced with Hirdman the largest share and Bondi and Berserker sharing the rest. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the infantry lines. The Hirdman share, landmarks, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
+      base: { lines: MELEE, lineMix: MELEE_MIX[1], extraTCs: { 2: 1, 3: 0 }, armyAge: 2, mech: { lh: { 1: 2, 2: 3, 3: 1, 4: 0 }, attach: ATTACH[0], gullinnMinPop: 0, groves: 0, kongensLonghouses: 0, callMaidens: false } },
       objective: { kind: "done" },
-      constraint: p => sixLonghouses(p) && p.armyAge === 2 && (p.lines || []).length >= 2 && (p.lines || []).every(l => MELEE.includes(l)),
+      constraint: p => sixLonghouses(p) && p.armyAge === 2 && (p.lines || []).length === 3 && MELEE.every(l => (p.lines || []).includes(l)) && hirdmanSkewed(p.lineMix) && !p.mech?.longhouseBondi,
       rank: keyRank, metric: keyMetric,
-      space: civ => Object.assign(shared(civ, { armyAge: [2] }), { lines: MELEE_SETS }),
+      space: civ => Object.assign(shared(civ, { armyAge: [2] }), { lines: [MELEE], lineMix: MELEE_MIX, "mech.longhouseBondi": [false] }), // Longhouse Bondi production would ignore the mix
       describe: keyDescribe },
 
     { id: "vikings-valdemar-knights", civilization: "vikings",

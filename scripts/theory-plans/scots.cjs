@@ -13,11 +13,16 @@ const STEW_PONDS = "upgrade_lowland_tier2_sco";
 // the Monastery to each relic (walked out and back at the Kirkman record speed), gold per relic per minute.
 const RELICS = { relics: 3, relicDistanceTiles: 45, relicGoldPerMinute: 100 };
 
-const LINES = ["pikeman", "cateran", "man-at-arms", "gallowglass", "border-reiver"];
-// Army: one to three of the five lines.
-const LINE_SETS = []; for (let m = 1; m < 32; m++) { const s = LINES.filter((_, i) => m & (1 << i)); if (s.length <= 3) LINE_SETS.push(s); }
-// Musters that put out a trainable line (the Mustering Hall records); each is a one-time trigger.
-const MUSTER_LINE = { pikemen: "pikeman", cateran: "cateran", gallowglass: "gallowglass", reivers: "border-reiver" };
+// Sam, 2026-10-28: armies properly mixed. Castle: all four melee lines, balanced but skewed toward Man-at-Arms. Imperial: the
+// same melee mix plus trained Tacksmen, and Border Reivers only from their muster (no share in the training mix).
+const MELEE = ["pikeman", "cateran", "man-at-arms", "gallowglass"];
+// Melee share split: Man-at-Arms gets `maa` of it, the other three lines share the rest equally.
+const meleeMix = (maa, total = 1) => Object.fromEntries(MELEE.map(k => [k, +(total * (k === "man-at-arms" ? maa : (1 - maa) / 3)).toFixed(4)]));
+const CASTLE_MIX = [0.3, 0.35, 0.4, 0.45, 0.5].map(m => meleeMix(m));
+const IMP_MIX = []; for (const t of [0.2, 0.25, 0.3, 0.35]) for (const m of [0.3, 0.4, 0.5]) IMP_MIX.push(Object.assign(meleeMix(m, 1 - t), { tacksman: t, "border-reiver": 0 }));
+const IMP_LINES = [...MELEE, "tacksman", "border-reiver"];
+const maaSkewed = mix => MELEE.every(k => k === "man-at-arms" || (mix?.["man-at-arms"] || 0) > (mix?.[k] || 0));
+const sameSet = (a, b) => a.length === b.length && a.every(x => b.includes(x));
 const at = (run, t) => run.minutes.filter(m => m.t <= t).at(-1) || run.minutes[0];
 const armyAt = (run, ts) => Object.fromEntries(ts.map(t => { const m = at(run, t); return [t, { villagers: m.vil, army: m.army, byLine: m.armyByLine, pop: m.pop }]; }));
 const cattleSpace = () => ({
@@ -35,41 +40,46 @@ const flowSpace = range => ({ woodFloor: range(0.05, 0.7, 0.05), producerWood: [
 
 // Key metrics: the time to 150 population and the time to 200 population; both must be reached with every line upgrade (done).
 const POP = (run, n) => run.milestones["pop" + n] ?? null;
-const keyRank = run => { const a = POP(run, 150) ?? 1e5, b = POP(run, 200) ?? 1e5, done = run.done ?? 1e5; return -(a + b) * 1e3 - done; };
+// Realized army against the plan's mix: half the summed share differences over the trained lines at the end (0 = exact mix).
+// A plan more than 10% off its mix ranks below every plan that holds it (Sam, 2026-10-28: armies properly mixed).
+const mixGap = run => { const m = run.minutes.at(-1)?.armyByLine || {}, mix = run.params?.lineMix || {}, ks = Object.keys(mix).filter(k => mix[k] > 0);
+  if (!ks.length) return 0;
+  const tot = ks.reduce((s, k) => s + (m[k] || 0), 0); return tot ? ks.reduce((g, k) => g + Math.abs((m[k] || 0) / tot - mix[k]), 0) / 2 : 1; };
+const keyRank = run => { const a = POP(run, 150) ?? 1e5, b = POP(run, 200) ?? 1e5, done = run.done ?? 1e5; return -(a + b) * 1e3 - done - Math.max(0, mixGap(run) - 0.1) * 1e9; };
 const keyMetric = run => -((POP(run, 150) ?? 1e5) + (POP(run, 200) ?? 1e5));
-const keyDescribe = run => ({ pop150: POP(run, 150), pop200: POP(run, 200), castle: run.milestones.age3 ?? null, imperial: run.milestones.age4 ?? null,
+const keyDescribe = run => ({ mixGap: +mixGap(run).toFixed(3), pop150: POP(run, 150), pop200: POP(run, 200), castle: run.milestones.age3 ?? null, imperial: run.milestones.age4 ?? null,
   firstUnit: run.milestones.first_unit ?? null, relicsStart: run.milestones.relics_start ?? null, firstRelic: run.milestones.first_relic ?? null,
   musters: run.scots?.musters || [], hallTier: run.scots?.hallTier, cattlePeak: run.scots?.cattlePeak, ...ecoDescribe(run), armyAt: armyAt(run, [600, 900, 1200, 1500]) });
-const musterOf = p => (p.mech?.musters || [])[0];
-// The one muster fires in Imperial Age whichever line it puts out.
-const IMPERIAL_MUSTER = Object.fromEntries(Object.keys(MUSTER_LINE).map(k => [k, 4]));
+
 
 module.exports = lib => {
   const { commonSpace, range } = lib;
   const shared = civ => Object.assign(commonSpace(civ, { tc2: [0, 1], tc3: [0, 1], prod1: [0, 1], prod2: range(0, 6), vilTarget: range(60, VILLAGER_CAP, 5) }), cattleSpace(), pondSpace(), flowSpace(range), {
-    lines: LINE_SETS, "producers.4": range(4, 16), maxProducers: range(6, 20), "mech.kirkmen": [1, 2, 3], "mech.snowdoun": ["pikeman", "cateran", "man-at-arms"] });
+    "producers.4": range(4, 16), maxProducers: range(6, 20), "mech.kirkmen": [1, 2, 3], "mech.snowdoun": ["pikeman", "cateran", "man-at-arms"] });
   return [
     { id: "scots-imperial-muster", civilization: "scots",
-      title: "Scots Imperial aggression with one muster",
-      summary: "Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, then the army only from Imperial Age with the single muster fired in Imperial Age (a muster is a one-time trigger). Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the army lines. Castle and Imperial landmarks, Town Centers, the army lines (one to three of Pikeman, Cateran, Man-at-Arms, Gallowglass, Border Reiver) and the mustered line, Highland Cattle, Tower Houses and every timing come from the engine search; no Imperial economy technologies.",
-      base: { lines: ["gallowglass"], landmarks: { 2: "stone-of-destiny" }, armyAge: 4, extraTCs: { 2: 1, 3: 0 }, vilTarget: 100, mech: Object.assign({ musters: ["gallowglass"], musterAge: { gallowglass: 4 }, kirkmen: 2, fishponds: 1, hallAge: 3 }, RELICS) },
+      title: "Scots Imperial aggression: mixed melee, Tacksmen, mustered Border Reivers",
+      summary: "Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, then the army only from Imperial Age: all four melee lines (Pikeman, Cateran, Man-at-Arms, Gallowglass) balanced with Man-at-Arms the largest share, trained Tacksmen, and Border Reivers only from the one Muster Border Reivers fired in Imperial Age (a muster is a one-time trigger). Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the army lines. The Tacksman and Man-at-Arms shares, Castle and Imperial landmarks, Town Centers, Highland Cattle, Tower Houses and every timing come from the engine search; no Imperial economy technologies.",
+      base: { lines: IMP_LINES, lineMix: IMP_MIX[4], landmarks: { 2: "stone-of-destiny" }, armyAge: 4, extraTCs: { 2: 1, 3: 0 }, vilTarget: 100, mech: Object.assign({ musters: ["reivers"], musterAge: { reivers: 4 }, kirkmen: 2, fishponds: 1, hallAge: 3 }, RELICS) },
       objective: { kind: "done" },
       constraint: p => p.landmarks?.[2] === "stone-of-destiny" && (p.mech?.kirkmen || 0) >= 1 && (p.mech?.fishponds || 0) >= 1 && p.armyAge === 4
-        && (p.mech?.musters || []).length === 1 && (p.lines || []).includes(MUSTER_LINE[musterOf(p)]) && (p.mech?.musterAge?.[musterOf(p)] || 0) === 4,
+        && sameSet(p.lines || [], IMP_LINES) && maaSkewed(p.lineMix) && (p.lineMix?.tacksman || 0) > 0 && !(p.lineMix?.["border-reiver"])
+        && sameSet(p.mech?.musters || [], ["reivers"]) && p.mech?.musterAge?.reivers === 4,
       rank: keyRank, metric: keyMetric,
-      space: civ => { const s = Object.assign(shared(civ), { armyAge: [4], "mech.hallAge": [2, 3, 4],
-        "mech.musters": Object.keys(MUSTER_LINE).map(k => [k]), "mech.musterAge": [IMPERIAL_MUSTER] });
+      space: civ => { const s = Object.assign(shared(civ), { armyAge: [4], lines: [IMP_LINES], lineMix: IMP_MIX, "mech.hallAge": [2, 3, 4],
+        "mech.musters": [["reivers"]], "mech.musterAge": [{ reivers: 4 }] });
         delete s["landmarks.2"]; return s; },
       describe: keyDescribe },
 
     { id: "scots-castle-aggression", civilization: "scots",
-      title: "Scots Castle aggression",
-      summary: "Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, then the army from Castle Age without a Mustering Hall. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the army lines. Castle and Imperial landmarks, Town Centers, the army lines (one to three of Pikeman, Cateran, Man-at-Arms, Gallowglass, Border Reiver), Highland Cattle, Tower Houses and every timing come from the engine search; no Imperial economy technologies.",
-      base: { lines: ["man-at-arms", "gallowglass"], landmarks: { 2: "stone-of-destiny" }, armyAge: 3, extraTCs: { 2: 0, 3: 0 }, vilTarget: 90, mech: Object.assign({ musters: [], kirkmen: 2, fishponds: 1 }, RELICS) },
+      title: "Scots Castle aggression: mixed melee",
+      summary: "Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, then the army from Castle Age without a Mustering Hall: all four melee lines (Pikeman, Cateran, Man-at-Arms, Gallowglass) balanced with Man-at-Arms the largest share. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the army lines. The Man-at-Arms share, Castle and Imperial landmarks, Town Centers, Highland Cattle, Tower Houses and every timing come from the engine search; no Imperial economy technologies.",
+      base: { lines: MELEE, lineMix: CASTLE_MIX[2], landmarks: { 2: "stone-of-destiny" }, armyAge: 3, extraTCs: { 2: 0, 3: 0 }, vilTarget: 90, mech: Object.assign({ musters: [], kirkmen: 2, fishponds: 1 }, RELICS) },
       objective: { kind: "done" },
-      constraint: p => p.landmarks?.[2] === "stone-of-destiny" && (p.mech?.kirkmen || 0) >= 1 && (p.mech?.fishponds || 0) >= 1 && p.armyAge === 3 && !(p.mech?.musters || []).length,
+      constraint: p => p.landmarks?.[2] === "stone-of-destiny" && (p.mech?.kirkmen || 0) >= 1 && (p.mech?.fishponds || 0) >= 1 && p.armyAge === 3
+        && !(p.mech?.musters || []).length && sameSet(p.lines || [], MELEE) && maaSkewed(p.lineMix),
       rank: keyRank, metric: keyMetric,
-      space: civ => { const s = Object.assign(shared(civ), { armyAge: [3], "mech.musters": [[]] }); delete s["landmarks.2"]; return s; },
+      space: civ => { const s = Object.assign(shared(civ), { armyAge: [3], lines: [MELEE], lineMix: CASTLE_MIX, "mech.musters": [[]] }); delete s["landmarks.2"]; return s; },
       describe: keyDescribe },
   ];
 };

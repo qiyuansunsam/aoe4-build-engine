@@ -2043,6 +2043,49 @@
      "checklist:scots/unit/Border Reiver#age (Imperial, confirmed)",
      "checklist:scots/unit/Border Reiver#building (Archery Range)"
     ]
+   },
+   {
+    "key": "tacksman",
+    "name": "Tacksman",
+    "producers": [
+     "archery_range"
+    ],
+    "tiers": [
+     {
+      "id": "unit_muster_tacksmen_sco",
+      "name": "Tacksman",
+      "age": 4,
+      "cost": {
+       "food": 160,
+       "gold": 90
+      },
+      "trainSeconds": 35,
+      "pop": 1,
+      "hp": 130,
+      "armorMelee": 0,
+      "armorRanged": 0,
+      "speedTiles": 1.125
+     }
+    ],
+    "tierUpgrades": [],
+    "applicableTechs": [
+     "upgrade_melee_armor_i__scots",
+     "upgrade_melee_armor_ii__scots",
+     "upgrade_melee_armor_iii__scots",
+     "upgrade_ranged_armor_i__scots",
+     "upgrade_ranged_armor_ii__scots",
+     "upgrade_ranged_armor_iii__scots",
+     "upgrade_highland_tier3_sco",
+     "upgrade_snaphaunce_weapons_sco",
+     "upgrade_lowland_tier1_sco"
+    ],
+    "muster": "tacksmen",
+    "evidence": [
+     "data/upcoming-civs/stats.json civilizations.scots.unit.Tacksman (text sources, confirmed: Archery Range, Imperial, 160 food 90 gold, 35 s, 130 health, 0/0 armor, 1.125 tiles/s)",
+     "jeando17:unit_muster_tacksmen_sco (the only datamined Tacksman record is the mustered one; its id stands in for the trained unit, its 80 gold and 2 s are the muster's)",
+     "data/catalog-preview-17.0.json meta.unit_muster_tacksmen_sco.upgradeGroups (armor tiers, Feuds Aside, Lion's Duty); Snaphance Locks names Tacksmen in its description",
+     "Steeled Arrow / Balanced Projectiles / Platecutter Point raise arrows, bolts and emplacements only, so they do not apply to the gunpowder Tacksman"
+    ]
    }
   ]
  },
@@ -2249,7 +2292,7 @@
       "unitId": "unit_muster_tacksmen_sco",
       "unitSeconds": 2,
       "age": 4,
-      "line": null,
+      "line": "tacksman",
       "evidence": [
        "jeando17:muster_tacksmen_sco#costs.food",
        "jeando17:muster_tacksmen_sco#costs.time",
