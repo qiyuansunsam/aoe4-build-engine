@@ -1,0 +1,134 @@
+{
+  "purpose": "Coach tactical decisions with event evidence, not a single opaque skill score",
+  "scope": "Three downloaded user matches plus one separately labelled upstream telemetry sample",
+  "metrics": [
+    {
+      "name": "Macro maintenance under pressure",
+      "definition": "Eligible TC empty seconds per TC-minute during confirmed combat versus quiet windows, matched by age and TC count",
+      "needs": [
+        "production queues",
+        "damage/attack activity",
+        "age research occupancy",
+        "last villager cutoff"
+      ],
+      "caveat": "Shows performance change, not proof that attention caused it"
+    },
+    {
+      "name": "Multiple-front handling",
+      "definition": "Response coverage and response delay for spatially separated simultaneous threats; report losses and macro maintenance alongside",
+      "needs": [
+        "positions",
+        "hostile damage",
+        "visibility",
+        "replay commands",
+        "squad/entity mapping"
+      ],
+      "caveat": "Threat grouping and relevant response require validation; simultaneous click locations are not fronts"
+    },
+    {
+      "name": "Defensive response latency",
+      "definition": "First relevant command after an eligible new visible threat or first damage; separate the two triggers",
+      "needs": [
+        "visibility",
+        "damage",
+        "movement/garrison/attack commands",
+        "entity mapping"
+      ],
+      "caveat": "Not human perception time. Exclude already responding units and report unanswered threats as censored outcomes, not zero. Report median/p90 and success rate"
+    },
+    {
+      "name": "Fight commitment and disengagement",
+      "definition": "Local HP-adjusted army composition, reinforcements and defensive buildings at first commitment; time to retreat as known odds worsen",
+      "needs": [
+        "positions",
+        "health",
+        "unit stats",
+        "upgrades",
+        "visibility",
+        "commands"
+      ],
+      "caveat": "Evaluate information available at the time. Counter matchups, terrain, range, formation and objectives matter; global army count is not local strength"
+    },
+    {
+      "name": "Combat efficiency",
+      "definition": "Attributed enemy value destroyed versus own value lost per local engagement, plus damage participation, target switching, overkill and reinforcement arrival",
+      "needs": [
+        "damage attacker/victim",
+        "deaths",
+        "time-specific unit costs",
+        "positions",
+        "projectiles",
+        "upgrades"
+      ],
+      "caveat": "Raw trade and a model-adjusted expectation must be separate; assists and buildings need explicit attribution; do not reward farming cheap damage"
+    },
+    {
+      "name": "Early military contribution",
+      "definition": "First non-scout military arrival in contested/enemy territory, first combat contribution, and contribution during team fights",
+      "needs": [
+        "positions",
+        "unit type",
+        "team",
+        "damage",
+        "objectives"
+      ],
+      "caveat": "Economic/support roles can contribute without early damage; do not rank players by first attack alone"
+    },
+    {
+      "name": "Map presence and control",
+      "definition": "Per-minute occupied military grid cells, cell-seconds, contested presence, resource/objective access and coverage over time",
+      "needs": [
+        "positions",
+        "terrain",
+        "visibility",
+        "objectives",
+        "resources",
+        "military threat ranges"
+      ],
+      "caveat": "Presence, exploration, influence and sustained control are different metrics. Report scout coverage separately; condition early timing on map and strategy"
+    },
+    {
+      "name": "Upgrade opportunity and payback",
+      "definition": "Request and completion timing, eligible affordable windows, affected army/workers and estimated payoff",
+      "needs": [
+        "resource bank",
+        "queues",
+        "prerequisites",
+        "workers by resource",
+        "unit composition",
+        "patch stats"
+      ],
+      "caveat": "Nominal affordability alone does not establish a mistake; walking, hunted meat and civ modifiers affect economic payoff"
+    },
+    {
+      "name": "Enemy villagers killed by this player",
+      "definition": "Confirmed enemy villager death matched to the hostile lethal attacker owned by the player; separate assists and unattributed deaths",
+      "outputs": [
+        "total enemy villagers killed",
+        "first villager kill time",
+        "villager kills before 10/15 minutes",
+        "kills per raid",
+        "own raiding force value lost per kill",
+        "assisted villager kills shown separately"
+      ],
+      "caveat": "Never substitute own villagers lost, economy kills including non-villagers, or enemy losses without attribution"
+    }
+  ],
+  "sources": [
+    "https://github.com/BigManJohn000/aoe4-replay-viewer",
+    "https://github.com/ailrk/aoe4-replay-viewer",
+    "https://www.ageofempires.com/news/age-of-empires-iv-tips-to-help-you-get-started/",
+    "https://aoe4.christitus.com/essential-tips/"
+  ],
+  "next_validation": "Record one user replay with explicit desktop permission, validate event identity/time alignment against command stream and summary, then calculate tactical metrics. No desktop recording has been run.",
+  "radar_axes": [
+    "Fighting efficiency",
+    "Aggression",
+    "Map control",
+    "Growth",
+    "Harassment",
+    "Timing",
+    "Multitasking",
+    "Reaction"
+  ]
+}

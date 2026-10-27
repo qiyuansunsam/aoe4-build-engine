@@ -1,0 +1,975 @@
+{
+ "method": "Seeded random sampling (3000 candidates plus the civilization defaults) then coordinate hill-climbing from the best 6; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": 999501998.592,
+ "build": {
+  "id": "scots-fc-infantry",
+  "title": "Scots one Town Center fast Castle, mixed melee infantry",
+  "summary": "One Town Center. Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds. Stage 1: the earliest Castle Age with the first military unit out by 5:00. Stage 2: Castle Age within 30 s of that, Kirkmen gathering relics from Castle Age, and the fastest 200 population (at most 120 villagers) with every upgrade of its infantry lines, without Imperial economy technologies. The infantry mix (Pikeman, Cateran, Man-at-Arms, Gallowglass), musters, Castle and Imperial landmarks and timings come from the engine search.",
+  "civilization": "scots",
+  "engine": "civ",
+  "patch": "17.0-preview",
+  "objective": {
+   "kind": "done",
+   "slack": 30,
+   "firstUnitBy": 300
+  },
+  "lineNames": "Pikeman and Gallowglass",
+  "result": {
+   "done": 1408,
+   "at": 900,
+   "army": 30,
+   "armyValue": 4575,
+   "villagers": 48,
+   "population": 87,
+   "age": 4,
+   "ages": [
+    279,
+    498,
+    793
+   ],
+   "firstUnit": 299,
+   "firstUnitBy": 300,
+   "castle": 498,
+   "imperial": 793,
+   "relicsStart": 553,
+   "firstRelic": 633,
+   "relicsPlaced": 3,
+   "musters": [
+    {
+     "key": "gallowglass",
+     "name": "Muster Gallowglass",
+     "start": 587,
+     "units": 7,
+     "food": 1350,
+     "tier": 0,
+     "lookout": false,
+     "actionDone": 592,
+     "allOut": 606
+    }
+   ],
+   "fishponds": 2,
+   "stewPonds": false,
+   "rebateGold": 1553,
+   "kirkmen": 3,
+   "armyAt": {
+    "600": {
+     "villagers": 34,
+     "army": 9,
+     "byLine": {
+      "pikeman": 6,
+      "gallowglass": 3
+     },
+     "pop": 55
+    },
+    "900": {
+     "villagers": 48,
+     "army": 30,
+     "byLine": {
+      "pikeman": 15,
+      "gallowglass": 15
+     },
+     "pop": 87
+    },
+    "1200": {
+     "villagers": 62,
+     "army": 74,
+     "byLine": {
+      "pikeman": 37,
+      "gallowglass": 37
+     },
+     "pop": 149
+    }
+   }
+  },
+  "planId": "scots-fc-infantry",
+  "lines": [
+   "pikeman",
+   "gallowglass"
+  ],
+  "landmarks": {
+   "2": "stone-of-destiny",
+   "3": "snowdoun-gate",
+   "4": "dhun-eideann"
+  },
+  "extraTCs": {
+   "2": 0,
+   "3": 0
+  },
+  "vilTarget": 70,
+  "mech": {
+   "kirkmen": 1,
+   "fishponds": 2,
+   "musters": [
+    "cateran",
+    "gallowglass"
+   ],
+   "firstUnitBy": 300,
+   "relics": 3,
+   "relicDistanceTiles": 45,
+   "relicGoldPerMinute": 100,
+   "towerHouses": {
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "cattle": {
+    "1": 5,
+    "2": 5,
+    "3": 9,
+    "4": 17
+   },
+   "cattleFrom": 60,
+   "snowdoun": "pikeman",
+   "hallAge": 3
+  },
+  "lmBuilders": {
+   "2": 9,
+   "3": 12,
+   "4": 8
+  },
+  "tcBuilders": 8,
+  "producers": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 2
+  },
+  "maxProducers": 5,
+  "ecoTechs": {
+   "1": [],
+   "2": [],
+   "3": [],
+   "4": []
+  },
+  "milTechAge": {
+   "2": false,
+   "3": false
+  },
+  "blacksmiths": 0,
+  "pauseForAge": true,
+  "window": 6,
+  "woodFloor": 0.1,
+  "goldBias": 1.2,
+  "armyAge": 2,
+  "civTechs": {
+   "upgrade_lowland_tier2_sco": null
+  },
+  "producerWood": true,
+  "bankAware": 240
+ },
+ "ledger": {
+  "id": "scots-fc-infantry",
+  "evaluations": 7642,
+  "seconds": 344,
+  "seed": 11,
+  "objective": {
+   "kind": "done",
+   "slack": 30,
+   "firstUnitBy": 300
+  },
+  "best": {
+   "done": 1408,
+   "at": 900,
+   "army": 30,
+   "armyValue": 4575,
+   "villagers": 48,
+   "population": 87,
+   "age": 4,
+   "ages": [
+    279,
+    498,
+    793
+   ],
+   "firstUnit": 299,
+   "firstUnitBy": 300,
+   "castle": 498,
+   "imperial": 793,
+   "relicsStart": 553,
+   "firstRelic": 633,
+   "relicsPlaced": 3,
+   "musters": [
+    {
+     "key": "gallowglass",
+     "name": "Muster Gallowglass",
+     "start": 587,
+     "units": 7,
+     "food": 1350,
+     "tier": 0,
+     "lookout": false,
+     "actionDone": 592,
+     "allOut": 606
+    }
+   ],
+   "fishponds": 2,
+   "stewPonds": false,
+   "rebateGold": 1553,
+   "kirkmen": 3,
+   "armyAt": {
+    "600": {
+     "villagers": 34,
+     "army": 9,
+     "byLine": {
+      "pikeman": 6,
+      "gallowglass": 3
+     },
+     "pop": 55
+    },
+    "900": {
+     "villagers": 48,
+     "army": 30,
+     "byLine": {
+      "pikeman": 15,
+      "gallowglass": 15
+     },
+     "pop": 87
+    },
+    "1200": {
+     "villagers": 62,
+     "army": 74,
+     "byLine": {
+      "pikeman": 37,
+      "gallowglass": 37
+     },
+     "pop": 149
+    }
+   }
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "planId": "scots-fc-infantry",
+     "lines": [
+      "man-at-arms",
+      "gallowglass"
+     ],
+     "landmarks": {
+      "2": "stone-of-destiny",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "vilTarget": 85,
+     "mech": {
+      "kirkmen": 1,
+      "fishponds": 2,
+      "musters": [
+       "gallowglass"
+      ],
+      "firstUnitBy": 300,
+      "relics": 3,
+      "relicDistanceTiles": 45,
+      "relicGoldPerMinute": 100,
+      "towerHouses": {
+       "1": 0,
+       "2": 0,
+       "3": 1
+      },
+      "cattle": {
+       "1": 9,
+       "2": 13,
+       "3": 13,
+       "4": 21
+      },
+      "cattleFrom": 60,
+      "snowdoun": "man-at-arms",
+      "hallAge": 3
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 1,
+      "3": 3,
+      "4": 2
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [],
+      "2": [
+       "upgrade_econ_resource_gold_harvest_rate_2__scots"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.05,
+     "goldBias": 1.2,
+     "armyAge": 1,
+     "civTechs": {
+      "upgrade_lowland_tier2_sco": 3
+     },
+     "producerWood": true,
+     "bankAware": 240
+    },
+    "result": {
+     "done": 1489,
+     "at": 900,
+     "army": 33,
+     "armyValue": 5390,
+     "villagers": 46,
+     "population": 87,
+     "age": 3,
+     "ages": [
+      243,
+      472,
+      1037
+     ],
+     "firstUnit": 266,
+     "firstUnitBy": 300,
+     "castle": 472,
+     "imperial": 1037,
+     "relicsStart": 499,
+     "firstRelic": 579,
+     "relicsPlaced": 3,
+     "musters": [
+      {
+       "key": "gallowglass",
+       "name": "Muster Gallowglass",
+       "start": 609,
+       "units": 7,
+       "food": 1350,
+       "tier": 0,
+       "lookout": false,
+       "actionDone": 614,
+       "allOut": 628
+      }
+     ],
+     "fishponds": 2,
+     "stewPonds": true,
+     "rebateGold": 1725,
+     "kirkmen": 3,
+     "armyAt": {
+      "600": {
+       "villagers": 31,
+       "army": 2,
+       "byLine": {
+        "man-at-arms": 1,
+        "gallowglass": 1
+       },
+       "pop": 37
+      },
+      "900": {
+       "villagers": 46,
+       "army": 33,
+       "byLine": {
+        "man-at-arms": 17,
+        "gallowglass": 16
+       },
+       "pop": 87
+      },
+      "1200": {
+       "villagers": 60,
+       "army": 58,
+       "byLine": {
+        "man-at-arms": 29,
+        "gallowglass": 29
+       },
+       "pop": 127
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "scots-fc-infantry",
+     "lines": [
+      "man-at-arms",
+      "gallowglass"
+     ],
+     "landmarks": {
+      "2": "stone-of-destiny",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "vilTarget": 85,
+     "mech": {
+      "kirkmen": 1,
+      "fishponds": 2,
+      "musters": [
+       "gallowglass"
+      ],
+      "firstUnitBy": 300,
+      "relics": 3,
+      "relicDistanceTiles": 45,
+      "relicGoldPerMinute": 100,
+      "towerHouses": {
+       "1": 0,
+       "2": 0,
+       "3": 1
+      },
+      "cattle": {
+       "1": 1,
+       "2": 13,
+       "3": 13,
+       "4": 21
+      },
+      "cattleFrom": 60,
+      "snowdoun": "man-at-arms",
+      "hallAge": 3
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 1,
+      "3": 3,
+      "4": 2
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [],
+      "2": [
+       "upgrade_econ_resource_gold_harvest_rate_2__scots"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.05,
+     "goldBias": 1.2,
+     "armyAge": 2,
+     "civTechs": {
+      "upgrade_lowland_tier2_sco": 3
+     },
+     "producerWood": true,
+     "bankAware": 240
+    },
+    "result": {
+     "done": 1489,
+     "at": 900,
+     "army": 33,
+     "armyValue": 5390,
+     "villagers": 46,
+     "population": 87,
+     "age": 3,
+     "ages": [
+      243,
+      472,
+      1037
+     ],
+     "firstUnit": 266,
+     "firstUnitBy": 300,
+     "castle": 472,
+     "imperial": 1037,
+     "relicsStart": 499,
+     "firstRelic": 579,
+     "relicsPlaced": 3,
+     "musters": [
+      {
+       "key": "gallowglass",
+       "name": "Muster Gallowglass",
+       "start": 609,
+       "units": 7,
+       "food": 1350,
+       "tier": 0,
+       "lookout": false,
+       "actionDone": 614,
+       "allOut": 628
+      }
+     ],
+     "fishponds": 2,
+     "stewPonds": true,
+     "rebateGold": 1725,
+     "kirkmen": 3,
+     "armyAt": {
+      "600": {
+       "villagers": 31,
+       "army": 2,
+       "byLine": {
+        "man-at-arms": 1,
+        "gallowglass": 1
+       },
+       "pop": 37
+      },
+      "900": {
+       "villagers": 46,
+       "army": 33,
+       "byLine": {
+        "man-at-arms": 17,
+        "gallowglass": 16
+       },
+       "pop": 87
+      },
+      "1200": {
+       "villagers": 60,
+       "army": 58,
+       "byLine": {
+        "man-at-arms": 29,
+        "gallowglass": 29
+       },
+       "pop": 127
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "scots-fc-infantry",
+     "lines": [
+      "man-at-arms",
+      "gallowglass"
+     ],
+     "landmarks": {
+      "2": "stone-of-destiny",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "vilTarget": 85,
+     "mech": {
+      "kirkmen": 1,
+      "fishponds": 2,
+      "musters": [
+       "gallowglass"
+      ],
+      "firstUnitBy": 300,
+      "relics": 3,
+      "relicDistanceTiles": 45,
+      "relicGoldPerMinute": 100,
+      "towerHouses": {
+       "1": 0,
+       "2": 0,
+       "3": 1
+      },
+      "cattle": {
+       "1": 3,
+       "2": 13,
+       "3": 13,
+       "4": 21
+      },
+      "cattleFrom": 60,
+      "snowdoun": "man-at-arms",
+      "hallAge": 3
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 1,
+      "3": 3,
+      "4": 2
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [],
+      "2": [
+       "upgrade_econ_resource_gold_harvest_rate_2__scots"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.05,
+     "goldBias": 1.2,
+     "armyAge": 2,
+     "civTechs": {
+      "upgrade_lowland_tier2_sco": 3
+     },
+     "producerWood": true,
+     "bankAware": 240
+    },
+    "result": {
+     "done": 1489,
+     "at": 900,
+     "army": 33,
+     "armyValue": 5390,
+     "villagers": 46,
+     "population": 87,
+     "age": 3,
+     "ages": [
+      243,
+      472,
+      1037
+     ],
+     "firstUnit": 266,
+     "firstUnitBy": 300,
+     "castle": 472,
+     "imperial": 1037,
+     "relicsStart": 499,
+     "firstRelic": 579,
+     "relicsPlaced": 3,
+     "musters": [
+      {
+       "key": "gallowglass",
+       "name": "Muster Gallowglass",
+       "start": 609,
+       "units": 7,
+       "food": 1350,
+       "tier": 0,
+       "lookout": false,
+       "actionDone": 614,
+       "allOut": 628
+      }
+     ],
+     "fishponds": 2,
+     "stewPonds": true,
+     "rebateGold": 1725,
+     "kirkmen": 3,
+     "armyAt": {
+      "600": {
+       "villagers": 31,
+       "army": 2,
+       "byLine": {
+        "man-at-arms": 1,
+        "gallowglass": 1
+       },
+       "pop": 37
+      },
+      "900": {
+       "villagers": 46,
+       "army": 33,
+       "byLine": {
+        "man-at-arms": 17,
+        "gallowglass": 16
+       },
+       "pop": 87
+      },
+      "1200": {
+       "villagers": 60,
+       "army": 58,
+       "byLine": {
+        "man-at-arms": 29,
+        "gallowglass": 29
+       },
+       "pop": 127
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "scots-fc-infantry",
+     "lines": [
+      "man-at-arms",
+      "gallowglass"
+     ],
+     "landmarks": {
+      "2": "stone-of-destiny",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "vilTarget": 85,
+     "mech": {
+      "kirkmen": 1,
+      "fishponds": 2,
+      "musters": [
+       "gallowglass"
+      ],
+      "firstUnitBy": 300,
+      "relics": 3,
+      "relicDistanceTiles": 45,
+      "relicGoldPerMinute": 100,
+      "towerHouses": {
+       "1": 0,
+       "2": 0,
+       "3": 1
+      },
+      "cattle": {
+       "1": 5,
+       "2": 13,
+       "3": 13,
+       "4": 21
+      },
+      "cattleFrom": 60,
+      "snowdoun": "man-at-arms",
+      "hallAge": 3
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 1,
+      "3": 3,
+      "4": 2
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [],
+      "2": [
+       "upgrade_econ_resource_gold_harvest_rate_2__scots"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.05,
+     "goldBias": 1.2,
+     "armyAge": 2,
+     "civTechs": {
+      "upgrade_lowland_tier2_sco": 3
+     },
+     "producerWood": true,
+     "bankAware": 240
+    },
+    "result": {
+     "done": 1489,
+     "at": 900,
+     "army": 33,
+     "armyValue": 5390,
+     "villagers": 46,
+     "population": 87,
+     "age": 3,
+     "ages": [
+      243,
+      472,
+      1037
+     ],
+     "firstUnit": 266,
+     "firstUnitBy": 300,
+     "castle": 472,
+     "imperial": 1037,
+     "relicsStart": 499,
+     "firstRelic": 579,
+     "relicsPlaced": 3,
+     "musters": [
+      {
+       "key": "gallowglass",
+       "name": "Muster Gallowglass",
+       "start": 609,
+       "units": 7,
+       "food": 1350,
+       "tier": 0,
+       "lookout": false,
+       "actionDone": 614,
+       "allOut": 628
+      }
+     ],
+     "fishponds": 2,
+     "stewPonds": true,
+     "rebateGold": 1725,
+     "kirkmen": 3,
+     "armyAt": {
+      "600": {
+       "villagers": 31,
+       "army": 2,
+       "byLine": {
+        "man-at-arms": 1,
+        "gallowglass": 1
+       },
+       "pop": 37
+      },
+      "900": {
+       "villagers": 46,
+       "army": 33,
+       "byLine": {
+        "man-at-arms": 17,
+        "gallowglass": 16
+       },
+       "pop": 87
+      },
+      "1200": {
+       "villagers": 60,
+       "army": 58,
+       "byLine": {
+        "man-at-arms": 29,
+        "gallowglass": 29
+       },
+       "pop": 127
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "scots-fc-infantry",
+     "lines": [
+      "man-at-arms",
+      "gallowglass"
+     ],
+     "landmarks": {
+      "2": "stone-of-destiny",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "vilTarget": 85,
+     "mech": {
+      "kirkmen": 1,
+      "fishponds": 2,
+      "musters": [
+       "gallowglass"
+      ],
+      "firstUnitBy": 300,
+      "relics": 3,
+      "relicDistanceTiles": 45,
+      "relicGoldPerMinute": 100,
+      "towerHouses": {
+       "1": 0,
+       "2": 0,
+       "3": 1
+      },
+      "cattle": {
+       "1": 7,
+       "2": 13,
+       "3": 13,
+       "4": 21
+      },
+      "cattleFrom": 60,
+      "snowdoun": "man-at-arms",
+      "hallAge": 3
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 1,
+      "3": 3,
+      "4": 2
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [],
+      "2": [
+       "upgrade_econ_resource_gold_harvest_rate_2__scots"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.05,
+     "goldBias": 1.2,
+     "armyAge": 2,
+     "civTechs": {
+      "upgrade_lowland_tier2_sco": 3
+     },
+     "producerWood": true,
+     "bankAware": 240
+    },
+    "result": {
+     "done": 1489,
+     "at": 900,
+     "army": 33,
+     "armyValue": 5390,
+     "villagers": 46,
+     "population": 87,
+     "age": 3,
+     "ages": [
+      243,
+      472,
+      1037
+     ],
+     "firstUnit": 266,
+     "firstUnitBy": 300,
+     "castle": 472,
+     "imperial": 1037,
+     "relicsStart": 499,
+     "firstRelic": 579,
+     "relicsPlaced": 3,
+     "musters": [
+      {
+       "key": "gallowglass",
+       "name": "Muster Gallowglass",
+       "start": 609,
+       "units": 7,
+       "food": 1350,
+       "tier": 0,
+       "lookout": false,
+       "actionDone": 614,
+       "allOut": 628
+      }
+     ],
+     "fishponds": 2,
+     "stewPonds": true,
+     "rebateGold": 1725,
+     "kirkmen": 3,
+     "armyAt": {
+      "600": {
+       "villagers": 31,
+       "army": 2,
+       "byLine": {
+        "man-at-arms": 1,
+        "gallowglass": 1
+       },
+       "pop": 37
+      },
+      "900": {
+       "villagers": 46,
+       "army": 33,
+       "byLine": {
+        "man-at-arms": 17,
+        "gallowglass": 16
+       },
+       "pop": 87
+      },
+      "1200": {
+       "villagers": 60,
+       "army": 58,
+       "byLine": {
+        "man-at-arms": 29,
+        "gallowglass": 29
+       },
+       "pop": 127
+      }
+     }
+    }
+   }
+  ]
+ }
+}

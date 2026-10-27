@@ -1,0 +1,8212 @@
+{
+ "generatedAt": "2026-10-25T09:47:16.519Z",
+ "builds": [
+  {
+   "id": "french-knights-10",
+   "evaluations": 5570,
+   "seconds": 181,
+   "seed": 20261024,
+   "objective": {
+    "kind": "lineAt",
+    "line": "royal-knight",
+    "t": 600,
+    "slack": 1
+   },
+   "threshold": 18,
+   "best": {
+    "done": 1497,
+    "at": 600,
+    "line": 18,
+    "army": 18,
+    "armyValue": 4320,
+    "villagers": 28,
+    "population": 49,
+    "age": 2,
+    "ages": [
+     266,
+     815,
+     1218
+    ]
+   },
+   "runnersUp": [],
+   "searches": [
+    {
+     "seed": 20261024,
+     "evaluations": 5570,
+     "score": -1496.982,
+     "best": {
+      "done": 1497,
+      "at": 600,
+      "line": 18,
+      "army": 18,
+      "armyValue": 4320,
+      "villagers": 28,
+      "population": 49,
+      "age": 2,
+      "ages": [
+       266,
+       815,
+       1218
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 12119,
+     "score": -1497.982,
+     "best": {
+      "done": 1498,
+      "at": 600,
+      "line": 18,
+      "army": 18,
+      "armyValue": 4320,
+      "villagers": 28,
+      "population": 49,
+      "age": 2,
+      "ages": [
+       266,
+       814,
+       1193
+      ]
+     }
+    },
+    {
+     "seed": 20261024,
+     "evaluations": 3789,
+     "score": -1581.982,
+     "best": {
+      "done": 1582,
+      "at": 600,
+      "line": 18,
+      "army": 18,
+      "armyValue": 4320,
+      "villagers": 37,
+      "population": 59,
+      "age": 2,
+      "ages": [
+       275,
+       801,
+       1172
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 10846,
+     "score": -1838.982,
+     "best": {
+      "done": 1817,
+      "at": 600,
+      "line": 18,
+      "army": 18,
+      "armyValue": 4320,
+      "villagers": 37,
+      "population": 59,
+      "age": 2,
+      "ages": [
+       288,
+       1663,
+       1748
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 11741,
+     "score": -1846.982,
+     "best": {
+      "done": 1847,
+      "at": 600,
+      "line": 18,
+      "army": 18,
+      "armyValue": 4320,
+      "villagers": 37,
+      "population": 59,
+      "age": 2,
+      "ages": [
+       288,
+       1705,
+       1781
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 10682,
+     "score": -2802.982,
+     "best": {
+      "done": 2803,
+      "at": 600,
+      "line": 18,
+      "army": 18,
+      "armyValue": 4320,
+      "villagers": 35,
+      "population": 56,
+      "age": 2,
+      "ages": [
+       316,
+       2590,
+       2660
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 9651,
+     "score": -3175.981,
+     "best": {
+      "done": 3176,
+      "at": 600,
+      "line": 19,
+      "army": 19,
+      "armyValue": 4560,
+      "villagers": 30,
+      "population": 50,
+      "age": 2,
+      "ages": [
+       288,
+       2931,
+       3082
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 9791,
+     "score": -3182.981,
+     "best": {
+      "done": 3183,
+      "at": 600,
+      "line": 19,
+      "army": 19,
+      "armyValue": 4560,
+      "villagers": 30,
+      "population": 50,
+      "age": 2,
+      "ages": [
+       281,
+       2922,
+       3057
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 10297,
+     "score": -3299.981,
+     "best": {
+      "done": 3300,
+      "at": 600,
+      "line": 19,
+      "army": 19,
+      "armyValue": 4560,
+      "villagers": 30,
+      "population": 50,
+      "age": 2,
+      "ages": [
+       281,
+       3033,
+       3137
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 12073,
+     "score": null,
+     "best": {
+      "done": 1424,
+      "at": 600,
+      "line": 17,
+      "army": 17,
+      "armyValue": 4080,
+      "villagers": 37,
+      "population": 58,
+      "age": 2,
+      "ages": [
+       323,
+       831,
+       1233
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 12523,
+     "score": null,
+     "best": {
+      "done": 1412,
+      "at": 600,
+      "line": 17,
+      "army": 17,
+      "armyValue": 4080,
+      "villagers": 37,
+      "population": 58,
+      "age": 2,
+      "ages": [
+       323,
+       833,
+       1099
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "french-knights-15",
+   "evaluations": 6048,
+   "seconds": 161,
+   "seed": 20261024,
+   "objective": {
+    "kind": "lineAt",
+    "line": "royal-knight",
+    "t": 900,
+    "slack": 1
+   },
+   "threshold": 52,
+   "best": {
+    "done": 1577,
+    "at": 900,
+    "line": 52,
+    "army": 52,
+    "armyValue": 12480,
+    "villagers": 56,
+    "population": 114,
+    "age": 2,
+    "ages": [
+     352,
+     1058,
+     1332
+    ]
+   },
+   "runnersUp": [],
+   "searches": [
+    {
+     "seed": 20261024,
+     "evaluations": 6048,
+     "score": -1576.948,
+     "best": {
+      "done": 1577,
+      "at": 900,
+      "line": 52,
+      "army": 52,
+      "armyValue": 12480,
+      "villagers": 56,
+      "population": 114,
+      "age": 2,
+      "ages": [
+       352,
+       1058,
+       1332
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 14493,
+     "score": -1587.948,
+     "best": {
+      "done": 1588,
+      "at": 900,
+      "line": 52,
+      "army": 52,
+      "armyValue": 12480,
+      "villagers": 56,
+      "population": 114,
+      "age": 2,
+      "ages": [
+       352,
+       1072,
+       1338
+      ]
+     }
+    },
+    {
+     "seed": 20261024,
+     "evaluations": 3525,
+     "score": -1958.947,
+     "best": {
+      "done": 1959,
+      "at": 900,
+      "line": 53,
+      "army": 53,
+      "armyValue": 12720,
+      "villagers": 50,
+      "population": 108,
+      "age": 2,
+      "ages": [
+       352,
+       1715,
+       1891
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 10296,
+     "score": -1958.947,
+     "best": {
+      "done": 1959,
+      "at": 900,
+      "line": 53,
+      "army": 53,
+      "armyValue": 12720,
+      "villagers": 50,
+      "population": 108,
+      "age": 2,
+      "ages": [
+       352,
+       1726,
+       1867
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 10858,
+     "score": -1958.947,
+     "best": {
+      "done": 1959,
+      "at": 900,
+      "line": 53,
+      "army": 53,
+      "armyValue": 12720,
+      "villagers": 50,
+      "population": 108,
+      "age": 2,
+      "ages": [
+       352,
+       1720,
+       1867
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 11336,
+     "score": -1958.947,
+     "best": {
+      "done": 1959,
+      "at": 900,
+      "line": 53,
+      "army": 53,
+      "armyValue": 12720,
+      "villagers": 50,
+      "population": 108,
+      "age": 2,
+      "ages": [
+       352,
+       1726,
+       1867
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 11895,
+     "score": -1958.947,
+     "best": {
+      "done": 1959,
+      "at": 900,
+      "line": 53,
+      "army": 53,
+      "armyValue": 12720,
+      "villagers": 50,
+      "population": 108,
+      "age": 2,
+      "ages": [
+       352,
+       1720,
+       1867
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 13626,
+     "score": null,
+     "best": {
+      "done": 1359,
+      "at": 900,
+      "line": 48,
+      "army": 48,
+      "armyValue": 11520,
+      "villagers": 73,
+      "population": 128,
+      "age": 2,
+      "ages": [
+       352,
+       1032,
+       1236
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 12385,
+     "score": null,
+     "best": {
+      "done": 1436,
+      "at": 900,
+      "line": 50,
+      "army": 50,
+      "armyValue": 12000,
+      "villagers": 55,
+      "population": 110,
+      "age": 2,
+      "ages": [
+       352,
+       1125,
+       1338
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 10267,
+     "score": null,
+     "best": {
+      "done": 1957,
+      "at": 900,
+      "line": 51,
+      "army": 51,
+      "armyValue": 12240,
+      "villagers": 55,
+      "population": 111,
+      "age": 2,
+      "ages": [
+       352,
+       1699,
+       1820
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 11320,
+     "score": null,
+     "best": {
+      "done": 1884,
+      "at": 900,
+      "line": 50,
+      "army": 50,
+      "armyValue": 12000,
+      "villagers": 55,
+      "population": 111,
+      "age": 2,
+      "ages": [
+       345,
+       1638,
+       1745
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "mongol-cavalry-10",
+   "evaluations": 5125,
+   "seconds": 122,
+   "seed": 20261024,
+   "objective": {
+    "kind": "valueAt",
+    "t": 600,
+    "slack": 250
+   },
+   "threshold": 4910,
+   "best": {
+    "done": 1377,
+    "at": 600,
+    "army": 42,
+    "armyValue": 5040,
+    "villagers": 34,
+    "population": 80,
+    "age": 1,
+    "ages": [
+     717,
+     1024,
+     1217
+    ]
+   },
+   "runnersUp": [],
+   "searches": [
+    {
+     "seed": 20261024,
+     "evaluations": 5125,
+     "score": -1371.96,
+     "best": {
+      "done": 1377,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       717,
+       1024,
+       1217
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 11382,
+     "score": -1443.96,
+     "best": {
+      "done": 1449,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       722,
+       1051,
+       1293
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 10262,
+     "score": -1446.96,
+     "best": {
+      "done": 1452,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       722,
+       1048,
+       1292
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 11268,
+     "score": -1447.96,
+     "best": {
+      "done": 1453,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       717,
+       1067,
+       1288
+      ]
+     }
+    },
+    {
+     "seed": 20261024,
+     "evaluations": 4216,
+     "score": -2162.84,
+     "best": {
+      "done": 2168,
+      "at": 600,
+      "army": 43,
+      "armyValue": 5160,
+      "villagers": 30,
+      "population": 76,
+      "age": 2,
+      "ages": [
+       345,
+       1857,
+       1912
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 13542,
+     "score": null,
+     "best": {
+      "done": 1344,
+      "at": 600,
+      "army": 40,
+      "armyValue": 4800,
+      "villagers": 34,
+      "population": 77,
+      "age": 1,
+      "ages": [
+       656,
+       968,
+       1160
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 14299,
+     "score": null,
+     "best": {
+      "done": 1342,
+      "at": 600,
+      "army": 40,
+      "armyValue": 4800,
+      "villagers": 34,
+      "population": 77,
+      "age": 1,
+      "ages": [
+       671,
+       982,
+       1160
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 12990,
+     "score": null,
+     "best": {
+      "done": 1339,
+      "at": 600,
+      "army": 40,
+      "armyValue": 4800,
+      "villagers": 34,
+      "population": 78,
+      "age": 1,
+      "ages": [
+       683,
+       977,
+       1163
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "malian-cattle-boom",
+   "evaluations": 11894,
+   "seconds": 472,
+   "seed": 33,
+   "objective": {
+    "kind": "done"
+   },
+   "best": {
+    "done": 1124,
+    "at": 900,
+    "army": 5,
+    "armyValue": 900,
+    "villagers": 102,
+    "population": 117,
+    "age": 3,
+    "ages": [
+     360,
+     686,
+     927
+    ]
+   },
+   "runnersUp": [
+    {
+     "params": {
+      "lines": [
+       "sofa"
+      ],
+      "vilTarget": 150,
+      "landmarks": {
+       "2": "mansa-quarry",
+       "3": "grand-fulani-corral",
+       "4": "fort-of-the-huntress"
+      },
+      "lmBuilders": {
+       "2": 2,
+       "3": 7,
+       "4": 5
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 2
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 5
+      },
+      "maxProducers": 10,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1"
+       ],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2",
+        "upgrade_econ_resource_wood_harvest_rate_2",
+        "upgrade_econ_resource_gold_harvest_rate_2"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.2,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "cattle": {
+       "ranches": {
+        "2": 6,
+        "3": 1,
+        "4": 4
+       },
+       "herdTarget": 0,
+       "age": 1
+      },
+      "mech": {
+       "pitMines": 1
+      }
+     },
+     "result": {
+      "done": 1124,
+      "at": 900,
+      "army": 5,
+      "armyValue": 900,
+      "villagers": 102,
+      "population": 117,
+      "age": 3,
+      "ages": [
+       360,
+       686,
+       927
+      ]
+     }
+    },
+    {
+     "params": {
+      "lines": [
+       "sofa"
+      ],
+      "vilTarget": 150,
+      "landmarks": {
+       "2": "mansa-quarry",
+       "3": "grand-fulani-corral",
+       "4": "fort-of-the-huntress"
+      },
+      "lmBuilders": {
+       "2": 2,
+       "3": 7,
+       "4": 5
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 2
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 2,
+       "3": 1,
+       "4": 5
+      },
+      "maxProducers": 10,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1"
+       ],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2",
+        "upgrade_econ_resource_wood_harvest_rate_2",
+        "upgrade_econ_resource_gold_harvest_rate_2"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.2,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "cattle": {
+       "ranches": {
+        "2": 6,
+        "3": 1,
+        "4": 4
+       },
+       "herdTarget": 0,
+       "age": 1
+      },
+      "mech": {
+       "pitMines": 1
+      }
+     },
+     "result": {
+      "done": 1124,
+      "at": 900,
+      "army": 5,
+      "armyValue": 900,
+      "villagers": 102,
+      "population": 117,
+      "age": 3,
+      "ages": [
+       360,
+       686,
+       927
+      ]
+     }
+    },
+    {
+     "params": {
+      "lines": [
+       "sofa"
+      ],
+      "vilTarget": 150,
+      "landmarks": {
+       "2": "mansa-quarry",
+       "3": "grand-fulani-corral",
+       "4": "fort-of-the-huntress"
+      },
+      "lmBuilders": {
+       "2": 2,
+       "3": 7,
+       "4": 5
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 2
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 3,
+       "3": 1,
+       "4": 5
+      },
+      "maxProducers": 10,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1"
+       ],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2",
+        "upgrade_econ_resource_wood_harvest_rate_2",
+        "upgrade_econ_resource_gold_harvest_rate_2"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.2,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "cattle": {
+       "ranches": {
+        "2": 6,
+        "3": 1,
+        "4": 4
+       },
+       "herdTarget": 0,
+       "age": 1
+      },
+      "mech": {
+       "pitMines": 1
+      }
+     },
+     "result": {
+      "done": 1124,
+      "at": 900,
+      "army": 5,
+      "armyValue": 900,
+      "villagers": 102,
+      "population": 117,
+      "age": 3,
+      "ages": [
+       360,
+       686,
+       927
+      ]
+     }
+    },
+    {
+     "params": {
+      "lines": [
+       "sofa"
+      ],
+      "vilTarget": 150,
+      "landmarks": {
+       "2": "mansa-quarry",
+       "3": "grand-fulani-corral",
+       "4": "fort-of-the-huntress"
+      },
+      "lmBuilders": {
+       "2": 2,
+       "3": 7,
+       "4": 5
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 2
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 4,
+       "3": 1,
+       "4": 5
+      },
+      "maxProducers": 10,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1"
+       ],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2",
+        "upgrade_econ_resource_wood_harvest_rate_2",
+        "upgrade_econ_resource_gold_harvest_rate_2"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.2,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "cattle": {
+       "ranches": {
+        "2": 6,
+        "3": 1,
+        "4": 4
+       },
+       "herdTarget": 0,
+       "age": 1
+      },
+      "mech": {
+       "pitMines": 1
+      }
+     },
+     "result": {
+      "done": 1124,
+      "at": 900,
+      "army": 5,
+      "armyValue": 900,
+      "villagers": 102,
+      "population": 117,
+      "age": 3,
+      "ages": [
+       360,
+       686,
+       927
+      ]
+     }
+    },
+    {
+     "params": {
+      "lines": [
+       "sofa"
+      ],
+      "vilTarget": 150,
+      "landmarks": {
+       "2": "mansa-quarry",
+       "3": "grand-fulani-corral",
+       "4": "fort-of-the-huntress"
+      },
+      "lmBuilders": {
+       "2": 2,
+       "3": 7,
+       "4": 5
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 2
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 5,
+       "3": 1,
+       "4": 5
+      },
+      "maxProducers": 10,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1"
+       ],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2",
+        "upgrade_econ_resource_wood_harvest_rate_2",
+        "upgrade_econ_resource_gold_harvest_rate_2"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.2,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "cattle": {
+       "ranches": {
+        "2": 6,
+        "3": 1,
+        "4": 4
+       },
+       "herdTarget": 0,
+       "age": 1
+      },
+      "mech": {
+       "pitMines": 1
+      }
+     },
+     "result": {
+      "done": 1124,
+      "at": 900,
+      "army": 5,
+      "armyValue": 900,
+      "villagers": 102,
+      "population": 117,
+      "age": 3,
+      "ages": [
+       360,
+       686,
+       927
+      ]
+     }
+    }
+   ],
+   "searches": [
+    {
+     "seed": 33,
+     "evaluations": 11894,
+     "score": -1123999.1,
+     "best": {
+      "done": 1124,
+      "at": 900,
+      "army": 5,
+      "armyValue": 900,
+      "villagers": 102,
+      "population": 117,
+      "age": 3,
+      "ages": [
+       360,
+       686,
+       927
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 11531,
+     "score": -1134998.74,
+     "best": {
+      "done": 1135,
+      "at": 900,
+      "army": 7,
+      "armyValue": 1260,
+      "villagers": 96,
+      "population": 112,
+      "age": 4,
+      "ages": [
+       360,
+       674,
+       884
+      ]
+     }
+    },
+    {
+     "seed": 20261024,
+     "evaluations": 4029,
+     "score": -1135998.2,
+     "best": {
+      "done": 1136,
+      "at": 900,
+      "army": 10,
+      "armyValue": 1800,
+      "villagers": 93,
+      "population": 111,
+      "age": 4,
+      "ages": [
+       360,
+       723,
+       879
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 11563,
+     "score": -1138997.12,
+     "best": {
+      "done": 1139,
+      "at": 900,
+      "army": 16,
+      "armyValue": 2880,
+      "villagers": 91,
+      "population": 115,
+      "age": 3,
+      "ages": [
+       385,
+       723,
+       931
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 11238,
+     "score": -1138997.12,
+     "best": {
+      "done": 1139,
+      "at": 900,
+      "army": 16,
+      "armyValue": 2880,
+      "villagers": 91,
+      "population": 115,
+      "age": 3,
+      "ages": [
+       385,
+       723,
+       931
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 11619,
+     "score": -1146997.66,
+     "best": {
+      "done": 1147,
+      "at": 900,
+      "army": 13,
+      "armyValue": 2340,
+      "villagers": 88,
+      "population": 109,
+      "age": 4,
+      "ages": [
+       341,
+       682,
+       836
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 11381,
+     "score": -1148998.02,
+     "best": {
+      "done": 1149,
+      "at": 900,
+      "army": 11,
+      "armyValue": 1980,
+      "villagers": 93,
+      "population": 114,
+      "age": 3,
+      "ages": [
+       343,
+       701,
+       942
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "japanese-two-tc",
+   "evaluations": 10851,
+   "seconds": 546,
+   "seed": 33,
+   "objective": {
+    "kind": "done"
+   },
+   "best": {
+    "done": 1058,
+    "at": 900,
+    "army": 27,
+    "armyValue": 2160,
+    "villagers": 95,
+    "population": 130,
+    "age": 4,
+    "ages": [
+     314,
+     611,
+     835
+    ]
+   },
+   "runnersUp": [
+    {
+     "params": {
+      "lines": [
+       "onna-bugeisha"
+      ],
+      "vilTarget": 120,
+      "landmarks": {
+       "2": "kura-storehouse",
+       "3": "floating-gate",
+       "4": "tanegashima-gunsmith"
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 7
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 0
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 4
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1_jpn"
+       ],
+       "2": [
+        "upgrade_unit_town_center_wheelbarrow_2_jpn",
+        "upgrade_econ_resource_wood_harvest_rate_2_jpn",
+        "upgrade_econ_resource_gold_harvest_rate_2_jpn"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": true,
+      "window": 6,
+      "woodFloor": 0.3,
+      "goldBias": 0.6,
+      "armyAge": 3,
+      "civTechs": {
+       "upgrade_capital_tier_1_jpn": 3,
+       "upgrade_capital_tier_2_jpn": 4,
+       "upgrade_capital_tier_3_jpn": null
+      },
+      "mech": {
+       "yorishiro": [
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "lumber",
+        "lumber"
+       ]
+      }
+     },
+     "result": {
+      "done": 1058,
+      "at": 900,
+      "army": 27,
+      "armyValue": 2160,
+      "villagers": 95,
+      "population": 130,
+      "age": 4,
+      "ages": [
+       314,
+       611,
+       835
+      ]
+     }
+    },
+    {
+     "params": {
+      "lines": [
+       "onna-bugeisha"
+      ],
+      "vilTarget": 120,
+      "landmarks": {
+       "2": "kura-storehouse",
+       "3": "floating-gate",
+       "4": "tanegashima-gunsmith"
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 7
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 0
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 4
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1_jpn"
+       ],
+       "2": "all",
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 6,
+      "woodFloor": 0.3,
+      "goldBias": 0.6,
+      "armyAge": 3,
+      "civTechs": {
+       "upgrade_capital_tier_1_jpn": 3,
+       "upgrade_capital_tier_2_jpn": 4,
+       "upgrade_capital_tier_3_jpn": null
+      },
+      "mech": {
+       "yorishiro": [
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "lumber",
+        "lumber"
+       ]
+      }
+     },
+     "result": {
+      "done": 1058,
+      "at": 900,
+      "army": 27,
+      "armyValue": 2160,
+      "villagers": 95,
+      "population": 130,
+      "age": 4,
+      "ages": [
+       314,
+       611,
+       835
+      ]
+     }
+    },
+    {
+     "params": {
+      "lines": [
+       "onna-bugeisha"
+      ],
+      "vilTarget": 120,
+      "landmarks": {
+       "2": "kura-storehouse",
+       "3": "floating-gate",
+       "4": "tanegashima-gunsmith"
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 7
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 0
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 4
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1_jpn"
+       ],
+       "2": "all",
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 1,
+      "pauseForAge": true,
+      "window": 6,
+      "woodFloor": 0.3,
+      "goldBias": 0.6,
+      "armyAge": 3,
+      "civTechs": {
+       "upgrade_capital_tier_1_jpn": 3,
+       "upgrade_capital_tier_2_jpn": 4,
+       "upgrade_capital_tier_3_jpn": null
+      },
+      "mech": {
+       "yorishiro": [
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "lumber",
+        "lumber"
+       ]
+      }
+     },
+     "result": {
+      "done": 1058,
+      "at": 900,
+      "army": 27,
+      "armyValue": 2160,
+      "villagers": 95,
+      "population": 130,
+      "age": 4,
+      "ages": [
+       314,
+       611,
+       835
+      ]
+     }
+    },
+    {
+     "params": {
+      "lines": [
+       "onna-bugeisha"
+      ],
+      "vilTarget": 120,
+      "landmarks": {
+       "2": "kura-storehouse",
+       "3": "floating-gate",
+       "4": "tanegashima-gunsmith"
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 7
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 0
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 4
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1_jpn"
+       ],
+       "2": "all",
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": true,
+      "window": 6,
+      "woodFloor": 0.25,
+      "goldBias": 0.6,
+      "armyAge": 3,
+      "civTechs": {
+       "upgrade_capital_tier_1_jpn": 3,
+       "upgrade_capital_tier_2_jpn": 4,
+       "upgrade_capital_tier_3_jpn": null
+      },
+      "mech": {
+       "yorishiro": [
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "lumber",
+        "lumber"
+       ]
+      }
+     },
+     "result": {
+      "done": 1058,
+      "at": 900,
+      "army": 27,
+      "armyValue": 2160,
+      "villagers": 95,
+      "population": 130,
+      "age": 4,
+      "ages": [
+       314,
+       611,
+       835
+      ]
+     }
+    },
+    {
+     "params": {
+      "lines": [
+       "onna-bugeisha"
+      ],
+      "vilTarget": 120,
+      "landmarks": {
+       "2": "kura-storehouse",
+       "3": "floating-gate",
+       "4": "tanegashima-gunsmith"
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 7
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 0
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 4
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1_jpn"
+       ],
+       "2": "all",
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": true,
+      "window": 6,
+      "woodFloor": 0.3,
+      "goldBias": 0.8,
+      "armyAge": 3,
+      "civTechs": {
+       "upgrade_capital_tier_1_jpn": 3,
+       "upgrade_capital_tier_2_jpn": 4,
+       "upgrade_capital_tier_3_jpn": null
+      },
+      "mech": {
+       "yorishiro": [
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "farmhouse",
+        "lumber",
+        "lumber"
+       ]
+      }
+     },
+     "result": {
+      "done": 1058,
+      "at": 900,
+      "army": 27,
+      "armyValue": 2160,
+      "villagers": 95,
+      "population": 130,
+      "age": 4,
+      "ages": [
+       314,
+       611,
+       835
+      ]
+     }
+    }
+   ],
+   "searches": [
+    {
+     "seed": 33,
+     "evaluations": 10851,
+     "score": -1057997.84,
+     "best": {
+      "done": 1058,
+      "at": 900,
+      "army": 27,
+      "armyValue": 2160,
+      "villagers": 95,
+      "population": 130,
+      "age": 4,
+      "ages": [
+       314,
+       611,
+       835
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 12044,
+     "score": -1061997.44,
+     "best": {
+      "done": 1062,
+      "at": 900,
+      "army": 32,
+      "armyValue": 2560,
+      "villagers": 95,
+      "population": 134,
+      "age": 4,
+      "ages": [
+       314,
+       613,
+       851
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 11004,
+     "score": -1067997.44,
+     "best": {
+      "done": 1068,
+      "at": 900,
+      "army": 32,
+      "armyValue": 2560,
+      "villagers": 95,
+      "population": 134,
+      "age": 4,
+      "ages": [
+       314,
+       648,
+       862
+      ]
+     }
+    },
+    {
+     "seed": 20261024,
+     "evaluations": 4088,
+     "score": -1067997.84,
+     "best": {
+      "done": 1068,
+      "at": 900,
+      "army": 27,
+      "armyValue": 2160,
+      "villagers": 93,
+      "population": 126,
+      "age": 4,
+      "ages": [
+       297,
+       636,
+       854
+      ]
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 10711,
+     "score": -1067998,
+     "best": {
+      "done": 1068,
+      "at": 900,
+      "army": 25,
+      "armyValue": 2000,
+      "villagers": 98,
+      "population": 129,
+      "age": 4,
+      "ages": [
+       329,
+       676,
+       857
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 10266,
+     "score": -1068998.16,
+     "best": {
+      "done": 1069,
+      "at": 900,
+      "army": 23,
+      "armyValue": 1840,
+      "villagers": 105,
+      "population": 135,
+      "age": 4,
+      "ages": [
+       327,
+       651,
+       878
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 10805,
+     "score": -1070998.32,
+     "best": {
+      "done": 1071,
+      "at": 900,
+      "army": 21,
+      "armyValue": 1680,
+      "villagers": 106,
+      "population": 136,
+      "age": 4,
+      "ages": [
+       314,
+       697,
+       851
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "scots-skye-reivers",
+   "evaluations": 9197,
+   "seconds": 270,
+   "seed": 44,
+   "objective": {
+    "kind": "done",
+    "slack": 30
+   },
+   "best": {
+    "done": 1165,
+    "at": 900,
+    "army": 36,
+    "armyValue": 5400,
+    "villagers": 71,
+    "population": 113,
+    "age": 4,
+    "ages": [
+     369,
+     665,
+     714
+    ],
+    "firstUnit": 782,
+    "castle": 665,
+    "imperial": 714,
+    "muster": [
+     {
+      "key": "reivers",
+      "name": "Muster Border Reivers",
+      "start": 775,
+      "units": 21,
+      "food": 1350,
+      "tier": 1,
+      "lookout": true,
+      "actionDone": 780,
+      "allOut": 822
+     }
+    ],
+    "cattlePeak": 17,
+    "hallTier": 2,
+    "fishponds": 1,
+    "stewPonds": false,
+    "rebateGold": 1913,
+    "kirkmen": 1,
+    "armyAt": {
+     "900": {
+      "villagers": 71,
+      "army": 36,
+      "byLine": {
+       "border-reiver": 36
+      },
+      "pop": 113
+     },
+     "1200": {
+      "villagers": 90,
+      "army": 108,
+      "byLine": {
+       "border-reiver": 108
+      },
+      "pop": 200
+     },
+     "1500": {
+      "villagers": 90,
+      "army": 108,
+      "byLine": {
+       "border-reiver": 108
+      },
+      "pop": 200
+     }
+    }
+   },
+   "runnersUp": [
+    {
+     "params": {
+      "planId": "scots-skye-reivers",
+      "lines": [
+       "border-reiver"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "armyAge": 4,
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "vilTarget": 80,
+      "mech": {
+       "musters": [
+        "reivers"
+       ],
+       "kirkmen": 0,
+       "fishponds": 2,
+       "towerHouses": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+       },
+       "cattle": {
+        "1": 5,
+        "2": 9,
+        "3": 9,
+        "4": 21
+       },
+       "cattleFrom": 60,
+       "hallAge": 3,
+       "musterAge": {
+        "reivers": 4
+       }
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 4,
+       "4": 14
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 6,
+       "3": 6,
+       "4": 4
+      },
+      "maxProducers": 9,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2__scots"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.05,
+      "goldBias": 0.6,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true
+     },
+     "result": {
+      "done": 1312,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 70,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       339,
+       601,
+       689
+      ],
+      "firstUnit": 782,
+      "castle": 601,
+      "imperial": 689,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 775,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 780,
+        "allOut": 822
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2025,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 111,
+        "byLine": {
+         "border-reiver": 111
+        },
+        "pop": 198
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-skye-reivers",
+      "lines": [
+       "border-reiver"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "armyAge": 4,
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "vilTarget": 80,
+      "mech": {
+       "musters": [
+        "reivers"
+       ],
+       "kirkmen": 0,
+       "fishponds": 2,
+       "towerHouses": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+       },
+       "cattle": {
+        "1": 5,
+        "2": 9,
+        "3": 9,
+        "4": 21
+       },
+       "cattleFrom": 60,
+       "hallAge": 3,
+       "musterAge": {
+        "reivers": 4
+       }
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 4,
+       "4": 14
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 6,
+       "3": 6,
+       "4": 4
+      },
+      "maxProducers": 9,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2__scots"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.05,
+      "goldBias": 0.8,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true
+     },
+     "result": {
+      "done": 1312,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 70,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       339,
+       601,
+       689
+      ],
+      "firstUnit": 782,
+      "castle": 601,
+      "imperial": 689,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 775,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 780,
+        "allOut": 822
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1958,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 111,
+        "byLine": {
+         "border-reiver": 111
+        },
+        "pop": 198
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-skye-reivers",
+      "lines": [
+       "border-reiver"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "armyAge": 4,
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "vilTarget": 80,
+      "mech": {
+       "musters": [
+        "reivers"
+       ],
+       "kirkmen": 0,
+       "fishponds": 2,
+       "towerHouses": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+       },
+       "cattle": {
+        "1": 5,
+        "2": 13,
+        "3": 9,
+        "4": 21
+       },
+       "cattleFrom": 60,
+       "hallAge": 3,
+       "musterAge": {
+        "reivers": 4
+       }
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 4,
+       "4": 14
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 6,
+       "3": 6,
+       "4": 4
+      },
+      "maxProducers": 9,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2__scots"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.05,
+      "goldBias": 0.6,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true
+     },
+     "result": {
+      "done": 1312,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 70,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       339,
+       601,
+       689
+      ],
+      "firstUnit": 782,
+      "castle": 601,
+      "imperial": 689,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 775,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 780,
+        "allOut": 822
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2025,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 111,
+        "byLine": {
+         "border-reiver": 111
+        },
+        "pop": 198
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-skye-reivers",
+      "lines": [
+       "border-reiver"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "armyAge": 4,
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "vilTarget": 80,
+      "mech": {
+       "musters": [
+        "reivers"
+       ],
+       "kirkmen": 0,
+       "fishponds": 2,
+       "towerHouses": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+       },
+       "cattle": {
+        "1": 5,
+        "2": 9,
+        "3": 9,
+        "4": 17
+       },
+       "cattleFrom": 60,
+       "hallAge": 3,
+       "musterAge": {
+        "reivers": 4
+       }
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 4,
+       "4": 14
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 6,
+       "3": 6,
+       "4": 4
+      },
+      "maxProducers": 9,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2__scots"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.05,
+      "goldBias": 0.6,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true
+     },
+     "result": {
+      "done": 1312,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 70,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       339,
+       601,
+       689
+      ],
+      "firstUnit": 782,
+      "castle": 601,
+      "imperial": 689,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 775,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 780,
+        "allOut": 822
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2025,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 111,
+        "byLine": {
+         "border-reiver": 111
+        },
+        "pop": 198
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-skye-reivers",
+      "lines": [
+       "border-reiver"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "armyAge": 4,
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "vilTarget": 80,
+      "mech": {
+       "musters": [
+        "reivers"
+       ],
+       "kirkmen": 0,
+       "fishponds": 2,
+       "towerHouses": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+       },
+       "cattle": {
+        "1": 5,
+        "2": 9,
+        "3": 9,
+        "4": 21
+       },
+       "cattleFrom": 0,
+       "hallAge": 3,
+       "musterAge": {
+        "reivers": 4
+       }
+      },
+      "lmBuilders": {
+       "2": 3,
+       "3": 4,
+       "4": 14
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 6,
+       "3": 6,
+       "4": 4
+      },
+      "maxProducers": 9,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2__scots"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.05,
+      "goldBias": 0.6,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true
+     },
+     "result": {
+      "done": 1312,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 70,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       339,
+       601,
+       689
+      ],
+      "firstUnit": 782,
+      "castle": 601,
+      "imperial": 689,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 775,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 780,
+        "allOut": 822
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2025,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 111,
+        "byLine": {
+         "border-reiver": 111
+        },
+        "pop": 198
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    }
+   ],
+   "searches": [
+    {
+     "seed": 44,
+     "evaluations": 9197,
+     "score": -1165.714,
+     "best": {
+      "done": 1165,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 71,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       369,
+       665,
+       714
+      ],
+      "firstUnit": 782,
+      "castle": 665,
+      "imperial": 714,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 775,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 780,
+        "allOut": 822
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 2,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1913,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 71,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 90,
+        "army": 108,
+        "byLine": {
+         "border-reiver": 108
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 90,
+        "army": 108,
+        "byLine": {
+         "border-reiver": 108
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 8610,
+     "score": -1189.713,
+     "best": {
+      "done": 1189,
+      "at": 900,
+      "army": 37,
+      "armyValue": 5550,
+      "villagers": 70,
+      "population": 115,
+      "age": 4,
+      "ages": [
+       340,
+       624,
+       713
+      ],
+      "firstUnit": 804,
+      "castle": 624,
+      "imperial": 713,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 797,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 802,
+        "allOut": 844
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 2,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1995,
+      "kirkmen": 2,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 37,
+        "byLine": {
+         "border-reiver": 37
+        },
+        "pop": 115
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 117,
+        "byLine": {
+         "border-reiver": 117
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 117,
+        "byLine": {
+         "border-reiver": 117
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 8923,
+     "score": -1214.699,
+     "best": {
+      "done": 1214,
+      "at": 900,
+      "army": 38,
+      "armyValue": 5700,
+      "villagers": 71,
+      "population": 114,
+      "age": 4,
+      "ages": [
+       361,
+       636,
+       699
+      ],
+      "firstUnit": 780,
+      "castle": 636,
+      "imperial": 699,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 773,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 778,
+        "allOut": 820
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 2,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1823,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 71,
+        "army": 38,
+        "byLine": {
+         "border-reiver": 38
+        },
+        "pop": 114
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 116,
+        "byLine": {
+         "border-reiver": 116
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 8743,
+     "score": -1215.71,
+     "best": {
+      "done": 1215,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 70,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       361,
+       649,
+       710
+      ],
+      "firstUnit": 786,
+      "castle": 649,
+      "imperial": 710,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 779,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 784,
+        "allOut": 826
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1800,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 113,
+        "byLine": {
+         "border-reiver": 113
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 7977,
+     "score": -1219.703,
+     "best": {
+      "done": 1219,
+      "at": 900,
+      "army": 39,
+      "armyValue": 5850,
+      "villagers": 71,
+      "population": 117,
+      "age": 4,
+      "ages": [
+       361,
+       616,
+       703
+      ],
+      "firstUnit": 776,
+      "castle": 616,
+      "imperial": 703,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 769,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 774,
+        "allOut": 816
+       }
+      ],
+      "cattlePeak": 13,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1800,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 71,
+        "army": 39,
+        "byLine": {
+         "border-reiver": 39
+        },
+        "pop": 117
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 111,
+        "byLine": {
+         "border-reiver": 111
+        },
+        "pop": 198
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 8627,
+     "score": -1236.706,
+     "best": {
+      "done": 1236,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 70,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       319,
+       646,
+       706
+      ],
+      "firstUnit": 784,
+      "castle": 646,
+      "imperial": 706,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 777,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 782,
+        "allOut": 824
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1868,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 85,
+        "army": 109,
+        "byLine": {
+         "border-reiver": 109
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 85,
+        "army": 113,
+        "byLine": {
+         "border-reiver": 113
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 8587,
+     "score": -1237.712,
+     "best": {
+      "done": 1237,
+      "at": 900,
+      "army": 36,
+      "armyValue": 5400,
+      "villagers": 70,
+      "population": 113,
+      "age": 4,
+      "ages": [
+       357,
+       563,
+       712
+      ],
+      "firstUnit": 792,
+      "castle": 563,
+      "imperial": 712,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 785,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 790,
+        "allOut": 832
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1740,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 70,
+        "army": 36,
+        "byLine": {
+         "border-reiver": 36
+        },
+        "pop": 113
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 107,
+        "byLine": {
+         "border-reiver": 107
+        },
+        "pop": 194
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 8244,
+     "score": -1245.705,
+     "best": {
+      "done": 1245,
+      "at": 900,
+      "army": 37,
+      "armyValue": 5550,
+      "villagers": 72,
+      "population": 116,
+      "age": 4,
+      "ages": [
+       281,
+       644,
+       705
+      ],
+      "firstUnit": 801,
+      "castle": 644,
+      "imperial": 705,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 794,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 799,
+        "allOut": 841
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1815,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 72,
+        "army": 37,
+        "byLine": {
+         "border-reiver": 37
+        },
+        "pop": 116
+       },
+       "1200": {
+        "villagers": 85,
+        "army": 107,
+        "byLine": {
+         "border-reiver": 107
+        },
+        "pop": 199
+       },
+       "1500": {
+        "villagers": 85,
+        "army": 113,
+        "byLine": {
+         "border-reiver": 113
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 8337,
+     "score": -1249.702,
+     "best": {
+      "done": 1249,
+      "at": 900,
+      "army": 35,
+      "armyValue": 5250,
+      "villagers": 69,
+      "population": 110,
+      "age": 4,
+      "ages": [
+       368,
+       643,
+       702
+      ],
+      "firstUnit": 800,
+      "castle": 643,
+      "imperial": 702,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 793,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 798,
+        "allOut": 840
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1823,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 69,
+        "army": 35,
+        "byLine": {
+         "border-reiver": 35
+        },
+        "pop": 110
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 104,
+        "byLine": {
+         "border-reiver": 104
+        },
+        "pop": 191
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 7986,
+     "score": -1249.703,
+     "best": {
+      "done": 1249,
+      "at": 900,
+      "army": 37,
+      "armyValue": 5550,
+      "villagers": 71,
+      "population": 115,
+      "age": 4,
+      "ages": [
+       334,
+       592,
+       703
+      ],
+      "firstUnit": 782,
+      "castle": 592,
+      "imperial": 703,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 775,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 780,
+        "allOut": 822
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 2,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1733,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 71,
+        "army": 37,
+        "byLine": {
+         "border-reiver": 37
+        },
+        "pop": 115
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 118,
+        "byLine": {
+         "border-reiver": 118
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 7656,
+     "score": -1258.691,
+     "best": {
+      "done": 1258,
+      "at": 900,
+      "army": 35,
+      "armyValue": 5250,
+      "villagers": 64,
+      "population": 108,
+      "age": 4,
+      "ages": [
+       307,
+       594,
+       691
+      ],
+      "firstUnit": 790,
+      "castle": 594,
+      "imperial": 691,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 783,
+        "units": 21,
+        "food": 1350,
+        "tier": 0,
+        "lookout": true,
+        "actionDone": 788,
+        "allOut": 830
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 1,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1838,
+      "kirkmen": 2,
+      "armyAt": {
+       "900": {
+        "villagers": 64,
+        "army": 35,
+        "byLine": {
+         "border-reiver": 35
+        },
+        "pop": 108
+       },
+       "1200": {
+        "villagers": 75,
+        "army": 110,
+        "byLine": {
+         "border-reiver": 110
+        },
+        "pop": 193
+       },
+       "1500": {
+        "villagers": 75,
+        "army": 122,
+        "byLine": {
+         "border-reiver": 122
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 8784,
+     "score": -1282.704,
+     "best": {
+      "done": 1282,
+      "at": 900,
+      "army": 44,
+      "armyValue": 6600,
+      "villagers": 62,
+      "population": 114,
+      "age": 4,
+      "ages": [
+       382,
+       641,
+       704
+      ],
+      "firstUnit": 770,
+      "castle": 641,
+      "imperial": 704,
+      "muster": [
+       {
+        "key": "reivers",
+        "name": "Muster Border Reivers",
+        "start": 763,
+        "units": 21,
+        "food": 1350,
+        "tier": 1,
+        "lookout": true,
+        "actionDone": 768,
+        "allOut": 810
+       }
+      ],
+      "cattlePeak": 17,
+      "hallTier": 2,
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1710,
+      "kirkmen": 1,
+      "armyAt": {
+       "900": {
+        "villagers": 62,
+        "army": 44,
+        "byLine": {
+         "border-reiver": 44
+        },
+        "pop": 114
+       },
+       "1200": {
+        "villagers": 70,
+        "army": 127,
+        "byLine": {
+         "border-reiver": 127
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 70,
+        "army": 128,
+        "byLine": {
+         "border-reiver": 128
+        },
+        "pop": 200
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "scots-fc-infantry",
+   "evaluations": 10804,
+   "seconds": 355,
+   "seed": 33,
+   "objective": {
+    "kind": "done",
+    "slack": 30,
+    "firstUnitBy": 300
+   },
+   "best": {
+    "done": 1291,
+    "at": 900,
+    "army": 34,
+    "armyValue": 3315,
+    "villagers": 48,
+    "population": 94,
+    "age": 4,
+    "ages": [
+     312,
+     508,
+     856
+    ],
+    "firstUnit": 299,
+    "firstUnitBy": 300,
+    "castle": 508,
+    "imperial": 856,
+    "relicsStart": 539,
+    "firstRelic": 619,
+    "relicsPlaced": 3,
+    "musters": [],
+    "fishponds": 2,
+    "stewPonds": true,
+    "rebateGold": 1530,
+    "kirkmen": 4,
+    "armyAt": {
+     "600": {
+      "villagers": 34,
+      "army": 9,
+      "byLine": {
+       "pikeman": 5,
+       "man-at-arms": 4
+      },
+      "pop": 53
+     },
+     "900": {
+      "villagers": 48,
+      "army": 34,
+      "byLine": {
+       "pikeman": 17,
+       "man-at-arms": 17
+      },
+      "pop": 94
+     },
+     "1200": {
+      "villagers": 63,
+      "army": 106,
+      "byLine": {
+       "pikeman": 52,
+       "man-at-arms": 54
+      },
+      "pop": 181
+     }
+    }
+   },
+   "runnersUp": [
+    {
+     "params": {
+      "planId": "scots-fc-infantry",
+      "lines": [
+       "pikeman",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "snowdoun-gate",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 0
+      },
+      "vilTarget": 75,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen",
+        "cateran",
+        "gallowglass"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 5,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 4,
+       "3": 12,
+       "4": 14
+      },
+      "tcBuilders": 4,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 2
+      },
+      "maxProducers": 5,
+      "ecoTechs": {
+       "1": [],
+       "2": [],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.25,
+      "goldBias": 0.8,
+      "armyAge": 1,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": 3
+      },
+      "producerWood": true,
+      "bankAware": null
+     },
+     "result": {
+      "done": 1378,
+      "at": 900,
+      "army": 37,
+      "armyValue": 4765,
+      "villagers": 48,
+      "population": 95,
+      "age": 3,
+      "ages": [
+       255,
+       478,
+       949
+      ],
+      "firstUnit": 260,
+      "firstUnitBy": 300,
+      "castle": 478,
+      "imperial": 949,
+      "relicsStart": 510,
+      "firstRelic": 590,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 532,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 537,
+        "allOut": 553
+       },
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 1003,
+        "units": 13,
+        "food": 1350,
+        "tier": 0,
+        "lookout": true,
+        "actionDone": 1008,
+        "allOut": 1034
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1410,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 15,
+        "byLine": {
+         "pikeman": 13,
+         "gallowglass": 2
+        },
+        "pop": 58
+       },
+       "900": {
+        "villagers": 48,
+        "army": 37,
+        "byLine": {
+         "pikeman": 25,
+         "gallowglass": 12
+        },
+        "pop": 95
+       },
+       "1200": {
+        "villagers": 62,
+        "army": 84,
+        "byLine": {
+         "pikeman": 42,
+         "gallowglass": 42
+        },
+        "pop": 158
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-fc-infantry",
+      "lines": [
+       "pikeman",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "snowdoun-gate",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 0
+      },
+      "vilTarget": 75,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen",
+        "cateran",
+        "gallowglass"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 5,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 4,
+       "3": 12,
+       "4": 14
+      },
+      "tcBuilders": 6,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 2
+      },
+      "maxProducers": 5,
+      "ecoTechs": {
+       "1": [],
+       "2": [],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.25,
+      "goldBias": 0.8,
+      "armyAge": 1,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": 3
+      },
+      "producerWood": true,
+      "bankAware": null
+     },
+     "result": {
+      "done": 1378,
+      "at": 900,
+      "army": 37,
+      "armyValue": 4765,
+      "villagers": 48,
+      "population": 95,
+      "age": 3,
+      "ages": [
+       255,
+       478,
+       949
+      ],
+      "firstUnit": 260,
+      "firstUnitBy": 300,
+      "castle": 478,
+      "imperial": 949,
+      "relicsStart": 510,
+      "firstRelic": 590,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 532,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 537,
+        "allOut": 553
+       },
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 1003,
+        "units": 13,
+        "food": 1350,
+        "tier": 0,
+        "lookout": true,
+        "actionDone": 1008,
+        "allOut": 1034
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1410,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 15,
+        "byLine": {
+         "pikeman": 13,
+         "gallowglass": 2
+        },
+        "pop": 58
+       },
+       "900": {
+        "villagers": 48,
+        "army": 37,
+        "byLine": {
+         "pikeman": 25,
+         "gallowglass": 12
+        },
+        "pop": 95
+       },
+       "1200": {
+        "villagers": 62,
+        "army": 84,
+        "byLine": {
+         "pikeman": 42,
+         "gallowglass": 42
+        },
+        "pop": 158
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-fc-infantry",
+      "lines": [
+       "pikeman",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "snowdoun-gate",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 0
+      },
+      "vilTarget": 75,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen",
+        "cateran",
+        "gallowglass"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 5,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 4,
+       "3": 12,
+       "4": 14
+      },
+      "tcBuilders": 8,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 2
+      },
+      "maxProducers": 5,
+      "ecoTechs": {
+       "1": [],
+       "2": [],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.25,
+      "goldBias": 0.8,
+      "armyAge": 1,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": 3
+      },
+      "producerWood": true,
+      "bankAware": null
+     },
+     "result": {
+      "done": 1378,
+      "at": 900,
+      "army": 37,
+      "armyValue": 4765,
+      "villagers": 48,
+      "population": 95,
+      "age": 3,
+      "ages": [
+       255,
+       478,
+       949
+      ],
+      "firstUnit": 260,
+      "firstUnitBy": 300,
+      "castle": 478,
+      "imperial": 949,
+      "relicsStart": 510,
+      "firstRelic": 590,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 532,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 537,
+        "allOut": 553
+       },
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 1003,
+        "units": 13,
+        "food": 1350,
+        "tier": 0,
+        "lookout": true,
+        "actionDone": 1008,
+        "allOut": 1034
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1410,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 15,
+        "byLine": {
+         "pikeman": 13,
+         "gallowglass": 2
+        },
+        "pop": 58
+       },
+       "900": {
+        "villagers": 48,
+        "army": 37,
+        "byLine": {
+         "pikeman": 25,
+         "gallowglass": 12
+        },
+        "pop": 95
+       },
+       "1200": {
+        "villagers": 62,
+        "army": 84,
+        "byLine": {
+         "pikeman": 42,
+         "gallowglass": 42
+        },
+        "pop": 158
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-fc-infantry",
+      "lines": [
+       "pikeman",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "snowdoun-gate",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 0
+      },
+      "vilTarget": 75,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen",
+        "cateran",
+        "gallowglass"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 5,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 4,
+       "3": 12,
+       "4": 14
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 2
+      },
+      "maxProducers": 5,
+      "ecoTechs": {
+       "1": [],
+       "2": [],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.25,
+      "goldBias": 0.8,
+      "armyAge": 1,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": 3
+      },
+      "producerWood": true,
+      "bankAware": null
+     },
+     "result": {
+      "done": 1378,
+      "at": 900,
+      "army": 37,
+      "armyValue": 4765,
+      "villagers": 48,
+      "population": 95,
+      "age": 3,
+      "ages": [
+       255,
+       478,
+       949
+      ],
+      "firstUnit": 260,
+      "firstUnitBy": 300,
+      "castle": 478,
+      "imperial": 949,
+      "relicsStart": 510,
+      "firstRelic": 590,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 532,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 537,
+        "allOut": 553
+       },
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 1003,
+        "units": 13,
+        "food": 1350,
+        "tier": 0,
+        "lookout": true,
+        "actionDone": 1008,
+        "allOut": 1034
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1410,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 15,
+        "byLine": {
+         "pikeman": 13,
+         "gallowglass": 2
+        },
+        "pop": 58
+       },
+       "900": {
+        "villagers": 48,
+        "army": 37,
+        "byLine": {
+         "pikeman": 25,
+         "gallowglass": 12
+        },
+        "pop": 95
+       },
+       "1200": {
+        "villagers": 62,
+        "army": 84,
+        "byLine": {
+         "pikeman": 42,
+         "gallowglass": 42
+        },
+        "pop": 158
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-fc-infantry",
+      "lines": [
+       "pikeman",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "snowdoun-gate",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 0
+      },
+      "vilTarget": 75,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen",
+        "cateran",
+        "gallowglass"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 5,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 4,
+       "3": 12,
+       "4": 14
+      },
+      "tcBuilders": 2,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 2
+      },
+      "maxProducers": 6,
+      "ecoTechs": {
+       "1": [],
+       "2": [],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 5,
+      "woodFloor": 0.25,
+      "goldBias": 0.8,
+      "armyAge": 1,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": 3
+      },
+      "producerWood": true,
+      "bankAware": null
+     },
+     "result": {
+      "done": 1378,
+      "at": 900,
+      "army": 37,
+      "armyValue": 4765,
+      "villagers": 48,
+      "population": 95,
+      "age": 3,
+      "ages": [
+       255,
+       478,
+       949
+      ],
+      "firstUnit": 260,
+      "firstUnitBy": 300,
+      "castle": 478,
+      "imperial": 949,
+      "relicsStart": 510,
+      "firstRelic": 590,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 532,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 537,
+        "allOut": 553
+       },
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 1003,
+        "units": 13,
+        "food": 1350,
+        "tier": 0,
+        "lookout": true,
+        "actionDone": 1008,
+        "allOut": 1034
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1410,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 15,
+        "byLine": {
+         "pikeman": 13,
+         "gallowglass": 2
+        },
+        "pop": 58
+       },
+       "900": {
+        "villagers": 48,
+        "army": 37,
+        "byLine": {
+         "pikeman": 25,
+         "gallowglass": 12
+        },
+        "pop": 95
+       },
+       "1200": {
+        "villagers": 62,
+        "army": 84,
+        "byLine": {
+         "pikeman": 42,
+         "gallowglass": 42
+        },
+        "pop": 158
+       }
+      }
+     }
+    }
+   ],
+   "searches": [
+    {
+     "seed": 33,
+     "evaluations": 10804,
+     "score": -1291.508,
+     "best": {
+      "done": 1291,
+      "at": 900,
+      "army": 34,
+      "armyValue": 3315,
+      "villagers": 48,
+      "population": 94,
+      "age": 4,
+      "ages": [
+       312,
+       508,
+       856
+      ],
+      "firstUnit": 299,
+      "firstUnitBy": 300,
+      "castle": 508,
+      "imperial": 856,
+      "relicsStart": 539,
+      "firstRelic": 619,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1530,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 9,
+        "byLine": {
+         "pikeman": 5,
+         "man-at-arms": 4
+        },
+        "pop": 53
+       },
+       "900": {
+        "villagers": 48,
+        "army": 34,
+        "byLine": {
+         "pikeman": 17,
+         "man-at-arms": 17
+        },
+        "pop": 94
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 106,
+        "byLine": {
+         "pikeman": 52,
+         "man-at-arms": 54
+        },
+        "pop": 181
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 10592,
+     "score": -1301.513,
+     "best": {
+      "done": 1248,
+      "at": 900,
+      "army": 54,
+      "armyValue": 5265,
+      "villagers": 48,
+      "population": 114,
+      "age": 4,
+      "ages": [
+       240,
+       513,
+       873
+      ],
+      "firstUnit": 292,
+      "firstUnitBy": 300,
+      "castle": 513,
+      "imperial": 873,
+      "relicsStart": 561,
+      "firstRelic": 641,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1373,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 10,
+        "byLine": {
+         "pikeman": 5,
+         "man-at-arms": 5
+        },
+        "pop": 54
+       },
+       "900": {
+        "villagers": 48,
+        "army": 54,
+        "byLine": {
+         "pikeman": 27,
+         "man-at-arms": 27
+        },
+        "pop": 114
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 115,
+        "byLine": {
+         "pikeman": 57,
+         "man-at-arms": 58
+        },
+        "pop": 188
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 9175,
+     "score": -1303.501,
+     "best": {
+      "done": 1303,
+      "at": 900,
+      "army": 22,
+      "armyValue": 2145,
+      "villagers": 48,
+      "population": 77,
+      "age": 4,
+      "ages": [
+       283,
+       501,
+       875
+      ],
+      "firstUnit": 280,
+      "firstUnitBy": 300,
+      "castle": 501,
+      "imperial": 875,
+      "relicsStart": 528,
+      "firstRelic": 608,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1553,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 48,
+        "army": 22,
+        "byLine": {
+         "pikeman": 11,
+         "man-at-arms": 11
+        },
+        "pop": 77
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 88,
+        "byLine": {
+         "pikeman": 45,
+         "man-at-arms": 43
+        },
+        "pop": 161
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 10897,
+     "score": -1309.511,
+     "best": {
+      "done": 1309,
+      "at": 900,
+      "army": 19,
+      "armyValue": 1840,
+      "villagers": 48,
+      "population": 74,
+      "age": 4,
+      "ages": [
+       243,
+       511,
+       865
+      ],
+      "firstUnit": 259,
+      "firstUnitBy": 300,
+      "castle": 511,
+      "imperial": 865,
+      "relicsStart": 538,
+      "firstRelic": 618,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1590,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 6,
+        "byLine": {
+         "pikeman": 3,
+         "man-at-arms": 3
+        },
+        "pop": 45
+       },
+       "900": {
+        "villagers": 48,
+        "army": 19,
+        "byLine": {
+         "pikeman": 10,
+         "man-at-arms": 9
+        },
+        "pop": 74
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 77,
+        "byLine": {
+         "pikeman": 39,
+         "man-at-arms": 38
+        },
+        "pop": 150
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 8799,
+     "score": -1334.499,
+     "best": {
+      "done": 1267,
+      "at": 900,
+      "army": 33,
+      "armyValue": 3205,
+      "villagers": 48,
+      "population": 90,
+      "age": 4,
+      "ages": [
+       301,
+       499,
+       839
+      ],
+      "firstUnit": 296,
+      "firstUnitBy": 300,
+      "castle": 499,
+      "imperial": 839,
+      "relicsStart": 531,
+      "firstRelic": 611,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1328,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 6,
+        "byLine": {
+         "pikeman": 5,
+         "man-at-arms": 1
+        },
+        "pop": 48
+       },
+       "900": {
+        "villagers": 48,
+        "army": 33,
+        "byLine": {
+         "pikeman": 17,
+         "man-at-arms": 16
+        },
+        "pop": 90
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 105,
+        "byLine": {
+         "pikeman": 54,
+         "man-at-arms": 51
+        },
+        "pop": 184
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 8915,
+     "score": -1339.5,
+     "best": {
+      "done": 1299,
+      "at": 900,
+      "army": 23,
+      "armyValue": 2230,
+      "villagers": 48,
+      "population": 80,
+      "age": 4,
+      "ages": [
+       255,
+       500,
+       870
+      ],
+      "firstUnit": 263,
+      "firstUnitBy": 300,
+      "castle": 500,
+      "imperial": 870,
+      "relicsStart": 529,
+      "firstRelic": 609,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1283,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 6,
+        "byLine": {
+         "pikeman": 3,
+         "man-at-arms": 3
+        },
+        "pop": 45
+       },
+       "900": {
+        "villagers": 48,
+        "army": 23,
+        "byLine": {
+         "pikeman": 12,
+         "man-at-arms": 11
+        },
+        "pop": 80
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 98,
+        "byLine": {
+         "pikeman": 50,
+         "man-at-arms": 48
+        },
+        "pop": 171
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 8665,
+     "score": -1344.501,
+     "best": {
+      "done": 1293,
+      "at": 900,
+      "army": 23,
+      "armyValue": 2230,
+      "villagers": 48,
+      "population": 79,
+      "age": 4,
+      "ages": [
+       274,
+       501,
+       865
+      ],
+      "firstUnit": 298,
+      "firstUnitBy": 300,
+      "castle": 501,
+      "imperial": 865,
+      "relicsStart": 528,
+      "firstRelic": 608,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 291,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 296,
+        "allOut": 312
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1373,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 9,
+        "byLine": {
+         "pikeman": 8,
+         "man-at-arms": 1
+        },
+        "pop": 48
+       },
+       "900": {
+        "villagers": 48,
+        "army": 23,
+        "byLine": {
+         "pikeman": 12,
+         "man-at-arms": 11
+        },
+        "pop": 79
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 94,
+        "byLine": {
+         "pikeman": 48,
+         "man-at-arms": 46
+        },
+        "pop": 168
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 8833,
+     "score": -1345.499,
+     "best": {
+      "done": 1297,
+      "at": 900,
+      "army": 21,
+      "armyValue": 2035,
+      "villagers": 48,
+      "population": 77,
+      "age": 4,
+      "ages": [
+       271,
+       499,
+       868
+      ],
+      "firstUnit": 276,
+      "firstUnitBy": 300,
+      "castle": 499,
+      "imperial": 868,
+      "relicsStart": 532,
+      "firstRelic": 612,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1418,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 6,
+        "byLine": {
+         "pikeman": 3,
+         "man-at-arms": 3
+        },
+        "pop": 44
+       },
+       "900": {
+        "villagers": 48,
+        "army": 21,
+        "byLine": {
+         "pikeman": 11,
+         "man-at-arms": 10
+        },
+        "pop": 77
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 86,
+        "byLine": {
+         "pikeman": 44,
+         "man-at-arms": 42
+        },
+        "pop": 162
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 7804,
+     "score": -1352.499,
+     "best": {
+      "done": 1313,
+      "at": 900,
+      "army": 18,
+      "armyValue": 1755,
+      "villagers": 48,
+      "population": 73,
+      "age": 4,
+      "ages": [
+       242,
+       499,
+       884
+      ],
+      "firstUnit": 264,
+      "firstUnitBy": 300,
+      "castle": 499,
+      "imperial": 884,
+      "relicsStart": 536,
+      "firstRelic": 616,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1575,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 6,
+        "byLine": {
+         "pikeman": 3,
+         "man-at-arms": 3
+        },
+        "pop": 44
+       },
+       "900": {
+        "villagers": 48,
+        "army": 18,
+        "byLine": {
+         "pikeman": 9,
+         "man-at-arms": 9
+        },
+        "pop": 73
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 78,
+        "byLine": {
+         "pikeman": 40,
+         "man-at-arms": 38
+        },
+        "pop": 154
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 8509,
+     "score": -1355.501,
+     "best": {
+      "done": 1355,
+      "at": 900,
+      "army": 33,
+      "armyValue": 4830,
+      "villagers": 48,
+      "population": 91,
+      "age": 3,
+      "ages": [
+       279,
+       501,
+       924
+      ],
+      "firstUnit": 299,
+      "firstUnitBy": 300,
+      "castle": 501,
+      "imperial": 924,
+      "relicsStart": 549,
+      "firstRelic": 629,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 622,
+        "units": 7,
+        "food": 1350,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 627,
+        "allOut": 641
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1508,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 5,
+        "byLine": {
+         "pikeman": 5,
+         "gallowglass": 0
+        },
+        "pop": 47
+       },
+       "900": {
+        "villagers": 48,
+        "army": 33,
+        "byLine": {
+         "pikeman": 18,
+         "gallowglass": 15
+        },
+        "pop": 91
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 80,
+        "byLine": {
+         "pikeman": 41,
+         "gallowglass": 39
+        },
+        "pop": 156
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 7759,
+     "score": -1396.508,
+     "best": {
+      "done": 1340,
+      "at": 900,
+      "army": 19,
+      "armyValue": 1840,
+      "villagers": 48,
+      "population": 74,
+      "age": 3,
+      "ages": [
+       274,
+       508,
+       912
+      ],
+      "firstUnit": 290,
+      "firstUnitBy": 300,
+      "castle": 508,
+      "imperial": 912,
+      "relicsStart": 535,
+      "firstRelic": 615,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 1418,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 48,
+        "army": 19,
+        "byLine": {
+         "pikeman": 10,
+         "man-at-arms": 9
+        },
+        "pop": 74
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 82,
+        "byLine": {
+         "pikeman": 42,
+         "man-at-arms": 40
+        },
+        "pop": 156
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 7642,
+     "score": -1435.498,
+     "best": {
+      "done": 1408,
+      "at": 900,
+      "army": 30,
+      "armyValue": 4575,
+      "villagers": 48,
+      "population": 87,
+      "age": 4,
+      "ages": [
+       279,
+       498,
+       793
+      ],
+      "firstUnit": 299,
+      "firstUnitBy": 300,
+      "castle": 498,
+      "imperial": 793,
+      "relicsStart": 553,
+      "firstRelic": 633,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 587,
+        "units": 7,
+        "food": 1350,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 592,
+        "allOut": 606
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 1553,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 9,
+        "byLine": {
+         "pikeman": 6,
+         "gallowglass": 3
+        },
+        "pop": 55
+       },
+       "900": {
+        "villagers": 48,
+        "army": 30,
+        "byLine": {
+         "pikeman": 15,
+         "gallowglass": 15
+        },
+        "pop": 87
+       },
+       "1200": {
+        "villagers": 62,
+        "army": 74,
+        "byLine": {
+         "pikeman": 37,
+         "gallowglass": 37
+        },
+        "pop": 149
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 9792,
+     "score": -1436.502,
+     "best": {
+      "done": 1298,
+      "at": 900,
+      "army": 23,
+      "armyValue": 2230,
+      "villagers": 48,
+      "population": 80,
+      "age": 4,
+      "ages": [
+       255,
+       502,
+       866
+      ],
+      "firstUnit": 271,
+      "firstUnitBy": 300,
+      "castle": 502,
+      "imperial": 866,
+      "relicsStart": 532,
+      "firstRelic": 612,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1305,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 6,
+        "byLine": {
+         "pikeman": 3,
+         "man-at-arms": 3
+        },
+        "pop": 44
+       },
+       "900": {
+        "villagers": 48,
+        "army": 23,
+        "byLine": {
+         "pikeman": 12,
+         "man-at-arms": 11
+        },
+        "pop": 80
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 93,
+        "byLine": {
+         "pikeman": 47,
+         "man-at-arms": 46
+        },
+        "pop": 167
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 8674,
+     "score": -1443.508,
+     "best": {
+      "done": 1293,
+      "at": 900,
+      "army": 23,
+      "armyValue": 2230,
+      "villagers": 48,
+      "population": 79,
+      "age": 4,
+      "ages": [
+       242,
+       508,
+       865
+      ],
+      "firstUnit": 264,
+      "firstUnitBy": 300,
+      "castle": 508,
+      "imperial": 865,
+      "relicsStart": 535,
+      "firstRelic": 615,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 1373,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 5,
+        "byLine": {
+         "pikeman": 3,
+         "man-at-arms": 2
+        },
+        "pop": 44
+       },
+       "900": {
+        "villagers": 48,
+        "army": 23,
+        "byLine": {
+         "pikeman": 12,
+         "man-at-arms": 11
+        },
+        "pop": 79
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 93,
+        "byLine": {
+         "pikeman": 47,
+         "man-at-arms": 46
+        },
+        "pop": 166
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 10033,
+     "score": -1460.496,
+     "best": {
+      "done": 1302,
+      "at": 900,
+      "army": 23,
+      "armyValue": 2230,
+      "villagers": 48,
+      "population": 80,
+      "age": 4,
+      "ages": [
+       255,
+       496,
+       871
+      ],
+      "firstUnit": 260,
+      "firstUnitBy": 300,
+      "castle": 496,
+      "imperial": 871,
+      "relicsStart": 523,
+      "firstRelic": 603,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1388,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 48,
+        "army": 23,
+        "byLine": {
+         "pikeman": 12,
+         "man-at-arms": 11
+        },
+        "pop": 80
+       },
+       "1200": {
+        "villagers": 62,
+        "army": 98,
+        "byLine": {
+         "pikeman": 50,
+         "man-at-arms": 48
+        },
+        "pop": 170
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 9650,
+     "score": -1476.505,
+     "best": {
+      "done": 1301,
+      "at": 900,
+      "army": 26,
+      "armyValue": 2510,
+      "villagers": 48,
+      "population": 83,
+      "age": 4,
+      "ages": [
+       261,
+       505,
+       873
+      ],
+      "firstUnit": 286,
+      "firstUnitBy": 300,
+      "castle": 505,
+      "imperial": 873,
+      "relicsStart": 539,
+      "firstRelic": 619,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 605,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 610,
+        "allOut": 626
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1463,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 5,
+        "byLine": {
+         "pikeman": 3,
+         "man-at-arms": 2
+        },
+        "pop": 44
+       },
+       "900": {
+        "villagers": 48,
+        "army": 26,
+        "byLine": {
+         "pikeman": 14,
+         "man-at-arms": 12
+        },
+        "pop": 83
+       },
+       "1200": {
+        "villagers": 63,
+        "army": 93,
+        "byLine": {
+         "pikeman": 47,
+         "man-at-arms": 46
+        },
+        "pop": 168
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "scots-fc-infantry-2tc",
+   "evaluations": 9792,
+   "seconds": 313,
+   "seed": 22,
+   "objective": {
+    "kind": "done",
+    "slack": 30,
+    "firstUnitBy": 300
+   },
+   "best": {
+    "done": 1293,
+    "at": 900,
+    "army": 26,
+    "armyValue": 3960,
+    "villagers": 59,
+    "population": 96,
+    "age": 3,
+    "ages": [
+     242,
+     501,
+     992
+    ],
+    "firstUnit": 269,
+    "firstUnitBy": 300,
+    "castle": 501,
+    "imperial": 992,
+    "relicsStart": 558,
+    "firstRelic": 638,
+    "relicsPlaced": 3,
+    "musters": [
+     {
+      "key": "gallowglass",
+      "name": "Muster Gallowglass",
+      "start": 666,
+      "units": 7,
+      "food": 1350,
+      "tier": 0,
+      "lookout": false,
+      "actionDone": 671,
+      "allOut": 685
+     }
+    ],
+    "fishponds": 2,
+    "stewPonds": true,
+    "rebateGold": 2588,
+    "kirkmen": 4,
+    "armyAt": {
+     "600": {
+      "villagers": 34,
+      "army": 4,
+      "byLine": {
+       "man-at-arms": 4,
+       "gallowglass": 0
+      },
+      "pop": 46
+     },
+     "900": {
+      "villagers": 59,
+      "army": 26,
+      "byLine": {
+       "man-at-arms": 16,
+       "gallowglass": 10
+      },
+      "pop": 96
+     },
+     "1200": {
+      "villagers": 101,
+      "army": 55,
+      "byLine": {
+       "man-at-arms": 26,
+       "gallowglass": 29
+      },
+      "pop": 171
+     }
+    }
+   },
+   "runnersUp": [
+    {
+     "params": {
+      "planId": "scots-fc-infantry-2tc",
+      "lines": [
+       "man-at-arms",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 1
+      },
+      "vilTarget": 100,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 9,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 5,
+       "3": 12,
+       "4": 9
+      },
+      "tcBuilders": 6,
+      "producers": {
+       "1": 1,
+       "2": 1,
+       "3": 1,
+       "4": 3
+      },
+      "maxProducers": 7,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__scots"
+       ],
+       "3": "all",
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 3,
+      "woodFloor": 0.05,
+      "goldBias": 1,
+      "armyAge": 2,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true,
+      "bankAware": 240
+     },
+     "result": {
+      "done": 1389,
+      "at": 900,
+      "army": 12,
+      "armyValue": 1980,
+      "villagers": 50,
+      "population": 68,
+      "age": 3,
+      "ages": [
+       250,
+       476,
+       949
+      ],
+      "firstUnit": 273,
+      "firstUnitBy": 300,
+      "castle": 476,
+      "imperial": 949,
+      "relicsStart": 503,
+      "firstRelic": 583,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2258,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 31,
+        "army": 5,
+        "byLine": {
+         "man-at-arms": 3,
+         "gallowglass": 2
+        },
+        "pop": 41
+       },
+       "900": {
+        "villagers": 50,
+        "army": 12,
+        "byLine": {
+         "man-at-arms": 6,
+         "gallowglass": 6
+        },
+        "pop": 68
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 48,
+        "byLine": {
+         "man-at-arms": 25,
+         "gallowglass": 23
+        },
+        "pop": 137
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-fc-infantry-2tc",
+      "lines": [
+       "man-at-arms",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 1
+      },
+      "vilTarget": 100,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 9,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 5,
+       "3": 12,
+       "4": 9
+      },
+      "tcBuilders": 6,
+      "producers": {
+       "1": 2,
+       "2": 1,
+       "3": 1,
+       "4": 3
+      },
+      "maxProducers": 7,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__scots"
+       ],
+       "3": "all",
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 3,
+      "woodFloor": 0.05,
+      "goldBias": 1,
+      "armyAge": 2,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true,
+      "bankAware": 240
+     },
+     "result": {
+      "done": 1389,
+      "at": 900,
+      "army": 12,
+      "armyValue": 1980,
+      "villagers": 50,
+      "population": 68,
+      "age": 3,
+      "ages": [
+       250,
+       476,
+       949
+      ],
+      "firstUnit": 273,
+      "firstUnitBy": 300,
+      "castle": 476,
+      "imperial": 949,
+      "relicsStart": 503,
+      "firstRelic": 583,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2258,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 31,
+        "army": 5,
+        "byLine": {
+         "man-at-arms": 3,
+         "gallowglass": 2
+        },
+        "pop": 41
+       },
+       "900": {
+        "villagers": 50,
+        "army": 12,
+        "byLine": {
+         "man-at-arms": 6,
+         "gallowglass": 6
+        },
+        "pop": 68
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 48,
+        "byLine": {
+         "man-at-arms": 25,
+         "gallowglass": 23
+        },
+        "pop": 137
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-fc-infantry-2tc",
+      "lines": [
+       "man-at-arms",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 1
+      },
+      "vilTarget": 100,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 9,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 5,
+       "3": 12,
+       "4": 9
+      },
+      "tcBuilders": 6,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 3
+      },
+      "maxProducers": 8,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__scots"
+       ],
+       "3": "all",
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 3,
+      "woodFloor": 0.05,
+      "goldBias": 1,
+      "armyAge": 2,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true,
+      "bankAware": 240
+     },
+     "result": {
+      "done": 1389,
+      "at": 900,
+      "army": 12,
+      "armyValue": 1980,
+      "villagers": 50,
+      "population": 68,
+      "age": 3,
+      "ages": [
+       250,
+       476,
+       949
+      ],
+      "firstUnit": 273,
+      "firstUnitBy": 300,
+      "castle": 476,
+      "imperial": 949,
+      "relicsStart": 503,
+      "firstRelic": 583,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2258,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 31,
+        "army": 5,
+        "byLine": {
+         "man-at-arms": 3,
+         "gallowglass": 2
+        },
+        "pop": 41
+       },
+       "900": {
+        "villagers": 50,
+        "army": 12,
+        "byLine": {
+         "man-at-arms": 6,
+         "gallowglass": 6
+        },
+        "pop": 68
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 48,
+        "byLine": {
+         "man-at-arms": 25,
+         "gallowglass": 23
+        },
+        "pop": 137
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-fc-infantry-2tc",
+      "lines": [
+       "man-at-arms",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 1
+      },
+      "vilTarget": 100,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 9,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 5,
+       "3": 12,
+       "4": 9
+      },
+      "tcBuilders": 6,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 3
+      },
+      "maxProducers": 9,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__scots"
+       ],
+       "3": "all",
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 3,
+      "woodFloor": 0.05,
+      "goldBias": 1,
+      "armyAge": 2,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true,
+      "bankAware": 240
+     },
+     "result": {
+      "done": 1389,
+      "at": 900,
+      "army": 12,
+      "armyValue": 1980,
+      "villagers": 50,
+      "population": 68,
+      "age": 3,
+      "ages": [
+       250,
+       476,
+       949
+      ],
+      "firstUnit": 273,
+      "firstUnitBy": 300,
+      "castle": 476,
+      "imperial": 949,
+      "relicsStart": 503,
+      "firstRelic": 583,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2258,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 31,
+        "army": 5,
+        "byLine": {
+         "man-at-arms": 3,
+         "gallowglass": 2
+        },
+        "pop": 41
+       },
+       "900": {
+        "villagers": 50,
+        "army": 12,
+        "byLine": {
+         "man-at-arms": 6,
+         "gallowglass": 6
+        },
+        "pop": 68
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 48,
+        "byLine": {
+         "man-at-arms": 25,
+         "gallowglass": 23
+        },
+        "pop": 137
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "scots-fc-infantry-2tc",
+      "lines": [
+       "man-at-arms",
+       "gallowglass"
+      ],
+      "landmarks": {
+       "2": "stone-of-destiny",
+       "3": "tower-of-skye",
+       "4": "three-loch-lookout"
+      },
+      "extraTCs": {
+       "2": 0,
+       "3": 1
+      },
+      "vilTarget": 100,
+      "mech": {
+       "kirkmen": 1,
+       "fishponds": 2,
+       "musters": [
+        "pikemen"
+       ],
+       "firstUnitBy": 300,
+       "relics": 3,
+       "relicDistanceTiles": 45,
+       "relicGoldPerMinute": 100,
+       "towerHouses": {
+        "1": 0,
+        "2": 0,
+        "3": 2
+       },
+       "cattle": {
+        "1": 7,
+        "2": 9,
+        "3": 13,
+        "4": 13
+       },
+       "cattleFrom": 60,
+       "snowdoun": "pikeman",
+       "hallAge": 3
+      },
+      "lmBuilders": {
+       "2": 5,
+       "3": 12,
+       "4": 9
+      },
+      "tcBuilders": 6,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
+       "4": 3
+      },
+      "maxProducers": 10,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__scots"
+       ],
+       "3": "all",
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 0,
+      "pauseForAge": true,
+      "window": 3,
+      "woodFloor": 0.05,
+      "goldBias": 1,
+      "armyAge": 2,
+      "civTechs": {
+       "upgrade_lowland_tier2_sco": null
+      },
+      "producerWood": true,
+      "bankAware": 240
+     },
+     "result": {
+      "done": 1389,
+      "at": 900,
+      "army": 12,
+      "armyValue": 1980,
+      "villagers": 50,
+      "population": 68,
+      "age": 3,
+      "ages": [
+       250,
+       476,
+       949
+      ],
+      "firstUnit": 273,
+      "firstUnitBy": 300,
+      "castle": 476,
+      "imperial": 949,
+      "relicsStart": 503,
+      "firstRelic": 583,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2258,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 31,
+        "army": 5,
+        "byLine": {
+         "man-at-arms": 3,
+         "gallowglass": 2
+        },
+        "pop": 41
+       },
+       "900": {
+        "villagers": 50,
+        "army": 12,
+        "byLine": {
+         "man-at-arms": 6,
+         "gallowglass": 6
+        },
+        "pop": 68
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 48,
+        "byLine": {
+         "man-at-arms": 25,
+         "gallowglass": 23
+        },
+        "pop": 137
+       }
+      }
+     }
+    }
+   ],
+   "searches": [
+    {
+     "seed": 22,
+     "evaluations": 9792,
+     "score": -1293.501,
+     "best": {
+      "done": 1293,
+      "at": 900,
+      "army": 26,
+      "armyValue": 3960,
+      "villagers": 59,
+      "population": 96,
+      "age": 3,
+      "ages": [
+       242,
+       501,
+       992
+      ],
+      "firstUnit": 269,
+      "firstUnitBy": 300,
+      "castle": 501,
+      "imperial": 992,
+      "relicsStart": 558,
+      "firstRelic": 638,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 666,
+        "units": 7,
+        "food": 1350,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 671,
+        "allOut": 685
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 2588,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 4,
+        "byLine": {
+         "man-at-arms": 4,
+         "gallowglass": 0
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 59,
+        "army": 26,
+        "byLine": {
+         "man-at-arms": 16,
+         "gallowglass": 10
+        },
+        "pop": 96
+       },
+       "1200": {
+        "villagers": 101,
+        "army": 55,
+        "byLine": {
+         "man-at-arms": 26,
+         "gallowglass": 29
+        },
+        "pop": 171
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 11480,
+     "score": -1304.507,
+     "best": {
+      "done": 1304,
+      "at": 900,
+      "army": 21,
+      "armyValue": 2035,
+      "villagers": 50,
+      "population": 79,
+      "age": 4,
+      "ages": [
+       282,
+       507,
+       876
+      ],
+      "firstUnit": 291,
+      "firstUnitBy": 300,
+      "castle": 507,
+      "imperial": 876,
+      "relicsStart": 534,
+      "firstRelic": 614,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2033,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 50,
+        "army": 21,
+        "byLine": {
+         "pikeman": 11,
+         "man-at-arms": 10
+        },
+        "pop": 79
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 77,
+        "byLine": {
+         "pikeman": 39,
+         "man-at-arms": 38
+        },
+        "pop": 167
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 10363,
+     "score": -1304.528,
+     "best": {
+      "done": 1304,
+      "at": 900,
+      "army": 19,
+      "armyValue": 1890,
+      "villagers": 55,
+      "population": 83,
+      "age": 4,
+      "ages": [
+       273,
+       528,
+       874
+      ],
+      "firstUnit": 298,
+      "firstUnitBy": 300,
+      "castle": 528,
+      "imperial": 874,
+      "relicsStart": 555,
+      "firstRelic": 635,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 2310,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "cateran": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 55,
+        "army": 19,
+        "byLine": {
+         "cateran": 10,
+         "man-at-arms": 9
+        },
+        "pop": 83
+       },
+       "1200": {
+        "villagers": 84,
+        "army": 76,
+        "byLine": {
+         "cateran": 39,
+         "man-at-arms": 37
+        },
+        "pop": 171
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 9643,
+     "score": -1305.506,
+     "best": {
+      "done": 1305,
+      "at": 900,
+      "army": 19,
+      "armyValue": 2330,
+      "villagers": 59,
+      "population": 84,
+      "age": 3,
+      "ages": [
+       278,
+       506,
+       954
+      ],
+      "firstUnit": 289,
+      "firstUnitBy": 300,
+      "castle": 506,
+      "imperial": 954,
+      "relicsStart": 537,
+      "firstRelic": 617,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "cateran",
+        "name": "Muster Cateran",
+        "start": 556,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 561,
+        "allOut": 577
+       },
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 1006,
+        "units": 13,
+        "food": 1350,
+        "tier": 0,
+        "lookout": true,
+        "actionDone": 1011,
+        "allOut": 1037
+       }
+      ],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2438,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 13,
+        "byLine": {
+         "cateran": 10,
+         "man-at-arms": 2,
+         "gallowglass": 1
+        },
+        "pop": 51
+       },
+       "900": {
+        "villagers": 59,
+        "army": 19,
+        "byLine": {
+         "cateran": 10,
+         "man-at-arms": 5,
+         "gallowglass": 4
+        },
+        "pop": 84
+       },
+       "1200": {
+        "villagers": 103,
+        "army": 55,
+        "byLine": {
+         "cateran": 19,
+         "man-at-arms": 17,
+         "gallowglass": 19
+        },
+        "pop": 165
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 9127,
+     "score": -1306.51,
+     "best": {
+      "done": 1306,
+      "at": 900,
+      "army": 21,
+      "armyValue": 2035,
+      "villagers": 50,
+      "population": 80,
+      "age": 4,
+      "ages": [
+       271,
+       510,
+       878
+      ],
+      "firstUnit": 288,
+      "firstUnitBy": 300,
+      "castle": 510,
+      "imperial": 878,
+      "relicsStart": 537,
+      "firstRelic": 617,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 2055,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 50,
+        "army": 21,
+        "byLine": {
+         "pikeman": 11,
+         "man-at-arms": 10
+        },
+        "pop": 80
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 79,
+        "byLine": {
+         "pikeman": 40,
+         "man-at-arms": 39
+        },
+        "pop": 170
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 10468,
+     "score": -1308.508,
+     "best": {
+      "done": 1308,
+      "at": 900,
+      "army": 21,
+      "armyValue": 2035,
+      "villagers": 51,
+      "population": 80,
+      "age": 4,
+      "ages": [
+       262,
+       508,
+       879
+      ],
+      "firstUnit": 300,
+      "firstUnitBy": 300,
+      "castle": 508,
+      "imperial": 879,
+      "relicsStart": 535,
+      "firstRelic": 615,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 293,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 298,
+        "allOut": 314
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 1950,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 10,
+        "byLine": {
+         "pikeman": 8,
+         "man-at-arms": 2
+        },
+        "pop": 49
+       },
+       "900": {
+        "villagers": 51,
+        "army": 21,
+        "byLine": {
+         "pikeman": 11,
+         "man-at-arms": 10
+        },
+        "pop": 80
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 73,
+        "byLine": {
+         "pikeman": 37,
+         "man-at-arms": 36
+        },
+        "pop": 163
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 9975,
+     "score": -1325.51,
+     "best": {
+      "done": 1286,
+      "at": 900,
+      "army": 19,
+      "armyValue": 1840,
+      "villagers": 52,
+      "population": 79,
+      "age": 4,
+      "ages": [
+       289,
+       510,
+       858
+      ],
+      "firstUnit": 298,
+      "firstUnitBy": 300,
+      "castle": 510,
+      "imperial": 858,
+      "relicsStart": 537,
+      "firstRelic": 617,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1838,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 52,
+        "army": 19,
+        "byLine": {
+         "pikeman": 10,
+         "man-at-arms": 9
+        },
+        "pop": 79
+       },
+       "1200": {
+        "villagers": 81,
+        "army": 81,
+        "byLine": {
+         "pikeman": 41,
+         "man-at-arms": 40
+        },
+        "pop": 174
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 10646,
+     "score": -1328.511,
+     "best": {
+      "done": 1280,
+      "at": 900,
+      "army": 25,
+      "armyValue": 2425,
+      "villagers": 52,
+      "population": 84,
+      "age": 4,
+      "ages": [
+       320,
+       511,
+       852
+      ],
+      "firstUnit": 294,
+      "firstUnitBy": 300,
+      "castle": 511,
+      "imperial": 852,
+      "relicsStart": 538,
+      "firstRelic": 618,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 1793,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 8,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 4
+        },
+        "pop": 47
+       },
+       "900": {
+        "villagers": 52,
+        "army": 25,
+        "byLine": {
+         "pikeman": 13,
+         "man-at-arms": 12
+        },
+        "pop": 84
+       },
+       "1200": {
+        "villagers": 81,
+        "army": 81,
+        "byLine": {
+         "pikeman": 41,
+         "man-at-arms": 40
+        },
+        "pop": 174
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 8086,
+     "score": -1336.51,
+     "best": {
+      "done": 1319,
+      "at": 900,
+      "army": 10,
+      "armyValue": 1650,
+      "villagers": 65,
+      "population": 82,
+      "age": 4,
+      "ages": [
+       258,
+       510,
+       891
+      ],
+      "firstUnit": 295,
+      "firstUnitBy": 300,
+      "castle": 510,
+      "imperial": 891,
+      "relicsStart": 537,
+      "firstRelic": 617,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 1,
+      "stewPonds": false,
+      "rebateGold": 2663,
+      "kirkmen": 2,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 3,
+        "byLine": {
+         "man-at-arms": 3,
+         "gallowglass": 0
+        },
+        "pop": 42
+       },
+       "900": {
+        "villagers": 65,
+        "army": 10,
+        "byLine": {
+         "man-at-arms": 5,
+         "gallowglass": 5
+        },
+        "pop": 82
+       },
+       "1200": {
+        "villagers": 108,
+        "army": 50,
+        "byLine": {
+         "man-at-arms": 26,
+         "gallowglass": 24
+        },
+        "pop": 170
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 8965,
+     "score": -1343.508,
+     "best": {
+      "done": 1315,
+      "at": 900,
+      "army": 19,
+      "armyValue": 1840,
+      "villagers": 58,
+      "population": 84,
+      "age": 4,
+      "ages": [
+       294,
+       508,
+       887
+      ],
+      "firstUnit": 292,
+      "firstUnitBy": 300,
+      "castle": 508,
+      "imperial": 887,
+      "relicsStart": 535,
+      "firstRelic": 615,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 2063,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 58,
+        "army": 19,
+        "byLine": {
+         "pikeman": 10,
+         "man-at-arms": 9
+        },
+        "pop": 84
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 74,
+        "byLine": {
+         "pikeman": 38,
+         "man-at-arms": 36
+        },
+        "pop": 164
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 9056,
+     "score": -1344.512,
+     "best": {
+      "done": 1323,
+      "at": 900,
+      "army": 21,
+      "armyValue": 2035,
+      "villagers": 48,
+      "population": 78,
+      "age": 4,
+      "ages": [
+       262,
+       512,
+       895
+      ],
+      "firstUnit": 299,
+      "firstUnitBy": 300,
+      "castle": 512,
+      "imperial": 895,
+      "relicsStart": 539,
+      "firstRelic": 619,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "pikemen",
+        "name": "Muster Pikemen",
+        "start": 292,
+        "units": 8,
+        "food": 600,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 297,
+        "allOut": 313
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 1770,
+      "kirkmen": 4,
+      "armyAt": {
+       "600": {
+        "villagers": 33,
+        "army": 9,
+        "byLine": {
+         "pikeman": 8,
+         "man-at-arms": 1
+        },
+        "pop": 48
+       },
+       "900": {
+        "villagers": 48,
+        "army": 21,
+        "byLine": {
+         "pikeman": 11,
+         "man-at-arms": 10
+        },
+        "pop": 78
+       },
+       "1200": {
+        "villagers": 65,
+        "army": 79,
+        "byLine": {
+         "pikeman": 40,
+         "man-at-arms": 39
+        },
+        "pop": 156
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 8050,
+     "score": -1351.509,
+     "best": {
+      "done": 1333,
+      "at": 900,
+      "army": 21,
+      "armyValue": 3135,
+      "villagers": 56,
+      "population": 85,
+      "age": 4,
+      "ages": [
+       289,
+       509,
+       894
+      ],
+      "firstUnit": 298,
+      "firstUnitBy": 300,
+      "castle": 509,
+      "imperial": 894,
+      "relicsStart": 536,
+      "firstRelic": 616,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 1973,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 6,
+        "byLine": {
+         "pikeman": 4,
+         "gallowglass": 2
+        },
+        "pop": 45
+       },
+       "900": {
+        "villagers": 56,
+        "army": 21,
+        "byLine": {
+         "pikeman": 11,
+         "gallowglass": 10
+        },
+        "pop": 85
+       },
+       "1200": {
+        "villagers": 85,
+        "army": 65,
+        "byLine": {
+         "pikeman": 33,
+         "gallowglass": 32
+        },
+        "pop": 160
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 8661,
+     "score": -1351.526,
+     "best": {
+      "done": 1344,
+      "at": 900,
+      "army": 15,
+      "armyValue": 2075,
+      "villagers": 55,
+      "population": 78,
+      "age": 3,
+      "ages": [
+       280,
+       526,
+       916
+      ],
+      "firstUnit": 296,
+      "firstUnitBy": 300,
+      "castle": 526,
+      "imperial": 916,
+      "relicsStart": 553,
+      "firstRelic": 633,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 2348,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 5,
+        "byLine": {
+         "pikeman": 2,
+         "man-at-arms": 2,
+         "gallowglass": 1
+        },
+        "pop": 44
+       },
+       "900": {
+        "villagers": 55,
+        "army": 15,
+        "byLine": {
+         "pikeman": 5,
+         "man-at-arms": 5,
+         "gallowglass": 5
+        },
+        "pop": 78
+       },
+       "1200": {
+        "villagers": 83,
+        "army": 66,
+        "byLine": {
+         "pikeman": 23,
+         "man-at-arms": 22,
+         "gallowglass": 21
+        },
+        "pop": 160
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 8278,
+     "score": -1361.503,
+     "best": {
+      "done": 1349,
+      "at": 900,
+      "army": 20,
+      "armyValue": 3080,
+      "villagers": 56,
+      "population": 86,
+      "age": 3,
+      "ages": [
+       239,
+       503,
+       916
+      ],
+      "firstUnit": 276,
+      "firstUnitBy": 300,
+      "castle": 503,
+      "imperial": 916,
+      "relicsStart": 591,
+      "firstRelic": 671,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 2235,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 5,
+        "byLine": {
+         "man-at-arms": 3,
+         "gallowglass": 2
+        },
+        "pop": 48
+       },
+       "900": {
+        "villagers": 56,
+        "army": 20,
+        "byLine": {
+         "man-at-arms": 12,
+         "gallowglass": 8
+        },
+        "pop": 86
+       },
+       "1200": {
+        "villagers": 85,
+        "army": 60,
+        "byLine": {
+         "man-at-arms": 31,
+         "gallowglass": 29
+        },
+        "pop": 158
+       }
+      }
+     }
+    },
+    {
+     "seed": 44,
+     "evaluations": 9624,
+     "score": -1383.507,
+     "best": {
+      "done": 1333,
+      "at": 900,
+      "army": 18,
+      "armyValue": 1755,
+      "villagers": 49,
+      "population": 76,
+      "age": 3,
+      "ages": [
+       266,
+       507,
+       905
+      ],
+      "firstUnit": 282,
+      "firstUnitBy": 300,
+      "castle": 507,
+      "imperial": 905,
+      "relicsStart": 534,
+      "firstRelic": 614,
+      "relicsPlaced": 3,
+      "musters": [],
+      "fishponds": 2,
+      "stewPonds": true,
+      "rebateGold": 2010,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 7,
+        "byLine": {
+         "pikeman": 4,
+         "man-at-arms": 3
+        },
+        "pop": 46
+       },
+       "900": {
+        "villagers": 49,
+        "army": 18,
+        "byLine": {
+         "pikeman": 9,
+         "man-at-arms": 9
+        },
+        "pop": 76
+       },
+       "1200": {
+        "villagers": 79,
+        "army": 75,
+        "byLine": {
+         "pikeman": 38,
+         "man-at-arms": 37
+        },
+        "pop": 165
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 9670,
+     "score": -1435.498,
+     "best": {
+      "done": 1306,
+      "at": 900,
+      "army": 12,
+      "armyValue": 2090,
+      "villagers": 60,
+      "population": 79,
+      "age": 3,
+      "ages": [
+       218,
+       498,
+       951
+      ],
+      "firstUnit": 292,
+      "firstUnitBy": 300,
+      "castle": 498,
+      "imperial": 951,
+      "relicsStart": 525,
+      "firstRelic": 605,
+      "relicsPlaced": 3,
+      "musters": [
+       {
+        "key": "gallowglass",
+        "name": "Muster Gallowglass",
+        "start": 711,
+        "units": 7,
+        "food": 1350,
+        "tier": 0,
+        "lookout": false,
+        "actionDone": 716,
+        "allOut": 730
+       }
+      ],
+      "fishponds": 2,
+      "stewPonds": false,
+      "rebateGold": 2655,
+      "kirkmen": 3,
+      "armyAt": {
+       "600": {
+        "villagers": 34,
+        "army": 3,
+        "byLine": {
+         "man-at-arms": 3,
+         "gallowglass": 0
+        },
+        "pop": 41
+       },
+       "900": {
+        "villagers": 60,
+        "army": 12,
+        "byLine": {
+         "man-at-arms": 5,
+         "gallowglass": 7
+        },
+        "pop": 79
+       },
+       "1200": {
+        "villagers": 103,
+        "army": 47,
+        "byLine": {
+         "man-at-arms": 24,
+         "gallowglass": 23
+        },
+        "pop": 162
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "vikings-longhouse-boom",
+   "evaluations": 2829,
+   "seconds": 135,
+   "seed": 7,
+   "objective": {
+    "kind": "pop200",
+    "t": 900,
+    "slack": 30
+   },
+   "threshold": -1024,
+   "best": {
+    "done": 1747,
+    "at": 900,
+    "army": 118,
+    "armyValue": 12190,
+    "villagers": 65,
+    "population": 193,
+    "age": 2,
+    "ages": [
+     367,
+     1135,
+     1205
+    ],
+    "firstUnit": 386,
+    "pop200": 994,
+    "pop200Age": "Feudal Age",
+    "gullinnStart": 1003,
+    "gullinnStartPop": 200,
+    "atPop200": {
+     "longhouses": 14,
+     "villagers": 74,
+     "army": 126
+    },
+    "longhouses": 14,
+    "attachments": {
+     "bee": 6,
+     "farm": 6,
+     "smithy": 1,
+     "loom": 1
+    },
+    "villagerCapacity": 150,
+    "sagas": [
+     "ulfr",
+     "falkr",
+     "jofurr",
+     "dreki"
+    ],
+    "groveBerserkers": 0
+   },
+   "runnersUp": [],
+   "searches": [
+    {
+     "seed": 7,
+     "evaluations": 2829,
+     "score": -1747.994,
+     "best": {
+      "done": 1747,
+      "at": 900,
+      "army": 118,
+      "armyValue": 12190,
+      "villagers": 65,
+      "population": 193,
+      "age": 2,
+      "ages": [
+       367,
+       1135,
+       1205
+      ],
+      "firstUnit": 386,
+      "pop200": 994,
+      "pop200Age": "Feudal Age",
+      "gullinnStart": 1003,
+      "gullinnStartPop": 200,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 74,
+       "army": 126
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "ulfr",
+       "falkr",
+       "jofurr",
+       "dreki"
+      ],
+      "groveBerserkers": 0
+     }
+    },
+    {
+     "seed": 2,
+     "evaluations": 2458,
+     "score": -1747.994,
+     "best": {
+      "done": 1747,
+      "at": 900,
+      "army": 118,
+      "armyValue": 12190,
+      "villagers": 65,
+      "population": 193,
+      "age": 2,
+      "ages": [
+       367,
+       1135,
+       1205
+      ],
+      "firstUnit": 386,
+      "pop200": 994,
+      "pop200Age": "Feudal Age",
+      "gullinnStart": 1003,
+      "gullinnStartPop": 200,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 74,
+       "army": 126
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "ulfr",
+       "falkr",
+       "jofurr",
+       "dreki"
+      ],
+      "groveBerserkers": 0
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 5786,
+     "score": null,
+     "best": {
+      "done": 1636,
+      "at": 900,
+      "army": 87,
+      "armyValue": 9345,
+      "villagers": 61,
+      "population": 155,
+      "age": 2,
+      "ages": [
+       488,
+       957,
+       1124
+      ],
+      "firstUnit": 503,
+      "pop200": 1036,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 897,
+      "gullinnStartPop": 150,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 73,
+       "army": 127
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "ulfr",
+       "falkr",
+       "dreki",
+       "jofurr"
+      ],
+      "groveBerserkers": 1
+     }
+    },
+    {
+     "seed": 12,
+     "evaluations": 7004,
+     "score": null,
+     "best": {
+      "done": 1751,
+      "at": 900,
+      "army": 91,
+      "armyValue": 10465,
+      "villagers": 64,
+      "population": 160,
+      "age": 2,
+      "ages": [
+       419,
+       922,
+       1145
+      ],
+      "firstUnit": 438,
+      "pop200": 1040,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 874,
+      "gullinnStartPop": 152,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 76,
+       "army": 124
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "ulfr",
+       "dreki",
+       "falkr",
+       "jofurr"
+      ],
+      "groveBerserkers": 2
+     }
+    }
+   ]
+  },
+  {
+   "id": "vikings-longhouse-boom-150v",
+   "evaluations": 5767,
+   "seconds": 460,
+   "seed": 12,
+   "objective": {
+    "kind": "pop200",
+    "t": 900,
+    "slack": 30
+   },
+   "best": {
+    "done": 2304,
+    "at": 900,
+    "army": 0,
+    "armyValue": 0,
+    "villagers": 69,
+    "population": 72,
+    "age": 2,
+    "ages": [
+     339,
+     1761,
+     1950
+    ],
+    "firstUnit": 1776,
+    "pop200": 1810,
+    "pop200Age": "Castle Age",
+    "gullinnStart": 1713,
+    "gullinnStartPop": 150,
+    "atPop200": {
+     "longhouses": 14,
+     "villagers": 150,
+     "army": 50
+    },
+    "longhouses": 14,
+    "attachments": {
+     "bee": 6,
+     "farm": 6,
+     "smithy": 1,
+     "loom": 1
+    },
+    "villagerCapacity": 150,
+    "sagas": [
+     "falkr",
+     "jofurr",
+     "dreki",
+     "ulfr"
+    ],
+    "groveBerserkers": 0
+   },
+   "runnersUp": [
+    {
+     "params": {
+      "planId": "vikings-longhouse-boom-150v",
+      "lines": [
+       "bondi"
+      ],
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "landmarks": {
+       "2": "baugr-fort",
+       "3": "gullinn-temple",
+       "4": "kongens-dor-cathedral"
+      },
+      "mech": {
+       "gullinnMinPop": 150,
+       "groves": 0,
+       "kongensLonghouses": 0,
+       "callMaidens": false,
+       "lh": {
+        "1": 2,
+        "2": 12,
+        "3": 0,
+        "4": 0
+       },
+       "attach": [
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "loom",
+        "smithy",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm"
+       ],
+       "lhLead": 99,
+       "lhBuilders": 3,
+       "longhouseBondi": true,
+       "openWood": true,
+       "reserveWood": false
+      },
+      "vilTarget": 150,
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 1
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 4,
+       "3": 6,
+       "4": 8
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 1,
+      "pauseForAge": false,
+      "window": 3,
+      "woodFloor": 0.25,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "pauseFrom": {
+       "3": 900,
+       "4": 1200
+      }
+     },
+     "result": {
+      "done": 2304,
+      "at": 900,
+      "army": 0,
+      "armyValue": 0,
+      "villagers": 69,
+      "population": 72,
+      "age": 2,
+      "ages": [
+       339,
+       1761,
+       2012
+      ],
+      "firstUnit": 1776,
+      "pop200": 1810,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 1713,
+      "gullinnStartPop": 150,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 150,
+       "army": 50
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "falkr",
+       "jofurr",
+       "dreki",
+       "ulfr"
+      ],
+      "groveBerserkers": 0
+     }
+    },
+    {
+     "params": {
+      "planId": "vikings-longhouse-boom-150v",
+      "lines": [
+       "bondi"
+      ],
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "landmarks": {
+       "2": "baugr-fort",
+       "3": "gullinn-temple",
+       "4": "kongens-dor-cathedral"
+      },
+      "mech": {
+       "gullinnMinPop": 150,
+       "groves": 0,
+       "kongensLonghouses": 0,
+       "callMaidens": false,
+       "lh": {
+        "1": 2,
+        "2": 12,
+        "3": 0,
+        "4": 0
+       },
+       "attach": [
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "loom",
+        "smithy",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm"
+       ],
+       "lhLead": 99,
+       "lhBuilders": 3,
+       "longhouseBondi": true,
+       "openWood": true,
+       "reserveWood": false
+      },
+      "vilTarget": 150,
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 3
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 4,
+       "3": 6,
+       "4": 8
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 1,
+      "pauseForAge": false,
+      "window": 3,
+      "woodFloor": 0.25,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "pauseFrom": {
+       "3": 900,
+       "4": 1200
+      }
+     },
+     "result": {
+      "done": 2304,
+      "at": 900,
+      "army": 0,
+      "armyValue": 0,
+      "villagers": 69,
+      "population": 72,
+      "age": 2,
+      "ages": [
+       339,
+       1761,
+       1912
+      ],
+      "firstUnit": 1776,
+      "pop200": 1810,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 1713,
+      "gullinnStartPop": 150,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 150,
+       "army": 50
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "falkr",
+       "jofurr",
+       "dreki",
+       "ulfr"
+      ],
+      "groveBerserkers": 0
+     }
+    },
+    {
+     "params": {
+      "planId": "vikings-longhouse-boom-150v",
+      "lines": [
+       "bondi"
+      ],
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "landmarks": {
+       "2": "baugr-fort",
+       "3": "gullinn-temple",
+       "4": "kongens-dor-cathedral"
+      },
+      "mech": {
+       "gullinnMinPop": 150,
+       "groves": 0,
+       "kongensLonghouses": 0,
+       "callMaidens": false,
+       "lh": {
+        "1": 2,
+        "2": 12,
+        "3": 0,
+        "4": 0
+       },
+       "attach": [
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "loom",
+        "smithy",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm"
+       ],
+       "lhLead": 99,
+       "lhBuilders": 3,
+       "longhouseBondi": true,
+       "openWood": true,
+       "reserveWood": false
+      },
+      "vilTarget": 150,
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 4
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 4,
+       "3": 6,
+       "4": 8
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 1,
+      "pauseForAge": false,
+      "window": 3,
+      "woodFloor": 0.25,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "pauseFrom": {
+       "3": 900,
+       "4": 1200
+      }
+     },
+     "result": {
+      "done": 2304,
+      "at": 900,
+      "army": 0,
+      "armyValue": 0,
+      "villagers": 69,
+      "population": 72,
+      "age": 2,
+      "ages": [
+       339,
+       1761,
+       1887
+      ],
+      "firstUnit": 1776,
+      "pop200": 1810,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 1713,
+      "gullinnStartPop": 150,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 150,
+       "army": 50
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "falkr",
+       "jofurr",
+       "dreki",
+       "ulfr"
+      ],
+      "groveBerserkers": 0
+     }
+    },
+    {
+     "params": {
+      "planId": "vikings-longhouse-boom-150v",
+      "lines": [
+       "bondi"
+      ],
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "landmarks": {
+       "2": "baugr-fort",
+       "3": "gullinn-temple",
+       "4": "kongens-dor-cathedral"
+      },
+      "mech": {
+       "gullinnMinPop": 150,
+       "groves": 0,
+       "kongensLonghouses": 0,
+       "callMaidens": false,
+       "lh": {
+        "1": 2,
+        "2": 12,
+        "3": 0,
+        "4": 0
+       },
+       "attach": [
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "loom",
+        "smithy",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm"
+       ],
+       "lhLead": 99,
+       "lhBuilders": 3,
+       "longhouseBondi": true,
+       "openWood": true,
+       "reserveWood": false
+      },
+      "vilTarget": 150,
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 5
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 4,
+       "3": 6,
+       "4": 8
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 1,
+      "pauseForAge": false,
+      "window": 3,
+      "woodFloor": 0.25,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "pauseFrom": {
+       "3": 900,
+       "4": 1200
+      }
+     },
+     "result": {
+      "done": 2304,
+      "at": 900,
+      "army": 0,
+      "armyValue": 0,
+      "villagers": 69,
+      "population": 72,
+      "age": 2,
+      "ages": [
+       339,
+       1761,
+       1870
+      ],
+      "firstUnit": 1776,
+      "pop200": 1810,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 1713,
+      "gullinnStartPop": 150,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 150,
+       "army": 50
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "falkr",
+       "jofurr",
+       "dreki",
+       "ulfr"
+      ],
+      "groveBerserkers": 0
+     }
+    },
+    {
+     "params": {
+      "planId": "vikings-longhouse-boom-150v",
+      "lines": [
+       "bondi"
+      ],
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "landmarks": {
+       "2": "baugr-fort",
+       "3": "gullinn-temple",
+       "4": "kongens-dor-cathedral"
+      },
+      "mech": {
+       "gullinnMinPop": 150,
+       "groves": 0,
+       "kongensLonghouses": 0,
+       "callMaidens": false,
+       "lh": {
+        "1": 2,
+        "2": 12,
+        "3": 0,
+        "4": 0
+       },
+       "attach": [
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "loom",
+        "smithy",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm",
+        "farm"
+       ],
+       "lhLead": 99,
+       "lhBuilders": 3,
+       "longhouseBondi": true,
+       "openWood": true,
+       "reserveWood": false
+      },
+      "vilTarget": 150,
+      "lmBuilders": {
+       "2": 3,
+       "3": 12,
+       "4": 6
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 4,
+       "3": 6,
+       "4": 8
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [],
+       "2": [
+        "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+       ],
+       "3": [],
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": false
+      },
+      "blacksmiths": 1,
+      "pauseForAge": false,
+      "window": 3,
+      "woodFloor": 0.25,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "pauseFrom": {
+       "3": 900,
+       "4": 1200
+      }
+     },
+     "result": {
+      "done": 2304,
+      "at": 900,
+      "army": 0,
+      "armyValue": 0,
+      "villagers": 69,
+      "population": 72,
+      "age": 2,
+      "ages": [
+       339,
+       1761,
+       1856
+      ],
+      "firstUnit": 1776,
+      "pop200": 1810,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 1713,
+      "gullinnStartPop": 150,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 150,
+       "army": 50
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "falkr",
+       "jofurr",
+       "dreki",
+       "ulfr"
+      ],
+      "groveBerserkers": 0
+     }
+    }
+   ],
+   "searches": [
+    {
+     "seed": 12,
+     "evaluations": 5767,
+     "score": -2305.81,
+     "best": {
+      "done": 2304,
+      "at": 900,
+      "army": 0,
+      "armyValue": 0,
+      "villagers": 69,
+      "population": 72,
+      "age": 2,
+      "ages": [
+       339,
+       1761,
+       1950
+      ],
+      "firstUnit": 1776,
+      "pop200": 1810,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 1713,
+      "gullinnStartPop": 150,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 150,
+       "army": 50
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "falkr",
+       "jofurr",
+       "dreki",
+       "ulfr"
+      ],
+      "groveBerserkers": 0
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 6194,
+     "score": -2309.814,
+     "best": {
+      "done": 2308,
+      "at": 900,
+      "army": 0,
+      "armyValue": 0,
+      "villagers": 69,
+      "population": 72,
+      "age": 2,
+      "ages": [
+       295,
+       1765,
+       1850
+      ],
+      "firstUnit": 1780,
+      "pop200": 1814,
+      "pop200Age": "Castle Age",
+      "gullinnStart": 1717,
+      "gullinnStartPop": 150,
+      "atPop200": {
+       "longhouses": 14,
+       "villagers": 150,
+       "army": 50
+      },
+      "longhouses": 14,
+      "attachments": {
+       "bee": 6,
+       "farm": 6,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 150,
+      "sagas": [
+       "falkr",
+       "jofurr",
+       "dreki",
+       "ulfr"
+      ],
+      "groveBerserkers": 0
+     }
+    }
+   ]
+  },
+  {
+   "id": "vikings-jylland-knights",
+   "evaluations": 4230,
+   "seconds": 144,
+   "seed": 7,
+   "objective": {
+    "kind": "lineAt",
+    "line": "jylland-knight",
+    "t": 900,
+    "slack": 1
+   },
+   "threshold": 54,
+   "best": {
+    "done": 1651,
+    "at": 900,
+    "line": 54,
+    "army": 54,
+    "armyValue": 11340,
+    "villagers": 70,
+    "population": 136,
+    "age": 3,
+    "ages": [
+     324,
+     624,
+     1210
+    ],
+    "firstUnit": 655,
+    "longhouses": 8,
+    "attachments": {
+     "bee": 4,
+     "farm": 2,
+     "smithy": 1,
+     "loom": 1
+    },
+    "villagerCapacity": 90,
+    "sagas": [
+     "dreki",
+     "falkr",
+     "jofurr"
+    ],
+    "shieldMaidens": 8,
+    "groveBerserkers": 10,
+    "pop200": 1091
+   },
+   "runnersUp": [],
+   "searches": [
+    {
+     "seed": 7,
+     "evaluations": 4230,
+     "score": -1650.946,
+     "best": {
+      "done": 1651,
+      "at": 900,
+      "line": 54,
+      "army": 54,
+      "armyValue": 11340,
+      "villagers": 70,
+      "population": 136,
+      "age": 3,
+      "ages": [
+       324,
+       624,
+       1210
+      ],
+      "firstUnit": 655,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 4,
+       "farm": 2,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "dreki",
+       "falkr",
+       "jofurr"
+      ],
+      "shieldMaidens": 8,
+      "groveBerserkers": 10,
+      "pop200": 1091
+     }
+    },
+    {
+     "seed": 12,
+     "evaluations": 8634,
+     "score": -1866.946,
+     "best": {
+      "done": 1867,
+      "at": 900,
+      "line": 54,
+      "army": 54,
+      "armyValue": 11340,
+      "villagers": 65,
+      "population": 133,
+      "age": 3,
+      "ages": [
+       342,
+       623,
+       1255
+      ],
+      "firstUnit": 654,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 4,
+       "farm": 2,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "dreki",
+       "jofurr",
+       "falkr"
+      ],
+      "shieldMaidens": 0,
+      "groveBerserkers": 11,
+      "pop200": 1170
+     }
+    },
+    {
+     "seed": 2,
+     "evaluations": 4495,
+     "score": -1952.945,
+     "best": {
+      "done": 1953,
+      "at": 900,
+      "line": 55,
+      "army": 55,
+      "armyValue": 11550,
+      "villagers": 60,
+      "population": 128,
+      "age": 3,
+      "ages": [
+       339,
+       586,
+       1153
+      ],
+      "firstUnit": 617,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 4,
+       "farm": 2,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "dreki",
+       "jofurr",
+       "falkr"
+      ],
+      "shieldMaidens": 2,
+      "groveBerserkers": 16,
+      "pop200": 1317
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 8664,
+     "score": null,
+     "best": {
+      "done": 1493,
+      "at": 900,
+      "line": 53,
+      "army": 53,
+      "armyValue": 11130,
+      "villagers": 70,
+      "population": 139,
+      "age": 3,
+      "ages": [
+       324,
+       624,
+       1195
+      ],
+      "firstUnit": 655,
+      "longhouses": 9,
+      "attachments": {
+       "bee": 5,
+       "farm": 2,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 100,
+      "sagas": [
+       "dreki",
+       "falkr",
+       "jofurr"
+      ],
+      "shieldMaidens": 9,
+      "groveBerserkers": 9,
+      "pop200": 1085
+     }
+    }
+   ]
+  }
+ ]
+}

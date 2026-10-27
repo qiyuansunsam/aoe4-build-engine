@@ -1,0 +1,452 @@
+{
+ "method": "Seeded random sampling (6000 candidates plus the civilization defaults) then coordinate hill-climbing from the best 10; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": 17036858.8,
+ "build": {
+  "id": "french-knights-10",
+  "title": "Royal Knights by 10:00",
+  "summary": "Royal Knights by 10:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Royal Knight upgrade.",
+  "civilization": "french",
+  "engine": "civ",
+  "patch": "16.3.11308",
+  "reference": {
+   "buildId": "french-observed-4v4"
+  },
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 600,
+   "slack": 1
+  },
+  "lineNames": "Royal Knight",
+  "result": {
+   "done": 1412,
+   "at": 600,
+   "line": 17,
+   "army": 17,
+   "armyValue": 4080,
+   "villagers": 37,
+   "population": 58,
+   "age": 2,
+   "ages": [
+    323,
+    833,
+    1099
+   ]
+  },
+  "lines": [
+   "royal-knight"
+  ],
+  "vilTarget": 95,
+  "landmarks": {
+   "2": "school-of-cavalry",
+   "3": "royal-institute",
+   "4": "red-palace"
+  },
+  "lmBuilders": {
+   "2": 3,
+   "3": 5,
+   "4": 13
+  },
+  "extraTCs": {
+   "2": 0,
+   "3": 2
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 4,
+   "3": 1,
+   "4": 2
+  },
+  "maxProducers": 11,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1",
+    "upgrade_econ_villager_hunting_gear_1"
+   ],
+   "2": "all",
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": true,
+   "3": false
+  },
+  "blacksmiths": 2,
+  "pauseForAge": true,
+  "window": 4,
+  "woodFloor": 0.3,
+  "goldBias": 1,
+  "armyAge": 2,
+  "pauseFrom": {
+   "3": 600,
+   "4": 900
+  },
+  "vilTarget2": 120,
+  "vilTarget2At": 480
+ },
+ "ledger": {
+  "id": "french-knights-10",
+  "evaluations": 12523,
+  "seconds": 565,
+  "seed": 22,
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 600,
+   "slack": 1
+  },
+  "best": {
+   "done": 1412,
+   "at": 600,
+   "line": 17,
+   "army": 17,
+   "armyValue": 4080,
+   "villagers": 37,
+   "population": 58,
+   "age": 2,
+   "ages": [
+    323,
+    833,
+    1099
+   ]
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 1,
+      "4": 2
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 2,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 1,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 100,
+     "vilTarget2At": 480
+    },
+    "result": {
+     "done": 1635,
+     "at": 600,
+     "line": 18,
+     "army": 18,
+     "armyValue": 4320,
+     "villagers": 34,
+     "population": 56,
+     "age": 2,
+     "ages": [
+      249,
+      938,
+      1265
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 1,
+      "4": 2
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 4,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 1,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 100,
+     "vilTarget2At": 480
+    },
+    "result": {
+     "done": 1635,
+     "at": 600,
+     "line": 18,
+     "army": 18,
+     "armyValue": 4320,
+     "villagers": 34,
+     "population": 56,
+     "age": 2,
+     "ages": [
+      249,
+      938,
+      1265
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 1,
+      "4": 2
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 1,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 100,
+     "vilTarget2At": 480
+    },
+    "result": {
+     "done": 1635,
+     "at": 600,
+     "line": 18,
+     "army": 18,
+     "armyValue": 4320,
+     "villagers": 34,
+     "population": 56,
+     "age": 2,
+     "ages": [
+      249,
+      938,
+      1265
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 1,
+      "4": 2
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 1,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 100,
+     "vilTarget2At": 480
+    },
+    "result": {
+     "done": 1635,
+     "at": 600,
+     "line": 18,
+     "army": 18,
+     "armyValue": 4320,
+     "villagers": 34,
+     "population": 56,
+     "age": 2,
+     "ages": [
+      249,
+      938,
+      1265
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 1,
+      "4": 2
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 6,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 2,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 1,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 100,
+     "vilTarget2At": 480
+    },
+    "result": {
+     "done": 1635,
+     "at": 600,
+     "line": 18,
+     "army": 18,
+     "armyValue": 4320,
+     "villagers": 34,
+     "population": 56,
+     "age": 2,
+     "ages": [
+      249,
+      938,
+      1265
+     ]
+    }
+   }
+  ]
+ }
+}

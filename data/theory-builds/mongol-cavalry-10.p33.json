@@ -1,0 +1,511 @@
+{
+ "method": "Seeded random sampling (6000 candidates plus the civilization defaults) then coordinate hill-climbing from the best 10; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": 4800033.8661,
+ "build": {
+  "id": "mongol-cavalry-10",
+  "title": "Mongol cavalry by 10:00",
+  "summary": "Stable cavalry value at 10:00 within one unit of the most any searched plan completes (Ovoo double production and Improved technologies chosen by the search), finishing soonest at 200 population with every upgrade of its line.",
+  "civilization": "mongol",
+  "engine": "civ",
+  "patch": "16.3.11308",
+  "reference": {
+   "buildId": "mongols-observed-4v4"
+  },
+  "objective": {
+   "kind": "valueAt",
+   "t": 600,
+   "slack": 250
+  },
+  "lineNames": "Horseman",
+  "result": {
+   "done": 1339,
+   "at": 600,
+   "army": 40,
+   "armyValue": 4800,
+   "villagers": 34,
+   "population": 78,
+   "age": 1,
+   "ages": [
+    683,
+    977,
+    1163
+   ]
+  },
+  "lines": [
+   "horseman"
+  ],
+  "vilTarget": 50,
+  "landmarks": {
+   "2": "silver-tree",
+   "3": "steppe-redoubt",
+   "4": "white-stupa"
+  },
+  "lmBuilders": {
+   "2": 10,
+   "3": 12,
+   "4": 14
+  },
+  "extraTCs": {
+   "2": 1,
+   "3": 0
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 2,
+   "2": 0,
+   "3": 1,
+   "4": 2
+  },
+  "maxProducers": 6,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_wheelbarrow_1_improved_mon"
+   ],
+   "2": [
+    "upgrade_econ_resource_food_harvest_rate_2",
+    "upgrade_econ_resource_wood_harvest_rate_2",
+    "upgrade_econ_resource_gold_harvest_rate_2_mon"
+   ],
+   "3": [],
+   "4": []
+  },
+  "milTechAge": {
+   "2": true,
+   "3": true
+  },
+  "blacksmiths": 2,
+  "pauseForAge": true,
+  "window": 6,
+  "woodFloor": 0.1,
+  "goldBias": 1,
+  "armyAge": 1,
+  "pauseFrom": {
+   "3": 540,
+   "4": 900
+  },
+  "vilTarget2": 120,
+  "vilTarget2At": 420,
+  "mech": {
+   "doubleVillagers": false,
+   "doubleArmy": true,
+   "improved": false
+  }
+ },
+ "ledger": {
+  "id": "mongol-cavalry-10",
+  "evaluations": 12990,
+  "seconds": 660,
+  "seed": 33,
+  "objective": {
+   "kind": "valueAt",
+   "t": 600,
+   "slack": 250
+  },
+  "best": {
+   "done": 1339,
+   "at": 600,
+   "army": 40,
+   "armyValue": 4800,
+   "villagers": 34,
+   "population": 78,
+   "age": 1,
+   "ages": [
+    683,
+    977,
+    1163
+   ]
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 12,
+      "4": 12
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2_mon"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 120,
+     "vilTarget2At": 420,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1377,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1000,
+      1200
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 12,
+      "4": 12
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2_mon"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 660,
+      "4": 900
+     },
+     "vilTarget2": 120,
+     "vilTarget2At": 420,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1377,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1000,
+      1200
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 12,
+      "4": 12
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2_mon"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 540,
+      "4": 900
+     },
+     "vilTarget2": 140,
+     "vilTarget2At": 420,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1377,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1000,
+      1200
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 12,
+      "4": 12
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2_mon"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 540,
+      "4": 900
+     },
+     "vilTarget2": 120,
+     "vilTarget2At": 480,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1377,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1000,
+      1200
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 12,
+      "4": 12
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2_mon"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 540,
+      "4": 900
+     },
+     "vilTarget2": 120,
+     "vilTarget2At": 540,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1377,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1000,
+      1200
+     ]
+    }
+   }
+  ]
+ }
+}

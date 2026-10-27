@@ -1,0 +1,40 @@
+{
+  "parser": {
+    "repository": "ailrk/aoe4-replay-viewer",
+    "commit": "ae05dd2d2c7d98d6b801c75e66322c4fbf9e7894",
+    "files": [
+      "src/parser/binary.ts",
+      "src/parser/command.ts",
+      "src/parser/setup.ts",
+      "src/parser/types.ts",
+      "src/parser/replay.ts"
+    ],
+    "license_note": "No license file identified in inspected tree. Source is not vendored; review reuse terms before distribution."
+  },
+  "recorder": {
+    "repository": "https://github.com/BigManJohn000/aoe4-replay-viewer",
+    "commit": "98649e9d150fa065ab238946490e7468425d0c00",
+    "files": [
+      "LICENSE",
+      "README.md",
+      "recorder/recorder.lua",
+      "tools/analyze_summaries.py",
+      "tools/aoe4input.py",
+      "tools/atomicio.py",
+      "tools/blueprints.json",
+      "tools/build_audio.py",
+      "tools/check_units.py",
+      "tools/convert.py",
+      "tools/fetch_replays.py",
+      "tools/harvest.py",
+      "tools/mechanics.py",
+      "tools/recfile.py",
+      "tools/record_replay.py",
+      "tools/recorder_app.py",
+      "tools/rlog.py",
+      "tools/runlock.py",
+      "tools/trends.py"
+    ],
+    "purpose": "Reviewed recorder source; no bundled executables; not launched"
+  }
+}

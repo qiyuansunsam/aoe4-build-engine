@@ -1,0 +1,3485 @@
+{
+  "civ": "Japanese",
+  "catalogCiv": "japanese",
+  "patch": "16.3.11308",
+  "start": {
+    "villagers": 6,
+    "resources": {
+      "food": 200,
+      "wood": 150,
+      "gold": 100,
+      "stone": 0,
+      "command": 4
+    },
+    "popCap": 10,
+    "units": [
+      {
+        "id": "unit_villager_1_jpn",
+        "name": "Villager",
+        "count": 6
+      },
+      {
+        "id": "unit_scout_1_jpn",
+        "name": "Scout",
+        "count": 1
+      },
+      {
+        "id": "gaia_herdable_sheep",
+        "name": "Sheep",
+        "count": 2
+      },
+      {
+        "id": "gaia_herdable_sheep_black",
+        "name": "Sheep (black)",
+        "count": 1
+      },
+      {
+        "id": "gaia_herdable_sheep_brown",
+        "name": "Sheep (brown)",
+        "count": 2
+      }
+    ],
+    "buildings": [
+      {
+        "id": "building_town_center_capital_jpn",
+        "name": "Town Center (capital)",
+        "count": 1
+      }
+    ],
+    "evidence": [
+      "raw:army/standard_mode/normal_japanese.rgd#default/army_bag/starting_units/squad[0..11] (1 unit_scout_1_jpn, 6 unit_villager_1_jpn, 2 gaia_herdable_sheep, 1 gaia_herdable_sheep_black, 2 gaia_herdable_sheep_brown)",
+      "raw:army/standard_mode/normal_japanese.rgd#default/army_bag/starting_buildings/starting_building/building/$PBGNAME = building_town_center_capital_jpn",
+      "raw:army/standard_mode/normal_japanese.rgd#default/army_bag/resource_starting_amount/food = 200; wood = 150; gold = 100; command = 4; stone key absent (0)",
+      "raw:racebps/japanese#default/race_bag/army/standard/$PBGNAME = normal_japanese (links the army record to base Japanese)",
+      "raw:statemodel_schema/buildings/civilizations/japanese/town_center_capital_jpn.rgd#default/schema_bag/int_properties/statemodel_int_property/population_cap_increase default = 10 (only pop source at start; army record sets no popcap start amount)",
+      "raw:army/standard_mode/normal_japanese.rgd#default/army_bag/race_population_cap_table/max_personnel_cap = 200; resource_max_cap/popcap = 200",
+      "'command' = Yorishiro token: Floating Gate priest unit_monk_shinto_landmark_3_jpn costs command 1 (catalog:units/unit_monk_shinto_landmark_3_jpn#cost.command); landmark tooltip cap 4 (locale:11260987 arg %2%=4)"
+    ]
+  },
+  "villager": {
+    "id": "unit_villager_1_jpn",
+    "cost": {
+      "food": 50
+    },
+    "trainSeconds": 20,
+    "speedEngineUnits": 4.5,
+    "gather": {
+      "sheep": {
+        "rate": 0.75,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[2]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[2]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[2]/resource_sub_type/$PBGNAME = herded_animal"
+        ]
+      },
+      "berries": {
+        "rate": 0.69,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[9]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[9]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[9]/resource_sub_type/$PBGNAME = forage_bush"
+        ]
+      },
+      "deer": {
+        "rate": 0.825,
+        "carry": 25,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[4]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[4]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[4]/resource_sub_type/$PBGNAME = hunted_animal_flee"
+        ]
+      },
+      "boar": {
+        "rate": 0.9,
+        "carry": 25,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[3]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[3]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[3]/resource_sub_type/$PBGNAME = hunted_animal_danger"
+        ]
+      },
+      "farm": {
+        "rate": 0.75,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[1]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[1]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[1]/resource_sub_type/$PBGNAME = farm"
+        ]
+      },
+      "wood": {
+        "rate": 0.75,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[0]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[0]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[0]/resource_sub_type/$PBGNAME = tree"
+        ]
+      },
+      "gold": {
+        "rate": 0.75,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[7]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[7]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[7]/resource_sub_type/$PBGNAME = gold"
+        ]
+      },
+      "stone": {
+        "rate": 0.75,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[6]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[6]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[6]/resource_sub_type/$PBGNAME = stone"
+        ]
+      },
+      "shore_fish": {
+        "rate": 1.0,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[8]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[8]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[8]/resource_sub_type/$PBGNAME = fish"
+        ]
+      },
+      "cattle": {
+        "rate": 0.66,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[10]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[10]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[10]/resource_sub_type/$PBGNAME = cattle"
+        ]
+      },
+      "pasture": {
+        "rate": 0.75,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[11]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[11]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[11]/resource_sub_type/$PBGNAME = pasture"
+        ]
+      },
+      "meteorite": {
+        "rate": 0.75,
+        "carry": 10,
+        "evidence": [
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[5]/gather_rate",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[5]/resource_carry_capacity",
+          "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/resource_gatherer_ext/gather_types/gather_target[5]/resource_sub_type/$PBGNAME = meteorite"
+        ]
+      }
+    },
+    "evidence": [
+      "catalog:units/unit_villager_1_jpn#cost.food",
+      "catalog:units/unit_villager_1_jpn#trainTimeSeconds",
+      "catalog:units/unit_villager_1_jpn#speedEngineUnits",
+      "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/cost_ext/time_cost/time_seconds = 20; cost/food = 50",
+      "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/moving_ext/speed_scaling_table/default_speed = 4.5 (engine units; tile conversion not applied)",
+      "raw:ebps/races/japanese/units/unit_villager_1_jpn#default/health_ext/hitpoints = 50",
+      "Rates are raw gather_rate (resource/s while working), before techs, Daimyo aura and walking; carry is resource_carry_capacity."
+    ]
+  },
+  "townCenter": {
+    "id": "building_town_center_capital_jpn",
+    "extraId": "building_town_center_jpn",
+    "cost": {
+      "wood": 400,
+      "stone": 300
+    },
+    "buildSeconds": 150,
+    "popProvided": 10,
+    "villagerProductionMultiplierByAge": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1
+    },
+    "notes": "Extra TC needs Feudal Age (requirement_ext any-of feudal_age / fast_expand game-mode tech) and an existing capital. Capital HP 7000 (15 garrison), extra TC HP 2500 (8 garrison). Accepts food, wood, gold, stone. No age-based villager production modifier exists for Japanese (none in codex 11257921 or records); a Yorishiro in a TC gives +30% production speed (see mechanics yorishiro_placement). Each TC is upgraded separately with Daimyo Manor/Palace/Shogunate Castle (see mechanics daimyo_town_center_upgrades). The 17.0 preview raises TC build time 150 -> 165 s; not applied (data/patch-next.json, scheduled 2026-10-29).",
+    "evidence": [
+      "catalog:buildings/building_town_center_jpn#cost",
+      "catalog:buildings/building_town_center_jpn#buildTimeSeconds",
+      "catalog:buildings/building_town_center_jpn#hp",
+      "catalog:buildings/building_town_center_capital_jpn#hp",
+      "raw:ebps/races/japanese/buildings/building_town_center_jpn#default/requirement_ext/requirement_table/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name = feudal_age (is_present True); [1] = fast_expand",
+      "raw:statemodel_schema/buildings/civilizations/japanese/town_center_jpn.rgd#population_cap_increase default = 10",
+      "raw:statemodel_schema/buildings/civilizations/japanese/town_center_capital_jpn.rgd#population_cap_increase default = 10",
+      "raw:ebps/races/japanese/buildings/building_town_center_capital_jpn#default/resource_drop_off_ext/accepted_resources/{food,gold,stone,wood} = True",
+      "raw:ebps/races/japanese/buildings/building_town_center_capital_jpn#default/hold_ext/num_slots = 15; building_town_center_jpn = 8",
+      "locale:11257921 (base-Japanese codex, referenced by raw:army/standard_mode/normal_japanese.rgd#default/army_bag/ui/global_traits_summary/trait[0]/description) lists no TC production bonus"
+    ]
+  },
+  "buildings": {
+    "farmhouse": {
+      "id": "building_house_jpn",
+      "name": "Farmhouse",
+      "cost": {
+        "wood": 50
+      },
+      "buildSeconds": 15,
+      "age": 1,
+      "popProvided": 10,
+      "dropoff": [
+        "food"
+      ],
+      "limit": null,
+      "notes": "Japanese house + mill in one: provides population and is the Food drop-off. No Mill exists (racebps mill and house archetypes both point to building_house_jpn). Hosts Tawara/Takezaiku/Fudasashi, Survival Techniques, Professional Scouts. No farm-rate technology anywhere for Japanese. Yorishiro: +70 food/min.",
+      "evidence": [
+        "catalog:buildings/building_house_jpn#cost",
+        "catalog:buildings/building_house_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_house_jpn#default/resource_drop_off_ext/accepted_resources/food = True (only accepted resource)",
+        "raw:statemodel_schema/buildings/civilizations/japanese/farmhouse_jpn.rgd#default/schema_bag/int_properties/statemodel_int_property[2]/population_cap_increase default = 10",
+        "raw:racebps/japanese#default/race_bag/blueprint_archetypes/mill/$PBGNAME = building_house_jpn; house/$PBGNAME = building_house_jpn",
+        "raw:ebps/races/japanese/buildings/building_house_jpn#default/construction_ext/on_construction_complete_state_tree_refs/on_construction_complete_entity_state_tree_ref = house_construction_complete\\run_once (applies the pop; state tree not decoded)",
+        "locale:11247714",
+        "locale:11247226",
+        "raw:ebps/races/japanese/buildings/building_house_jpn no required_player_upgrade in requirement_ext (buildable in Dark Age)"
+      ]
+    },
+    "lumber_camp": {
+      "id": "building_econ_wood_jpn",
+      "name": "Lumber Camp",
+      "cost": {
+        "wood": 50
+      },
+      "buildSeconds": 20,
+      "age": 1,
+      "popProvided": 0,
+      "dropoff": [
+        "wood"
+      ],
+      "limit": null,
+      "notes": "Hosts Forestry, Double Broadax, Lumber Preservation, Crosscut Saw (Japanese copies). Yorishiro: +70 wood/min.",
+      "evidence": [
+        "catalog:buildings/building_econ_wood_jpn#cost",
+        "catalog:buildings/building_econ_wood_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_econ_wood_jpn#default/resource_drop_off_ext/accepted_resources/wood = True",
+        "raw:ebps/races/japanese/buildings/building_econ_wood_jpn no required_player_upgrade in requirement_ext (buildable in Dark Age)"
+      ]
+    },
+    "forge": {
+      "id": "building_econ_mining_camp_jpn",
+      "name": "Forge",
+      "cost": {
+        "wood": 50
+      },
+      "buildSeconds": 20,
+      "age": 1,
+      "popProvided": 0,
+      "dropoff": [
+        "gold",
+        "stone"
+      ],
+      "limit": null,
+      "notes": "Replaces both Mining Camp and Blacksmith (racebps mining_camp and blacksmith archetypes both point here). Hosts Tatara/Hizukuri/Kobuse-gitae/Yaki-ire, melee/ranged armor, ranged damage, Military Academy, Siege Engineering, Specialized Pick/Shaft Mining/Cupellation (gold and stone). Yorishiro: +50 gold/min.",
+      "evidence": [
+        "catalog:buildings/building_econ_mining_camp_jpn#cost",
+        "catalog:buildings/building_econ_mining_camp_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_econ_mining_camp_jpn#default/resource_drop_off_ext/accepted_resources/gold = True; stone = True",
+        "raw:racebps/japanese#default/race_bag/blueprint_archetypes/mining_camp/$PBGNAME = building_econ_mining_camp_jpn; blacksmith/$PBGNAME = building_econ_mining_camp_jpn",
+        "catalog:buildings/building_econ_mining_camp_jpn#researchableTechnologies",
+        "locale:11247714",
+        "raw:ebps/races/japanese/buildings/building_econ_mining_camp_jpn no required_player_upgrade in requirement_ext (buildable in Dark Age)"
+      ]
+    },
+    "farm": {
+      "id": "building_resource_farm_jpn",
+      "name": "Farm",
+      "cost": {
+        "wood": 75
+      },
+      "buildSeconds": 6,
+      "age": 1,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "One villager per farm. resource_deposit_ext initial_amount 120 with discard_resource_amount_on_complete_gather (crop cycle; farm itself does not deplete). Kura Storehouse spawns these for free every 50 s.",
+      "evidence": [
+        "catalog:buildings/building_resource_farm_jpn#cost",
+        "catalog:buildings/building_resource_farm_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_resource_farm_jpn#default/resource_deposit_ext/initial_amount = 120; num_gatherers_to_assign_by_ai = 1",
+        "locale:11142248"
+      ]
+    },
+    "barracks": {
+      "id": "building_unit_infantry_jpn",
+      "name": "Barracks",
+      "cost": {
+        "wood": 75
+      },
+      "buildSeconds": 30,
+      "age": 1,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Civ bonus Samurai Districts: Barracks 50% cheaper (the 75 wood record value already includes it; do not apply again). Trains Spearman, Samurai (Dark Age), Onna-Bugeisha (Feudal), Katana Bannerman. Hosts Samurai/Onna tier upgrades, Odachi, Nagae Yari.",
+      "evidence": [
+        "catalog:buildings/building_unit_infantry_jpn#cost",
+        "catalog:buildings/building_unit_infantry_jpn#buildTimeSeconds",
+        "locale:11270503 (arg %1% = 50 from raw:army/standard_mode/normal_japanese.rgd#default/army_bag/ui/global_traits_summary/trait[8]/description_formatter/formatter_arguments/int_value)",
+        "catalog:buildings/building_unit_infantry_jpn#trainableUnits",
+        "raw:ebps/races/japanese/buildings/building_unit_infantry_jpn no required_player_upgrade in requirement_ext (buildable in Dark Age)"
+      ]
+    },
+    "stable": {
+      "id": "building_unit_cavalry_jpn",
+      "name": "Stable",
+      "cost": {
+        "wood": 150
+      },
+      "buildSeconds": 30,
+      "age": 2,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Trains Horseman, Mounted Samurai (Castle), Uma Bannerman, Scout. Hosts Elite Mounted Samurai, Do-maru Armor.",
+      "evidence": [
+        "catalog:buildings/building_unit_cavalry_jpn#cost",
+        "catalog:buildings/building_unit_cavalry_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_unit_cavalry_jpn#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name = feudal_age (is_present True)"
+      ]
+    },
+    "archery_range": {
+      "id": "building_unit_ranged_jpn",
+      "name": "Archery Range",
+      "cost": {
+        "wood": 150
+      },
+      "buildSeconds": 30,
+      "age": 2,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Trains Yumi Ashigaru, Onna-Musha (Castle), Handcannon Ashigaru, Yumi Bannerman. Hosts Kabura-ya and Elite Onna-Musha.",
+      "evidence": [
+        "catalog:buildings/building_unit_ranged_jpn#cost",
+        "catalog:buildings/building_unit_ranged_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_unit_ranged_jpn#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name = feudal_age (is_present True)"
+      ]
+    },
+    "market": {
+      "id": "building_econ_market_jpn",
+      "name": "Market",
+      "cost": {
+        "wood": 100
+      },
+      "buildSeconds": 20,
+      "age": 2,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Buy/sell and Trader (60 wood 60 gold, 30 s). No Japanese market technologies.",
+      "evidence": [
+        "catalog:buildings/building_econ_market_jpn#cost",
+        "catalog:buildings/building_econ_market_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_econ_market_jpn#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name = feudal_age (is_present True)",
+        "catalog:units/unit_trade_cart_jpn#cost"
+      ]
+    },
+    "university": {
+      "id": "building_tech_university_jpn",
+      "name": "University",
+      "cost": {
+        "wood": 450
+      },
+      "buildSeconds": 60,
+      "age": 4,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Japanese University is Imperial-only. Hosts Biology, Oda Tactics, Court Architects, Chemistry, Siege Works, Incendiary Arrows, Silk Bowstrings, Lead Shot.",
+      "evidence": [
+        "catalog:buildings/building_tech_university_jpn#cost",
+        "catalog:buildings/building_tech_university_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_tech_university_jpn#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name = imperial_age (is_present True)"
+      ]
+    },
+    "shinto_shrine": {
+      "id": "building_unit_religious_shinto_jpn",
+      "name": "Shinto Shrine",
+      "cost": {
+        "wood": 200
+      },
+      "buildSeconds": 25,
+      "age": 3,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Shinto path only: requires a completed Floating Gate and Castle Age. Trains Shinto Priest (150 gold, 30 s). Hosts Shinto Rituals, Gion Festival, Bunrei. Relics generate gold from Castle Age.",
+      "evidence": [
+        "catalog:buildings/building_unit_religious_shinto_jpn#cost",
+        "catalog:buildings/building_unit_religious_shinto_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_unit_religious_shinto_jpn#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name = castle_age; required_structure/structure_name = building_landmark_age2_shinto_jpn",
+        "locale:11260985"
+      ]
+    },
+    "buddhist_temple": {
+      "id": "building_unit_religious_buddhist_jpn",
+      "name": "Buddhist Temple",
+      "cost": {
+        "wood": 200
+      },
+      "buildSeconds": 25,
+      "age": 3,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": 4,
+      "notes": "Buddhist path only: requires a completed Temple of Equality and Castle Age. Requirement record blocks a new temple once 4 exist (limit 4); UI string 11260983 says \"Maximum of 5 can be built\" (likely counting the landmark). Trains Buddhist Monk (80 gold, 30 s). Hosts Zen, Nehan, Five Mountain Ministries.",
+      "evidence": [
+        "catalog:buildings/building_unit_religious_buddhist_jpn#cost",
+        "catalog:buildings/building_unit_religious_buddhist_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_unit_religious_buddhist_jpn#default/requirement_ext/requirement_table/required_not/requirement_table/required_structure/required_structure_count = 4 (building_unit_religious_buddhist_jpn)",
+        "raw:ebps/races/japanese/buildings/building_unit_religious_buddhist_jpn#default/requirement_ext/requirement_table/required_structure/structure_name = building_landmark_age2_buddhist_jpn",
+        "locale:11260983",
+        "locale:11260986 (arg %1% = 4)"
+      ]
+    },
+    "siege_workshop": {
+      "id": "building_unit_siege_jpn",
+      "name": "Siege Workshop",
+      "cost": {
+        "wood": 250
+      },
+      "buildSeconds": 45,
+      "age": 3,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "",
+      "evidence": [
+        "catalog:buildings/building_unit_siege_jpn#cost",
+        "catalog:buildings/building_unit_siege_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_unit_siege_jpn#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name = castle_age (is_present True)"
+      ]
+    },
+    "dock": {
+      "id": "building_unit_naval_jpn",
+      "name": "Dock",
+      "cost": {
+        "wood": 150
+      },
+      "buildSeconds": 30,
+      "age": 1,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Fishing Boats 25% cheaper (56 wood record value already includes it). Hosts Extended Lines, Drift Nets, Copper Plating.",
+      "evidence": [
+        "catalog:buildings/building_unit_naval_jpn#cost",
+        "catalog:buildings/building_unit_naval_jpn#buildTimeSeconds",
+        "catalog:units/unit_naval_fishing_boat_2_jpn#cost",
+        "locale:11247719 (arg 25 from raw:army/standard_mode/normal_japanese.rgd#default/army_bag/ui/global_traits_summary/trait[9])"
+      ]
+    },
+    "keep": {
+      "id": "building_defense_keep_jpn",
+      "name": "Castle (Keep)",
+      "cost": {
+        "wood": 300,
+        "stone": 900
+      },
+      "buildSeconds": 180,
+      "age": 4,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Oda's Fortress: Japanese Keep is Imperial-only, 5500 HP, Rocket emplacement.",
+      "evidence": [
+        "catalog:buildings/building_defense_keep_jpn#cost",
+        "catalog:buildings/building_defense_keep_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_defense_keep_jpn#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name = imperial_age (is_present True)",
+        "catalog:buildings/building_defense_keep_jpn#hp",
+        "locale:11258365"
+      ]
+    },
+    "wonder": {
+      "id": "building_wonder_age4_nikko_toshogu_jpn",
+      "name": "Tokugawa Shrine (Wonder)",
+      "cost": {
+        "food": 5000,
+        "wood": 5000,
+        "gold": 5000,
+        "stone": 5000
+      },
+      "buildSeconds": 600,
+      "age": 4,
+      "popProvided": 0,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Wonder, not an age-up landmark. Yorishiro: +4000 health.",
+      "evidence": [
+        "catalog:buildings/building_wonder_age4_nikko_toshogu_jpn#cost",
+        "catalog:buildings/building_wonder_age4_nikko_toshogu_jpn#buildTimeSeconds",
+        "raw:ebps/races/japanese/buildings/building_wonder_age4_nikko_toshogu_jpn#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name = imperial_age"
+      ]
+    }
+  },
+  "landmarks": {
+    "2": [
+      {
+        "id": "building_landmark_age1_storehouse_jpn",
+        "name": "Kura Storehouse",
+        "cost": {
+          "food": 400,
+          "gold": 200
+        },
+        "buildSeconds": 190,
+        "effects": [
+          {
+            "kind": "other",
+            "target": "dropoff",
+            "op": "set",
+            "value": [
+              "food",
+              "wood",
+              "gold",
+              "stone"
+            ],
+            "notes": "Universal drop-off (accepted_resources food/gold/stone/wood)."
+          },
+          {
+            "kind": "passive_income",
+            "target": "free_farm_spawn_interval_s",
+            "op": "set",
+            "value": 50,
+            "notes": "Creates one Farm around the landmark every 50 s (each worth a 75-wood, 6 s building_resource_farm_jpn); when farmland is full it generates Wood instead. Farmland capacity and the wood amount are not in installed records (state tree storehouse_rice_field_spawn_jpn)."
+          },
+          {
+            "kind": "unlock",
+            "target": "research_location",
+            "op": "set",
+            "value": [
+              "upgrade_econ_resource_gold_harvest_rate_2_kura_jpn",
+              "upgrade_econ_resource_gold_harvest_rate_3_kura_jpn",
+              "upgrade_econ_resource_gold_harvest_rate_4_kura_jpn",
+              "upgrade_econ_resource_wood_fell_rate_1_kura_jpn",
+              "upgrade_econ_resource_wood_harvest_rate_2_kura_jpn",
+              "upgrade_econ_resource_wood_harvest_rate_3_kura_jpn",
+              "upgrade_econ_resource_wood_harvest_rate_4_kura_jpn",
+              "upgrade_unit_town_center_wheelbarrow_1_jpn",
+              "upgrade_unit_town_center_wheelbarrow_2_jpn",
+              "upgrade_unit_town_center_wheelbarrow_3_jpn",
+              "upgrade_econ_villager_hunting_gear_1",
+              "upgrade_scout_forester"
+            ],
+            "notes": "The _kura ids are copies of the Forge/Lumber Camp techs (same cost/time/scalars; researching one copy blocks the other); the Tawara line, Survival Techniques and Professional Scouts are the same ids the Farmhouse researches. Lets every eco tech be researched without a Forge or Lumber Camp."
+          },
+          {
+            "kind": "other",
+            "target": "garrison_slots",
+            "op": "set",
+            "value": 4,
+            "notes": "hold_ext num_slots 4."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age1_storehouse_jpn#cost",
+          "catalog:buildings/building_landmark_age1_storehouse_jpn#buildTimeSeconds",
+          "locale:11257246 (arg %1% = 50 from raw:ebps/races/japanese/buildings/building_landmark_age1_storehouse_jpn#default/ui_ext/help_text_formatter/formatter_arguments/int_value)",
+          "raw:ebps/races/japanese/buildings/building_landmark_age1_storehouse_jpn#default/resource_drop_off_ext/accepted_resources/{food,gold,stone,wood} = True",
+          "raw:ebps/races/japanese/buildings/building_landmark_age1_storehouse_jpn#default/ability_ext/abilities/ability/$PBGNAME = storehouse_rice_field_spawn_jpn",
+          "catalog:buildings/building_landmark_age1_storehouse_jpn#researchableTechnologies",
+          "raw:ebps/races/japanese/buildings/building_landmark_age1_storehouse_jpn#default/requirement_ext/requirement_table/required_player_upgrade = feudal_age absent (built in Dark Age, advances to Feudal); mutually exclusive with Koka Township"
+        ]
+      },
+      {
+        "id": "building_landmark_age1_shinobi_jpn",
+        "name": "Koka Township",
+        "cost": {
+          "food": 400,
+          "gold": 200
+        },
+        "buildSeconds": 190,
+        "effects": [
+          {
+            "kind": "unlock",
+            "target": "unit_shinobi_2_jpn",
+            "op": "set",
+            "value": true,
+            "notes": "Trains Shinobi (50 food 50 gold, 20 s); queues one free Shinobi (unit_shinobi_2_free_jpn) on completion. No economy effect."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age1_shinobi_jpn#cost",
+          "catalog:buildings/building_landmark_age1_shinobi_jpn#buildTimeSeconds",
+          "locale:11247523",
+          "catalog:buildings/building_landmark_age1_shinobi_jpn#trainableUnits",
+          "catalog:units/unit_shinobi_2_jpn#cost",
+          "raw:ebps/races/japanese/buildings/building_landmark_age1_shinobi_jpn#default/requirement_ext/requirement_table/required_player_upgrade = feudal_age absent"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "id": "building_landmark_age2_shinto_jpn",
+        "name": "Floating Gate",
+        "cost": {
+          "food": 1200,
+          "gold": 600
+        },
+        "buildSeconds": 220,
+        "effects": [
+          {
+            "kind": "passive_income",
+            "target": "shinto_priest_with_yorishiro_interval_s",
+            "op": "set",
+            "value": 120,
+            "notes": "Produces a Shinto Priest carrying a Yorishiro every 2 minutes; the first spawns instantly. The spawned priest (unit_monk_shinto_landmark_3_jpn) costs 1 command token, 1 s; players start with 4 tokens."
+          },
+          {
+            "kind": "other",
+            "target": "yorishiro_cap",
+            "op": "set",
+            "value": 4,
+            "notes": "Deposit up to 4 Yorishiro; Bunrei (Imperial) adds +2."
+          },
+          {
+            "kind": "unlock",
+            "target": "building_unit_religious_shinto_jpn",
+            "op": "set",
+            "value": true,
+            "notes": "Shinto Shrine and Shinto Priest (150 gold, 30 s). Excludes Temple of Equality (Buddhist path)."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age2_shinto_jpn#cost",
+          "catalog:buildings/building_landmark_age2_shinto_jpn#buildTimeSeconds",
+          "locale:11260987 (args 2, 4 from raw:ebps/races/japanese/buildings/building_landmark_age2_shinto_jpn#default/ui_ext/help_text_formatter/formatter_arguments/int_value[0..1])",
+          "catalog:units/unit_monk_shinto_landmark_3_jpn#cost",
+          "catalog:units/unit_monk_shinto_landmark_3_jpn#trainTimeSeconds",
+          "raw:army/standard_mode/normal_japanese.rgd#default/army_bag/resource_starting_amount/command = 4",
+          "raw:ebps/races/japanese/buildings/building_landmark_age2_shinto_jpn#default/requirement_ext/requirement_table/required_player_upgrade[0] = castle_age absent, [1] = feudal_age present (built in Feudal, advances to Castle)"
+        ]
+      },
+      {
+        "id": "building_landmark_age2_buddhist_jpn",
+        "name": "Temple of Equality",
+        "cost": {
+          "food": 1200,
+          "gold": 600
+        },
+        "buildSeconds": 220,
+        "effects": [
+          {
+            "kind": "unlock",
+            "target": "unit_monk_buddhist_3_jpn",
+            "op": "set",
+            "value": true,
+            "notes": "Trains Buddhist Monk (80 gold, 30 s); hosts Zen, Nehan, Five Mountain Ministries; casts the landmark version of Sohei Sutra (enemy damage debuff)."
+          },
+          {
+            "kind": "other",
+            "target": "buddhist_temple_extra_count",
+            "op": "set",
+            "value": 4,
+            "notes": "Allows 4 additional Buddhist Temples."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age2_buddhist_jpn#cost",
+          "catalog:buildings/building_landmark_age2_buddhist_jpn#buildTimeSeconds",
+          "locale:11260986 (arg 4 from raw:ebps/races/japanese/buildings/building_landmark_age2_buddhist_jpn#default/ui_ext/help_text_formatter/formatter_arguments/int_value)",
+          "catalog:units/unit_monk_buddhist_3_jpn#cost",
+          "catalog:buildings/building_landmark_age2_buddhist_jpn#researchableTechnologies",
+          "raw:ebps/races/japanese/buildings/building_landmark_age2_buddhist_jpn#default/requirement_ext/requirement_table/required_player_upgrade[0] = castle_age absent, [1] = feudal_age present"
+        ]
+      }
+    ],
+    "4": [
+      {
+        "id": "building_landmark_age3_ozutsu_jpn",
+        "name": "Tanegashima Gunsmith",
+        "cost": {
+          "food": 2400,
+          "gold": 1200
+        },
+        "buildSeconds": 250,
+        "effects": [
+          {
+            "kind": "passive_income",
+            "target": "gunpowder_stockpile_interval_s",
+            "op": "set",
+            "value": 30,
+            "notes": "Stockpiles weapon supplies every 30 s, starts with 2. Deployed (instant, 0 s) variants cost the stockpile resource militia_hre: 1 for Handcannon/Ozutsu, 4 for Bombard/Ribauldequin."
+          },
+          {
+            "kind": "other",
+            "target": "gunpowder_stockpile_initial",
+            "op": "set",
+            "value": 2,
+            "notes": ""
+          },
+          {
+            "kind": "unlock",
+            "target": "production",
+            "op": "set",
+            "value": [
+              "unit_handcannon_4_jpn",
+              "unit_ozutsu_4_jpn",
+              "unit_ribauldequin_4_jpn",
+              "unit_bombard_4_jpn"
+            ],
+            "notes": "Handcannon 120f 120g 35 s; Ozutsu 85f 155g 35 s; Ribauldequin 350w 500g 45 s; Bombard 350w 500g 45 s."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age3_ozutsu_jpn#cost",
+          "catalog:buildings/building_landmark_age3_ozutsu_jpn#buildTimeSeconds",
+          "locale:11247528 (args 30, 2 from raw:ebps/races/japanese/buildings/building_landmark_age3_ozutsu_jpn#default/ui_ext/help_text_formatter/formatter_arguments/int_value[0..1])",
+          "raw:statemodel_schema/buildings/civilizations/japanese/wonder_age3_tanegeshima_jpn.rgd#gunsmith_stockpile_timer_jpn default = 30; gunsmith_stockpile_count_jpn default = 2",
+          "catalog:units/unit_ozutsu_tanegashima_4_jpn#cost",
+          "catalog:units/unit_bombard_tanegashima_4_jpn#cost",
+          "catalog:units/unit_ozutsu_4_jpn#cost",
+          "catalog:units/unit_handcannon_4_jpn#cost",
+          "raw:ebps/races/japanese/buildings/building_landmark_age3_ozutsu_jpn#default/requirement_ext/requirement_table/required_player_upgrade[0] = imperial_age absent, [1] = castle_age present (built in Castle, advances to Imperial)"
+        ]
+      },
+      {
+        "id": "building_landmark_age3_treasure_jpn",
+        "name": "Castle of the Crow",
+        "cost": {
+          "food": 2400,
+          "gold": 1200
+        },
+        "buildSeconds": 250,
+        "effects": [
+          {
+            "kind": "other",
+            "target": "acts_as_keep",
+            "op": "set",
+            "value": true,
+            "notes": "Acts as a Castle (keep weapon upgrades, 15 garrison, 5500 HP)."
+          },
+          {
+            "kind": "passive_income",
+            "target": "treasure_caravan",
+            "op": "set",
+            "value": {
+              "minRpm": 100,
+              "maxRpm": 700,
+              "maxDistanceRpm": 160
+            },
+            "notes": "Periodically spawns Treasure Caravans from a selected neutral Trading Post that deliver food, wood, gold and some stone on arrival. Raw player-schema defaults treasure_caravan_min_rpm_jpn 100, treasure_caravan_max_rpm_jpn 700, treasure_caravan_max_distance_rpm_jpn 160; the formula and spawn period live in a state tree (not decoded). Needs a neutral trade post on the map."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age3_treasure_jpn#cost",
+          "catalog:buildings/building_landmark_age3_treasure_jpn#buildTimeSeconds",
+          "locale:11247529",
+          "catalog:buildings/building_landmark_age3_treasure_jpn#hp",
+          "raw:statemodel_schema/civs/japanese.rgd#default/schema_bag/treasure_caravan_min_rpm_jpn / treasure_caravan_max_rpm_jpn / treasure_caravan_max_distance_rpm_jpn defaults 100 / 700 / 160",
+          "raw:ebps/races/japanese/buildings/building_landmark_age3_treasure_jpn#default/requirement_ext/requirement_table/required_player_upgrade[0] = imperial_age absent, [1] = castle_age present"
+        ]
+      }
+    ]
+  },
+  "technologies": [
+    {
+      "id": "feudal_age",
+      "name": "Feudal Age (II)",
+      "age": 2,
+      "building": "landmark",
+      "cost": {
+        "food": 400,
+        "gold": 200
+      },
+      "researchSeconds": 190,
+      "category": "landmark",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "age",
+          "op": "set",
+          "value": 2,
+          "notes": "Age-up record; its cost/time equal the landmark building cost/time. Do not charge twice: the landmark is the purchase."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/feudal_age#cost",
+        "catalog:technologies/feudal_age#researchTimeSeconds",
+        "catalog:technologies/feudal_age#requirements",
+        "raw:upgrade/dev/ages/feudal_age"
+      ]
+    },
+    {
+      "id": "castle_age",
+      "name": "Castle Age (III)",
+      "age": 3,
+      "building": "landmark",
+      "cost": {
+        "food": 1200,
+        "gold": 600
+      },
+      "researchSeconds": 220,
+      "category": "landmark",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "age",
+          "op": "set",
+          "value": 3,
+          "notes": "Age-up record; its cost/time equal the landmark building cost/time. Do not charge twice: the landmark is the purchase."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/castle_age#cost",
+        "catalog:technologies/castle_age#researchTimeSeconds",
+        "catalog:technologies/castle_age#requirements",
+        "raw:upgrade/dev/ages/castle_age"
+      ]
+    },
+    {
+      "id": "imperial_age",
+      "name": "Imperial Age (IV)",
+      "age": 4,
+      "building": "landmark",
+      "cost": {
+        "food": 2400,
+        "gold": 1200
+      },
+      "researchSeconds": 250,
+      "category": "landmark",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "age",
+          "op": "set",
+          "value": 4,
+          "notes": "Age-up record; its cost/time equal the landmark building cost/time. Do not charge twice: the landmark is the purchase."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/imperial_age#cost",
+        "catalog:technologies/imperial_age#researchTimeSeconds",
+        "catalog:technologies/imperial_age#requirements",
+        "raw:upgrade/dev/ages/imperial_age"
+      ]
+    },
+    {
+      "id": "upgrade_capital_tier_1_jpn",
+      "name": "Daimyo Manor",
+      "age": 1,
+      "building": "town_center",
+      "cost": {
+        "stone": 175
+      },
+      "researchSeconds": 20,
+      "category": "civ-economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "farm (villagers on farms within range 40 of this Town Center)",
+          "op": "set",
+          "value": 1.2,
+          "notes": "Daimyo aura level 1: farm harvest x1.2 (tooltip +20%). Level replaces the previous level (per-level bonus_level_N, not cumulative). Stacking across overlapping TC auras untraced."
+        },
+        {
+          "kind": "other",
+          "target": "bannerman_production_cap",
+          "op": "add",
+          "value": 1,
+          "notes": "Increases Samurai Bannerman production cap by +1 (tooltip). Bannermen cost 1 action token each; base cap and accumulation untraced."
+        },
+        {
+          "kind": "other",
+          "target": "free_villager",
+          "op": "add",
+          "value": 1,
+          "notes": "Provides a free Villager (unit_villager_free_jpn, 0 s, no cost)."
+        },
+        {
+          "kind": "other",
+          "target": "town_center_health",
+          "op": "add",
+          "value": 1000,
+          "notes": "TC health +1000, adds an arrow slit."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_capital_tier_1_jpn#cost",
+        "catalog:technologies/upgrade_capital_tier_1_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_capital_tier_1_jpn#requirements",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/float_properties/abilitybag_float_property[0]/value = 1.2 (id bonus_level_1)",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/float_properties/abilitybag_float_property[3]/value = 40 (id radius); range = 40",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/ui_contextual_info/context[0]/help_text_formatter/formatter = 11247191, int_value = 20",
+        "catalog:technologies/upgrade_capital_tier_1_jpn#descriptionArguments",
+        "raw:upgrade/races/japanese/buildings/upgrade_capital_tier_1_jpn#default/upgrade_bag/requirements (only entity-upgrade checks; no age requirement)",
+        "locale:11247711 (args 20,40,60,1,2,3 from raw:army/standard_mode/normal_japanese.rgd#default/army_bag/ui/global_traits_summary/trait[1]/description_formatter)"
+      ]
+    },
+    {
+      "id": "upgrade_capital_tier_2_jpn",
+      "name": "Daimyo Palace",
+      "age": 1,
+      "building": "town_center",
+      "cost": {
+        "stone": 600
+      },
+      "researchSeconds": 20,
+      "category": "civ-economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "farm (villagers on farms within range 40 of this Town Center)",
+          "op": "set",
+          "value": 1.4,
+          "notes": "Daimyo aura level 2: farm harvest x1.4 (tooltip +40%). Level replaces the previous level (per-level bonus_level_N, not cumulative). Stacking across overlapping TC auras untraced."
+        },
+        {
+          "kind": "other",
+          "target": "bannerman_production_cap",
+          "op": "add",
+          "value": 2,
+          "notes": "Increases Samurai Bannerman production cap by +2 (tooltip). Bannermen cost 1 action token each; base cap and accumulation untraced."
+        },
+        {
+          "kind": "other",
+          "target": "free_villager",
+          "op": "add",
+          "value": 1,
+          "notes": "Provides a free Villager (unit_villager_free_jpn, 0 s, no cost)."
+        },
+        {
+          "kind": "other",
+          "target": "town_center_health",
+          "op": "add",
+          "value": 2000,
+          "notes": "TC health +2000, fire armor +2, adds an arrow slit."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_capital_tier_2_jpn#cost",
+        "catalog:technologies/upgrade_capital_tier_2_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_capital_tier_2_jpn#requirements",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/float_properties/abilitybag_float_property[1]/value = 1.4 (id bonus_level_2)",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/float_properties/abilitybag_float_property[3]/value = 40 (id radius); range = 40",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/ui_contextual_info/context[1]/help_text_formatter/formatter = 11247191, int_value = 40",
+        "catalog:technologies/upgrade_capital_tier_2_jpn#descriptionArguments",
+        "raw:upgrade/races/japanese/buildings/upgrade_capital_tier_2_jpn#default/upgrade_bag/requirements (only entity-upgrade checks; no age requirement)",
+        "locale:11247711 (args 20,40,60,1,2,3 from raw:army/standard_mode/normal_japanese.rgd#default/army_bag/ui/global_traits_summary/trait[1]/description_formatter)"
+      ]
+    },
+    {
+      "id": "upgrade_capital_tier_3_jpn",
+      "name": "Shogunate Castle",
+      "age": 1,
+      "building": "town_center",
+      "cost": {
+        "stone": 1200
+      },
+      "researchSeconds": 20,
+      "category": "civ-economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "farm (villagers on farms within range 40 of this Town Center)",
+          "op": "set",
+          "value": 1.6,
+          "notes": "Daimyo aura level 3: farm harvest x1.6 (tooltip +60%). Level replaces the previous level (per-level bonus_level_N, not cumulative). Stacking across overlapping TC auras untraced."
+        },
+        {
+          "kind": "other",
+          "target": "bannerman_production_cap",
+          "op": "add",
+          "value": 3,
+          "notes": "Increases Samurai Bannerman production cap by +3 (tooltip). Bannermen cost 1 action token each; base cap and accumulation untraced."
+        },
+        {
+          "kind": "other",
+          "target": "free_villager",
+          "op": "add",
+          "value": 1,
+          "notes": "Provides a free Villager (unit_villager_free_jpn, 0 s, no cost)."
+        },
+        {
+          "kind": "other",
+          "target": "town_center_health",
+          "op": "add",
+          "value": 3000,
+          "notes": "TC health +3000, fire armor +3, equips a Rocket Emplacement."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_capital_tier_3_jpn#cost",
+        "catalog:technologies/upgrade_capital_tier_3_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_capital_tier_3_jpn#requirements",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/float_properties/abilitybag_float_property[2]/value = 1.6 (id bonus_level_3)",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/float_properties/abilitybag_float_property[3]/value = 40 (id radius); range = 40",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/ui_contextual_info/context[2]/help_text_formatter/formatter = 11247191, int_value = 60",
+        "catalog:technologies/upgrade_capital_tier_3_jpn#descriptionArguments",
+        "raw:upgrade/races/japanese/buildings/upgrade_capital_tier_3_jpn#default/upgrade_bag/requirements (only entity-upgrade checks; no age requirement)",
+        "locale:11247711 (args 20,40,60,1,2,3 from raw:army/standard_mode/normal_japanese.rgd#default/army_bag/ui/global_traits_summary/trait[1]/description_formatter)"
+      ]
+    },
+    {
+      "id": "upgrade_unit_town_center_wheelbarrow_1_jpn",
+      "name": "Tawara",
+      "age": 1,
+      "building": "farmhouse (or Kura Storehouse)",
+      "cost": {
+        "wood": 25,
+        "gold": 50
+      },
+      "researchSeconds": 30,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "carry",
+          "target": "villager (all resources)",
+          "op": "add",
+          "value": 3,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        },
+        {
+          "kind": "speed",
+          "target": "villager",
+          "op": "mul",
+          "value": 1.07,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+7%); additive vs multiplicative stacking across the three tiers untraced"
+        },
+        {
+          "kind": "gather_rate",
+          "target": "berries",
+          "op": "mul",
+          "value": 1.25,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+25%); stacking across tiers untraced"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_jpn#cost",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_jpn#requirements",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_jpn#descriptionArguments = [3, 7, 25]",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_jpn#modifiers = []"
+      ]
+    },
+    {
+      "id": "upgrade_unit_town_center_wheelbarrow_2_jpn",
+      "name": "Takezaiku",
+      "age": 2,
+      "building": "farmhouse (or Kura Storehouse)",
+      "cost": {
+        "wood": 50,
+        "gold": 100
+      },
+      "researchSeconds": 40,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "carry",
+          "target": "villager (all resources)",
+          "op": "add",
+          "value": 3,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        },
+        {
+          "kind": "speed",
+          "target": "villager",
+          "op": "mul",
+          "value": 1.07,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+7%); additive vs multiplicative stacking across the three tiers untraced"
+        },
+        {
+          "kind": "gather_rate",
+          "target": "berries",
+          "op": "mul",
+          "value": 1.25,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+25%); stacking across tiers untraced"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_2_jpn#cost",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_2_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_2_jpn#requirements",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_2_jpn#descriptionArguments = [3, 7, 25]",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_2_jpn#modifiers = []"
+      ]
+    },
+    {
+      "id": "upgrade_unit_town_center_wheelbarrow_3_jpn",
+      "name": "Fudasashi",
+      "age": 3,
+      "building": "farmhouse (or Kura Storehouse)",
+      "cost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "carry",
+          "target": "villager (all resources)",
+          "op": "add",
+          "value": 3,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        },
+        {
+          "kind": "speed",
+          "target": "villager",
+          "op": "mul",
+          "value": 1.07,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+7%); additive vs multiplicative stacking across the three tiers untraced"
+        },
+        {
+          "kind": "gather_rate",
+          "target": "berries",
+          "op": "mul",
+          "value": 1.25,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+25%); stacking across tiers untraced"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_3_jpn#cost",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_3_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_3_jpn#requirements",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_3_jpn#descriptionArguments = [3, 7, 25]",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_3_jpn#modifiers = []"
+      ]
+    },
+    {
+      "id": "upgrade_econ_villager_hunting_gear_1",
+      "name": "Survival Techniques",
+      "age": 1,
+      "building": "farmhouse (or Kura Storehouse)",
+      "cost": {
+        "wood": 25,
+        "gold": 75
+      },
+      "researchSeconds": 25,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "deer, boar (hunted meat)",
+          "op": "add",
+          "value": 0.15,
+          "notes": "raw scalar survival_techniques_food 0.15 (+15% of base rate)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#cost",
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#requirements",
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#modifiers",
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_scout_forester",
+      "name": "Professional Scouts",
+      "age": 2,
+      "building": "farmhouse (or Kura Storehouse)",
+      "cost": {
+        "wood": 150,
+        "gold": 300
+      },
+      "researchSeconds": 75,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "scout",
+          "op": "set",
+          "value": true,
+          "notes": "Scouts carry carcasses (-55% speed while carrying), +100% vs wild animals; raw deer_decay_rate -1.5."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_scout_forester#cost",
+        "catalog:technologies/upgrade_scout_forester#researchTimeSeconds",
+        "catalog:technologies/upgrade_scout_forester#requirements",
+        "catalog:technologies/upgrade_scout_forester#modifiers",
+        "catalog:technologies/upgrade_scout_forester#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_econ_resource_wood_fell_rate_1_jpn",
+      "name": "Forestry",
+      "age": 1,
+      "building": "lumber_camp (or Kura Storehouse)",
+      "cost": {
+        "food": 25,
+        "gold": 50
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "tree_felling_rate",
+          "op": "mul",
+          "value": 2,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (\"Double the rate at which Villagers chop down trees\")"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_jpn#cost",
+        "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_jpn#requirements",
+        "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_jpn#description"
+      ]
+    },
+    {
+      "id": "upgrade_econ_resource_wood_harvest_rate_2_jpn",
+      "name": "Double Broadax",
+      "age": 2,
+      "building": "lumber_camp (or Kura Storehouse)",
+      "cost": {
+        "food": 50,
+        "gold": 100
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "wood",
+          "op": "add",
+          "value": 0.15,
+          "notes": "raw scalar wood_rate 0.15 (+15% of base rate per tooltip)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_jpn#cost",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_jpn#requirements",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_jpn#modifiers",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_econ_resource_wood_harvest_rate_3_jpn",
+      "name": "Lumber Preservation",
+      "age": 3,
+      "building": "lumber_camp (or Kura Storehouse)",
+      "cost": {
+        "food": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "wood",
+          "op": "add",
+          "value": 0.15,
+          "notes": "raw scalar wood_rate 0.15 (+15% of base rate per tooltip)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3_jpn#cost",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3_jpn#requirements",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3_jpn#modifiers",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_econ_resource_wood_harvest_rate_4_jpn",
+      "name": "Crosscut Saw",
+      "age": 4,
+      "building": "lumber_camp (or Kura Storehouse)",
+      "cost": {
+        "food": 250,
+        "gold": 500
+      },
+      "researchSeconds": 75,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "wood",
+          "op": "add",
+          "value": 0.15,
+          "notes": "raw scalar wood_rate 0.15 (+15% of base rate per tooltip)"
+        },
+        {
+          "kind": "carry",
+          "target": "wood",
+          "op": "add",
+          "value": 5,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+5 wood carry)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4_jpn#cost",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4_jpn#requirements",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4_jpn#modifiers",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_econ_resource_gold_harvest_rate_2_jpn",
+      "name": "Specialized Pick",
+      "age": 2,
+      "building": "forge (or Kura Storehouse)",
+      "cost": {
+        "wood": 50,
+        "gold": 100
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "gold",
+          "op": "add",
+          "value": 0.15,
+          "notes": "raw scalar mining_rate 0.15"
+        },
+        {
+          "kind": "gather_rate",
+          "target": "stone",
+          "op": "add",
+          "value": 0.15,
+          "notes": "raw scalar mining_rate_stone 0.15"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_jpn#cost",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_jpn#requirements",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_jpn#modifiers",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_econ_resource_gold_harvest_rate_3_jpn",
+      "name": "Shaft Mining",
+      "age": 3,
+      "building": "forge (or Kura Storehouse)",
+      "cost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "gold",
+          "op": "add",
+          "value": 0.15,
+          "notes": "tooltip +15%; raw scalar mining_rate is 0.30, read here as the cumulative total after Specialized Pick (0.15 + 0.15). If the engine reads raw scalars as per-tech increments it would be +0.30 -- see unresolved."
+        },
+        {
+          "kind": "gather_rate",
+          "target": "stone",
+          "op": "add",
+          "value": 0.15,
+          "notes": "same reading as gold (raw mining_rate_stone 0.30)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_jpn#cost",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_jpn#requirements",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_jpn#modifiers",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_econ_resource_gold_harvest_rate_4_jpn",
+      "name": "Cupellation",
+      "age": 4,
+      "building": "forge (or Kura Storehouse)",
+      "cost": {
+        "wood": 250,
+        "gold": 500
+      },
+      "researchSeconds": 75,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "gold_dropoff_yield",
+          "op": "mul",
+          "value": 1.15,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (\"Gold gatherers drop off 15% more resources\")"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_jpn#cost",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_jpn#requirements",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_jpn#descriptionArguments",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_jpn#modifiers = []"
+      ]
+    },
+    {
+      "id": "upgrade_villager_health",
+      "name": "Textiles",
+      "age": 2,
+      "building": "town_center",
+      "cost": {
+        "food": 50,
+        "gold": 100
+      },
+      "researchSeconds": 20,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "villager_health",
+          "op": "mul",
+          "value": 1.5,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+50% villager health)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_villager_health#cost",
+        "catalog:technologies/upgrade_villager_health#researchTimeSeconds",
+        "catalog:technologies/upgrade_villager_health#requirements",
+        "catalog:technologies/upgrade_villager_health#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_econ_extended_lines",
+      "name": "Extended Lines",
+      "age": 2,
+      "building": "dock",
+      "cost": {
+        "wood": 75,
+        "gold": 175
+      },
+      "researchSeconds": 30,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "fishing_boat",
+          "op": "add",
+          "value": 0.1,
+          "notes": "raw gather_rate_food 0.1; tooltip args [15, 10] (+15% rate, +10 carry) disagree with the raw 0.1 -- not used by a land build"
+        },
+        {
+          "kind": "carry",
+          "target": "fishing_boat",
+          "op": "add",
+          "value": 10,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_extended_lines#cost",
+        "catalog:technologies/upgrade_econ_extended_lines#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_extended_lines#requirements",
+        "catalog:technologies/upgrade_econ_extended_lines#modifiers",
+        "catalog:technologies/upgrade_econ_extended_lines#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_econ_drift_nets",
+      "name": "Drift Nets",
+      "age": 3,
+      "building": "dock",
+      "cost": {
+        "wood": 150,
+        "gold": 350
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": "fishing_boat",
+          "op": "add",
+          "value": 0.1,
+          "notes": "raw gather_rate_food 0.1; tooltip args [10, 20, 10] (+10% rate, +20 carry, +10% speed)"
+        },
+        {
+          "kind": "carry",
+          "target": "fishing_boat",
+          "op": "add",
+          "value": 20,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        },
+        {
+          "kind": "speed",
+          "target": "fishing_boat",
+          "op": "mul",
+          "value": 1.1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_drift_nets#cost",
+        "catalog:technologies/upgrade_econ_drift_nets#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_drift_nets#requirements",
+        "catalog:technologies/upgrade_econ_drift_nets#modifiers",
+        "catalog:technologies/upgrade_econ_drift_nets#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_temple_zen_jpn",
+      "name": "Zen",
+      "age": 3,
+      "building": "buddhist_temple or Temple of Equality",
+      "cost": {
+        "food": 100,
+        "wood": 200
+      },
+      "researchSeconds": 30,
+      "category": "civ-economy",
+      "effects": [
+        {
+          "kind": "passive_income",
+          "target": "gold per Buddhist Monk",
+          "op": "add",
+          "value": 25,
+          "notes": "raw gather_rate_gold 25 every interval 60 s (= 0.4167 gold/s per monk). Buddhist path only."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_temple_zen_jpn#cost",
+        "catalog:technologies/upgrade_temple_zen_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_temple_zen_jpn#requirements",
+        "catalog:technologies/upgrade_temple_zen_jpn#modifiers",
+        "catalog:technologies/upgrade_temple_zen_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_shrine_bunrei_jpn",
+      "name": "Bunrei",
+      "age": 4,
+      "building": "shinto_shrine",
+      "cost": {
+        "gold": 400
+      },
+      "researchSeconds": 45,
+      "category": "civ-economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "yorishiro_cap",
+          "op": "add",
+          "value": 2,
+          "notes": "raw normal_modifier 2; also immediately produces 2 Yorishiro at the Floating Gate. Shinto path only."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_shrine_bunrei_jpn#cost",
+        "catalog:technologies/upgrade_shrine_bunrei_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_shrine_bunrei_jpn#requirements",
+        "catalog:technologies/upgrade_shrine_bunrei_jpn#modifiers",
+        "catalog:technologies/upgrade_shrine_bunrei_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_shrine_gion_jpn",
+      "name": "Gion Festival",
+      "age": 4,
+      "building": "shinto_shrine",
+      "cost": {
+        "food": 100,
+        "wood": 100,
+        "gold": 150
+      },
+      "researchSeconds": 40,
+      "category": "other",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "building_sight",
+          "op": "add",
+          "value": 2,
+          "notes": "tooltip +2 tiles (raw sight_radius 8); economic units heal 100% over 3 s every 3 min (raw interval 180)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_shrine_gion_jpn#cost",
+        "catalog:technologies/upgrade_shrine_gion_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_shrine_gion_jpn#requirements",
+        "catalog:technologies/upgrade_shrine_gion_jpn#modifiers",
+        "catalog:technologies/upgrade_shrine_gion_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_unit_religious_tithe_barn_4",
+      "name": "Tithe Barns",
+      "age": 4,
+      "building": "Religious Choice placeholder only (see notes)",
+      "cost": {
+        "gold": 500
+      },
+      "researchSeconds": 60,
+      "category": "civ-economy",
+      "effects": [
+        {
+          "kind": "passive_income",
+          "target": "per relic in a religious building (food, wood, stone per minute)",
+          "op": "add",
+          "value": {
+            "food": 40,
+            "wood": 40,
+            "stone": 10
+          },
+          "notes": "raw gather_rate_food 40, gather_rate_wood 40, gather_rate_stone 10 per minute. Listed only on building_placeholder_religious_choice_jpn; neither the Shinto Shrine nor the Buddhist Temple lists it, so real availability is unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_religious_tithe_barn_4#cost",
+        "catalog:technologies/upgrade_unit_religious_tithe_barn_4#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_religious_tithe_barn_4#requirements",
+        "catalog:technologies/upgrade_unit_religious_tithe_barn_4#modifiers",
+        "catalog:buildings/building_placeholder_religious_choice_jpn#researchableTechnologies",
+        "catalog:buildings/building_unit_religious_shinto_jpn#researchableTechnologies",
+        "catalog:buildings/building_unit_religious_buddhist_jpn#researchableTechnologies"
+      ]
+    },
+    {
+      "id": "upgrade_melee_damage_i_jpn",
+      "name": "Tatara",
+      "age": 1,
+      "building": "forge",
+      "cost": {
+        "gold": 35,
+        "stone": 15
+      },
+      "researchSeconds": 15,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_damage non-siege melee units (infantry, cavalry, villager classes with a melee weapon)",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+1 melee damage)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_damage_i_jpn#cost",
+        "catalog:technologies/upgrade_melee_damage_i_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_damage_i_jpn#requirements",
+        "catalog:technologies/upgrade_melee_damage_i_jpn#descriptionArguments",
+        "catalog:technologies/upgrade_melee_damage_i_jpn#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_melee_damage_ii_jpn",
+      "name": "Hizukuri",
+      "age": 2,
+      "building": "forge",
+      "cost": {
+        "gold": 100,
+        "stone": 50
+      },
+      "researchSeconds": 45,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_damage non-siege melee units (infantry, cavalry, villager classes with a melee weapon)",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+1 melee damage)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_damage_ii_jpn#cost",
+        "catalog:technologies/upgrade_melee_damage_ii_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_damage_ii_jpn#requirements",
+        "catalog:technologies/upgrade_melee_damage_ii_jpn#descriptionArguments",
+        "catalog:technologies/upgrade_melee_damage_ii_jpn#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_melee_damage_iii_jpn",
+      "name": "Kobuse-gitae",
+      "age": 3,
+      "building": "forge",
+      "cost": {
+        "gold": 200,
+        "stone": 125
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_damage non-siege melee units (infantry, cavalry, villager classes with a melee weapon)",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+1 melee damage)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_damage_iii_jpn#cost",
+        "catalog:technologies/upgrade_melee_damage_iii_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_damage_iii_jpn#requirements",
+        "catalog:technologies/upgrade_melee_damage_iii_jpn#descriptionArguments",
+        "catalog:technologies/upgrade_melee_damage_iii_jpn#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_melee_damage_iv_jpn",
+      "name": "Yaki-ire",
+      "age": 4,
+      "building": "forge",
+      "cost": {
+        "gold": 275,
+        "stone": 175
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_damage non-siege melee units (infantry, cavalry, villager classes with a melee weapon)",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text (+1 melee damage)"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_damage_iv_jpn#cost",
+        "catalog:technologies/upgrade_melee_damage_iv_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_damage_iv_jpn#requirements",
+        "catalog:technologies/upgrade_melee_damage_iv_jpn#descriptionArguments",
+        "catalog:technologies/upgrade_melee_damage_iv_jpn#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_melee_armor_i",
+      "name": "Fitted Leatherwork",
+      "age": 2,
+      "building": "forge",
+      "cost": {
+        "food": 50,
+        "gold": 125
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_armor non-siege units",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_armor_i#cost",
+        "catalog:technologies/upgrade_melee_armor_i#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_armor_i#requirements",
+        "catalog:technologies/upgrade_melee_armor_i#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_melee_armor_ii",
+      "name": "Insulated Helm",
+      "age": 3,
+      "building": "forge",
+      "cost": {
+        "food": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_armor non-siege units",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_armor_ii#cost",
+        "catalog:technologies/upgrade_melee_armor_ii#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_armor_ii#requirements",
+        "catalog:technologies/upgrade_melee_armor_ii#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_melee_armor_iii",
+      "name": "Master Smiths",
+      "age": 4,
+      "building": "forge",
+      "cost": {
+        "food": 150,
+        "gold": 350
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_armor non-siege units",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_armor_iii#cost",
+        "catalog:technologies/upgrade_melee_armor_iii#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_armor_iii#requirements",
+        "catalog:technologies/upgrade_melee_armor_iii#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_ranged_armor_i",
+      "name": "Iron Undermesh",
+      "age": 2,
+      "building": "forge",
+      "cost": {
+        "wood": 50,
+        "gold": 125
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_armor non-siege units",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_armor_i#cost",
+        "catalog:technologies/upgrade_ranged_armor_i#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_armor_i#requirements",
+        "catalog:technologies/upgrade_ranged_armor_i#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_ranged_armor_ii",
+      "name": "Wedge Rivets",
+      "age": 3,
+      "building": "forge",
+      "cost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_armor non-siege units",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_armor_ii#cost",
+        "catalog:technologies/upgrade_ranged_armor_ii#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_armor_ii#requirements",
+        "catalog:technologies/upgrade_ranged_armor_ii#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_ranged_armor_iii",
+      "name": "Angled Surfaces",
+      "age": 4,
+      "building": "forge",
+      "cost": {
+        "wood": 150,
+        "gold": 350
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_armor non-siege units",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_armor_iii#cost",
+        "catalog:technologies/upgrade_ranged_armor_iii#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_armor_iii#requirements",
+        "catalog:technologies/upgrade_ranged_armor_iii#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_ranged_damage_i",
+      "name": "Steeled Arrow",
+      "age": 2,
+      "building": "forge",
+      "cost": {
+        "wood": 50,
+        "gold": 125
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_damage arrows/bolts (ranged_infantry, cavalry_archer, buildings; not gunpowder/siege)",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_damage_i#cost",
+        "catalog:technologies/upgrade_ranged_damage_i#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_damage_i#requirements",
+        "catalog:technologies/upgrade_ranged_damage_i#descriptionArguments",
+        "catalog:technologies/upgrade_ranged_damage_i#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_ranged_damage_ii",
+      "name": "Balanced Projectiles",
+      "age": 3,
+      "building": "forge",
+      "cost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_damage arrows/bolts (ranged_infantry, cavalry_archer, buildings; not gunpowder/siege)",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_damage_ii#cost",
+        "catalog:technologies/upgrade_ranged_damage_ii#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_damage_ii#requirements",
+        "catalog:technologies/upgrade_ranged_damage_ii#descriptionArguments",
+        "catalog:technologies/upgrade_ranged_damage_ii#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_ranged_damage_iii",
+      "name": "Platecutter Point",
+      "age": 4,
+      "building": "forge",
+      "cost": {
+        "wood": 150,
+        "gold": 350
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_damage arrows/bolts (ranged_infantry, cavalry_archer, buildings; not gunpowder/siege)",
+          "op": "add",
+          "value": 1,
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_damage_iii#cost",
+        "catalog:technologies/upgrade_ranged_damage_iii#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_damage_iii#requirements",
+        "catalog:technologies/upgrade_ranged_damage_iii#descriptionArguments",
+        "catalog:technologies/upgrade_ranged_damage_iii#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_tech_military_academy",
+      "name": "Military Academy",
+      "age": 3,
+      "building": "forge",
+      "cost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "production_speed",
+          "target": "infantry, cavalry, siege, transport at military buildings",
+          "op": "mul",
+          "value": 1.33,
+          "notes": "raw normal_modifier 1.33; tooltip +33%. Not religious/support units."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_tech_military_academy#cost",
+        "catalog:technologies/upgrade_tech_military_academy#researchTimeSeconds",
+        "catalog:technologies/upgrade_tech_military_academy#requirements",
+        "catalog:technologies/upgrade_tech_military_academy#modifiers",
+        "catalog:technologies/upgrade_tech_military_academy#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_siege_engineers",
+      "name": "Siege Engineering",
+      "age": 2,
+      "building": "forge",
+      "cost": {
+        "wood": 50,
+        "gold": 125
+      },
+      "researchSeconds": 30,
+      "category": "other",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "field-built rams and siege towers",
+          "op": "set",
+          "value": true,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_siege_engineers#cost",
+        "catalog:technologies/upgrade_siege_engineers#researchTimeSeconds",
+        "catalog:technologies/upgrade_siege_engineers#requirements",
+        "catalog:technologies/upgrade_siege_engineers#description"
+      ]
+    },
+    {
+      "id": "upgrade_tech_university_biology",
+      "name": "Biology",
+      "age": 4,
+      "building": "university",
+      "cost": {
+        "food": 500,
+        "gold": 1000
+      },
+      "researchSeconds": 90,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "health cavalry (incl. Mounted Samurai, Onna-Musha, Uma Bannerman)",
+          "op": "mul",
+          "value": 1.25,
+          "notes": "raw health_max 0.25; tooltip +25%"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_tech_university_biology#cost",
+        "catalog:technologies/upgrade_tech_university_biology#researchTimeSeconds",
+        "catalog:technologies/upgrade_tech_university_biology#requirements",
+        "catalog:technologies/upgrade_tech_university_biology#modifiers",
+        "catalog:technologies/upgrade_tech_university_biology#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_elite_army_tactics_jpn",
+      "name": "Oda Tactics",
+      "age": 4,
+      "building": "university",
+      "cost": {
+        "food": 500,
+        "gold": 1000
+      },
+      "researchSeconds": 90,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "damage melee_infantry",
+          "op": "mul",
+          "value": 1.15,
+          "notes": "raw damage 0.15"
+        },
+        {
+          "kind": "other",
+          "target": "health melee_infantry",
+          "op": "mul",
+          "value": 1.15,
+          "notes": "raw health_max 0.15"
+        },
+        {
+          "kind": "other",
+          "target": "torch_damage melee_infantry",
+          "op": "mul",
+          "value": 1.15,
+          "notes": "raw torch_damage 0.15"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_elite_army_tactics_jpn#cost",
+        "catalog:technologies/upgrade_elite_army_tactics_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_elite_army_tactics_jpn#requirements",
+        "catalog:technologies/upgrade_elite_army_tactics_jpn#modifiers",
+        "catalog:technologies/upgrade_elite_army_tactics_jpn#targeting"
+      ]
+    },
+    {
+      "id": "upgrade_odachi_jpn",
+      "name": "Odachi",
+      "age": 3,
+      "building": "barracks",
+      "cost": {
+        "food": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "Samurai bonus damage vs infantry",
+          "op": "add",
+          "value": 4,
+          "notes": "Swaps to weapon_odachi_N_jpn variants that carry +4 vs infantry (catalog weapon bonuses); tooltip arg 4."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_odachi_jpn#cost",
+        "catalog:technologies/upgrade_odachi_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_odachi_jpn#requirements",
+        "catalog:technologies/upgrade_odachi_jpn#descriptionArguments",
+        "catalog:units/unit_samurai_3_jpn#weapon[weapon_odachi_3_jpn].bonuses"
+      ]
+    },
+    {
+      "id": "upgrade_marudo_armor_jpn",
+      "name": "Do-maru Armor",
+      "age": 4,
+      "building": "stable",
+      "cost": {
+        "wood": 75,
+        "gold": 200
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "speed",
+          "target": "Mounted Samurai while Deflective Armor is active",
+          "op": "mul",
+          "value": 1.1,
+          "notes": "raw move_speed 1.1"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_marudo_armor_jpn#cost",
+        "catalog:technologies/upgrade_marudo_armor_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_marudo_armor_jpn#requirements",
+        "catalog:technologies/upgrade_marudo_armor_jpn#modifiers"
+      ]
+    },
+    {
+      "id": "upgrade_kaburya_arrow_jpn",
+      "name": "Kabura-ya Whistling Arrow",
+      "age": 3,
+      "building": "archery_range",
+      "cost": {
+        "wood": 75,
+        "gold": 100
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "speed",
+          "target": "Onna-Musha (10 s burst when an enemy is seen)",
+          "op": "mul",
+          "value": null,
+          "notes": "Speed amount not in installed records (tooltip gives only the 10 s duration)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_kaburya_arrow_jpn#cost",
+        "catalog:technologies/upgrade_kaburya_arrow_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_kaburya_arrow_jpn#requirements",
+        "catalog:technologies/upgrade_kaburya_arrow_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_long_spear_jpn",
+      "name": "Nagae Yari",
+      "age": 4,
+      "building": "barracks",
+      "cost": {
+        "wood": 150,
+        "gold": 350
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "Spearman range / damage vs cavalry",
+          "op": "mul",
+          "value": {
+            "range": 1.2,
+            "bonusVsCavalry": 1.15
+          },
+          "notes": "tooltip-only: no raw scalar in the upgrade record; op/stacking inferred from text"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_long_spear_jpn#cost",
+        "catalog:technologies/upgrade_long_spear_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_long_spear_jpn#requirements",
+        "catalog:technologies/upgrade_long_spear_jpn#descriptionArguments"
+      ]
+    },
+    {
+      "id": "upgrade_unit_manatarms_2_jpn",
+      "name": "Upgrade to Hardened (Samurai)",
+      "age": 2,
+      "building": "barracks",
+      "cost": {
+        "food": 15,
+        "gold": 35
+      },
+      "researchSeconds": 15,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "tier",
+          "op": "set",
+          "value": "unit_samurai_1_jpn -> unit_samurai_2_jpn",
+          "notes": "Explicit tier transition (catalog tierTransitions)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_manatarms_2_jpn#cost",
+        "catalog:technologies/upgrade_unit_manatarms_2_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_manatarms_2_jpn#requirements",
+        "catalog:units/unit_samurai_1_jpn#tierTransitions"
+      ]
+    },
+    {
+      "id": "upgrade_unit_manatarms_3_jpn",
+      "name": "Upgrade to Veteran (Samurai)",
+      "age": 3,
+      "building": "barracks",
+      "cost": {
+        "food": 50,
+        "gold": 125
+      },
+      "researchSeconds": 30,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "tier",
+          "op": "set",
+          "value": "unit_samurai_2_jpn -> unit_samurai_3_jpn",
+          "notes": "Explicit tier transition (catalog tierTransitions)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_manatarms_3_jpn#cost",
+        "catalog:technologies/upgrade_unit_manatarms_3_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_manatarms_3_jpn#requirements",
+        "catalog:units/unit_samurai_2_jpn#tierTransitions"
+      ]
+    },
+    {
+      "id": "upgrade_unit_manatarms_4_jpn",
+      "name": "Upgrade to Elite (Samurai)",
+      "age": 4,
+      "building": "barracks",
+      "cost": {
+        "food": 300,
+        "gold": 700
+      },
+      "researchSeconds": 60,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "tier",
+          "op": "set",
+          "value": "unit_samurai_3_jpn -> unit_samurai_4_jpn",
+          "notes": "Explicit tier transition (catalog tierTransitions)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_manatarms_4_jpn#cost",
+        "catalog:technologies/upgrade_unit_manatarms_4_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_manatarms_4_jpn#requirements",
+        "catalog:units/unit_samurai_3_jpn#tierTransitions"
+      ]
+    },
+    {
+      "id": "upgrade_unit_onna_bugeisha_3_jpn",
+      "name": "Upgrade to Veteran (Onna-Bugeisha)",
+      "age": 3,
+      "building": "barracks",
+      "cost": {
+        "food": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "tier",
+          "op": "set",
+          "value": "unit_onna_bugeisha_2_jpn -> unit_onna_bugeisha_3_jpn",
+          "notes": "Explicit tier transition (catalog tierTransitions)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_onna_bugeisha_3_jpn#cost",
+        "catalog:technologies/upgrade_unit_onna_bugeisha_3_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_onna_bugeisha_3_jpn#requirements",
+        "catalog:units/unit_onna_bugeisha_2_jpn#tierTransitions"
+      ]
+    },
+    {
+      "id": "upgrade_unit_onna_bugeisha_4_jpn",
+      "name": "Upgrade to Elite (Onna-Bugeisha)",
+      "age": 4,
+      "building": "barracks",
+      "cost": {
+        "food": 300,
+        "gold": 700
+      },
+      "researchSeconds": 60,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "tier",
+          "op": "set",
+          "value": "unit_onna_bugeisha_3_jpn -> unit_onna_bugeisha_4_jpn",
+          "notes": "Explicit tier transition (catalog tierTransitions)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_onna_bugeisha_4_jpn#cost",
+        "catalog:technologies/upgrade_unit_onna_bugeisha_4_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_onna_bugeisha_4_jpn#requirements",
+        "catalog:units/unit_onna_bugeisha_3_jpn#tierTransitions"
+      ]
+    },
+    {
+      "id": "upgrade_unit_knight_4_jpn",
+      "name": "Upgrade to Elite (Mounted Samurai)",
+      "age": 4,
+      "building": "stable",
+      "cost": {
+        "food": 300,
+        "gold": 700
+      },
+      "researchSeconds": 60,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "tier",
+          "op": "set",
+          "value": "unit_knight_3_jpn -> unit_knight_4_jpn",
+          "notes": "Explicit tier transition (catalog tierTransitions)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_knight_4_jpn#cost",
+        "catalog:technologies/upgrade_unit_knight_4_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_knight_4_jpn#requirements",
+        "catalog:units/unit_knight_3_jpn#tierTransitions"
+      ]
+    },
+    {
+      "id": "upgrade_unit_horsearcher_4_jpn",
+      "name": "Upgrade to Elite (Onna-Musha)",
+      "age": 4,
+      "building": "archery_range",
+      "cost": {
+        "food": 300,
+        "gold": 700
+      },
+      "researchSeconds": 45,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "tier",
+          "op": "set",
+          "value": "unit_horsearcher_3_jpn -> unit_horsearcher_4_jpn",
+          "notes": "Explicit tier transition (catalog tierTransitions)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_horsearcher_4_jpn#cost",
+        "catalog:technologies/upgrade_unit_horsearcher_4_jpn#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_horsearcher_4_jpn#requirements",
+        "catalog:units/unit_horsearcher_3_jpn#tierTransitions"
+      ]
+    }
+  ],
+  "army": {
+    "lines": [
+      {
+        "key": "samurai",
+        "name": "Samurai (Man-at-Arms replacement)",
+        "producers": [
+          "barracks"
+        ],
+        "tiers": [
+          {
+            "id": "unit_samurai_1_jpn",
+            "name": "Samurai",
+            "age": 1,
+            "cost": {
+              "food": 90,
+              "gold": 30
+            },
+            "trainSeconds": 20,
+            "pop": 1,
+            "hp": 100
+          },
+          {
+            "id": "unit_samurai_2_jpn",
+            "name": "Hardened Samurai",
+            "age": 2,
+            "cost": {
+              "food": 90,
+              "gold": 30
+            },
+            "trainSeconds": 20,
+            "pop": 1,
+            "hp": 120
+          },
+          {
+            "id": "unit_samurai_3_jpn",
+            "name": "Veteran Samurai",
+            "age": 3,
+            "cost": {
+              "food": 90,
+              "gold": 30
+            },
+            "trainSeconds": 20,
+            "pop": 1,
+            "hp": 155
+          },
+          {
+            "id": "unit_samurai_4_jpn",
+            "name": "Elite Samurai",
+            "age": 4,
+            "cost": {
+              "food": 90,
+              "gold": 30
+            },
+            "trainSeconds": 20,
+            "pop": 1,
+            "hp": 180
+          }
+        ],
+        "tierUpgrades": [
+          "upgrade_unit_manatarms_2_jpn",
+          "upgrade_unit_manatarms_3_jpn",
+          "upgrade_unit_manatarms_4_jpn"
+        ],
+        "applicableTechs": [
+          "upgrade_melee_damage_i_jpn",
+          "upgrade_melee_damage_ii_jpn",
+          "upgrade_melee_damage_iii_jpn",
+          "upgrade_melee_damage_iv_jpn",
+          "upgrade_melee_armor_i",
+          "upgrade_melee_armor_ii",
+          "upgrade_melee_armor_iii",
+          "upgrade_ranged_armor_i",
+          "upgrade_ranged_armor_ii",
+          "upgrade_ranged_armor_iii",
+          "upgrade_tech_military_academy",
+          "upgrade_odachi_jpn",
+          "upgrade_elite_army_tactics_jpn"
+        ],
+        "evidence": [
+          "catalog:units/unit_samurai_1_jpn#cost",
+          "catalog:units/unit_samurai_1_jpn#trainTimeSeconds",
+          "catalog:units/unit_samurai_1_jpn#hp",
+          "catalog:units/unit_samurai_2_jpn#hp",
+          "catalog:units/unit_samurai_3_jpn#hp",
+          "catalog:units/unit_samurai_4_jpn#hp",
+          "catalog:units/unit_samurai_1_jpn#requirements (no age requirement: Dark Age)",
+          "catalog:units/unit_samurai_1_jpn#tierTransitions",
+          "locale:11257922 (Produce Samurai in the Dark Age)",
+          "raw:ebps/races/japanese/units/unit_samurai_1_jpn#default/type_ext/unit_type_list (samurai_jpn, melee_infantry, deflective_armor)",
+          "Tier age = age of its tier upgrade (Hardened needs feudal_age, Veteran castle_age, Elite imperial_age per technology requirements).",
+          "Katana Bannerman aura x1.15 damage within 24 applies (mechanics bannerman_auras); Yorishiro in a Barracks +125% production speed."
+        ]
+      },
+      {
+        "key": "onna_bugeisha",
+        "name": "Onna-Bugeisha",
+        "producers": [
+          "barracks"
+        ],
+        "tiers": [
+          {
+            "id": "unit_onna_bugeisha_2_jpn",
+            "name": "Onna-Bugeisha",
+            "age": 2,
+            "cost": {
+              "food": 60,
+              "gold": 20
+            },
+            "trainSeconds": 15,
+            "pop": 1,
+            "hp": 85
+          },
+          {
+            "id": "unit_onna_bugeisha_3_jpn",
+            "name": "Veteran Onna-Bugeisha",
+            "age": 3,
+            "cost": {
+              "food": 60,
+              "gold": 20
+            },
+            "trainSeconds": 15,
+            "pop": 1,
+            "hp": 100
+          },
+          {
+            "id": "unit_onna_bugeisha_4_jpn",
+            "name": "Elite Onna-Bugeisha",
+            "age": 4,
+            "cost": {
+              "food": 60,
+              "gold": 20
+            },
+            "trainSeconds": 15,
+            "pop": 1,
+            "hp": 135
+          }
+        ],
+        "tierUpgrades": [
+          "upgrade_unit_onna_bugeisha_3_jpn",
+          "upgrade_unit_onna_bugeisha_4_jpn"
+        ],
+        "applicableTechs": [
+          "upgrade_melee_damage_i_jpn",
+          "upgrade_melee_damage_ii_jpn",
+          "upgrade_melee_damage_iii_jpn",
+          "upgrade_melee_damage_iv_jpn",
+          "upgrade_melee_armor_i",
+          "upgrade_melee_armor_ii",
+          "upgrade_melee_armor_iii",
+          "upgrade_ranged_armor_i",
+          "upgrade_ranged_armor_ii",
+          "upgrade_ranged_armor_iii",
+          "upgrade_tech_military_academy",
+          "upgrade_elite_army_tactics_jpn"
+        ],
+        "evidence": [
+          "catalog:units/unit_onna_bugeisha_2_jpn#cost",
+          "catalog:units/unit_onna_bugeisha_2_jpn#trainTimeSeconds",
+          "catalog:units/unit_onna_bugeisha_2_jpn#hp",
+          "catalog:units/unit_onna_bugeisha_3_jpn#hp",
+          "catalog:units/unit_onna_bugeisha_4_jpn#hp",
+          "catalog:units/unit_onna_bugeisha_2_jpn#requirements (feudal_age present)",
+          "catalog:units/unit_onna_bugeisha_2_jpn#tierTransitions",
+          "catalog:units/unit_onna_bugeisha_2_jpn#classes (infantry, melee: Katana Bannerman aura and Oda Tactics melee_infantry apply)"
+        ]
+      },
+      {
+        "key": "mounted_samurai",
+        "name": "Mounted Samurai (Lancer replacement)",
+        "producers": [
+          "stable"
+        ],
+        "tiers": [
+          {
+            "id": "unit_knight_3_jpn",
+            "name": "Mounted Samurai",
+            "age": 3,
+            "cost": {
+              "food": 140,
+              "gold": 110
+            },
+            "trainSeconds": 35,
+            "pop": 1,
+            "hp": 230
+          },
+          {
+            "id": "unit_knight_4_jpn",
+            "name": "Elite Mounted Samurai",
+            "age": 4,
+            "cost": {
+              "food": 140,
+              "gold": 110
+            },
+            "trainSeconds": 35,
+            "pop": 1,
+            "hp": 270
+          }
+        ],
+        "tierUpgrades": [
+          "upgrade_unit_knight_4_jpn"
+        ],
+        "applicableTechs": [
+          "upgrade_melee_damage_i_jpn",
+          "upgrade_melee_damage_ii_jpn",
+          "upgrade_melee_damage_iii_jpn",
+          "upgrade_melee_damage_iv_jpn",
+          "upgrade_melee_armor_i",
+          "upgrade_melee_armor_ii",
+          "upgrade_melee_armor_iii",
+          "upgrade_ranged_armor_i",
+          "upgrade_ranged_armor_ii",
+          "upgrade_ranged_armor_iii",
+          "upgrade_tech_military_academy",
+          "upgrade_tech_university_biology",
+          "upgrade_marudo_armor_jpn"
+        ],
+        "evidence": [
+          "catalog:units/unit_knight_3_jpn#cost",
+          "catalog:units/unit_knight_3_jpn#trainTimeSeconds",
+          "catalog:units/unit_knight_3_jpn#hp",
+          "catalog:units/unit_knight_4_jpn#hp",
+          "catalog:units/unit_knight_3_jpn#requirements (castle_age present)",
+          "Uma Bannerman cavalry aura x1.10 applies (mechanics bannerman_auras)"
+        ]
+      },
+      {
+        "key": "onna_musha",
+        "name": "Onna-Musha (horse archer)",
+        "producers": [
+          "archery_range"
+        ],
+        "tiers": [
+          {
+            "id": "unit_horsearcher_3_jpn",
+            "name": "Onna-Musha",
+            "age": 3,
+            "cost": {
+              "food": 80,
+              "gold": 60
+            },
+            "trainSeconds": 24,
+            "pop": 1,
+            "hp": 80
+          },
+          {
+            "id": "unit_horsearcher_4_jpn",
+            "name": "Elite Onna-Musha",
+            "age": 4,
+            "cost": {
+              "food": 80,
+              "gold": 60
+            },
+            "trainSeconds": 24,
+            "pop": 1,
+            "hp": 95
+          }
+        ],
+        "tierUpgrades": [
+          "upgrade_unit_horsearcher_4_jpn"
+        ],
+        "applicableTechs": [
+          "upgrade_ranged_damage_i",
+          "upgrade_ranged_damage_ii",
+          "upgrade_ranged_damage_iii",
+          "upgrade_melee_armor_i",
+          "upgrade_melee_armor_ii",
+          "upgrade_melee_armor_iii",
+          "upgrade_ranged_armor_i",
+          "upgrade_ranged_armor_ii",
+          "upgrade_ranged_armor_iii",
+          "upgrade_tech_military_academy",
+          "upgrade_tech_university_biology",
+          "upgrade_kaburya_arrow_jpn"
+        ],
+        "evidence": [
+          "catalog:units/unit_horsearcher_3_jpn#cost",
+          "catalog:units/unit_horsearcher_3_jpn#trainTimeSeconds",
+          "catalog:units/unit_horsearcher_3_jpn#hp",
+          "catalog:units/unit_horsearcher_4_jpn#hp",
+          "catalog:units/unit_horsearcher_3_jpn#requirements (castle_age present)",
+          "catalog:buildings/building_unit_ranged_jpn#trainableUnits"
+        ]
+      },
+      {
+        "key": "katana_bannerman",
+        "name": "Katana Bannerman (Hatamoto Samurai, melee)",
+        "producers": [
+          "barracks"
+        ],
+        "tiers": [
+          {
+            "id": "unit_banner_samurai_melee_2_jpn",
+            "name": "Katana Bannerman",
+            "age": 2,
+            "cost": {
+              "food": 90,
+              "gold": 30,
+              "action": 1
+            },
+            "trainSeconds": 15,
+            "pop": 1,
+            "hp": 155
+          },
+          {
+            "id": "unit_banner_samurai_melee_3_jpn",
+            "name": "Katana Bannerman",
+            "age": 3,
+            "cost": {
+              "food": 90,
+              "gold": 30,
+              "action": 1
+            },
+            "trainSeconds": 15,
+            "pop": 1,
+            "hp": 180
+          },
+          {
+            "id": "unit_banner_samurai_melee_4_jpn",
+            "name": "Katana Bannerman",
+            "age": 4,
+            "cost": {
+              "food": 90,
+              "gold": 30,
+              "action": 1
+            },
+            "trainSeconds": 15,
+            "pop": 1,
+            "hp": 215
+          }
+        ],
+        "tierUpgrades": [],
+        "applicableTechs": [
+          "upgrade_melee_damage_i_jpn",
+          "upgrade_melee_damage_ii_jpn",
+          "upgrade_melee_damage_iii_jpn",
+          "upgrade_melee_damage_iv_jpn",
+          "upgrade_melee_armor_i",
+          "upgrade_melee_armor_ii",
+          "upgrade_melee_armor_iii",
+          "upgrade_ranged_armor_i",
+          "upgrade_ranged_armor_ii",
+          "upgrade_ranged_armor_iii",
+          "upgrade_tech_military_academy",
+          "upgrade_elite_army_tactics_jpn"
+        ],
+        "evidence": [
+          "catalog:units/unit_banner_samurai_melee_2_jpn#cost (action 1 = production-cap token)",
+          "catalog:units/unit_banner_samurai_melee_2_jpn#trainTimeSeconds",
+          "catalog:units/unit_banner_samurai_melee_2_jpn#hp",
+          "catalog:units/unit_banner_samurai_melee_3_jpn#hp",
+          "catalog:units/unit_banner_samurai_melee_4_jpn#hp",
+          "catalog:units/unit_banner_samurai_melee_2_jpn#tierTransitions (castle_age -> _3, imperial_age -> _4 automatically; no tier tech)",
+          "raw:sbps/races/japanese/bannerman_samurai/unit_banner_samurai_melee_2_jpn (abilities bannerman_aura_melee_jpn, samurai_shield_jpn)",
+          "Production is capped by the Daimyo tiers (+1/+2/+3); age _2 tier read from the id/tier chain, the squad has no age requirement."
+        ]
+      }
+    ]
+  },
+  "mechanics": [
+    {
+      "key": "farmhouse",
+      "summary": "Farmhouse replaces both House and Mill: +10 population and Food drop-off. No Mill exists.",
+      "params": {
+        "popProvided": 10,
+        "dropoff": [
+          "food"
+        ],
+        "cost": {
+          "wood": 50
+        },
+        "buildSeconds": 15,
+        "age": 1,
+        "millAbsent": true,
+        "hostsTechs": [
+          "upgrade_unit_town_center_wheelbarrow_1_jpn",
+          "upgrade_unit_town_center_wheelbarrow_2_jpn",
+          "upgrade_unit_town_center_wheelbarrow_3_jpn",
+          "upgrade_econ_villager_hunting_gear_1",
+          "upgrade_scout_forester"
+        ],
+        "farmRateTechs": []
+      },
+      "status": "resolved",
+      "evidence": [
+        "raw:statemodel_schema/buildings/civilizations/japanese/farmhouse_jpn.rgd#population_cap_increase default = 10",
+        "raw:ebps/races/japanese/buildings/building_house_jpn#default/resource_drop_off_ext/accepted_resources/food = True",
+        "raw:racebps/japanese#default/race_bag/blueprint_archetypes/mill/$PBGNAME = building_house_jpn",
+        "catalog:buildings/building_house_jpn#cost",
+        "catalog:buildings/building_house_jpn#researchableTechnologies",
+        "locale:11247714",
+        "Pop is applied by state tree house_construction_complete\\run_once (not decoded); the schema default is the only number and matches the generic house schema (statemodel_schema/buildings/house.rgd population_cap_increase 10)."
+      ]
+    },
+    {
+      "key": "forge",
+      "summary": "Forge replaces Mining Camp and Blacksmith: Gold and Stone drop-off plus military upgrades; a 4th melee-damage tier (Tatara) is available in the Dark Age.",
+      "params": {
+        "dropoff": [
+          "gold",
+          "stone"
+        ],
+        "replaces": [
+          "mining_camp",
+          "blacksmith"
+        ],
+        "cost": {
+          "wood": 50
+        },
+        "buildSeconds": 20,
+        "age": 1,
+        "darkAgeMeleeTech": {
+          "id": "upgrade_melee_damage_i_jpn",
+          "name": "Tatara",
+          "cost": {
+            "gold": 35,
+            "stone": 15
+          },
+          "researchSeconds": 15,
+          "meleeDamage": 1
+        },
+        "meleeDamageTiers": [
+          "upgrade_melee_damage_i_jpn",
+          "upgrade_melee_damage_ii_jpn",
+          "upgrade_melee_damage_iii_jpn",
+          "upgrade_melee_damage_iv_jpn"
+        ],
+        "alsoHosts": [
+          "upgrade_tech_military_academy",
+          "upgrade_siege_engineers"
+        ]
+      },
+      "status": "resolved",
+      "evidence": [
+        "raw:ebps/races/japanese/buildings/building_econ_mining_camp_jpn#default/resource_drop_off_ext/accepted_resources/gold,stone = True",
+        "raw:racebps/japanese#default/race_bag/blueprint_archetypes/blacksmith/$PBGNAME = building_econ_mining_camp_jpn",
+        "catalog:technologies/upgrade_melee_damage_i_jpn#requirements (dark_age present)",
+        "catalog:technologies/upgrade_melee_damage_i_jpn#cost",
+        "locale:11247714",
+        "locale:11257921"
+      ]
+    },
+    {
+      "key": "daimyo_town_center_upgrades",
+      "summary": "Each Town Center can be upgraded Daimyo Manor -> Daimyo Palace -> Shogunate Castle (stone only, 20 s each, no age requirement). Each level sets a farm-harvest aura around that TC, raises the Bannerman production cap, gives a free Villager and TC defense.",
+      "params": {
+        "tiers": [
+          {
+            "id": "upgrade_capital_tier_1_jpn",
+            "name": "Daimyo Manor",
+            "cost": {
+              "stone": 175
+            },
+            "researchSeconds": 20,
+            "farmGatherMultiplier": 1.2,
+            "bannermanCapAdd": 1,
+            "freeVillagers": 1,
+            "tcHealthAdd": 1000,
+            "fireArmorAdd": 0
+          },
+          {
+            "id": "upgrade_capital_tier_2_jpn",
+            "name": "Daimyo Palace",
+            "cost": {
+              "stone": 600
+            },
+            "researchSeconds": 20,
+            "farmGatherMultiplier": 1.4,
+            "bannermanCapAdd": 2,
+            "freeVillagers": 1,
+            "tcHealthAdd": 2000,
+            "fireArmorAdd": 2
+          },
+          {
+            "id": "upgrade_capital_tier_3_jpn",
+            "name": "Shogunate Castle",
+            "cost": {
+              "stone": 1200
+            },
+            "researchSeconds": 20,
+            "farmGatherMultiplier": 1.6,
+            "bannermanCapAdd": 3,
+            "freeVillagers": 1,
+            "tcHealthAdd": 3000,
+            "fireArmorAdd": 3
+          }
+        ],
+        "auraRangeEngineUnits": 40,
+        "perTownCenter": true,
+        "ageRequirement": null,
+        "levelReplacesPrevious": true,
+        "auraStacksAcrossTownCenters": null
+      },
+      "status": "partial",
+      "evidence": [
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/float_properties bonus_level_1/2/3 = 1.2/1.4/1.6; radius = 40; range = 40",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/requirements/required_entity_upgrade = upgrade_capital_tier_1_jpn (aura active from Manor on)",
+        "catalog:technologies/upgrade_capital_tier_1_jpn#descriptionArguments [1, 1000, 20]",
+        "catalog:technologies/upgrade_capital_tier_2_jpn#descriptionArguments [2, 2000, 2, 40]",
+        "catalog:technologies/upgrade_capital_tier_3_jpn#descriptionArguments [3, 3000, 3, 60]",
+        "catalog:technologies/upgrade_capital_tier_1_jpn#requirements",
+        "locale:11247711",
+        "locale:11247191",
+        "Resolved: costs, times, farm multipliers, radius. Partial: whether two overlapping TC auras stack, and Bannerman cap accumulation (see unresolved)."
+      ]
+    },
+    {
+      "key": "bannerman_cap",
+      "summary": "Samurai Bannermen (Katana/Yumi/Uma) each cost 1 action token on top of food/gold; the Daimyo tiers raise the cap by +1/+2/+3.",
+      "params": {
+        "tokenResource": "action",
+        "tokenCostPerBannerman": 1,
+        "capAddByDaimyoTier": [
+          1,
+          2,
+          3
+        ],
+        "startingTokens": 0,
+        "incomeCapAction": 20,
+        "abilityIntProperties_daimyo_level_1_to_5": [
+          3,
+          6,
+          9,
+          12,
+          15
+        ]
+      },
+      "status": "partial",
+      "evidence": [
+        "catalog:units/unit_banner_samurai_melee_2_jpn#cost.action",
+        "catalog:units/unit_banner_samurai_cavalry_2_jpn#cost.action",
+        "raw:army/standard_mode/normal_japanese.rgd#default/army_bag/resource_income_cap/action = 20 (no action starting amount)",
+        "raw:abilities/always_on_abilities/japanese/daimyo_level_manager_jpn.rgd#default/ability_bag/int_properties daimyo_level_1..5 = 3, 6, 9, 12, 15 (meaning untraced)",
+        "locale:11247711 args %4..6% = 1, 2, 3"
+      ]
+    },
+    {
+      "key": "bannerman_auras",
+      "summary": "Bannermen project a damage aura (range 24) and drop their banner on death with the same effect for a duration.",
+      "params": {
+        "katana": {
+          "ability": "bannerman_aura_melee_jpn",
+          "damageMultiplier": 1.15,
+          "rangeEngineUnits": 24,
+          "affects": "melee infantry"
+        },
+        "uma": {
+          "ability": "bannerman_aura_cavalry_jpn",
+          "damageMultiplier": 1.1,
+          "rangeEngineUnits": 24,
+          "affects": "cavalry"
+        },
+        "yumi": {
+          "ability": "bannerman_aura_range_jpn",
+          "damageMultiplier": 1.15,
+          "rangeEngineUnits": 24,
+          "affects": "ranged infantry (by ability name)"
+        },
+        "bannermen": {
+          "katana": {
+            "id": "unit_banner_samurai_melee_2_jpn",
+            "cost": {
+              "food": 90,
+              "gold": 30,
+              "action": 1
+            },
+            "trainSeconds": 15,
+            "producer": "barracks"
+          },
+          "yumi": {
+            "id": "unit_banner_samurai_range_2_jpn",
+            "cost": {
+              "food": 90,
+              "gold": 30,
+              "action": 1
+            },
+            "trainSeconds": 15,
+            "producer": "archery_range"
+          },
+          "uma": {
+            "id": "unit_banner_samurai_cavalry_2_jpn",
+            "cost": {
+              "food": 140,
+              "gold": 110,
+              "action": 1
+            },
+            "trainSeconds": 15,
+            "producer": "stable"
+          }
+        }
+      },
+      "status": "resolved",
+      "evidence": [
+        "raw:abilities/always_on_abilities/japanese/bannerman_aura_melee_jpn.rgd#default/ability_bag/float_properties/abilitybag_float_property/value = 1.15 (id modifier); range = 24",
+        "raw:abilities/always_on_abilities/japanese/bannerman_aura_cavalry_jpn.rgd#...value = 1.1; range = 24",
+        "raw:abilities/always_on_abilities/japanese/bannerman_aura_range_jpn.rgd#...value = 1.15; range = 24",
+        "raw:sbps/races/japanese/bannerman_samurai/unit_banner_samurai_{melee,cavalry,range}_2_jpn (ability lists)",
+        "locale:11257929 (args 15, 10)"
+      ]
+    },
+    {
+      "key": "kura_storehouse",
+      "summary": "Feudal landmark: universal drop-off that spawns a free Farm around itself every 50 s and generates Wood once farmland is full; hosts copies of the economy techs.",
+      "params": {
+        "farmSpawnIntervalSeconds": 50,
+        "farmValueWood": 75,
+        "dropoff": [
+          "food",
+          "wood",
+          "gold",
+          "stone"
+        ],
+        "garrison": 4,
+        "farmlandCapacity": null,
+        "woodWhenFullPerInterval": null,
+        "kuraTechCopies": [
+          "upgrade_econ_resource_gold_harvest_rate_2_kura_jpn",
+          "upgrade_econ_resource_gold_harvest_rate_3_kura_jpn",
+          "upgrade_econ_resource_gold_harvest_rate_4_kura_jpn",
+          "upgrade_econ_resource_wood_fell_rate_1_kura_jpn",
+          "upgrade_econ_resource_wood_harvest_rate_2_kura_jpn",
+          "upgrade_econ_resource_wood_harvest_rate_3_kura_jpn",
+          "upgrade_econ_resource_wood_harvest_rate_4_kura_jpn",
+          "upgrade_unit_town_center_wheelbarrow_1_jpn",
+          "upgrade_unit_town_center_wheelbarrow_2_jpn",
+          "upgrade_unit_town_center_wheelbarrow_3_jpn",
+          "upgrade_econ_villager_hunting_gear_1",
+          "upgrade_scout_forester"
+        ]
+      },
+      "status": "partial",
+      "evidence": [
+        "locale:11257246 (arg 50)",
+        "raw:ebps/races/japanese/buildings/building_landmark_age1_storehouse_jpn#default/resource_drop_off_ext/accepted_resources",
+        "catalog:buildings/building_landmark_age1_storehouse_jpn#researchableTechnologies",
+        "raw:abilities/always_on_abilities/japanese/storehouse_rice_field_spawn_jpn.rgd (logic in entity_tree storehouse_rice_field_spawn_jpn, not decoded)"
+      ]
+    },
+    {
+      "key": "floating_gate_yorishiro",
+      "summary": "Shinto Castle-Age landmark: a Shinto Priest carrying a Yorishiro every 2 min (first instant), max 4 Yorishiro (+2 with Bunrei).",
+      "params": {
+        "intervalSeconds": 120,
+        "firstInstant": true,
+        "cap": 4,
+        "capTokenResource": "command",
+        "startingTokens": 4,
+        "bunreiCapAdd": 2,
+        "bunreiImmediate": 2,
+        "landmarkPriest": {
+          "id": "unit_monk_shinto_landmark_3_jpn",
+          "cost": {
+            "command": 1
+          },
+          "trainSeconds": 1
+        }
+      },
+      "status": "partial",
+      "evidence": [
+        "locale:11260987 (args 2, 4)",
+        "raw:army/standard_mode/normal_japanese.rgd#default/army_bag/resource_starting_amount/command = 4",
+        "catalog:units/unit_monk_shinto_landmark_3_jpn#cost",
+        "catalog:technologies/upgrade_shrine_bunrei_jpn#descriptionArguments",
+        "Spawn timer lives in ability shinto_landmark_sacred_object_spawner_jpn state tree (no numeric field); 2 min is the tooltip argument."
+      ]
+    },
+    {
+      "key": "yorishiro_placement",
+      "summary": "A Shinto Priest deposits a Yorishiro into one own building (one per building). Bonuses by building type.",
+      "params": {
+        "townCenterProductionSpeedPct": 30,
+        "farmhouseFoodPerMinute": 70,
+        "lumberCampWoodPerMinute": 70,
+        "forgeGoldPerMinute": 50,
+        "militaryAndDockProductionSpeedPct": 125,
+        "wonderHealth": 4000,
+        "onePerBuilding": true,
+        "excludedTargets": [
+          "wall",
+          "monastery",
+          "farm",
+          "landmark (except capital Town Center)",
+          "university",
+          "market",
+          "keep",
+          "defensive_structure"
+        ],
+        "asEngineEffects": [
+          {
+            "kind": "production_speed",
+            "target": "town_center",
+            "op": "mul",
+            "value": 1.3,
+            "notes": ""
+          },
+          {
+            "kind": "passive_income",
+            "target": "food",
+            "op": "add",
+            "value": 1.1667,
+            "notes": "per Farmhouse holding a Yorishiro, food/s (70/min)"
+          },
+          {
+            "kind": "passive_income",
+            "target": "wood",
+            "op": "add",
+            "value": 1.1667,
+            "notes": "per Lumber Camp, wood/s (70/min)"
+          },
+          {
+            "kind": "passive_income",
+            "target": "gold",
+            "op": "add",
+            "value": 0.8333,
+            "notes": "per Forge, gold/s (50/min)"
+          },
+          {
+            "kind": "production_speed",
+            "target": "barracks, stable, archery_range, siege_workshop, dock",
+            "op": "mul",
+            "value": 2.25,
+            "notes": "+125% production speed"
+          }
+        ]
+      },
+      "status": "partial",
+      "evidence": [
+        "raw:abilities/modal_abilities/japanese/monk_shinto_deposit_sacred_object_jpn.rgd#default/ability_bag/ui_info/help_text_formatter/formatter = 11255671; formatter_arguments/int_value[0..5] = 30, 70, 70, 50, 125, 4000",
+        "locale:11255671 (%1% TC production 30, %2% Farmhouse food/min 70, %3% Lumber Camp wood/min 70, %4% Forge gold/min 50, %5% military/docks production 125, %6% Wonder health 4000)",
+        "raw:abilities/modal_abilities/japanese/monk_shinto_deposit_sacred_object_jpn.rgd#default/ability_bag/requirements_target/required_statemodelbool/key = sacred_object_buff_jpn (must be false: one per building); required_not unit types wall/monastery/farm/landmark-not-capital/university/scar_market/scar_keep/defensive_structure",
+        "Values are the ability tooltip arguments; the buff itself runs in state tree shinto_sacred_object_buff_jpn (not decoded): delivery tick and production-speed operator untraced."
+      ]
+    },
+    {
+      "key": "religious_choice",
+      "summary": "Castle-Age landmark choice fixes the religion: Floating Gate -> Shinto (Shrine, Shinto Priest, Yorishiro) or Temple of Equality -> Buddhist (Temple, Buddhist Monk, Zen gold).",
+      "params": {
+        "shinto": {
+          "shrine": "building_unit_religious_shinto_jpn",
+          "priest": {
+            "id": "unit_monk_shinto_3_jpn",
+            "cost": {
+              "gold": 150
+            },
+            "trainSeconds": 30,
+            "age": 3
+          }
+        },
+        "buddhist": {
+          "temple": "building_unit_religious_buddhist_jpn",
+          "templeLimit": 4,
+          "monk": {
+            "id": "unit_monk_buddhist_3_jpn",
+            "cost": {
+              "gold": 80
+            },
+            "trainSeconds": 30,
+            "age": 3
+          },
+          "zen": {
+            "id": "upgrade_temple_zen_jpn",
+            "goldPerMonk": 25,
+            "intervalSeconds": 60
+          }
+        }
+      },
+      "status": "resolved",
+      "evidence": [
+        "locale:11257924",
+        "catalog:units/unit_monk_shinto_3_jpn#cost",
+        "catalog:units/unit_monk_buddhist_3_jpn#cost",
+        "catalog:technologies/upgrade_temple_zen_jpn#modifiers",
+        "raw:ebps/races/japanese/buildings/building_landmark_age2_shinto_jpn and _buddhist_jpn requirement_ext (each excludes the other)"
+      ]
+    },
+    {
+      "key": "silver_mining",
+      "summary": "Deposited gold also yields bonus stone and vice versa.",
+      "params": {
+        "bonusPct": 20,
+        "minDepositAmount": 5,
+        "goldToStone": 0.2,
+        "stoneToGold": 0.2,
+        "asEngineEffects": [
+          {
+            "kind": "passive_income",
+            "target": "stone",
+            "op": "add",
+            "value": 0.2,
+            "notes": "stone += 0.2 x gold deposited (deposits of >= 5)"
+          },
+          {
+            "kind": "passive_income",
+            "target": "gold",
+            "op": "add",
+            "value": 0.2,
+            "notes": "gold += 0.2 x stone deposited (deposits of >= 5)"
+          }
+        ]
+      },
+      "status": "partial",
+      "evidence": [
+        "catalog:units/unit_villager_1_jpn#descriptionArguments = [5, 20, 5, 20] (\"When 5 or more stone is deposited an extra 20% gold is produced and when 5 or more gold is deposited an extra 20% stone is produced\")",
+        "locale:11252359 (arg 20 from raw:army/standard_mode/normal_japanese.rgd#default/army_bag/ui/global_traits_summary/trait[6]/description_formatter/formatter_arguments/int_value)",
+        "Implemented in a state tree (not decoded); the race schema tracks num_gold_gatherers / num_stone_gatherers."
+      ]
+    },
+    {
+      "key": "barracks_discount",
+      "summary": "Samurai Districts: Barracks cost 50% less (75 wood).",
+      "params": {
+        "discountPct": 50,
+        "barracksCost": {
+          "wood": 75
+        }
+      },
+      "status": "resolved",
+      "evidence": [
+        "catalog:buildings/building_unit_infantry_jpn#cost",
+        "locale:11270503 (arg 50)"
+      ]
+    },
+    {
+      "key": "fishing_boat_discount",
+      "summary": "Fishing Village: Fishing Boats 25% cheaper (56 wood).",
+      "params": {
+        "discountPct": 25,
+        "fishingBoatCost": {
+          "wood": 56
+        }
+      },
+      "status": "resolved",
+      "evidence": [
+        "catalog:units/unit_naval_fishing_boat_2_jpn#cost",
+        "locale:11247719 (arg 25)"
+      ]
+    },
+    {
+      "key": "samurai_dark_age",
+      "summary": "Samurai (Man-at-Arms replacement, Deflective Armor blocks 1 attack) trainable from the Dark Age at the Barracks.",
+      "params": {
+        "unit": "unit_samurai_1_jpn",
+        "age": 1,
+        "deflectiveBlocks": 1
+      },
+      "status": "resolved",
+      "evidence": [
+        "catalog:units/unit_samurai_1_jpn#requirements",
+        "locale:11257922",
+        "raw:statemodel_schema/civs/japanese.rgd#default/schema_bag/block_max_count_infantry_samurai_jpn default = 1"
+      ]
+    },
+    {
+      "key": "no_farm_rate_techs",
+      "summary": "Japanese have no Horticulture / Fertilization / Precision Cross-Breeding: no Japanese building researches upgrade_econ_resource_food_harvest_rate_*. Farm rate rises only through the Daimyo aura.",
+      "params": {
+        "farmRateTechs": []
+      },
+      "status": "resolved",
+      "evidence": [
+        "catalog:buildings/building_house_jpn#researchableTechnologies",
+        "catalog:buildings/building_landmark_age1_storehouse_jpn#researchableTechnologies",
+        "catalog:buildings/building_town_center_capital_jpn#researchableTechnologies",
+        "Checked every Japanese building researchableTechnologies list in data/game-catalog.json."
+      ]
+    },
+    {
+      "key": "kura_tech_copies",
+      "summary": "Each economy tech exists twice (Forge/Lumber Camp copy and _kura copy); researching one blocks the other.",
+      "params": {
+        "pairs": [
+          [
+            "upgrade_econ_resource_gold_harvest_rate_2_jpn",
+            "upgrade_econ_resource_gold_harvest_rate_2_kura_jpn"
+          ],
+          [
+            "upgrade_econ_resource_gold_harvest_rate_3_jpn",
+            "upgrade_econ_resource_gold_harvest_rate_3_kura_jpn"
+          ],
+          [
+            "upgrade_econ_resource_gold_harvest_rate_4_jpn",
+            "upgrade_econ_resource_gold_harvest_rate_4_kura_jpn"
+          ],
+          [
+            "upgrade_econ_resource_wood_fell_rate_1_jpn",
+            "upgrade_econ_resource_wood_fell_rate_1_kura_jpn"
+          ],
+          [
+            "upgrade_econ_resource_wood_harvest_rate_2_jpn",
+            "upgrade_econ_resource_wood_harvest_rate_2_kura_jpn"
+          ],
+          [
+            "upgrade_econ_resource_wood_harvest_rate_3_jpn",
+            "upgrade_econ_resource_wood_harvest_rate_3_kura_jpn"
+          ],
+          [
+            "upgrade_econ_resource_wood_harvest_rate_4_jpn",
+            "upgrade_econ_resource_wood_harvest_rate_4_kura_jpn"
+          ]
+        ]
+      },
+      "status": "resolved",
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_jpn#requirements (excludes _kura copy, includeQueued)",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_kura_jpn#cost"
+      ]
+    },
+    {
+      "key": "tanegashima_stockpile",
+      "summary": "Imperial landmark stockpiles gunpowder supplies every 30 s (starts with 2) for instant gunpowder units.",
+      "params": {
+        "intervalSeconds": 30,
+        "initialStockpile": 2,
+        "stockpileResource": "militia_hre",
+        "deployedCost": {
+          "handcannon": 1,
+          "ozutsu": 1,
+          "bombard": 4,
+          "ribauldequin": 4
+        }
+      },
+      "status": "partial",
+      "evidence": [
+        "raw:statemodel_schema/buildings/civilizations/japanese/wonder_age3_tanegeshima_jpn.rgd#gunsmith_stockpile_timer_jpn 30, gunsmith_stockpile_count_jpn 2",
+        "locale:11247528",
+        "catalog:units/unit_ozutsu_tanegashima_4_jpn#cost",
+        "catalog:units/unit_bombard_tanegashima_4_jpn#cost",
+        "Mapping 1 stockpile = 1 militia_hre is inferred from the deployed-unit costs."
+      ]
+    },
+    {
+      "key": "castle_of_the_crow_caravans",
+      "summary": "Imperial landmark acts as a Castle and periodically receives Treasure Caravans from a selected neutral Trading Post.",
+      "params": {
+        "minRpm": 100,
+        "maxRpm": 700,
+        "maxDistanceRpm": 160,
+        "periodSeconds": null,
+        "requiresNeutralTradePost": true
+      },
+      "status": "unresolved",
+      "evidence": [
+        "raw:statemodel_schema/civs/japanese.rgd#default/schema_bag/treasure_caravan_min_rpm_jpn 100, treasure_caravan_max_rpm_jpn 700, treasure_caravan_max_distance_rpm_jpn 160",
+        "locale:11247529"
+      ]
+    },
+    {
+      "key": "odas_fortress",
+      "summary": "Keep (Castle) is Imperial-only for Japanese, 300 wood + 900 stone, 180 s, 5500 HP, Rocket emplacement.",
+      "params": {
+        "age": 4,
+        "cost": {
+          "wood": 300,
+          "stone": 900
+        },
+        "buildSeconds": 180,
+        "hp": 5500
+      },
+      "status": "resolved",
+      "evidence": [
+        "catalog:buildings/building_defense_keep_jpn#cost",
+        "catalog:buildings/building_defense_keep_jpn#hp",
+        "locale:11258365"
+      ]
+    },
+    {
+      "key": "tc_production_by_age",
+      "summary": "No age-based Town Center production modifier for Japanese; only the Yorishiro (+30%) changes TC production speed.",
+      "params": {
+        "multiplierByAge": {
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
+      },
+      "status": "resolved",
+      "evidence": [
+        "locale:11257921",
+        "raw:army/standard_mode/normal_japanese.rgd#default/army_bag/ui/global_traits_summary (no TC production trait)"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "item": "Farmhouse and Town Center population (10 each)",
+      "why": "Pop is applied by state trees (house_construction_complete\\run_once, town_center_construction_complete) that are not in Attrib.sga; the value is the state-model schema default population_cap_increase.",
+      "fallback": "Use 10; schema default for farmhouse_jpn, town_center(_capital)_jpn and the generic house schema all agree."
+    },
+    {
+      "item": "Daimyo farm aura stacking",
+      "why": "bonus_level_1/2/3 = 1.2/1.4/1.6 are per-level values (level replaces level); behaviour when a farm sits inside two upgraded TC auras is in state tree daimyo_level_manager_jpn (not decoded). Radius 40 is engine units, not tiles.",
+      "fallback": "Apply the highest single aura per farm; do not multiply overlapping auras."
+    },
+    {
+      "item": "Bannerman production cap",
+      "why": "Bannermen cost 1 action token; tooltips say Daimyo tiers add +1/+2/+3. Base cap (no starting action tokens), cumulative total (1/3/6?) and the meaning of ability int properties daimyo_level_1..5 = 3/6/9/12/15 are untraced.",
+      "fallback": "Cap = sum of increments of completed tiers across TCs (Manor 1, Palace +2, Shogunate +3)."
+    },
+    {
+      "item": "Shaft Mining increment",
+      "why": "Raw scalars mining_rate/mining_rate_stone are 0.15 (Specialized Pick) and 0.30 (Shaft Mining) while both tooltips say +15%; the wood line uses 0.15 at every tier.",
+      "fallback": "Read 0.30 as the cumulative total: +0.15 per tech additive to base (gold/stone x1.30 after both)."
+    },
+    {
+      "item": "Tooltip-only effects",
+      "why": "Tawara/Takezaiku/Fudasashi (+3 carry, +7% speed, +25% berries each), Forestry (x2 felling), Cupellation (+15% gold drop-off), Textiles, melee/ranged damage and armor techs carry no raw scalar; their state trees are not decoded, so additive vs multiplicative stacking across tiers is not read from data.",
+      "fallback": "Carry and armor/damage additive; percent effects additive to base within a line (berries 1 + 0.25n, speed 1 + 0.07n)."
+    },
+    {
+      "item": "Yorishiro bonuses",
+      "why": "Values (30% TC, 70 food, 70 wood, 50 gold per min, 125% military/dock, 4000 wonder HP) are the deposit-ability tooltip arguments; delivery tick and production-speed operator are in state tree shinto_sacred_object_buff_jpn.",
+      "fallback": "Continuous income value/60 per second; production speed x(1 + pct/100)."
+    },
+    {
+      "item": "Kura Storehouse farmland capacity and wood fallback",
+      "why": "Farm-spawn interval 50 s is in the tooltip; the number of farm slots and the wood produced once full are in state tree storehouse_rice_field_spawn_jpn.",
+      "fallback": "Model a free farm every 50 s and no wood income until measured."
+    },
+    {
+      "item": "Silver Mining trigger",
+      "why": "Only the villager/codex tooltips state \"deposits of 5 or more give 20% of the other resource\"; the state tree is not decoded.",
+      "fallback": "Every gold drop-off of >= 5 adds 20% as stone and vice versa (full 10-carry trips always qualify)."
+    },
+    {
+      "item": "Castle of the Crow caravans",
+      "why": "Only race-schema defaults min 100 / max 700 / max distance 160 (rpm) exist; period, resource split and distance formula are in state trees.",
+      "fallback": "Exclude caravan income from the engine."
+    },
+    {
+      "item": "Tanegashima stockpile mapping",
+      "why": "Timer 30 s and initial 2 are schema defaults; that one stockpile equals one militia_hre resource is inferred from deployed-unit costs.",
+      "fallback": "1 militia_hre every 30 s, start 2."
+    },
+    {
+      "item": "Tithe Barns availability",
+      "why": "Listed only on the Religious Choice placeholder building, not on the Shinto Shrine or Buddhist Temple research lists.",
+      "fallback": "Treat as unavailable."
+    },
+    {
+      "item": "Buddhist Temple limit",
+      "why": "Requirement record blocks a 5th temple (count 4) while UI string 11260983 says maximum 5.",
+      "fallback": "4 temples plus the Temple of Equality landmark."
+    },
+    {
+      "item": "Kabura-ya speed amount, Nagae Yari stacking",
+      "why": "Tooltips give duration/percent only; no raw scalar.",
+      "fallback": "Ignore Kabura-ya in economy runs."
+    },
+    {
+      "item": "Extended Lines / Drift Nets rate",
+      "why": "Raw gather_rate_food 0.1 for both while tooltip args are 15% and 10%.",
+      "fallback": "Use raw 0.1 each (not used by land builds)."
+    },
+    {
+      "item": "Villager speed unit",
+      "why": "speedEngineUnits 4.5 is a raw engine value; tile conversion is a repo-wide open item.",
+      "fallback": "Use the same conversion as the other civ packs."
+    },
+    {
+      "item": "17.0 preview changes",
+      "why": "data/patch-next.json lists Town Center build time 150 -> 165 s (all civs) and Ram HP 370 -> 410 for 2026-10-29; not applied here (16.3.11308 values).",
+      "fallback": "Switch only when the patch ships and the catalog is re-extracted."
+    }
+  ]
+}

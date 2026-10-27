@@ -116,3 +116,26 @@ body{background:radial-gradient(ellipse at 82% 5%,rgba(255,255,255,.95),transpar
 .unit-tracking{border-top:1px solid var(--line);margin-top:15px;padding-top:12px}.unit-tracking>summary{font-size:13px;font-weight:600;cursor:pointer}.unit-tracking-list{max-height:270px;overflow-y:auto;margin-top:8px}.unit-tracking-list .compare-track{min-height:43px}.unit-tracking-list .compare-track>span{display:flex;gap:7px;align-items:center;font-size:12px}.unit-tracking-list .game-icon{width:24px;height:24px;flex:none}.unit-tracking-list .track-row b{font-size:14px}
 .event-cluster-heading{display:flex;align-items:center;gap:8px;padding:8px 6px 10px;border-bottom:1px solid var(--line);margin-bottom:4px}.event-cluster-heading>span:last-child{min-width:0}.event-cluster-heading strong{display:block;font:600 12px var(--sans);color:var(--text)}.event-cluster-heading small{display:block;font:11px var(--sans);line-height:1.4;white-space:normal;margin-top:3px}.event-cluster-heading .civ-flag{width:26px;height:18px;object-fit:contain}.event-cluster-path{display:grid;place-items:center;width:20px;height:20px;flex:none;border-radius:50%;font:600 11px var(--mono);color:var(--a);background:var(--a-soft)}.graph-event-cluster.b .event-cluster-path{color:var(--b);background:var(--b-soft)}
 .event-cluster-heading{position:sticky;top:-6px;z-index:1;background:var(--menu)}
+
+/* Theory plans name the recorded game they are compared with */
+.build-item .reference-note{margin-left:8px;color:var(--muted);white-space:nowrap}
+/* upgrade tiles: the whole tile toggles the upgrade; its name links to the technology's Library page */
+.upgrade-tile.has-title-link{position:relative}
+.upgrade-hit{position:absolute;inset:0;z-index:0;margin:0;padding:0;border:0;border-radius:inherit;background:transparent;cursor:pointer;min-height:0}
+.upgrade-hit:disabled{cursor:default}
+.upgrade-hit:focus-visible{outline:2px solid var(--a);outline-offset:-2px}
+.has-title-link>.upgrade-face,.has-title-link>.unit-tech-progress,.has-title-link>.upgrade-info{position:relative;z-index:1}
+.has-title-link>.upgrade-face,.has-title-link>.unit-tech-progress{pointer-events:none}
+.upgrade-title{pointer-events:auto;color:inherit;text-decoration:none}
+.upgrade-title:hover,.upgrade-title:focus-visible{color:var(--a);text-decoration:underline}
+/* build status: Saved (green) and Draft (amber) tags; mixing with --text keeps contrast in light and dark themes */
+:root{--status-saved:#2ea043;--status-draft:#d29922}
+.badge.build-status.saved{color:color-mix(in srgb,var(--status-saved) 72%,var(--text));background:color-mix(in srgb,var(--status-saved) 15%,transparent);border-color:color-mix(in srgb,var(--status-saved) 50%,transparent)}
+.badge.build-status.draft{color:color-mix(in srgb,var(--status-draft) 72%,var(--text));background:color-mix(in srgb,var(--status-draft) 15%,transparent);border-color:color-mix(in srgb,var(--status-draft) 50%,transparent)}
+.badge.referenced-build{position:relative;z-index:2;text-decoration:none;color:var(--a);margin-right:6px}
+.badge.referenced-build:hover{text-decoration:underline}
+.crafter-drafts{margin-top:16px}
+.crafter-drafts h3{display:flex;gap:10px;align-items:baseline;font-size:13px;margin:0 0 8px}
+.crafter-drafts h3 a{font-weight:400;font-size:12px}
+.build-section+.build-section{margin-top:18px}
+.build-section>.panel-head h2{font:600 15px var(--sans)}

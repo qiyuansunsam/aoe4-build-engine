@@ -1,0 +1,464 @@
+{
+ "generatedAt": "2026-10-24T09:22:36.309Z",
+ "times": [
+  300,
+  600,
+  900,
+  1200
+ ],
+ "builds": [
+  {
+   "id": "french-knights-10",
+   "title": "Royal Knights by 10:00",
+   "civilization": "french",
+   "objective": {
+    "kind": "lineAt",
+    "line": "royal-knight",
+    "t": 600,
+    "slack": 1
+   },
+   "reference": {
+    "id": "french-observed-4v4",
+    "title": "French cavalry reference game",
+    "gameId": "aoe4world-253765646-23172989",
+    "duration": 2907
+   },
+   "theory": {
+    "ages": [
+     266,
+     815,
+     1218
+    ],
+    "done": 1497,
+    "at": {
+     "300": {
+      "villagers": 21,
+      "population": 24,
+      "line": 0,
+      "armyValue": 0,
+      "age": 2
+     },
+     "600": {
+      "villagers": 28,
+      "population": 49,
+      "line": 18,
+      "armyValue": 4320,
+      "age": 2
+     },
+     "900": {
+      "villagers": 43,
+      "population": 72,
+      "line": 27,
+      "armyValue": 6480,
+      "age": 3
+     },
+     "1200": {
+      "villagers": 73,
+      "population": 112,
+      "line": 32,
+      "armyValue": 7680,
+      "age": 3
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [
+     268,
+     979,
+     1743
+    ],
+    "at": {
+     "300": {
+      "villagers": 22,
+      "population": 26,
+      "line": 1,
+      "armyValue": 305,
+      "age": null
+     },
+     "600": {
+      "villagers": 39,
+      "population": 56,
+      "line": 11,
+      "armyValue": 2770,
+      "age": null
+     },
+     "900": {
+      "villagers": 53,
+      "population": 72,
+      "line": 17,
+      "armyValue": 4145,
+      "age": null
+     },
+     "1200": {
+      "villagers": 63,
+      "population": 87,
+      "line": 22,
+      "armyValue": 5345,
+      "age": null
+     }
+    }
+   }
+  },
+  {
+   "id": "french-knights-15",
+   "title": "Royal Knights by 15:00",
+   "civilization": "french",
+   "objective": {
+    "kind": "lineAt",
+    "line": "royal-knight",
+    "t": 900,
+    "slack": 1
+   },
+   "reference": {
+    "id": "french-knights-observed-4v4",
+    "title": "French knight reference game",
+    "gameId": "aoe4world-254013906-14202950",
+    "duration": 1256
+   },
+   "theory": {
+    "ages": [
+     352,
+     1058,
+     1332
+    ],
+    "done": 1577,
+    "at": {
+     "300": {
+      "villagers": 21,
+      "population": 23,
+      "line": 0,
+      "armyValue": 0,
+      "age": 1
+     },
+     "600": {
+      "villagers": 47,
+      "population": 62,
+      "line": 10,
+      "armyValue": 2400,
+      "age": 2
+     },
+     "900": {
+      "villagers": 56,
+      "population": 114,
+      "line": 52,
+      "armyValue": 12480,
+      "age": 2
+     },
+     "1200": {
+      "villagers": 80,
+      "population": 168,
+      "line": 82,
+      "armyValue": 19680,
+      "age": 3
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [
+     279,
+     1186,
+     null
+    ],
+    "at": {
+     "300": {
+      "villagers": 22,
+      "population": 25,
+      "line": 0,
+      "armyValue": 65,
+      "age": null
+     },
+     "600": {
+      "villagers": 39,
+      "population": 55,
+      "line": 12,
+      "armyValue": 3010,
+      "age": null
+     },
+     "900": {
+      "villagers": 56,
+      "population": 86,
+      "line": 24,
+      "armyValue": 5825,
+      "age": null
+     },
+     "1200": {
+      "villagers": 73,
+      "population": 89,
+      "line": 15,
+      "armyValue": 3600,
+      "age": null
+     }
+    }
+   }
+  },
+  {
+   "id": "mongol-cavalry-10",
+   "title": "Mongol cavalry by 10:00",
+   "civilization": "mongol",
+   "objective": {
+    "kind": "valueAt",
+    "t": 600,
+    "slack": 250
+   },
+   "reference": {
+    "id": "mongols-observed-4v4",
+    "title": "Mongol stable reference game",
+    "gameId": "aoe4world-254429285-24672417",
+    "duration": 1398
+   },
+   "theory": {
+    "ages": [
+     717,
+     1024,
+     1217
+    ],
+    "done": 1377,
+    "at": {
+     "300": {
+      "villagers": 20,
+      "population": 29,
+      "line": 5,
+      "armyValue": 600,
+      "age": 1
+     },
+     "600": {
+      "villagers": 34,
+      "population": 80,
+      "line": 42,
+      "armyValue": 5040,
+      "age": 1
+     },
+     "900": {
+      "villagers": 50,
+      "population": 109,
+      "line": 56,
+      "armyValue": 6720,
+      "age": 2
+     },
+     "1200": {
+      "villagers": 92,
+      "population": 162,
+      "line": 63,
+      "armyValue": 8120,
+      "age": 3
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [
+     282,
+     913,
+     null
+    ],
+    "at": {
+     "300": {
+      "villagers": 19,
+      "population": 22,
+      "line": 0,
+      "armyValue": 120,
+      "age": null
+     },
+     "600": {
+      "villagers": 32,
+      "population": 42,
+      "line": 7,
+      "armyValue": 1520,
+      "age": null
+     },
+     "900": {
+      "villagers": 45,
+      "population": 62,
+      "line": 14,
+      "armyValue": 2920,
+      "age": null
+     },
+     "1200": {
+      "villagers": 57,
+      "population": 128,
+      "line": 54,
+      "armyValue": 10920,
+      "age": null
+     }
+    }
+   }
+  },
+  {
+   "id": "malian-cattle-boom",
+   "title": "Malian cattle boom",
+   "civilization": "malian",
+   "objective": {
+    "kind": "done"
+   },
+   "reference": {
+    "id": "malians-observed-4v4",
+    "title": "Malian cattle reference game",
+    "gameId": "aoe4world-254443718-7195780",
+    "duration": 1689
+   },
+   "theory": {
+    "ages": [
+     360,
+     686,
+     927
+    ],
+    "done": 1124,
+    "at": {
+     "300": {
+      "villagers": 20,
+      "population": 22,
+      "line": 0,
+      "armyValue": 0,
+      "age": 1
+     },
+     "600": {
+      "villagers": 43,
+      "population": 46,
+      "line": 0,
+      "armyValue": 0,
+      "age": 2
+     },
+     "900": {
+      "villagers": 102,
+      "population": 117,
+      "line": 5,
+      "armyValue": 900,
+      "age": 3
+     },
+     "1200": {
+      "villagers": 150,
+      "population": 200,
+      "line": 49,
+      "armyValue": 8820,
+      "age": 4
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [
+     265,
+     640,
+     null
+    ],
+    "at": {
+     "300": {
+      "villagers": 20,
+      "population": 22,
+      "line": 0,
+      "armyValue": 90,
+      "age": null
+     },
+     "600": {
+      "villagers": 33,
+      "population": 35,
+      "line": 0,
+      "armyValue": 90,
+      "age": null
+     },
+     "900": {
+      "villagers": 41,
+      "population": 76,
+      "line": 27,
+      "armyValue": 4950,
+      "age": null
+     },
+     "1200": {
+      "villagers": 56,
+      "population": 104,
+      "line": 43,
+      "armyValue": 7830,
+      "age": null
+     }
+    }
+   }
+  },
+  {
+   "id": "japanese-two-tc",
+   "title": "Japanese Town Center boom",
+   "civilization": "japanese",
+   "objective": {
+    "kind": "done"
+   },
+   "reference": {
+    "id": "japanese-observed-4v4",
+    "title": "Japanese two-TC reference game",
+    "gameId": "aoe4world-254451193-24222589",
+    "duration": 1624
+   },
+   "theory": {
+    "ages": [
+     314,
+     611,
+     835
+    ],
+    "done": 1058,
+    "at": {
+     "300": {
+      "villagers": 20,
+      "population": 22,
+      "line": 0,
+      "armyValue": 0,
+      "age": 1
+     },
+     "600": {
+      "villagers": 52,
+      "population": 56,
+      "line": 0,
+      "armyValue": 0,
+      "age": 2
+     },
+     "900": {
+      "villagers": 95,
+      "population": 130,
+      "line": 27,
+      "armyValue": 2160,
+      "age": 4
+     },
+     "1200": {
+      "villagers": 119,
+      "population": 200,
+      "line": 80,
+      "armyValue": 6400,
+      "age": 4
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [
+     277,
+     575,
+     1537
+    ],
+    "at": {
+     "300": {
+      "villagers": 20,
+      "population": 22,
+      "line": 0,
+      "armyValue": 65,
+      "age": null
+     },
+     "600": {
+      "villagers": 43,
+      "population": 47,
+      "line": 0,
+      "armyValue": 65,
+      "age": null
+     },
+     "900": {
+      "villagers": 69,
+      "population": 118,
+      "line": 5,
+      "armyValue": 4185,
+      "age": null
+     },
+     "1200": {
+      "villagers": 94,
+      "population": 202,
+      "line": 13,
+      "armyValue": 9690,
+      "age": null
+     }
+    }
+   }
+  }
+ ]
+}

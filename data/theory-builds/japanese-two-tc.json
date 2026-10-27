@@ -1,0 +1,507 @@
+{
+ "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "build": {
+  "id": "japanese-two-tc",
+  "title": "Japanese Town Center boom",
+  "summary": "The fastest 200 population with every upgrade of its infantry lines from at least two Town Centers; Daimyo upgrades, landmarks, Yorishiro placement and timings come from the engine search.",
+  "civilization": "japanese",
+  "engine": "civ",
+  "patch": "16.3.11308",
+  "reference": {
+   "buildId": "japanese-observed-4v4"
+  },
+  "objective": {
+   "kind": "done"
+  },
+  "lineNames": "Onna-Bugeisha",
+  "result": {
+   "done": 1068,
+   "at": 900,
+   "army": 27,
+   "armyValue": 2160,
+   "villagers": 93,
+   "population": 126,
+   "age": 4,
+   "ages": [
+    297,
+    636,
+    854
+   ]
+  },
+  "lines": [
+   "onna-bugeisha"
+  ],
+  "vilTarget": 140,
+  "landmarks": {
+   "2": "kura-storehouse",
+   "3": "floating-gate",
+   "4": "tanegashima-gunsmith"
+  },
+  "lmBuilders": {
+   "2": 5,
+   "3": 12,
+   "4": 13
+  },
+  "extraTCs": {
+   "2": 2,
+   "3": 0
+  },
+  "tcBuilders": 8,
+  "producers": {
+   "1": 0,
+   "2": 3,
+   "3": 2,
+   "4": 4
+  },
+  "maxProducers": 9,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1_jpn",
+    "upgrade_econ_villager_hunting_gear_1"
+   ],
+   "2": "all",
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": false,
+   "3": true
+  },
+  "blacksmiths": 2,
+  "pauseForAge": true,
+  "window": 4,
+  "woodFloor": 0.25,
+  "goldBias": 1.2,
+  "armyAge": 3,
+  "civTechs": {
+   "upgrade_capital_tier_1_jpn": 2,
+   "upgrade_capital_tier_2_jpn": 2,
+   "upgrade_capital_tier_3_jpn": null
+  },
+  "mech": {
+   "yorishiro": [
+    "farmhouse",
+    "farmhouse",
+    "lumber",
+    "tc",
+    "farmhouse",
+    "lumber"
+   ]
+  }
+ },
+ "ledger": {
+  "id": "japanese-two-tc",
+  "evaluations": 4088,
+  "seconds": 94,
+  "seed": 20261024,
+  "objective": {
+   "kind": "done"
+  },
+  "best": {
+   "done": 1068,
+   "at": 900,
+   "army": 27,
+   "armyValue": 2160,
+   "villagers": 93,
+   "population": 126,
+   "age": 4,
+   "ages": [
+    297,
+    636,
+    854
+   ]
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "lines": [
+      "onna-bugeisha"
+     ],
+     "vilTarget": 120,
+     "landmarks": {
+      "2": "kura-storehouse",
+      "3": "floating-gate",
+      "4": "tanegashima-gunsmith"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 2,
+      "4": 4
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1_jpn",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 4,
+     "woodFloor": 0.25,
+     "goldBias": 1.2,
+     "armyAge": 3,
+     "civTechs": {
+      "upgrade_capital_tier_1_jpn": 2,
+      "upgrade_capital_tier_2_jpn": 2,
+      "upgrade_capital_tier_3_jpn": null
+     },
+     "mech": {
+      "yorishiro": [
+       "farmhouse",
+       "farmhouse",
+       "lumber",
+       "tc",
+       "farmhouse",
+       "lumber"
+      ]
+     }
+    },
+    "result": {
+     "done": 1068,
+     "at": 900,
+     "army": 27,
+     "armyValue": 2160,
+     "villagers": 93,
+     "population": 126,
+     "age": 4,
+     "ages": [
+      297,
+      636,
+      854
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "onna-bugeisha"
+     ],
+     "vilTarget": 125,
+     "landmarks": {
+      "2": "kura-storehouse",
+      "3": "floating-gate",
+      "4": "tanegashima-gunsmith"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 2,
+      "4": 4
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1_jpn",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 4,
+     "woodFloor": 0.25,
+     "goldBias": 1.2,
+     "armyAge": 3,
+     "civTechs": {
+      "upgrade_capital_tier_1_jpn": 2,
+      "upgrade_capital_tier_2_jpn": 2,
+      "upgrade_capital_tier_3_jpn": null
+     },
+     "mech": {
+      "yorishiro": [
+       "farmhouse",
+       "farmhouse",
+       "lumber",
+       "tc",
+       "farmhouse",
+       "lumber"
+      ]
+     }
+    },
+    "result": {
+     "done": 1068,
+     "at": 900,
+     "army": 27,
+     "armyValue": 2160,
+     "villagers": 93,
+     "population": 126,
+     "age": 4,
+     "ages": [
+      297,
+      636,
+      854
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "onna-bugeisha"
+     ],
+     "vilTarget": 130,
+     "landmarks": {
+      "2": "kura-storehouse",
+      "3": "floating-gate",
+      "4": "tanegashima-gunsmith"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 2,
+      "4": 4
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1_jpn",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 4,
+     "woodFloor": 0.25,
+     "goldBias": 1.2,
+     "armyAge": 3,
+     "civTechs": {
+      "upgrade_capital_tier_1_jpn": 2,
+      "upgrade_capital_tier_2_jpn": 2,
+      "upgrade_capital_tier_3_jpn": null
+     },
+     "mech": {
+      "yorishiro": [
+       "farmhouse",
+       "farmhouse",
+       "lumber",
+       "tc",
+       "farmhouse",
+       "lumber"
+      ]
+     }
+    },
+    "result": {
+     "done": 1068,
+     "at": 900,
+     "army": 27,
+     "armyValue": 2160,
+     "villagers": 93,
+     "population": 126,
+     "age": 4,
+     "ages": [
+      297,
+      636,
+      854
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "onna-bugeisha"
+     ],
+     "vilTarget": 135,
+     "landmarks": {
+      "2": "kura-storehouse",
+      "3": "floating-gate",
+      "4": "tanegashima-gunsmith"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 2,
+      "4": 4
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1_jpn",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 4,
+     "woodFloor": 0.25,
+     "goldBias": 1.2,
+     "armyAge": 3,
+     "civTechs": {
+      "upgrade_capital_tier_1_jpn": 2,
+      "upgrade_capital_tier_2_jpn": 2,
+      "upgrade_capital_tier_3_jpn": null
+     },
+     "mech": {
+      "yorishiro": [
+       "farmhouse",
+       "farmhouse",
+       "lumber",
+       "tc",
+       "farmhouse",
+       "lumber"
+      ]
+     }
+    },
+    "result": {
+     "done": 1068,
+     "at": 900,
+     "army": 27,
+     "armyValue": 2160,
+     "villagers": 93,
+     "population": 126,
+     "age": 4,
+     "ages": [
+      297,
+      636,
+      854
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "onna-bugeisha"
+     ],
+     "vilTarget": 140,
+     "landmarks": {
+      "2": "kura-storehouse",
+      "3": "floating-gate",
+      "4": "castle-of-the-crow"
+     },
+     "lmBuilders": {
+      "2": 5,
+      "3": 12,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 2,
+      "4": 4
+     },
+     "maxProducers": 9,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1_jpn",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 4,
+     "woodFloor": 0.25,
+     "goldBias": 1.2,
+     "armyAge": 3,
+     "civTechs": {
+      "upgrade_capital_tier_1_jpn": 2,
+      "upgrade_capital_tier_2_jpn": 2,
+      "upgrade_capital_tier_3_jpn": null
+     },
+     "mech": {
+      "yorishiro": [
+       "farmhouse",
+       "farmhouse",
+       "lumber",
+       "tc",
+       "farmhouse",
+       "lumber"
+      ]
+     }
+    },
+    "result": {
+     "done": 1068,
+     "at": 900,
+     "army": 27,
+     "armyValue": 2160,
+     "villagers": 93,
+     "population": 126,
+     "age": 4,
+     "ages": [
+      297,
+      636,
+      854
+     ]
+    }
+   }
+  ]
+ }
+}

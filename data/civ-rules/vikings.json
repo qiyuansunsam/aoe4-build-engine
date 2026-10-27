@@ -1,0 +1,2157 @@
+{
+ "civ": "vikings",
+ "catalogCiv": "vikings",
+ "patch": "17.0-preview",
+ "notes": "Vikings (Raiders of the North, Update 17.0, releases 2026-10-29; not in the installed game). Unique values come from the datamined 17.0 records (jeandogaming explorer, data/upcoming-civs/raw/jeando/vikings_dataset.json) and the merged frame/transcript checklist (data/upcoming-civs/checklist.json). Standard values (villager gather table, technology effect sizes) are the installed 16.3 values; the 17.0 standard records equal 16.3 in 1268 of 1275 values (data/UPCOMING_CIVS.md).",
+ "start": {
+  "villagers": 6,
+  "resources": {
+   "food": 0,
+   "wood": 200,
+   "gold": 100,
+   "stone": 0
+  },
+  "popCap": 10,
+  "units": [
+   {
+    "id": "unit_scout_1_vik",
+    "name": "Scout",
+    "count": 1
+   }
+  ],
+  "buildings": [
+   {
+    "id": "building_town_center_capital_vik",
+    "name": "Town Center (capital)",
+    "count": 1
+   }
+  ],
+  "villagerCapacity": 10,
+  "evidence": [
+   "checklist:vikings/bonus/Starting conditions#effectText (HUD 00:09 and 00:15: food 0, wood 200, gold 100, stone 0; villagers 6/10; population 7/10) [confirmed]",
+   "frame:uNw-K34ZDPs@00:48 (game 00:07 HUD \"6/10 | 0/7 | 7/10 | 6 | 0 | 200 | 100 | 0\")",
+   "frame:ehO1BOe7wG8@02:22 (game 00:02 villager counter 6/10 before any Longhouse)",
+   "transcript:ehO1BOe7wG8@02:50 (\"they start with zero food\")",
+   "jeando17:unit_scout_1_vik#costs"
+  ]
+ },
+ "villager": {
+  "id": "unit_villager_1_vik",
+  "cost": {},
+  "recordCost": {
+   "food": 50
+  },
+  "trainSeconds": 22,
+  "speedEngineUnits": 4.5,
+  "hp": 50,
+  "pop": 1,
+  "gather": {
+   "wood": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[0]/gather_rate=0.75",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[0]/resource_carry_capacity=10",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[0]/resource_sub_type=tree",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   },
+   "farm": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[1]/gather_rate=0.75",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[1]/resource_carry_capacity=10",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[1]/resource_sub_type=farm",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   },
+   "sheep": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[2]/gather_rate=0.75",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[2]/resource_carry_capacity=10",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[2]/resource_sub_type=herded_animal",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   },
+   "boar": {
+    "rate": 0.9,
+    "carry": 25,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[3]/gather_rate=0.9",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[3]/resource_carry_capacity=25",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[3]/resource_sub_type=hunted_animal_danger",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   },
+   "deer": {
+    "rate": 0.825,
+    "carry": 25,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[4]/gather_rate=0.825",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[4]/resource_carry_capacity=25",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[4]/resource_sub_type=hunted_animal_flee",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   },
+   "stone": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[6]/gather_rate=0.75",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[6]/resource_carry_capacity=10",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[6]/resource_sub_type=stone",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   },
+   "gold": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[7]/gather_rate=0.75",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[7]/resource_carry_capacity=10",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[7]/resource_sub_type=gold",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   },
+   "shore_fish": {
+    "rate": 1.0,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[8]/gather_rate=1.0",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[8]/resource_carry_capacity=10",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[8]/resource_sub_type=fish",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   },
+   "berries": {
+    "rate": 0.69,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[9]/gather_rate=0.69",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[9]/resource_carry_capacity=10",
+     "raw:ebps/races/english/units/unit_villager_1_eng#resource_gatherer_ext/gather_types/gather_target[9]/resource_sub_type=forage_bush",
+     "standard 16.3 villager table: no 17.0 record or frame gives a Viking gather rate (jeando17:unit_villager_1_vik lists none)"
+    ]
+   }
+  },
+  "notes": "Villagers are recruited automatically and at no cost (Northern Migration), so the engine charges nothing; the record still carries 50 food (kept as recordCost). Speed is the record speed 1.125 tiles/s x 4 engine units per tile.",
+  "evidence": [
+   "jeando17:unit_villager_1_vik#costs",
+   "jeando17:unit_villager_1_vik#speed",
+   "jeando17:unit_villager_1_vik#hitpoints",
+   "checklist:vikings/unit/Villager#cost.food = 0 [confirmed] (Northern Migration: no cost)",
+   "checklist:vikings/unit/Villager#trainTimeSeconds = 22 [confirmed]",
+   "frame:BV1dSny6uE4j_p1@00:28 (Town Center tooltip: villager 22 s)"
+  ]
+ },
+ "townCenter": {
+  "id": "building_town_center_capital_vik",
+  "extraId": "building_town_center_vik",
+  "cost": {
+   "wood": 400,
+   "stone": 300
+  },
+  "buildSeconds": 165,
+  "popProvided": 10,
+  "extraRequiresAge": 2,
+  "villagerProductionMultiplierByAge": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 1
+  },
+  "notes": "Every Town Center (capital and additional) recruits villagers automatically while there is spare villager capacity (see mechanics northern-migration). Additional Town Center build time 165 s is the global 17.0 change. No Viking Town Center production bonus exists in any record or tooltip.",
+  "evidence": [
+   "jeando17:building_town_center_vik#costs",
+   "checklist:vikings/building/Town Center#population = 10 [confirmed]",
+   "transcript:nd74LibluQ0@18:34 (\"TC costs 400 300 so it looks pretty normal\")",
+   "data/UPCOMING_CIVS.md: additional Town Center build time 150 -> 165 s (official 17.0 notes)",
+   "standard rule: additional Town Center requires feudal_age (raw:ebps/races/japanese/buildings/building_town_center_jpn#default/requirement_ext ..., cited in data/civ-rules/japanese.json)"
+  ]
+ },
+ "buildings": {
+  "longhouse": {
+   "id": "building_longhouse_vik",
+   "name": "Longhouse",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 1,
+   "popProvided": 25,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Population building (no ordinary House exists for Vikings): +25 maximum population and +10 villager capacity. Trains Bondi 25% slower than a Barracks. Takes exactly one of four attachments (mechanics longhouse-attachments). Farmstead makes it a food drop-off.",
+   "evidence": [
+    "jeando17:building_longhouse_vik#costs",
+    "jeando17:building_longhouse_vik#description (\"Increases your Villager capacity by +10 and your maximum Population by +25. Produces Bondi spearmen but 25% slower. Can be upgraded with one of four possible attachments\")",
+    "jeando17:building_longhouse_vik#unitTypes (house, longhouse_vik)",
+    "checklist:vikings/building/Longhouse#population = 25 [confirmed]",
+    "checklist:vikings/building/Longhouse#buildTimeSeconds = 30 [confirmed]",
+    "no Viking House record: the 17.0 Viking dataset lists no building_house_vik (Longhouse carries unitType \"house\")"
+   ]
+  },
+  "mill": {
+   "id": "building_econ_food_vik",
+   "name": "Mill",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [
+    "food"
+   ],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_econ_food_vik#costs"
+   ]
+  },
+  "lumber-camp": {
+   "id": "building_econ_wood_vik",
+   "name": "Lumber Camp",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [
+    "wood"
+   ],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_econ_wood_vik#costs"
+   ]
+  },
+  "mining-camp": {
+   "id": "building_econ_mining_camp_vik",
+   "name": "Mining Camp",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [
+    "gold",
+    "stone"
+   ],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_econ_mining_camp_vik#costs"
+   ]
+  },
+  "farm": {
+   "id": "building_resource_farm_vik",
+   "name": "Farm",
+   "cost": {
+    "wood": 75
+   },
+   "buildSeconds": 6,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_resource_farm_vik#costs",
+    "checklist:vikings/building/Farm#buildTimeSeconds = 6 [confirmed]"
+   ]
+  },
+  "barracks": {
+   "id": "building_unit_infantry_vik",
+   "name": "Barracks",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_unit_infantry_vik#costs",
+    "catalog-preview17:buildings/building_unit_infantry_vik#trainableUnits (Bondi, Berserker, Hirdman)"
+   ]
+  },
+  "stable": {
+   "id": "building_unit_cavalry_vik",
+   "name": "Stable",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 2,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_unit_cavalry_vik#costs",
+    "checklist:vikings/building/Stable#age = Feudal",
+    "catalog-preview17:buildings/building_unit_cavalry_vik#trainableUnits (unit_knight_3_vik, unit_knight_4_vik)"
+   ]
+  },
+  "university": {
+   "id": "building_tech_university_vik",
+   "name": "University",
+   "cost": {
+    "wood": 450
+   },
+   "buildSeconds": 60,
+   "age": 4,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_tech_university_vik#costs",
+    "raw:ebps/races/english/buildings/building_tech_university_eng/building_tech_university_control_eng#requirement_ext (min_completed 1 of imperial_age): standard University requires Imperial Age in 16.3",
+    "checklist:vikings/building/University#age = Imperial"
+   ]
+  }
+ },
+ "landmarks": {
+  "2": [
+   {
+    "id": "building_landmark_age1_konungr_hall_vik",
+    "key": "konungr-hall",
+    "name": "Konungr Hall",
+    "cost": {
+     "food": 400,
+     "gold": 200
+    },
+    "buildSeconds": 190,
+    "effects": [
+     {
+      "kind": "passive_income",
+      "target": "food",
+      "op": "add",
+      "value": 10,
+      "notes": "feast every 60 s: 10 food + 5 per Longhouse (mechanics konungr-feast)"
+     },
+     {
+      "kind": "unlock",
+      "target": "shield-maiden",
+      "op": "set",
+      "value": 1,
+      "notes": "recruits Shield Maidens up to 1 + 1 per Longhouse; one-time Call Shield Maidens (800 food)"
+     }
+    ],
+    "notes": "Age II economic landmark. Feast every 60 s gives 10 food plus 5 per Longhouse; one-time Shield Maiden rally; Shield Maiden recruitment limit 1 + 1 per Longhouse.",
+    "evidence": [
+     "jeando17:building_landmark_age1_konungr_hall_vik#costs",
+     "jeando17:building_landmark_age1_konungr_hall_vik#description",
+     "checklist:vikings/landmark/Konungr Hall#effectText [confirmed]",
+     "frame:ehO1BOe7wG8@33:26 (\"FEAST TIMER Feast provides 10 Food plus 5 Food for each Longhouse\")"
+    ]
+   },
+   {
+    "id": "building_landmark_age1_baugr_fort_vik",
+    "key": "baugr-fort",
+    "name": "Baugr Fort",
+    "cost": {
+     "food": 400,
+     "gold": 200
+    },
+    "buildSeconds": 190,
+    "effects": [
+     {
+      "kind": "production_speed",
+      "target": "barracks",
+      "op": "mul",
+      "value": 1.25,
+      "notes": "All Barracks work +25% faster (Baugr Fort itself is a Barracks)"
+     },
+     {
+      "kind": "cost",
+      "target": "barracks technologies",
+      "op": "mul",
+      "value": 0.85,
+      "notes": "Barracks technology costs -15%"
+     },
+     {
+      "kind": "unlock",
+      "target": "upgrade_unit_spearman_2_vik, upgrade_unit_berserker_2_vik",
+      "op": "set",
+      "value": 1,
+      "notes": "Immediately upgrades Bondi and Berserkers to Hardened"
+     }
+    ],
+    "notes": "Age II military landmark. Acts as a Barracks with all units and technologies; all Barracks work +25% faster; Barracks technologies cost 15% less; Bondi and Berserkers are upgraded to Hardened on completion.",
+    "evidence": [
+     "jeando17:building_landmark_age1_baugr_fort_vik#costs",
+     "jeando17:building_landmark_age1_baugr_fort_vik#description",
+     "checklist:vikings/landmark/Baugr Fort#effectText [confirmed]",
+     "jeando17:building_landmark_age1_baugr_fort_vik#unitTypes (barracks, military_production_building)",
+     "data/UPCOMING_CIVS.md: frames showing 85/213 and 255/595 are the 15%-discounted Barracks tooltips"
+    ]
+   }
+  ],
+  "3": [
+   {
+    "id": "building_landmark_age2_valdemar_castle_vik",
+    "key": "valdemar-castle",
+    "name": "Valdemar Castle",
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "jylland-knight gold on death",
+      "op": "add",
+      "value": 20,
+      "notes": "Jylland Knights grant 20 more Gold when killed"
+     },
+     {
+      "kind": "unlock",
+      "target": "upgrade_building_danevirke_vik",
+      "op": "set",
+      "value": 1,
+      "notes": "Danevirke walls (+5 fire armor)"
+     }
+    ],
+    "notes": "Age III defensive landmark. Acts as a Keep; grants Danevirke; Jylland Knights grant +20 gold when killed.",
+    "evidence": [
+     "jeando17:building_landmark_age2_valdemar_castle_vik#costs",
+     "jeando17:building_landmark_age2_valdemar_castle_vik#description",
+     "checklist:vikings/landmark/Valdemar Castle#effectText [confirmed]",
+     "frame:BV182n46EEDi_p1@61:01 (\"Jylland Knights grant 20 more Gold when they\")"
+    ]
+   },
+   {
+    "id": "building_landmark_age2_gullinn_temple_vik",
+    "key": "gullinn-temple",
+    "name": "Gullínn Temple",
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "berserker",
+      "op": "add",
+      "value": 1,
+      "notes": "acts as a Sacred Grove: recruits a Berserker every 50 s (productionTimeSeconds), 15% faster after the Dreki saga it completes"
+     },
+     {
+      "kind": "unlock",
+      "target": "sacred groves on sacred sites; Dreki saga",
+      "op": "set",
+      "value": 1,
+      "notes": ""
+     }
+    ],
+    "notes": "Age III religious landmark. Acts as a Sacred Grove (automatic Berserkers, +1 melee/ranged armor aura); lets Völur establish Sacred Groves on Sacred Sites; constructing it completes the Dreki saga (Sacred Groves produce Berserkers 15% faster). No record, tooltip or frame gives it a population requirement.",
+    "evidence": [
+     "jeando17:building_landmark_age2_gullinn_temple_vik#costs",
+     "jeando17:building_landmark_age2_gullinn_temple_vik#description",
+     "checklist:vikings/landmark/Gullínn Temple#effectText [confirmed]",
+     "checklist:vikings/landmark/Gullínn Temple#productionTimeSeconds = 50 [confirmed]",
+     "checklist:vikings/bonus/Saga: Dreki's Temple#effectText (\"Complete this Saga by constructing the Gullinn Temple Landmark. Saga reward: Sacred Groves produce Berserkers 15% faster.\") [confirmed]",
+     "jeando17:building_landmark_age2_gullinn_temple_vik#unitTypes (sacred_grove_vik)"
+    ]
+   }
+  ],
+  "4": [
+   {
+    "id": "building_landmark_age3_kongens_cathedral_vik",
+    "key": "kongens-dor-cathedral",
+    "name": "Kongens Dør Cathedral",
+    "cost": {
+     "food": 2400,
+     "gold": 1200
+    },
+    "buildSeconds": 250,
+    "effects": [
+     {
+      "kind": "pop",
+      "target": "max population",
+      "op": "add",
+      "value": 10,
+      "notes": ""
+     },
+     {
+      "kind": "passive_income",
+      "target": "gold",
+      "op": "add",
+      "value": 10,
+      "notes": "10 gold per Longhouse inside its slowly expanding area every 30 s"
+     }
+    ],
+    "notes": "Age IV economic landmark. Acts as a Monastery; +10 population; tithe of 10 gold per Longhouse inside a slowly expanding area every 30 s; Folkekirken (+10 population).",
+    "evidence": [
+     "jeando17:building_landmark_age3_kongens_cathedral_vik#costs",
+     "jeando17:building_landmark_age3_kongens_cathedral_vik#description",
+     "checklist:vikings/landmark/Kongens Dør Cathedral#effectText [confirmed]",
+     "transcript:nd74LibluQ0@41:14 (\"it gives 10 gold for each longhouse every 30 seconds\")"
+    ]
+   },
+   {
+    "id": "building_landmark_age3_rikets_castle_vik",
+    "key": "rikets-nyckel-castle",
+    "name": "Ríkets Nyckel Castle",
+    "cost": {
+     "food": 2400,
+     "gold": 1200
+    },
+    "buildSeconds": 250,
+    "effects": [
+     {
+      "kind": "pop",
+      "target": "max population",
+      "op": "add",
+      "value": 10,
+      "notes": ""
+     },
+     {
+      "kind": "cost",
+      "target": "unit tier technologies",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "all unit tier technologies cost 50% less"
+     },
+     {
+      "kind": "other",
+      "target": "unit_crossbowman_rikets_vik",
+      "op": "add",
+      "value": 10,
+      "notes": "recruits 10 Skåne Crossbowmen on completion"
+     }
+    ],
+    "notes": "Age IV defensive landmark. Keep that fires arrow volleys; +10 population; unit tier technologies -50% cost; 10 Skåne Crossbowmen on completion.",
+    "evidence": [
+     "jeando17:building_landmark_age3_rikets_castle_vik#costs",
+     "jeando17:building_landmark_age3_rikets_castle_vik#description",
+     "checklist:vikings/landmark/Ríkets Nyckel Castle#effectText [confirmed]",
+     "jeando17:unit_crossbowman_rikets_vik#costs (75 food 30 gold, 2 s: the landmark spawn variant)",
+     "transcript:nd74LibluQ0@50:09"
+    ]
+   }
+  ]
+ },
+ "technologies": [
+  {
+   "id": "upgrade_unit_town_center_wheelbarrow_1__vikings",
+   "name": "Wheelbarrow",
+   "age": 1,
+   "building": "mill",
+   "cost": {
+    "gold": 150,
+    "wood": 50
+   },
+   "researchSeconds": 90,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "carry",
+     "target": "villager (all resources)",
+     "op": "add",
+     "value": 5
+    },
+    {
+     "kind": "speed",
+     "target": "villager",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_town_center_wheelbarrow_1__vikings#costs",
+    "jeando17:upgrade_unit_town_center_wheelbarrow_1__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#descriptionArguments (5, 15)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_villager_hunting_gear_1__vikings",
+   "name": "Survival Techniques",
+   "age": 1,
+   "building": "mill",
+   "cost": {
+    "gold": 75,
+    "wood": 25
+   },
+   "researchSeconds": 25,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "deer",
+      "boar"
+     ],
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_villager_hunting_gear_1__vikings#costs",
+    "jeando17:upgrade_econ_villager_hunting_gear_1__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_villager_hunting_gear_1#descriptionArguments (15)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_fell_rate_1__vikings",
+   "name": "Forestry",
+   "age": 1,
+   "building": "lumber-camp",
+   "cost": {
+    "food": 25,
+    "gold": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "wood_fell_rate",
+     "op": "mul",
+     "value": 2
+    }
+   ],
+   "notes": "tree felling speed only; the engine gather model has no felling step",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_wood_fell_rate_1__vikings#costs",
+    "jeando17:upgrade_econ_resource_wood_fell_rate_1__vikings#description"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_2__vikings",
+   "name": "Horticulture",
+   "age": 2,
+   "building": "mill",
+   "cost": {
+    "gold": 100,
+    "wood": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "sheep",
+      "berries",
+      "farm",
+      "shore_fish"
+     ],
+     "op": "mul",
+     "value": 1.1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_food_harvest_rate_2__vikings#costs",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_2__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#descriptionArguments (10)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_3__vikings",
+   "name": "Fertilization",
+   "age": 3,
+   "building": "mill",
+   "cost": {
+    "gold": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "sheep",
+      "berries",
+      "farm",
+      "shore_fish"
+     ],
+     "op": "mul",
+     "value": 1.1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_food_harvest_rate_3__vikings#costs",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_3__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#descriptionArguments (10)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_4__vikings",
+   "name": "Precision Cross-Breeding",
+   "age": 4,
+   "building": "mill",
+   "cost": {
+    "gold": 500,
+    "wood": 250
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "sheep",
+      "berries",
+      "farm",
+      "shore_fish"
+     ],
+     "op": "mul",
+     "value": 1.1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_food_harvest_rate_4__vikings#costs",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_4__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#descriptionArguments (10)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_2__vikings",
+   "name": "Double Broadax",
+   "age": 2,
+   "building": "lumber-camp",
+   "cost": {
+    "food": 50,
+    "gold": 100
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "wood"
+     ],
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_2__vikings#costs",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_2__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#descriptionArguments (15)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_3__vikings",
+   "name": "Lumber Preservation",
+   "age": 3,
+   "building": "lumber-camp",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "wood"
+     ],
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_3__vikings#costs",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_3__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#descriptionArguments (15)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_4__vikings",
+   "name": "Crosscut Saw",
+   "age": 4,
+   "building": "lumber-camp",
+   "cost": {
+    "food": 250,
+    "gold": 500
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "wood"
+     ],
+     "op": "mul",
+     "value": 1.15
+    },
+    {
+     "kind": "carry",
+     "target": [
+      "wood"
+     ],
+     "op": "add",
+     "value": 5
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_4__vikings#costs",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_4__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#descriptionArguments (15, 5)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_2__vikings",
+   "name": "Specialized Pick",
+   "age": 2,
+   "building": "mining-camp",
+   "cost": {
+    "gold": 100,
+    "wood": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "gold",
+      "stone"
+     ],
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_2__vikings#costs",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_2__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#descriptionArguments (15)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_3__vikings",
+   "name": "Shaft Mining",
+   "age": 3,
+   "building": "mining-camp",
+   "cost": {
+    "gold": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "gold",
+      "stone"
+     ],
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_3__vikings#costs",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_3__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#descriptionArguments (15)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_4__vikings",
+   "name": "Cupellation",
+   "age": 4,
+   "building": "mining-camp",
+   "cost": {
+    "gold": 500,
+    "wood": 250
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": [
+      "gold"
+     ],
+     "op": "mul",
+     "value": 1.15,
+     "notes": "gold gatherers drop off 15% more"
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_4__vikings#costs",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_4__vikings#description",
+    "standard 16.3 effect size: catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#descriptionArguments (15)"
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_2_vik",
+   "name": "Upgrade to Hardened Bondi",
+   "age": 2,
+   "building": "barracks",
+   "cost": {
+    "food": 15,
+    "gold": 35
+   },
+   "researchSeconds": 15,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_spearman_2_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "also researchable at the Longhouse (frame); Baugr Fort grants it on completion",
+   "evidence": [
+    "jeando17:upgrade_unit_spearman_2_vik#costs",
+    "jeando17:upgrade_unit_spearman_2_vik#description",
+    "catalog-preview17:buildings/building_longhouse_vik#researchableTechnologies (upgrade_unit_spearman_2_vik)",
+    "catalog-preview17:buildings/building_unit_infantry_vik#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_3_vik",
+   "name": "Upgrade to Veteran Bondi",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_spearman_3_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_spearman_3_vik#costs",
+    "jeando17:upgrade_unit_spearman_3_vik#description",
+    "catalog-preview17:buildings/building_unit_infantry_vik#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_4_vik",
+   "name": "Upgrade to Elite Bondi",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_spearman_4_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_spearman_4_vik#costs",
+    "jeando17:upgrade_unit_spearman_4_vik#description",
+    "catalog-preview17:buildings/building_unit_infantry_vik#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_berserker_2_vik",
+   "name": "Upgrade to Hardened Berserker",
+   "age": 2,
+   "building": "barracks",
+   "cost": {
+    "food": 15,
+    "gold": 35
+   },
+   "researchSeconds": 15,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_berserker_2_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "Baugr Fort grants it on completion",
+   "evidence": [
+    "jeando17:upgrade_unit_berserker_2_vik#costs",
+    "jeando17:upgrade_unit_berserker_2_vik#description",
+    "catalog-preview17:buildings/building_unit_infantry_vik#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_berserker_3_vik",
+   "name": "Upgrade to Veteran Berserker",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_berserker_3_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "building not in any record or frame (catalog upgradeGroups give buildingId null); assumed Barracks like the Hardened and Elite upgrades (see unresolved)",
+   "evidence": [
+    "jeando17:upgrade_unit_berserker_3_vik#costs",
+    "jeando17:upgrade_unit_berserker_3_vik#description",
+    "checklist:vikings/technology/Upgrade to Veteran Berserker#building = unknown",
+    "catalog-preview17:meta/unit_berserker_1_vik#upgradeGroups (buildingId null for upgrade_unit_berserker_3_vik)"
+   ]
+  },
+  {
+   "id": "upgrade_unit_berserker_4_vik",
+   "name": "Upgrade to Elite Berserker",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_berserker_4_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_berserker_4_vik#costs",
+    "jeando17:upgrade_unit_berserker_4_vik#description",
+    "catalog-preview17:buildings/building_unit_infantry_vik#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_manatarms_3_vik",
+   "name": "Upgrade to Hirdman",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 30,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_manatarms_3_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_manatarms_3_vik#costs",
+    "jeando17:upgrade_unit_manatarms_3_vik#description",
+    "catalog-preview17:buildings/building_unit_infantry_vik#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_manatarms_4_vik",
+   "name": "Upgrade to Elite Hirdman",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_manatarms_4_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_manatarms_4_vik#costs",
+    "jeando17:upgrade_unit_manatarms_4_vik#description",
+    "catalog-preview17:buildings/building_unit_infantry_vik#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_knight_4_vik",
+   "name": "Upgrade to Elite Jylland Knight",
+   "age": 4,
+   "building": "stable",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_knight_4_vik",
+     "op": "set",
+     "value": 1
+    }
+   ],
+   "notes": "Elite Jylland Knight: 235 HP (+35), 26 melee (+4), charge 38 (+5), torch 21 (+4), 5/5 armor (+1/+1)",
+   "evidence": [
+    "jeando17:upgrade_unit_knight_4_vik#costs",
+    "jeando17:upgrade_unit_knight_4_vik#description",
+    "catalog-preview17:buildings/building_unit_cavalry_vik#researchableTechnologies",
+    "checklist:vikings/technology/Upgrade to Elite Jylland Knight#building = Stable [confirmed]",
+    "jeando17:unit_knight_4_vik#hitpoints,armor,weapons"
+   ]
+  },
+  {
+   "id": "upgrade_bondi_wood_gather_vik",
+   "name": "Bondi Forester",
+   "age": 2,
+   "building": "longhouse",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 30,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "passive_income",
+     "target": "wood",
+     "op": "add",
+     "value": 0.16666666666666666,
+     "notes": "per Bondi: 10 wood per minute, at most 250 wood per minute"
+    }
+   ],
+   "notes": "Each Bondi provides 10 wood every minute up to 250 wood per minute (mechanics bondi-forester).",
+   "evidence": [
+    "jeando17:upgrade_bondi_wood_gather_vik#costs",
+    "jeando17:upgrade_bondi_wood_gather_vik#description",
+    "checklist:vikings/technology/Bondi Forester#effectText [confirmed]",
+    "checklist:vikings/technology/Bondi Forester#building = Longhouse [confirmed]"
+   ]
+  },
+  {
+   "id": "upgrade_infantry_turnshoes_vik",
+   "name": "Turnshoes",
+   "age": 2,
+   "building": "barracks",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee infantry speed +15%, charge damage +30%",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_infantry_turnshoes_vik#costs",
+    "jeando17:upgrade_infantry_turnshoes_vik#description",
+    "checklist:vikings/technology/Turnshoes#effectText [confirmed]",
+    "catalog-preview17:meta/unit_spearman_1_vik#upgradeGroups (Baugr Fort)"
+   ]
+  },
+  {
+   "id": "upgrade_infantry_hamrammr_vik",
+   "name": "Hamrammr",
+   "age": 2,
+   "building": "barracks",
+   "cost": {
+    "gold": 150,
+    "wood": 100
+   },
+   "researchSeconds": 30,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "berserkergang at 50% health, +50% heal",
+     "op": "set",
+     "value": 0.5
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_infantry_hamrammr_vik#costs",
+    "jeando17:upgrade_infantry_hamrammr_vik#description",
+    "checklist:vikings/technology/Hamrammr#effectText [confirmed]"
+   ]
+  },
+  {
+   "id": "upgrade_infantry_ulfberht_swords_vik",
+   "name": "Ulfberht Swords",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "hirdman damage",
+     "op": "add",
+     "value": 5
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_infantry_ulfberht_swords_vik#costs",
+    "jeando17:upgrade_infantry_ulfberht_swords_vik#description",
+    "checklist:vikings/technology/Ulfberht Swords#effectText [confirmed]",
+    "jeando17:cmvkznbnk00hg41l9vsehd3xl (modifier: all_damage add 5, target manatarms)"
+   ]
+  },
+  {
+   "id": "upgrade_infantry_leikr_training_vik",
+   "name": "Leikr Training",
+   "age": 4,
+   "building": "university",
+   "cost": {
+    "food": 500,
+    "gold": 1000
+   },
+   "researchSeconds": 90,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee infantry +15% damage, +20% health, +0.3 tile range",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_infantry_leikr_training_vik#costs",
+    "jeando17:upgrade_infantry_leikr_training_vik#description",
+    "checklist:vikings/technology/Leikr Training#effectText [confirmed]",
+    "checklist:vikings/technology/Leikr Training#building = University [confirmed]"
+   ]
+  },
+  {
+   "id": "upgrade_tech_university_biology__vikings",
+   "name": "Biology",
+   "age": 4,
+   "building": "university",
+   "cost": {
+    "food": 500,
+    "gold": 1000
+   },
+   "researchSeconds": 90,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "cavalry health",
+     "op": "mul",
+     "value": 1.25
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_tech_university_biology__vikings#costs",
+    "jeando17:upgrade_tech_university_biology__vikings#description",
+    "checklist:vikings/technology/Biology#effectText (\"increases the health of all cavalry by +25%\")",
+    "catalog-preview17:meta/unit_knight_3_vik#upgradeGroups (University)"
+   ]
+  },
+  {
+   "id": "upgrade_cavalry_code_of_jutland_vik",
+   "name": "Code of Jylland",
+   "age": 3,
+   "building": "stable",
+   "cost": {
+    "food": 100,
+    "gold": 50
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "jylland-knight gold on death",
+     "op": "add",
+     "value": 15
+    }
+   ],
+   "notes": "Age and building are in no record or frame (record age 0, ageName null; catalog upgradeGroups buildingId null). Assumed Stable, Castle Age: it is a \"Knight Technology\" for a Castle Age Stable unit (see unresolved).",
+   "evidence": [
+    "jeando17:upgrade_cavalry_code_of_jutland_vik#costs",
+    "jeando17:upgrade_cavalry_code_of_jutland_vik#description",
+    "checklist:vikings/technology/Code of Jylland#age = unknown",
+    "checklist:vikings/technology/Code of Jylland#building = unknown",
+    "catalog-preview17:meta/unit_knight_3_vik#upgradeGroups (buildingId null for upgrade_cavalry_code_of_jutland_vik)"
+   ]
+  },
+  {
+   "id": "upgrade_smithy_damage_1_vik",
+   "name": "Forge Welding",
+   "age": 2,
+   "building": "longhouse-smithy",
+   "cost": {},
+   "researchSeconds": 270,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "damage of infantry, cavalry, villagers, emplacements",
+     "op": "add",
+     "value": 1
+    }
+   ],
+   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "evidence": [
+    "jeando17:upgrade_smithy_damage_1_vik#costs",
+    "jeando17:upgrade_smithy_damage_1_vik#description",
+    "checklist:vikings/technology/Forge Welding#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Forge Welding#age = Feudal",
+    "checklist:vikings/technology/Forge Welding#effectText"
+   ]
+  },
+  {
+   "id": "upgrade_smithy_damage_2_vik",
+   "name": "Bone Ash Steel",
+   "age": 3,
+   "building": "longhouse-smithy",
+   "cost": {},
+   "researchSeconds": 270,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "damage of infantry, cavalry, villagers, emplacements",
+     "op": "add",
+     "value": 1
+    }
+   ],
+   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "evidence": [
+    "jeando17:upgrade_smithy_damage_2_vik#costs",
+    "jeando17:upgrade_smithy_damage_2_vik#description",
+    "checklist:vikings/technology/Bone Ash Steel#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Bone Ash Steel#age = Castle",
+    "checklist:vikings/technology/Bone Ash Steel#effectText"
+   ]
+  },
+  {
+   "id": "upgrade_smithy_damage_3_vik",
+   "name": "Crucible Steel",
+   "age": 4,
+   "building": "longhouse-smithy",
+   "cost": {},
+   "researchSeconds": 270,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "damage of infantry, cavalry, villagers, emplacements",
+     "op": "add",
+     "value": 1
+    }
+   ],
+   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "evidence": [
+    "jeando17:upgrade_smithy_damage_3_vik#costs",
+    "jeando17:upgrade_smithy_damage_3_vik#description",
+    "checklist:vikings/technology/Crucible Steel#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Crucible Steel#age = Imperial",
+    "checklist:vikings/technology/Crucible Steel#effectText"
+   ]
+  },
+  {
+   "id": "upgrade_loom_armor_1_vik",
+   "name": "Heavy Tunics",
+   "age": 2,
+   "building": "longhouse-loom",
+   "cost": {},
+   "researchSeconds": 270,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee and ranged armor of all non-siege",
+     "op": "add",
+     "value": 1
+    }
+   ],
+   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "evidence": [
+    "jeando17:upgrade_loom_armor_1_vik#costs",
+    "jeando17:upgrade_loom_armor_1_vik#description",
+    "checklist:vikings/technology/Heavy Tunics#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Heavy Tunics#age = Feudal",
+    "checklist:vikings/technology/Heavy Tunics#effectText"
+   ]
+  },
+  {
+   "id": "upgrade_loom_armor_2_vik",
+   "name": "Mail Shirts",
+   "age": 3,
+   "building": "longhouse-loom",
+   "cost": {},
+   "researchSeconds": 270,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee and ranged armor of all non-siege",
+     "op": "add",
+     "value": 1
+    }
+   ],
+   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "evidence": [
+    "jeando17:upgrade_loom_armor_2_vik#costs",
+    "jeando17:upgrade_loom_armor_2_vik#description",
+    "checklist:vikings/technology/Mail Shirts#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Mail Shirts#age = Castle",
+    "checklist:vikings/technology/Mail Shirts#effectText"
+   ]
+  },
+  {
+   "id": "upgrade_loom_armor_3_vik",
+   "name": "Lamellar Plating",
+   "age": 4,
+   "building": "longhouse-loom",
+   "cost": {},
+   "researchSeconds": 270,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee and ranged armor of all non-siege",
+     "op": "add",
+     "value": 1
+    }
+   ],
+   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "evidence": [
+    "jeando17:upgrade_loom_armor_3_vik#costs",
+    "jeando17:upgrade_loom_armor_3_vik#description",
+    "checklist:vikings/technology/Lamellar Plating#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Lamellar Plating#age = Imperial",
+    "checklist:vikings/technology/Lamellar Plating#effectText"
+   ]
+  }
+ ],
+ "army": {
+  "lines": [
+   {
+    "key": "bondi",
+    "name": "Bondi",
+    "producers": [
+     "barracks",
+     "longhouse",
+     "landmark:baugr-fort"
+    ],
+    "tiers": [
+     {
+      "id": "unit_spearman_1_vik",
+      "name": "Bondi",
+      "age": 1,
+      "cost": {
+       "food": 75,
+       "wood": 25
+      },
+      "trainSeconds": 17,
+      "pop": 1,
+      "hp": 90
+     },
+     {
+      "id": "unit_spearman_2_vik",
+      "name": "Hardened Bondi",
+      "age": 2,
+      "cost": {
+       "food": 75,
+       "wood": 25
+      },
+      "trainSeconds": 17,
+      "pop": 1,
+      "hp": 105
+     },
+     {
+      "id": "unit_spearman_3_vik",
+      "name": "Veteran Bondi",
+      "age": 3,
+      "cost": {
+       "food": 75,
+       "wood": 25
+      },
+      "trainSeconds": 17,
+      "pop": 1,
+      "hp": 125
+     },
+     {
+      "id": "unit_spearman_4_vik",
+      "name": "Elite Bondi",
+      "age": 4,
+      "cost": {
+       "food": 75,
+       "wood": 25
+      },
+      "trainSeconds": 17,
+      "pop": 1,
+      "hp": 145
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_spearman_2_vik",
+     "upgrade_unit_spearman_3_vik",
+     "upgrade_unit_spearman_4_vik"
+    ],
+    "applicableTechs": [
+     "upgrade_smithy_damage_1_vik",
+     "upgrade_smithy_damage_2_vik",
+     "upgrade_smithy_damage_3_vik",
+     "upgrade_loom_armor_1_vik",
+     "upgrade_loom_armor_2_vik",
+     "upgrade_loom_armor_3_vik",
+     "upgrade_bondi_wood_gather_vik",
+     "upgrade_infantry_turnshoes_vik",
+     "upgrade_infantry_leikr_training_vik"
+    ],
+    "evidence": [
+     "jeando17:unit_spearman_1_vik#costs",
+     "jeando17:unit_spearman_1_vik#hitpoints",
+     "catalog-preview17:meta/unit_spearman_1_vik#upgradeGroups",
+     "catalog-preview17:buildings/building_longhouse_vik#trainableUnits (Bondi at the Longhouse, 25% slower: frame 23 s = 17 / 0.75)",
+     "transcript:ehO1BOe7wG8@08:55 (\"23 seconds\")"
+    ]
+   },
+   {
+    "key": "berserker",
+    "name": "Berserker",
+    "producers": [
+     "barracks",
+     "landmark:baugr-fort"
+    ],
+    "tiers": [
+     {
+      "id": "unit_berserker_1_vik",
+      "name": "Berserker",
+      "age": 1,
+      "cost": {
+       "food": 75,
+       "gold": 40
+      },
+      "trainSeconds": 22,
+      "pop": 1,
+      "hp": 90
+     },
+     {
+      "id": "unit_berserker_2_vik",
+      "name": "Hardened Berserker",
+      "age": 2,
+      "cost": {
+       "food": 75,
+       "gold": 40
+      },
+      "trainSeconds": 22,
+      "pop": 1,
+      "hp": 105
+     },
+     {
+      "id": "unit_berserker_3_vik",
+      "name": "Veteran Berserker",
+      "age": 3,
+      "cost": {
+       "food": 75,
+       "gold": 40
+      },
+      "trainSeconds": 22,
+      "pop": 1,
+      "hp": 125
+     },
+     {
+      "id": "unit_berserker_4_vik",
+      "name": "Elite Berserker",
+      "age": 4,
+      "cost": {
+       "food": 75,
+       "gold": 40
+      },
+      "trainSeconds": 22,
+      "pop": 1,
+      "hp": 145
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_berserker_2_vik",
+     "upgrade_unit_berserker_3_vik",
+     "upgrade_unit_berserker_4_vik"
+    ],
+    "applicableTechs": [
+     "upgrade_smithy_damage_1_vik",
+     "upgrade_smithy_damage_2_vik",
+     "upgrade_smithy_damage_3_vik",
+     "upgrade_loom_armor_1_vik",
+     "upgrade_loom_armor_2_vik",
+     "upgrade_loom_armor_3_vik",
+     "upgrade_infantry_hamrammr_vik",
+     "upgrade_infantry_turnshoes_vik",
+     "upgrade_infantry_leikr_training_vik"
+    ],
+    "evidence": [
+     "jeando17:unit_berserker_1_vik#costs",
+     "jeando17:unit_berserker_1_vik#hitpoints",
+     "catalog-preview17:meta/unit_berserker_1_vik#upgradeGroups"
+    ]
+   },
+   {
+    "key": "hirdman",
+    "name": "Hirdman",
+    "producers": [
+     "barracks",
+     "landmark:baugr-fort"
+    ],
+    "tiers": [
+     {
+      "id": "unit_manatarms_2_vik",
+      "name": "Early Hirdman",
+      "age": 2,
+      "cost": {
+       "food": 120,
+       "gold": 30
+      },
+      "trainSeconds": 26,
+      "pop": 1,
+      "hp": 125
+     },
+     {
+      "id": "unit_manatarms_3_vik",
+      "name": "Hirdman",
+      "age": 3,
+      "cost": {
+       "food": 120,
+       "gold": 30
+      },
+      "trainSeconds": 26,
+      "pop": 1,
+      "hp": 165
+     },
+     {
+      "id": "unit_manatarms_4_vik",
+      "name": "Elite Hirdman",
+      "age": 4,
+      "cost": {
+       "food": 120,
+       "gold": 30
+      },
+      "trainSeconds": 26,
+      "pop": 1,
+      "hp": 190
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_manatarms_3_vik",
+     "upgrade_unit_manatarms_4_vik"
+    ],
+    "applicableTechs": [
+     "upgrade_smithy_damage_1_vik",
+     "upgrade_smithy_damage_2_vik",
+     "upgrade_smithy_damage_3_vik",
+     "upgrade_loom_armor_1_vik",
+     "upgrade_loom_armor_2_vik",
+     "upgrade_loom_armor_3_vik",
+     "upgrade_infantry_ulfberht_swords_vik",
+     "upgrade_infantry_turnshoes_vik",
+     "upgrade_infantry_leikr_training_vik"
+    ],
+    "evidence": [
+     "jeando17:unit_manatarms_2_vik#costs",
+     "jeando17:unit_manatarms_2_vik#hitpoints",
+     "catalog-preview17:meta/unit_manatarms_2_vik#upgradeGroups",
+     "catalog-preview17:buildings/building_landmark_age1_baugr_fort_vik#trainableUnits (Hirdman)"
+    ]
+   },
+   {
+    "key": "jylland-knight",
+    "name": "Jylland Knight",
+    "producers": [
+     "stable"
+    ],
+    "tiers": [
+     {
+      "id": "unit_knight_3_vik",
+      "name": "Jylland Knight",
+      "age": 3,
+      "cost": {
+       "food": 120,
+       "gold": 90
+      },
+      "trainSeconds": 30,
+      "pop": 1,
+      "hp": 200
+     },
+     {
+      "id": "unit_knight_4_vik",
+      "name": "Elite Jylland Knight",
+      "age": 4,
+      "cost": {
+       "food": 120,
+       "gold": 90
+      },
+      "trainSeconds": 30,
+      "pop": 1,
+      "hp": 235
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_knight_4_vik"
+    ],
+    "applicableTechs": [
+     "upgrade_smithy_damage_1_vik",
+     "upgrade_smithy_damage_2_vik",
+     "upgrade_smithy_damage_3_vik",
+     "upgrade_loom_armor_1_vik",
+     "upgrade_loom_armor_2_vik",
+     "upgrade_loom_armor_3_vik",
+     "upgrade_tech_university_biology__vikings",
+     "upgrade_cavalry_code_of_jutland_vik"
+    ],
+    "evidence": [
+     "jeando17:unit_knight_3_vik#costs",
+     "jeando17:unit_knight_3_vik#hitpoints",
+     "jeando17:unit_knight_3_vik#armor",
+     "jeando17:unit_knight_3_vik#weapons",
+     "jeando17:unit_knight_3_vik#description",
+     "catalog-preview17:meta/unit_knight_3_vik#upgradeGroups (Code of Jylland; Longhouse loom/smithy tiers; University Biology; Stable Elite)",
+     "checklist:vikings/unit/Jylland Knight#building = Stable [confirmed]",
+     "checklist:vikings/unit/Jylland Knight#age = Castle [confirmed]"
+    ]
+   }
+  ]
+ },
+ "mechanics": [
+  {
+   "key": "northern-migration",
+   "summary": "Every Town Center recruits a villager automatically and at no cost every 22 s while villagers are below the villager capacity (10 at start, +10 per Longhouse). Recruitment can be toggled off. Falkr's Village saga cuts the interval by 2 s.",
+   "params": {
+    "intervalSeconds": 22,
+    "startCapacity": 10,
+    "perLonghouse": 10,
+    "cost": {},
+    "perTownCenter": true,
+    "falkrIntervalMinus": 2,
+    "toggle": true
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:cmvh79tyz009g93qeg2m66zmq (villager_production_manager_vik, always_on, buildingIds: capital and additional Town Center)",
+    "checklist:vikings/bonus/Northern Migration#effectText (\"Town Centers automatically recruit Villagers at no cost up to the Villager Capacity\") [confirmed]",
+    "checklist:vikings/bonus/Northern Migration (detail)#interval = 22 [confirmed]",
+    "transcript:ehO1BOe7wG8@02:44 (\"I'm receiving the villager every 22 seconds for free\")",
+    "transcript:nd74LibluQ0@19:17 (\"TC finishes and instantly produces a villager so auto queue on all your town centers\")",
+    "jeando17:cmvh79u0d00bd93qe2ok3y066 (Toggle Villager Production (Off))",
+    "checklist:vikings/bonus/Northern Migration#cap = 10 [confirmed]"
+   ]
+  },
+  {
+   "key": "longhouse",
+   "summary": "Longhouse: 150 wood, 30 s, +25 maximum population, +10 villager capacity, trains Bondi 25% slower, one attachment.",
+   "params": {
+    "popProvided": 25,
+    "villagerCapacity": 10,
+    "bondiProductionRate": 0.75,
+    "attachments": 1
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:building_longhouse_vik#description",
+    "frame BV1EFnH6LEMH_p1@00:34 (HUD villagers 10/20, population 11/35 after one Longhouse)",
+    "transcript:ehO1BOe7wG8@08:55 (Bondi at the Longhouse: 23 s = 17 s / 0.75)"
+   ]
+  },
+  {
+   "key": "longhouse-attachments",
+   "summary": "One attachment per Longhouse. Bee Skeps 200 wood, 20 s: 50 gold per minute, limit 6. Farmstead 200 wood, 2 s: food drop-off and two vegetable fields gathered 50% faster than a farm, limit 6. Smithy and Pasture and Loom 100 wood 100 gold, 20 s, Feudal Age, limit 1 each: auto-research one damage / armor tier per age at no cost (270 s; earlier ages 60 s faster).",
+   "params": {
+    "bee": {
+     "id": "upgrade_longhouse_bee_skeps_vik",
+     "cost": {
+      "wood": 200
+     },
+     "seconds": 20,
+     "age": 1,
+     "limit": 6,
+     "goldPerMinute": 50
+    },
+    "farm": {
+     "id": "upgrade_longhouse_farmstead_vik",
+     "cost": {
+      "wood": 200
+     },
+     "seconds": 2,
+     "age": 1,
+     "limit": 6,
+     "fields": 2,
+     "fieldRate": 1.5
+    },
+    "smithy": {
+     "id": "upgrade_longhouse_smithy_vik",
+     "cost": {
+      "gold": 100,
+      "wood": 100
+     },
+     "seconds": 20,
+     "age": 2,
+     "limit": 1,
+     "techs": [
+      "upgrade_smithy_damage_1_vik",
+      "upgrade_smithy_damage_2_vik",
+      "upgrade_smithy_damage_3_vik"
+     ],
+     "researchSeconds": 270,
+     "earlierAgeFaster": 60
+    },
+    "loom": {
+     "id": "upgrade_longhouse_pasture_loom_vik",
+     "cost": {
+      "gold": 100,
+      "wood": 100
+     },
+     "seconds": 20,
+     "age": 2,
+     "limit": 1,
+     "techs": [
+      "upgrade_loom_armor_1_vik",
+      "upgrade_loom_armor_2_vik",
+      "upgrade_loom_armor_3_vik"
+     ],
+     "researchSeconds": 270,
+     "earlierAgeFaster": 60
+    }
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:upgrade_longhouse_bee_skeps_vik#costs",
+    "jeando17:upgrade_longhouse_bee_skeps_vik#description",
+    "jeando17:upgrade_longhouse_farmstead_vik#costs",
+    "jeando17:upgrade_longhouse_farmstead_vik#description",
+    "jeando17:upgrade_longhouse_smithy_vik#costs",
+    "jeando17:upgrade_longhouse_smithy_vik#description",
+    "jeando17:upgrade_longhouse_pasture_loom_vik#costs",
+    "jeando17:upgrade_longhouse_pasture_loom_vik#description",
+    "checklist:vikings/technology/Bee Skeps#effectValue = 50 [confirmed]",
+    "checklist:vikings/technology/Farmstead#effectValue = 50 [confirmed]",
+    "checklist:vikings/technology/Smithy#effectValue = 60 [confirmed]",
+    "checklist:vikings/technology/Forge Welding#researchTimeSeconds = 270",
+    "frame:ehO1BOe7wG8@07:44 (overlay \"ATTACHMENTS IN DARK AGE: BEE SKEP OR FARMSTEAD\")",
+    "checklist:vikings/bonus/Bee Skep Production#effectValue = 8 (on screen: 8 gold per 10 s tick)"
+   ]
+  },
+  {
+   "key": "konungr-feast",
+   "summary": "Konungr Hall hosts a feast every 60 s: 10 food plus 5 food per Longhouse.",
+   "params": {
+    "intervalSeconds": 60,
+    "food": 10,
+    "perLonghouse": 5
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:building_landmark_age1_konungr_hall_vik#description",
+    "checklist:vikings/bonus/Konungr Hall Feast#effectText",
+    "frame:ehO1BOe7wG8@33:26"
+   ]
+  },
+  {
+   "key": "call-shield-maidens",
+   "summary": "One-time Konungr Hall ability: 800 food dispatches 1 Shield Maiden plus 1 per Longhouse (ignores the Shield Maiden limit).",
+   "params": {
+    "cost": {
+     "food": 800
+    },
+    "seconds": 10,
+    "base": 1,
+    "perLonghouse": 1,
+    "unit": "unit_shield_maiden_konungr_vik"
+   },
+   "status": "partial",
+   "evidence": [
+    "checklist:vikings/technology/Call Shield Maidens#cost.food = 800 [confirmed]",
+    "checklist:vikings/technology/Call Shield Maidens#researchTimeSeconds = 10 [single-source]",
+    "jeando17:unit_shield_maiden_konungr_vik#costs (time 10)",
+    "transcript:nd74LibluQ0@16:22"
+   ]
+  },
+  {
+   "key": "baugr-fort",
+   "summary": "Baugr Fort acts as a Barracks (all units and technologies); all Barracks work 25% faster; Barracks technologies cost 15% less; Bondi and Berserkers become Hardened on completion.",
+   "params": {
+    "barracksWorkRate": 1.25,
+    "barracksTechCost": 0.85,
+    "grants": [
+     "upgrade_unit_spearman_2_vik",
+     "upgrade_unit_berserker_2_vik"
+    ],
+    "producerLines": [
+     "bondi",
+     "berserker",
+     "hirdman"
+    ]
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:building_landmark_age1_baugr_fort_vik#description",
+    "checklist:vikings/landmark/Baugr Fort#effectValue = 25 [confirmed]"
+   ]
+  },
+  {
+   "key": "sacred-grove",
+   "summary": "Sacred Groves (limit 3; a Völur sacrificed on a Relic, or on a Sacred Site once the Gullínn Temple stands) recruit Berserkers automatically and give +1 melee and ranged armor nearby. The Gullínn Temple acts as a Sacred Grove. Production time: Gullínn Temple 50 s; Sacred Grove 100 s (one source). Dreki saga: 15% faster.",
+   "params": {
+    "gullinnSeconds": 50,
+    "groveSeconds": 100,
+    "drekiRate": 1.15,
+    "limit": 3,
+    "volur": {
+     "id": "unit_volva_2_vik",
+     "cost": {
+      "food": 50,
+      "gold": 100
+     },
+     "seconds": 25,
+     "age": 2
+    },
+    "armorAura": 1
+   },
+   "status": "partial",
+   "evidence": [
+    "checklist:vikings/landmark/Gullínn Temple#productionTimeSeconds = 50 [confirmed]",
+    "checklist:vikings/bonus/Sacred Groves / Hamingja#interval = 100 [single-source] (Valdy: \"1 minute and 40 seconds and then you get one berserker\")",
+    "checklist:vikings/bonus/Sacred Groves / Hamingja#cap = 3 [confirmed]",
+    "jeando17:building_sacred_grove_vik#description",
+    "jeando17:unit_volva_2_vik#costs"
+   ]
+  },
+  {
+   "key": "sagas",
+   "summary": "Seven sagas. Engine-completable: Falkr's Village (6 Longhouse attachments: villagers recruited 2 s faster, attachments -20% cost); Ulfr's Forester (recruit 25 infantry: +5 torch damage, +1 tile torch range); Jofurr's Hunt (2500 food from Boar, Deer or Shore Fish: villagers gather 10% faster and carry +5); Dreki's Temple (construct the Gullínn Temple: Sacred Groves 15% faster). Combat or trade sagas (Björn, Hrafn, Jörmungandr) are not completed by an engine plan.",
+   "params": {
+    "falkr": {
+     "attachments": 6,
+     "villagerSecondsMinus": 2,
+     "attachmentCost": 0.8
+    },
+    "ulfr": {
+     "infantry": 25
+    },
+    "jofurr": {
+     "food": 2500,
+     "gather": 1.1,
+     "carry": 5
+    },
+    "dreki": {
+     "landmark": "gullinn-temple",
+     "groveRate": 1.15
+    },
+    "bjorn": {
+     "heal": 1000
+    },
+    "hrafn": {
+     "destroy": 2,
+     "techCost": 0.85,
+     "smithyLoomFaster": 45
+    },
+    "jormungandr": {
+     "tradeGold": 1000,
+     "shipSiegeCost": 0.92
+    }
+   },
+   "status": "resolved",
+   "evidence": [
+    "checklist:vikings/bonus/Saga: Falkr's Village#effectText [confirmed]",
+    "checklist:vikings/bonus/Saga: Ulfr's Forester#effectText [confirmed]",
+    "checklist:vikings/bonus/Saga: Jofurr's Hunt#effectText [confirmed]",
+    "checklist:vikings/bonus/Saga: Dreki's Temple#effectText [confirmed]",
+    "checklist:vikings/bonus/Saga: Björn's Forage#effectText",
+    "checklist:vikings/bonus/Saga: Hrafn's Raid#effectText",
+    "checklist:vikings/bonus/Saga: Jörmungandr's Trade#effectText"
+   ]
+  },
+  {
+   "key": "bondi-forester",
+   "summary": "With Bondi Forester each Bondi provides 10 wood per minute, at most 250 per minute.",
+   "params": {
+    "woodPerBondiPerMinute": 10,
+    "maxPerMinute": 250
+   },
+   "status": "resolved",
+   "evidence": [
+    "checklist:vikings/technology/Bondi Forester#effectText [confirmed]"
+   ]
+  },
+  {
+   "key": "rikets-nyckel",
+   "summary": "Ríkets Nyckel Castle: unit tier technologies -50% cost; 10 Skåne Crossbowmen on completion; +10 population.",
+   "params": {
+    "tierTechCost": 0.5,
+    "crossbowmen": 10,
+    "pop": 10
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:building_landmark_age3_rikets_castle_vik#description"
+   ]
+  },
+  {
+   "key": "kongens-dor",
+   "summary": "Kongens Dør Cathedral: tithe of 10 gold per Longhouse inside its slowly expanding area every 30 s; +10 population.",
+   "params": {
+    "goldPerLonghouse": 10,
+    "intervalSeconds": 30,
+    "pop": 10
+   },
+   "status": "partial",
+   "evidence": [
+    "jeando17:building_landmark_age3_kongens_cathedral_vik#description",
+    "transcript:nd74LibluQ0@41:14"
+   ]
+  },
+  {
+   "key": "jylland-knight-gold",
+   "summary": "Jylland Knights grant 10 gold when killed; Code of Jylland +15; Valdemar Castle +20.",
+   "params": {
+    "base": 10,
+    "codeOfJylland": 15,
+    "valdemar": 20
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:unit_knight_3_vik#description (\"Grants 10 Gold on death\")",
+    "jeando17:upgrade_cavalry_code_of_jutland_vik#description",
+    "jeando17:building_landmark_age2_valdemar_castle_vik#description"
+   ]
+  },
+  {
+   "key": "living-off-the-land",
+   "summary": "Infantry heal by consuming 1 food every 3 s from a food source (0.4 HP/s, improves per age).",
+   "params": {
+    "foodPer3s": 1,
+    "hpPerSecond": 0.4
+   },
+   "status": "resolved",
+   "evidence": [
+    "checklist:vikings/bonus/Living off the Land#effectText [confirmed]"
+   ]
+  },
+  {
+   "key": "volur-local-rituals",
+   "summary": "A Völur visiting a Longhouse raises its Bee Skeps / Farmstead production by 15% for a duration.",
+   "params": {
+    "boost": 1.15,
+    "durationSeconds": 60
+   },
+   "status": "partial",
+   "evidence": [
+    "checklist:vikings/bonus/Local Rituals#effectText [confirmed]",
+    "checklist:vikings/bonus/Local Rituals#interval = 60 [single-source]"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "item": "Northern Migration with several Town Centers",
+   "why": "The always-on ability is attached to both Town Center types and the in-game bonus text says \"Town Centers automatically recruit\", and Beastyqt says a finished second TC \"instantly produces a villager so auto queue on all your town centers\"; no frame times two TCs side by side.",
+   "fallback": "each Town Center recruits one villager every 22 s in parallel (Sam's two-TC plan assumes the same)"
+  },
+  {
+   "item": "Code of Jylland building and age",
+   "why": "Record gives 100 food 50 gold 45 s and the effect (+15 gold on death) but age 0 / ageName null; no frame shows its button; catalog upgradeGroups give buildingId null.",
+   "fallback": "Stable, Castle Age (plan parameter: it is a line upgrade of the Jylland Knight build; it changes no timing beyond its 150 resources and 45 s)"
+  },
+  {
+   "item": "Upgrade to Veteran Berserker building",
+   "why": "No record or frame names the building (catalog buildingId null).",
+   "fallback": "Barracks, like the Hardened and Elite Berserker upgrades"
+  },
+  {
+   "item": "Sacred Grove Berserker interval and cost",
+   "why": "Grove interval 100 s comes from one spoken source (Valdy); Gullínn Temple 50 s is confirmed. No record gives a resource cost or a cap for grove Berserkers.",
+   "fallback": "free Berserker every 50 s from the Gullínn Temple (every 100 s per Sacred Grove), 15% faster after the Dreki saga, while population room exists"
+  },
+  {
+   "item": "Sacred Groves on the map",
+   "why": "Groves need a Relic (or a Sacred Site with the Gullínn Temple); relic and sacred-site positions are map facts, not game rules.",
+   "fallback": "no Sacred Grove (plan parameter mech.groves = 0)"
+  },
+  {
+   "item": "Kongens Dør tithe reach",
+   "why": "The tithe area \"slowly expands\"; no record gives the growth rate.",
+   "fallback": "no tithe income counted (plan parameter mech.kongensLonghouses = 0)"
+  },
+  {
+   "item": "Bee Skeps rate on screen",
+   "why": "Tooltip and datamined description say 50 gold per minute; footage shows about 8 gold per 10 s tick (about 48 per minute).",
+   "fallback": "50 gold per minute, continuous"
+  },
+  {
+   "item": "Völur Local Rituals",
+   "why": "The +15% Bee Skeps/Farmstead boost is confirmed but the visit duration (60 s, one source) and travel cycle between Longhouses are not in records.",
+   "fallback": "not modelled"
+  },
+  {
+   "item": "Sledges",
+   "why": "Record (50 wood 100 gold, 40 s, villager carry +5, speed +5%) has no age or building.",
+   "fallback": "not researched"
+  },
+  {
+   "item": "Smithy / Loom research order",
+   "why": "\"one tier per age\" and \"earlier ages 60 s faster\" are text; whether two tiers can research at once is not shown.",
+   "fallback": "one tier at a time per attachment, next tier whose age is reached; 270 s, or 210 s when the tier's age is below the current age at its start"
+  },
+  {
+   "item": "Viking villager gather rates",
+   "why": "No 17.0 record lists the Viking villager gather table.",
+   "fallback": "installed 16.3 standard villager table"
+  }
+ ]
+}

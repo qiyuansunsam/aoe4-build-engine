@@ -1,0 +1,5504 @@
+{
+  "fetched_at": "2026-10-27T03:02:37.872146+00:00",
+  "players": {
+    "7195780": [
+      257307543,
+      257305215,
+      257303286,
+      257300487,
+      257209177,
+      257204293,
+      257203878,
+      257199347,
+      255410440,
+      255406532
+    ],
+    "1588970": [
+      257307543,
+      257305215,
+      257209177,
+      257204293,
+      257203878,
+      257199347,
+      256052058,
+      255410440,
+      255406532,
+      255400269
+    ],
+    "7999822": [
+      257209177,
+      257204293,
+      257203878,
+      257199347,
+      255410440,
+      255406532,
+      255400269,
+      255379155,
+      255376462,
+      255372778
+    ],
+    "18518902": [
+      255410440,
+      255406532,
+      255400269,
+      255396566,
+      255379155,
+      255376462,
+      255372778,
+      255369669,
+      255255018,
+      255252569
+    ],
+    "8354416": [
+      254654880,
+      254648812,
+      254643842,
+      254641650,
+      254637870
+    ]
+  },
+  "unique_games": [
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970
+      ],
+      "game": {
+        "game_id": 257307543,
+        "started_at": "2026-10-25T05:08:47.000Z",
+        "updated_at": "2026-10-25T07:14:58.612Z",
+        "duration": 1524,
+        "map": "Dry Arabia",
+        "map_id": 163361,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_3v3",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_3v3",
+        "season": 14,
+        "server": "Europe (W)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1335,
+        "average_rating_deviation": 86,
+        "average_mmr": 1388,
+        "average_mmr_deviation": 88,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 2365025,
+                "name": "MagicJam",
+                "country": "us",
+                "result": "loss",
+                "civilization": "tughlaq_dynasty",
+                "civilization_randomized": false,
+                "rating": 1355,
+                "rating_diff": -24,
+                "mmr": 1338,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 10964594,
+                "name": "calmmentor",
+                "country": "us",
+                "result": "loss",
+                "civilization": "golden_horde",
+                "civilization_randomized": false,
+                "rating": 1407,
+                "rating_diff": -19,
+                "mmr": 1507,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 20991308,
+                "name": "iCk'-NightMareMX-",
+                "country": "us",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1369,
+                "rating_diff": -24,
+                "mmr": 1309,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1146,
+                "rating_diff": 29,
+                "mmr": 1273,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8249087,
+                "name": "MOON的粉丝啊",
+                "country": "pk",
+                "result": "win",
+                "civilization": "house_of_lancaster",
+                "civilization_randomized": false,
+                "rating": 1356,
+                "rating_diff": 23,
+                "mmr": 1409,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": 1375,
+                "rating_diff": 28,
+                "mmr": 1491,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970
+      ],
+      "game": {
+        "game_id": 257305215,
+        "started_at": "2026-10-25T04:42:14.000Z",
+        "updated_at": "2026-10-25T05:18:10.660Z",
+        "duration": 1531,
+        "map": "Dry Arabia",
+        "map_id": 163361,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1294,
+        "average_rating_deviation": 109,
+        "average_mmr": 1415,
+        "average_mmr_deviation": 95,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 15772457,
+                "name": "Player",
+                "country": "jp",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1302,
+                "rating_diff": -23,
+                "mmr": 1391,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": 1398,
+                "rating_diff": -23,
+                "mmr": 1490,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1157,
+                "rating_diff": -11,
+                "mmr": 1399,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8249087,
+                "name": "MOON的粉丝啊",
+                "country": "pk",
+                "result": "loss",
+                "civilization": "house_of_lancaster",
+                "civilization_randomized": false,
+                "rating": 1379,
+                "rating_diff": -23,
+                "mmr": 1327,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 23824114,
+                "name": "图书馆传奇0721王绫地宁宁",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1355,
+                "rating_diff": 33,
+                "mmr": 1588,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 11604610,
+                "name": "D32Steel",
+                "country": "cn",
+                "result": "win",
+                "civilization": "byzantines",
+                "civilization_randomized": false,
+                "rating": 1072,
+                "rating_diff": 31,
+                "mmr": 1262,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7902447,
+                "name": "超级气球传奇空降王不拉屎",
+                "country": "cn",
+                "result": "win",
+                "civilization": "chinese",
+                "civilization_randomized": false,
+                "rating": 1366,
+                "rating_diff": 22,
+                "mmr": 1384,
+                "mmr_diff": 15,
+                "input_type": null
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24608024,
+                "name": "假如我直接强健你",
+                "country": "cn",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1324,
+                "rating_diff": 29,
+                "mmr": 1480,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780
+      ],
+      "game": {
+        "game_id": 257303286,
+        "started_at": "2026-10-25T04:19:32.000Z",
+        "updated_at": "2026-10-25T04:49:19.132Z",
+        "duration": 1151,
+        "map": "King of the Hill",
+        "map_id": 177556,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1304,
+        "average_rating_deviation": 80,
+        "average_mmr": 1388,
+        "average_mmr_deviation": 75,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 17324807,
+                "name": "卖沟王朝霸主千早爱音",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1332,
+                "rating_diff": -29,
+                "mmr": 1414,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 6028357,
+                "name": "幽梦之灵4088",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1312,
+                "rating_diff": -29,
+                "mmr": 1401,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25210164,
+                "name": "日落西山黑了天",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "holy_roman_empire",
+                "civilization_randomized": false,
+                "rating": 1427,
+                "rating_diff": -29,
+                "mmr": 1466,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 6952151,
+                "name": "Buio",
+                "country": "it",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1339,
+                "rating_diff": -23,
+                "mmr": 1444,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1364,
+                "rating_diff": 34,
+                "mmr": 1470,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 9466583,
+                "name": "kobe",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1140,
+                "rating_diff": 29,
+                "mmr": 1237,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25306554,
+                "name": "114514",
+                "country": "cn",
+                "result": "win",
+                "civilization": "byzantines",
+                "civilization_randomized": false,
+                "rating": 1264,
+                "rating_diff": 29,
+                "mmr": 1316,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8608298,
+                "name": "神秘小战士",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1255,
+                "rating_diff": 34,
+                "mmr": 1356,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780
+      ],
+      "game": {
+        "game_id": 257300487,
+        "started_at": "2026-10-25T03:46:57.000Z",
+        "updated_at": "2026-10-25T04:57:02.843Z",
+        "duration": 1770,
+        "map": "Cliffside",
+        "map_id": 2129132,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1389,
+        "average_rating_deviation": 71,
+        "average_mmr": 1481,
+        "average_mmr_deviation": 74,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "malians",
+                "civilization_randomized": false,
+                "rating": 1332,
+                "rating_diff": 32,
+                "mmr": 1451,
+                "mmr_diff": 19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 6028357,
+                "name": "幽梦之灵4088",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1280,
+                "rating_diff": 32,
+                "mmr": 1382,
+                "mmr_diff": 19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 10244949,
+                "name": "Zhang-Wallmaker",
+                "country": "cn",
+                "result": "win",
+                "civilization": "zhu_xis_legacy",
+                "civilization_randomized": false,
+                "rating": 1445,
+                "rating_diff": 27,
+                "mmr": 1526,
+                "mmr_diff": 19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25210164,
+                "name": "日落西山黑了天",
+                "country": "cn",
+                "result": "win",
+                "civilization": "holy_roman_empire",
+                "civilization_randomized": false,
+                "rating": 1400,
+                "rating_diff": 27,
+                "mmr": 1447,
+                "mmr_diff": 19,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 23047899,
+                "name": "我不是柿子",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1471,
+                "rating_diff": -22,
+                "mmr": 1583,
+                "mmr_diff": -19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22489270,
+                "name": "小狗王兰花",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "jin_dynasty",
+                "civilization_randomized": false,
+                "rating": 1346,
+                "rating_diff": -22,
+                "mmr": 1446,
+                "mmr_diff": -19,
+                "input_type": null
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24058080,
+                "name": "The Cold Goddess",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": true,
+                "rating": 1495,
+                "rating_diff": -22,
+                "mmr": 1601,
+                "mmr_diff": -19,
+                "input_type": null
+              }
+            },
+            {
+              "player": {
+                "profile_id": 21928264,
+                "name": "Arslan05",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "jeanne_darc",
+                "civilization_randomized": false,
+                "rating": 1341,
+                "rating_diff": -27,
+                "mmr": 1411,
+                "mmr_diff": -19,
+                "input_type": null
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822
+      ],
+      "game": {
+        "game_id": 257209177,
+        "started_at": "2026-10-24T14:22:45.000Z",
+        "updated_at": "2026-10-24T16:42:44.094Z",
+        "duration": 3331,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1176,
+        "average_rating_deviation": 141,
+        "average_mmr": 1322,
+        "average_mmr_deviation": 139,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1350,
+                "rating_diff": -18,
+                "mmr": 1466,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1168,
+                "rating_diff": -11,
+                "mmr": 1414,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 19499659,
+                "name": "abandoned",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1312,
+                "rating_diff": -23,
+                "mmr": 1394,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 902,
+                "rating_diff": -23,
+                "mmr": 985,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 14245815,
+                "name": "JasperZ",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": true,
+                "rating": 1255,
+                "rating_diff": 27,
+                "mmr": 1362,
+                "mmr_diff": 15,
+                "input_type": null
+              }
+            },
+            {
+              "player": {
+                "profile_id": 11510369,
+                "name": "Hushh now darling",
+                "country": "cn",
+                "result": "win",
+                "civilization": "japanese",
+                "civilization_randomized": true,
+                "rating": 1180,
+                "rating_diff": 22,
+                "mmr": 1260,
+                "mmr_diff": 15,
+                "input_type": null
+              }
+            },
+            {
+              "player": {
+                "profile_id": 17695605,
+                "name": "塔爆时不准说蒙语",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": true,
+                "rating": 1013,
+                "rating_diff": 39,
+                "mmr": 1356,
+                "mmr_diff": 15,
+                "input_type": null
+              }
+            },
+            {
+              "player": {
+                "profile_id": 3065210,
+                "name": "Man On The Window",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": true,
+                "rating": 1231,
+                "rating_diff": 27,
+                "mmr": 1342,
+                "mmr_diff": 15,
+                "input_type": null
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822
+      ],
+      "game": {
+        "game_id": 257204293,
+        "started_at": "2026-10-24T13:55:45.000Z",
+        "updated_at": "2026-10-24T14:45:36.920Z",
+        "duration": 1546,
+        "map": "Cliffside",
+        "map_id": 2129132,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_3v3",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_3v3",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1215,
+        "average_rating_deviation": null,
+        "average_mmr": 1330,
+        "average_mmr_deviation": 125,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 2410913,
+                "name": "PraetoriaN",
+                "country": "au",
+                "result": "win",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": null,
+                "rating_diff": null,
+                "mmr": 1304,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22874010,
+                "name": "Дха'тэ'Элле",
+                "country": "kr",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1354,
+                "rating_diff": 19,
+                "mmr": 1438,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 4912514,
+                "name": "Servasius",
+                "country": "id",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1261,
+                "rating_diff": 19,
+                "mmr": 1337,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1363,
+                "rating_diff": -13,
+                "mmr": 1504,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 913,
+                "rating_diff": -11,
+                "mmr": 1108,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1183,
+                "rating_diff": -15,
+                "mmr": 1286,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822
+      ],
+      "game": {
+        "game_id": 257203878,
+        "started_at": "2026-10-24T13:53:35.000Z",
+        "updated_at": "2026-10-24T15:37:21.067Z",
+        "duration": 72,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Asia (SE)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1254,
+        "average_rating_deviation": null,
+        "average_mmr": 1312,
+        "average_mmr_deviation": null,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 26080990,
+                "name": "ethanboehmqxk",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1260,
+                "rating_diff": 26,
+                "mmr": null,
+                "mmr_diff": null,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18191060,
+                "name": "欧豆豆",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1442,
+                "rating_diff": 20,
+                "mmr": 1347,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 255530,
+                "name": "E_SkWizZ_Me",
+                "country": "de",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": null,
+                "rating_diff": null,
+                "mmr": 1361,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 16438256,
+                "name": "007",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": null,
+                "rating_diff": null,
+                "mmr": 1294,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": null,
+                "rating_diff": null,
+                "mmr": 1427,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 20932238,
+                "name": "Razor",
+                "country": "de",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": null,
+                "rating_diff": null,
+                "mmr": 1277,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 934,
+                "rating_diff": -21,
+                "mmr": 998,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1379,
+                "rating_diff": -16,
+                "mmr": 1479,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822
+      ],
+      "game": {
+        "game_id": 257199347,
+        "started_at": "2026-10-24T13:29:47.000Z",
+        "updated_at": "2026-10-24T14:09:03.733Z",
+        "duration": 1344,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_3v3",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_3v3",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1432,
+        "average_rating_deviation": 300,
+        "average_mmr": 1491,
+        "average_mmr_deviation": 252,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1201,
+                "rating_diff": null,
+                "mmr": 1289,
+                "mmr_diff": -3,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "japanese",
+                "civilization_randomized": false,
+                "rating": 1381,
+                "rating_diff": -2,
+                "mmr": 1507,
+                "mmr_diff": -3,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 935,
+                "rating_diff": -1,
+                "mmr": 1111,
+                "mmr_diff": -3,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 11197271,
+                "name": "君不见黄河之水天上来",
+                "country": "hk",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1832,
+                "rating_diff": 6,
+                "mmr": 1886,
+                "mmr_diff": 3,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8022368,
+                "name": "WELLROPE",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1563,
+                "rating_diff": 1,
+                "mmr": 1458,
+                "mmr_diff": 3,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 16599479,
+                "name": "KY",
+                "country": "tw",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1677,
+                "rating_diff": 6,
+                "mmr": 1693,
+                "mmr_diff": 3,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 255410440,
+        "started_at": "2026-10-11T11:21:45.000Z",
+        "updated_at": "2026-10-11T13:18:32.591Z",
+        "duration": 933,
+        "map": "Flankwoods",
+        "map_id": 2141342,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "India",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1249,
+        "average_rating_deviation": 124,
+        "average_mmr": 1315,
+        "average_mmr_deviation": 138,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 5437918,
+                "name": "Vigrex",
+                "country": "pl",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1195,
+                "rating_diff": 31,
+                "mmr": 1310,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 13914485,
+                "name": "Furkyy",
+                "country": "tr",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1302,
+                "rating_diff": 26,
+                "mmr": 1284,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 3176483,
+                "name": "飛飛飛",
+                "country": "cn",
+                "result": "win",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": 1348,
+                "rating_diff": 26,
+                "mmr": 1293,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24027984,
+                "name": "ikun",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1276,
+                "rating_diff": 26,
+                "mmr": 1266,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1268,
+                "rating_diff": -21,
+                "mmr": 1390,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 962,
+                "rating_diff": -27,
+                "mmr": 1016,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1236,
+                "rating_diff": -16,
+                "mmr": 1465,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": 1408,
+                "rating_diff": -27,
+                "mmr": 1497,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 255406532,
+        "started_at": "2026-10-11T10:52:24.000Z",
+        "updated_at": "2026-10-11T13:01:21.336Z",
+        "duration": 1695,
+        "map": "Dry Arabia",
+        "map_id": 163361,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Australia",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1304,
+        "average_rating_deviation": 149,
+        "average_mmr": 1358,
+        "average_mmr_deviation": 153,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1249,
+                "rating_diff": -13,
+                "mmr": 1481,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "macedonian_dynasty",
+                "civilization_randomized": false,
+                "rating": 1432,
+                "rating_diff": -24,
+                "mmr": 1513,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 986,
+                "rating_diff": -24,
+                "mmr": 1032,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1287,
+                "rating_diff": -19,
+                "mmr": 1406,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 14245438,
+                "name": "CHICKEN",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1310,
+                "rating_diff": 28,
+                "mmr": 1412,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25543302,
+                "name": "猛虎王叔叔",
+                "country": "cn",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1256,
+                "rating_diff": 23,
+                "mmr": 1183,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 19439051,
+                "name": "LI",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1521,
+                "rating_diff": 23,
+                "mmr": 1442,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22429660,
+                "name": "你怪怪鸡叔叔美美隐身",
+                "country": "cn",
+                "result": "win",
+                "civilization": "japanese",
+                "civilization_randomized": false,
+                "rating": 1392,
+                "rating_diff": 23,
+                "mmr": 1391,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 1588970,
+      "requested_by": [
+        1588970
+      ],
+      "game": {
+        "game_id": 256052058,
+        "started_at": "2026-10-16T09:58:13.000Z",
+        "updated_at": "2026-10-16T11:40:59.316Z",
+        "duration": 137,
+        "map": "Cliffside",
+        "map_id": 2129132,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1315,
+        "average_rating_deviation": 278,
+        "average_mmr": 1426,
+        "average_mmr_deviation": 272,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 23546394,
+                "name": "梦呓",
+                "country": "cn",
+                "result": "win",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": 1370,
+                "rating_diff": 29,
+                "mmr": 1376,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 17992176,
+                "name": "Vshen",
+                "country": "kz",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1290,
+                "rating_diff": 29,
+                "mmr": 1344,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22271973,
+                "name": "Đỗ Văn Hải",
+                "country": "vn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1236,
+                "rating_diff": 37,
+                "mmr": 1400,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25812447,
+                "name": "今我来思",
+                "country": "cn",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1367,
+                "rating_diff": 29,
+                "mmr": 1384,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 24100158,
+                "name": "困了就睡",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1959,
+                "rating_diff": -24,
+                "mmr": 2096,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 26247652,
+                "name": "Mellow",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 915,
+                "rating_diff": -21,
+                "mmr": 1112,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 26244841,
+                "name": "foek9304",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1163,
+                "rating_diff": -30,
+                "mmr": 1246,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1220,
+                "rating_diff": -19,
+                "mmr": 1447,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 1588970,
+      "requested_by": [
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 255400269,
+        "started_at": "2026-10-11T10:00:09.000Z",
+        "updated_at": "2026-10-11T11:31:10.996Z",
+        "duration": 3008,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Asia (SE)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1248,
+        "average_rating_deviation": 118,
+        "average_mmr": 1331,
+        "average_mmr_deviation": 144,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 3669254,
+                "name": "水月天羽",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1190,
+                "rating_diff": 34,
+                "mmr": 1295,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24559543,
+                "name": "新月",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1200,
+                "rating_diff": 29,
+                "mmr": 1254,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7080021,
+                "name": "Chriscross87",
+                "country": "us",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1302,
+                "rating_diff": 29,
+                "mmr": 1309,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 17660271,
+                "name": "superbrother",
+                "country": "cn",
+                "result": "win",
+                "civilization": "malians",
+                "civilization_randomized": false,
+                "rating": 1237,
+                "rating_diff": 29,
+                "mmr": 1277,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1267,
+                "rating_diff": -18,
+                "mmr": 1501,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1311,
+                "rating_diff": -24,
+                "mmr": 1426,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "macedonian_dynasty",
+                "civilization_randomized": false,
+                "rating": 1461,
+                "rating_diff": -29,
+                "mmr": 1533,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1015,
+                "rating_diff": -29,
+                "mmr": 1052,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7999822,
+      "requested_by": [
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 255379155,
+        "started_at": "2026-10-11T06:56:18.000Z",
+        "updated_at": "2026-10-11T09:03:22.715Z",
+        "duration": 1592,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Australia",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1236,
+        "average_rating_deviation": 126,
+        "average_mmr": 1323,
+        "average_mmr_deviation": 147,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1439,
+                "rating_diff": 22,
+                "mmr": 1518,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 2168814,
+                "name": "Kaifas Kane",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1250,
+                "rating_diff": 27,
+                "mmr": 1358,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 993,
+                "rating_diff": 22,
+                "mmr": 1037,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1270,
+                "rating_diff": 29,
+                "mmr": 1411,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 330295,
+                "name": "雪村千绘莉",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "golden_horde",
+                "civilization_randomized": false,
+                "rating": 1195,
+                "rating_diff": -18,
+                "mmr": 1295,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25537558,
+                "name": "心亡于海",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1145,
+                "rating_diff": -23,
+                "mmr": 1151,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18343456,
+                "name": "Phosphophyllite",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": 1235,
+                "rating_diff": -16,
+                "mmr": 1387,
+                "mmr_diff": -15,
+                "input_type": null
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18204986,
+                "name": "Mephisto212",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1363,
+                "rating_diff": -23,
+                "mmr": 1428,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7999822,
+      "requested_by": [
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 255376462,
+        "started_at": "2026-10-11T06:30:23.000Z",
+        "updated_at": "2026-10-11T07:35:39.430Z",
+        "duration": 1473,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "USA (W)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1235,
+        "average_rating_deviation": 117,
+        "average_mmr": 1322,
+        "average_mmr_deviation": 130,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 18209173,
+                "name": "realkk",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1251,
+                "rating_diff": 26,
+                "mmr": 1323,
+                "mmr_diff": 19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18935786,
+                "name": "🐔ichickun🐔",
+                "country": "us",
+                "result": "win",
+                "civilization": "malians",
+                "civilization_randomized": false,
+                "rating": 1182,
+                "rating_diff": 26,
+                "mmr": 1273,
+                "mmr_diff": 19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 23746521,
+                "name": "Deep Dark Fantasy",
+                "country": "cn",
+                "result": "win",
+                "civilization": "zhu_xis_legacy",
+                "civilization_randomized": false,
+                "rating": 1185,
+                "rating_diff": 32,
+                "mmr": 1309,
+                "mmr_diff": 19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25974509,
+                "name": "corvus",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1209,
+                "rating_diff": 26,
+                "mmr": 1273,
+                "mmr_diff": 19,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1466,
+                "rating_diff": -27,
+                "mmr": 1537,
+                "mmr_diff": -19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 2168814,
+                "name": "Kaifas Kane",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1272,
+                "rating_diff": -22,
+                "mmr": 1377,
+                "mmr_diff": -19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1020,
+                "rating_diff": -27,
+                "mmr": 1056,
+                "mmr_diff": -19,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1291,
+                "rating_diff": -21,
+                "mmr": 1430,
+                "mmr_diff": -19,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7999822,
+      "requested_by": [
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 255372778,
+        "started_at": "2026-10-11T05:52:00.000Z",
+        "updated_at": "2026-10-11T06:38:58.324Z",
+        "duration": 2187,
+        "map": "Danube River",
+        "map_id": 201383,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_3v3",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_3v3",
+        "season": 14,
+        "server": "USA (W)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1275,
+        "average_rating_deviation": 166,
+        "average_mmr": 1294,
+        "average_mmr_deviation": 137,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 998,
+                "rating_diff": 22,
+                "mmr": 1095,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1269,
+                "rating_diff": 22,
+                "mmr": 1309,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1444,
+                "rating_diff": 22,
+                "mmr": 1491,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7241933,
+                "name": "erkanat",
+                "country": "kz",
+                "result": "loss",
+                "civilization": "sengoku_daimyo",
+                "civilization_randomized": false,
+                "rating": 1120,
+                "rating_diff": -23,
+                "mmr": 1142,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18701245,
+                "name": "ʀɪᴋᴏ",
+                "country": "uz",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1377,
+                "rating_diff": -23,
+                "mmr": 1397,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22180282,
+                "name": "Sultan",
+                "country": "kz",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1441,
+                "rating_diff": -28,
+                "mmr": 1330,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 18518902,
+      "requested_by": [
+        18518902
+      ],
+      "game": {
+        "game_id": 255396566,
+        "started_at": "2026-10-11T09:27:24.000Z",
+        "updated_at": "2026-10-11T10:03:57.307Z",
+        "duration": 1562,
+        "map": "Dry Arabia",
+        "map_id": 163361,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_2v2",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_2v2",
+        "season": 14,
+        "server": "Asia (SE)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1214,
+        "average_rating_deviation": 98,
+        "average_mmr": 1224,
+        "average_mmr_deviation": 127,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1239,
+                "rating_diff": 28,
+                "mmr": 1375,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1299,
+                "rating_diff": 12,
+                "mmr": 1094,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 25594562,
+                "name": "Alinor Ahmad",
+                "country": "hk",
+                "result": "loss",
+                "civilization": "jeanne_darc",
+                "civilization_randomized": false,
+                "rating": 1048,
+                "rating_diff": -23,
+                "mmr": 1101,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7315697,
+                "name": "Celestine",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "zhu_xis_legacy",
+                "civilization_randomized": false,
+                "rating": 1270,
+                "rating_diff": -23,
+                "mmr": 1324,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 18518902,
+      "requested_by": [
+        18518902
+      ],
+      "game": {
+        "game_id": 255369669,
+        "started_at": "2026-10-11T05:17:49.000Z",
+        "updated_at": "2026-10-11T07:31:20.101Z",
+        "duration": 1970,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_3v3",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_3v3",
+        "season": 14,
+        "server": "Australia",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1340,
+        "average_rating_deviation": 182,
+        "average_mmr": 1353,
+        "average_mmr_deviation": 176,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1463,
+                "rating_diff": -19,
+                "mmr": 1503,
+                "mmr_diff": -12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1017,
+                "rating_diff": -19,
+                "mmr": 1107,
+                "mmr_diff": -12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1288,
+                "rating_diff": -19,
+                "mmr": 1321,
+                "mmr_diff": -12,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 12233086,
+                "name": "Elle",
+                "country": "cn",
+                "result": "win",
+                "civilization": "golden_horde",
+                "civilization_randomized": false,
+                "rating": 1602,
+                "rating_diff": 18,
+                "mmr": 1507,
+                "mmr_diff": 12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 3031739,
+                "name": "Why B Baboon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1268,
+                "rating_diff": 12,
+                "mmr": 1140,
+                "mmr_diff": 12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 6990450,
+                "name": "Yumiko",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1399,
+                "rating_diff": 24,
+                "mmr": 1538,
+                "mmr_diff": 12,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 18518902,
+      "requested_by": [
+        18518902
+      ],
+      "game": {
+        "game_id": 255255018,
+        "started_at": "2026-10-10T12:48:03.000Z",
+        "updated_at": "2026-10-10T14:54:27.820Z",
+        "duration": 1529,
+        "map": "King of the Hill",
+        "map_id": 177556,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1344,
+        "average_rating_deviation": 213,
+        "average_mmr": 1328,
+        "average_mmr_deviation": 135,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1439,
+                "rating_diff": 24,
+                "mmr": 1520,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1257,
+                "rating_diff": 31,
+                "mmr": 1413,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 9054682,
+                "name": "雨沫",
+                "country": "cn",
+                "result": "win",
+                "civilization": "japanese",
+                "civilization_randomized": false,
+                "rating": 1238,
+                "rating_diff": 24,
+                "mmr": 1318,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 993,
+                "rating_diff": 24,
+                "mmr": 1039,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 20283600,
+                "name": "Aya",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1674,
+                "rating_diff": -40,
+                "mmr": 1370,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 23965476,
+                "name": "邪恶展展子",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "macedonian_dynasty",
+                "civilization_randomized": false,
+                "rating": 1471,
+                "rating_diff": -25,
+                "mmr": 1407,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 21125181,
+                "name": "魔星小智",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "zhu_xis_legacy",
+                "civilization_randomized": false,
+                "rating": 1550,
+                "rating_diff": -35,
+                "mmr": 1335,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24431416,
+                "name": "性格内向害怕跑马",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "jeanne_darc",
+                "civilization_randomized": false,
+                "rating": 1128,
+                "rating_diff": -25,
+                "mmr": 1221,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 18518902,
+      "requested_by": [
+        18518902
+      ],
+      "game": {
+        "game_id": 255252569,
+        "started_at": "2026-10-10T12:33:00.000Z",
+        "updated_at": "2026-10-10T13:26:45.284Z",
+        "duration": 775,
+        "map": "King of the Hill",
+        "map_id": 177556,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1221,
+        "average_rating_deviation": 131,
+        "average_mmr": 1315,
+        "average_mmr_deviation": 130,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1415,
+                "rating_diff": 24,
+                "mmr": 1503,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 6798667,
+                "name": "bluesnow_39",
+                "country": "jp",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1237,
+                "rating_diff": 24,
+                "mmr": 1301,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 969,
+                "rating_diff": 24,
+                "mmr": 1022,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1225,
+                "rating_diff": 32,
+                "mmr": 1396,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 20533587,
+                "name": "泡芙",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1339,
+                "rating_diff": -25,
+                "mmr": 1311,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25551850,
+                "name": "喵呜",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": 1094,
+                "rating_diff": -14,
+                "mmr": 1315,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24912819,
+                "name": "糯米有个奇观梦",
+                "country": "kr",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1298,
+                "rating_diff": -20,
+                "mmr": 1399,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 11361613,
+                "name": "北流",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1192,
+                "rating_diff": -25,
+                "mmr": 1274,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254459279,
+        "started_at": "2026-10-04T13:00:02.000Z",
+        "updated_at": "2026-10-04T15:46:45.790Z",
+        "duration": 3836,
+        "map": "Dry Arabia",
+        "map_id": 163361,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1246,
+        "average_rating_deviation": 156,
+        "average_mmr": 1364,
+        "average_mmr_deviation": 163,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1164,
+                "rating_diff": -10,
+                "mmr": 1387,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 957,
+                "rating_diff": -21,
+                "mmr": 990,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1254,
+                "rating_diff": -10,
+                "mmr": 1486,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "malians",
+                "civilization_randomized": false,
+                "rating": 1371,
+                "rating_diff": -16,
+                "mmr": 1477,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 22905459,
+                "name": "Clementine",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1199,
+                "rating_diff": 27,
+                "mmr": 1358,
+                "mmr_diff": 21,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 9606875,
+                "name": "无糖月球",
+                "country": "id",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1248,
+                "rating_diff": 25,
+                "mmr": 1362,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25023275,
+                "name": "此时此刻",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1541,
+                "rating_diff": 20,
+                "mmr": 1565,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 19875030,
+                "name": "FFA no teaming",
+                "country": "tr",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1231,
+                "rating_diff": 20,
+                "mmr": 1285,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "all-four"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254451641,
+        "started_at": "2026-10-04T12:12:00.000Z",
+        "updated_at": "2026-10-04T14:39:01.588Z",
+        "duration": 2797,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "India",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1213,
+        "average_rating_deviation": 185,
+        "average_mmr": 1346,
+        "average_mmr_deviation": 147,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 12158904,
+                "name": "kindras",
+                "country": "cn",
+                "result": "win",
+                "civilization": "zhu_xis_legacy",
+                "civilization_randomized": false,
+                "rating": 1240,
+                "rating_diff": 24,
+                "mmr": 1330,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 11725692,
+                "name": "Vardek",
+                "country": "be",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1226,
+                "rating_diff": 24,
+                "mmr": 1268,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 23010777,
+                "name": "幻影",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1512,
+                "rating_diff": 18,
+                "mmr": 1389,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 17085989,
+                "name": "wfenntt",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 905,
+                "rating_diff": 47,
+                "mmr": 1370,
+                "mmr_diff": 17,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "malians",
+                "civilization_randomized": false,
+                "rating": 1396,
+                "rating_diff": -25,
+                "mmr": 1494,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 982,
+                "rating_diff": -25,
+                "mmr": 1007,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1178,
+                "rating_diff": -14,
+                "mmr": 1404,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1268,
+                "rating_diff": -14,
+                "mmr": 1503,
+                "mmr_diff": -17,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "all-four"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254153222,
+        "started_at": "2026-10-02T13:24:16.000Z",
+        "updated_at": "2026-10-02T14:31:20.555Z",
+        "duration": 1573,
+        "map": "Cliffside",
+        "map_id": 2129132,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1116,
+        "average_rating_deviation": 144,
+        "average_mmr": 1283,
+        "average_mmr_deviation": 183,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 884,
+                "rating_diff": 20,
+                "mmr": 957,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "japanese",
+                "civilization_randomized": false,
+                "rating": 1218,
+                "rating_diff": 31,
+                "mmr": 1445,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1084,
+                "rating_diff": 38,
+                "mmr": 1454,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1087,
+                "rating_diff": 35,
+                "mmr": 1391,
+                "mmr_diff": 13,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 23551165,
+                "name": "爹",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1108,
+                "rating_diff": -16,
+                "mmr": 1208,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 21369617,
+                "name": "カブのパイ",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1280,
+                "rating_diff": -21,
+                "mmr": 1376,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18153331,
+                "name": "温柔",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 944,
+                "rating_diff": -21,
+                "mmr": 1026,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 5286346,
+                "name": "Hunter",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "zhu_xis_legacy",
+                "civilization_randomized": false,
+                "rating": 1324,
+                "rating_diff": -21,
+                "mmr": 1406,
+                "mmr_diff": -13,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "all-four"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254148914,
+        "started_at": "2026-10-02T12:52:44.000Z",
+        "updated_at": "2026-10-02T14:02:40.174Z",
+        "duration": 1769,
+        "map": "Flankwoods",
+        "map_id": 2141342,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1143,
+        "average_rating_deviation": 104,
+        "average_mmr": 1312,
+        "average_mmr_deviation": 147,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 17552511,
+                "name": "Timeless.落尘",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1197,
+                "rating_diff": 25,
+                "mmr": 1288,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18569598,
+                "name": "一【鹿】有你",
+                "country": "us",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1223,
+                "rating_diff": 25,
+                "mmr": 1310,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7218569,
+                "name": "MISS.kiriko",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1149,
+                "rating_diff": 31,
+                "mmr": 1280,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 23010311,
+                "name": "遇见",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1246,
+                "rating_diff": 25,
+                "mmr": 1297,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "holy_roman_empire",
+                "civilization_randomized": false,
+                "rating": 910,
+                "rating_diff": -26,
+                "mmr": 975,
+                "mmr_diff": -18,
+                "input_type": null
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "malians",
+                "civilization_randomized": false,
+                "rating": 1233,
+                "rating_diff": -15,
+                "mmr": 1463,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1091,
+                "rating_diff": -7,
+                "mmr": 1472,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1098,
+                "rating_diff": -11,
+                "mmr": 1409,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "all-four"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254145947,
+        "started_at": "2026-10-02T12:29:25.000Z",
+        "updated_at": "2026-10-02T14:31:59.214Z",
+        "duration": 1317,
+        "map": "King of the Hill",
+        "map_id": 177556,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1159,
+        "average_rating_deviation": 172,
+        "average_mmr": 1302,
+        "average_mmr_deviation": 170,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 3586815,
+                "name": "吴京",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "japanese",
+                "civilization_randomized": false,
+                "rating": 1104,
+                "rating_diff": -22,
+                "mmr": 1149,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 9226220,
+                "name": "Tennnnnnn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "chinese",
+                "civilization_randomized": false,
+                "rating": 1125,
+                "rating_diff": -22,
+                "mmr": 1220,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 23273975,
+                "name": "Coke",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "house_of_lancaster",
+                "civilization_randomized": false,
+                "rating": 1451,
+                "rating_diff": -22,
+                "mmr": 1476,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 26050714,
+                "name": "一只脑斧",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "macedonian_dynasty",
+                "civilization_randomized": false,
+                "rating": 1389,
+                "rating_diff": -22,
+                "mmr": 1308,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "malians",
+                "civilization_randomized": false,
+                "rating": 1200,
+                "rating_diff": 33,
+                "mmr": 1448,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "tughlaq_dynasty",
+                "civilization_randomized": true,
+                "rating": 889,
+                "rating_diff": 21,
+                "mmr": 960,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1050,
+                "rating_diff": 41,
+                "mmr": 1457,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1061,
+                "rating_diff": 37,
+                "mmr": 1394,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "all-four"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254022576,
+        "started_at": "2026-10-01T13:23:59.000Z",
+        "updated_at": "2026-10-01T14:31:51.455Z",
+        "duration": 1353,
+        "map": "Dry Arabia",
+        "map_id": 163361,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1050,
+        "average_rating_deviation": 114,
+        "average_mmr": 1301,
+        "average_mmr_deviation": 150,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 22040292,
+                "name": "乐子人不请自来",
+                "country": "cn",
+                "result": "win",
+                "civilization": "macedonian_dynasty",
+                "civilization_randomized": false,
+                "rating": 1120,
+                "rating_diff": 26,
+                "mmr": 1218,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 10229921,
+                "name": "DuanDuan",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 998,
+                "rating_diff": 40,
+                "mmr": 1297,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 11845291,
+                "name": "Dr. No",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1126,
+                "rating_diff": 33,
+                "mmr": 1269,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22335061,
+                "name": "惊天动地一条区",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1232,
+                "rating_diff": 31,
+                "mmr": 1337,
+                "mmr_diff": 18,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1070,
+                "rating_diff": -9,
+                "mmr": 1412,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 832,
+                "rating_diff": -20,
+                "mmr": 966,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1067,
+                "rating_diff": -8,
+                "mmr": 1441,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 953,
+                "rating_diff": -1,
+                "mmr": 1470,
+                "mmr_diff": -18,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "all-four"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254018508,
+        "started_at": "2026-10-01T12:52:54.000Z",
+        "updated_at": "2026-10-01T15:05:43.009Z",
+        "duration": 1786,
+        "map": "Himeyama",
+        "map_id": 2143821,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1095,
+        "average_rating_deviation": 129,
+        "average_mmr": 1302,
+        "average_mmr_deviation": 154,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1082,
+                "rating_diff": -12,
+                "mmr": 1432,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1588970,
+                "name": "inn",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 956,
+                "rating_diff": -3,
+                "mmr": 1490,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 855,
+                "rating_diff": -23,
+                "mmr": 986,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1077,
+                "rating_diff": -10,
+                "mmr": 1461,
+                "mmr_diff": -20,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 10999676,
+                "name": "✺◟( ͡° ͜ʖ ͡°)◞✺",
+                "country": "kr",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1232,
+                "rating_diff": 28,
+                "mmr": 1285,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 10706430,
+                "name": "东南亚性王张泓宇",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1236,
+                "rating_diff": 28,
+                "mmr": 1256,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 9203727,
+                "name": "白鹤湾",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1229,
+                "rating_diff": 28,
+                "mmr": 1311,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 11082356,
+                "name": "会飞的猪",
+                "country": "cn",
+                "result": "win",
+                "civilization": "rus",
+                "civilization_randomized": false,
+                "rating": 1090,
+                "rating_diff": 33,
+                "mmr": 1192,
+                "mmr_diff": 20,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "all-four"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 255242286,
+        "started_at": "2026-10-10T11:21:25.000Z",
+        "updated_at": "2026-10-10T13:25:53.273Z",
+        "duration": 1428,
+        "map": "King of the Hill",
+        "map_id": 177556,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "USA (S)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1231,
+        "average_rating_deviation": 121,
+        "average_mmr": 1283,
+        "average_mmr_deviation": 128,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 23097998,
+                "name": "治不开心是良药",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ottomans",
+                "civilization_randomized": false,
+                "rating": 1244,
+                "rating_diff": -23,
+                "mmr": 1285,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 941802,
+                "name": "hectorhfm ;D",
+                "country": "es",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1210,
+                "rating_diff": -23,
+                "mmr": 1252,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 19974779,
+                "name": "Siegfried der Letzte",
+                "country": "de",
+                "result": "loss",
+                "civilization": "house_of_lancaster",
+                "civilization_randomized": false,
+                "rating": 1346,
+                "rating_diff": -23,
+                "mmr": 1270,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 17992176,
+                "name": "Vshen",
+                "country": "kz",
+                "result": "loss",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1208,
+                "rating_diff": -23,
+                "mmr": 1296,
+                "mmr_diff": -15,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 6373802,
+                "name": "Madara Uchiha",
+                "country": "fr",
+                "result": "win",
+                "civilization": "ottomans",
+                "civilization_randomized": false,
+                "rating": 1185,
+                "rating_diff": 22,
+                "mmr": 1243,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 986,
+                "rating_diff": 22,
+                "mmr": 1021,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1437,
+                "rating_diff": 22,
+                "mmr": 1502,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "golden_horde",
+                "civilization_randomized": false,
+                "rating": 1231,
+                "rating_diff": 30,
+                "mmr": 1395,
+                "mmr_diff": 15,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "epsilon-win"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254977957,
+        "started_at": "2026-10-08T11:43:26.000Z",
+        "updated_at": "2026-10-08T13:55:34.444Z",
+        "duration": 1900,
+        "map": "Hill and Dale",
+        "map_id": 130029,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "USA (W)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1206,
+        "average_rating_deviation": null,
+        "average_mmr": 1285,
+        "average_mmr_deviation": 140,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1413,
+                "rating_diff": 24,
+                "mmr": 1486,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8277161,
+                "name": "helix",
+                "country": "ca",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1205,
+                "rating_diff": 24,
+                "mmr": 1287,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 920,
+                "rating_diff": 24,
+                "mmr": 971,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1198,
+                "rating_diff": 33,
+                "mmr": 1379,
+                "mmr_diff": 16,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 12239839,
+                "name": "JaXanor",
+                "country": "de",
+                "result": "loss",
+                "civilization": "japanese",
+                "civilization_randomized": false,
+                "rating": 1179,
+                "rating_diff": -25,
+                "mmr": 1245,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8851641,
+                "name": "Sensei",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "chinese",
+                "civilization_randomized": false,
+                "rating": 1271,
+                "rating_diff": -25,
+                "mmr": 1356,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 21699358,
+                "name": "Ice cream",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": null,
+                "rating_diff": null,
+                "mmr": 1242,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 479603,
+                "name": "立华奏",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1254,
+                "rating_diff": -25,
+                "mmr": 1317,
+                "mmr_diff": -16,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "epsilon-win"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780,
+        7999822,
+        18518902
+      ],
+      "game": {
+        "game_id": 254974799,
+        "started_at": "2026-10-08T11:11:51.000Z",
+        "updated_at": "2026-10-08T12:20:35.064Z",
+        "duration": 1692,
+        "map": "Danube River",
+        "map_id": 201383,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Australia",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1091,
+        "average_rating_deviation": 139,
+        "average_mmr": 1184,
+        "average_mmr_deviation": 152,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 6564528,
+                "name": "glenn.",
+                "country": "ph",
+                "result": "loss",
+                "civilization": "house_of_lancaster",
+                "civilization_randomized": false,
+                "rating": 1069,
+                "rating_diff": -14,
+                "mmr": 1179,
+                "mmr_diff": -12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22725558,
+                "name": "阿獠不撩",
+                "country": "az",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 972,
+                "rating_diff": -14,
+                "mmr": 1080,
+                "mmr_diff": -12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8316307,
+                "name": "你快乐吗",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1105,
+                "rating_diff": -19,
+                "mmr": 1159,
+                "mmr_diff": -12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22687020,
+                "name": "蓝色～云海",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1094,
+                "rating_diff": -19,
+                "mmr": 1151,
+                "mmr_diff": -12,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7999822,
+                "name": "Zamia Slayer",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 902,
+                "rating_diff": 18,
+                "mmr": 959,
+                "mmr_diff": 12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 11574502,
+                "name": "GrabNgo",
+                "country": "cn",
+                "result": "win",
+                "civilization": "order_of_the_dragon",
+                "civilization_randomized": false,
+                "rating": 1018,
+                "rating_diff": 18,
+                "mmr": 1106,
+                "mmr_diff": 12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1395,
+                "rating_diff": 18,
+                "mmr": 1474,
+                "mmr_diff": 12,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18518902,
+                "name": "LTYSWLP",
+                "country": "cn",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1171,
+                "rating_diff": 27,
+                "mmr": 1367,
+                "mmr_diff": 12,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "epsilon-win"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780
+      ],
+      "game": {
+        "game_id": 254967257,
+        "started_at": "2026-10-08T09:32:04.000Z",
+        "updated_at": "2026-10-08T11:32:36.707Z",
+        "duration": 1206,
+        "map": "Danube River",
+        "map_id": 201383,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Asia (SE)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1595,
+        "average_rating_deviation": 221,
+        "average_mmr": 1625,
+        "average_mmr_deviation": 180,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 2671991,
+                "name": "你爱甜菊花",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 2017,
+                "rating_diff": -37,
+                "mmr": 1964,
+                "mmr_diff": -26,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 21004777,
+                "name": "EBLISU",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1854,
+                "rating_diff": -37,
+                "mmr": 1830,
+                "mmr_diff": -26,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25930335,
+                "name": "金钱豹R",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1543,
+                "rating_diff": -37,
+                "mmr": 1598,
+                "mmr_diff": -26,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 11134733,
+                "name": "[VIE] Ộ Guri Cạp",
+                "country": "vn",
+                "result": "loss",
+                "civilization": "holy_roman_empire",
+                "civilization_randomized": false,
+                "rating": 1536,
+                "rating_diff": -37,
+                "mmr": 1633,
+                "mmr_diff": -26,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 7739748,
+                "name": "没错，就是我",
+                "country": "cn",
+                "result": "win",
+                "civilization": "house_of_lancaster",
+                "civilization_randomized": false,
+                "rating": 1322,
+                "rating_diff": 37,
+                "mmr": 1368,
+                "mmr_diff": 26,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25174481,
+                "name": "你懂我的吧",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1633,
+                "rating_diff": 37,
+                "mmr": 1567,
+                "mmr_diff": 26,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1358,
+                "rating_diff": 37,
+                "mmr": 1448,
+                "mmr_diff": 26,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 17226705,
+                "name": "金色大蛆",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1495,
+                "rating_diff": 37,
+                "mmr": 1588,
+                "mmr_diff": 26,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "epsilon-win"
+    },
+    {
+      "profile_for_download": 7195780,
+      "requested_by": [
+        7195780
+      ],
+      "game": {
+        "game_id": 254963727,
+        "started_at": "2026-10-08T08:35:28.000Z",
+        "updated_at": "2026-10-08T10:38:34.631Z",
+        "duration": 1358,
+        "map": "King of the Hill",
+        "map_id": 177556,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "USA (S)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1266,
+        "average_rating_deviation": 253,
+        "average_mmr": 1407,
+        "average_mmr_deviation": 115,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 1795782,
+                "name": "SSH!..IT' S_V1RuS",
+                "country": "it",
+                "result": "win",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1385,
+                "rating_diff": 14,
+                "mmr": 1457,
+                "mmr_diff": 9,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 21099392,
+                "name": "NIO",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1434,
+                "rating_diff": 19,
+                "mmr": 1541,
+                "mmr_diff": 9,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18956214,
+                "name": "[BOT] Sầu Riêng",
+                "country": "vn",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1451,
+                "rating_diff": 14,
+                "mmr": 1500,
+                "mmr_diff": 9,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 7195780,
+                "name": "epsilon",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1367,
+                "rating_diff": 14,
+                "mmr": 1454,
+                "mmr_diff": 9,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 25926057,
+                "name": "2158833895",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 653,
+                "rating_diff": -1,
+                "mmr": 1335,
+                "mmr_diff": -9,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 18940041,
+                "name": "一天到晚",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "holy_roman_empire",
+                "civilization_randomized": false,
+                "rating": 1200,
+                "rating_diff": -8,
+                "mmr": 1348,
+                "mmr_diff": -9,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 20818647,
+                "name": "Gaollk",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1170,
+                "rating_diff": -15,
+                "mmr": 1155,
+                "mmr_diff": -9,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 20826105,
+                "name": "wyt3462",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "english",
+                "civilization_randomized": false,
+                "rating": 1464,
+                "rating_diff": -15,
+                "mmr": 1465,
+                "mmr_diff": -9,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "epsilon-win"
+    },
+    {
+      "profile_for_download": 8354416,
+      "requested_by": [
+        8354416
+      ],
+      "game": {
+        "game_id": 254654880,
+        "started_at": "2026-10-05T19:28:15.000Z",
+        "updated_at": "2026-10-05T20:20:55.352Z",
+        "duration": 725,
+        "map": "Flankwoods",
+        "map_id": 2141342,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "USA (S)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1636,
+        "average_rating_deviation": 315,
+        "average_mmr": 1765,
+        "average_mmr_deviation": 267,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 23860922,
+                "name": "三本期",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1465,
+                "rating_diff": -3,
+                "mmr": 1602,
+                "mmr_diff": -4,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 1856914,
+                "name": "[DEBILS] Xevrae",
+                "country": "us",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1616,
+                "rating_diff": -9,
+                "mmr": 1631,
+                "mmr_diff": -4,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 2512324,
+                "name": "thomas_333333",
+                "country": "ch",
+                "result": "loss",
+                "civilization": "malians",
+                "civilization_randomized": false,
+                "rating": 1590,
+                "rating_diff": -9,
+                "mmr": 1630,
+                "mmr_diff": -4,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 16286092,
+                "name": "cbozfps",
+                "country": "tr",
+                "result": "loss",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1083,
+                "rating_diff": -1,
+                "mmr": 1548,
+                "mmr_diff": -4,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 22011256,
+                "name": "满月居于空",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 2117,
+                "rating_diff": 7,
+                "mmr": 2186,
+                "mmr_diff": 4,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8354416,
+                "name": "EL.loueMT",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1747,
+                "rating_diff": 17,
+                "mmr": 1952,
+                "mmr_diff": 4,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24208532,
+                "name": ",",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1419,
+                "rating_diff": 7,
+                "mmr": 1433,
+                "mmr_diff": 4,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 15136167,
+                "name": "KarmaKaima",
+                "country": "cn",
+                "result": "win",
+                "civilization": "sengoku_daimyo",
+                "civilization_randomized": false,
+                "rating": 2048,
+                "rating_diff": 7,
+                "mmr": 2138,
+                "mmr_diff": 4,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "tracked:EL.loueMT"
+    },
+    {
+      "profile_for_download": 8354416,
+      "requested_by": [
+        8354416
+      ],
+      "game": {
+        "game_id": 254648812,
+        "started_at": "2026-10-05T18:36:59.000Z",
+        "updated_at": "2026-10-05T20:40:43.520Z",
+        "duration": 1378,
+        "map": "Cliffside",
+        "map_id": 2129132,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1905,
+        "average_rating_deviation": 242,
+        "average_mmr": 2005,
+        "average_mmr_deviation": 234,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 22011256,
+                "name": "满月居于空",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 2133,
+                "rating_diff": -16,
+                "mmr": 2196,
+                "mmr_diff": -10,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24208532,
+                "name": ",",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 1435,
+                "rating_diff": -16,
+                "mmr": 1443,
+                "mmr_diff": -10,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8354416,
+                "name": "EL.loueMT",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 1753,
+                "rating_diff": -6,
+                "mmr": 1962,
+                "mmr_diff": -10,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 15136167,
+                "name": "KarmaKaima",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 2064,
+                "rating_diff": -16,
+                "mmr": 2148,
+                "mmr_diff": -10,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 23716877,
+                "name": "黑鼻子小黑",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1672,
+                "rating_diff": 39,
+                "mmr": 2171,
+                "mmr_diff": 10,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 17936438,
+                "name": "龙影",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 2103,
+                "rating_diff": 15,
+                "mmr": 2119,
+                "mmr_diff": 10,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 23871734,
+                "name": "不如守赢",
+                "country": "cn",
+                "result": "win",
+                "civilization": "zhu_xis_legacy",
+                "civilization_randomized": false,
+                "rating": 1943,
+                "rating_diff": 15,
+                "mmr": 1895,
+                "mmr_diff": 10,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 12295952,
+                "name": "中国人不骗中国人",
+                "country": "cn",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 2140,
+                "rating_diff": 15,
+                "mmr": 2109,
+                "mmr_diff": 10,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "tracked:EL.loueMT"
+    },
+    {
+      "profile_for_download": 8354416,
+      "requested_by": [
+        8354416
+      ],
+      "game": {
+        "game_id": 254643842,
+        "started_at": "2026-10-05T17:55:02.000Z",
+        "updated_at": "2026-10-05T18:42:29.544Z",
+        "duration": 2207,
+        "map": "Cliffside",
+        "map_id": 2129132,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Korea",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1902,
+        "average_rating_deviation": 243,
+        "average_mmr": 2005,
+        "average_mmr_deviation": 231,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 15136167,
+                "name": "KarmaKaima",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 2082,
+                "rating_diff": -18,
+                "mmr": 2159,
+                "mmr_diff": -11,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22011256,
+                "name": "满月居于空",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 2151,
+                "rating_diff": -18,
+                "mmr": 2207,
+                "mmr_diff": -11,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24208532,
+                "name": ",",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1453,
+                "rating_diff": -18,
+                "mmr": 1454,
+                "mmr_diff": -11,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8354416,
+                "name": "EL.loueMT",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "japanese",
+                "civilization_randomized": false,
+                "rating": 1761,
+                "rating_diff": -8,
+                "mmr": 1973,
+                "mmr_diff": -11,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 17936438,
+                "name": "龙影",
+                "country": "cn",
+                "result": "win",
+                "civilization": "abbasid_dynasty",
+                "civilization_randomized": false,
+                "rating": 2087,
+                "rating_diff": 16,
+                "mmr": 2108,
+                "mmr_diff": 11,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 12295952,
+                "name": "中国人不骗中国人",
+                "country": "cn",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 2124,
+                "rating_diff": 16,
+                "mmr": 2098,
+                "mmr_diff": 11,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 23716877,
+                "name": "黑鼻子小黑",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1630,
+                "rating_diff": 42,
+                "mmr": 2160,
+                "mmr_diff": 11,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 23871734,
+                "name": "不如守赢",
+                "country": "cn",
+                "result": "win",
+                "civilization": "zhu_xis_legacy",
+                "civilization_randomized": false,
+                "rating": 1927,
+                "rating_diff": 16,
+                "mmr": 1884,
+                "mmr_diff": 11,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "tracked:EL.loueMT"
+    },
+    {
+      "profile_for_download": 8354416,
+      "requested_by": [
+        8354416
+      ],
+      "game": {
+        "game_id": 254641650,
+        "started_at": "2026-10-05T17:36:00.000Z",
+        "updated_at": "2026-10-05T18:01:48.055Z",
+        "duration": 910,
+        "map": "Dry Arabia",
+        "map_id": 163361,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Asia (SE)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1981,
+        "average_rating_deviation": 561,
+        "average_mmr": 2059,
+        "average_mmr_deviation": 534,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 8354416,
+                "name": "EL.loueMT",
+                "country": "cn",
+                "result": "win",
+                "civilization": "house_of_lancaster",
+                "civilization_randomized": false,
+                "rating": 1713,
+                "rating_diff": 48,
+                "mmr": 1946,
+                "mmr_diff": 27,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24208532,
+                "name": ",",
+                "country": "cn",
+                "result": "win",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1416,
+                "rating_diff": 37,
+                "mmr": 1427,
+                "mmr_diff": 27,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 15136167,
+                "name": "KarmaKaima",
+                "country": "cn",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 2045,
+                "rating_diff": 37,
+                "mmr": 2132,
+                "mmr_diff": 27,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 22011256,
+                "name": "满月居于空",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 2114,
+                "rating_diff": 37,
+                "mmr": 2180,
+                "mmr_diff": 27,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 17341241,
+                "name": "PEG",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 3362,
+                "rating_diff": -43,
+                "mmr": 3254,
+                "mmr_diff": -27,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24044258,
+                "name": "被五百分以下随便炸",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1838,
+                "rating_diff": -18,
+                "mmr": 2254,
+                "mmr_diff": -27,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 14613755,
+                "name": "别急慢慢来 但一定要快",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1729,
+                "rating_diff": -38,
+                "mmr": 1784,
+                "mmr_diff": -27,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25963712,
+                "name": "二十世纪男孩",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "chinese",
+                "civilization_randomized": false,
+                "rating": 1633,
+                "rating_diff": -44,
+                "mmr": 1497,
+                "mmr_diff": -27,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "tracked:EL.loueMT"
+    },
+    {
+      "profile_for_download": 8354416,
+      "requested_by": [
+        8354416
+      ],
+      "game": {
+        "game_id": 254637870,
+        "started_at": "2026-10-05T17:04:39.000Z",
+        "updated_at": "2026-10-05T17:40:41.248Z",
+        "duration": 1540,
+        "map": "Dry Arabia",
+        "map_id": 163361,
+        "map_custom_id": null,
+        "state": "processed",
+        "kind": "rm_4v4",
+        "leaderboard": "rm_team",
+        "mmr_leaderboard": "rm_4v4",
+        "season": 14,
+        "server": "Asia (SE)",
+        "patch": 11308,
+        "patch_id": 358,
+        "average_rating": 1980,
+        "average_rating_deviation": 561,
+        "average_mmr": 2059,
+        "average_mmr_deviation": 533,
+        "ongoing": false,
+        "just_finished": false,
+        "teams": [
+          [
+            {
+              "player": {
+                "profile_id": 22011256,
+                "name": "满月居于空",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "ottomans",
+                "civilization_randomized": false,
+                "rating": 2125,
+                "rating_diff": -11,
+                "mmr": 2186,
+                "mmr_diff": -6,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 24208532,
+                "name": ",",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "french",
+                "civilization_randomized": false,
+                "rating": 1427,
+                "rating_diff": -11,
+                "mmr": 1433,
+                "mmr_diff": -6,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 8354416,
+                "name": "EL.loueMT",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "house_of_lancaster",
+                "civilization_randomized": false,
+                "rating": 1714,
+                "rating_diff": -1,
+                "mmr": 1952,
+                "mmr_diff": -6,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 15136167,
+                "name": "KarmaKaima",
+                "country": "cn",
+                "result": "loss",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 2056,
+                "rating_diff": -11,
+                "mmr": 2138,
+                "mmr_diff": -6,
+                "input_type": "keyboard"
+              }
+            }
+          ],
+          [
+            {
+              "player": {
+                "profile_id": 24044258,
+                "name": "被五百分以下随便炸",
+                "country": "cn",
+                "result": "win",
+                "civilization": "mongols",
+                "civilization_randomized": false,
+                "rating": 1807,
+                "rating_diff": 31,
+                "mmr": 2248,
+                "mmr_diff": 6,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 14613755,
+                "name": "别急慢慢来 但一定要快",
+                "country": "cn",
+                "result": "win",
+                "civilization": "knights_templar",
+                "civilization_randomized": false,
+                "rating": 1720,
+                "rating_diff": 9,
+                "mmr": 1778,
+                "mmr_diff": 6,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 25963712,
+                "name": "二十世纪男孩",
+                "country": "cn",
+                "result": "win",
+                "civilization": "chinese",
+                "civilization_randomized": false,
+                "rating": 1630,
+                "rating_diff": 3,
+                "mmr": 1491,
+                "mmr_diff": 6,
+                "input_type": "keyboard"
+              }
+            },
+            {
+              "player": {
+                "profile_id": 17341241,
+                "name": "PEG",
+                "country": "cn",
+                "result": "win",
+                "civilization": "ayyubids",
+                "civilization_randomized": false,
+                "rating": 3358,
+                "rating_diff": 4,
+                "mmr": 3248,
+                "mmr_diff": 6,
+                "input_type": "keyboard"
+              }
+            }
+          ]
+        ]
+      },
+      "selection": "tracked:EL.loueMT"
+    }
+  ],
+  "extended_at": "2026-10-27T11:12:51.583060+00:00",
+  "roles": {
+    "8354416": "tracked"
+  },
+  "names": {
+    "8354416": "EL.loueMT"
+  }
+}

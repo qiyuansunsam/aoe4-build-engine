@@ -21,6 +21,11 @@ from urllib.request import Request, build_opener, HTTPRedirectHandler
 
 from timeline_download import TimelineDownloader, TimelineError
 from player_search import PlayerSearch
+from player_profiles import write_snapshot
+
+def refresh_player_profiles(root,lock):
+    """Local-only: refetch the reference players from AoE4 World and rewrite data/player-profiles.json."""
+    with lock:return write_snapshot(Path(root))
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_AI_STATUS = {'configured': False, 'reachable': False, 'mode': 'disabled', 'model': None,
@@ -250,7 +255,7 @@ def make_handler(crafter, root=ROOT, downloader=None, player_search=None, public
             if origin and origin != 'http://'+self.headers.get('Host',''):
                 return self.reply(403,{'error':'cross_origin','message':'Use the same-origin local workspace.'})
             route=urlsplit(self.path).path
-            if route not in ('/api/ai/generate','/api/games/download'):
+            if route not in ('/api/ai/generate','/api/games/download','/api/players/refresh'):
                 return self.reply(404,{'error':'not_found','message':'Unknown API route.'})
             try:
                 if self.headers.get('Content-Type','').split(';')[0].strip()!='application/json':
@@ -260,7 +265,7 @@ def make_handler(crafter, root=ROOT, downloader=None, player_search=None, public
                     raise ApiError('request_size','Request must be between 1 byte and 32 KiB.',413)
                 self.connection.settimeout(10)
                 body=json.loads(self.rfile.read(length))
-                self.reply(200,downloader.download(body) if route=='/api/games/download' else crafter.generate(body))
+                self.reply(200,downloader.download(body) if route=='/api/games/download' else refresh_player_profiles(root,downloader.lock) if route=='/api/players/refresh' else crafter.generate(body))
             except (ApiError,TimelineError) as exc:
                 self.reply(exc.status,{'error':exc.code,'message':exc.message})
             except (ValueError, UnicodeError):

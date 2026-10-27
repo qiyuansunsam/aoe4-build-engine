@@ -7,7 +7,7 @@
     {
       "id": "french-observed-4v4",
       "civilization": "french",
-      "title": "French cavalry opening",
+      "title": "French cavalry reference game",
       "status": "historical-observation",
       "summary": "Follow an observed School of Cavalry opening through its first knight and economy upgrades.",
       "mode": "rm_4v4",
@@ -4661,7 +4661,7 @@
     {
       "id": "mongols-observed-4v4",
       "civilization": "mongols",
-      "title": "Mongol stable opening",
+      "title": "Mongol stable reference game",
       "status": "historical-observation",
       "summary": "Study the downloaded stable-led opening and its improved economy technologies.",
       "mode": "rm_4v4",
@@ -6068,7 +6068,7 @@
     {
       "id": "malians-observed-4v4",
       "civilization": "malians",
-      "title": "Malian cow boom",
+      "title": "Malian cattle reference game",
       "status": "historical-observation",
       "summary": "Explore an observed ranch expansion into Grand Fulani Corral.",
       "mode": "rm_4v4",
@@ -8683,7 +8683,7 @@
     {
       "id": "french-knights-observed-4v4",
       "civilization": "french",
-      "title": "French knight mass",
+      "title": "French knight reference game",
       "status": "historical-observation",
       "summary": "Observed French 4v4 with the fastest Royal Knight count in the collection: 12 knights by 10:00 and 24 by 15:00 with 56 villagers.",
       "mode": "rm_4v4",
@@ -10112,7 +10112,7 @@
     {
       "id": "japanese-observed-4v4",
       "civilization": "japanese",
-      "title": "Japanese two-TC",
+      "title": "Japanese two-TC reference game",
       "status": "historical-observation",
       "summary": "Study a verified additional Town Center followed by Castle Age development.",
       "mode": "rm_4v4",

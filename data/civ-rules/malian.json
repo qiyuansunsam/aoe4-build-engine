@@ -1,0 +1,2950 @@
+{
+ "civ": "malian",
+ "catalogCiv": "malian",
+ "patch": "16.3.11308",
+ "start": {
+  "villagers": 6,
+  "resources": {
+   "food": 200,
+   "wood": 150,
+   "gold": 100,
+   "stone": 0
+  },
+  "popCap": 10,
+  "units": [
+   {
+    "id": "unit_scout_1_mal",
+    "name": "Vanguard Scout",
+    "count": 1
+   },
+   {
+    "id": "gaia_herdable_sheep",
+    "name": "Sheep",
+    "count": 2
+   },
+   {
+    "id": "gaia_herdable_sheep_black",
+    "name": "Sheep (black)",
+    "count": 1
+   },
+   {
+    "id": "gaia_herdable_sheep_brown",
+    "name": "Sheep (brown)",
+    "count": 2
+   }
+  ],
+  "buildings": [
+   {
+    "id": "building_town_center_capital_mal",
+    "name": "Town Center (capital)",
+    "count": 1
+   }
+  ],
+  "evidence": [
+   "raw:army/standard_mode/normal_malian#army_bag/starting_units/squad[0..11] (1 unit_scout_1_mal, 6 unit_villager_1_mal, gaia_herdable_sheep x2, gaia_herdable_sheep_black x1, gaia_herdable_sheep_brown x2)",
+   "raw:army/standard_mode/normal_malian#army_bag/resource_starting_amount (food 200, wood 150, gold 100, stone 0)",
+   "raw:army/standard_mode/normal_malian#army_bag/starting_buildings/starting_building/building=building_town_center_capital_mal (key default_mp)",
+   "raw:statemodel_schema/buildings/town_center_capital#int_properties/population_cap_increase.default=10 (schema named by ebps/races/malian/buildings/building_town_center_capital_mal#statemodel_ext/schema)",
+   "raw:army/standard_mode/normal_malian#army_bag/resource_max_cap/popcap=200; race_population_cap_table/max_personnel_cap=200",
+   "raw:army/standard_mode/normal_malian#army_bag/start_actions_statetree=civ_start\\Malian (state tree, not decoded)",
+   "raw:racebps/malian#race_bag/army/standard/$PBGNAME=normal_malian"
+  ]
+ },
+ "villager": {
+  "id": "unit_villager_1_mal",
+  "cost": {
+   "food": 50
+  },
+  "trainSeconds": 20,
+  "speedEngineUnits": 4.5,
+  "gather": {
+   "sheep": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[2]/gather_rate=0.75",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[2]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[2]/resource_sub_type=herded_animal"
+    ]
+   },
+   "berries": {
+    "rate": 0.69,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[9]/gather_rate=0.69",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[9]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[9]/resource_sub_type=forage_bush"
+    ]
+   },
+   "deer": {
+    "rate": 0.825,
+    "carry": 25,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[4]/gather_rate=0.825",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[4]/resource_carry_capacity=25",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[4]/resource_sub_type=hunted_animal_flee"
+    ]
+   },
+   "boar": {
+    "rate": 0,
+    "carry": 0,
+    "notes": "Malians cannot harvest Boar: the hunted_animal_danger slot is blank in the Malian villager record.",
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[3] (resource_sub_type empty, gather_rate 0, resource_gather_job none)",
+     "locale:11221922 = \"... Cannot harvest Boar\" (civ bonus list referenced by raw:army/standard_mode/normal_malian#army_bag/ui/global_traits_summary/trait[0]/description_formatter)",
+     "compare raw:ebps/races/english/units/unit_villager_1_eng#gather_target[3]=hunted_animal_danger 0.9/25"
+    ]
+   },
+   "farm": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[1]/gather_rate=0.75",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[1]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[1]/resource_sub_type=farm"
+    ]
+   },
+   "wood": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[0]/gather_rate=0.75",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[0]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[0]/resource_sub_type=tree"
+    ]
+   },
+   "gold": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[7]/gather_rate=0.75",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[7]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[7]/resource_sub_type=gold"
+    ]
+   },
+   "stone": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[6]/gather_rate=0.75",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[6]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[6]/resource_sub_type=stone"
+    ]
+   },
+   "cattle": {
+    "rate": 0.81,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[10]/gather_rate=0.81",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[10]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[10]/resource_sub_type=cattle",
+     "compare raw:ebps/races/english/units/unit_villager_1_eng#gather_target[10]/gather_rate=0.66 (French and Mongol records also 0.66)",
+     "locale:11221915 = \"Produce Cattle from Mills in the Dark Age (I). Malian Villagers harvest Food from Cattle faster than other civilizations ...\""
+    ]
+   },
+   "fish": {
+    "rate": 1,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[8]/gather_rate=1",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[8]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[8]/resource_sub_type=fish (shore fish, gather_shore_fish)"
+    ]
+   },
+   "pasture": {
+    "rate": 0.75,
+    "carry": 10,
+    "evidence": [
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[11]/gather_rate=0.75",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[11]/resource_carry_capacity=10",
+     "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[11]/resource_sub_type=pasture (no Malian pasture building; listed for completeness)"
+    ]
+   }
+  },
+  "evidence": [
+   "catalog:units/unit_villager_1_mal#cost",
+   "catalog:units/unit_villager_1_mal#trainTimeSeconds",
+   "catalog:units/unit_villager_1_mal#speedEngineUnits",
+   "raw:ebps/races/malian/units/unit_villager_1_mal#cost_ext/time_cost (food 50, 20 s)",
+   "raw:ebps/races/malian/units/unit_villager_1_mal#moving_ext/speed_scaling_table/default_speed=4.5",
+   "raw:ebps/races/malian/units/unit_villager_1_mal#population_ext/personnel_pop=1",
+   "raw:ebps/races/malian/buildings/building_econ_food_mal#resource_drop_off_ext/drop_off_time_seconds/food=0 (same 0 s for wood/gold/stone at TC, Lumber Camp, Mining Camp)"
+  ]
+ },
+ "townCenter": {
+  "id": "building_town_center_capital_mal",
+  "extraId": "building_town_center_mal",
+  "cost": {
+   "wood": 400,
+   "gold": 350
+  },
+  "buildSeconds": 150,
+  "popProvided": 10,
+  "villagerProductionMultiplierByAge": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 1
+  },
+  "notes": "Extra Town Centers cost 400 wood + 350 gold (Malian bonus: gold instead of stone) and need Feudal Age (or the fast_expand upgrade). No Malian Town Center production-speed modifier was found in any installed record, so the per-age multiplier is 1 (absence of evidence; state trees are not decoded). 17.0 preview raises TC build time 150 -> 165 s; not applied.",
+  "evidence": [
+   "catalog:buildings/building_town_center_mal#cost",
+   "catalog:buildings/building_town_center_mal#buildTimeSeconds",
+   "raw:ebps/races/malian/buildings/building_town_center_mal#cost_ext/time_cost (wood 400, gold 350, stone 0, 150 s)",
+   "raw:ebps/races/malian/buildings/building_town_center_mal#requirement_ext/requirement_table/required_any_in_list (feudal_age or fast_expand)",
+   "raw:statemodel_schema/buildings/town_center#int_properties/population_cap_increase.default=10",
+   "raw:statemodel_schema/buildings/town_center_capital#int_properties/population_cap_increase.default=10",
+   "locale:11265630 = \"Each House and Mining Camp constructed within the influence of Pit Mines increases its Gold generation. Town Centers cost gold instead of stone to construct.\"",
+   "catalog:buildings/building_town_center_mal#trainableUnits",
+   "data/patch-next.json building_town_center_mal buildTimeSeconds 150 -> 165 (17.0 preview, not applied)"
+  ]
+ },
+ "buildings": {
+  "house": {
+   "id": "building_house_mal",
+   "name": "House",
+   "cost": {
+    "wood": 25
+   },
+   "buildSeconds": 7,
+   "age": 1,
+   "popProvided": 5,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Half cost, half population and twice the build speed of a standard House (civ bonus, already baked into the record). Counts toward Pit Mine influence (see mechanic pit-mine).",
+   "evidence": [
+    "catalog:buildings/building_house_mal#cost",
+    "catalog:buildings/building_house_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_house_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_house_mal#requirement_ext (no required_player_upgrade age check)",
+    "raw:statemodel_schema/buildings/civilizations/malian/house_mal#int_properties/population_cap_increase.default=5 (generic statemodel_schema/buildings/house = 10)",
+    "locale:11228694 = \"Increases your maximum Population by 5. Malian Houses cost half as many resources as standard.\" (%1% = 5 from raw:ebps/races/malian/buildings/building_house_mal#ui_ext/help_text_formatter/formatter_arguments/int_value)",
+    "locale:11221922 = \"... Houses construct twice as fast, but are half cost and provide half the amount of Population.\"",
+    "raw:ebps/races/malian/buildings/building_house_mal#district_bonuses_ext/district_bonuses/district_bonus (satisfying entities: the three Pit Mine variants; action_tree open_pit_mine_influence_mal\\receiver)"
+   ]
+  },
+  "mill": {
+   "id": "building_econ_food_mal",
+   "name": "Mill",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [
+    "food"
+   ],
+   "limit": null,
+   "notes": "Food drop-off. Trains Cattle (90 gold, 15 s) and researches the food/hunting technologies and Wheelbarrow.",
+   "evidence": [
+    "catalog:buildings/building_econ_food_mal#cost",
+    "catalog:buildings/building_econ_food_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_econ_food_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_econ_food_mal#requirement_ext (no required_player_upgrade age check)",
+    "raw:ebps/races/malian/buildings/building_econ_food_mal#resource_drop_off_ext/accepted_resources (food = True)",
+    "catalog:buildings/building_econ_food_mal#trainableUnits",
+    "catalog:buildings/building_econ_food_mal#researchableTechnologies",
+    "locale:11232176 = \"Villagers can drop off Food at this building. ... Produce Cattle which can be harvested for Food by Villagers or garrisoned within Cattle Ranches for Food over time.\""
+   ]
+  },
+  "lumber-camp": {
+   "id": "building_econ_wood_mal",
+   "name": "Lumber Camp",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [
+    "wood"
+   ],
+   "limit": null,
+   "notes": "Wood drop-off; wood technologies.",
+   "evidence": [
+    "catalog:buildings/building_econ_wood_mal#cost",
+    "catalog:buildings/building_econ_wood_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_econ_wood_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_econ_wood_mal#requirement_ext (no required_player_upgrade age check)",
+    "raw:ebps/races/malian/buildings/building_econ_wood_mal#resource_drop_off_ext/accepted_resources (wood = True)",
+    "catalog:buildings/building_econ_wood_mal#researchableTechnologies"
+   ]
+  },
+  "mining-camp": {
+   "id": "building_econ_mining_camp_mal",
+   "name": "Mining Camp",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [
+    "gold",
+    "stone"
+   ],
+   "limit": null,
+   "notes": "Gold/stone drop-off; gold mining technologies (no stone-only techs listed). Counts toward Pit Mine influence like a House.",
+   "evidence": [
+    "catalog:buildings/building_econ_mining_camp_mal#cost",
+    "catalog:buildings/building_econ_mining_camp_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_econ_mining_camp_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_econ_mining_camp_mal#requirement_ext (no required_player_upgrade age check)",
+    "raw:ebps/races/malian/buildings/building_econ_mining_camp_mal#resource_drop_off_ext/accepted_resources (gold, stone = True)",
+    "catalog:buildings/building_econ_mining_camp_mal#researchableTechnologies",
+    "raw:ebps/races/malian/buildings/building_econ_mining_camp_mal#district_bonuses_ext/district_bonuses/district_bonus (satisfying entities: three Pit Mine variants)",
+    "raw:ebps/races/malian/buildings/building_econ_mining_camp_mal#ui_ext/ui_extra_infos/ui_extra_info/description_formatter formatter 11221856 int_value 25"
+   ]
+  },
+  "farm": {
+   "id": "building_resource_farm_mal",
+   "name": "Farm",
+   "cost": {
+    "wood": 75
+   },
+   "buildSeconds": 6,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "One villager per farm; infinite (ui_show_as_infinity). Deposit initial_amount 120 with base_regrowth_rate 75 (raw, units not resolved). Same cost/time as the French farm record (no Malian farm modifier found).",
+   "evidence": [
+    "catalog:buildings/building_resource_farm_mal#cost",
+    "catalog:buildings/building_resource_farm_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_resource_farm_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_resource_farm_mal#requirement_ext (no required_player_upgrade age check)",
+    "raw:ebps/races/malian/buildings/building_resource_farm_mal#resource_deposit_ext (initial_amount 120, base_regrowth_rate 75, ui_show_as_infinity True, resource_sub_type farm)",
+    "locale:11142249 = \"Harvestable Food source. ... Only one Villager can work each Farm.\"",
+    "compare catalog:buildings/building_resource_farm_fre#cost (wood 75, 6 s)"
+   ]
+  },
+  "stable": {
+   "id": "building_unit_cavalry_mal",
+   "name": "Stable",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 2,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trains Sofa (horseman line) and scouts; Sofa tier/unique techs.",
+   "evidence": [
+    "catalog:buildings/building_unit_cavalry_mal#cost",
+    "catalog:buildings/building_unit_cavalry_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_unit_cavalry_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_unit_cavalry_mal#requirement_ext/requirement_table/required_player_upgrade/upgrade_name=feudal_age (is_present True)",
+    "catalog:buildings/building_unit_cavalry_mal#trainableUnits",
+    "catalog:buildings/building_unit_cavalry_mal#researchableTechnologies"
+   ]
+  },
+  "barracks": {
+   "id": "building_unit_infantry_mal",
+   "name": "Barracks",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trains Donso, Musofadi Warrior (and Mansa/Freeborn once unlocked).",
+   "evidence": [
+    "catalog:buildings/building_unit_infantry_mal#cost",
+    "catalog:buildings/building_unit_infantry_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_unit_infantry_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_unit_infantry_mal#requirement_ext (no required_player_upgrade age check)",
+    "catalog:buildings/building_unit_infantry_mal#trainableUnits",
+    "catalog:buildings/building_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  "archery-range": {
+   "id": "building_unit_ranged_mal",
+   "name": "Archery Range",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 2,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trains Archer, Javelin Thrower, Musofadi Gunner (Imperial), Mansa Javelineer once unlocked.",
+   "evidence": [
+    "catalog:buildings/building_unit_ranged_mal#cost",
+    "catalog:buildings/building_unit_ranged_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_unit_ranged_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_unit_ranged_mal#requirement_ext/requirement_table/required_player_upgrade/upgrade_name=feudal_age (is_present True)",
+    "catalog:buildings/building_unit_ranged_mal#trainableUnits",
+    "catalog:buildings/building_unit_ranged_mal#researchableTechnologies"
+   ]
+  },
+  "blacksmith": {
+   "id": "building_tech_unit_infantry_mal",
+   "name": "Blacksmith",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 25,
+   "age": 2,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Melee/ranged damage and armor tiers, Military Academy and Precision Training are researched here for Malians.",
+   "evidence": [
+    "catalog:buildings/building_tech_unit_infantry_mal#cost",
+    "catalog:buildings/building_tech_unit_infantry_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_tech_unit_infantry_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_tech_unit_infantry_mal#requirement_ext/requirement_table/required_player_upgrade/upgrade_name=feudal_age (is_present True)",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  "market": {
+   "id": "building_econ_market_mal",
+   "name": "Market",
+   "cost": {
+    "wood": 100
+   },
+   "buildSeconds": 20,
+   "age": 2,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trader production; no Malian market technologies in the research list.",
+   "evidence": [
+    "catalog:buildings/building_econ_market_mal#cost",
+    "catalog:buildings/building_econ_market_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_econ_market_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_econ_market_mal#requirement_ext/requirement_table/required_player_upgrade/upgrade_name=feudal_age (is_present True)",
+    "catalog:buildings/building_econ_market_mal#trainableUnits",
+    "catalog:buildings/building_econ_market_mal#researchableTechnologies"
+   ]
+  },
+  "cattle-ranch": {
+   "id": "building_econ_ranch_mal",
+   "name": "Cattle Ranch",
+   "cost": {
+    "wood": 125
+   },
+   "buildSeconds": 15,
+   "age": 2,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Not a drop-off. 3 cattle slots (hold_cattle only); garrisoned cattle produce food over time (see mechanic cattle-ranch). No build limit found.",
+   "evidence": [
+    "catalog:buildings/building_econ_ranch_mal#cost",
+    "catalog:buildings/building_econ_ranch_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_econ_ranch_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_econ_ranch_mal#requirement_ext/requirement_table/required_player_upgrade/upgrade_name=feudal_age (is_present True)",
+    "raw:ebps/races/malian/buildings/building_econ_ranch_mal#hold_ext/num_slots=3, num_squad_slots=3, acceptable_type=hold_cattle",
+    "raw:ebps/races/malian/buildings/building_econ_ranch_mal#hold_ext/on_loaded_squad_action_tree=ranch_hold_events_mal\\load_cattle",
+    "catalog:buildings/building_econ_ranch_mal#garrison"
+   ]
+  },
+  "pit-mine": {
+   "id": "building_open_pit_mine_mal",
+   "name": "Pit Mine",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 15,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Placed on an unclaimed gold deposit; three record variants by deposit size (building_open_pit_mine_mal large, _small_mal on resource_small, _tiny_mal on resource_tiny; tiny has 1500 HP). Same cost/time for all. Count limit: see mechanic pit-mine.",
+   "evidence": [
+    "catalog:buildings/building_open_pit_mine_mal#cost",
+    "catalog:buildings/building_open_pit_mine_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_open_pit_mine_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_open_pit_mine_mal#requirement_ext (no required_player_upgrade age check)",
+    "catalog:buildings/building_open_pit_mine_small_mal#cost",
+    "catalog:buildings/building_open_pit_mine_tiny_mal#cost",
+    "raw:ebps/races/malian/buildings/building_open_pit_mine_mal#construction_ext/placement_requirements/requirements/required_near_entity (unit_type gold, gold_deposit_is_claimed must be False, not resource_tiny, outer_radius 1)",
+    "raw:ebps/races/malian/buildings/building_open_pit_mine_small_mal#...required_near_entity/required_unit_type[1]=resource_small",
+    "raw:ebps/races/malian/buildings/building_open_pit_mine_tiny_mal#...required_near_entity/required_unit_type[1]=resource_tiny",
+    "locale:11221926 = \"... construct the Pit Mine over top of Gold Veins in the Dark Age (I) ...\""
+   ]
+  },
+  "toll-outpost": {
+   "id": "building_defense_outpost_mal",
+   "name": "Toll Outpost",
+   "cost": {
+    "wood": 100
+   },
+   "buildSeconds": 60,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Malian outposts are Toll Outposts by default (see mechanic toll-outpost).",
+   "evidence": [
+    "catalog:buildings/building_defense_outpost_mal#cost",
+    "catalog:buildings/building_defense_outpost_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_defense_outpost_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_defense_outpost_mal#requirement_ext (only bedrock_foundations checks, no age)",
+    "locale:11227992 = \"... Passing Traders and Trade Ships instantly provide an additional 8% of their carried Gold. Does not generate any bonus tax if a toll outpost is built within range of another one.\" (%1% = 8 from raw:ebps/races/malian/buildings/building_defense_outpost_mal#ui_ext/help_text_formatter)"
+   ]
+  },
+  "madrasa": {
+   "id": "building_tech_university_mal",
+   "name": "Madrasa",
+   "cost": {
+    "wood": 450
+   },
+   "buildSeconds": 60,
+   "age": 4,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "University equivalent; Biology, Elite Army Tactics.",
+   "evidence": [
+    "catalog:buildings/building_tech_university_mal#cost",
+    "catalog:buildings/building_tech_university_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_tech_university_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_tech_university_mal#requirement_ext/requirement_table/required_player_upgrade/upgrade_name=imperial_age (is_present True)",
+    "catalog:buildings/building_tech_university_mal#researchableTechnologies"
+   ]
+  },
+  "mosque": {
+   "id": "building_unit_religious_mal",
+   "name": "Mosque",
+   "cost": {
+    "wood": 200
+   },
+   "buildSeconds": 25,
+   "age": 3,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Religious building; Tithe Barns (relic income).",
+   "evidence": [
+    "catalog:buildings/building_unit_religious_mal#cost",
+    "catalog:buildings/building_unit_religious_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_unit_religious_mal#cost_ext/time_cost",
+    "raw:ebps/races/malian/buildings/building_unit_religious_mal#requirement_ext/requirement_table/required_player_upgrade/upgrade_name=castle_age (is_present True)",
+    "catalog:buildings/building_unit_religious_mal#researchableTechnologies"
+   ]
+  },
+  "dock": {
+   "id": "building_unit_naval_mal",
+   "name": "Dock",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": null,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Fishing Boats (Malian fishing boats drop off 10% of their food as gold); fishing techs. Age not checked.",
+   "evidence": [
+    "catalog:buildings/building_unit_naval_mal#cost",
+    "catalog:buildings/building_unit_naval_mal#buildTimeSeconds",
+    "raw:ebps/races/malian/buildings/building_unit_naval_mal#cost_ext/time_cost",
+    "catalog:buildings/building_unit_naval_mal#trainableUnits",
+    "catalog:buildings/building_unit_naval_mal#researchableTechnologies"
+   ]
+  }
+ },
+ "landmarks": {
+  "2": [
+   {
+    "key": "saharan-trade-network",
+    "id": "building_landmark_age1_landmarka_mal",
+    "name": "Saharan Trade Network",
+    "cost": {
+     "food": 400,
+     "gold": 200
+    },
+    "buildSeconds": 190,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "landmark",
+      "op": "set",
+      "value": 1,
+      "notes": "Acts as a Toll Outpost (10 garrison slots) with Javelin Emplacement already researched; unlocks Javelin Emplacement for Outposts."
+     },
+     {
+      "kind": "passive_income",
+      "target": "food from trader tax at this landmark",
+      "op": "mul",
+      "value": 1.0,
+      "notes": "Traders/Trade Ships taxed here also generate Food equal to the taxed Gold."
+     },
+     {
+      "kind": "passive_income",
+      "target": "food from trader tax at other Toll Outposts",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "All other Toll Outposts generate 50% of taxed Gold as Food (%1% = 50)."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_landmark_age1_landmarka_mal#cost",
+     "catalog:buildings/building_landmark_age1_landmarka_mal#buildTimeSeconds",
+     "raw:ebps/races/malian/buildings/building_landmark_age1_landmarka_mal#cost_ext/time_cost",
+     "locale:11221934 = \"Acts as a Toll Outpost that comes with Defensive Javelin Emplacement researched. Unlocks Javelin Emplacement for Outposts. All Traders and Trade Ships taxed will generate Food equal to the taxed Gold at this Landmark. All other Toll Outposts will generate 50% of taxed Gold as Food.\" (%1% = 50 from raw:ebps/races/malian/buildings/building_landmark_age1_landmarka_mal#ui_ext/help_text_formatter)",
+     "catalog:buildings/building_landmark_age1_landmarka_mal#garrison",
+     "raw:ebps/races/malian/buildings/building_landmark_age1_landmarka_mal#requirement_ext (feudal_age absent, capital TC complete, only one of the two age-1 landmarks)"
+    ]
+   },
+   {
+    "key": "mansa-quarry",
+    "id": "building_landmark_age1_landmarkb_mal",
+    "name": "Mansa Quarry",
+    "cost": {
+     "food": 400,
+     "gold": 200
+    },
+    "buildSeconds": 190,
+    "effects": [
+     {
+      "kind": "passive_income",
+      "target": "gold",
+      "op": "add",
+      "value": 1.25,
+      "notes": "75 gold per minute (= 1.25/s) while toggled to gold; can be toggled to stone instead (stone rate unresolved)."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_landmark_age1_landmarkb_mal#cost",
+     "catalog:buildings/building_landmark_age1_landmarkb_mal#buildTimeSeconds",
+     "raw:ebps/races/malian/buildings/building_landmark_age1_landmarkb_mal#cost_ext/time_cost",
+     "raw:statemodel_schema/civs/malian#float_properties/gold_rate_landmark_mal.default=75",
+     "locale:11218090 = \"Generates 75 Gold per minute. Can be toggled to generate Stone instead.\" (%1% = 75 from raw:ebps/races/malian/buildings/building_landmark_age1_landmarkb_mal#ui_ext/help_text_formatter)",
+     "raw:ebps/races/malian/buildings/building_landmark_age1_landmarkb_mal#ability_ext/abilities (toggle_pit_mine_resource_gold_mal, toggle_pit_mine_resource_stone_mal); statemodel_ext/schema=landmark_pit_mine_mal",
+     "raw:statemodel_schema/buildings/civilizations/malian/landmark_pit_mine_mal#float_properties/stone_resource_total_per_minute.default=0 (computed at runtime)",
+     "raw:ebps/races/malian/buildings/building_landmark_age1_landmarkb_mal#construction_ext (no gold-deposit placement requirement)"
+    ]
+   }
+  ],
+  "3": [
+   {
+    "key": "grand-fulani-corral",
+    "id": "building_landmark_age2_landmarkc_control_mal",
+    "name": "Grand Fulani Corral",
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "effects": [
+     {
+      "kind": "passive_income",
+      "target": "food per cattle within 25 range of the landmark",
+      "op": "add",
+      "value": 0.3,
+      "notes": "18 food per minute per nearby cattle = 3 food every 10 s (0.3/s). No cattle spawning, cattle discount or ranch-rate change found in the record. 17.0 preview lowers 18 -> 16 (not applied)."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_landmark_age2_landmarkc_control_mal#cost",
+     "catalog:buildings/building_landmark_age2_landmarkc_control_mal#buildTimeSeconds",
+     "raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#cost_ext/time_cost",
+     "raw:statemodel_schema/civs/malian#float_properties/cattle_landmark_food_rate_mal.default=10, cattle_landmark_food_amount_mal.default=3",
+     "locale:11231847 = \"Nearby cattle provide 18 Food per minute.\" (%1% = 18 from raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ui_ext/help_text_formatter)",
+     "raw:abilities/always_on_abilities/malian/cattle_landmark_passive_food_mal#ability_bag/range=25, entity_tree=landmark_c_cattle_food_mal",
+     "raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ability_ext/abilities/ability=cattle_landmark_passive_food_mal; construction_ext/ui_range_radius=25",
+     "catalog:buildings/building_landmark_age2_landmarkc_control_mal#trainableUnits (empty)",
+     "data/patch-next.json Grand Fulani Corral: \"Fulani Corral Food generation per Cattle reduced from 18 Food -> 16 Food\" (17.0 before-value 18 matches installed)"
+    ]
+   },
+   {
+    "key": "farimba-garrison",
+    "id": "building_landmark_age2_landmarkd_control_mal",
+    "name": "Farimba Garrison",
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "effects": [
+     {
+      "kind": "unlock",
+      "target": "one of Mansa Musofadi / Mansa Javelineer / Freeborn Warrior",
+      "op": "set",
+      "value": 1,
+      "notes": "First enlist is free (10 s); each other costs 100 food + 250 gold (30 s). Trains the Mansa units itself."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_landmark_age2_landmarkd_control_mal#cost",
+     "catalog:buildings/building_landmark_age2_landmarkd_control_mal#buildTimeSeconds",
+     "raw:ebps/races/malian/buildings/building_landmark_age2_landmarkd_control_mal#cost_ext/time_cost",
+     "catalog:buildings/building_landmark_age2_landmarkd_control_mal#descriptionTemplate = \"Enlist one of three units to enhance your roster for free: the Mansa Musofadi, Mansa Javelineer, or Freeborn Warrior. The other two can be enlisted for an additional cost.\"",
+     "catalog:buildings/building_landmark_age2_landmarkd_control_mal#trainableUnits",
+     "catalog:buildings/building_landmark_age2_landmarkd_control_mal#researchableTechnologies",
+     "catalog:technologies/farimba_unlock_mansa_javelin#cost",
+     "catalog:technologies/farimba_unlock_mansa_javelin_2#cost"
+    ]
+   }
+  ],
+  "4": [
+   {
+    "key": "griot-bara",
+    "id": "building_landmark_age3_landmarke_mal",
+    "name": "Griot Bara",
+    "cost": {
+     "food": 2400,
+     "gold": 1200
+    },
+    "buildSeconds": 250,
+    "effects": [
+     {
+      "kind": "gather_rate",
+      "target": "villager food",
+      "op": "mul",
+      "value": 1.5,
+      "notes": "Food Festival: 300 gold, +50% villager food gather rate for 90 s; one festival active at a time; ability recharge 30 s."
+     },
+     {
+      "kind": "production_speed",
+      "target": "all units except Traders",
+      "op": "mul",
+      "value": 2.0,
+      "notes": "Production Festival: 300 gold, +100% production speed for 90 s (ability record arg 100; the dummy building record still shows 50)."
+     },
+     {
+      "kind": "other",
+      "target": "rams, bombards, counterweight trebuchets, torches",
+      "op": "mul",
+      "value": 1.5,
+      "notes": "Siege Festival: 300 gold, +50% damage for 90 s."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_landmark_age3_landmarke_mal#cost",
+     "catalog:buildings/building_landmark_age3_landmarke_mal#buildTimeSeconds",
+     "raw:ebps/races/malian/buildings/building_landmark_age3_landmarke_mal#cost_ext/time_cost",
+     "locale:11265624 = \"Begin a festival for 300 Gold, providing global enhancements to Food gather rates, unit production speeds, or damage of torches and siege attacks. One festival may be active at a time.\"",
+     "raw:abilities/timed_abilities/malian/festival_food_mal#ability_bag (cost_to_player/gold 300, recharge_time 30, help_text_formatter 11217433 int_value [50, 90])",
+     "raw:abilities/timed_abilities/malian/festival_military_mal#ability_bag (gold 300, recharge 30, formatter 11265623 int_value [100, 90])",
+     "raw:abilities/timed_abilities/malian/festival_siege_mal#ability_bag (gold 300, recharge 30, formatter 11217424 int_value [50, 90])",
+     "raw:statemodel_schema/civs/malian#float_properties/festival_duration_mal.default=90",
+     "locale:11217433 = \"Increase villager Food gather rate by +50%.\"",
+     "locale:11265623 = \"Increase the production speed of all units except Traders by +100% for 90 seconds.\"",
+     "catalog:buildings/building_dummy_festival_military#descriptionArguments = [50, 90] (older value)"
+    ]
+   },
+   {
+    "key": "fort-of-the-huntress",
+    "id": "building_landmark_age3_landmarkf_mal",
+    "name": "Fort of the Huntress",
+    "cost": {
+     "food": 2400,
+     "gold": 1200
+    },
+    "buildSeconds": 250,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "landmark",
+      "op": "set",
+      "value": 1,
+      "notes": "Acts as a Keep (15 garrison) that shoots poison arrows; nearby infantry enter Stealth for 30 s; Musofadi gain First Strike. No economic effect."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_landmark_age3_landmarkf_mal#cost",
+     "catalog:buildings/building_landmark_age3_landmarkf_mal#buildTimeSeconds",
+     "raw:ebps/races/malian/buildings/building_landmark_age3_landmarkf_mal#cost_ext/time_cost",
+     "catalog:buildings/building_landmark_age3_landmarkf_mal#descriptionTemplate with %1% = 30 (catalog:buildings/building_landmark_age3_landmarkf_mal#descriptionArguments)",
+     "catalog:buildings/building_landmark_age3_landmarkf_mal#garrison"
+    ]
+   }
+  ]
+ },
+ "technologies": [
+  {
+   "id": "upgrade_unit_town_center_wheelbarrow_1",
+   "name": "Wheelbarrow",
+   "age": 1,
+   "building": "mill",
+   "cost": {
+    "wood": 50,
+    "gold": 150
+   },
+   "researchSeconds": 90,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "carry",
+     "target": "villager (all resources)",
+     "op": "add",
+     "value": 5,
+     "notes": "raw carry_capacity 5"
+    },
+    {
+     "kind": "speed",
+     "target": "villager",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw move_speed 1.15"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#cost",
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#requirements (no age requirement)",
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#modifiers",
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#descriptionTemplate + descriptionArguments",
+    "catalog:buildings/building_econ_food_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_villager_hunting_gear_1",
+   "name": "Survival Techniques",
+   "age": 1,
+   "building": "mill",
+   "cost": {
+    "wood": 25,
+    "gold": 75
+   },
+   "researchSeconds": 25,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "hunted meat (deer)",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw survival_techniques_food 0.15; text: hunted meat only"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1#cost",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1#requirements (no age requirement)",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1#modifiers",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_scout_forester",
+   "name": "Professional Scouts",
+   "age": 2,
+   "building": "mill",
+   "cost": {
+    "wood": 150,
+    "gold": 300
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "scout",
+     "op": "set",
+     "value": 1,
+     "notes": "Scouts carry carcasses, +100% damage vs wild animals, -55% speed while carrying, cannot carry boar; raw deer_decay_rate -1.5"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_scout_forester#cost",
+    "catalog:technologies/upgrade_scout_forester#researchTimeSeconds",
+    "catalog:technologies/upgrade_scout_forester#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_scout_forester#modifiers",
+    "catalog:technologies/upgrade_scout_forester#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_2",
+   "name": "Horticulture",
+   "age": 2,
+   "building": "mill",
+   "cost": {
+    "wood": 50,
+    "gold": 100
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "villager food except hunted meat (farm, sheep, berries, cattle)",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "raw gather_rate_food 0.1, text +10%; stacking across tiers (additive on base vs multiplicative) is in common_upgrade_master state trees, not decoded. Cattle Ranch text says food upgrades raise ranch income (amount unresolved)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#cost",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#modifiers",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#descriptionTemplate + descriptionArguments",
+    "locale:11222100 = \"Cattle garrisoned in this ranch generate +25 Food per minute. This value is increased by the food upgrades.\""
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_3",
+   "name": "Fertilization",
+   "age": 3,
+   "building": "mill",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "villager food except hunted meat (farm, sheep, berries, cattle)",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "raw gather_rate_food 0.1, text +10%; stacking across tiers (additive on base vs multiplicative) is in common_upgrade_master state trees, not decoded. Cattle Ranch text says food upgrades raise ranch income (amount unresolved)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#cost",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#requirements (castle_age required)",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#modifiers",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#descriptionTemplate + descriptionArguments",
+    "locale:11222100 = \"Cattle garrisoned in this ranch generate +25 Food per minute. This value is increased by the food upgrades.\""
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_4",
+   "name": "Precision Cross-Breeding",
+   "age": 4,
+   "building": "mill",
+   "cost": {
+    "wood": 250,
+    "gold": 500
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "villager food except hunted meat (farm, sheep, berries, cattle)",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "raw gather_rate_food 0.1, text +10%; stacking across tiers (additive on base vs multiplicative) is in common_upgrade_master state trees, not decoded. Cattle Ranch text says food upgrades raise ranch income (amount unresolved)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#cost",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#modifiers",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#descriptionTemplate + descriptionArguments",
+    "locale:11222100 = \"Cattle garrisoned in this ranch generate +25 Food per minute. This value is increased by the food upgrades.\""
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_fell_rate_1",
+   "name": "Forestry",
+   "age": 1,
+   "building": "lumber-camp",
+   "cost": {
+    "food": 25,
+    "gold": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "tree felling",
+     "op": "mul",
+     "value": 2,
+     "notes": "Doubles the rate villagers chop trees down (text only; no raw modifier)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1#requirements (no age requirement)",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1#description"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_2",
+   "name": "Double Broadax",
+   "age": 2,
+   "building": "lumber-camp",
+   "cost": {
+    "food": 50,
+    "gold": 100
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw wood_rate 0.15, text +15%; stacking across tiers (additive on base vs multiplicative) is in common_upgrade_master state trees, not decoded"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#modifiers",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_3",
+   "name": "Lumber Preservation",
+   "age": 3,
+   "building": "lumber-camp",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw wood_rate 0.15, text +15%; stacking across tiers (additive on base vs multiplicative) is in common_upgrade_master state trees, not decoded"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#requirements (castle_age required)",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#modifiers",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_4",
+   "name": "Crosscut Saw",
+   "age": 4,
+   "building": "lumber-camp",
+   "cost": {
+    "food": 250,
+    "gold": 500
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw wood_rate 0.15, text +15%; stacking across tiers (additive on base vs multiplicative) is in common_upgrade_master state trees, not decoded"
+    },
+    {
+     "kind": "carry",
+     "target": "wood",
+     "op": "add",
+     "value": 5,
+     "notes": "text only (+5 wood carry); no raw carry modifier in the record"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#modifiers",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_2",
+   "name": "Specialized Pick",
+   "age": 2,
+   "building": "mining-camp",
+   "cost": {
+    "wood": 50,
+    "gold": 100
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "gold and stone",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw mining_rate 0.15, mining_rate_stone 0.15; text +15%; stacking across tiers (additive on base vs multiplicative) is in common_upgrade_master state trees, not decoded"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#cost",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#modifiers",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_3",
+   "name": "Shaft Mining",
+   "age": 3,
+   "building": "mining-camp",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "gold and stone",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "text +15%; raw mining_rate and mining_rate_stone are 0.3 (tier 2 raw is 0.15) - 0.3 looks like the cumulative total over base, which equals +15% per tier only if tiers add on base. Unresolved; see unresolved list."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#cost",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#requirements (castle_age required)",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#modifiers",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_4",
+   "name": "Cupellation",
+   "age": 4,
+   "building": "mining-camp",
+   "cost": {
+    "wood": 250,
+    "gold": 500
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "gold",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "text: gold gatherers drop off 15% more resources (drop-off bonus, no raw modifier); whether it applies to Pit Mine income is unresolved"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#cost",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_villager_health",
+   "name": "Textiles",
+   "age": 2,
+   "building": "town-center",
+   "cost": {
+    "food": 50,
+    "gold": 100
+   },
+   "researchSeconds": 20,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "villager health",
+     "op": "mul",
+     "value": 1.5,
+     "notes": "text +50% villager health"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_villager_health#cost",
+    "catalog:technologies/upgrade_villager_health#researchTimeSeconds",
+    "catalog:technologies/upgrade_villager_health#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_villager_health#descriptionTemplate + descriptionArguments",
+    "catalog:buildings/building_town_center_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_banco_repairs_mal",
+   "name": "Banco Repairs",
+   "age": 2,
+   "building": "town-center",
+   "cost": {
+    "wood": 75,
+    "gold": 100
+   },
+   "researchSeconds": 30,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "building repair speed",
+     "op": "mul",
+     "value": 1.5,
+     "notes": "raw multiplier 1.5; text +50%"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_banco_repairs_mal#cost",
+    "catalog:technologies/upgrade_banco_repairs_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_banco_repairs_mal#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_banco_repairs_mal#modifiers",
+    "catalog:technologies/upgrade_banco_repairs_mal#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_econ_extended_lines",
+   "name": "Extended Lines",
+   "age": 2,
+   "building": "dock",
+   "cost": {
+    "wood": 75,
+    "gold": 175
+   },
+   "researchSeconds": 30,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "fishing boat",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "text +15% gather and +10 carry; raw gather_rate_food is 0.1 (text/raw mismatch, unresolved)"
+    },
+    {
+     "kind": "carry",
+     "target": "fishing boat",
+     "op": "add",
+     "value": 10,
+     "notes": "text only"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_extended_lines#cost",
+    "catalog:technologies/upgrade_econ_extended_lines#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_extended_lines#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_econ_extended_lines#modifiers",
+    "catalog:technologies/upgrade_econ_extended_lines#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_econ_drift_nets",
+   "name": "Drift Nets",
+   "age": 3,
+   "building": "dock",
+   "cost": {
+    "wood": 150,
+    "gold": 350
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "fishing boat",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "raw gather_rate_food 0.1, text +10%"
+    },
+    {
+     "kind": "carry",
+     "target": "fishing boat",
+     "op": "add",
+     "value": 20,
+     "notes": "text only"
+    },
+    {
+     "kind": "speed",
+     "target": "fishing boat",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "text only"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_drift_nets#cost",
+    "catalog:technologies/upgrade_econ_drift_nets#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_drift_nets#requirements (castle_age; requires Extended Lines required)",
+    "catalog:technologies/upgrade_econ_drift_nets#modifiers",
+    "catalog:technologies/upgrade_econ_drift_nets#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_unit_religious_tithe_barn_4_mal",
+   "name": "Tithe Barns",
+   "age": 4,
+   "building": "mosque",
+   "cost": {
+    "gold": 500
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "passive_income",
+     "target": "per relic in a Mosque: food",
+     "op": "add",
+     "value": 0.6666666666666666,
+     "notes": "40 food per minute per relic"
+    },
+    {
+     "kind": "passive_income",
+     "target": "per relic in a Mosque: wood",
+     "op": "add",
+     "value": 0.6666666666666666,
+     "notes": "40 wood per minute per relic"
+    },
+    {
+     "kind": "passive_income",
+     "target": "per relic in a Mosque: stone",
+     "op": "add",
+     "value": 0.16666666666666666,
+     "notes": "10 stone per minute per relic"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_religious_tithe_barn_4_mal#cost",
+    "catalog:technologies/upgrade_unit_religious_tithe_barn_4_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_religious_tithe_barn_4_mal#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_unit_religious_tithe_barn_4_mal#modifiers",
+    "catalog:technologies/upgrade_unit_religious_tithe_barn_4_mal#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_tech_military_academy",
+   "name": "Military Academy",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "production_speed",
+     "target": "infantry, cavalry, siege, transport at buildings (military_only_production)",
+     "op": "mul",
+     "value": 1.33,
+     "notes": "raw normal_modifier 1.33; text +33%"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_tech_military_academy#cost",
+    "catalog:technologies/upgrade_tech_military_academy#researchTimeSeconds",
+    "catalog:technologies/upgrade_tech_military_academy#requirements (castle_age required)",
+    "catalog:technologies/upgrade_tech_military_academy#modifiers",
+    "catalog:technologies/upgrade_tech_military_academy#descriptionTemplate + descriptionArguments",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_tech_university_biology",
+   "name": "Biology",
+   "age": 4,
+   "building": "madrasa",
+   "cost": {
+    "food": 500,
+    "gold": 1000
+   },
+   "researchSeconds": 90,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "cavalry health",
+     "op": "mul",
+     "value": 1.25,
+     "notes": "raw health_max 0.25; text +25%; targets cavalry (Sofa included)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_tech_university_biology#cost",
+    "catalog:technologies/upgrade_tech_university_biology#researchTimeSeconds",
+    "catalog:technologies/upgrade_tech_university_biology#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_tech_university_biology#modifiers",
+    "catalog:technologies/upgrade_tech_university_biology#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_manatarms_elite_army_tactics",
+   "name": "Elite Army Tactics",
+   "age": 4,
+   "building": "madrasa",
+   "cost": {
+    "food": 500,
+    "gold": 1000
+   },
+   "researchSeconds": 90,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee infantry damage and health",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw damage 0.15, health_max 0.15 (Donso, Musofadi; not Sofa)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_manatarms_elite_army_tactics#cost",
+    "catalog:technologies/upgrade_manatarms_elite_army_tactics#researchTimeSeconds",
+    "catalog:technologies/upgrade_manatarms_elite_army_tactics#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_manatarms_elite_army_tactics#modifiers",
+    "catalog:technologies/upgrade_manatarms_elite_army_tactics#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_melee_damage_i",
+   "name": "Bloomery",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee damage",
+     "op": "add",
+     "value": 1,
+     "notes": "melee damage +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_damage_i#cost",
+    "catalog:technologies/upgrade_melee_damage_i#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_damage_i#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_melee_damage_i#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_melee_damage_i#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_damage_ii",
+   "name": "Decarbonization",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee damage",
+     "op": "add",
+     "value": 1,
+     "notes": "melee damage +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_damage_ii#cost",
+    "catalog:technologies/upgrade_melee_damage_ii#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_damage_ii#requirements (castle_age required)",
+    "catalog:technologies/upgrade_melee_damage_ii#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_melee_damage_ii#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_damage_iii",
+   "name": "Damascus Steel",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "food": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee damage",
+     "op": "add",
+     "value": 1,
+     "notes": "melee damage +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_damage_iii#cost",
+    "catalog:technologies/upgrade_melee_damage_iii#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_damage_iii#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_melee_damage_iii#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_melee_damage_iii#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_i",
+   "name": "Fitted Leatherwork",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee armor",
+     "op": "add",
+     "value": 1,
+     "notes": "melee armor +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_armor_i#cost",
+    "catalog:technologies/upgrade_melee_armor_i#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_armor_i#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_melee_armor_i#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_melee_armor_i#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_ii",
+   "name": "Insulated Helm",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee armor",
+     "op": "add",
+     "value": 1,
+     "notes": "melee armor +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_armor_ii#cost",
+    "catalog:technologies/upgrade_melee_armor_ii#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_armor_ii#requirements (castle_age required)",
+    "catalog:technologies/upgrade_melee_armor_ii#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_melee_armor_ii#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_iii",
+   "name": "Master Smiths",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "food": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee armor",
+     "op": "add",
+     "value": 1,
+     "notes": "melee armor +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_armor_iii#cost",
+    "catalog:technologies/upgrade_melee_armor_iii#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_armor_iii#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_melee_armor_iii#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_melee_armor_iii#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_i",
+   "name": "Iron Undermesh",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged armor",
+     "op": "add",
+     "value": 1,
+     "notes": "ranged armor +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_i#cost",
+    "catalog:technologies/upgrade_ranged_armor_i#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_i#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_ranged_armor_i#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_ranged_armor_i#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_ii",
+   "name": "Wedge Rivets",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged armor",
+     "op": "add",
+     "value": 1,
+     "notes": "ranged armor +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_ii#cost",
+    "catalog:technologies/upgrade_ranged_armor_ii#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_ii#requirements (castle_age required)",
+    "catalog:technologies/upgrade_ranged_armor_ii#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_ranged_armor_ii#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_iii",
+   "name": "Angled Surfaces",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged armor",
+     "op": "add",
+     "value": 1,
+     "notes": "ranged armor +1; targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_iii#cost",
+    "catalog:technologies/upgrade_ranged_armor_iii#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_iii#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_ranged_armor_iii#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_ranged_armor_iii#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_damage_i",
+   "name": "Steeled Arrow",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged damage",
+     "op": "add",
+     "value": 1,
+     "notes": "ranged damage +1 (arrows/bolts; javelin coverage via state-tree filter, unverified); targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_i#cost",
+    "catalog:technologies/upgrade_ranged_damage_i#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_i#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_ranged_damage_i#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_ranged_damage_i#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_damage_ii",
+   "name": "Balanced Projectiles",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged damage",
+     "op": "add",
+     "value": 1,
+     "notes": "ranged damage +1 (see tier I note); targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_ii#cost",
+    "catalog:technologies/upgrade_ranged_damage_ii#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_ii#requirements (castle_age required)",
+    "catalog:technologies/upgrade_ranged_damage_ii#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_ranged_damage_ii#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_damage_iii",
+   "name": "Platecutter Point",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged damage",
+     "op": "add",
+     "value": 1,
+     "notes": "ranged damage +1 (see tier I note); targets per record apply_to_unit_classes"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_iii#cost",
+    "catalog:technologies/upgrade_ranged_damage_iii#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_iii#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_ranged_damage_iii#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_ranged_damage_iii#targeting",
+    "catalog:buildings/building_tech_unit_infantry_mal#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_sofa_armor_mal",
+   "name": "Imported Armor",
+   "age": 3,
+   "building": "stable",
+   "cost": {
+    "food": 175,
+    "gold": 500
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "Sofa melee armor",
+     "op": "add",
+     "value": 2,
+     "notes": "raw armor_melee 2"
+    },
+    {
+     "kind": "other",
+     "target": "Sofa ranged armor",
+     "op": "add",
+     "value": 2,
+     "notes": "raw armor_range 2"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_sofa_armor_mal#cost",
+    "catalog:technologies/upgrade_sofa_armor_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_sofa_armor_mal#requirements (castle_age required)",
+    "catalog:technologies/upgrade_sofa_armor_mal#modifiers",
+    "catalog:technologies/upgrade_sofa_armor_mal#descriptionTemplate + descriptionArguments",
+    "catalog:technologies/upgrade_sofa_armor_mal#targeting (cavalry_light)",
+    "raw:ebps/races/malian/units/unit_horseman_2_mal#type_ext/unit_type_list/unit_type[9]=cavalry_light"
+   ]
+  },
+  {
+   "id": "upgrade_sofa_farima_leadership_mal",
+   "name": "Farima Leadership",
+   "age": 4,
+   "building": "stable",
+   "cost": {
+    "food": 250,
+    "gold": 500
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "speed",
+     "target": "infantry near Sofa",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw move_speed 1.15; aura from Sofa, does not change Sofa itself"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_sofa_farima_leadership_mal#cost",
+    "catalog:technologies/upgrade_sofa_farima_leadership_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_sofa_farima_leadership_mal#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_sofa_farima_leadership_mal#modifiers",
+    "catalog:technologies/upgrade_sofa_farima_leadership_mal#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_unit_horseman_3_mal",
+   "name": "Upgrade to Veteran (Sofa)",
+   "age": 3,
+   "building": "stable",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 30,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrade Sofa to Veteran Sofa.",
+     "op": "set",
+     "value": 1,
+     "notes": "Veteran (Castle Age) tier upgrades are already at the Malian half cost/time in the record"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_horseman_3_mal#cost",
+    "catalog:technologies/upgrade_unit_horseman_3_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_horseman_3_mal#requirements (castle_age required)",
+    "catalog:technologies/upgrade_unit_horseman_3_mal#description",
+    "catalog:technologies/upgrade_unit_horseman_3_mal#stateTrees (upgrade_unit_tiers\\general)",
+    "locale:11246395 = \"Veteran unit technologies unlocked in the Castle Age (III) are researched at half the time and cost.\""
+   ]
+  },
+  {
+   "id": "upgrade_unit_horseman_4_mal",
+   "name": "Upgrade to Elite (Sofa)",
+   "age": 4,
+   "building": "stable",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrade Veteran Sofa to Elite Sofa.",
+     "op": "set",
+     "value": 1,
+     "notes": ""
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_horseman_4_mal#cost",
+    "catalog:technologies/upgrade_unit_horseman_4_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_horseman_4_mal#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_unit_horseman_4_mal#description",
+    "catalog:technologies/upgrade_unit_horseman_4_mal#stateTrees (upgrade_unit_tiers\\general)"
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_2_mal",
+   "name": "Upgrade to Hardened (Donso)",
+   "age": 2,
+   "building": "barracks",
+   "cost": {
+    "food": 15,
+    "gold": 35
+   },
+   "researchSeconds": 15,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrade Donso to Hardened Donso.",
+     "op": "set",
+     "value": 1,
+     "notes": ""
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_spearman_2_mal#cost",
+    "catalog:technologies/upgrade_unit_spearman_2_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_spearman_2_mal#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_unit_spearman_2_mal#description",
+    "catalog:technologies/upgrade_unit_spearman_2_mal#stateTrees (upgrade_unit_tiers\\general)"
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_3_mal",
+   "name": "Upgrade to Veteran (Donso)",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 30,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrade Hardened Dosno to Veteran Donso.",
+     "op": "set",
+     "value": 1,
+     "notes": "Veteran (Castle Age) tier upgrades are already at the Malian half cost/time in the record"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_spearman_3_mal#cost",
+    "catalog:technologies/upgrade_unit_spearman_3_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_spearman_3_mal#requirements (castle_age required)",
+    "catalog:technologies/upgrade_unit_spearman_3_mal#description",
+    "catalog:technologies/upgrade_unit_spearman_3_mal#stateTrees (upgrade_unit_tiers\\general)",
+    "locale:11246395 = \"Veteran unit technologies unlocked in the Castle Age (III) are researched at half the time and cost.\""
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_4_mal",
+   "name": "Upgrade to Elite (Donso)",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrade Veteran Donso to Elite Donso.",
+     "op": "set",
+     "value": 1,
+     "notes": ""
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_spearman_4_mal#cost",
+    "catalog:technologies/upgrade_unit_spearman_4_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_spearman_4_mal#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_unit_spearman_4_mal#description",
+    "catalog:technologies/upgrade_unit_spearman_4_mal#stateTrees (upgrade_unit_tiers\\general)"
+   ]
+  },
+  {
+   "id": "upgrade_unit_gbeto_3_mal",
+   "name": "Upgrade to Veteran (Musofadi Warrior)",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 30,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrade Musofadi to Veteran Musofadi.",
+     "op": "set",
+     "value": 1,
+     "notes": "Veteran (Castle Age) tier upgrades are already at the Malian half cost/time in the record"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_gbeto_3_mal#cost",
+    "catalog:technologies/upgrade_unit_gbeto_3_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_gbeto_3_mal#requirements (castle_age required)",
+    "catalog:technologies/upgrade_unit_gbeto_3_mal#description",
+    "catalog:technologies/upgrade_unit_gbeto_3_mal#stateTrees (upgrade_unit_tiers\\general)",
+    "locale:11246395 = \"Veteran unit technologies unlocked in the Castle Age (III) are researched at half the time and cost.\""
+   ]
+  },
+  {
+   "id": "upgrade_unit_gbeto_4_mal",
+   "name": "Upgrade to Elite (Musofadi Warrior)",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrade Veteran Musofadi to Elite Musofadi.",
+     "op": "set",
+     "value": 1,
+     "notes": ""
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_gbeto_4_mal#cost",
+    "catalog:technologies/upgrade_unit_gbeto_4_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_gbeto_4_mal#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_unit_gbeto_4_mal#description",
+    "catalog:technologies/upgrade_unit_gbeto_4_mal#stateTrees (upgrade_unit_tiers\\general)"
+   ]
+  },
+  {
+   "id": "upgrade_unit_javelin_3_mal",
+   "name": "Upgrade to Veteran (Javelin Thrower)",
+   "age": 3,
+   "building": "archery-range",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 30,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrades Javelin Thrower to Veteran Javelin Thrower",
+     "op": "set",
+     "value": 1,
+     "notes": "Veteran (Castle Age) tier upgrades are already at the Malian half cost/time in the record"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_javelin_3_mal#cost",
+    "catalog:technologies/upgrade_unit_javelin_3_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_javelin_3_mal#requirements (castle_age required)",
+    "catalog:technologies/upgrade_unit_javelin_3_mal#description",
+    "catalog:technologies/upgrade_unit_javelin_3_mal#stateTrees (upgrade_unit_tiers\\general)",
+    "locale:11246395 = \"Veteran unit technologies unlocked in the Castle Age (III) are researched at half the time and cost.\""
+   ]
+  },
+  {
+   "id": "upgrade_unit_javelin_4_mal",
+   "name": "Upgrade to Elite (Javelin Thrower)",
+   "age": 4,
+   "building": "archery-range",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Upgrades Veteran Javelin Thrower to Elite Javelin Thrower",
+     "op": "set",
+     "value": 1,
+     "notes": ""
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_javelin_4_mal#cost",
+    "catalog:technologies/upgrade_unit_javelin_4_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_javelin_4_mal#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_unit_javelin_4_mal#description",
+    "catalog:technologies/upgrade_unit_javelin_4_mal#stateTrees (upgrade_unit_tiers\\general)"
+   ]
+  },
+  {
+   "id": "upgrade_donso_precision_training_mal",
+   "name": "Precision Training",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged damage: Donso +6, Archers +2, Javelin Throwers +3",
+     "op": "add",
+     "value": 6,
+     "notes": "per descriptionArguments [6, 2, 3]"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_donso_precision_training_mal#cost",
+    "catalog:technologies/upgrade_donso_precision_training_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_donso_precision_training_mal#requirements (imperial_age required)",
+    "catalog:technologies/upgrade_donso_precision_training_mal#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "upgrade_stealth_healing_mal",
+   "name": "Local Knowledge",
+   "age": 2,
+   "building": "barracks",
+   "cost": {
+    "food": 75,
+    "gold": 200
+   },
+   "researchSeconds": 30,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "Musofadi healing after stealth",
+     "op": "add",
+     "value": 5,
+     "notes": "+5 healing per attack for 5 s after leaving stealth"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_stealth_healing_mal#cost",
+    "catalog:technologies/upgrade_stealth_healing_mal#researchTimeSeconds",
+    "catalog:technologies/upgrade_stealth_healing_mal#requirements (feudal_age required)",
+    "catalog:technologies/upgrade_stealth_healing_mal#descriptionTemplate + descriptionArguments"
+   ]
+  },
+  {
+   "id": "farimba_unlock_mansa_javelin",
+   "name": "Enlist Mansa Javelineers (free first pick)",
+   "age": 3,
+   "building": "landmark:farimba-garrison",
+   "cost": {},
+   "researchSeconds": 10,
+   "category": "landmark",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Enlist Mansa Javelineers (free first pick)",
+     "op": "set",
+     "value": 1,
+     "notes": "converts the base line to its Mansa/Freeborn variant (tierTransitions)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/farimba_unlock_mansa_javelin#cost",
+    "catalog:technologies/farimba_unlock_mansa_javelin#researchTimeSeconds",
+    "catalog:technologies/farimba_unlock_mansa_javelin#requirements",
+    "catalog:technologies/farimba_unlock_mansa_javelin#description"
+   ]
+  },
+  {
+   "id": "farimba_unlock_mansa_javelin_2",
+   "name": "Enlist Mansa Javelineers (paid)",
+   "age": 3,
+   "building": "landmark:farimba-garrison",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 30,
+   "category": "landmark",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Enlist Mansa Javelineers (paid)",
+     "op": "set",
+     "value": 1,
+     "notes": "converts the base line to its Mansa/Freeborn variant (tierTransitions)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/farimba_unlock_mansa_javelin_2#cost",
+    "catalog:technologies/farimba_unlock_mansa_javelin_2#researchTimeSeconds",
+    "catalog:technologies/farimba_unlock_mansa_javelin_2#requirements",
+    "catalog:technologies/farimba_unlock_mansa_javelin_2#description"
+   ]
+  },
+  {
+   "id": "farimba_unlock_mansa_musofadi",
+   "name": "Enlist Mansa Musofadi (free first pick)",
+   "age": 3,
+   "building": "landmark:farimba-garrison",
+   "cost": {},
+   "researchSeconds": 10,
+   "category": "landmark",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Enlist Mansa Musofadi (free first pick)",
+     "op": "set",
+     "value": 1,
+     "notes": "converts the base line to its Mansa/Freeborn variant (tierTransitions)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/farimba_unlock_mansa_musofadi#cost",
+    "catalog:technologies/farimba_unlock_mansa_musofadi#researchTimeSeconds",
+    "catalog:technologies/farimba_unlock_mansa_musofadi#requirements",
+    "catalog:technologies/farimba_unlock_mansa_musofadi#description"
+   ]
+  },
+  {
+   "id": "farimba_unlock_mansa_musofadi_2",
+   "name": "Enlist Mansa Musofadi (paid)",
+   "age": 3,
+   "building": "landmark:farimba-garrison",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 30,
+   "category": "landmark",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Enlist Mansa Musofadi (paid)",
+     "op": "set",
+     "value": 1,
+     "notes": "converts the base line to its Mansa/Freeborn variant (tierTransitions)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/farimba_unlock_mansa_musofadi_2#cost",
+    "catalog:technologies/farimba_unlock_mansa_musofadi_2#researchTimeSeconds",
+    "catalog:technologies/farimba_unlock_mansa_musofadi_2#requirements",
+    "catalog:technologies/farimba_unlock_mansa_musofadi_2#description"
+   ]
+  },
+  {
+   "id": "farimba_unlock_freeborn",
+   "name": "Enlist Freeborn Warriors (free first pick)",
+   "age": 3,
+   "building": "landmark:farimba-garrison",
+   "cost": {},
+   "researchSeconds": 10,
+   "category": "landmark",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Enlist Freeborn Warriors (free first pick)",
+     "op": "set",
+     "value": 1,
+     "notes": "converts the base line to its Mansa/Freeborn variant (tierTransitions)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/farimba_unlock_freeborn#cost",
+    "catalog:technologies/farimba_unlock_freeborn#researchTimeSeconds",
+    "catalog:technologies/farimba_unlock_freeborn#requirements",
+    "catalog:technologies/farimba_unlock_freeborn#description"
+   ]
+  },
+  {
+   "id": "farimba_unlock_freeborn_2",
+   "name": "Enlist Freeborn Warriors (paid)",
+   "age": 3,
+   "building": "landmark:farimba-garrison",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 30,
+   "category": "landmark",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "Enlist Freeborn Warriors (paid)",
+     "op": "set",
+     "value": 1,
+     "notes": "converts the base line to its Mansa/Freeborn variant (tierTransitions)"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/farimba_unlock_freeborn_2#cost",
+    "catalog:technologies/farimba_unlock_freeborn_2#researchTimeSeconds",
+    "catalog:technologies/farimba_unlock_freeborn_2#requirements",
+    "catalog:technologies/farimba_unlock_freeborn_2#description"
+   ]
+  }
+ ],
+ "army": {
+  "lines": [
+   {
+    "key": "sofa",
+    "name": "Sofa",
+    "producers": [
+     "stable"
+    ],
+    "tiers": [
+     {
+      "id": "unit_horseman_2_mal",
+      "name": "Sofa",
+      "age": 2,
+      "cost": {
+       "food": 120,
+       "gold": 60
+      },
+      "trainSeconds": 26,
+      "pop": 1,
+      "hp": 160
+     },
+     {
+      "id": "unit_horseman_3_mal",
+      "name": "Veteran Sofa",
+      "age": 3,
+      "cost": {
+       "food": 120,
+       "gold": 60
+      },
+      "trainSeconds": 26,
+      "pop": 1,
+      "hp": 195
+     },
+     {
+      "id": "unit_horseman_4_mal",
+      "name": "Elite Sofa",
+      "age": 4,
+      "cost": {
+       "food": 120,
+       "gold": 60
+      },
+      "trainSeconds": 26,
+      "pop": 1,
+      "hp": 230
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_horseman_3_mal",
+     "upgrade_unit_horseman_4_mal"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i",
+     "upgrade_melee_damage_ii",
+     "upgrade_melee_damage_iii",
+     "upgrade_melee_armor_i",
+     "upgrade_melee_armor_ii",
+     "upgrade_melee_armor_iii",
+     "upgrade_ranged_armor_i",
+     "upgrade_ranged_armor_ii",
+     "upgrade_ranged_armor_iii",
+     "upgrade_sofa_armor_mal",
+     "upgrade_tech_university_biology",
+     "upgrade_tech_military_academy",
+     "upgrade_sofa_farima_leadership_mal"
+    ],
+    "evidence": [
+     "catalog:units/unit_horseman_2_mal#cost",
+     "catalog:units/unit_horseman_2_mal#trainTimeSeconds",
+     "catalog:units/unit_horseman_2_mal#hp",
+     "catalog:units/unit_horseman_3_mal#hp",
+     "catalog:units/unit_horseman_4_mal#hp",
+     "catalog:units/unit_horseman_2_mal#population",
+     "catalog:units/unit_horseman_2_mal#armor (2/2, vet 3/3, elite 4/4)",
+     "catalog:units/unit_horseman_2_mal#speedEngineUnits = 6.9",
+     "catalog:units/unit_horseman_2_mal#requirements (feudal_age)",
+     "catalog:buildings/building_unit_cavalry_mal#trainableUnits",
+     "catalog:units/unit_horseman_2_mal#tierTransitions",
+     "raw:ebps/races/malian/units/unit_horseman_2_mal#type_ext/unit_type_list (cavalry, heavy, cavalry_light, sofa, melee)",
+     "catalog-enrichment.json unit_horseman_2_mal upgradeGroups (Biology; blacksmith melee/ranged armor and melee damage; Stable tier upgrades)",
+     "Griot Bara Production Festival (+100% production speed, 90 s) also applies - see landmarks[\"4\"]"
+    ]
+   },
+   {
+    "key": "donso",
+    "name": "Donso",
+    "producers": [
+     "barracks"
+    ],
+    "tiers": [
+     {
+      "id": "unit_spearman_1_mal",
+      "name": "Donso",
+      "age": 1,
+      "cost": {
+       "food": 60,
+       "wood": 30
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 80
+     },
+     {
+      "id": "unit_spearman_2_mal",
+      "name": "Hardened Donso",
+      "age": 2,
+      "cost": {
+       "food": 60,
+       "wood": 30
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 100
+     },
+     {
+      "id": "unit_spearman_3_mal",
+      "name": "Veteran Donso",
+      "age": 3,
+      "cost": {
+       "food": 60,
+       "wood": 30
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 120
+     },
+     {
+      "id": "unit_spearman_4_mal",
+      "name": "Elite Donso",
+      "age": 4,
+      "cost": {
+       "food": 60,
+       "wood": 30
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 150
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_spearman_2_mal",
+     "upgrade_unit_spearman_3_mal",
+     "upgrade_unit_spearman_4_mal"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i",
+     "upgrade_melee_damage_ii",
+     "upgrade_melee_damage_iii",
+     "upgrade_melee_armor_i",
+     "upgrade_melee_armor_ii",
+     "upgrade_melee_armor_iii",
+     "upgrade_ranged_armor_i",
+     "upgrade_ranged_armor_ii",
+     "upgrade_ranged_armor_iii",
+     "upgrade_donso_precision_training_mal",
+     "upgrade_manatarms_elite_army_tactics",
+     "upgrade_tech_military_academy"
+    ],
+    "evidence": [
+     "catalog:units/unit_spearman_1_mal#cost",
+     "catalog:units/unit_spearman_1_mal#trainTimeSeconds",
+     "catalog:units/unit_spearman_1_mal#hp",
+     "catalog:units/unit_spearman_4_mal#hp",
+     "catalog:units/unit_spearman_1_mal#tierTransitions",
+     "catalog:buildings/building_unit_infantry_mal#trainableUnits"
+    ]
+   },
+   {
+    "key": "javelin",
+    "name": "Javelin Thrower",
+    "producers": [
+     "archery-range"
+    ],
+    "tiers": [
+     {
+      "id": "unit_javelin_2_mal",
+      "name": "Javelin Thrower",
+      "age": 2,
+      "cost": {
+       "food": 80,
+       "gold": 40
+      },
+      "trainSeconds": 22.5,
+      "pop": 1,
+      "hp": 70
+     },
+     {
+      "id": "unit_javelin_3_mal",
+      "name": "Veteran Javelin Thrower",
+      "age": 3,
+      "cost": {
+       "food": 80,
+       "gold": 40
+      },
+      "trainSeconds": 22.5,
+      "pop": 1,
+      "hp": 80
+     },
+     {
+      "id": "unit_javelin_4_mal",
+      "name": "Elite Javelin Thrower",
+      "age": 4,
+      "cost": {
+       "food": 80,
+       "gold": 40
+      },
+      "trainSeconds": 22.5,
+      "pop": 1,
+      "hp": 95
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_javelin_3_mal",
+     "upgrade_unit_javelin_4_mal"
+    ],
+    "applicableTechs": [
+     "upgrade_ranged_damage_i",
+     "upgrade_ranged_damage_ii",
+     "upgrade_ranged_damage_iii",
+     "upgrade_ranged_armor_i",
+     "upgrade_ranged_armor_ii",
+     "upgrade_ranged_armor_iii",
+     "upgrade_melee_armor_i",
+     "upgrade_melee_armor_ii",
+     "upgrade_melee_armor_iii",
+     "upgrade_donso_precision_training_mal",
+     "upgrade_tech_military_academy"
+    ],
+    "evidence": [
+     "catalog:units/unit_javelin_2_mal#cost",
+     "catalog:units/unit_javelin_2_mal#trainTimeSeconds",
+     "catalog:units/unit_javelin_2_mal#hp",
+     "catalog:units/unit_javelin_4_mal#hp",
+     "catalog:units/unit_javelin_2_mal#tierTransitions (farimba_unlock_mansa_javelin converts to Mansa Javelineer)",
+     "catalog:buildings/building_unit_ranged_mal#trainableUnits"
+    ]
+   },
+   {
+    "key": "musofadi",
+    "name": "Musofadi Warrior",
+    "producers": [
+     "barracks"
+    ],
+    "tiers": [
+     {
+      "id": "unit_gbeto_2_mal",
+      "name": "Musofadi Warrior",
+      "age": 2,
+      "cost": {
+       "food": 45,
+       "gold": 30
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 95
+     },
+     {
+      "id": "unit_gbeto_3_mal",
+      "name": "Veteran Musofadi Warrior",
+      "age": 3,
+      "cost": {
+       "food": 45,
+       "gold": 30
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 115
+     },
+     {
+      "id": "unit_gbeto_4_mal",
+      "name": "Elite Musofadi Warrior",
+      "age": 4,
+      "cost": {
+       "food": 45,
+       "gold": 30
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 140
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_gbeto_3_mal",
+     "upgrade_unit_gbeto_4_mal"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i",
+     "upgrade_melee_damage_ii",
+     "upgrade_melee_damage_iii",
+     "upgrade_melee_armor_i",
+     "upgrade_melee_armor_ii",
+     "upgrade_melee_armor_iii",
+     "upgrade_ranged_armor_i",
+     "upgrade_ranged_armor_ii",
+     "upgrade_ranged_armor_iii",
+     "upgrade_stealth_healing_mal",
+     "upgrade_manatarms_elite_army_tactics",
+     "upgrade_tech_military_academy"
+    ],
+    "evidence": [
+     "catalog:units/unit_gbeto_2_mal#cost",
+     "catalog:units/unit_gbeto_2_mal#trainTimeSeconds",
+     "catalog:units/unit_gbeto_2_mal#hp",
+     "catalog:units/unit_gbeto_4_mal#hp",
+     "catalog:units/unit_gbeto_2_mal#tierTransitions (farimba_unlock_mansa_musofadi converts to Mansa Musofadi)",
+     "catalog:buildings/building_unit_infantry_mal#trainableUnits"
+    ]
+   }
+  ]
+ },
+ "mechanics": [
+  {
+   "key": "pit-mine",
+   "summary": "Pit Mine on an unclaimed gold deposit generates gold passively without depleting it; each House or Mining Camp in its influence adds +25% of the base rate. Villagers can still mine the same deposit. If the deposit is exhausted the Pit Mine keeps extracting (and can be re-placed on exhausted veins).",
+   "params": {
+    "building": "pit-mine",
+    "variants": [
+     "building_open_pit_mine_mal",
+     "building_open_pit_mine_small_mal",
+     "building_open_pit_mine_tiny_mal"
+    ],
+    "placement": "unclaimed gold deposit (gold_deposit_is_claimed must be False) within 1 unit; large/small/tiny deposit picks the variant",
+    "cost": {
+     "wood": 150
+    },
+    "buildSeconds": 15,
+    "age": 1,
+    "goldPerMinute": 36,
+    "goldPerSecond": 0.6,
+    "perHouse": 0.25,
+    "op": "add",
+    "formula": "gold/min = 36 * (1 + 0.25 * n), n = Houses + Mining Camps inside this Pit Mine's influence (inferred: rate modifier default 1 plus 0.25 per building)",
+    "influenceSources": [
+     "building_house_mal",
+     "building_econ_mining_camp_mal"
+    ],
+    "influenceGeneratorRangeRaw": 4,
+    "limitPerPlayerRaw": 1,
+    "limitNote": "pit_mine_limit_mal default 1 is checked against pit_mine_count / active_pit_mine_count by a state tree; what is counted (all Pit Mines vs ones being placed) is unresolved",
+    "perDeposit": 1,
+    "villagersCanMineSameDeposit": true,
+    "depletesDeposit": false,
+    "whenDepleted": "continues extracting; can be re-placed on exhausted veins"
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:statemodel_schema/civs/malian#float_properties/gold_rate_small_mal.default=36, gold_rate_large_mal.default=36",
+    "locale:11215109 = \"Must be built on a Gold Vein. Mines 36 Gold per minute without depleting the deposit. If a deposit has been depleted, the Pit Mine can be re-placed on exhausted Gold Veins.\" (%1% = 36 from raw:ebps/races/malian/buildings/building_open_pit_mine_mal#ui_ext/help_text_formatter/formatter_arguments/int_value; same on _small/_tiny)",
+    "raw:statemodel_schema/civs/malian#float_properties/open_pit_influence_rate_mod_mal.default=0.25",
+    "raw:statemodel_schema/buildings/civilizations/malian/pit_mine_mal#float_properties/open_pit_mine_rate_modifier_mal.default=1, gold_resource_total_per_minute.default=0",
+    "locale:11221856 = \"The Gold extraction rate of Open Pit Mines is increased by +25% for each House or Mining Camp built within the influence.\" (current text: referenced with int_value 25 by building_open_pit_mine_mal ui_extra_info, building_house_mal, building_econ_mining_camp_mal and abilities/always_on_abilities/malian/open_pit_mine_influence_gen_mal; older ids 11215155 \"0.5% for each House\" and 11221859 \"+25% ... House or Mine\" are not referenced by these records)",
+    "raw:ebps/races/malian/buildings/building_open_pit_mine_mal#district_bonuses_ext/district_bonuses/district_bonus (satisfying_entity_group[0]=building_house_mal, [1]=building_econ_mining_camp_mal; action_tree open_pit_mine_influence_mal\\root); district_generator_ext/range_metres=4",
+    "raw:ebps/races/malian/buildings/building_open_pit_mine_mal#construction_ext/placement_requirements/requirements/required_near_entity (gold, gold_deposit_is_claimed False, not resource_tiny, outer_radius 1)",
+    "raw:statemodel_schema/civs/malian#int_properties/pit_mine_limit_mal.default=1, pit_mine_count.default=0, active_pit_mine_count.default=0",
+    "raw:ebps/races/malian/buildings/building_open_pit_mine_mal#requirement_ext/requirement_table/required_statetree_node (building_gold_deposit_pit_mine_requirements_mal\\requirements, ui_name locale:11231768 = \"Pit Mine limit reached\")",
+    "locale:11221926 = \"... construct the Pit Mine over top of Gold Veins in the Dark Age (I) to generate Gold without depleting it. Villagers can mine Gold while the Pit Mine is active. If the Gold Vein is completely exhausted, the Pit Mine will continue to extract Gold from the deposit.\" (trait[1] of raw:army/standard_mode/normal_malian#army_bag/ui/global_traits_summary)",
+    "catalog:buildings/building_open_pit_mine_mal#cost",
+    "catalog:buildings/building_open_pit_mine_mal#buildTimeSeconds"
+   ]
+  },
+  {
+   "key": "cattle",
+   "summary": "Cattle are bought from the Mill (Dark Age) for 90 gold, take no population, and are controllable herd animals. Villagers kill and harvest them like sheep (500 food each, Malian villagers 0.81/s vs 0.66 for other civs), or they are garrisoned in a Cattle Ranch (or kept near the Grand Fulani Corral) for passive food.",
+   "params": {
+    "unitId": "herdable_cattle_mal",
+    "name": "Cattle",
+    "producers": [
+     "mill"
+    ],
+    "age": 1,
+    "cost": {
+     "gold": 90
+    },
+    "trainSeconds": 15,
+    "food": 500,
+    "resourceSubType": "cattle",
+    "villagerGatherRate": 0.81,
+    "villagerCarry": 10,
+    "otherCivCattleRate": 0.66,
+    "personnelPop": 0,
+    "vehiclePop": 1,
+    "vehicleCap": 20,
+    "vehicleCapNote": "cattle use vehicle_pop 1 against the Malian army vehicle cap 20 (inferred cap of 20 live cattle; runtime unverified)",
+    "speedEngineUnits": 2.5,
+    "hp": 24,
+    "controllable": true,
+    "mustBeKilled": true,
+    "carcassId": "food_cattle_corpse_mal",
+    "carcassFood": 500
+   },
+   "status": "partial",
+   "evidence": [
+    "catalog:units/herdable_cattle_mal#cost",
+    "catalog:units/herdable_cattle_mal#trainTimeSeconds",
+    "catalog:units/herdable_cattle_mal#resourceDeposit",
+    "catalog:units/herdable_cattle_mal#population",
+    "catalog:buildings/building_econ_food_mal#trainableUnits",
+    "catalog:units/herdable_cattle_mal#requirements (none)",
+    "raw:ebps/races/malian/animals/gaia_herdable_cattle_mal#resource_deposit_ext (initial_amount 500, resource_sub_type cattle, work_to_enable 1, resource_gather_job gather_luxury)",
+    "raw:ebps/races/malian/animals/gaia_herdable_cattle_mal#population_ext/personnel_pop=0, vehicle_pop=1",
+    "raw:army/standard_mode/normal_malian#army_bag/race_population_cap_table/max_vehicle_cap=20, base_vehicle_cap=20",
+    "raw:ebps/races/malian/animals/food_cattle_corpse_mal#resource_deposit_ext/initial_amount=500 (is_carcass True)",
+    "raw:sbps/races/malian/animals/herdable_cattle_mal#squad_blueprint_ext/can_be_controlled=True; holdable_ext/holdable=hold_cattle",
+    "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[10] (cattle 0.81 / 10)",
+    "locale:11251496 (%1% = 25 from raw:sbps/races/malian/animals/herdable_cattle_mal#squad_ui_ext/race_list/race_data/info/help_text_formatter) = \"Villagers can gather Food from Cattle carcasses. Alternatively, Cattle generate +25 Food per minute for each one garrisoned in a Cattle Ranch. This value is increased by the food upgrades.\"",
+    "locale:11221915 = \"Produce Cattle from Mills in the Dark Age (I). Malian Villagers harvest Food from Cattle faster than other civilizations ...\""
+   ]
+  },
+  {
+   "key": "cattle-ranch",
+   "summary": "Cattle Ranch (Feudal, 125 wood, 15 s) holds 3 cattle; each garrisoned cattle yields 5 food every 12 s (25 food/min). Food technologies are said to raise it (amount unresolved).",
+   "params": {
+    "building": "cattle-ranch",
+    "cost": {
+     "wood": 125
+    },
+    "buildSeconds": 15,
+    "age": 2,
+    "slots": 3,
+    "foodPerTick": 5,
+    "tickSeconds": 12,
+    "foodPerMinutePerCattle": 25,
+    "foodPerSecond": 0.4166666666666667,
+    "scaledByFoodTechs": true,
+    "scalingRule": "unresolved",
+    "festivalBuff": "cattle_ranch_festival_buff exists in the state tree (Griot Bara Food Festival), amount unresolved",
+    "garrisonedCattleDeplete": null,
+    "cap": "none found beyond 3 slots per ranch (and the inferred 20-cattle vehicle cap)"
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:statemodel_schema/civs/malian#float_properties/cattle_ranch_food_rate.default=12, cattle_ranch_food_amount.default=5 (5 food / 12 s = 25 food/min, consistent with the tooltip)",
+    "locale:11222100 = \"Cattle garrisoned in this ranch generate +25 Food per minute. This value is increased by the food upgrades.\" (%1% = 25 from raw:ebps/races/malian/buildings/building_econ_ranch_mal#ui_ext/help_text_formatter)",
+    "raw:ebps/races/malian/buildings/building_econ_ranch_mal#hold_ext (num_slots 3, num_squad_slots 3, acceptable_type hold_cattle, on_loaded_squad_action_tree ranch_hold_events_mal\\load_cattle, on_unloaded ranch_hold_events_mal\\unload_cattle, invulnerable_in_hold True)",
+    "raw:statemodel_schema/buildings/civilizations/malian/ranch_mal#int_properties/cattle_in_ranch_mal.default=0, float_properties/food_resource_total_per_minute.default=0",
+    "raw:ebps/races/malian/buildings/building_econ_ranch_mal#requirement_ext/requirement_table/required_player_upgrade=feudal_age",
+    "Data.sga statetrees/simulation/statetree.bin contains names ranch_hold_events_mal, load_cattle, MalRanchFoodProduction, cattle_ranch_festival_buff, if_malian_buff_cattle_income (compiled; not decoded)"
+   ]
+  },
+  {
+   "key": "grand-fulani-corral",
+   "summary": "Castle-Age landmark: every cattle within range 25 of it provides 3 food every 10 s (18 food/min). No cattle spawning, discount or ranch change found.",
+   "params": {
+    "landmark": "grand-fulani-corral",
+    "age": 3,
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "foodPerTick": 3,
+    "tickSeconds": 10,
+    "foodPerMinutePerCattle": 18,
+    "foodPerSecond": 0.3,
+    "rangeRaw": 25,
+    "stacksWithRanch": null,
+    "cattleDeplete": null,
+    "next17_0": "16 food/min (preview, not applied)"
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:statemodel_schema/civs/malian#float_properties/cattle_landmark_food_rate_mal.default=10, cattle_landmark_food_amount_mal.default=3",
+    "locale:11231847 = \"Nearby cattle provide 18 Food per minute.\" (%1% = 18 from raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ui_ext/help_text_formatter)",
+    "raw:abilities/always_on_abilities/malian/cattle_landmark_passive_food_mal#ability_bag/range=25, entity_tree=landmark_c_cattle_food_mal",
+    "data/patch-next.json: 17.0 \"Fulani Corral Food generation per Cattle reduced from 18 Food -> 16 Food\" (before-value matches installed 18)"
+   ]
+  },
+  {
+   "key": "mansa-quarry",
+   "summary": "Feudal landmark option generating 75 gold per minute; can be toggled to stone (stone rate not in any installed record).",
+   "params": {
+    "landmark": "mansa-quarry",
+    "goldPerMinute": 75,
+    "goldPerSecond": 1.25,
+    "stonePerMinute": null,
+    "toggle": [
+     "gold",
+     "stone"
+    ]
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:statemodel_schema/civs/malian#float_properties/gold_rate_landmark_mal.default=75",
+    "locale:11218090 = \"Generates 75 Gold per minute. Can be toggled to generate Stone instead.\"",
+    "raw:abilities/toggle_abilities/malian/toggle_pit_mine_resource_stone_mal#ability_bag/entity_tree=landmark_pit_mine_resource_toggle_mal\\toggle_stone (no rate field)"
+   ]
+  },
+  {
+   "key": "toll-outpost",
+   "summary": "Malian Outposts are Toll Outposts: a passing Trader or Trade Ship instantly pays an extra 8% of its carried gold; no tax if another toll outpost is within range. At most 5 tolls per trader trip (raw).",
+   "params": {
+    "building": "toll-outpost",
+    "taxFractionOfCarriedGold": 0.08,
+    "maxTollsPerTrip": 5,
+    "auraRangeRaw": 40,
+    "cooldownRaw": 18,
+    "saharanTradeNetwork": {
+     "foodEqualToTaxAtLandmark": 1.0,
+     "foodFractionAtOtherOutposts": 0.5
+    },
+    "legacyUpgrade": "upgrade_outpost_toll_mal (25 gold, 30 s, \"10%\") is not in any building research list; Outposts are already Toll Outposts"
+   },
+   "status": "partial",
+   "evidence": [
+    "locale:11227992 with %1% = 8 (raw:ebps/races/malian/buildings/building_defense_outpost_mal#ui_ext/help_text_formatter/formatter_arguments/int_value=8)",
+    "raw:statemodel_schema/civs/malian#int_properties/trade_outpost_max_tax_count_mal.default=5; raw:statemodel_schema/units/civilizations/malian/trade_cart_mal#float_properties/tolls_max.default=5",
+    "raw:abilities/always_on_abilities/malian/trade_cart_taxation_aura_mal#ability_bag/range=40, float_properties cooldown=18, entity_tree trader_taxation_aura_mal",
+    "locale:11231782 = \"Traders and Trade Ships that pass by Toll Outposts instantly provide bonus resources based on the current trade targets. ...\" (current trait text says resources, building text says gold)",
+    "catalog:technologies/upgrade_outpost_toll_mal#description"
+   ]
+  },
+  {
+   "key": "fish-gold",
+   "summary": "Malian Fishing Boats drop off 10% of their food as gold.",
+   "params": {
+    "goldFractionOfFishFood": 0.1
+   },
+   "status": "partial",
+   "evidence": [
+    "locale:11264301 = \"Fishing Boats drop off 10% of their Food as Gold.\" (%1% = 10 from raw:army/standard_mode/normal_malian#army_bag/ui/global_traits_summary/trait[8]/description_formatter)"
+   ]
+  },
+  {
+   "key": "manuscript-trade",
+   "summary": "Civ bonus: gold from completed Trader routes lowers the research time of future technologies (always-on ability book_trade_mal). Rate not in records.",
+   "params": {
+    "bookTradeValueRaw": 1,
+    "researchTimeReductionPerGold": null,
+    "note": "upgrade_trader_book_trade_mal (200 food, 500 gold, 90 s, Castle) exists but is in no Malian building research list"
+   },
+   "status": "unresolved",
+   "evidence": [
+    "locale:11218612 = \"Gold collected from completed Trader routes lower the research time of future technologies.\" (trait[7])",
+    "raw:statemodel_schema/civs/malian#float_properties/book_trade_value_mal.default=1",
+    "raw:abilities/always_on_abilities/malian/book_trade_mal (decoded; no rate field)",
+    "catalog:technologies/upgrade_trader_book_trade_mal#cost"
+   ]
+  },
+  {
+   "key": "baked-civ-discounts",
+   "summary": "Already applied inside the installed records (do not apply again): half-cost/half-pop/fast Houses, Town Center gold cost, Veteran upgrades at half cost and time.",
+   "params": {
+    "house": {
+     "cost": {
+      "wood": 25
+     },
+     "buildSeconds": 7,
+     "pop": 5
+    },
+    "extraTownCenter": {
+     "wood": 400,
+     "gold": 350
+    },
+    "veteranUpgrade": {
+     "cost": {
+      "food": 50,
+      "gold": 125
+     },
+     "researchSeconds": 30
+    }
+   },
+   "status": "resolved",
+   "evidence": [
+    "catalog:buildings/building_house_mal#cost",
+    "catalog:buildings/building_town_center_mal#cost",
+    "catalog:technologies/upgrade_unit_horseman_3_mal#cost",
+    "catalog:technologies/upgrade_unit_horseman_3_mal#researchTimeSeconds",
+    "locale:11246395 = \"Veteran unit technologies unlocked in the Castle Age (III) are researched at half the time and cost.\"",
+    "locale:11228694",
+    "locale:11265630"
+   ]
+  },
+  {
+   "key": "no-boar",
+   "summary": "Malian villagers cannot harvest Boar.",
+   "params": {
+    "boarGatherRate": 0
+   },
+   "status": "resolved",
+   "evidence": [
+    "raw:ebps/races/malian/units/unit_villager_1_mal#resource_gatherer_ext/gather_types/gather_target[3] (blank sub type)",
+    "locale:11221922 (\"Cannot harvest Boar\")"
+   ]
+  },
+  {
+   "key": "griot-bara-festivals",
+   "summary": "Imperial-age landmark festivals, 300 gold each, 90 s, one at a time (ability recharge 30 s): Food (+50% villager food gather), Production (+100% unit production except Traders), Siege (+50% siege/torch damage).",
+   "params": {
+    "cost": {
+     "gold": 300
+    },
+    "durationSeconds": 90,
+    "rechargeSeconds": 30,
+    "foodGatherMul": 1.5,
+    "productionSpeedMul": 2.0,
+    "siegeDamageMul": 1.5
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:abilities/timed_abilities/malian/festival_food_mal",
+    "raw:abilities/timed_abilities/malian/festival_military_mal",
+    "raw:abilities/timed_abilities/malian/festival_siege_mal",
+    "raw:statemodel_schema/civs/malian#float_properties/festival_duration_mal.default=90",
+    "locale:11217433",
+    "locale:11265623",
+    "locale:11217424"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "item": "Pit Mine income stacking",
+   "why": "Base 36/min and +0.25 per House/Mining Camp are raw statemodel defaults; how they combine (36*(1+0.25n) vs compounding), any cap on counted buildings, the influence radius (district range_metres 4, raw units) and whether gold techs/Cupellation apply live in the compiled state tree open_pit_mine_influence_mal (Data.sga statetrees/simulation/statetree.bin), not decoded.",
+   "fallback": "use 36*(1+0.25n) per Pit Mine (tooltip wording \"+25% for each\"), no tech scaling"
+  },
+  {
+   "item": "Pit Mine count limit",
+   "why": "pit_mine_limit_mal default 1 is compared with pit_mine_count/active_pit_mine_count in a state tree; unknown whether it caps all Pit Mines or only ones being placed/constructed, or whether it rises later.",
+   "fallback": "one Pit Mine per gold deposit (raw claim flag); treat the per-player limit as unknown and expose it as a plan parameter"
+  },
+  {
+   "item": "Pit Mine rate by deposit size",
+   "why": "gold_rate_small_mal and gold_rate_large_mal are both 36; the tiny variant has no own rate property.",
+   "fallback": "36 gold/min for every variant"
+  },
+  {
+   "item": "Cattle Ranch scaling, depletion",
+   "why": "Text says food upgrades raise ranch income, and the state tree has a festival buff; amounts and whether garrisoned cattle lose their 500 food are not in records.",
+   "fallback": "25 food/min per garrisoned cattle, no scaling, cattle not consumed"
+  },
+  {
+   "item": "Grand Fulani Corral stacking and depletion",
+   "why": "Unknown whether ranched cattle also count as \"nearby\" and whether corral income draws down the cattle deposit.",
+   "fallback": "18 food/min per cattle within range 25, additive with ranch income, not consumed"
+  },
+  {
+   "item": "Cattle population cap",
+   "why": "Cattle have vehicle_pop 1 and the Malian army record has vehicle cap 20; cap enforcement is runtime.",
+   "fallback": "max 20 live cattle"
+  },
+  {
+   "item": "Mansa Quarry stone rate",
+   "why": "No stone rate in any installed record or text.",
+   "fallback": "model gold mode only (75 gold/min)"
+  },
+  {
+   "item": "Gather-technology stacking and Shaft Mining value",
+   "why": "Raw upgrade scalars are \"raw scalar; effect operation requires state-tree resolution\"; Shaft Mining raw mining_rate 0.3 vs text 15%; Extended Lines raw 0.1 vs text 15%.",
+   "fallback": "apply each tier as the text percentage, additive on base rate"
+  },
+  {
+   "item": "Manuscript Trade (civ bonus)",
+   "why": "Research-time reduction per trade gold is state-tree logic; book_trade_value_mal = 1 only.",
+   "fallback": "ignore"
+  },
+  {
+   "item": "Production Festival value",
+   "why": "Ability record says +100% for 90 s; the dummy festival building record says 50.",
+   "fallback": "+100% (current ability record)"
+  },
+  {
+   "item": "Toll Outpost tax details",
+   "why": "Building text 8% of carried gold; trait text says \"bonus resources based on the current trade targets\"; aura cooldown 18 and range 40 are raw ability values with unverified meaning.",
+   "fallback": "8% of carried gold per qualifying outpost, max 5 per trip"
+  },
+  {
+   "item": "Town Center villager production by age",
+   "why": "No Malian production modifier found in decoded records; state trees not decoded.",
+   "fallback": "1.0 in every age"
+  }
+ ]
+}

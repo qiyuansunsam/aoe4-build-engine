@@ -1,0 +1,2457 @@
+{
+ "civ": "scots",
+ "catalogCiv": "scots",
+ "patch": "17.0-preview",
+ "notes": "Scots (Update 17.0, ships 2026-10-29; not in the installed game). Unique values come from the datamined 17.0 records (jeando17), the reviewed checklist (frames read on screen and blind re-read, transcripts) and named footage moments. Standard values the 17.0 records do not carry (villager gather rates) come from the installed 16.3 standard villager. Values no source gives are in mechanics[].params as named assumptions and in unresolved[].",
+ "start": {
+  "villagers": 6,
+  "resources": {
+   "food": 200,
+   "wood": 200,
+   "gold": 100,
+   "stone": 0
+  },
+  "popCap": 10,
+  "units": [
+   {
+    "id": "unit_scout_1_sco",
+    "name": "Ghillie",
+    "count": 1
+   },
+   {
+    "id": "unit_villager_1_sco",
+    "name": "Villager",
+    "count": 6
+   },
+   {
+    "id": "highland_cattle_sco",
+    "name": "Highland Cattle",
+    "count": 1,
+    "pop": 0
+   }
+  ],
+  "buildings": [
+   {
+    "id": "building_town_center_capital_sco",
+    "name": "Town Center (capital)",
+    "count": 1
+   }
+  ],
+  "notes": "Population reads 7/10 at the start: 6 villagers + Ghillie; the Highland Cattle does not count. The cattle counter reads 1/9.",
+  "evidence": [
+   "checklist:scots/bonus/Starting conditions#effectText (HUD 00:05: 1/9 cattle, 7/10 population, 200 food, 200 wood, 100 gold, 0 stone)",
+   "transcript:BV1Lvn46dEbY_p1@21:22 (\"start with six villagers and one cow ... 200 food, 200 wood and 100 gold\")",
+   "checklist:scots/bonus/Highland Wealth#effectText",
+   "jeando17:unit_scout_1_sco#name (Ghillie)"
+  ]
+ },
+ "villager": {
+  "id": "unit_villager_1_sco",
+  "cost": {
+   "food": 50
+  },
+  "trainSeconds": 20,
+  "speedEngineUnits": 4.5,
+  "hp": 50,
+  "pop": 1,
+  "gather": {
+   "wood": {
+    "rate": 0.75,
+    "carry": 10,
+    "job": "gather_wood",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[0]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   },
+   "farm": {
+    "rate": 0.75,
+    "carry": 10,
+    "job": "gather_farm",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[1]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   },
+   "sheep": {
+    "rate": 0.75,
+    "carry": 10,
+    "job": "gather_herdable",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[2]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   },
+   "boar": {
+    "rate": 0.9,
+    "carry": 25,
+    "job": "gather_huntable_danger",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[3]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   },
+   "deer": {
+    "rate": 0.825,
+    "carry": 25,
+    "job": "gather_huntable",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[4]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   },
+   "stone": {
+    "rate": 0.75,
+    "carry": 10,
+    "job": "gather_stone",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[6]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   },
+   "gold": {
+    "rate": 0.75,
+    "carry": 10,
+    "job": "gather_gold",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[7]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   },
+   "shore_fish": {
+    "rate": 1,
+    "carry": 10,
+    "job": "gather_shore_fish",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[8]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   },
+   "berries": {
+    "rate": 0.69,
+    "carry": 10,
+    "job": "gather_berries",
+    "evidence": [
+     "raw:ebps/races/english/units/unit_villager_1_eng.json#default/resource_gatherer_ext/gather_types/gather_target[9]/gather_rate,resource_carry_capacity",
+     "standard 16.3 villager gather record (the 17.0 Scots villager record carries no gather table; its cost, time, speed and HP equal the standard villager)"
+    ]
+   }
+  },
+  "evidence": [
+   "jeando17:unit_villager_1_sco#costs.food",
+   "jeando17:unit_villager_1_sco#costs.time",
+   "jeando17:unit_villager_1_sco#speed (1.125 tiles/s = 4.5 engine units)",
+   "jeando17:unit_villager_1_sco#hitpoints",
+   "checklist:scots/unit/Villager#trainTimeSeconds (20 s; UPCOMING_CIVS: Scots stay at 20 s, Vikings 22 s)"
+  ]
+ },
+ "townCenter": {
+  "id": "building_town_center_capital_sco",
+  "extraId": "building_town_center_sco",
+  "cost": {
+   "wood": 400,
+   "stone": 300
+  },
+  "buildSeconds": 165,
+  "extraRequiresAge": 2,
+  "popProvided": 10,
+  "villagerProductionMultiplierByAge": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 1
+  },
+  "notes": "No Scots Town Center production bonus in any record or tooltip. Additional Town Center build time 165 s is the global 17.0 change. Extra Town Centers need Feudal Age (standard roster).",
+  "evidence": [
+   "jeando17:building_town_center_sco#costs.wood",
+   "jeando17:building_town_center_sco#costs.stone",
+   "jeando17:building_town_center_sco#costs.time",
+   "checklist:scots/building/Town Center#population (10, confirmed)",
+   "data/UPCOMING_CIVS.md (17.0 notes: Town Center build time 150 -> 165 s)"
+  ]
+ },
+ "buildings": {
+  "house": {
+   "id": "building_house_control_sco",
+   "name": "House",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 15,
+   "age": 1,
+   "popProvided": 10,
+   "dropoff": [],
+   "limit": null,
+   "notes": "House +10 population: no Scots record states the amount; the other packs read +10 from the statemodel default and Beasty reads \"by 10, right? For 50 wood\" (c_oaynL66jY 4:15).",
+   "evidence": [
+    "jeando17:building_house_control_sco#costs",
+    "jeando17:building_house_control_sco#costs.time",
+    "checklist:scots/building/House#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "mill": {
+   "id": "building_econ_food_control_sco",
+   "name": "Mill",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [
+    "food"
+   ],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_econ_food_control_sco#costs",
+    "jeando17:building_econ_food_control_sco#costs.time",
+    "checklist:scots/building/Mill#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "lumber_camp": {
+   "id": "building_econ_wood_control_sco",
+   "name": "Lumber Camp",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [
+    "wood"
+   ],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_econ_wood_control_sco#costs",
+    "jeando17:building_econ_wood_control_sco#costs.time",
+    "checklist:scots/building/Lumber Camp#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "mining_camp": {
+   "id": "building_econ_mining_camp_control_sco",
+   "name": "Mining Camp",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [
+    "gold",
+    "stone"
+   ],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_econ_mining_camp_control_sco#costs",
+    "jeando17:building_econ_mining_camp_control_sco#costs.time",
+    "checklist:scots/building/Mining Camp#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "farm": {
+   "id": "building_resource_farm_sco",
+   "name": "Farm",
+   "cost": {
+    "wood": 75
+   },
+   "buildSeconds": 6,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_resource_farm_sco#costs",
+    "jeando17:building_resource_farm_sco#costs.time",
+    "checklist:scots/building/Farm#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "barracks": {
+   "id": "building_unit_infantry_control_sco",
+   "name": "Barracks",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 1,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trains Pikeman, Early Man-at-Arms, Cateran, Gallowglass; counts +1 Mustering Hall Structure (qlogYcWhKEU 11:16).",
+   "evidence": [
+    "jeando17:building_unit_infantry_control_sco#costs",
+    "jeando17:building_unit_infantry_control_sco#costs.time",
+    "checklist:scots/building/Barracks#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "archery_range": {
+   "id": "building_unit_ranged_control_sco",
+   "name": "Archery Range",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 2,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trains Highland Archer, Crossbowman, Tacksman and (Imperial) Border Reiver.",
+   "evidence": [
+    "jeando17:building_unit_ranged_control_sco#costs",
+    "jeando17:building_unit_ranged_control_sco#costs.time",
+    "checklist:scots/building/Archery Range#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)",
+    "transcript:c_oaynL66jY@31:51 (\"over here in archer ranges. We can make border reavers and taxmen\")",
+    "checklist:scots/unit/Border Reiver#building (Archery Range, frame)"
+   ]
+  },
+  "stable": {
+   "id": "building_unit_cavalry_control_sco",
+   "name": "Stable",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 2,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trains Horseman, Knight, Ghillie (no Border Reiver: qlogYcWhKEU 12:54).",
+   "evidence": [
+    "jeando17:building_unit_cavalry_control_sco#costs",
+    "jeando17:building_unit_cavalry_control_sco#costs.time",
+    "checklist:scots/building/Stable#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "blacksmith": {
+   "id": "building_tech_unit_infantry_control_sco",
+   "name": "Blacksmith",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 25,
+   "age": 2,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_tech_unit_infantry_control_sco#costs",
+    "jeando17:building_tech_unit_infantry_control_sco#costs.time",
+    "checklist:scots/building/Blacksmith#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "university": {
+   "id": "building_tech_university_control_sco",
+   "name": "University",
+   "cost": {
+    "wood": 450
+   },
+   "buildSeconds": 60,
+   "age": 4,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_tech_university_control_sco#costs",
+    "jeando17:building_tech_university_control_sco#costs.time",
+    "checklist:scots/building/University#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "monastery": {
+   "id": "building_unit_religious_control_sco",
+   "name": "Monastery",
+   "cost": {
+    "wood": 200
+   },
+   "buildSeconds": 25,
+   "age": 3,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trains the Kirkman; relics placed here generate gold from Castle Age.",
+   "evidence": [
+    "jeando17:building_unit_religious_control_sco#costs",
+    "jeando17:building_unit_religious_control_sco#costs.time",
+    "checklist:scots/building/Monastery#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "siege_workshop": {
+   "id": "building_unit_siege_control_sco",
+   "name": "Siege Workshop",
+   "cost": {
+    "wood": 250
+   },
+   "buildSeconds": 45,
+   "age": 3,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "",
+   "evidence": [
+    "jeando17:building_unit_siege_control_sco#costs",
+    "jeando17:building_unit_siege_control_sco#costs.time",
+    "checklist:scots/building/Siege Workshop#age (building age from footage or the standard roster; the record age field is not used, see UPCOMING_CIVS.md)"
+   ]
+  },
+  "mustering_hall": {
+   "id": "building_mustering_hall_sco",
+   "name": "Mustering Hall",
+   "cost": {
+    "wood": 50
+   },
+   "buildSeconds": 15,
+   "age": 2,
+   "popProvided": null,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Holds the Lowland/Highland technologies and the musters. 1 muster charge by default; +1 per Influence tier.",
+   "evidence": [
+    "jeando17:building_mustering_hall_sco#costs",
+    "jeando17:building_mustering_hall_sco#costs.time",
+    "checklist:scots/building/Mustering Hall#age (Feudal, confirmed: \"Muster units quickly at the Mustering Hall from Feudal Age (II)\")"
+   ]
+  },
+  "tower_house": {
+   "id": "building_defense_tower_house_sco",
+   "name": "Tower House",
+   "cost": {
+    "wood": 175
+   },
+   "buildSeconds": 60,
+   "age": 1,
+   "popProvided": 15,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Outpost replacement: +15 population, trains Highland Cattle (and Ghillies), garrison 8 villagers + 2 cattle.",
+   "evidence": [
+    "jeando17:building_defense_tower_house_sco#costs",
+    "jeando17:building_defense_tower_house_sco#costs.time",
+    "checklist:scots/building/Tower House#age (Dark, confirmed: built at game 02:39 in Age I, qlogYcWhKEU; record says Feudal, not used)",
+    "checklist:scots/building/Tower House#population (15, confirmed)",
+    "jeando17:building_defense_tower_house_sco#description (\"Increases maximum population by 15\")"
+   ]
+  }
+ },
+ "landmarks": {
+  "2": [
+   {
+    "id": "building_landmark_age2_abbey_of_the_isles_sco",
+    "key": "abbey-of-the-isles",
+    "name": "Abbey of the Isles",
+    "region": "highland",
+    "cost": {
+     "food": 400,
+     "gold": 200
+    },
+    "buildSeconds": 190,
+    "effects": [
+     {
+      "kind": "production_speed",
+      "target": "one military or technology building holding the Saint's Relic",
+      "op": "mul",
+      "value": 2.35,
+      "notes": "\"provide 135% increased research and production speed\"; relic can move every 120 s (qlogYcWhKEU 23:42). Pikeman 06s / Early MAA 09s at a relic Barracks (c_oaynL66jY 35:12), Highland Archer 06s (wzT5WTqIIU4 16:36)."
+     },
+     {
+      "kind": "other",
+      "target": "highland-cattle cap",
+      "op": "add",
+      "value": 4,
+      "notes": "Highland landmark: cattle cap 9 -> 13 (HUD 1/13)."
+     },
+     {
+      "kind": "cost",
+      "target": "Highland technologies",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "each Highland landmark halves Highland technology costs (Cateran's Trail 600 -> 300 with the Abbey, qlogYcWhKEU 14:46)."
+     }
+    ],
+    "evidence": [
+     "jeando17:building_landmark_age2_abbey_of_the_isles_sco#costs",
+     "jeando17:building_landmark_age2_abbey_of_the_isles_sco#costs.time",
+     "jeando17:building_landmark_age2_abbey_of_the_isles_sco#className",
+     "jeando17:building_landmark_age2_abbey_of_the_isles_sco#description",
+     "checklist:scots/landmark (frames: Age II 400F 200G 3m10s, Age III 1200F 600G 3m40s, Age IV 2400F 1200G 4m10s; qlogYcWhKEU, c_oaynL66jY 34:33)"
+    ]
+   },
+   {
+    "id": "building_landmark_age2_stone_of_destiny_sco",
+    "key": "stone-of-destiny",
+    "name": "Stone of Destiny",
+    "region": "lowland",
+    "cost": {
+     "food": 400,
+     "gold": 200
+    },
+    "buildSeconds": 190,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "buildings constructed around it",
+      "op": "mul",
+      "value": 0.3,
+      "notes": "30% of construction cost rebated as Gold; not Landmarks. TC in range rebates 210 gold (400w+300s; c_oaynL66jY 8:36)."
+     },
+     {
+      "kind": "unlock",
+      "target": "Kirkman / Fishpond in Feudal Age",
+      "op": "set",
+      "value": 1,
+      "notes": "Grants early access to Kirkman that can create Fishponds."
+     },
+     {
+      "kind": "cost",
+      "target": "Lowland technologies",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "Lowland technology costs reduced by 50% (Mustering Hall panel)."
+     }
+    ],
+    "evidence": [
+     "jeando17:building_landmark_age2_stone_of_destiny_sco#costs",
+     "jeando17:building_landmark_age2_stone_of_destiny_sco#costs.time",
+     "jeando17:building_landmark_age2_stone_of_destiny_sco#className",
+     "jeando17:building_landmark_age2_stone_of_destiny_sco#description",
+     "checklist:scots/landmark (frames: Age II 400F 200G 3m10s, Age III 1200F 600G 3m40s, Age IV 2400F 1200G 4m10s; qlogYcWhKEU, c_oaynL66jY 34:33)"
+    ]
+   }
+  ],
+  "3": [
+   {
+    "id": "building_landmark_age3_tower_of_skye_sco",
+    "key": "tower-of-skye",
+    "name": "Tower of Skye",
+    "region": "highland",
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "acts as a Tower House",
+      "op": "set",
+      "value": 1,
+      "notes": "Acts as a Tower House with arrowslits and springald; stealth forest; +15% infantry damage in Stealth Forests."
+     },
+     {
+      "kind": "other",
+      "target": "highland-cattle cap",
+      "op": "add",
+      "value": 4,
+      "notes": "cap 13 -> 17 (HUD 1/17)."
+     },
+     {
+      "kind": "cost",
+      "target": "Highland technologies",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "Highland landmark."
+     }
+    ],
+    "evidence": [
+     "jeando17:building_landmark_age3_tower_of_skye_sco#costs",
+     "jeando17:building_landmark_age3_tower_of_skye_sco#costs.time",
+     "jeando17:building_landmark_age3_tower_of_skye_sco#className",
+     "jeando17:building_landmark_age3_tower_of_skye_sco#description",
+     "checklist:scots/landmark (frames: Age II 400F 200G 3m10s, Age III 1200F 600G 3m40s, Age IV 2400F 1200G 4m10s; qlogYcWhKEU, c_oaynL66jY 34:33)"
+    ]
+   },
+   {
+    "id": "building_landmark_age3_snowdoun_gate_sco",
+    "key": "snowdoun-gate",
+    "name": "Snowdoun Gate",
+    "region": "lowland",
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "free toggled infantry",
+      "op": "set",
+      "value": 190,
+      "notes": "Produces toggled infantry for free worth 190 resources per minute: batches of 3; toggle cycle Pikeman 80 s, Highland Archer 76 s, Cateran 85 s, Early MAA 104 s (records unit_toggle_*). Each Mustering Hall technology researched: +15% production speed here."
+     },
+     {
+      "kind": "cost",
+      "target": "Lowland technologies",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "Lowland landmark (further 50%: 1500 -> 750 -> 375 Stew Ponds, qlogYcWhKEU 19:00)."
+     }
+    ],
+    "evidence": [
+     "jeando17:building_landmark_age3_snowdoun_gate_sco#costs",
+     "jeando17:building_landmark_age3_snowdoun_gate_sco#costs.time",
+     "jeando17:building_landmark_age3_snowdoun_gate_sco#className",
+     "jeando17:building_landmark_age3_snowdoun_gate_sco#description",
+     "checklist:scots/landmark (frames: Age II 400F 200G 3m10s, Age III 1200F 600G 3m40s, Age IV 2400F 1200G 4m10s; qlogYcWhKEU, c_oaynL66jY 34:33)"
+    ]
+   }
+  ],
+  "4": [
+   {
+    "id": "building_landmark_age4_three_loch_lookout_sco",
+    "key": "three-loch-lookout",
+    "name": "Three Loch Lookout",
+    "region": "highland",
+    "cost": {
+     "food": 2400,
+     "gold": 1200
+    },
+    "buildSeconds": 250,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "muster charges",
+      "op": "add",
+      "value": 3,
+      "notes": "adds 3 muster charges for the Mustering Hall or Three Loch Lookout; warriors received from mustering +75%."
+     },
+     {
+      "kind": "other",
+      "target": "highland-cattle cap",
+      "op": "add",
+      "value": 4,
+      "notes": "cap 17 -> 21 (HUD 1/21)."
+     },
+     {
+      "kind": "cost",
+      "target": "Highland technologies",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "Highland landmark."
+     }
+    ],
+    "evidence": [
+     "jeando17:building_landmark_age4_three_loch_lookout_sco#costs",
+     "jeando17:building_landmark_age4_three_loch_lookout_sco#costs.time",
+     "jeando17:building_landmark_age4_three_loch_lookout_sco#className",
+     "jeando17:building_landmark_age4_three_loch_lookout_sco#description",
+     "checklist:scots/landmark (frames: Age II 400F 200G 3m10s, Age III 1200F 600G 3m40s, Age IV 2400F 1200G 4m10s; qlogYcWhKEU, c_oaynL66jY 34:33)"
+    ]
+   },
+   {
+    "id": "building_landmark_age4_dhun_eideann_sco",
+    "key": "dhun-eideann",
+    "name": "Dhùn Èideann",
+    "region": "lowland",
+    "cost": {
+     "food": 2400,
+     "gold": 1200
+    },
+    "buildSeconds": 250,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "gunpowder siege",
+      "op": "add",
+      "value": -100,
+      "notes": "Seven Sisters cannons; gunpowder siege 100 gold cheaper and +1 range (no effect on these builds)."
+     },
+     {
+      "kind": "cost",
+      "target": "Lowland technologies",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "Lowland landmark."
+     }
+    ],
+    "evidence": [
+     "jeando17:building_landmark_age4_dhun_eideann_sco#costs",
+     "jeando17:building_landmark_age4_dhun_eideann_sco#costs.time",
+     "jeando17:building_landmark_age4_dhun_eideann_sco#className",
+     "jeando17:building_landmark_age4_dhun_eideann_sco#description",
+     "checklist:scots/landmark (frames: Age II 400F 200G 3m10s, Age III 1200F 600G 3m40s, Age IV 2400F 1200G 4m10s; qlogYcWhKEU, c_oaynL66jY 34:33)"
+    ]
+   }
+  ]
+ },
+ "technologies": [
+  {
+   "id": "upgrade_unit_town_center_wheelbarrow_1__scots",
+   "name": "Wheelbarrow",
+   "age": 1,
+   "building": "mill",
+   "cost": {
+    "wood": 50,
+    "gold": 150
+   },
+   "researchSeconds": 90,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "carry",
+     "target": "all",
+     "op": "add",
+     "value": 5
+    },
+    {
+     "kind": "speed",
+     "target": "villager",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_town_center_wheelbarrow_1__scots#costs",
+    "jeando17:upgrade_unit_town_center_wheelbarrow_1__scots#costs.time",
+    "jeando17:upgrade_unit_town_center_wheelbarrow_1__scots#age",
+    "jeando17:upgrade_unit_town_center_wheelbarrow_1__scots#description",
+    "jeando17:cmvkznbkw003a41l9gxgyup1w (carry +5)",
+    "jeando17:cmvkznbkw003b41l9szs5e8p7 (speed x1.15)",
+    "transcript:c_oaynL66jY@2:56 (Mill: Wheelbarrow, Survival Techniques)"
+   ]
+  },
+  {
+   "id": "upgrade_econ_villager_hunting_gear_1__scots",
+   "name": "Survival Techniques",
+   "age": 1,
+   "building": "mill",
+   "cost": {
+    "wood": 25,
+    "gold": 75
+   },
+   "researchSeconds": 25,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "hunt",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_villager_hunting_gear_1__scots#costs",
+    "jeando17:upgrade_econ_villager_hunting_gear_1__scots#costs.time",
+    "jeando17:upgrade_econ_villager_hunting_gear_1__scots#age",
+    "jeando17:upgrade_econ_villager_hunting_gear_1__scots#description",
+    "jeando17:cmvkznbkw002v41l9d7f2xfl3"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_fell_rate_1__scots",
+   "name": "Forestry",
+   "age": 1,
+   "building": "lumber_camp",
+   "cost": {
+    "food": 25,
+    "gold": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [],
+   "notes": "Doubles tree felling speed; the engine has no felling step, so no effect is applied.",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_wood_fell_rate_1__scots#costs",
+    "jeando17:upgrade_econ_resource_wood_fell_rate_1__scots#costs.time",
+    "jeando17:upgrade_econ_resource_wood_fell_rate_1__scots#age",
+    "jeando17:upgrade_econ_resource_wood_fell_rate_1__scots#description"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_2__scots",
+   "name": "Horticulture",
+   "age": 2,
+   "building": "mill",
+   "cost": {
+    "wood": 50,
+    "gold": 100
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "food_soft",
+     "op": "mul",
+     "value": 1.1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_food_harvest_rate_2__scots#costs",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_2__scots#costs.time",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_2__scots#age",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_2__scots#description",
+    "jeando17:cmvkznbk5002j41l90ab1ewjq"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_3__scots",
+   "name": "Fertilization",
+   "age": 3,
+   "building": "mill",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "food_soft",
+     "op": "mul",
+     "value": 1.1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_food_harvest_rate_3__scots#costs",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_3__scots#costs.time",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_3__scots#age",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_3__scots#description",
+    "jeando17:cmvkznbk5002k41l9v55r1y1l"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_4__scots",
+   "name": "Precision Cross-Breeding",
+   "age": 4,
+   "building": "mill",
+   "cost": {
+    "wood": 250,
+    "gold": 500
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "food_soft",
+     "op": "mul",
+     "value": 1.1
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_food_harvest_rate_4__scots#costs",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_4__scots#costs.time",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_4__scots#age",
+    "jeando17:upgrade_econ_resource_food_harvest_rate_4__scots#description",
+    "jeando17:cmvkznbk5002l41l9mw1v6uxt"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_2__scots",
+   "name": "Double Broadax",
+   "age": 2,
+   "building": "lumber_camp",
+   "cost": {
+    "food": 50,
+    "gold": 100
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_2__scots#costs",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_2__scots#costs.time",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_2__scots#age",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_2__scots#description",
+    "jeando17:cmvkznbk5002r41l9h77dvlc5"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_3__scots",
+   "name": "Lumber Preservation",
+   "age": 3,
+   "building": "lumber_camp",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_3__scots#costs",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_3__scots#costs.time",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_3__scots#age",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_3__scots#description",
+    "jeando17:cmvkznbkw002s41l9gbi8ijeh"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_4__scots",
+   "name": "Crosscut Saw",
+   "age": 4,
+   "building": "lumber_camp",
+   "cost": {
+    "food": 250,
+    "gold": 500
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15
+    },
+    {
+     "kind": "carry",
+     "target": "wood",
+     "op": "add",
+     "value": 5
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_4__scots#costs",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_4__scots#costs.time",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_4__scots#age",
+    "jeando17:upgrade_econ_resource_wood_harvest_rate_4__scots#description",
+    "jeando17:cmvkznbkw002t41l9ye55pdez",
+    "jeando17:cmvkznbkw002u41l9ft17dkk5"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_2__scots",
+   "name": "Specialized Pick",
+   "age": 2,
+   "building": "mining_camp",
+   "cost": {
+    "wood": 50,
+    "gold": 100
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "mine",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_2__scots#costs",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_2__scots#costs.time",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_2__scots#age",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_2__scots#description",
+    "jeando17:cmvkznbk5002m41l9t3p1zsh5"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_3__scots",
+   "name": "Shaft Mining",
+   "age": 3,
+   "building": "mining_camp",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "mine",
+     "op": "mul",
+     "value": 1.15
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_3__scots#costs",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_3__scots#costs.time",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_3__scots#age",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_3__scots#description",
+    "jeando17:cmvkznbk5002n41l9fow92x9s"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_4__scots",
+   "name": "Cupellation",
+   "age": 4,
+   "building": "mining_camp",
+   "cost": {
+    "wood": 250,
+    "gold": 500
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "gold",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "\"Gold gatherers drop off 15% more resources\""
+    }
+   ],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_4__scots#costs",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_4__scots#costs.time",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_4__scots#age",
+    "jeando17:upgrade_econ_resource_gold_harvest_rate_4__scots#description"
+   ]
+  },
+  {
+   "id": "upgrade_lowland_and_highland_tier2_sco",
+   "name": "Fermtouns and Pastures",
+   "age": 2,
+   "building": "mill",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "farm",
+     "op": "mul",
+     "value": 1.2
+    },
+    {
+     "kind": "gather_rate",
+     "target": "highland-cattle",
+     "op": "mul",
+     "value": 1.2
+    }
+   ],
+   "notes": "Villagers gather from Farms 20% faster; Highland Cattle gather from Berry Bushes 20% faster. Beasty saw no cattle buff on screen after research (c_oaynL66jY 13:08); the record text is applied.",
+   "evidence": [
+    "jeando17:upgrade_lowland_and_highland_tier2_sco#costs",
+    "jeando17:upgrade_lowland_and_highland_tier2_sco#costs.time",
+    "jeando17:upgrade_lowland_and_highland_tier2_sco#age",
+    "jeando17:upgrade_lowland_and_highland_tier2_sco#description",
+    "jeando17:cmvkznbn500gh41l9kutjhlyj (villager speed x1.2)",
+    "checklist:scots/technology/Fermtouns and Pastures#building (Mill, confirmed)"
+   ]
+  },
+  {
+   "id": "upgrade_melee_damage_i__scots",
+   "name": "Bloomery",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_melee_damage_i__scots#costs",
+    "jeando17:upgrade_melee_damage_i__scots#costs.time",
+    "jeando17:upgrade_melee_damage_i__scots#age",
+    "jeando17:upgrade_melee_damage_i__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_melee_damage_ii__scots",
+   "name": "Decarbonization",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_melee_damage_ii__scots#costs",
+    "jeando17:upgrade_melee_damage_ii__scots#costs.time",
+    "jeando17:upgrade_melee_damage_ii__scots#age",
+    "jeando17:upgrade_melee_damage_ii__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_melee_damage_iii__scots",
+   "name": "Damascus Steel",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "food": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_melee_damage_iii__scots#costs",
+    "jeando17:upgrade_melee_damage_iii__scots#costs.time",
+    "jeando17:upgrade_melee_damage_iii__scots#age",
+    "jeando17:upgrade_melee_damage_iii__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_i__scots",
+   "name": "Fitted Leatherwork",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_melee_armor_i__scots#costs",
+    "jeando17:upgrade_melee_armor_i__scots#costs.time",
+    "jeando17:upgrade_melee_armor_i__scots#age",
+    "jeando17:upgrade_melee_armor_i__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_ii__scots",
+   "name": "Insulated Helm",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_melee_armor_ii__scots#costs",
+    "jeando17:upgrade_melee_armor_ii__scots#costs.time",
+    "jeando17:upgrade_melee_armor_ii__scots#age",
+    "jeando17:upgrade_melee_armor_ii__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_iii__scots",
+   "name": "Master Smiths",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "food": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_melee_armor_iii__scots#costs",
+    "jeando17:upgrade_melee_armor_iii__scots#costs.time",
+    "jeando17:upgrade_melee_armor_iii__scots#age",
+    "jeando17:upgrade_melee_armor_iii__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_i__scots",
+   "name": "Iron Undermesh",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_ranged_armor_i__scots#costs",
+    "jeando17:upgrade_ranged_armor_i__scots#costs.time",
+    "jeando17:upgrade_ranged_armor_i__scots#age",
+    "jeando17:upgrade_ranged_armor_i__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_ii__scots",
+   "name": "Wedge Rivets",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_ranged_armor_ii__scots#costs",
+    "jeando17:upgrade_ranged_armor_ii__scots#costs.time",
+    "jeando17:upgrade_ranged_armor_ii__scots#age",
+    "jeando17:upgrade_ranged_armor_ii__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_iii__scots",
+   "name": "Angled Surfaces",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "wood": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_ranged_armor_iii__scots#costs",
+    "jeando17:upgrade_ranged_armor_iii__scots#costs.time",
+    "jeando17:upgrade_ranged_armor_iii__scots#age",
+    "jeando17:upgrade_ranged_armor_iii__scots#description",
+    "data/catalog-preview-17.0.json meta upgradeGroups (Blacksmith group of the Scots infantry and Border Reiver)"
+   ]
+  },
+  {
+   "id": "upgrade_wallace_rally_sco",
+   "name": "Wallace's Rally",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "production_speed",
+     "target": "barracks",
+     "op": "mul",
+     "value": 1.5,
+     "notes": "record modifier targets Barracks and Archery Range; text says infantry production, so only Barracks infantry is sped up here"
+    }
+   ],
+   "notes": "Scots replacement for Military Academy: +50% infantry production speed; rallied infantry +25% speed for 25 s.",
+   "evidence": [
+    "jeando17:upgrade_wallace_rally_sco#costs",
+    "jeando17:upgrade_wallace_rally_sco#costs.time",
+    "jeando17:upgrade_wallace_rally_sco#age",
+    "jeando17:upgrade_wallace_rally_sco#description",
+    "jeando17:cmvkznbnj00gp41l9g389pnie (speed x0.5 multiply, barracks/archery_range)",
+    "checklist:scots/technology/Wallace's Rally#building (Blacksmith, confirmed)",
+    "transcript:c_oaynL66jY@8:48 (\"Wallace's rally instead of military academy\")"
+   ]
+  },
+  {
+   "id": "upgrade_tech_university_biology__scots",
+   "name": "Biology",
+   "age": 4,
+   "building": "university",
+   "cost": {
+    "food": 500,
+    "gold": 1000
+   },
+   "researchSeconds": 90,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_tech_university_biology__scots#costs",
+    "jeando17:upgrade_tech_university_biology__scots#costs.time",
+    "jeando17:upgrade_tech_university_biology__scots#age",
+    "jeando17:upgrade_tech_university_biology__scots#description"
+   ]
+  },
+  {
+   "id": "upgrade_snaphaunce_weapons_sco",
+   "name": "Snaphance Locks",
+   "age": 4,
+   "building": "university",
+   "cost": {
+    "food": 300,
+    "gold": 500
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_snaphaunce_weapons_sco#costs",
+    "jeando17:upgrade_snaphaunce_weapons_sco#costs.time",
+    "jeando17:upgrade_snaphaunce_weapons_sco#age",
+    "jeando17:upgrade_snaphaunce_weapons_sco#description",
+    "checklist:scots/technology/Snaphance Locks#building (University, confirmed)"
+   ]
+  },
+  {
+   "id": "upgrade_manatarms_elite_army_tactics__scots",
+   "name": "Elite Army Tactics",
+   "age": 4,
+   "building": "university",
+   "cost": {
+    "food": 500,
+    "gold": 1000
+   },
+   "researchSeconds": 90,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_manatarms_elite_army_tactics__scots#costs",
+    "jeando17:upgrade_manatarms_elite_army_tactics__scots#costs.time",
+    "jeando17:upgrade_manatarms_elite_army_tactics__scots#age",
+    "jeando17:upgrade_manatarms_elite_army_tactics__scots#description"
+   ]
+  },
+  {
+   "id": "upgrade_highland_tier1_sco",
+   "name": "Cateran's Trail",
+   "age": 2,
+   "building": "mustering_hall",
+   "cost": {
+    "food": 600
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [],
+   "notes": "Highland technology: cost halves for each Highland landmark built (stacking).",
+   "evidence": [
+    "jeando17:upgrade_highland_tier1_sco#costs",
+    "jeando17:upgrade_highland_tier1_sco#costs.time",
+    "jeando17:upgrade_highland_tier1_sco#age",
+    "jeando17:upgrade_highland_tier1_sco#description",
+    "checklist:scots/technology/Cateran's Trail#building (Mustering Hall, confirmed)",
+    "observation:qlogYcWhKEU (Stew Ponds 1500 -> 750 -> 375; Cateran's Trail 600 -> 300; Clan Traditions 600 / Feuds Aside 1200 with the Abbey)"
+   ],
+   "region": "highland"
+  },
+  {
+   "id": "upgrade_highland_tier2_sco",
+   "name": "Clan Traditions",
+   "age": 3,
+   "building": "mustering_hall",
+   "cost": {
+    "food": 1200
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "Highland technology: cost halves for each Highland landmark built (stacking).",
+   "evidence": [
+    "jeando17:upgrade_highland_tier2_sco#costs",
+    "jeando17:upgrade_highland_tier2_sco#costs.time",
+    "jeando17:upgrade_highland_tier2_sco#age",
+    "jeando17:upgrade_highland_tier2_sco#description",
+    "checklist:scots/technology/Clan Traditions#building (Mustering Hall, confirmed)",
+    "observation:qlogYcWhKEU (Stew Ponds 1500 -> 750 -> 375; Cateran's Trail 600 -> 300; Clan Traditions 600 / Feuds Aside 1200 with the Abbey)"
+   ],
+   "region": "highland"
+  },
+  {
+   "id": "upgrade_highland_tier3_sco",
+   "name": "Feuds Aside",
+   "age": 4,
+   "building": "mustering_hall",
+   "cost": {
+    "food": 2400
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "Highland technology: cost halves for each Highland landmark built (stacking).",
+   "evidence": [
+    "jeando17:upgrade_highland_tier3_sco#costs",
+    "jeando17:upgrade_highland_tier3_sco#costs.time",
+    "jeando17:upgrade_highland_tier3_sco#age",
+    "jeando17:upgrade_highland_tier3_sco#description",
+    "checklist:scots/technology/Feuds Aside#building (Mustering Hall, confirmed)",
+    "observation:qlogYcWhKEU (Stew Ponds 1500 -> 750 -> 375; Cateran's Trail 600 -> 300; Clan Traditions 600 / Feuds Aside 1200 with the Abbey)"
+   ],
+   "region": "highland"
+  },
+  {
+   "id": "upgrade_lowland_tier1_sco",
+   "name": "Lion's Duty",
+   "age": 2,
+   "building": "mustering_hall",
+   "cost": {
+    "gold": 500
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [],
+   "notes": "Lowland technology: cost halves for each Lowland landmark built (stacking).",
+   "evidence": [
+    "jeando17:upgrade_lowland_tier1_sco#costs",
+    "jeando17:upgrade_lowland_tier1_sco#costs.time",
+    "jeando17:upgrade_lowland_tier1_sco#age",
+    "jeando17:upgrade_lowland_tier1_sco#description",
+    "checklist:scots/technology/Lion's Duty#building (Mustering Hall, confirmed)",
+    "observation:qlogYcWhKEU (Stew Ponds 1500 -> 750 -> 375; Cateran's Trail 600 -> 300; Clan Traditions 600 / Feuds Aside 1200 with the Abbey)"
+   ],
+   "region": "lowland"
+  },
+  {
+   "id": "upgrade_lowland_tier2_sco",
+   "name": "Stew Ponds",
+   "age": 3,
+   "building": "mustering_hall",
+   "cost": {
+    "gold": 1500
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "Lowland technology: cost halves for each Lowland landmark built (stacking).",
+   "evidence": [
+    "jeando17:upgrade_lowland_tier2_sco#costs",
+    "jeando17:upgrade_lowland_tier2_sco#costs.time",
+    "jeando17:upgrade_lowland_tier2_sco#age",
+    "jeando17:upgrade_lowland_tier2_sco#description",
+    "checklist:scots/technology/Stew Ponds#building (Mustering Hall, confirmed)",
+    "observation:qlogYcWhKEU (Stew Ponds 1500 -> 750 -> 375; Cateran's Trail 600 -> 300; Clan Traditions 600 / Feuds Aside 1200 with the Abbey)"
+   ],
+   "region": "lowland"
+  },
+  {
+   "id": "upgrade_lowland_tier3_sco",
+   "name": "We Stand Alone",
+   "age": 4,
+   "building": "mustering_hall",
+   "cost": {
+    "gold": 2500
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "Lowland technology: cost halves for each Lowland landmark built (stacking).",
+   "evidence": [
+    "jeando17:upgrade_lowland_tier3_sco#costs",
+    "jeando17:upgrade_lowland_tier3_sco#costs.time",
+    "jeando17:upgrade_lowland_tier3_sco#age",
+    "jeando17:upgrade_lowland_tier3_sco#description",
+    "checklist:scots/technology/We Stand Alone#building (Mustering Hall, confirmed)",
+    "observation:qlogYcWhKEU (Stew Ponds 1500 -> 750 -> 375; Cateran's Trail 600 -> 300; Clan Traditions 600 / Feuds Aside 1200 with the Abbey)"
+   ],
+   "region": "lowland"
+  },
+  {
+   "id": "upgrade_lochaber_axes_sco",
+   "name": "Lochaber Axes",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_lochaber_axes_sco#costs",
+    "jeando17:upgrade_lochaber_axes_sco#costs.time",
+    "jeando17:upgrade_lochaber_axes_sco#age",
+    "jeando17:upgrade_lochaber_axes_sco#description",
+    "checklist:scots/technology/Lochaber Axes#building (Barracks, confirmed)"
+   ]
+  },
+  {
+   "id": "upgrade_basket_hilted_broadsword_sco",
+   "name": "Basket-hilted Broadswords",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_basket_hilted_broadsword_sco#costs",
+    "jeando17:upgrade_basket_hilted_broadsword_sco#costs.time",
+    "jeando17:upgrade_basket_hilted_broadsword_sco#age",
+    "jeando17:upgrade_basket_hilted_broadsword_sco#description",
+    "checklist:scots/technology/Basket-Hilted Broadswords#building (Barracks, confirmed)"
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_2_sco",
+   "name": "Upgrade to Hardened (Pikeman)",
+   "age": 2,
+   "building": "barracks",
+   "cost": {
+    "food": 15,
+    "gold": 35
+   },
+   "researchSeconds": 15,
+   "category": "unit-tier",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_spearman_2_sco#costs",
+    "jeando17:upgrade_unit_spearman_2_sco#costs.time",
+    "jeando17:upgrade_unit_spearman_2_sco#age",
+    "jeando17:upgrade_unit_spearman_2_sco#description"
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_3_sco",
+   "name": "Upgrade to Veteran (Pikeman)",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_spearman_3_sco#costs",
+    "jeando17:upgrade_unit_spearman_3_sco#costs.time",
+    "jeando17:upgrade_unit_spearman_3_sco#age",
+    "jeando17:upgrade_unit_spearman_3_sco#description"
+   ]
+  },
+  {
+   "id": "upgrade_unit_spearman_4_sco",
+   "name": "Upgrade to Elite (Pikeman)",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_spearman_4_sco#costs",
+    "jeando17:upgrade_unit_spearman_4_sco#costs.time",
+    "jeando17:upgrade_unit_spearman_4_sco#age",
+    "jeando17:upgrade_unit_spearman_4_sco#description"
+   ]
+  },
+  {
+   "id": "upgrade_unit_cateran_3_sco",
+   "name": "Upgrade to Veteran (Cateran)",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 30,
+   "category": "unit-tier",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_cateran_3_sco#costs",
+    "jeando17:upgrade_unit_cateran_3_sco#costs.time",
+    "jeando17:upgrade_unit_cateran_3_sco#age",
+    "jeando17:upgrade_unit_cateran_3_sco#description"
+   ]
+  },
+  {
+   "id": "upgrade_unit_cateran_4_sco",
+   "name": "Upgrade to Elite (Cateran)",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_cateran_4_sco#costs",
+    "jeando17:upgrade_unit_cateran_4_sco#costs.time",
+    "jeando17:upgrade_unit_cateran_4_sco#age",
+    "jeando17:upgrade_unit_cateran_4_sco#description"
+   ]
+  },
+  {
+   "id": "upgrade_unit_manatarms_3_sco",
+   "name": "Upgrade to Veteran (Man-at-Arms)",
+   "age": 3,
+   "building": "barracks",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 30,
+   "category": "unit-tier",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_manatarms_3_sco#costs",
+    "jeando17:upgrade_unit_manatarms_3_sco#costs.time",
+    "jeando17:upgrade_unit_manatarms_3_sco#age",
+    "jeando17:upgrade_unit_manatarms_3_sco#description"
+   ]
+  },
+  {
+   "id": "upgrade_unit_manatarms_4_sco",
+   "name": "Upgrade to Elite (Man-at-Arms)",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_manatarms_4_sco#costs",
+    "jeando17:upgrade_unit_manatarms_4_sco#costs.time",
+    "jeando17:upgrade_unit_manatarms_4_sco#age",
+    "jeando17:upgrade_unit_manatarms_4_sco#description"
+   ]
+  },
+  {
+   "id": "upgrade_unit_gallowglass_4_sco",
+   "name": "Upgrade to Elite (Gallowglass)",
+   "age": 4,
+   "building": "barracks",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [],
+   "notes": "",
+   "evidence": [
+    "jeando17:upgrade_unit_gallowglass_4_sco#costs",
+    "jeando17:upgrade_unit_gallowglass_4_sco#costs.time",
+    "jeando17:upgrade_unit_gallowglass_4_sco#age",
+    "jeando17:upgrade_unit_gallowglass_4_sco#description"
+   ]
+  }
+ ],
+ "army": {
+  "lines": [
+   {
+    "key": "pikeman",
+    "name": "Pikeman",
+    "producers": [
+     "barracks"
+    ],
+    "tiers": [
+     {
+      "id": "unit_spearman_1_sco",
+      "name": "Pikeman",
+      "age": 1,
+      "cost": {
+       "food": 60,
+       "wood": 25
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 90,
+      "armorMelee": 0,
+      "armorRanged": 0,
+      "speedTiles": 1.25
+     },
+     {
+      "id": "unit_spearman_2_sco",
+      "name": "Hardened Pikeman",
+      "age": 2,
+      "cost": {
+       "food": 60,
+       "wood": 25
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 100,
+      "armorMelee": 0,
+      "armorRanged": 0,
+      "speedTiles": 1.25
+     },
+     {
+      "id": "unit_spearman_3_sco",
+      "name": "Veteran Pikeman",
+      "age": 3,
+      "cost": {
+       "food": 60,
+       "wood": 25
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 110,
+      "armorMelee": 0,
+      "armorRanged": 0,
+      "speedTiles": 1.25
+     },
+     {
+      "id": "unit_spearman_4_sco",
+      "name": "Elite Pikeman",
+      "age": 4,
+      "cost": {
+       "food": 60,
+       "wood": 25
+      },
+      "trainSeconds": 15,
+      "pop": 1,
+      "hp": 140,
+      "armorMelee": 0,
+      "armorRanged": 0,
+      "speedTiles": 1.3
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_spearman_2_sco",
+     "upgrade_unit_spearman_3_sco",
+     "upgrade_unit_spearman_4_sco"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i__scots",
+     "upgrade_melee_damage_ii__scots",
+     "upgrade_melee_damage_iii__scots",
+     "upgrade_melee_armor_i__scots",
+     "upgrade_melee_armor_ii__scots",
+     "upgrade_melee_armor_iii__scots",
+     "upgrade_ranged_armor_i__scots",
+     "upgrade_ranged_armor_ii__scots",
+     "upgrade_ranged_armor_iii__scots",
+     "upgrade_wallace_rally_sco",
+     "upgrade_lowland_tier1_sco",
+     "upgrade_highland_tier2_sco",
+     "upgrade_manatarms_elite_army_tactics__scots"
+    ],
+    "muster": "pikemen",
+    "snowdoun": 80,
+    "evidence": [
+     "jeando17:unit_spearman_1_sco#costs",
+     "jeando17:unit_spearman_1_sco#costs.time",
+     "jeando17:unit_spearman_1_sco#age",
+     "data/catalog-preview-17.0.json meta.unit_spearman_1_sco.upgradeGroups",
+     "jeando17:upgrade_manatarms_elite_army_tactics__scots#description (\"Melee Infantry gain +15% damage and +15% health\"; applies to every melee infantry line, 2026-10-25)"
+    ]
+   },
+   {
+    "key": "cateran",
+    "name": "Cateran",
+    "producers": [
+     "barracks"
+    ],
+    "tiers": [
+     {
+      "id": "unit_cateran_2_sco",
+      "name": "Cateran",
+      "age": 2,
+      "cost": {
+       "food": 90
+      },
+      "trainSeconds": 10,
+      "pop": 1,
+      "hp": 110,
+      "armorMelee": 0,
+      "armorRanged": 0,
+      "speedTiles": 1.5
+     },
+     {
+      "id": "unit_cateran_3_sco",
+      "name": "Veteran Cateran",
+      "age": 3,
+      "cost": {
+       "food": 90
+      },
+      "trainSeconds": 10,
+      "pop": 1,
+      "hp": 135,
+      "armorMelee": 0,
+      "armorRanged": 0,
+      "speedTiles": 1.5
+     },
+     {
+      "id": "unit_cateran_4_sco",
+      "name": "Elite Cateran",
+      "age": 4,
+      "cost": {
+       "food": 90
+      },
+      "trainSeconds": 10,
+      "pop": 1,
+      "hp": 155,
+      "armorMelee": 0,
+      "armorRanged": 0,
+      "speedTiles": 1.5
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_cateran_3_sco",
+     "upgrade_unit_cateran_4_sco"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i__scots",
+     "upgrade_melee_damage_ii__scots",
+     "upgrade_melee_damage_iii__scots",
+     "upgrade_melee_armor_i__scots",
+     "upgrade_melee_armor_ii__scots",
+     "upgrade_melee_armor_iii__scots",
+     "upgrade_ranged_armor_i__scots",
+     "upgrade_ranged_armor_ii__scots",
+     "upgrade_ranged_armor_iii__scots",
+     "upgrade_wallace_rally_sco",
+     "upgrade_highland_tier1_sco",
+     "upgrade_highland_tier2_sco",
+     "upgrade_lowland_tier1_sco",
+     "upgrade_basket_hilted_broadsword_sco",
+     "upgrade_manatarms_elite_army_tactics__scots"
+    ],
+    "muster": "cateran",
+    "snowdoun": 85,
+    "evidence": [
+     "jeando17:unit_cateran_2_sco#costs",
+     "jeando17:unit_cateran_2_sco#costs.time",
+     "jeando17:unit_cateran_2_sco#age",
+     "data/catalog-preview-17.0.json meta.unit_cateran_2_sco.upgradeGroups"
+    ]
+   },
+   {
+    "key": "man_at_arms",
+    "name": "Man-at-Arms (Lochaber Axes)",
+    "producers": [
+     "barracks"
+    ],
+    "tiers": [
+     {
+      "id": "unit_manatarms_2_sco",
+      "name": "Early Man-at-Arms",
+      "age": 2,
+      "cost": {
+       "food": 90,
+       "gold": 20
+      },
+      "trainSeconds": 20.5,
+      "pop": 1,
+      "hp": 120,
+      "armorMelee": 3,
+      "armorRanged": 3,
+      "speedTiles": 1.125
+     },
+     {
+      "id": "unit_manatarms_3_sco",
+      "name": "Man-at-Arms",
+      "age": 3,
+      "cost": {
+       "food": 90,
+       "gold": 20
+      },
+      "trainSeconds": 20.5,
+      "pop": 1,
+      "hp": 155,
+      "armorMelee": 4,
+      "armorRanged": 4,
+      "speedTiles": 1.125
+     },
+     {
+      "id": "unit_manatarms_4_sco",
+      "name": "Elite Man-at-Arms",
+      "age": 4,
+      "cost": {
+       "food": 90,
+       "gold": 20
+      },
+      "trainSeconds": 20.5,
+      "pop": 1,
+      "hp": 180,
+      "armorMelee": 5,
+      "armorRanged": 6,
+      "speedTiles": 1.125
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_manatarms_3_sco",
+     "upgrade_unit_manatarms_4_sco"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i__scots",
+     "upgrade_melee_damage_ii__scots",
+     "upgrade_melee_damage_iii__scots",
+     "upgrade_melee_armor_i__scots",
+     "upgrade_melee_armor_ii__scots",
+     "upgrade_melee_armor_iii__scots",
+     "upgrade_ranged_armor_i__scots",
+     "upgrade_ranged_armor_ii__scots",
+     "upgrade_ranged_armor_iii__scots",
+     "upgrade_wallace_rally_sco",
+     "upgrade_lochaber_axes_sco",
+     "upgrade_highland_tier2_sco",
+     "upgrade_lowland_tier1_sco",
+     "upgrade_manatarms_elite_army_tactics__scots"
+    ],
+    "snowdoun": 104,
+    "evidence": [
+     "jeando17:unit_manatarms_2_sco#costs",
+     "jeando17:unit_manatarms_2_sco#costs.time",
+     "jeando17:unit_manatarms_2_sco#age",
+     "data/catalog-preview-17.0.json meta.unit_manatarms_2_sco.upgradeGroups",
+     "note: the catalog groups list no Elite Army Tactics for the Scots Man-at-Arms or Pikeman; followed as given",
+     "jeando17:upgrade_manatarms_elite_army_tactics__scots#description (\"Melee Infantry gain +15% damage and +15% health\"; applies to every melee infantry line, 2026-10-25)"
+    ]
+   },
+   {
+    "key": "gallowglass",
+    "name": "Gallowglass",
+    "producers": [
+     "barracks"
+    ],
+    "tiers": [
+     {
+      "id": "unit_gallowglass_3_sco",
+      "name": "Gallowglass",
+      "age": 3,
+      "cost": {
+       "food": 140,
+       "gold": 80
+      },
+      "trainSeconds": 28,
+      "pop": 1,
+      "hp": 180,
+      "armorMelee": 3,
+      "armorRanged": 2,
+      "speedTiles": 1.125
+     },
+     {
+      "id": "unit_gallowglass_4_sco",
+      "name": "Elite Gallowglass",
+      "age": 4,
+      "cost": {
+       "food": 140,
+       "gold": 80
+      },
+      "trainSeconds": 28,
+      "pop": 1,
+      "hp": 210,
+      "armorMelee": 4,
+      "armorRanged": 3,
+      "speedTiles": 1.125
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_gallowglass_4_sco"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i__scots",
+     "upgrade_melee_damage_ii__scots",
+     "upgrade_melee_damage_iii__scots",
+     "upgrade_melee_armor_i__scots",
+     "upgrade_melee_armor_ii__scots",
+     "upgrade_melee_armor_iii__scots",
+     "upgrade_ranged_armor_i__scots",
+     "upgrade_ranged_armor_ii__scots",
+     "upgrade_ranged_armor_iii__scots",
+     "upgrade_wallace_rally_sco",
+     "upgrade_highland_tier2_sco",
+     "upgrade_lowland_tier1_sco",
+     "upgrade_manatarms_elite_army_tactics__scots"
+    ],
+    "muster": "gallowglass",
+    "evidence": [
+     "jeando17:unit_gallowglass_3_sco#costs",
+     "jeando17:unit_gallowglass_3_sco#costs.time",
+     "jeando17:unit_gallowglass_3_sco#age",
+     "data/catalog-preview-17.0.json meta.unit_gallowglass_3_sco.upgradeGroups"
+    ]
+   },
+   {
+    "key": "border_reiver",
+    "name": "Border Reiver",
+    "producers": [
+     "archery_range"
+    ],
+    "tiers": [
+     {
+      "id": "unit_border_reiver_4_sco",
+      "name": "Border Reiver",
+      "age": 4,
+      "cost": {
+       "food": 120,
+       "gold": 30
+      },
+      "trainSeconds": 17,
+      "pop": 1,
+      "hp": 140,
+      "armorMelee": 0,
+      "armorRanged": 4,
+      "speedTiles": 1.688
+     }
+    ],
+    "tierUpgrades": [],
+    "applicableTechs": [
+     "upgrade_melee_armor_i__scots",
+     "upgrade_melee_armor_ii__scots",
+     "upgrade_melee_armor_iii__scots",
+     "upgrade_ranged_armor_i__scots",
+     "upgrade_ranged_armor_ii__scots",
+     "upgrade_ranged_armor_iii__scots",
+     "upgrade_highland_tier3_sco",
+     "upgrade_snaphaunce_weapons_sco",
+     "upgrade_tech_university_biology__scots"
+    ],
+    "muster": "reivers",
+    "evidence": [
+     "jeando17:unit_border_reiver_4_sco#costs",
+     "jeando17:unit_border_reiver_4_sco#costs.time",
+     "jeando17:unit_border_reiver_4_sco#age",
+     "jeando17:unit_border_reiver_4_sco#hitpoints",
+     "jeando17:unit_border_reiver_4_sco#armor",
+     "data/catalog-preview-17.0.json meta.unit_border_reiver_4_sco.upgradeGroups",
+     "checklist:scots/unit/Border Reiver#age (Imperial, confirmed)",
+     "checklist:scots/unit/Border Reiver#building (Archery Range)"
+    ]
+   }
+  ]
+ },
+ "mechanics": [
+  {
+   "key": "highland-cattle",
+   "summary": "Highland Cattle graze at Berry Bushes and produce 30 food per minute each while eating, without depleting the bush and without villagers or drop-off. One cow per bush. Trained at Tower Houses (75 food, 25 gold, 25 s); not counted in population. Capacity 9, +4 per Highland landmark. One starts with the player.",
+   "params": {
+    "foodPerMinute": 30,
+    "cost": {
+     "food": 75,
+     "gold": 25
+    },
+    "trainSeconds": 25,
+    "producers": [
+     "tower_house",
+     "landmark:tower-of-skye"
+    ],
+    "capStart": 9,
+    "capPerHighlandLandmark": 4,
+    "startCount": 1,
+    "perBush": 1,
+    "pop": 0,
+    "fermtounsMultiplier": 1.2
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:highland_cattle_sco#description (\"produce Food at a rate of 30 per minute ... capacity of 9 ... increases by 4 with every Highland Landmark\")",
+    "checklist:scots/unit/Highland Cattle#cost.food,cost.gold,trainTimeSeconds,building (75/25, 25 s, Tower House; confirmed)",
+    "transcript:c_oaynL66jY@5:16-5:43 (\"Can they eat on the same one? No ... They do not consume the berries ... six berries ... 180 food per minute\")",
+    "transcript:c_oaynL66jY@14:55 (\"cows do not need a drop off point\")",
+    "observation:c_oaynL66jY (HUD cattle 1/9 -> 1/13 -> 1/17 -> 1/21 per Highland landmark)"
+   ]
+  },
+  {
+   "key": "tower-house",
+   "summary": "Tower House: 175 wood, 60 s, Dark Age, +15 population, trains Highland Cattle. A House is 50 wood for +10.",
+   "params": {
+    "pop": 15,
+    "cost": {
+     "wood": 175
+    },
+    "buildSeconds": 60,
+    "age": 1
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:building_defense_tower_house_sco#costs.wood",
+    "jeando17:building_defense_tower_house_sco#costs.time",
+    "jeando17:building_defense_tower_house_sco#description",
+    "checklist:scots/building/Tower House#age,population"
+   ]
+  },
+  {
+   "key": "mustering-hall",
+   "summary": "Mustering Hall (Feudal, 50 wood, 15 s). Musters spend food plus one muster charge; each muster type can be used once. A muster is a 5 s action; afterwards the warriors come out one at a time, 2 s apart (the mustered unit records' train time). 1 charge by default; Influence tiers at 3/6/10 military production buildings each add a charge; tier 2 cuts muster cost 20%, tier 3 a further 20% (40% total, added) and gives non-naval mustered units +20% health. Three Loch Lookout adds 3 charges and +75% warriors.",
+   "params": {
+    "defaultCharges": 1,
+    "tierStructures": [
+     3,
+     6,
+     10
+    ],
+    "chargesPerTier": 1,
+    "costReductionByTier": {
+     "0": 0,
+     "1": 0,
+     "2": 0.2,
+     "3": 0.4
+    },
+    "tier3HealthBonus": 0.2,
+    "structureTypes": [
+     "barracks",
+     "archery_range",
+     "stable",
+     "siege_workshop",
+     "dock"
+    ],
+    "lookoutCharges": 3,
+    "lookoutWarriorMultiplier": 1.75,
+    "musters": {
+     "pikemen": {
+      "id": "muster_lowlanders_age2_sco",
+      "name": "Muster Pikemen",
+      "food": 600,
+      "actionSeconds": 5,
+      "units": 8,
+      "unitId": "unit_muster_pikemen_sco",
+      "unitSeconds": 2,
+      "age": 2,
+      "line": "pikeman",
+      "evidence": [
+       "jeando17:muster_lowlanders_age2_sco#costs.food",
+       "jeando17:muster_lowlanders_age2_sco#costs.time",
+       "jeando17:muster_lowlanders_age2_sco#costs.action",
+       "jeando17:muster_lowlanders_age2_sco#description",
+       "jeando17:muster_lowlanders_age2_sco#age",
+       "jeando17:unit_muster_pikemen_sco#costs.time"
+      ]
+     },
+     "cateran": {
+      "id": "muster_highlanders_age2_sco",
+      "name": "Muster Cateran",
+      "food": 600,
+      "actionSeconds": 5,
+      "units": 8,
+      "unitId": "unit_highlanders_cateran_sco",
+      "unitSeconds": 2,
+      "age": 2,
+      "line": "cateran",
+      "evidence": [
+       "jeando17:muster_highlanders_age2_sco#costs.food",
+       "jeando17:muster_highlanders_age2_sco#costs.time",
+       "jeando17:muster_highlanders_age2_sco#costs.action",
+       "jeando17:muster_highlanders_age2_sco#description",
+       "jeando17:muster_highlanders_age2_sco#age",
+       "jeando17:unit_highlanders_cateran_sco#costs.time"
+      ]
+     },
+     "highland_archers": {
+      "id": "muster_highlanders_age4_sco",
+      "name": "Muster Highland Archers",
+      "food": 600,
+      "actionSeconds": 5,
+      "units": 9,
+      "unitId": "unit_highlanders_archers_sco",
+      "unitSeconds": 2,
+      "age": 2,
+      "line": null,
+      "evidence": [
+       "jeando17:muster_highlanders_age4_sco#costs.food",
+       "jeando17:muster_highlanders_age4_sco#costs.time",
+       "jeando17:muster_highlanders_age4_sco#costs.action",
+       "jeando17:muster_highlanders_age4_sco#description",
+       "jeando17:muster_highlanders_age4_sco#age",
+       "jeando17:unit_highlanders_archers_sco#costs.time"
+      ],
+      "requiresTier": 1,
+      "notes": "record age field reads Feudal; Influence Tier 1 unlocks it (tooltip)."
+     },
+     "gallowglass": {
+      "id": "muster_highlanders_age3_sco",
+      "name": "Muster Gallowglass",
+      "food": 1350,
+      "actionSeconds": 5,
+      "units": 7,
+      "unitId": "unit_highlanders_gallowglass_sco",
+      "unitSeconds": 2,
+      "age": 3,
+      "line": "gallowglass",
+      "evidence": [
+       "jeando17:muster_highlanders_age3_sco#costs.food",
+       "jeando17:muster_highlanders_age3_sco#costs.time",
+       "jeando17:muster_highlanders_age3_sco#costs.action",
+       "jeando17:muster_highlanders_age3_sco#description",
+       "jeando17:muster_highlanders_age3_sco#age",
+       "jeando17:unit_highlanders_gallowglass_sco#costs.time"
+      ]
+     },
+     "reivers": {
+      "id": "muster_reivers_sco",
+      "name": "Muster Border Reivers",
+      "food": 1350,
+      "actionSeconds": 5,
+      "units": 12,
+      "unitId": "unit_border_reiver_4_no_req_sco",
+      "unitSeconds": 2,
+      "age": 3,
+      "line": "border_reiver",
+      "evidence": [
+       "jeando17:muster_reivers_sco#costs.food",
+       "jeando17:muster_reivers_sco#costs.time",
+       "jeando17:muster_reivers_sco#costs.action",
+       "jeando17:muster_reivers_sco#description",
+       "jeando17:muster_reivers_sco#age",
+       "jeando17:unit_border_reiver_4_no_req_sco#costs.time"
+      ]
+     },
+     "mangonels": {
+      "id": "muster_mangonel_sco",
+      "name": "Muster Mangonels",
+      "food": 1350,
+      "actionSeconds": 5,
+      "units": 2,
+      "unitId": "unit_muster_mangonel_sco",
+      "unitSeconds": 2,
+      "age": 3,
+      "line": null,
+      "evidence": [
+       "jeando17:muster_mangonel_sco#costs.food",
+       "jeando17:muster_mangonel_sco#costs.time",
+       "jeando17:muster_mangonel_sco#costs.action",
+       "jeando17:muster_mangonel_sco#description",
+       "jeando17:muster_mangonel_sco#age",
+       "jeando17:unit_muster_mangonel_sco#costs.time"
+      ]
+     },
+     "tacksmen": {
+      "id": "muster_tacksmen_sco",
+      "name": "Muster Tacksmen",
+      "food": 1350,
+      "actionSeconds": 5,
+      "units": 7,
+      "unitId": "unit_muster_tacksmen_sco",
+      "unitSeconds": 2,
+      "age": 4,
+      "line": null,
+      "evidence": [
+       "jeando17:muster_tacksmen_sco#costs.food",
+       "jeando17:muster_tacksmen_sco#costs.time",
+       "jeando17:muster_tacksmen_sco#costs.action",
+       "jeando17:muster_tacksmen_sco#description",
+       "jeando17:muster_tacksmen_sco#age",
+       "jeando17:unit_muster_tacksmen_sco#costs.time"
+      ]
+     }
+    },
+    "spawn": "one unit every unitSeconds (2 s) after the 5 s action completes"
+   },
+   "status": "partial",
+   "evidence": [
+    "jeando17:building_mustering_hall_sco#description (\"Musters warriors using Food and Muster Charge costs. Each type of muster is one-time use ... Comes with 1 Muster Charge by default\")",
+    "frame:BV1Bmnx6ZEBh_p2@44:30 (Mustering Hall Influence: TIER 1 3 Structures ... TIER 2 6 Structures Cost to Muster reduced by 20% ... TIER 3 10 Structures Cost to muster reduced by 20% and non-naval mustered units have 20% more Health. Adds a muster charge)",
+    "transcript:c_oaynL66jY@18:55 (\"now the master charges are 480 food and we got two charges\"); @19:02 (\"tier three is cost to muster reduced by 20% again\"); @20:43 (\"810 food\")",
+    "observation:c_oaynL66jY (Cateran 600 -> 480 at tier 2, Highland Archers 600 -> 360 at tier 3: added, not compounded)",
+    "frame:qlogYcWhKEU@11:16 (Barracks \"+1 Mustering Hall Structure\"); frame:qlogYcWhKEU@12:54 (Stable +1); frame:xjYytU_zXTA@2:10 (Dock +1); frame:xjYytU_zXTA@31:58 (Siege Workshop +1)",
+    "ocr:BV182n46EEDi_p2@36:12-36:42 (Muster Border Reivers completed at 36:15 with population 129/145; population 131, 133, 134, 136, 137, 139, 140, 142 every 3 s, i.e. one reiver about every 2 s; reiver 168/168 (+28) = 140 +20%)",
+    "ocr:qlogYcWhKEU@30:48-30:56 (Three Loch Lookout charge counter 4 -> 3 after Muster Border Reivers; population 7/25 -> 25/25 \"Population Capacity Reached\": more than 12 warriors arrived; cheat sandbox)",
+    "transcript:c_oaynL66jY@17:12 (\"you get them in 5 seconds\"); transcript:wzT5WTqIIU4@04:25 (\"It's a instant reinforcement. You get only one ticket for now\")",
+    "checklist:scots/technology/Muster Border Reivers#building (Three Loch Lookout frame; Mustering Hall frame at 12:04); observation:c_oaynL66jY (Muster Border Reivers completed in Age III)"
+   ]
+  },
+  {
+   "key": "regional-discount",
+   "summary": "Each Highland landmark halves the cost of the Highland technologies (Cateran's Trail, Clan Traditions, Feuds Aside); each Lowland landmark halves the Lowland ones (Lion's Duty, Stew Ponds, We Stand Alone). Halvings stack.",
+   "params": {
+    "perLandmark": 0.5,
+    "highland": [
+     "upgrade_highland_tier1_sco",
+     "upgrade_highland_tier2_sco",
+     "upgrade_highland_tier3_sco"
+    ],
+    "lowland": [
+     "upgrade_lowland_tier1_sco",
+     "upgrade_lowland_tier2_sco",
+     "upgrade_lowland_tier3_sco"
+    ]
+   },
+   "status": "resolved",
+   "evidence": [
+    "checklist:scots/bonus/Lowlands and Highlands#effectText",
+    "observation:qlogYcWhKEU (Stew Ponds 1500/750/375; Cateran's Trail 600/300)",
+    "transcript:c_oaynL66jY@24:19 (\"Lowland technology costs are further reduced by 50%\")"
+   ]
+  },
+  {
+   "key": "stone-of-destiny-rebate",
+   "summary": "Buildings constructed around the Stone of Destiny rebate 30% of their construction cost as gold (not Landmarks).",
+   "params": {
+    "fraction": 0.3,
+    "excludes": [
+     "landmarks"
+    ]
+   },
+   "status": "partial",
+   "evidence": [
+    "jeando17:building_landmark_age2_stone_of_destiny_sco#description",
+    "transcript:c_oaynL66jY@8:36 (\"you get 210 gold if you build a TC in range\")"
+   ]
+  },
+  {
+   "key": "abbey-relic",
+   "summary": "Abbey of the Isles holds a Saint's Relic that can be moved into one military or technology building for +135% research and production speed there (120 s cooldown between moves).",
+   "params": {
+    "productionMultiplier": 2.35,
+    "moveCooldownSeconds": 120
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:building_landmark_age2_abbey_of_the_isles_sco#description",
+    "observation:qlogYcWhKEU@23:42 (Move Saint's Relic: 120 second cooldown)",
+    "observation:c_oaynL66jY@35:12 (Pikeman 06s, Early MAA 09s at the relic Barracks)"
+   ]
+  },
+  {
+   "key": "snowdoun-gate",
+   "summary": "Snowdoun Gate produces 3 free infantry of the toggled type per cycle (Pikeman 80 s, Highland Archer 76 s, Cateran 85 s, Early Man-at-Arms 104 s), 190 resources per minute; each Mustering Hall technology researched adds 15% production speed there.",
+   "params": {
+    "batch": 3,
+    "cycleSeconds": {
+     "pikeman": 80,
+     "cateran": 85,
+     "man_at_arms": 104,
+     "highland_archer": 76
+    },
+    "perHallTech": 0.15
+   },
+   "status": "resolved",
+   "evidence": [
+    "jeando17:building_landmark_age3_snowdoun_gate_sco#description",
+    "jeando17:unit_toggle_pikemen_sco#costs.time",
+    "jeando17:unit_toggle_cateran_sco#costs.time",
+    "jeando17:unit_toggle_men_at_arms_sco#costs.time",
+    "gap-finding sco-producers (batch of 3; 52 s and 58 s readings are 76 s divided by production bonuses)"
+   ]
+  },
+  {
+   "key": "kirkman-relics",
+   "summary": "Kirkman (150 gold, 30 s, Monastery) picks up relics from Castle Age and places them in the Monastery for gold. Stew Ponds spawns one free Kirkman (record unit_monk_3_free_sco); the Abbey of the Isles does not.",
+   "params": {
+    "kirkmanCost": {
+     "gold": 150
+    },
+    "kirkmanSeconds": 30,
+    "kirkmanSpeedTiles": 1.125,
+    "relicAge": 3
+   },
+   "status": "partial",
+   "evidence": [
+    "jeando17:unit_monk_3_sco#costs",
+    "jeando17:unit_monk_3_sco#costs.time",
+    "jeando17:unit_monk_3_sco#speed",
+    "jeando17:building_unit_religious_control_sco#description",
+    "jeando17:upgrade_lowland_tier2_sco#description",
+    "observation:c_oaynL66jY@25:24 (Stew Ponds completed -> free Kirkman 90/90 HP)"
+   ]
+  },
+  {
+   "key": "fishpond",
+   "summary": "A Kirkman builds a Fishpond (6 s, no cost) and works it for 40 gold per minute; while worked, nearby workers gather 10% faster (20% with Stew Ponds). Fishpond capacity: 1 per Lowland landmark (up to 4).",
+   "params": {
+    "goldPerMinute": 40,
+    "buildSeconds": 6,
+    "aura": 0.1,
+    "capPerLowlandLandmark": 1,
+    "capLandmarkMax": 4,
+    "stewPonds": {
+     "id": "upgrade_lowland_tier2_sco",
+     "aura": 0.2,
+     "capAdd": 1,
+     "freeKirkmen": 1
+    },
+    "auraStacks": false
+   },
+   "status": "partial",
+   "evidence": [
+    "jeando17:building_resource_fish_pond_sco#description",
+    "jeando17:building_resource_fish_pond_sco#costs.time",
+    "checklist:scots/bonus/Fishponds#effectValue,cap",
+    "jeando17:upgrade_lowland_tier2_sco#description (\"Increases Fishpond capacity by 1 and increases gather rates of workers near Fishponds from 10% to 20%. Instantly spawns a free Kirkman.\")",
+    "transcript:c_oaynL66jY@9:12 (\"It does not seem like it stacks\"; Sam 2026-10-25: the buff does not stack)"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "item": "Muster spawn timing",
+   "why": "Records: the muster is a 5 s action and the mustered unit records train in 2 s. A real test game (BV182n46EEDi_p2 36:15-36:39) shows population rising by about one every 2 s after \"Muster Border Reivers completed\"; a cheat sandbox (qlogYcWhKEU 30:48) showed 18 arriving within about 2 s.",
+   "fallback": "One unit every 2 s after the 5 s action (the later arrival)."
+  },
+  {
+   "item": "Muster use: once per player or once per Mustering Hall",
+   "why": "Text says \"Each type of muster is one-time use\"; no footage shows a second hall mustering the same type (stream chat asked, unanswered).",
+   "fallback": "Once per player."
+  },
+  {
+   "item": "Muster and free population",
+   "why": "The cheat sandbox started a 21-warrior muster with 18 free population and stopped at \"Population Capacity Reached\"; whether the rest wait or are lost is not shown.",
+   "fallback": "A muster starts only when its warriors fit under the population cap."
+  },
+  {
+   "item": "Which structures count toward Mustering Hall Influence",
+   "why": "Barracks, Stable, Dock and Siege Workshop show \"+1 Mustering Hall Structure\"; Archery Range follows the record (\"Generates influence to military production buildings\"); Tower Houses carry no such line.",
+   "fallback": "Barracks, Archery Range, Stable, Siege Workshop and Dock count; all are placed inside the hall's influence."
+  },
+  {
+   "item": "Relic gold per minute",
+   "why": "Relic income lives in state trees that the installed extraction does not decode (searched relic.rgd, monastery and deposit abilities); no 17.0 record or footage gives it.",
+   "fallback": "Plan parameter relicGoldPerMinute = 100 (the live-game Monastery relic rate as commonly shown in game; not verified from files)."
+  },
+  {
+   "item": "Relics on the map and walking time",
+   "why": "Map-dependent.",
+   "fallback": "Plan parameters relics (3 collected) and relicDistanceTiles (45 tiles one way, walked at the Kirkman record speed 1.125 tiles/s)."
+  },
+  {
+   "item": "Cattle and villagers on the same bushes",
+   "why": "One cow per bush is stated; whether a grazing cow blocks villagers from that bush is not shown.",
+   "fallback": "Grazing does not block villagers; cattle can graze only on bushes not yet depleted (main patch plus far patches)."
+  },
+  {
+   "item": "Tower of Skye as a Tower House",
+   "why": "Text says it \"Acts as a Tower House\"; whether that includes +15 population is not shown.",
+   "fallback": "It trains Highland Cattle; no population."
+  },
+  {
+   "item": "Wallace's Rally on the Archery Range",
+   "why": "Record modifier targets Barracks and Archery Range; text says infantry production.",
+   "fallback": "Infantry at the Barracks only."
+  },
+  {
+   "item": "Stone of Destiny rebate reach and timing",
+   "why": "Rebate area is large but finite; the tooltip shows the rebate at placement.",
+   "fallback": "Every non-landmark building except farms finished after the Stone of Destiny completes is in reach; gold arrives on completion."
+  },
+  {
+   "item": "Kirkman in Feudal Age with Stone of Destiny",
+   "why": "Text: \"Grants early access to Kirkman\"; the producing building in Feudal is not shown.",
+   "fallback": "With the Stone of Destiny, Kirkmen (and Fishponds) are available from its completion; otherwise from the Castle Age Monastery."
+  }
+ ]
+}

@@ -1,0 +1,2580 @@
+{
+  "civ": "French",
+  "catalogCiv": "french",
+  "patch": "16.3.11308",
+  "start": {
+    "villagers": 6,
+    "resources": {
+      "food": 200,
+      "wood": 150,
+      "gold": 100,
+      "stone": 0
+    },
+    "popCap": null,
+    "units": [
+      {
+        "id": "unit_scout_1_fre",
+        "name": "Scout",
+        "count": 1
+      },
+      {
+        "id": "unit_villager_1_fre",
+        "name": "Villager",
+        "count": 6
+      },
+      {
+        "id": "gaia_herdable_sheep",
+        "name": "Sheep",
+        "count": 2
+      },
+      {
+        "id": "gaia_herdable_sheep_black",
+        "name": "Sheep (black)",
+        "count": 1
+      },
+      {
+        "id": "gaia_herdable_sheep_brown",
+        "name": "Sheep (brown)",
+        "count": 2
+      }
+    ],
+    "buildings": [
+      {
+        "id": "building_town_center_capital_fre",
+        "name": "Town Center (capital)",
+        "count": 1
+      }
+    ],
+    "notes": "Standard-mode army record normal_french (racebps/french army/standard). Stone is absent from resource_starting_amount, so 0. Five starting sheep spawn with the army (gaia_herdable_sheep x2, _black x1, _brown x2). popCap at start = population provided by the capital TC, which no installed record states (see unresolved).",
+    "evidence": [
+      "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/resource_starting_amount/food",
+      "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/resource_starting_amount/wood",
+      "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/resource_starting_amount/gold",
+      "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/starting_units/squad[0..11]/$PBGNAME",
+      "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/starting_buildings/starting_building/building/$PBGNAME",
+      "raw:racebps/french.json#default/race_bag/army/standard/$PBGNAME"
+    ]
+  },
+  "villager": {
+    "id": "unit_villager_1_fre",
+    "cost": {
+      "food": 50
+    },
+    "trainSeconds": 20,
+    "speedEngineUnits": 4.5,
+    "hp": 50,
+    "pop": 1,
+    "gather": {
+      "wood": {
+        "rate": 0.75,
+        "carry": 10,
+        "job": "gather_wood",
+        "subType": "tree",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[0]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[0]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[0]/resource_gather_job"
+        ]
+      },
+      "farm": {
+        "rate": 0.75,
+        "carry": 10,
+        "job": "gather_farm",
+        "subType": "farm",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[1]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[1]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[1]/resource_gather_job"
+        ]
+      },
+      "sheep": {
+        "rate": 0.75,
+        "carry": 10,
+        "job": "gather_herdable",
+        "subType": "herded_animal",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[2]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[2]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[2]/resource_gather_job"
+        ],
+        "notes": "gather_herdable (sub type blank in record); applies to herded sheep."
+      },
+      "boar": {
+        "rate": 0.9,
+        "carry": 25,
+        "job": "gather_huntable_danger",
+        "subType": "hunted_animal_danger",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[3]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[3]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[3]/resource_gather_job"
+        ],
+        "notes": "gather_huntable_danger (sub type blank); boar."
+      },
+      "deer": {
+        "rate": 0.825,
+        "carry": 25,
+        "job": "gather_huntable",
+        "subType": "hunted_animal_flee",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[4]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[4]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[4]/resource_gather_job"
+        ],
+        "notes": "gather_huntable (sub type blank); deer and other non-aggressive huntables."
+      },
+      "meteorite": {
+        "rate": 0.75,
+        "carry": 10,
+        "job": "gather_meteorite",
+        "subType": "meteorite",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[5]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[5]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[5]/resource_gather_job"
+        ]
+      },
+      "stone": {
+        "rate": 0.75,
+        "carry": 10,
+        "job": "gather_stone",
+        "subType": "stone",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[6]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[6]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[6]/resource_gather_job"
+        ]
+      },
+      "gold": {
+        "rate": 0.75,
+        "carry": 10,
+        "job": "gather_gold",
+        "subType": "gold",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[7]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[7]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[7]/resource_gather_job"
+        ]
+      },
+      "shore_fish": {
+        "rate": 1,
+        "carry": 10,
+        "job": "gather_shore_fish",
+        "subType": "fish",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[8]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[8]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[8]/resource_gather_job"
+        ]
+      },
+      "berries": {
+        "rate": 0.69,
+        "carry": 10,
+        "job": "gather_berries",
+        "subType": "forage_bush",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[9]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[9]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[9]/resource_gather_job"
+        ]
+      },
+      "cattle": {
+        "rate": 0.66,
+        "carry": 10,
+        "job": "gather_luxury",
+        "subType": "cattle",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[10]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[10]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[10]/resource_gather_job"
+        ]
+      },
+      "pasture": {
+        "rate": 0.75,
+        "carry": 10,
+        "job": "gather_pasture",
+        "subType": "pasture",
+        "evidence": [
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[11]/gather_rate",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[11]/resource_carry_capacity",
+          "raw:ebps/races/french/units/unit_villager_1_fre.json#default/resource_gatherer_ext/gather_types/gather_target[11]/resource_gather_job"
+        ]
+      }
+    },
+    "notes": "Raw resource_gatherer_ext values of the French villager entity; gather_rate taken as resource per second, carry in resource units. Speed is the raw moving_ext default_speed in engine units; no tile conversion is applied. Base train time is before the French Town Center bonus (townCenter.villagerProductionMultiplierByAge).",
+    "evidence": [
+      "catalog:units/unit_villager_1_fre#cost",
+      "catalog:units/unit_villager_1_fre#trainTimeSeconds",
+      "catalog:units/unit_villager_1_fre#speedEngineUnits",
+      "raw:ebps/races/french/units/unit_villager_1_fre.json#default/moving_ext/speed_scaling_table/default_speed",
+      "raw:ebps/races/french/units/unit_villager_1_fre.json#default/cost_ext/time_cost/time_seconds"
+    ]
+  },
+  "townCenter": {
+    "id": "building_town_center_capital_fre",
+    "extraId": "building_town_center_fre",
+    "cost": {
+      "wood": 400,
+      "stone": 300
+    },
+    "buildSeconds": 150,
+    "age": 2,
+    "popProvided": null,
+    "villagerProductionMultiplierByAge": {
+      "1": 1.15,
+      "2": 1.15,
+      "3": 1.2,
+      "4": 1.25
+    },
+    "villagerProductionMultiplierByAgeAlternative": {
+      "1": 1.1,
+      "2": 1.15,
+      "3": 1.2,
+      "4": 1.2
+    },
+    "notes": "Production-speed (rate) multiplier on every French Town Center queue, villagers, scouts and TC research (Textiles); effective villager time = 20 / multiplier. Primary candidate +15/+15/+20/+25% comes from the current civ-summary trait formatter in the standard army record (same formatter carries -50% drop-off and -35% eco-tech args, both confirmed by raw records). Alternative +10/+15/+20/+20% comes from the three always-on TC abilities town_center_production_age1/2/3_fre (attached to both capital and extra TC; age3 record also covers Imperial, no age4 record), matching the older codex copy 11197894 that also states a stale 30% tech discount. Runtime value lives in an undecoded state tree. Extra TC: requires feudal_age (or the rogue-mode fast_expand boon).",
+    "evidence": [
+      "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/ui/global_traits_summary/trait[2]/description_formatter/formatter_arguments/int_value[2..5]",
+      "locale:11227033 | Town Center production speed increased per age +15%, +15%, +20%, +25% (args from army record)",
+      "locale:11197915 | Town Centers work rate increased per age up +15%, +15%, +20%, +25% (copy referenced by current army record trait[0])",
+      "raw:Attrib-raw/abilities/always_on_abilities/french/passives/town_center_production_age1_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments/int_value",
+      "raw:Attrib-raw/abilities/always_on_abilities/french/passives/town_center_production_age2_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments/int_value",
+      "raw:Attrib-raw/abilities/always_on_abilities/french/passives/town_center_production_age3_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments/int_value",
+      "locale:11165885 | Town Center production and research speed increased by +10% (age1 ability)",
+      "locale:11197894 | older copy: Faster Villager Production per Age (10%, 15%, 20%); Economy techs 30% cheaper",
+      "raw:ebps/races/french/buildings/building_town_center_fre/building_town_center_capital_fre.json#default/ability_ext/abilities/ability[1..3]/$PBGNAME",
+      "raw:ebps/races/french/buildings/building_town_center_fre/building_town_center_fre.json#default/ability_ext/abilities/ability[1..3]/$PBGNAME",
+      "catalog:buildings/building_town_center_fre#cost",
+      "catalog:buildings/building_town_center_fre#buildTimeSeconds",
+      "raw:ebps/races/french/buildings/building_town_center_fre/building_town_center_fre.json#default/requirement_ext/requirement_table/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name/$PBGNAME"
+    ]
+  },
+  "buildings": {
+    "town_center": {
+      "id": "building_town_center_fre",
+      "name": "Town Center (extra)",
+      "cost": {
+        "wood": 400,
+        "stone": 300
+      },
+      "buildSeconds": 150,
+      "age": 2,
+      "popProvided": null,
+      "dropoff": [
+        "food",
+        "wood",
+        "gold",
+        "stone"
+      ],
+      "limit": null,
+      "notes": "Extra (non-capital) TC; same production bonus abilities as the capital. popProvided not stated in any installed record.",
+      "evidence": [
+        "catalog:buildings/building_town_center_fre#cost",
+        "catalog:buildings/building_town_center_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_town_center_fre/building_town_center_fre.json#default/requirement_ext/requirement_table/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name/$PBGNAME"
+      ]
+    },
+    "house": {
+      "id": "building_house_control_fre",
+      "name": "House",
+      "cost": {
+        "wood": 50
+      },
+      "buildSeconds": 15,
+      "age": 1,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "popProvided not stated in any installed record (help text 11142213 only says it increases maximum population).",
+      "evidence": [
+        "catalog:buildings/building_house_control_fre#cost",
+        "catalog:buildings/building_house_control_fre#buildTimeSeconds",
+        "locale:11142213"
+      ]
+    },
+    "mill": {
+      "id": "building_econ_food_control_fre",
+      "name": "Mill",
+      "cost": {
+        "wood": 25
+      },
+      "buildSeconds": 20,
+      "age": 1,
+      "popProvided": null,
+      "dropoff": [
+        "food"
+      ],
+      "limit": null,
+      "notes": "French drop-off price 25 wood is baked into the entity (other civs 50 wood). Researches food eco techs, Wheelbarrow, Survival Techniques and Professional Scouts at -35% (class gristmill).",
+      "evidence": [
+        "catalog:buildings/building_econ_food_control_fre#cost",
+        "catalog:buildings/building_econ_food_control_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_econ_food_fre/building_econ_food_control_fre.json#default/resource_drop_off_ext/accepted_resources/food"
+      ]
+    },
+    "lumber_camp": {
+      "id": "building_econ_wood_control_fre",
+      "name": "Lumber Camp",
+      "cost": {
+        "wood": 25
+      },
+      "buildSeconds": 20,
+      "age": 1,
+      "popProvided": null,
+      "dropoff": [
+        "wood"
+      ],
+      "limit": null,
+      "notes": "25 wood baked in (other civs 50). Wood techs at -35% (class lumber_camp).",
+      "evidence": [
+        "catalog:buildings/building_econ_wood_control_fre#cost",
+        "catalog:buildings/building_econ_wood_control_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_econ_wood_fre/building_econ_wood_control_fre.json#default/resource_drop_off_ext/accepted_resources/wood"
+      ]
+    },
+    "mining_camp": {
+      "id": "building_econ_mining_camp_control_fre",
+      "name": "Mining Camp",
+      "cost": {
+        "wood": 25
+      },
+      "buildSeconds": 20,
+      "age": 1,
+      "popProvided": null,
+      "dropoff": [
+        "gold",
+        "stone"
+      ],
+      "limit": null,
+      "notes": "25 wood baked in (other civs 50). Mining techs at -35% (class mining_camp).",
+      "evidence": [
+        "catalog:buildings/building_econ_mining_camp_control_fre#cost",
+        "catalog:buildings/building_econ_mining_camp_control_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_econ_mining_camp_fre/building_econ_mining_camp_control_fre.json#default/resource_drop_off_ext/accepted_resources/gold",
+        "raw:ebps/races/french/buildings/building_econ_mining_camp_fre/building_econ_mining_camp_control_fre.json#default/resource_drop_off_ext/accepted_resources/stone"
+      ]
+    },
+    "farm": {
+      "id": "building_resource_farm_fre",
+      "name": "Farm",
+      "cost": {
+        "wood": 75
+      },
+      "buildSeconds": 6,
+      "age": 1,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Infinite food node; gathered at villager.gather.farm.",
+      "evidence": [
+        "catalog:buildings/building_resource_farm_fre#cost",
+        "catalog:buildings/building_resource_farm_fre#buildTimeSeconds"
+      ]
+    },
+    "barracks": {
+      "id": "building_unit_infantry_control_fre",
+      "name": "Barracks",
+      "cost": {
+        "wood": 150
+      },
+      "buildSeconds": 30,
+      "age": 1,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "",
+      "evidence": [
+        "catalog:buildings/building_unit_infantry_control_fre#cost",
+        "catalog:buildings/building_unit_infantry_control_fre#buildTimeSeconds"
+      ]
+    },
+    "stable": {
+      "id": "building_unit_cavalry_control_fre",
+      "name": "Stable",
+      "cost": {
+        "wood": 150
+      },
+      "buildSeconds": 30,
+      "age": 2,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Trains Scout, Horseman line and Royal Knight line; researches Chivalry, Cantled Saddles, knight/horseman tier upgrades.",
+      "evidence": [
+        "catalog:buildings/building_unit_cavalry_control_fre#cost",
+        "catalog:buildings/building_unit_cavalry_control_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_unit_cavalry_fre/building_unit_cavalry_control_fre.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME"
+      ]
+    },
+    "archery_range": {
+      "id": "building_unit_ranged_control_fre",
+      "name": "Archery Range",
+      "cost": {
+        "wood": 150
+      },
+      "buildSeconds": 30,
+      "age": 2,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "",
+      "evidence": [
+        "catalog:buildings/building_unit_ranged_control_fre#cost",
+        "catalog:buildings/building_unit_ranged_control_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_unit_ranged_fre/building_unit_ranged_control_fre.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME"
+      ]
+    },
+    "blacksmith": {
+      "id": "building_tech_unit_infantry_control_fre",
+      "name": "Blacksmith",
+      "cost": {
+        "wood": 150
+      },
+      "buildSeconds": 25,
+      "age": 2,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Melee damage techs are granted free after age ups (mechanic free-blacksmith-melee-damage); also researches Military Academy.",
+      "evidence": [
+        "catalog:buildings/building_tech_unit_infantry_control_fre#cost",
+        "catalog:buildings/building_tech_unit_infantry_control_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_tech_unit_infantry_fre/building_tech_unit_infantry_control_fre.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME"
+      ]
+    },
+    "university": {
+      "id": "building_tech_university_control_fre",
+      "name": "University",
+      "cost": {
+        "wood": 450
+      },
+      "buildSeconds": 60,
+      "age": 4,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Installed 16.3 entity requires imperial_age. French University has no Biology.",
+      "evidence": [
+        "catalog:buildings/building_tech_university_control_fre#cost",
+        "catalog:buildings/building_tech_university_control_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_tech_university_fre/building_tech_university_control_fre.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME"
+      ]
+    },
+    "market": {
+      "id": "building_econ_market_control_fre",
+      "name": "Market",
+      "cost": {
+        "wood": 100
+      },
+      "buildSeconds": 20,
+      "age": 2,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Class market_fre_discount: Merchant Guilds researched here at -35%. Traders can return food, wood or gold (toggle_trade_resource_*_fre).",
+      "evidence": [
+        "catalog:buildings/building_econ_market_control_fre#cost",
+        "catalog:buildings/building_econ_market_control_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_econ_market_fre/building_econ_market_control_fre.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME",
+        "raw:ebps/races/french/buildings/building_econ_market_fre/building_econ_market_control_fre.json#default/type_ext/unit_type_list/unit_type[7]"
+      ]
+    },
+    "keep": {
+      "id": "building_defense_keep_fre",
+      "name": "Keep",
+      "cost": {
+        "stone": 810
+      },
+      "buildSeconds": 180,
+      "age": 3,
+      "popProvided": null,
+      "dropoff": [],
+      "limit": null,
+      "notes": "810 stone baked in (-10%; other civs 900). Carries keep_influence_fre: Stable and Archery Range units within influence cost -20%.",
+      "evidence": [
+        "catalog:buildings/building_defense_keep_fre#cost",
+        "catalog:buildings/building_defense_keep_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_defense_keep_fre/building_defense_keep_fre.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME",
+        "raw:ebps/races/french/buildings/building_defense_keep_fre/building_defense_keep_fre.json#default/ability_ext/abilities/ability[2]/$PBGNAME",
+        "locale:11263019"
+      ]
+    },
+    "dock": {
+      "id": "building_unit_naval_fre",
+      "name": "Dock",
+      "cost": {
+        "wood": 150
+      },
+      "buildSeconds": 30,
+      "age": 1,
+      "popProvided": 10,
+      "dropoff": [],
+      "limit": null,
+      "notes": "Royal Shipyards: each Dock adds +10 population space (buff dock_population_fre).",
+      "evidence": [
+        "catalog:buildings/building_unit_naval_fre#cost",
+        "catalog:buildings/building_unit_naval_fre#buildTimeSeconds",
+        "raw:Attrib-raw/info/buff_info/races/french/dock_population_fre.rgd#default/info/description_formatter/formatter_arguments/int_value",
+        "locale:11265967"
+      ]
+    }
+  },
+  "landmarks": {
+    "2": [
+      {
+        "id": "building_landmark_age1_casernes_centrales_fre",
+        "name": "School of Cavalry",
+        "cost": {
+          "food": 400,
+          "gold": 200
+        },
+        "buildSeconds": 190,
+        "effects": [
+          {
+            "kind": "unlock",
+            "target": "stable",
+            "op": "set",
+            "value": 1,
+            "notes": "Acts as a Stable (unit class stable, military_only_production): trains Scout, Horseman line, Royal Knight line; researches knight/horseman tiers, Chivalry, Cantled Saddles, Spyglass."
+          },
+          {
+            "kind": "production_speed",
+            "target": "all stables (class stable, includes this landmark)",
+            "op": "mul",
+            "value": 1.2,
+            "notes": "Entity description arg int_value=20 (\"All of your stables produce units +20% faster\"); applied by upgrade_tech_school_of_cavalry (filter unit_class stable, state tree SchoolOfCavalry). The upgrade record's own formatter arg 25 is the shared default seen on unrelated French records, not used."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age1_casernes_centrales_fre#cost",
+          "catalog:buildings/building_landmark_age1_casernes_centrales_fre#buildTimeSeconds",
+          "catalog:buildings/building_landmark_age1_casernes_centrales_fre#descriptionTemplate | Acts as a Stable. All of your stables produce units +20% faster.",
+          "raw:ebps/races/french/buildings/building_landmark_age1_casernes_centrales_fre/building_landmark_age1_casernes_centrales_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+          "raw:upgrade/races/french/research/upgrade_tech_school_of_cavalry.json#default/upgrade_bag/filter_conditions/apply_to_unit_classes/unit_class",
+          "raw:ebps/races/french/buildings/building_landmark_age1_casernes_centrales_fre/building_landmark_age1_casernes_centrales_fre.json#default/spawner_ext/spawn_items",
+          "raw:ebps/races/french/buildings/building_landmark_age1_casernes_centrales_fre/building_landmark_age1_casernes_centrales_fre.json#default/type_ext/unit_type_list/unit_type[8]"
+        ]
+      },
+      {
+        "id": "building_landmark_age1_chamber_of_commerce_fre",
+        "name": "Chamber of Commerce",
+        "cost": {
+          "food": 400,
+          "gold": 200
+        },
+        "buildSeconds": 190,
+        "effects": [
+          {
+            "kind": "unlock",
+            "target": "market",
+            "op": "set",
+            "value": 1,
+            "notes": "Acts as a Market (buy/sell, Traders, Merchant Guilds at -35%; class market_fre_discount, trade_post)."
+          },
+          {
+            "kind": "other",
+            "target": "free_trader_per_economic_tech",
+            "op": "add",
+            "value": 1,
+            "notes": "Spawns one unit_trade_cart_chamber_of_commerce_fre (cost 0) per economic technology researched (player int eco_techs_fre; ability chamber_of_commerce_ability_fre)."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age1_chamber_of_commerce_fre#cost",
+          "catalog:buildings/building_landmark_age1_chamber_of_commerce_fre#buildTimeSeconds",
+          "catalog:buildings/building_landmark_age1_chamber_of_commerce_fre#descriptionTemplate | Acts as a Market. Trains one free Trader for each economic technology researched.",
+          "raw:ebps/races/french/buildings/building_landmark_age1_chamber_of_commerce_fre/building_landmark_age1_chamber_of_commerce_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+          "catalog:units/unit_trade_cart_chamber_of_commerce_fre#cost",
+          "raw:Attrib-raw/abilities/always_on_abilities/french/chamber_of_commerce_ability_fre.rgd#default/ability_bag/entity_tree",
+          "raw:Attrib-raw/statemodel_schema/french.rgd#default/schema_bag/int_properties/statemodel_int_property/int_property_id"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "id": "building_landmark_age2_guild_hall_fre",
+        "name": "Guild Hall",
+        "cost": {
+          "food": 1200,
+          "gold": 600
+        },
+        "buildSeconds": 220,
+        "effects": [
+          {
+            "kind": "passive_income",
+            "target": "selected resource (food/wood/gold; stone at half)",
+            "op": "add",
+            "value": null,
+            "notes": "Banks resources over time; tooltip \"%1% Resources every 20 seconds\" with %1% stepping 20,40,...,200 as guild_hall_increment_fre grows (stone 10..100). Growth thresholds unresolved; must be collected (guild_hall_collect_resources_fre)."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age2_guild_hall_fre#cost",
+          "catalog:buildings/building_landmark_age2_guild_hall_fre#buildTimeSeconds",
+          "catalog:buildings/building_landmark_age2_guild_hall_fre#descriptionTemplate | Generates and stores resources over time, the more resources stored the faster they are generated. Select between Food, Wood, Stone, or Gold. Generates stone at half the rate.",
+          "raw:ebps/races/french/buildings/building_landmark_age2_guild_hall_fre/building_landmark_age2_guild_hall_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+          "raw:Attrib-raw/abilities/modal_abilities/french/guild_hall_collect_resources_fre.rgd#default/ability_bag/ui_contextual_info/context[0..19]/help_text_formatter/formatter_arguments",
+          "locale:11260146 | %1% Resources every %2% seconds"
+        ]
+      },
+      {
+        "id": "building_landmark_age3_le_grande_university_fre",
+        "name": "Royal Institute",
+        "cost": {
+          "food": 1200,
+          "gold": 600
+        },
+        "buildSeconds": 220,
+        "effects": [
+          {
+            "kind": "cost",
+            "target": "technologies researched at the Royal Institute",
+            "op": "mul",
+            "value": 0.7,
+            "notes": "Description arg int_value=30; not baked into catalog costs."
+          },
+          {
+            "kind": "unlock",
+            "target": "French unique techs ignoring Age requirements",
+            "op": "set",
+            "value": 1,
+            "notes": "Royal Bloodlines, Cantled Saddles, Chivalry, Enlistment Incentives, Gambesons, Crossbow Stirrups, Merchant Guilds, Long Guns (upgrade_landmark_* copies, each requires castle_age)."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age3_le_grande_university_fre#cost",
+          "catalog:buildings/building_landmark_age3_le_grande_university_fre#buildTimeSeconds",
+          "catalog:buildings/building_landmark_age3_le_grande_university_fre#descriptionTemplate | Houses all technologies unique to the French. Research is -30% cheaper here and ignores Age requirements.",
+          "raw:ebps/races/french/buildings/building_landmark_age3_le_grande_university_fre/building_landmark_age3_le_grande_university_fre.json#default/requirement_ext/requirement_table/required_player_upgrade"
+        ],
+        "notes": "Built in Feudal to reach Castle (unit type age2_landmark1; requires feudal_age present, castle_age absent) despite age3 in its id. keep_influence_fre is attached only in the campaign variant, not default."
+      }
+    ],
+    "4": [
+      {
+        "id": "building_landmark_age2_la_chateau_rouge_fre",
+        "name": "Red Palace",
+        "cost": {
+          "food": 2400,
+          "gold": 1200
+        },
+        "buildSeconds": 250,
+        "effects": [
+          {
+            "kind": "unlock",
+            "target": "keep",
+            "op": "set",
+            "value": 1,
+            "notes": "Acts as a Keep (garrison 15, arbalest emplacements; researches Springald/Cannon Emplacement, Boiling Oil, Enlistment Incentives)."
+          },
+          {
+            "kind": "other",
+            "target": "arbalest_emplacement_on_all_keeps_and_town_centers",
+            "op": "set",
+            "value": 1,
+            "notes": "upgrade_tech_red_palace filter castle/town_center/town_center_capital."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age2_la_chateau_rouge_fre#cost",
+          "catalog:buildings/building_landmark_age2_la_chateau_rouge_fre#buildTimeSeconds",
+          "catalog:buildings/building_landmark_age2_la_chateau_rouge_fre#descriptionTemplate | Acts as a Keep. Features high-damage arbalest emplacements. Each garrisoned unit adds an additional arbalest.\\n\\nActivates an Arbalest emplacement on all Keeps and Town Centers.",
+          "raw:ebps/races/french/buildings/building_landmark_age2_la_chateau_rouge_fre/building_landmark_age2_la_chateau_rouge_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+          "raw:upgrade/races/french/research/upgrade_tech_red_palace.json#default/upgrade_bag/filter_conditions/apply_to_unit_classes"
+        ],
+        "notes": "Built in Castle to reach Imperial (unit type age3_landmark1) despite age2 in its id. No economic effect."
+      },
+      {
+        "id": "building_landmark_age3_ecole_de_poudre_a_canon_fre",
+        "name": "College of Artillery",
+        "cost": {
+          "food": 2400,
+          "gold": 1200
+        },
+        "buildSeconds": 250,
+        "effects": [
+          {
+            "kind": "unlock",
+            "target": "unit_cannon_4_royal_fre, unit_ribauldequin_4_royal_fre",
+            "op": "set",
+            "value": 1,
+            "notes": "Royal versions: -25% gold baked into their costs (450 vs 600, 375 vs 500), damage x1.3 (upgrade_tech_royal_artillery_fre float damage=1.3)."
+          },
+          {
+            "kind": "production_speed",
+            "target": "this landmark",
+            "op": "mul",
+            "value": 1.5,
+            "notes": "Description arg 50: trains units 50% faster."
+          },
+          {
+            "kind": "research_speed",
+            "target": "this landmark",
+            "op": "mul",
+            "value": 1.5,
+            "notes": "Description arg 50: researches technologies 50% faster (Chemistry, Greased Axles, Siege Works copies)."
+          }
+        ],
+        "evidence": [
+          "catalog:buildings/building_landmark_age3_ecole_de_poudre_a_canon_fre#cost",
+          "catalog:buildings/building_landmark_age3_ecole_de_poudre_a_canon_fre#buildTimeSeconds",
+          "catalog:buildings/building_landmark_age3_ecole_de_poudre_a_canon_fre#descriptionTemplate | Produces the Royal versions of the Cannon and Ribauldequin, which do +30% more damage and cost -25% gold.  Royal Cannons gain the Artillery Shot ability and Royal Ribauldequins gain the Fortify ability.  Contains Siege and Gunpowder technologies, trains units and researches technologies 50% faster.",
+          "raw:ebps/races/french/buildings/building_landmark_age3_ecole_de_poudre_a_canon_fre/building_landmark_age3_ecole_de_poudre_a_canon_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+          "raw:upgrade/races/french/research/upgrade_tech_royal_artillery_fre.json#default/upgrade_bag/float_properties/upgradebag_float_property/value",
+          "catalog:units/unit_cannon_4_royal_fre#cost",
+          "catalog:units/unit_cannon_4_fre#cost"
+        ]
+      }
+    ]
+  },
+  "technologies": [
+    {
+      "id": "upgrade_unit_town_center_wheelbarrow_1",
+      "name": "Wheelbarrow",
+      "age": 1,
+      "building": "mill",
+      "cost": {
+        "wood": 32.5,
+        "gold": 97.5
+      },
+      "researchSeconds": 90,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "carry",
+          "target": "all",
+          "op": "add",
+          "value": 5,
+          "notes": "float carry_capacity=5"
+        },
+        {
+          "kind": "speed",
+          "target": "villager",
+          "op": "mul",
+          "value": 1.15,
+          "notes": "float move_speed=1.15"
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#cost",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#requirements",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#modifiers",
+        "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1#descriptionTemplate | Increase the carry capacity of Villagers by +5 and their movement speed by +15%.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 50,
+        "gold": 150
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified). French Mill lists this tech (not the TC)."
+    },
+    {
+      "id": "upgrade_econ_villager_hunting_gear_1",
+      "name": "Survival Techniques",
+      "age": 1,
+      "building": "mill",
+      "cost": {
+        "wood": 16.25,
+        "gold": 48.75
+      },
+      "researchSeconds": 25,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "deer",
+            "boar"
+          ],
+          "op": "mul",
+          "value": 1.15,
+          "notes": "float survival_techniques_food=0.15. Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#cost",
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#requirements",
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#modifiers",
+        "catalog:technologies/upgrade_econ_villager_hunting_gear_1#descriptionTemplate | Increase Villagers' hunted meat gather rate by +15%.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 25,
+        "gold": 75
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_econ_resource_food_harvest_rate_2",
+      "name": "Horticulture",
+      "age": 2,
+      "building": "mill",
+      "cost": {
+        "wood": 32.5,
+        "gold": 65.0
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "sheep",
+            "berries",
+            "farm",
+            "shore_fish",
+            "cattle",
+            "pasture"
+          ],
+          "op": "mul",
+          "value": 1.1,
+          "notes": "float gather_rate_food=0.1; text: all food except hunted meat. Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#cost",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#requirements",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#modifiers",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#descriptionTemplate | Increase Villagers' gathering rate for Food by 10%. Does not apply to hunted meat.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 50,
+        "gold": 100
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_econ_resource_food_harvest_rate_3",
+      "name": "Fertilization",
+      "age": 3,
+      "building": "mill",
+      "cost": {
+        "wood": 65.0,
+        "gold": 162.5
+      },
+      "researchSeconds": 60,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "sheep",
+            "berries",
+            "farm",
+            "shore_fish",
+            "cattle",
+            "pasture"
+          ],
+          "op": "mul",
+          "value": 1.1,
+          "notes": "float gather_rate_food=0.1. Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#cost",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#requirements",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#modifiers",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#descriptionTemplate | Increase Villagers' gathering rate for Food by 10%. Does not apply to hunted meat.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_econ_resource_food_harvest_rate_4",
+      "name": "Precision Cross-Breeding",
+      "age": 4,
+      "building": "mill",
+      "cost": {
+        "wood": 162.5,
+        "gold": 325.0
+      },
+      "researchSeconds": 75,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "sheep",
+            "berries",
+            "farm",
+            "shore_fish",
+            "cattle",
+            "pasture"
+          ],
+          "op": "mul",
+          "value": 1.1,
+          "notes": "float gather_rate_food=0.1. Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#cost",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#requirements",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#modifiers",
+        "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#descriptionTemplate | Increase Villagers' gathering rate for Food by 10%. Does not apply to hunted meat.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 250,
+        "gold": 500
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_scout_forester",
+      "name": "Professional Scouts",
+      "age": 2,
+      "building": "mill",
+      "cost": {
+        "wood": 97.5,
+        "gold": 195.0
+      },
+      "researchSeconds": 75,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "scout",
+          "op": "set",
+          "value": null,
+          "notes": "Scouts can carry deer carcasses (-55% speed while carrying, +100% damage vs wild animals, no boar); float deer_decay_rate=-1.5."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_scout_forester#cost",
+        "catalog:technologies/upgrade_scout_forester#researchTimeSeconds",
+        "catalog:technologies/upgrade_scout_forester#requirements",
+        "catalog:technologies/upgrade_scout_forester#modifiers",
+        "catalog:technologies/upgrade_scout_forester#descriptionTemplate | Scouts gain the ability to carry animal carcasses and +100% damage against wild animals.  Scouts move -55% slower while carrying and cannot pick up Boar. Deer slowly decay while being carried.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 150,
+        "gold": 300
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified). Not tagged economic_upgrade; discount assumed from the Mill building-class filter (see unresolved)."
+    },
+    {
+      "id": "upgrade_econ_resource_wood_fell_rate_1",
+      "name": "Forestry",
+      "age": 1,
+      "building": "lumber_camp",
+      "cost": {
+        "food": 16.25,
+        "gold": 32.5
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "wood_fell_rate",
+          "op": "mul",
+          "value": 2,
+          "notes": "Text only: doubles tree felling rate; no raw scalar."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1#cost",
+        "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1#requirements",
+        "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1#descriptionTemplate | Double the rate at which Villagers chop down trees.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "food": 25,
+        "gold": 50
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_econ_resource_wood_harvest_rate_2",
+      "name": "Double Broadax",
+      "age": 2,
+      "building": "lumber_camp",
+      "cost": {
+        "food": 32.5,
+        "gold": 65.0
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "wood"
+          ],
+          "op": "mul",
+          "value": 1.15,
+          "notes": "float wood_rate=0.15. Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#cost",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#requirements",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#modifiers",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#descriptionTemplate | Increase Villagers' gathering rate for Wood by 15%.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "food": 50,
+        "gold": 100
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_econ_resource_wood_harvest_rate_3",
+      "name": "Lumber Preservation",
+      "age": 3,
+      "building": "lumber_camp",
+      "cost": {
+        "food": 65.0,
+        "gold": 162.5
+      },
+      "researchSeconds": 60,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "wood"
+          ],
+          "op": "mul",
+          "value": 1.15,
+          "notes": "float wood_rate=0.15. Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#cost",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#requirements",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#modifiers",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#descriptionTemplate | Increase Villagers' gathering rate for Wood by 15%.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "food": 100,
+        "gold": 250
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_econ_resource_wood_harvest_rate_4",
+      "name": "Crosscut Saw",
+      "age": 4,
+      "building": "lumber_camp",
+      "cost": {
+        "food": 162.5,
+        "gold": 325.0
+      },
+      "researchSeconds": 75,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "wood"
+          ],
+          "op": "mul",
+          "value": 1.15,
+          "notes": "float wood_rate=0.15. Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        },
+        {
+          "kind": "carry",
+          "target": [
+            "wood"
+          ],
+          "op": "add",
+          "value": 5,
+          "notes": "Text/formatter arg only (int_value[1]=5)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#cost",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#requirements",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#modifiers",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#descriptionTemplate | Increase Villagers' gathering rate for Wood by 15% and Wood gatherers carry capacity by +5.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "food": 250,
+        "gold": 500
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_econ_resource_gold_harvest_rate_2",
+      "name": "Specialized Pick",
+      "age": 2,
+      "building": "mining_camp",
+      "cost": {
+        "wood": 32.5,
+        "gold": 65.0
+      },
+      "researchSeconds": 45,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "gold",
+            "stone"
+          ],
+          "op": "mul",
+          "value": 1.15,
+          "notes": "floats mining_rate=0.15, mining_rate_stone=0.15. Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#cost",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#requirements",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#modifiers",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2#descriptionTemplate | Increase Villagers' gathering rate for Gold and Stone by 15%.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 50,
+        "gold": 100
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_econ_resource_gold_harvest_rate_3",
+      "name": "Shaft Mining",
+      "age": 3,
+      "building": "mining_camp",
+      "cost": {
+        "wood": 65.0,
+        "gold": 162.5
+      },
+      "researchSeconds": 60,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "gather_rate",
+          "target": [
+            "gold",
+            "stone"
+          ],
+          "op": "mul",
+          "value": 1.15,
+          "notes": "Tooltip +15%; raw floats mining_rate=0.3 and mining_rate_stone=0.3 (possibly cumulative-with-Specialized-Pick). Raw scalar from upgradebag float property; operation applied by an undecoded state tree. Stacking with other rate techs (additive on base vs compounding) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#cost",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#requirements",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#modifiers",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3#descriptionTemplate | Increase Villagers' gathering rate for Gold and Stone by 15%.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified). Value partial: raw 0.3 vs tooltip 15%."
+    },
+    {
+      "id": "upgrade_econ_resource_gold_harvest_rate_4",
+      "name": "Cupellation",
+      "age": 4,
+      "building": "mining_camp",
+      "cost": {
+        "wood": 162.5,
+        "gold": 325.0
+      },
+      "researchSeconds": 75,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "gold_dropoff_amount",
+          "op": "mul",
+          "value": 1.15,
+          "notes": "Text: gold gatherers drop off 15% more resources (formatter int_value=15); no raw scalar."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#cost",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#researchTimeSeconds",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#requirements",
+        "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4#descriptionTemplate | Gold gatherers drop off 15% more resources.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+      ],
+      "baseCost": {
+        "wood": 250,
+        "gold": 500
+      },
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified)."
+    },
+    {
+      "id": "upgrade_villager_health",
+      "name": "Textiles",
+      "age": 2,
+      "building": "town_center",
+      "cost": {
+        "food": 50,
+        "gold": 100
+      },
+      "researchSeconds": 20,
+      "category": "economy",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "villager_hp",
+          "op": "mul",
+          "value": 1.5,
+          "notes": "Text/formatter arg 50."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_villager_health#cost",
+        "catalog:technologies/upgrade_villager_health#researchTimeSeconds",
+        "catalog:technologies/upgrade_villager_health#requirements",
+        "catalog:technologies/upgrade_villager_health#descriptionTemplate | Increase Villagers' health by +50%."
+      ],
+      "notes": "Researched at the Town Center, which is not in the discount class filter: base cost. TC production bonus also speeds this research."
+    },
+    {
+      "id": "upgrade_market_trickle_fre",
+      "name": "Merchant Guilds",
+      "age": 4,
+      "building": "market",
+      "cost": {
+        "food": 130.0,
+        "gold": 325.0
+      },
+      "researchSeconds": 60,
+      "category": "civ-economy",
+      "effects": [
+        {
+          "kind": "passive_income",
+          "target": "gold_per_active_trader",
+          "op": "add",
+          "value": 0.16666666666666666,
+          "notes": "Active Traders generate 1 gold every 6 s (float duration=6; ability market_passive_gold_generation_fre args 1,6)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_market_trickle_fre#cost",
+        "catalog:technologies/upgrade_market_trickle_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_market_trickle_fre#requirements",
+        "catalog:technologies/upgrade_market_trickle_fre#modifiers",
+        "catalog:technologies/upgrade_market_trickle_fre#descriptionTemplate | Active Traders generate 1 gold every 6 seconds.",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value",
+        "raw:Attrib-raw/abilities/always_on_abilities/french/passives/market_passive_gold_generation_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments/int_value[0..1]"
+      ],
+      "baseCost": {
+        "food": 200,
+        "gold": 500
+      },
+      "alsoAt": [
+        "building_landmark_age1_chamber_of_commerce_fre"
+      ],
+      "notes": "Cost shown is base x 0.65 (French trait, unrounded; in-game rounding unverified). Market and Chamber of Commerce both carry class market_fre_discount."
+    },
+    {
+      "id": "upgrade_landmark_market_trickle_fre",
+      "name": "Merchant Guilds",
+      "age": 3,
+      "building": "building_landmark_age3_le_grande_university_fre",
+      "cost": {
+        "food": 140.0,
+        "gold": 350.0
+      },
+      "researchSeconds": 60,
+      "category": "landmark",
+      "effects": [
+        {
+          "kind": "passive_income",
+          "target": "gold_per_active_trader",
+          "op": "add",
+          "value": 0.16666666666666666,
+          "notes": "Same effect as upgrade_market_trickle_fre."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_landmark_market_trickle_fre#cost",
+        "catalog:technologies/upgrade_landmark_market_trickle_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_landmark_market_trickle_fre#requirements",
+        "catalog:technologies/upgrade_landmark_market_trickle_fre#modifiers",
+        "catalog:technologies/upgrade_landmark_market_trickle_fre#descriptionTemplate | Active Traders generate 1 gold every 6 seconds.",
+        "catalog:buildings/building_landmark_age3_le_grande_university_fre#descriptionArguments"
+      ],
+      "baseCost": {
+        "food": 200,
+        "gold": 500
+      },
+      "notes": "Royal Institute copy: Castle Age instead of Imperial; cost = catalog cost x 0.7 (Royal Institute -30%, applied at runtime; catalog cost is undiscounted)."
+    },
+    {
+      "id": "upgrade_melee_damage_i",
+      "name": "Bloomery",
+      "age": 2,
+      "building": "blacksmith",
+      "cost": {
+        "food": 50,
+        "gold": 125
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_damage",
+          "op": "add",
+          "value": 1,
+          "notes": "All non-siege melee units incl. cavalry."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_damage_i#cost",
+        "catalog:technologies/upgrade_melee_damage_i#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_damage_i#requirements",
+        "catalog:technologies/upgrade_melee_damage_i#descriptionTemplate | Increase the melee damage of all non-siege units by +1."
+      ],
+      "notes": "French: granted free after the matching age up (mechanic free-blacksmith-melee-damage); listed cost is what other civs pay."
+    },
+    {
+      "id": "upgrade_melee_damage_ii",
+      "name": "Decarbonization",
+      "age": 3,
+      "building": "blacksmith",
+      "cost": {
+        "food": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_damage",
+          "op": "add",
+          "value": 1,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_damage_ii#cost",
+        "catalog:technologies/upgrade_melee_damage_ii#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_damage_ii#requirements",
+        "catalog:technologies/upgrade_melee_damage_ii#descriptionTemplate | Increase the melee damage of all non-siege units by +1."
+      ],
+      "notes": "French: granted free after the matching age up (mechanic free-blacksmith-melee-damage); listed cost is what other civs pay."
+    },
+    {
+      "id": "upgrade_melee_damage_iii",
+      "name": "Damascus Steel",
+      "age": 4,
+      "building": "blacksmith",
+      "cost": {
+        "food": 150,
+        "gold": 350
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_damage",
+          "op": "add",
+          "value": 1,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_damage_iii#cost",
+        "catalog:technologies/upgrade_melee_damage_iii#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_damage_iii#requirements",
+        "catalog:technologies/upgrade_melee_damage_iii#descriptionTemplate | Increase the melee damage of all non-siege units by +1."
+      ],
+      "notes": "French: granted free after the matching age up (mechanic free-blacksmith-melee-damage); listed cost is what other civs pay."
+    },
+    {
+      "id": "upgrade_melee_armor_i",
+      "name": "Fitted Leatherwork",
+      "age": 2,
+      "building": "blacksmith",
+      "cost": {
+        "food": 50,
+        "gold": 125
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_armor",
+          "op": "add",
+          "value": 1,
+          "notes": "Includes cavalry."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_armor_i#cost",
+        "catalog:technologies/upgrade_melee_armor_i#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_armor_i#requirements",
+        "catalog:technologies/upgrade_melee_armor_i#descriptionTemplate | Increase the melee armor of all non-siege units by +1."
+      ]
+    },
+    {
+      "id": "upgrade_melee_armor_ii",
+      "name": "Insulated Helm",
+      "age": 3,
+      "building": "blacksmith",
+      "cost": {
+        "food": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_armor",
+          "op": "add",
+          "value": 1,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_armor_ii#cost",
+        "catalog:technologies/upgrade_melee_armor_ii#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_armor_ii#requirements",
+        "catalog:technologies/upgrade_melee_armor_ii#descriptionTemplate | Increase the melee armor of all non-siege units by +1."
+      ]
+    },
+    {
+      "id": "upgrade_melee_armor_iii",
+      "name": "Master Smiths",
+      "age": 4,
+      "building": "blacksmith",
+      "cost": {
+        "food": 150,
+        "gold": 350
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "melee_armor",
+          "op": "add",
+          "value": 1,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_melee_armor_iii#cost",
+        "catalog:technologies/upgrade_melee_armor_iii#researchTimeSeconds",
+        "catalog:technologies/upgrade_melee_armor_iii#requirements",
+        "catalog:technologies/upgrade_melee_armor_iii#descriptionTemplate | Increase the melee armor of all non-siege units by +1."
+      ]
+    },
+    {
+      "id": "upgrade_ranged_armor_i",
+      "name": "Iron Undermesh",
+      "age": 2,
+      "building": "blacksmith",
+      "cost": {
+        "wood": 50,
+        "gold": 125
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_armor",
+          "op": "add",
+          "value": 1,
+          "notes": "Includes cavalry."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_armor_i#cost",
+        "catalog:technologies/upgrade_ranged_armor_i#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_armor_i#requirements",
+        "catalog:technologies/upgrade_ranged_armor_i#descriptionTemplate | Increase the ranged armor of all non-siege units by +1."
+      ],
+      "alsoAt": [
+        "building_tech_unit_ranged_control_fre"
+      ]
+    },
+    {
+      "id": "upgrade_ranged_armor_ii",
+      "name": "Wedge Rivets",
+      "age": 3,
+      "building": "blacksmith",
+      "cost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_armor",
+          "op": "add",
+          "value": 1,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_armor_ii#cost",
+        "catalog:technologies/upgrade_ranged_armor_ii#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_armor_ii#requirements",
+        "catalog:technologies/upgrade_ranged_armor_ii#descriptionTemplate | Increase the ranged armor of all non-siege units by +1."
+      ],
+      "alsoAt": [
+        "building_tech_unit_ranged_control_fre"
+      ]
+    },
+    {
+      "id": "upgrade_ranged_armor_iii",
+      "name": "Angled Surfaces",
+      "age": 4,
+      "building": "blacksmith",
+      "cost": {
+        "wood": 150,
+        "gold": 350
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "ranged_armor",
+          "op": "add",
+          "value": 1,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_ranged_armor_iii#cost",
+        "catalog:technologies/upgrade_ranged_armor_iii#researchTimeSeconds",
+        "catalog:technologies/upgrade_ranged_armor_iii#requirements",
+        "catalog:technologies/upgrade_ranged_armor_iii#descriptionTemplate | Increase the ranged armor of all non-siege units by +1."
+      ],
+      "alsoAt": [
+        "building_tech_unit_ranged_control_fre"
+      ]
+    },
+    {
+      "id": "upgrade_tech_military_academy",
+      "name": "Military Academy",
+      "age": 3,
+      "building": "blacksmith",
+      "cost": {
+        "wood": 100,
+        "gold": 250
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "production_speed",
+          "target": "military_only_production buildings (Stable, School of Cavalry, Barracks, Range, Siege)",
+          "op": "mul",
+          "value": 1.33,
+          "notes": "float normal_modifier=1.33. Stacking with School of Cavalry unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_tech_military_academy#cost",
+        "catalog:technologies/upgrade_tech_military_academy#researchTimeSeconds",
+        "catalog:technologies/upgrade_tech_military_academy#requirements",
+        "catalog:technologies/upgrade_tech_military_academy#modifiers",
+        "catalog:technologies/upgrade_tech_military_academy#descriptionTemplate | Increase the production speed of infantry, cavalry, siege, and transport units at buildings by 33%.  Does not affect religious units or other support units."
+      ]
+    },
+    {
+      "id": "upgrade_cavalry_chivalry_fre",
+      "name": "Chivalry",
+      "age": 2,
+      "building": "stable",
+      "cost": {
+        "wood": 100,
+        "gold": 200
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "royal_knight_regen_hp_per_s_out_of_combat",
+          "op": "add",
+          "value": 1,
+          "notes": "floats heal_amount=1, interval=1."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_cavalry_chivalry_fre#cost",
+        "catalog:technologies/upgrade_cavalry_chivalry_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_cavalry_chivalry_fre#requirements",
+        "catalog:technologies/upgrade_cavalry_chivalry_fre#modifiers",
+        "catalog:technologies/upgrade_cavalry_chivalry_fre#descriptionTemplate | Royal Knights regenerate +1 health every 1 seconds when out of combat."
+      ],
+      "alsoAt": [
+        "building_landmark_age1_casernes_centrales_fre"
+      ]
+    },
+    {
+      "id": "upgrade_landmark_cavalry_chivalry_fre",
+      "name": "Chivalry",
+      "age": 3,
+      "building": "building_landmark_age3_le_grande_university_fre",
+      "cost": {
+        "wood": 70.0,
+        "gold": 140.0
+      },
+      "researchSeconds": 60,
+      "category": "landmark",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "royal_knight_regen_hp_per_s_out_of_combat",
+          "op": "add",
+          "value": 1,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_landmark_cavalry_chivalry_fre#cost",
+        "catalog:technologies/upgrade_landmark_cavalry_chivalry_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_landmark_cavalry_chivalry_fre#requirements",
+        "catalog:technologies/upgrade_landmark_cavalry_chivalry_fre#modifiers",
+        "catalog:technologies/upgrade_landmark_cavalry_chivalry_fre#descriptionTemplate | Royal Knights regenerate +1 health every 1 seconds when out of combat.",
+        "catalog:buildings/building_landmark_age3_le_grande_university_fre#descriptionArguments"
+      ],
+      "baseCost": {
+        "wood": 100,
+        "gold": 200
+      },
+      "notes": "Royal Institute copy (requires castle_age); cost x 0.7 at runtime."
+    },
+    {
+      "id": "upgrade_cavalry_cantled_saddle_fre",
+      "name": "Cantled Saddles",
+      "age": 3,
+      "building": "stable",
+      "cost": {
+        "food": 75,
+        "gold": 200
+      },
+      "researchSeconds": 45,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "royal_knight_post_charge_bonus_damage",
+          "op": "set",
+          "value": 10,
+          "notes": "From +3 to +10 for 5 s after a charge (floats charge_damage=10, duration=5)."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_cavalry_cantled_saddle_fre#cost",
+        "catalog:technologies/upgrade_cavalry_cantled_saddle_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_cavalry_cantled_saddle_fre#requirements",
+        "catalog:technologies/upgrade_cavalry_cantled_saddle_fre#modifiers",
+        "catalog:technologies/upgrade_cavalry_cantled_saddle_fre#descriptionTemplate | Increase Royal Knights' bonus damage after a charge from +3 to +10."
+      ],
+      "alsoAt": [
+        "building_landmark_age1_casernes_centrales_fre"
+      ]
+    },
+    {
+      "id": "upgrade_landmark_cavalry_cantled_saddle_fre",
+      "name": "Cantled Saddles",
+      "age": 3,
+      "building": "building_landmark_age3_le_grande_university_fre",
+      "cost": {
+        "food": 52.5,
+        "gold": 140.0
+      },
+      "researchSeconds": 45,
+      "category": "landmark",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "royal_knight_post_charge_bonus_damage",
+          "op": "set",
+          "value": 10,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_landmark_cavalry_cantled_saddle_fre#cost",
+        "catalog:technologies/upgrade_landmark_cavalry_cantled_saddle_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_landmark_cavalry_cantled_saddle_fre#requirements",
+        "catalog:technologies/upgrade_landmark_cavalry_cantled_saddle_fre#modifiers",
+        "catalog:technologies/upgrade_landmark_cavalry_cantled_saddle_fre#descriptionTemplate | Increase Royal Knights' bonus damage after a charge from +3 to +10.",
+        "catalog:buildings/building_landmark_age3_le_grande_university_fre#descriptionArguments"
+      ],
+      "baseCost": {
+        "food": 75,
+        "gold": 200
+      },
+      "notes": "Royal Institute copy; cost x 0.7 at runtime."
+    },
+    {
+      "id": "upgrade_cavalry_bloodline_fre",
+      "name": "Royal Bloodlines",
+      "age": 4,
+      "building": "university",
+      "cost": {
+        "food": 300,
+        "gold": 700
+      },
+      "researchSeconds": 90,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "cavalry_hp",
+          "op": "mul",
+          "value": 1.35,
+          "notes": "float health_max=1.35; all cavalry."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_cavalry_bloodline_fre#cost",
+        "catalog:technologies/upgrade_cavalry_bloodline_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_cavalry_bloodline_fre#requirements",
+        "catalog:technologies/upgrade_cavalry_bloodline_fre#modifiers",
+        "catalog:technologies/upgrade_cavalry_bloodline_fre#descriptionTemplate | Fill the stables with the best stallions, increasing all cavalry health by +35%."
+      ]
+    },
+    {
+      "id": "upgrade_landmark_cavalry_bloodline_fre",
+      "name": "Royal Bloodlines",
+      "age": 3,
+      "building": "building_landmark_age3_le_grande_university_fre",
+      "cost": {
+        "food": 210.0,
+        "gold": 490.0
+      },
+      "researchSeconds": 90,
+      "category": "landmark",
+      "effects": [
+        {
+          "kind": "other",
+          "target": "cavalry_hp",
+          "op": "mul",
+          "value": 1.35,
+          "notes": ""
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_landmark_cavalry_bloodline_fre#cost",
+        "catalog:technologies/upgrade_landmark_cavalry_bloodline_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_landmark_cavalry_bloodline_fre#requirements",
+        "catalog:technologies/upgrade_landmark_cavalry_bloodline_fre#modifiers",
+        "catalog:technologies/upgrade_landmark_cavalry_bloodline_fre#descriptionTemplate | Fill the stables with the best stallions, increasing all cavalry health by +35%.",
+        "catalog:buildings/building_landmark_age3_le_grande_university_fre#descriptionArguments"
+      ],
+      "baseCost": {
+        "food": 300,
+        "gold": 700
+      },
+      "notes": "Royal Institute copy: Castle Age instead of Imperial; cost x 0.7 at runtime."
+    },
+    {
+      "id": "upgrade_enlistment_incentives_fre",
+      "name": "Enlistment Incentives",
+      "age": 4,
+      "building": "keep",
+      "cost": {
+        "food": 150,
+        "gold": 350
+      },
+      "researchSeconds": 60,
+      "category": "military",
+      "effects": [
+        {
+          "kind": "cost",
+          "target": "units from Stables/Archery Ranges inside Keep influence",
+          "op": "mul",
+          "value": 0.75,
+          "notes": "Text: a further -5% on top of the -20% influence; additive (0.75) vs compounding (0.76) unresolved."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_enlistment_incentives_fre#cost",
+        "catalog:technologies/upgrade_enlistment_incentives_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_enlistment_incentives_fre#requirements",
+        "catalog:technologies/upgrade_enlistment_incentives_fre#descriptionTemplate | Improves the French influence by reducing unit costs by a further -5%."
+      ],
+      "alsoAt": [
+        "building_landmark_age2_la_chateau_rouge_fre"
+      ]
+    },
+    {
+      "id": "upgrade_landmark_enlistment_incentives_fre",
+      "name": "Enlistment Incentives",
+      "age": 3,
+      "building": "building_landmark_age3_le_grande_university_fre",
+      "cost": {
+        "food": 105.0,
+        "gold": 245.0
+      },
+      "researchSeconds": 60,
+      "category": "landmark",
+      "effects": [
+        {
+          "kind": "cost",
+          "target": "units from Stables/Archery Ranges inside Keep influence",
+          "op": "mul",
+          "value": 0.75,
+          "notes": "As above."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_landmark_enlistment_incentives_fre#cost",
+        "catalog:technologies/upgrade_landmark_enlistment_incentives_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_landmark_enlistment_incentives_fre#requirements",
+        "catalog:technologies/upgrade_landmark_enlistment_incentives_fre#descriptionTemplate | Improves the French influence by reducing unit costs by a further -5%.",
+        "catalog:buildings/building_landmark_age3_le_grande_university_fre#descriptionArguments"
+      ],
+      "baseCost": {
+        "food": 150,
+        "gold": 350
+      },
+      "notes": "Royal Institute copy (castle_age); cost x 0.7 at runtime."
+    },
+    {
+      "id": "upgrade_unit_knight_3_fre",
+      "name": "Upgrade to Veteran",
+      "age": 3,
+      "building": "stable",
+      "cost": {
+        "food": 50,
+        "gold": 125
+      },
+      "researchSeconds": 30,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "unit_knight_3_fre",
+          "op": "set",
+          "value": 1,
+          "notes": "Royal Knight -> Veteran Royal Knight."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_knight_3_fre#cost",
+        "catalog:technologies/upgrade_unit_knight_3_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_knight_3_fre#requirements",
+        "catalog:technologies/upgrade_unit_knight_3_fre#descriptionTemplate | Upgrade Royal Knights to Veteran Royal Knights."
+      ],
+      "alsoAt": [
+        "building_landmark_age1_casernes_centrales_fre"
+      ]
+    },
+    {
+      "id": "upgrade_unit_knight_4_fre",
+      "name": "Upgrade to Elite",
+      "age": 4,
+      "building": "stable",
+      "cost": {
+        "food": 300,
+        "gold": 700
+      },
+      "researchSeconds": 60,
+      "category": "unit-tier",
+      "effects": [
+        {
+          "kind": "unlock",
+          "target": "unit_knight_4_fre",
+          "op": "set",
+          "value": 1,
+          "notes": "Veteran -> Elite Royal Knight; requires upgrade_unit_knight_3_fre."
+        }
+      ],
+      "evidence": [
+        "catalog:technologies/upgrade_unit_knight_4_fre#cost",
+        "catalog:technologies/upgrade_unit_knight_4_fre#researchTimeSeconds",
+        "catalog:technologies/upgrade_unit_knight_4_fre#requirements",
+        "catalog:technologies/upgrade_unit_knight_4_fre#descriptionTemplate | Upgrade Veteran Royal Knights to Elite Royal Knights."
+      ],
+      "alsoAt": [
+        "building_landmark_age1_casernes_centrales_fre"
+      ]
+    }
+  ],
+  "army": {
+    "lines": [
+      {
+        "key": "royal_knight",
+        "name": "Royal Knight",
+        "producers": [
+          "stable",
+          "building_landmark_age1_casernes_centrales_fre"
+        ],
+        "tiers": [
+          {
+            "id": "unit_knight_2_fre",
+            "name": "Royal Knight",
+            "age": 2,
+            "cost": {
+              "food": 140,
+              "gold": 100
+            },
+            "trainSeconds": 35,
+            "pop": 1,
+            "hp": 190,
+            "armorMelee": 3,
+            "armorRanged": 3,
+            "speedEngineUnits": 6.5,
+            "weapon": {
+              "id": "weapon_knight_2",
+              "damageType": "Melee",
+              "damage": 19,
+              "cooldownSeconds": 0.875,
+              "windupSeconds": 0.5,
+              "winddownSeconds": 0
+            },
+            "chargeWeapon": {
+              "id": "weapon_knight_2_charge_fre",
+              "damageType": "Melee",
+              "damage": 29,
+              "cooldownSeconds": 0.4
+            }
+          },
+          {
+            "id": "unit_knight_3_fre",
+            "name": "Veteran Royal Knight",
+            "age": 3,
+            "cost": {
+              "food": 140,
+              "gold": 100
+            },
+            "trainSeconds": 35,
+            "pop": 1,
+            "hp": 230,
+            "armorMelee": 4,
+            "armorRanged": 4,
+            "speedEngineUnits": 6.5,
+            "weapon": {
+              "id": "weapon_knight_3",
+              "damageType": "Melee",
+              "damage": 24,
+              "cooldownSeconds": 0.875,
+              "windupSeconds": 0.5,
+              "winddownSeconds": 0
+            },
+            "chargeWeapon": {
+              "id": "weapon_knight_3_charge_fre",
+              "damageType": "Melee",
+              "damage": 36,
+              "cooldownSeconds": 0.4
+            }
+          },
+          {
+            "id": "unit_knight_4_fre",
+            "name": "Elite Royal Knight",
+            "age": 4,
+            "cost": {
+              "food": 140,
+              "gold": 100
+            },
+            "trainSeconds": 35,
+            "pop": 1,
+            "hp": 270,
+            "armorMelee": 5,
+            "armorRanged": 5,
+            "speedEngineUnits": 6.5,
+            "weapon": {
+              "id": "weapon_knight_4",
+              "damageType": "Melee",
+              "damage": 29,
+              "cooldownSeconds": 0.875,
+              "windupSeconds": 0.5,
+              "winddownSeconds": 0
+            },
+            "chargeWeapon": {
+              "id": "weapon_knight_4_charge_fre",
+              "damageType": "Melee",
+              "damage": 43,
+              "cooldownSeconds": 0.4
+            }
+          }
+        ],
+        "tierUpgrades": [
+          "upgrade_unit_knight_3_fre",
+          "upgrade_unit_knight_4_fre"
+        ],
+        "applicableTechs": [
+          "upgrade_melee_damage_i",
+          "upgrade_melee_damage_ii",
+          "upgrade_melee_damage_iii",
+          "upgrade_melee_armor_i",
+          "upgrade_melee_armor_ii",
+          "upgrade_melee_armor_iii",
+          "upgrade_ranged_armor_i",
+          "upgrade_ranged_armor_ii",
+          "upgrade_ranged_armor_iii",
+          "upgrade_cavalry_chivalry_fre",
+          "upgrade_landmark_cavalry_chivalry_fre",
+          "upgrade_cavalry_cantled_saddle_fre",
+          "upgrade_landmark_cavalry_cantled_saddle_fre",
+          "upgrade_cavalry_bloodline_fre",
+          "upgrade_landmark_cavalry_bloodline_fre",
+          "upgrade_tech_military_academy",
+          "upgrade_enlistment_incentives_fre",
+          "upgrade_landmark_enlistment_incentives_fre"
+        ],
+        "notes": "Feudal-age heavy cavalry. Tier entities are what the tier upgrades convert to; base cost/time is the same at every tier. Not available to French: Biology (upgrade_type list has no french_upgrade; absent from the French University), Barding (common, no french_upgrade), Grapered Lances (upgrade_cavalry_grapered_lance_fre exists but no French building researches it). The *_double_fre knight variants have no producer in the standard roster. Charge: see mechanic royal-knight-charge. Production speed: School of Cavalry x1.2 (all stables), Military Academy x1.33. Cost: Keep influence -20% (Enlistment -25%).",
+        "evidence": [
+          "catalog:units/unit_knight_2_fre#cost",
+          "catalog:units/unit_knight_2_fre#trainTimeSeconds",
+          "catalog:units/unit_knight_2_fre#hp",
+          "catalog:units/unit_knight_3_fre#hp",
+          "catalog:units/unit_knight_4_fre#hp",
+          "catalog:units/unit_knight_2_fre#weapon",
+          "catalog:units/unit_knight_2_fre#tierTransitions",
+          "catalog:buildings/building_unit_cavalry_control_fre#trainableUnits",
+          "catalog:buildings/building_landmark_age1_casernes_centrales_fre#trainableUnits",
+          "raw:upgrade/races/common/research/economy/upgrade_tech_university_biology.json#default/upgrade_bag/upgrade_type",
+          "catalog:buildings/building_tech_university_control_fre#researchableTechnologies"
+        ]
+      }
+    ]
+  },
+  "mechanics": [
+    {
+      "key": "tc-production-bonus",
+      "summary": "Every French Town Center produces and researches faster by age.",
+      "params": {
+        "kind": "production_speed",
+        "op": "mul",
+        "appliesTo": [
+          "building_town_center_capital_fre",
+          "building_town_center_fre"
+        ],
+        "appliesToQueues": [
+          "villager",
+          "scout",
+          "tc research"
+        ],
+        "byAge": {
+          "1": 1.15,
+          "2": 1.15,
+          "3": 1.2,
+          "4": 1.25
+        },
+        "alternativeByAge": {
+          "1": 1.1,
+          "2": 1.15,
+          "3": 1.2,
+          "4": 1.2
+        },
+        "villagerSecondsByAge": {
+          "1": 17.391,
+          "2": 17.391,
+          "3": 16.667,
+          "4": 16.0
+        },
+        "semantics": "rate multiplier: time = base / multiplier"
+      },
+      "status": "partial",
+      "evidence": [
+        "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/ui/global_traits_summary/trait[2]/description_formatter/formatter_arguments/int_value[2..5]",
+        "locale:11227033 | Town Center production speed increased per age +15%, +15%, +20%, +25% (args from army record)",
+        "locale:11197915 | Town Centers work rate increased per age up +15%, +15%, +20%, +25% (copy referenced by current army record trait[0])",
+        "raw:Attrib-raw/abilities/always_on_abilities/french/passives/town_center_production_age1_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments/int_value",
+        "raw:Attrib-raw/abilities/always_on_abilities/french/passives/town_center_production_age2_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments/int_value",
+        "raw:Attrib-raw/abilities/always_on_abilities/french/passives/town_center_production_age3_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments/int_value",
+        "locale:11165885 | Town Center production and research speed increased by +10% (age1 ability)",
+        "locale:11197894 | older copy: Faster Villager Production per Age (10%, 15%, 20%); Economy techs 30% cheaper",
+        "raw:ebps/races/french/buildings/building_town_center_fre/building_town_center_capital_fre.json#default/ability_ext/abilities/ability[1..3]/$PBGNAME",
+        "raw:ebps/races/french/buildings/building_town_center_fre/building_town_center_fre.json#default/ability_ext/abilities/ability[1..3]/$PBGNAME",
+        "catalog:buildings/building_town_center_fre#cost",
+        "catalog:buildings/building_town_center_fre#buildTimeSeconds",
+        "raw:ebps/races/french/buildings/building_town_center_fre/building_town_center_fre.json#default/requirement_ext/requirement_table/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name/$PBGNAME"
+      ]
+    },
+    {
+      "key": "eco-tech-discount",
+      "summary": "Technologies researched at Mill, Lumber Camp, Mining Camp, Market and Chamber of Commerce cost x0.65.",
+      "params": {
+        "multiplier": 0.65,
+        "buildingClasses": [
+          "gristmill",
+          "mining_camp",
+          "lumber_camp",
+          "market_fre_discount"
+        ],
+        "buildings": [
+          "building_econ_food_control_fre",
+          "building_econ_wood_control_fre",
+          "building_econ_mining_camp_control_fre",
+          "building_econ_market_control_fre",
+          "building_landmark_age1_chamber_of_commerce_fre"
+        ],
+        "techs": [
+          "upgrade_unit_town_center_wheelbarrow_1",
+          "upgrade_econ_villager_hunting_gear_1",
+          "upgrade_econ_resource_food_harvest_rate_2",
+          "upgrade_econ_resource_food_harvest_rate_3",
+          "upgrade_econ_resource_food_harvest_rate_4",
+          "upgrade_scout_forester",
+          "upgrade_econ_resource_wood_fell_rate_1",
+          "upgrade_econ_resource_wood_harvest_rate_2",
+          "upgrade_econ_resource_wood_harvest_rate_3",
+          "upgrade_econ_resource_wood_harvest_rate_4",
+          "upgrade_econ_resource_gold_harvest_rate_2",
+          "upgrade_econ_resource_gold_harvest_rate_3",
+          "upgrade_econ_resource_gold_harvest_rate_4",
+          "upgrade_market_trickle_fre"
+        ],
+        "notCovered": [
+          "upgrade_villager_health (Town Center)",
+          "Royal Institute copies (own -30%)"
+        ],
+        "catalogCostsIncludeDiscount": false,
+        "packCostsIncludeDiscount": true,
+        "rounding": "unverified; pack keeps unrounded base x 0.65"
+      },
+      "status": "resolved",
+      "evidence": [
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/float_properties/upgradebag_float_property/value",
+        "raw:upgrade/races/civ_start/french/upgrade_trait_upgrade_costs_on_dropoffs.json#default/upgrade_bag/filter_conditions/apply_to_unit_classes/unit_class[0..3]",
+        "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/ui/global_traits_summary/trait[2]/description_formatter/formatter_arguments/int_value[1]",
+        "locale:11197915 | Economic technologies are -35% cheaper",
+        "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#cost | common record, undiscounted base"
+      ]
+    },
+    {
+      "key": "dropoff-cost",
+      "summary": "Mill, Lumber Camp and Mining Camp cost 25 wood (-50%), baked into the French entities.",
+      "params": {
+        "cost": {
+          "wood": 25
+        },
+        "otherCivsCost": {
+          "wood": 50
+        },
+        "bakedIntoEntity": true
+      },
+      "status": "resolved",
+      "evidence": [
+        "catalog:buildings/building_econ_food_control_fre#cost",
+        "catalog:buildings/building_econ_wood_control_fre#cost",
+        "catalog:buildings/building_econ_mining_camp_control_fre#cost",
+        "raw:ebps/races/french/buildings/building_econ_food_fre/building_econ_food_control_fre.json#default/cost_ext/time_cost/cost/wood",
+        "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/ui/global_traits_summary/trait[2]/description_formatter/formatter_arguments/int_value[0]"
+      ]
+    },
+    {
+      "key": "free-blacksmith-melee-damage",
+      "summary": "Blacksmith melee-damage technologies are granted free after each age up.",
+      "params": {
+        "grantsByAge": {
+          "2": "upgrade_melee_damage_i",
+          "3": "upgrade_melee_damage_ii",
+          "4": "upgrade_melee_damage_iii"
+        },
+        "costToPlayer": {},
+        "requiresBlacksmith": true,
+        "grantDelaySeconds": null,
+        "notes": "Implemented by state tree blacksmith_construction_complete_fre\\construction_bonus on the French Blacksmith; player bool blacksmith_built_fre exists. Grant timing (instant vs research time) and behaviour when the Blacksmith is built after the age up are unresolved; tech-to-age mapping follows each tech's own age requirement."
+      },
+      "status": "partial",
+      "evidence": [
+        "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/ui/global_traits_summary/trait[4]/description",
+        "locale:11227036 | Blacksmiths grant melee damage technologies for free after each age up.",
+        "raw:ebps/races/french/buildings/building_tech_unit_infantry_fre/building_tech_unit_infantry_control_fre.json#default/construction_ext/on_construction_complete_state_tree_refs/while_construction_complete_entity_state_tree_ref",
+        "raw:Attrib-raw/statemodel_schema/french.rgd#default/schema_bag/bool_properties/statemodel_bool_property[2]/bool_property_id",
+        "catalog:technologies/upgrade_melee_damage_i#requirements",
+        "catalog:technologies/upgrade_melee_damage_ii#requirements",
+        "catalog:technologies/upgrade_melee_damage_iii#requirements"
+      ]
+    },
+    {
+      "key": "royal-knight-charge",
+      "summary": "Royal Knights charge (impact weapon) and gain +3 bonus damage for 5 s after completing a charge (+10 with Cantled Saddles).",
+      "params": {
+        "postChargeBonusDamage": 3,
+        "postChargeBonusDamageCantled": 10,
+        "durationSeconds": 5,
+        "chargeCooldownSeconds": 15,
+        "chargeTriggerDistanceMin": 8,
+        "chargeTriggerDistanceMax": 40,
+        "chargeMaxDurationSeconds": 7,
+        "chargeImpactDamageByTier": {
+          "2": 29,
+          "3": 36,
+          "4": 43
+        },
+        "normalDamageByTier": {
+          "2": 19,
+          "3": 24,
+          "4": 29
+        },
+        "notes": "Distances in raw engine units. The +3/5 s value is text (army trait + Cantled Saddles tooltip); Cantled floats charge_damage=10, duration=5 are raw. lancer_charge_melee_boost_fre (+15% for 10 s) is gated on a district statemodel bool and not part of standard play."
+      },
+      "status": "partial",
+      "evidence": [
+        "locale:11227039 | Royal Knight: +3 bonus damage for 5 seconds after completing a charge",
+        "catalog:technologies/upgrade_cavalry_cantled_saddle_fre#modifiers",
+        "locale:11201594 | Damage increased for 5 seconds (buff lancer_charge_bonus_damage)",
+        "raw:sbps/races/french/unit_knight_2_fre.json#default/squad_combat_behaviour_ext/charge_option/cooldown_seconds",
+        "raw:sbps/races/french/unit_knight_2_fre.json#default/squad_combat_behaviour_ext/charge_option/min_trigger_distance",
+        "raw:sbps/races/french/unit_knight_2_fre.json#default/squad_combat_behaviour_ext/charge_option/max_trigger_distance",
+        "raw:sbps/races/french/unit_knight_2_fre.json#default/squad_combat_behaviour_ext/charge_option/max_duration_seconds",
+        "catalog:units/unit_knight_2_fre#weapon",
+        "catalog:units/unit_knight_3_fre#weapon",
+        "catalog:units/unit_knight_4_fre#weapon"
+      ]
+    },
+    {
+      "key": "school-of-cavalry",
+      "summary": "Feudal landmark that is itself a Stable and makes all stables produce +20% faster.",
+      "params": {
+        "actsAs": "stable",
+        "trains": [
+          "unit_scout_1_fre",
+          "unit_horseman_2_fre",
+          "unit_knight_2_fre"
+        ],
+        "productionSpeedMultiplier": 1.2,
+        "appliesTo": "unit_class stable (Stables and the School itself)",
+        "upgradeRecord": "upgrade_tech_school_of_cavalry",
+        "stackingWithMilitaryAcademy": null,
+        "researches": [
+          "upgrade_unit_knight_3_fre",
+          "upgrade_unit_knight_4_fre",
+          "upgrade_cavalry_chivalry_fre",
+          "upgrade_cavalry_cantled_saddle_fre"
+        ]
+      },
+      "status": "partial",
+      "evidence": [
+        "catalog:buildings/building_landmark_age1_casernes_centrales_fre#cost",
+        "catalog:buildings/building_landmark_age1_casernes_centrales_fre#buildTimeSeconds",
+        "catalog:buildings/building_landmark_age1_casernes_centrales_fre#descriptionTemplate | Acts as a Stable. All of your stables produce units +20% faster.",
+        "raw:ebps/races/french/buildings/building_landmark_age1_casernes_centrales_fre/building_landmark_age1_casernes_centrales_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+        "raw:upgrade/races/french/research/upgrade_tech_school_of_cavalry.json#default/upgrade_bag/filter_conditions/apply_to_unit_classes/unit_class",
+        "raw:ebps/races/french/buildings/building_landmark_age1_casernes_centrales_fre/building_landmark_age1_casernes_centrales_fre.json#default/spawner_ext/spawn_items",
+        "raw:ebps/races/french/buildings/building_landmark_age1_casernes_centrales_fre/building_landmark_age1_casernes_centrales_fre.json#default/type_ext/unit_type_list/unit_type[8]"
+      ]
+    },
+    {
+      "key": "keep-influence",
+      "summary": "Units from Stables and Archery Ranges inside a Keep's influence cost -20% (-25% with Enlistment Incentives). Keeps cost -10% (810 stone, baked).",
+      "params": {
+        "costMultiplier": 0.8,
+        "withEnlistmentIncentives": 0.75,
+        "radius": null,
+        "sources": [
+          "building_defense_keep_fre"
+        ],
+        "keepCost": {
+          "stone": 810
+        }
+      },
+      "status": "partial",
+      "evidence": [
+        "raw:Attrib-raw/abilities/always_on_abilities/french/keep_influence_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments/int_value",
+        "raw:Attrib-raw/info/buff_info/races/french/unit_cost_influence_bonus.rgd#default/info/description_formatter/formatter_arguments/int_value",
+        "locale:11263019",
+        "catalog:technologies/upgrade_enlistment_incentives_fre#descriptionTemplate",
+        "catalog:buildings/building_defense_keep_fre#cost"
+      ]
+    },
+    {
+      "key": "chamber-of-commerce-traders",
+      "summary": "Chamber of Commerce spawns one free Trader per economic technology researched.",
+      "params": {
+        "unit": "unit_trade_cart_chamber_of_commerce_fre",
+        "cost": {},
+        "counter": "eco_techs_fre",
+        "candidateCountedTechs": [
+          "upgrade_econ_resource_food_harvest_rate_2",
+          "upgrade_econ_resource_food_harvest_rate_3",
+          "upgrade_econ_resource_food_harvest_rate_4",
+          "upgrade_unit_town_center_wheelbarrow_1",
+          "upgrade_econ_villager_hunting_gear_1",
+          "upgrade_market_trickle_fre",
+          "upgrade_econ_resource_gold_harvest_rate_2",
+          "upgrade_econ_resource_gold_harvest_rate_3",
+          "upgrade_econ_resource_gold_harvest_rate_4",
+          "upgrade_econ_resource_wood_harvest_rate_2",
+          "upgrade_econ_resource_wood_harvest_rate_3",
+          "upgrade_econ_resource_wood_harvest_rate_4",
+          "upgrade_econ_resource_wood_fell_rate_1",
+          "upgrade_landmark_market_trickle_fre",
+          "upgrade_econ_drift_nets",
+          "upgrade_econ_extended_lines",
+          "upgrade_unit_religious_tithe_barn_4"
+        ],
+        "notes": "Candidate list = French-available techs whose upgrade_type includes economic_upgrade; the state tree that increments eco_techs_fre is not decoded. Whether techs researched before the landmark count is unresolved."
+      },
+      "status": "partial",
+      "evidence": [
+        "catalog:buildings/building_landmark_age1_chamber_of_commerce_fre#cost",
+        "catalog:buildings/building_landmark_age1_chamber_of_commerce_fre#buildTimeSeconds",
+        "catalog:buildings/building_landmark_age1_chamber_of_commerce_fre#descriptionTemplate | Acts as a Market. Trains one free Trader for each economic technology researched.",
+        "raw:ebps/races/french/buildings/building_landmark_age1_chamber_of_commerce_fre/building_landmark_age1_chamber_of_commerce_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+        "catalog:units/unit_trade_cart_chamber_of_commerce_fre#cost",
+        "raw:Attrib-raw/abilities/always_on_abilities/french/chamber_of_commerce_ability_fre.rgd#default/ability_bag/entity_tree",
+        "raw:Attrib-raw/statemodel_schema/french.rgd#default/schema_bag/int_properties/statemodel_int_property/int_property_id"
+      ]
+    },
+    {
+      "key": "guild-hall",
+      "summary": "Guild Hall banks a chosen resource; the bank increment grows with stored amount.",
+      "params": {
+        "periodSeconds": 20,
+        "incrementSteps": [
+          20,
+          40,
+          60,
+          80,
+          100,
+          120,
+          140,
+          160,
+          180,
+          200
+        ],
+        "stoneIncrementSteps": [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "resources": [
+          "food",
+          "wood",
+          "gold",
+          "stone"
+        ],
+        "thresholds": null,
+        "requiresCollect": true
+      },
+      "status": "partial",
+      "evidence": [
+        "catalog:buildings/building_landmark_age2_guild_hall_fre#cost",
+        "catalog:buildings/building_landmark_age2_guild_hall_fre#buildTimeSeconds",
+        "catalog:buildings/building_landmark_age2_guild_hall_fre#descriptionTemplate | Generates and stores resources over time, the more resources stored the faster they are generated. Select between Food, Wood, Stone, or Gold. Generates stone at half the rate.",
+        "raw:ebps/races/french/buildings/building_landmark_age2_guild_hall_fre/building_landmark_age2_guild_hall_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+        "raw:Attrib-raw/abilities/modal_abilities/french/guild_hall_collect_resources_fre.rgd#default/ability_bag/ui_contextual_info/context[0..19]/help_text_formatter/formatter_arguments",
+        "locale:11260146 | %1% Resources every %2% seconds",
+        "catalog:buildings/building_landmark_age2_guild_hall_fre#description"
+      ]
+    },
+    {
+      "key": "royal-institute",
+      "summary": "Castle landmark housing French unique techs at -30%, ignoring their usual age.",
+      "params": {
+        "researchCostMultiplier": 0.7,
+        "catalogCostsIncludeDiscount": false,
+        "techs": [
+          "upgrade_landmark_cavalry_bloodline_fre",
+          "upgrade_landmark_cavalry_cantled_saddle_fre",
+          "upgrade_landmark_cavalry_chivalry_fre",
+          "upgrade_landmark_enlistment_incentives_fre",
+          "upgrade_landmark_ranged_crossbow_drills_fre",
+          "upgrade_landmark_ranged_crossbow_stirrups_fre",
+          "upgrade_landmark_market_trickle_fre",
+          "upgrade_landmark_naval_long_guns_fre"
+        ]
+      },
+      "status": "partial",
+      "evidence": [
+        "catalog:buildings/building_landmark_age3_le_grande_university_fre#descriptionArguments",
+        "catalog:buildings/building_landmark_age3_le_grande_university_fre#researchableTechnologies",
+        "catalog:technologies/upgrade_landmark_cavalry_bloodline_fre#cost",
+        "catalog:technologies/upgrade_cavalry_bloodline_fre#cost"
+      ]
+    },
+    {
+      "key": "college-of-artillery",
+      "summary": "Imperial landmark: Royal Cannon/Ribauldequin (-25% gold baked, x1.3 damage), trains and researches 50% faster.",
+      "params": {
+        "productionSpeedMultiplier": 1.5,
+        "researchSpeedMultiplier": 1.5,
+        "royalDamageMultiplier": 1.3,
+        "royalGoldDiscount": 0.25,
+        "goldDiscountBaked": true
+      },
+      "status": "partial",
+      "evidence": [
+        "catalog:buildings/building_landmark_age3_ecole_de_poudre_a_canon_fre#cost",
+        "catalog:buildings/building_landmark_age3_ecole_de_poudre_a_canon_fre#buildTimeSeconds",
+        "catalog:buildings/building_landmark_age3_ecole_de_poudre_a_canon_fre#descriptionTemplate | Produces the Royal versions of the Cannon and Ribauldequin, which do +30% more damage and cost -25% gold.  Royal Cannons gain the Artillery Shot ability and Royal Ribauldequins gain the Fortify ability.  Contains Siege and Gunpowder technologies, trains units and researches technologies 50% faster.",
+        "raw:ebps/races/french/buildings/building_landmark_age3_ecole_de_poudre_a_canon_fre/building_landmark_age3_ecole_de_poudre_a_canon_fre.json#default/requirement_ext/requirement_table/required_player_upgrade",
+        "raw:upgrade/races/french/research/upgrade_tech_royal_artillery_fre.json#default/upgrade_bag/float_properties/upgradebag_float_property/value",
+        "catalog:units/unit_cannon_4_royal_fre#cost",
+        "catalog:units/unit_cannon_4_fre#cost"
+      ]
+    },
+    {
+      "key": "trade",
+      "summary": "Traders and Trade Ships may return food, wood or gold; Trade Ships return +20%; trade posts revealed at start.",
+      "params": {
+        "traderReturnResources": [
+          "gold",
+          "food",
+          "wood"
+        ],
+        "tradeShipGoldMultiplier": 1.2,
+        "tradeShipOtherResourceFloat": 0.2,
+        "notes": "Raw floats trade_modifier_gold_fre=1.2, trade_modifier_food/wood/stone_fre=0.2 (operation in state tree). Toggle abilities toggle_trade_resource_{food,wood,gold,stone}_fre exist; text lists food/wood/gold. Trade formula itself is generic and not part of this pack."
+      },
+      "status": "partial",
+      "evidence": [
+        "raw:upgrade/races/civ_start/french/upgrade_trait_trade_ship_bonus_resources.json#default/upgrade_bag/float_properties",
+        "locale:11227035",
+        "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/ui/global_traits_summary/trait[3]/description"
+      ]
+    },
+    {
+      "key": "merchant-guilds",
+      "summary": "Each active Trader generates 1 gold every 6 s after Merchant Guilds.",
+      "params": {
+        "goldPerTraderPerSecond": 0.166667,
+        "goldAmount": 1,
+        "intervalSeconds": 6,
+        "techs": [
+          "upgrade_market_trickle_fre",
+          "upgrade_landmark_market_trickle_fre"
+        ]
+      },
+      "status": "resolved",
+      "evidence": [
+        "raw:Attrib-raw/abilities/always_on_abilities/french/passives/market_passive_gold_generation_fre.rgd#default/ability_bag/ui_info/help_text_formatter/formatter_arguments",
+        "catalog:technologies/upgrade_market_trickle_fre#modifiers"
+      ]
+    },
+    {
+      "key": "dock-population",
+      "summary": "Royal Shipyards: each Dock adds +10 population space.",
+      "params": {
+        "popPerDock": 10
+      },
+      "status": "partial",
+      "evidence": [
+        "catalog:buildings/building_unit_naval_fre#cost",
+        "catalog:buildings/building_unit_naval_fre#buildTimeSeconds",
+        "raw:Attrib-raw/info/buff_info/races/french/dock_population_fre.rgd#default/info/description_formatter/formatter_arguments/int_value",
+        "locale:11265967"
+      ]
+    },
+    {
+      "key": "royal-knight-feudal",
+      "summary": "Royal Knight (heavy cavalry) is trainable from the Feudal Age at Stable and School of Cavalry.",
+      "params": {
+        "unit": "unit_knight_2_fre",
+        "age": 2
+      },
+      "status": "resolved",
+      "evidence": [
+        "catalog:units/unit_knight_2_fre#requirements",
+        "locale:11227034"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "item": "townCenter.villagerProductionMultiplierByAge",
+      "why": "Two current installed records disagree: army-record civ-summary formatter args 15/15/20/25 vs the TC passive ability tooltips 10/15/20 (no Imperial record). The value is applied by an undecoded state tree (set_civ_dynamic_root\\fre / ability actions); no installed archive (Attrib, ReferenceAttributes, Data) contains state-tree data.",
+      "fallback": "Use 1.15/1.15/1.20/1.25 (formatter whose other two args match raw data); the alternative 1.10/1.15/1.20/1.20 is in villagerProductionMultiplierByAgeAlternative. Calibrate against a known French Feudal timing per MODEL 0.2."
+    },
+    {
+      "item": "popProvided (House, Town Center) and start.popCap",
+      "why": "Population supply is added by state trees; no installed record or tooltip states the amount (aoe4world 16.1 dump has popcap: null too).",
+      "fallback": "none in allowed sources; leave null and take the generic value the engine uses for every civ."
+    },
+    {
+      "item": "Eco-tech discount rounding",
+      "why": "Trait multiplier 0.65 is raw; whether the game rounds 32.5 etc. is not in data.",
+      "fallback": "Pack costs are unrounded base x 0.65; baseCost kept on each tech."
+    },
+    {
+      "item": "Professional Scouts discount",
+      "why": "Researched at the Mill (class gristmill, so inside the cost filter) but not tagged economic_upgrade; if the state tree also checks the tag it would be full price.",
+      "fallback": "Discounted in the pack."
+    },
+    {
+      "item": "Shaft Mining value",
+      "why": "Raw floats mining_rate=0.3 / mining_rate_stone=0.3 while the tooltip says +15% (Specialized Pick is 0.15). Could be cumulative +30% replacing Pick, or +30% more.",
+      "fallback": "x1.15 per tooltip; raw 0.3 noted on the effect."
+    },
+    {
+      "item": "Gather-tech stacking",
+      "why": "Rate techs are raw fractions (0.10/0.15) applied by state trees; additive-on-base vs compounding is not stated.",
+      "fallback": "Effects written as mul 1+x each."
+    },
+    {
+      "item": "School of Cavalry production bonus",
+      "why": "+20% only in the entity description args; upgrade_tech_school_of_cavalry carries no numeric property (its formatter arg 25 is the shared default). Stacking with Military Academy 1.33 unknown.",
+      "fallback": "x1.20 on all stables, multiplied with Military Academy."
+    },
+    {
+      "item": "Free Blacksmith melee techs: timing",
+      "why": "Granted by an undecoded construction_bonus state tree; whether instant at age up and whether a Blacksmith must exist first is not stated.",
+      "fallback": "Instant at age up once a Blacksmith exists."
+    },
+    {
+      "item": "Guild Hall growth thresholds",
+      "why": "Increment steps 20..200 per 20 s are tooltip contexts; the bank thresholds that advance guild_hall_increment_fre are in a state tree.",
+      "fallback": "Model as 20 per 20 s minimum; do not use in optimisation until measured."
+    },
+    {
+      "item": "Chamber of Commerce counted techs",
+      "why": "eco_techs_fre increment rule is in a state tree.",
+      "fallback": "Techs tagged economic_upgrade (candidateCountedTechs)."
+    },
+    {
+      "item": "Royal Institute -30% and College of Artillery +50%",
+      "why": "Only in landmark description args; applied at runtime.",
+      "fallback": "Royal Institute tech costs = catalog x 0.7 in the pack; College x1.5 production/research."
+    },
+    {
+      "item": "Enlistment Incentives stacking",
+      "why": "\"a further -5%\" can be 0.75 or 0.8 x 0.95 = 0.76.",
+      "fallback": "0.75."
+    },
+    {
+      "item": "Keep influence radius",
+      "why": "Radius is applied by a state tree; no installed numeric field.",
+      "fallback": "Treat a Stable as inside influence only when the build places a Keep next to it."
+    },
+    {
+      "item": "Royal Knight post-charge +3 for 5 s",
+      "why": "Base value is text only (army trait, Cantled Saddles tooltip); Cantled raw floats give +10/5 s.",
+      "fallback": "+3 for 5 s."
+    },
+    {
+      "item": "Villager speed units",
+      "why": "Raw moving_ext speed 4.5 is in engine units; no installed tile conversion.",
+      "fallback": "Use the engine-wide conversion."
+    }
+  ]
+}

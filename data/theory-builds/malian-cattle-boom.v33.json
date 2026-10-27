@@ -1,0 +1,508 @@
+{
+ "method": "Seeded random sampling (6000 candidates plus the civilization defaults) then coordinate hill-climbing from the best 10; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": -1123999.1,
+ "build": {
+  "id": "malian-cattle-boom",
+  "title": "Malian cattle boom",
+  "summary": "The fastest 200 population with every Sofa upgrade, built on cattle ranches and a Pit Mine; ranch count, cattle timing and every other choice come from the engine search.",
+  "civilization": "malian",
+  "engine": "civ",
+  "patch": "16.3.11308",
+  "reference": {
+   "buildId": "malians-observed-4v4"
+  },
+  "objective": {
+   "kind": "done"
+  },
+  "lineNames": "Sofa",
+  "result": {
+   "done": 1124,
+   "at": 900,
+   "army": 5,
+   "armyValue": 900,
+   "villagers": 102,
+   "population": 117,
+   "age": 3,
+   "ages": [
+    360,
+    686,
+    927
+   ]
+  },
+  "lines": [
+   "sofa"
+  ],
+  "vilTarget": 150,
+  "landmarks": {
+   "2": "mansa-quarry",
+   "3": "grand-fulani-corral",
+   "4": "fort-of-the-huntress"
+  },
+  "lmBuilders": {
+   "2": 2,
+   "3": 7,
+   "4": 5
+  },
+  "extraTCs": {
+   "2": 2,
+   "3": 2
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 0,
+   "3": 1,
+   "4": 5
+  },
+  "maxProducers": 10,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1"
+   ],
+   "2": [
+    "upgrade_econ_resource_food_harvest_rate_2",
+    "upgrade_econ_resource_wood_harvest_rate_2",
+    "upgrade_econ_resource_gold_harvest_rate_2"
+   ],
+   "3": [],
+   "4": []
+  },
+  "milTechAge": {
+   "2": false,
+   "3": true
+  },
+  "blacksmiths": 2,
+  "pauseForAge": true,
+  "window": 5,
+  "woodFloor": 0.2,
+  "goldBias": 1.6,
+  "armyAge": 3,
+  "cattle": {
+   "ranches": {
+    "2": 6,
+    "3": 1,
+    "4": 4
+   },
+   "herdTarget": 0,
+   "age": 1
+  },
+  "mech": {
+   "pitMines": 1
+  }
+ },
+ "ledger": {
+  "id": "malian-cattle-boom",
+  "evaluations": 11894,
+  "seconds": 472,
+  "seed": 33,
+  "objective": {
+   "kind": "done"
+  },
+  "best": {
+   "done": 1124,
+   "at": 900,
+   "army": 5,
+   "armyValue": 900,
+   "villagers": 102,
+   "population": 117,
+   "age": 3,
+   "ages": [
+    360,
+    686,
+    927
+   ]
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "lines": [
+      "sofa"
+     ],
+     "vilTarget": 150,
+     "landmarks": {
+      "2": "mansa-quarry",
+      "3": "grand-fulani-corral",
+      "4": "fort-of-the-huntress"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 7,
+      "4": 5
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 1,
+      "3": 1,
+      "4": 5
+     },
+     "maxProducers": 10,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.2,
+     "goldBias": 1.6,
+     "armyAge": 3,
+     "cattle": {
+      "ranches": {
+       "2": 6,
+       "3": 1,
+       "4": 4
+      },
+      "herdTarget": 0,
+      "age": 1
+     },
+     "mech": {
+      "pitMines": 1
+     }
+    },
+    "result": {
+     "done": 1124,
+     "at": 900,
+     "army": 5,
+     "armyValue": 900,
+     "villagers": 102,
+     "population": 117,
+     "age": 3,
+     "ages": [
+      360,
+      686,
+      927
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "sofa"
+     ],
+     "vilTarget": 150,
+     "landmarks": {
+      "2": "mansa-quarry",
+      "3": "grand-fulani-corral",
+      "4": "fort-of-the-huntress"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 7,
+      "4": 5
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 2,
+      "3": 1,
+      "4": 5
+     },
+     "maxProducers": 10,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.2,
+     "goldBias": 1.6,
+     "armyAge": 3,
+     "cattle": {
+      "ranches": {
+       "2": 6,
+       "3": 1,
+       "4": 4
+      },
+      "herdTarget": 0,
+      "age": 1
+     },
+     "mech": {
+      "pitMines": 1
+     }
+    },
+    "result": {
+     "done": 1124,
+     "at": 900,
+     "army": 5,
+     "armyValue": 900,
+     "villagers": 102,
+     "population": 117,
+     "age": 3,
+     "ages": [
+      360,
+      686,
+      927
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "sofa"
+     ],
+     "vilTarget": 150,
+     "landmarks": {
+      "2": "mansa-quarry",
+      "3": "grand-fulani-corral",
+      "4": "fort-of-the-huntress"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 7,
+      "4": 5
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 5
+     },
+     "maxProducers": 10,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.2,
+     "goldBias": 1.6,
+     "armyAge": 3,
+     "cattle": {
+      "ranches": {
+       "2": 6,
+       "3": 1,
+       "4": 4
+      },
+      "herdTarget": 0,
+      "age": 1
+     },
+     "mech": {
+      "pitMines": 1
+     }
+    },
+    "result": {
+     "done": 1124,
+     "at": 900,
+     "army": 5,
+     "armyValue": 900,
+     "villagers": 102,
+     "population": 117,
+     "age": 3,
+     "ages": [
+      360,
+      686,
+      927
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "sofa"
+     ],
+     "vilTarget": 150,
+     "landmarks": {
+      "2": "mansa-quarry",
+      "3": "grand-fulani-corral",
+      "4": "fort-of-the-huntress"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 7,
+      "4": 5
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 5
+     },
+     "maxProducers": 10,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.2,
+     "goldBias": 1.6,
+     "armyAge": 3,
+     "cattle": {
+      "ranches": {
+       "2": 6,
+       "3": 1,
+       "4": 4
+      },
+      "herdTarget": 0,
+      "age": 1
+     },
+     "mech": {
+      "pitMines": 1
+     }
+    },
+    "result": {
+     "done": 1124,
+     "at": 900,
+     "army": 5,
+     "armyValue": 900,
+     "villagers": 102,
+     "population": 117,
+     "age": 3,
+     "ages": [
+      360,
+      686,
+      927
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "sofa"
+     ],
+     "vilTarget": 150,
+     "landmarks": {
+      "2": "mansa-quarry",
+      "3": "grand-fulani-corral",
+      "4": "fort-of-the-huntress"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 7,
+      "4": 5
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 5,
+      "3": 1,
+      "4": 5
+     },
+     "maxProducers": 10,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2",
+       "upgrade_econ_resource_wood_harvest_rate_2",
+       "upgrade_econ_resource_gold_harvest_rate_2"
+      ],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 5,
+     "woodFloor": 0.2,
+     "goldBias": 1.6,
+     "armyAge": 3,
+     "cattle": {
+      "ranches": {
+       "2": 6,
+       "3": 1,
+       "4": 4
+      },
+      "herdTarget": 0,
+      "age": 1
+     },
+     "mech": {
+      "pitMines": 1
+     }
+    },
+    "result": {
+     "done": 1124,
+     "at": 900,
+     "army": 5,
+     "armyValue": 900,
+     "villagers": 102,
+     "population": 117,
+     "age": 3,
+     "ages": [
+      360,
+      686,
+      927
+     ]
+    }
+   }
+  ]
+ }
+}

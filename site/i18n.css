@@ -1,0 +1,14 @@
+/* Language switch (site/i18n.js): a bare word above the theme select, separated by a thin rule. */
+.sidebar-foot .lang-toggle{display:block;width:auto;min-height:24px;margin:0 0 12px;padding:4px 0;border:0;border-radius:0;background:none;box-shadow:none;color:#b5bdc9;font:13px/1.4 var(--sans);text-align:left;cursor:pointer;touch-action:manipulation}
+.sidebar-foot .lang-toggle:hover{background:none;border:0;color:#fff}
+.sidebar-foot .lang-toggle:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.sidebar-foot .foot-rule{display:block;height:0;border-top:1px solid #ffffff1f}
+.sidebar-foot .foot-rule+.theme-label{margin-top:12px}
+@media(max-width:1000px){
+  .sidebar-foot .lang-toggle{margin:0 0 0 auto;font-size:12px}
+  .sidebar-foot .foot-rule{width:0;height:16px;border-top:0;border-left:1px solid #ffffff1f}
+  .sidebar-foot .foot-rule+.theme-label{margin:0}
+}
+/* Chinese text: system CJK faces behind the Latin faces; CJK headings read badly with negative tracking. */
+:root[lang="zh-CN"]{--sans:'IBM Plex Sans','PingFang SC','Microsoft YaHei','Noto Sans SC',Arial,sans-serif;--display:'Fraunces','PingFang SC','Microsoft YaHei','Noto Sans SC',Georgia,serif}
+:root[lang="zh-CN"] h1,:root[lang="zh-CN"] h2,:root[lang="zh-CN"] h3{letter-spacing:0}

@@ -1,0 +1,313 @@
+{
+  "updated_at": "2026-10-27T03:04:35.021978+00:00",
+  "matches": [
+    {
+      "game_id": 257307543,
+      "requested_by": [
+        7195780,
+        1588970
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 257307543,
+        "status": "cached",
+        "bytes": 3283641
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 257305215,
+      "requested_by": [
+        7195780,
+        1588970
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 257305215,
+        "profile": 7195780,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=257305215&profileId=7195780",
+        "compressed_bytes": 1035900,
+        "bytes": 4149648,
+        "sha256": "a1ec11e085833b04b7bc4414ae7d34a3b80e8500a1631d089ccb0e5a53137d88"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 257303286,
+      "requested_by": [
+        7195780
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 257303286,
+        "profile": 7195780,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=257303286&profileId=7195780",
+        "compressed_bytes": 643107,
+        "bytes": 2535267,
+        "sha256": "2be58397caba967a483f322190819f3cc7950ea61586116aececdaf4c0a7a1b6"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 257300487,
+      "requested_by": [
+        7195780
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 257300487,
+        "profile": 7195780,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=257300487&profileId=7195780",
+        "compressed_bytes": 1197011,
+        "bytes": 4511793,
+        "sha256": "89a9ba85b96ffc836a7c4c775488e992412edde28ac32fc7b6aca6f90d703467"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 257209177,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 257209177,
+        "status": "cached",
+        "bytes": 9202671
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 257204293,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 257204293,
+        "profile": 7195780,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=257204293&profileId=7195780",
+        "compressed_bytes": 764305,
+        "bytes": 3059198,
+        "sha256": "c4d31431d12ca3b9a48f313d5837055469de60ed037a5ca228d7eea344650335"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 257203878,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 257203878,
+        "profile": 7195780,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=257203878&profileId=7195780",
+        "compressed_bytes": 12427,
+        "bytes": 44778,
+        "sha256": "78a9658211b3053ea7769e7c11c8d4ce2903f858534a89a12ef51a8a5c419479"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 257199347,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 257199347,
+        "profile": 7195780,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=257199347&profileId=7195780",
+        "compressed_bytes": 650695,
+        "bytes": 2451641,
+        "sha256": "9d443c03bd2bfdb0d4ef14193bd73890a278e090da25de7bb069a98cef6f8397"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255410440,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255410440,
+        "status": "cached",
+        "bytes": 1828729
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255406532,
+      "requested_by": [
+        7195780,
+        1588970,
+        7999822,
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255406532,
+        "profile": 7195780,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255406532&profileId=7195780",
+        "compressed_bytes": 1075524,
+        "bytes": 4233466,
+        "sha256": "4d6ba0ec7219d9c357f9f45858bb9913379428c9441147ac3492dad32c340914"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 256052058,
+      "requested_by": [
+        1588970
+      ],
+      "summary_error": "HTTP Error 404: Not Found",
+      "replay_error": "HTTP Error 404: Not Found"
+    },
+    {
+      "game_id": 255400269,
+      "requested_by": [
+        1588970,
+        7999822,
+        18518902
+      ],
+      "summary_error": "HTTP Error 404: Not Found",
+      "replay": {
+        "game": 255400269,
+        "profile": 1588970,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255400269&profileId=1588970",
+        "compressed_bytes": 1960402,
+        "bytes": 7972702,
+        "sha256": "df0b006308eed4e462d12f77360e22747b2acd06a99bd85b6eeb22d7e992717d"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255379155,
+      "requested_by": [
+        7999822,
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255379155,
+        "profile": 7999822,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255379155&profileId=7999822",
+        "compressed_bytes": 1033873,
+        "bytes": 4118127,
+        "sha256": "9baaea25896f07ff2b98937dd73fd830544c587e1d7d27135fcd5f8cb49f731c"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255376462,
+      "requested_by": [
+        7999822,
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255376462,
+        "profile": 7999822,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255376462&profileId=7999822",
+        "compressed_bytes": 914972,
+        "bytes": 3600163,
+        "sha256": "3cdd3f0f9fb9facddc4f5ce5300d327442c7278e27db8603cbdc931a73a5058f"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255372778,
+      "requested_by": [
+        7999822,
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255372778,
+        "profile": 7999822,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255372778&profileId=7999822",
+        "compressed_bytes": 1125234,
+        "bytes": 4464673,
+        "sha256": "a7a667f558c1aa669f307decf67a6e0523891aaf08807365afd04f6cdbc6f278"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255396566,
+      "requested_by": [
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255396566,
+        "profile": 18518902,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255396566&profileId=18518902",
+        "compressed_bytes": 608935,
+        "bytes": 2600080,
+        "sha256": "811067887b49d79513a9d3cf2acc35e451ad779eb390ac99fb4df06a2c91b54c"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255369669,
+      "requested_by": [
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255369669,
+        "profile": 18518902,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255369669&profileId=18518902",
+        "compressed_bytes": 1085624,
+        "bytes": 4396771,
+        "sha256": "b29daffe99a0d1a2d1fe4b6f48d469e740619690ecb2279cabc5d939667f172b"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255255018,
+      "requested_by": [
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255255018,
+        "profile": 18518902,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255255018&profileId=18518902",
+        "compressed_bytes": 1000000,
+        "bytes": 3965280,
+        "sha256": "ebed86554b8af3c49b1dd1979e31355181d1d4c3d1312dcb1f34b340f53334a2"
+      },
+      "parsed": true
+    },
+    {
+      "game_id": 255252569,
+      "requested_by": [
+        18518902
+      ],
+      "summary": "cached",
+      "replay": {
+        "game": 255252569,
+        "profile": 18518902,
+        "url": "https://api.ageofempires.com/api/GameStats/AgeIV/GetMatchReplay/?matchId=255252569&profileId=18518902",
+        "compressed_bytes": 416106,
+        "bytes": 1628514,
+        "sha256": "76ee7dec09f06edb86ee40c36003f8dbfaa863ecc0bc0f49397be06c1b775ee6"
+      },
+      "parsed": true
+    }
+  ]
+}

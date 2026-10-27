@@ -10,7 +10,7 @@ The replacement is a new interaction design over the remote engine, named AoE Bu
 
 1. **Installed game attributes:** local reference XML and localization under `games/kb/aoe4/extract`. Normalize with original asset paths, source hashes, inheritance and explicit unresolved fields. These describe rules, not how popular a strategy is.
 2. **Observed play:** `mcaoe/data/strategy/aggregate.json` and individual summaries. The discovered sample covers 143 matches / 756 appearances, September 29–October 4, patch 11308. Its per-build samples are exploratory; civilization win rates do not establish build popularity. Mongol starting TC placement must not be counted as a second TC.
-3. **Theoretical simulation:** `site/engine.js`, with historical 16.2.10604 parameters and manually applied changes documented in `data/PATCH_STATUS.md`. Currently supports only Abbasid three-TC camel plans. New civilizations require actual plan and mechanic implementations, not a relabelled Abbasid run.
+3. **Theoretical simulation:** `site/engine.js`, with historical 16.2.10604 parameters and manually applied changes documented in `data/PATCH_STATUS.md`, runs the Abbasid three-TC camel plans. `site/engine-civs.js` runs French, Mongol, Malian and Japanese plans on the installed **16.3.11308** rules: `data/civ-rules/<civ>.json` (rule packs, every value with installed-file evidence) compiled by `scripts/build_civ_engine_rules.py` into `data/civ-engine-rules.json`. Their plans in `data/theory-builds.json` are searched from the engine alone by `scripts/optimize_theory_builds.cjs`; each names a recorded reference game that is shown beside it for comparison and is never an input.
 
 Never silently combine these rulesets. Show provenance where a player inspects a number.
 

@@ -117,6 +117,8 @@ def name_forms(name):
 def strip_civ(rid):
     return re.sub(CIV_SUFFIX, '', rid).replace('_control', '')
 
+GENERIC_CLASSES = {'infantry', 'cavalry', 'villager', 'human', 'military', 'melee', 'ranged', 'worker', 'war_elephant', 'shaolin_monk', 'axe_thrower'}
+
 def installed_applicability():
     """Base unit id -> base tech ids the installed game files apply to it (data/catalog-enrichment.json upgradeGroups,
     kept when at least half of that unit's civilization copies have it; age-ups dropped)."""
@@ -126,11 +128,12 @@ def installed_applicability():
     for u in cat['units']:
         groups = (enrich.get(u['id']) or {}).get('upgradeGroups') or []
         per_unit[strip_civ(u['id'])].append({strip_civ(t) for g in groups for t in g.get('technologyIds') or [] if not t.endswith('_age')})
-    units = {}
+    units, any_copy = {}, {}
     for base, copies in per_unit.items():
         votes = collections.Counter(t for c in copies for t in c)
         units[base] = {t for t, n in votes.items() if n * 2 >= len(copies)}
-    return {'units': units, 'techs': {strip_civ(t['id']) for t in cat['technologies']}}
+        any_copy[base] = set(votes)
+    return {'units': units, 'unitsAny': any_copy, 'techs': {strip_civ(t['id']) for t in cat['technologies']}}
 
 INSTALLED = None
 
@@ -164,6 +167,9 @@ def attach_upgrades(out, civ, meta, unit_recs, tech_recs):
     for u in (x for x in out['units'] if x['civilization'] == civ):
         rec = unit_recs[u['id']]
         classes = set(rec.get('unitTypes') or [])
+        # 'melee infantry' / 'ranged infantry' in tech text: units carry the two tags separately (Man-at-Arms: melee + infantry)
+        for kind in ('melee', 'ranged'):
+            if {kind, 'infantry'} <= classes: classes.add(kind + '_infantry')
         weapon_types = {w.get('damage_type') for w in rec.get('weapons') or []}
         forms = name_forms(u['name'])
         def effective(t):  # a melee-damage tech does nothing for a unit with no melee weapon (Bloomery on an archer)
@@ -191,7 +197,11 @@ def attach_upgrades(out, civ, meta, unit_recs, tech_recs):
             # list villagers for Bloomery); other standard techs from both sources (the installed enrichment misses
             # e.g. Wheelbarrow and Textiles on villagers, Piety on monks)
             damage = {t for t in standard if stats[t] and stats[t] <= {'all_damage', 'melee_damage', 'ranged_damage'}}
-            applicable = {t for t in applicable if t not in damage} | {t for t in standard if strip_civ(t) in installed}
+            # a damage tech only some civilizations get (Elite Army Tactics on Men-at-Arms) loses the majority vote: keep it when
+            # the 17.0 records target this unit through a specific class, or an installed copy of the unit takes it
+            kept = {t for t in applicable & damage if strip_civ(t) in INSTALLED['unitsAny'].get(strip_civ(u['id']), set())
+                    or (targets.get(t, set()) & classes) - GENERIC_CLASSES}  # matched through a specific class (melee_infantry), not 'infantry'
+            applicable = {t for t in applicable if t not in damage} | {t for t in standard if strip_civ(t) in installed} | kept
         applicable |= {tr['upgrade'] for tr in u.get('tierTransitions') or [] if tr.get('upgrade') in tech_recs}
         groups = collections.defaultdict(list)
         for t in sorted(applicable):
@@ -347,6 +357,15 @@ def main():
         named_age = {b['name']: b['age'] for b in out['buildings'] if b['civilization'] == civ and b['age']}
         for b in out['buildings']:  # bastion / upgraded copies take the age of the same-named building
             if b['civilization'] == civ and not b['age'] and b['name'] in named_age: b['age'] = named_age[b['name']]
+    # the seven Sagas belong to the Saga Pillars: goal and reward from the in-game Saga cards (checklist effectText)
+    pillars = next((b for b in out['buildings'] if b['id'] == 'building_saga_totems_vik'), None)
+    if pillars:
+        pillars['sagas'] = []
+        for it in chk['items']:
+            if it['civ'] != 'vikings' or it['kind'] != 'bonus' or not it['name'].startswith('Saga:'): continue
+            text = next((f.get('value') for f in it.get('fields') or [] if f['field'] == 'effectText'), '') or ''
+            m = re.match(r'\s*Complete this Saga by (.+?)\.\s*Saga reward:\s*(.+?)\s*$', text, re.S)
+            if m: pillars['sagas'].append({'name': it['name'].split(':', 1)[1].strip(), 'goal': m.group(1)[0].upper() + m.group(1)[1:], 'reward': m.group(2)})
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding='utf-8')
     counts = {k: collections.Counter(r['civilization'] for r in out[k]) for k in ('units', 'buildings', 'technologies')}
     orphans = [(t['civilization'], t['name']) for t in out['technologies'] if not any(t['id'] in b['researchableTechnologies'] for b in out['buildings'])]

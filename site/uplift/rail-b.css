@@ -77,8 +77,8 @@ html[data-rail-hover="0"] [data-chart-series="0"],html[data-rail-hover="1"] [dat
 #object-detail .upgrade-building-group h4{color:var(--text)}
 #object-detail .upgrade-building-group h4::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--rail-accent-line),transparent);margin-left:6px}
 #object-detail .upgrade-tile{border-radius:11px;transition:transform .14s var(--rail-ease),border-color .16s,background .16s,box-shadow .16s}
-#object-detail .upgrade-tile:has(.upgrade-toggle:not(:disabled):hover){border-color:var(--rail-accent-line);background:linear-gradient(165deg,var(--rail-cell-hi),var(--rail-accent-tint))}
-#object-detail .upgrade-tile:has(.upgrade-toggle:not(:disabled):active){transform:scale(.97)}
+#object-detail .upgrade-tile:has(.upgrade-toggle:not(:disabled):hover),#object-detail .upgrade-tile:has(.upgrade-hit:not(:disabled):hover){border-color:var(--rail-accent-line);background:linear-gradient(165deg,var(--rail-cell-hi),var(--rail-accent-tint))}
+#object-detail .upgrade-tile:has(.upgrade-toggle:not(:disabled):active),#object-detail .upgrade-tile:has(.upgrade-hit:not(:disabled):active){transform:scale(.97)}
 #object-detail .upgrade-tile.preview{border-color:var(--rail-accent);background:linear-gradient(165deg,var(--rail-accent-soft),var(--rail-accent-tint));box-shadow:inset 0 1px 0 var(--rail-rim),0 0 0 3px var(--rail-accent-tint)}
 #object-detail .upgrade-tile.preview .upgrade-toggle small{color:var(--rail-accent);font-weight:600}
 #object-detail .upgrade-tile.complete .upgrade-toggle small{color:var(--rail-accent)}
@@ -150,16 +150,28 @@ html[data-rail-hover="0"] [data-chart-series="0"],html[data-rail-hover="1"] [dat
 #constraints-panel #reset:hover{color:var(--b)}
 
 /* ---------- list pages ---------- */
-#build-results .build-item,#game-results .game-match-compact,#catalog-results .catalog-family.single{position:relative;border-radius:14px;transition:background .18s,box-shadow .18s}
-#build-results .build-item:hover,#game-results .game-match-compact:hover,#catalog-results .catalog-family.single:hover{background:linear-gradient(90deg,var(--rail-a-tint),var(--rail-hover) 45%,transparent 90%);box-shadow:inset 3px 0 0 var(--a)}
-#build-results .build-item{border-bottom-color:var(--rail-track)}
-#build-results .build-item h2 a{transition:color .14s}
-#build-results .build-item .badge{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);border-radius:999px;font-weight:500}
-#build-results .build-actions button{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);transition:background .14s,border-color .14s,color .14s,transform .14s var(--rail-ease)}
-#build-results .build-actions button[data-apply-path="0"]:hover{border-color:var(--a);color:var(--a);background:var(--a-soft)}
-#build-results .build-actions button[data-apply-path="1"]:hover{border-color:var(--b);color:var(--b);background:var(--b-soft)}
-#build-results .build-actions button:active{transform:scale(.97)}
-#build-results .civ-flag,#game-results .civ-flag,#catalog-results .civ-flag{border-radius:3px;box-shadow:0 0 0 1px var(--rail-edge)}
+#build-results .build-item,#game-results .game-match-compact,#catalog-results .catalog-family.single,
+
+/* ---------- list pages ---------- */
+#draft-results .build-item{position:relative;border-radius:14px;transition:background .18s,box-shadow .18s}
+#build-results .build-item:hover,#game-results .game-match-compact:hover,#catalog-results .catalog-family.single:hover,
+#draft-results .build-item:hover{background:linear-gradient(90deg,var(--rail-a-tint),var(--rail-hover) 45%,transparent 90%);box-shadow:inset 3px 0 0 var(--a)}
+#build-results .build-item,
+#draft-results .build-item{border-bottom-color:var(--rail-track)}
+#build-results .build-item h2 a,
+#draft-results .build-item h2 a{transition:color .14s}
+#build-results .build-item .badge,
+#draft-results .build-item .badge{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);border-radius:999px;font-weight:500}
+#build-results .build-actions button,
+#draft-results .build-actions button{background:var(--rail-cell);border-color:var(--rail-edge);box-shadow:inset 0 1px 0 var(--rail-rim);transition:background .14s,border-color .14s,color .14s,transform .14s var(--rail-ease)}
+#build-results .build-actions button[data-apply-path="0"]:hover,
+#draft-results .build-actions button[data-apply-path="0"]:hover{border-color:var(--a);color:var(--a);background:var(--a-soft)}
+#build-results .build-actions button[data-apply-path="1"]:hover,
+#draft-results .build-actions button[data-apply-path="1"]:hover{border-color:var(--b);color:var(--b);background:var(--b-soft)}
+#build-results .build-actions button:active,
+#draft-results .build-actions button:active{transform:scale(.97)}
+#build-results .civ-flag,#game-results .civ-flag,#catalog-results .civ-flag,
+#draft-results .civ-flag{border-radius:3px;box-shadow:0 0 0 1px var(--rail-edge)}
 #game-results .match-identity h2{transition:color .14s}
 #game-results .game-match-compact:hover .match-identity h2{color:var(--a)}
 #game-results .match-open-chevron{transition:transform .18s var(--rail-ease),color .18s}
@@ -199,13 +211,22 @@ html[data-rail-hover="0"] [data-chart-series="0"],html[data-rail-hover="1"] [dat
 #object-detail .research-item:nth-child(n+9){--rail-i:8}
 #object-detail .spending-pie:not(.is-empty){mask:conic-gradient(#000 var(--rail-sweep),transparent 0);-webkit-mask:conic-gradient(#000 var(--rail-sweep),transparent 0);animation:rail-sweep .48s var(--rail-ease) both}
 #object-detail[data-rail-swap=soft] *,#object-detail[data-rail-swap=soft]>*{animation:none}
-#build-results .build-item,#game-results .game-match-compact,#catalog-results .catalog-roster-groups>section,#catalog-results .catalog-family-list>.catalog-family{animation:rail-slide .28s var(--rail-ease) both;animation-delay:calc(var(--rail-i,0)*45ms)}
-#build-results .build-item:nth-child(2),#game-results .game-match-compact:nth-child(2),#catalog-results .catalog-roster-groups>section:nth-child(2),#catalog-results .catalog-family-list>.catalog-family:nth-child(2){--rail-i:1}
-#build-results .build-item:nth-child(3),#game-results .game-match-compact:nth-child(3),#catalog-results .catalog-roster-groups>section:nth-child(3),#catalog-results .catalog-family-list>.catalog-family:nth-child(3){--rail-i:2}
-#build-results .build-item:nth-child(4),#game-results .game-match-compact:nth-child(4),#catalog-results .catalog-roster-groups>section:nth-child(4),#catalog-results .catalog-family-list>.catalog-family:nth-child(4){--rail-i:3}
-#build-results .build-item:nth-child(5),#game-results .game-match-compact:nth-child(5),#catalog-results .catalog-roster-groups>section:nth-child(5),#catalog-results .catalog-family-list>.catalog-family:nth-child(5){--rail-i:4}
-#build-results .build-item:nth-child(6),#game-results .game-match-compact:nth-child(6),#catalog-results .catalog-roster-groups>section:nth-child(6),#catalog-results .catalog-family-list>.catalog-family:nth-child(6){--rail-i:5}
-#build-results .build-item:nth-child(7),#game-results .game-match-compact:nth-child(7),#catalog-results .catalog-roster-groups>section:nth-child(7),#catalog-results .catalog-family-list>.catalog-family:nth-child(7){--rail-i:6}
-#build-results .build-item:nth-child(8),#game-results .game-match-compact:nth-child(8),#catalog-results .catalog-roster-groups>section:nth-child(8),#catalog-results .catalog-family-list>.catalog-family:nth-child(8){--rail-i:7}
-#build-results .build-item:nth-child(n+9),#game-results .game-match-compact:nth-child(n+9),#catalog-results .catalog-roster-groups>section:nth-child(n+9),#catalog-results .catalog-family-list>.catalog-family:nth-child(n+9){--rail-i:8}
+#build-results .build-item,#game-results .game-match-compact,#catalog-results .catalog-roster-groups>section,#catalog-results .masonry-col>section,#catalog-results .catalog-family-list>.catalog-family,
+#draft-results .build-item{animation:rail-slide .28s var(--rail-ease) both;animation-delay:calc(var(--rail-i,0)*45ms)}
+#build-results .build-item:nth-child(2),#game-results .game-match-compact:nth-child(2),#catalog-results .catalog-roster-groups>section:nth-child(2),#catalog-results .catalog-family-list>.catalog-family:nth-child(2),
+#draft-results .build-item:nth-child(2){--rail-i:1}
+#build-results .build-item:nth-child(3),#game-results .game-match-compact:nth-child(3),#catalog-results .catalog-roster-groups>section:nth-child(3),#catalog-results .catalog-family-list>.catalog-family:nth-child(3),
+#draft-results .build-item:nth-child(3){--rail-i:2}
+#build-results .build-item:nth-child(4),#game-results .game-match-compact:nth-child(4),#catalog-results .catalog-roster-groups>section:nth-child(4),#catalog-results .catalog-family-list>.catalog-family:nth-child(4),
+#draft-results .build-item:nth-child(4){--rail-i:3}
+#build-results .build-item:nth-child(5),#game-results .game-match-compact:nth-child(5),#catalog-results .catalog-roster-groups>section:nth-child(5),#catalog-results .catalog-family-list>.catalog-family:nth-child(5),
+#draft-results .build-item:nth-child(5){--rail-i:4}
+#build-results .build-item:nth-child(6),#game-results .game-match-compact:nth-child(6),#catalog-results .catalog-roster-groups>section:nth-child(6),#catalog-results .catalog-family-list>.catalog-family:nth-child(6),
+#draft-results .build-item:nth-child(6){--rail-i:5}
+#build-results .build-item:nth-child(7),#game-results .game-match-compact:nth-child(7),#catalog-results .catalog-roster-groups>section:nth-child(7),#catalog-results .catalog-family-list>.catalog-family:nth-child(7),
+#draft-results .build-item:nth-child(7){--rail-i:6}
+#build-results .build-item:nth-child(8),#game-results .game-match-compact:nth-child(8),#catalog-results .catalog-roster-groups>section:nth-child(8),#catalog-results .catalog-family-list>.catalog-family:nth-child(8),
+#draft-results .build-item:nth-child(8){--rail-i:7}
+#build-results .build-item:nth-child(n+9),#game-results .game-match-compact:nth-child(n+9),#catalog-results .catalog-roster-groups>section:nth-child(n+9),#catalog-results .catalog-family-list>.catalog-family:nth-child(n+9),
+#draft-results .build-item:nth-child(n+9){--rail-i:8}
 }

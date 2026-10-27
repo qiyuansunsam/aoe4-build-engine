@@ -1,0 +1,823 @@
+{
+ "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": -1036163.6,
+ "build": {
+  "id": "vikings-longhouse-boom",
+  "title": "Vikings two-TC Longhouse boom",
+  "summary": "Two Town Centers and fourteen Longhouses, the first six with Bee Skeps: the soonest 200 population (villagers and army) reached in Feudal or Castle Age with all fourteen Longhouses standing, the Gull铆nn Temple started only once population is 150, then the soonest Imperial Age with every upgrade of the infantry it trains. Baugr Fort, Gull铆nn Temple; army, villager target and timings come from the engine search.",
+  "civilization": "vikings",
+  "engine": "civ",
+  "patch": "17.0-preview",
+  "objective": {
+   "kind": "pop200",
+   "t": 900,
+   "slack": 30
+  },
+  "lineNames": "Bondi and Berserker",
+  "result": {
+   "done": 1636,
+   "at": 900,
+   "army": 87,
+   "armyValue": 9345,
+   "villagers": 61,
+   "population": 155,
+   "age": 2,
+   "ages": [
+    488,
+    957,
+    1124
+   ],
+   "firstUnit": 503,
+   "pop200": 1036,
+   "pop200Age": "Castle Age",
+   "gullinnStart": 897,
+   "gullinnStartPop": 150,
+   "atPop200": {
+    "longhouses": 14,
+    "villagers": 73,
+    "army": 127
+   },
+   "longhouses": 14,
+   "attachments": {
+    "bee": 6,
+    "farm": 6,
+    "smithy": 1,
+    "loom": 1
+   },
+   "villagerCapacity": 150,
+   "sagas": [
+    "ulfr",
+    "falkr",
+    "dreki",
+    "jofurr"
+   ],
+   "groveBerserkers": 1
+  },
+  "planId": "vikings-longhouse-boom",
+  "lines": [
+   "bondi",
+   "berserker"
+  ],
+  "extraTCs": {
+   "2": 1,
+   "3": 0
+  },
+  "landmarks": {
+   "2": "baugr-fort",
+   "3": "gullinn-temple",
+   "4": "rikets-nyckel-castle"
+  },
+  "mech": {
+   "gullinnMinPop": 150,
+   "groves": 0,
+   "kongensLonghouses": 0,
+   "callMaidens": false,
+   "lh": {
+    "1": 5,
+    "2": 5,
+    "3": 4,
+    "4": 0
+   },
+   "attach": [
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "smithy",
+    "loom",
+    "farm",
+    "farm",
+    "farm",
+    "farm",
+    "farm",
+    "farm"
+   ],
+   "lhLead": 99,
+   "lhBuilders": 1,
+   "longhouseBondi": false,
+   "openWood": true,
+   "reserveWood": false
+  },
+  "vilTarget": 145,
+  "lmBuilders": {
+   "2": 2,
+   "3": 9,
+   "4": 10
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 3,
+   "3": 6,
+   "4": 3
+  },
+  "maxProducers": 6,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1__vikings",
+    "upgrade_econ_villager_hunting_gear_1__vikings"
+   ],
+   "2": "all",
+   "3": [],
+   "4": "all"
+  },
+  "milTechAge": {
+   "2": true,
+   "3": false
+  },
+  "blacksmiths": 0,
+  "pauseForAge": true,
+  "window": 6,
+  "woodFloor": 0.25,
+  "goldBias": 0.6,
+  "armyAge": 2,
+  "pauseFrom": {
+   "3": 1200,
+   "4": null
+  }
+ },
+ "ledger": {
+  "id": "vikings-longhouse-boom",
+  "evaluations": 5786,
+  "seconds": 310,
+  "seed": 11,
+  "objective": {
+   "kind": "pop200",
+   "t": 900,
+   "slack": 30
+  },
+  "best": {
+   "done": 1636,
+   "at": 900,
+   "army": 87,
+   "armyValue": 9345,
+   "villagers": 61,
+   "population": 155,
+   "age": 2,
+   "ages": [
+    488,
+    957,
+    1124
+   ],
+   "firstUnit": 503,
+   "pop200": 1036,
+   "pop200Age": "Castle Age",
+   "gullinnStart": 897,
+   "gullinnStartPop": 150,
+   "atPop200": {
+    "longhouses": 14,
+    "villagers": 73,
+    "army": 127
+   },
+   "longhouses": 14,
+   "attachments": {
+    "bee": 6,
+    "farm": 6,
+    "smithy": 1,
+    "loom": 1
+   },
+   "villagerCapacity": 150,
+   "sagas": [
+    "ulfr",
+    "falkr",
+    "dreki",
+    "jofurr"
+   ],
+   "groveBerserkers": 1
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom",
+     "lines": [
+      "bondi",
+      "berserker"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 5,
+       "2": 5,
+       "3": 4,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "farm",
+       "farm",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 99,
+      "lhBuilders": 1,
+      "longhouseBondi": false,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 145,
+     "lmBuilders": {
+      "2": 2,
+      "3": 10,
+      "4": 10
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 5,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings"
+      ],
+      "2": "all",
+      "3": [],
+      "4": "all"
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.3,
+     "goldBias": 0.8,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 1200,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 1655,
+     "at": 900,
+     "army": 88,
+     "armyValue": 9460,
+     "villagers": 61,
+     "population": 155,
+     "age": 2,
+     "ages": [
+      477,
+      949,
+      1119
+     ],
+     "firstUnit": 492,
+     "pop200": 1034,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 894,
+     "gullinnStartPop": 151,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 74,
+      "army": 126
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "ulfr",
+      "falkr",
+      "dreki",
+      "jofurr"
+     ],
+     "groveBerserkers": 1
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom",
+     "lines": [
+      "bondi",
+      "berserker"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 5,
+       "2": 5,
+       "3": 4,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "farm",
+       "farm",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 99,
+      "lhBuilders": 1,
+      "longhouseBondi": false,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 145,
+     "lmBuilders": {
+      "2": 2,
+      "3": 10,
+      "4": 10
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 6,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings"
+      ],
+      "2": "all",
+      "3": [],
+      "4": "all"
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.3,
+     "goldBias": 0.8,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 1200,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 1655,
+     "at": 900,
+     "army": 88,
+     "armyValue": 9460,
+     "villagers": 61,
+     "population": 155,
+     "age": 2,
+     "ages": [
+      477,
+      949,
+      1122
+     ],
+     "firstUnit": 492,
+     "pop200": 1034,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 894,
+     "gullinnStartPop": 151,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 74,
+      "army": 126
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "ulfr",
+      "falkr",
+      "dreki",
+      "jofurr"
+     ],
+     "groveBerserkers": 1
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom",
+     "lines": [
+      "bondi",
+      "berserker"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 5,
+       "2": 5,
+       "3": 4,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "farm",
+       "farm",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 99,
+      "lhBuilders": 1,
+      "longhouseBondi": false,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 145,
+     "lmBuilders": {
+      "2": 2,
+      "3": 10,
+      "4": 10
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 7,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings"
+      ],
+      "2": "all",
+      "3": [],
+      "4": "all"
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.3,
+     "goldBias": 0.8,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 1200,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 1655,
+     "at": 900,
+     "army": 88,
+     "armyValue": 9460,
+     "villagers": 61,
+     "population": 155,
+     "age": 2,
+     "ages": [
+      477,
+      949,
+      1125
+     ],
+     "firstUnit": 492,
+     "pop200": 1034,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 894,
+     "gullinnStartPop": 151,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 74,
+      "army": 126
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "ulfr",
+      "falkr",
+      "dreki",
+      "jofurr"
+     ],
+     "groveBerserkers": 1
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom",
+     "lines": [
+      "bondi",
+      "berserker"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 5,
+       "2": 5,
+       "3": 4,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "farm",
+       "farm",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 99,
+      "lhBuilders": 1,
+      "longhouseBondi": false,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 145,
+     "lmBuilders": {
+      "2": 2,
+      "3": 10,
+      "4": 10
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 8,
+      "4": 3
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings"
+      ],
+      "2": "all",
+      "3": [],
+      "4": "all"
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.3,
+     "goldBias": 0.8,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 1200,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 1655,
+     "at": 900,
+     "army": 88,
+     "armyValue": 9460,
+     "villagers": 61,
+     "population": 155,
+     "age": 2,
+     "ages": [
+      477,
+      949,
+      1128
+     ],
+     "firstUnit": 492,
+     "pop200": 1034,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 894,
+     "gullinnStartPop": 151,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 74,
+      "army": 126
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "ulfr",
+      "falkr",
+      "dreki",
+      "jofurr"
+     ],
+     "groveBerserkers": 1
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom",
+     "lines": [
+      "bondi",
+      "berserker"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "rikets-nyckel-castle"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 5,
+       "2": 5,
+       "3": 4,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "farm",
+       "farm",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 99,
+      "lhBuilders": 1,
+      "longhouseBondi": false,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 145,
+     "lmBuilders": {
+      "2": 2,
+      "3": 10,
+      "4": 10
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 5,
+      "4": 2
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__vikings"
+      ],
+      "2": "all",
+      "3": [],
+      "4": "all"
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.3,
+     "goldBias": 0.8,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 1200,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 1655,
+     "at": 900,
+     "army": 88,
+     "armyValue": 9460,
+     "villagers": 61,
+     "population": 155,
+     "age": 2,
+     "ages": [
+      477,
+      949,
+      1119
+     ],
+     "firstUnit": 492,
+     "pop200": 1034,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 894,
+     "gullinnStartPop": 151,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 74,
+      "army": 126
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "ulfr",
+      "falkr",
+      "dreki",
+      "jofurr"
+     ],
+     "groveBerserkers": 1
+    }
+   }
+  ]
+ }
+}

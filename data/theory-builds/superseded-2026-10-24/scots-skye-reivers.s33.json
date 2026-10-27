@@ -1,0 +1,891 @@
+{
+ "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": -1167994.45,
+ "build": {
+  "id": "scots-skye-reivers",
+  "title": "Scots two Town Centers, Tower of Skye, mass Border Reivers",
+  "summary": "The fastest 200 population with every Border Reiver upgrade from two Town Centers (one extra, Feudal or Castle Age), the Tower of Skye in Castle Age and one Muster Border Reivers, with at most 120 villagers so the rest of the 200 is Border Reivers; the Feudal and Imperial landmarks, the muster timing, Highland Cattle, Tower Houses, Archery Ranges and every other timing come from the engine search.",
+  "civilization": "scots",
+  "engine": "civ",
+  "patch": "17.0-preview",
+  "objective": {
+   "kind": "done"
+  },
+  "lineNames": "Border Reiver",
+  "result": {
+   "done": 1168,
+   "at": 900,
+   "army": 37,
+   "armyValue": 5550,
+   "villagers": 71,
+   "population": 112,
+   "age": 4,
+   "ages": [
+    313,
+    604,
+    766
+   ],
+   "firstUnit": 790,
+   "castle": 604,
+   "imperial": 766,
+   "muster": [
+    {
+     "key": "reivers",
+     "name": "Muster Border Reivers",
+     "start": 783,
+     "units": 21,
+     "food": 1350,
+     "tier": 0,
+     "lookout": true,
+     "actionDone": 788,
+     "allOut": 830
+    }
+   ],
+   "cattlePeak": 17,
+   "hallTier": 1,
+   "armyAt": {
+    "900": {
+     "villagers": 71,
+     "army": 37,
+     "byLine": {
+      "border-reiver": 37
+     },
+     "pop": 112
+    },
+    "1200": {
+     "villagers": 97,
+     "army": 102,
+     "byLine": {
+      "border-reiver": 102
+     },
+     "pop": 200
+    },
+    "1500": {
+     "villagers": 97,
+     "army": 102,
+     "byLine": {
+      "border-reiver": 102
+     },
+     "pop": 200
+    }
+   }
+  },
+  "planId": "scots-skye-reivers",
+  "lines": [
+   "border-reiver"
+  ],
+  "landmarks": {
+   "2": "abbey-of-the-isles",
+   "3": "tower-of-skye",
+   "4": "three-loch-lookout"
+  },
+  "armyAge": 4,
+  "extraTCs": {
+   "2": 1,
+   "3": 0
+  },
+  "vilTarget": 100,
+  "mech": {
+   "musters": [
+    "reivers"
+   ],
+   "kirkmen": 0,
+   "fishponds": 0,
+   "towerHouses": {
+    "1": 0,
+    "2": 1,
+    "3": 0
+   },
+   "cattle": {
+    "1": 1,
+    "2": 13,
+    "3": 13,
+    "4": 17
+   },
+   "cattleFrom": 0,
+   "hallAge": 3,
+   "musterAge": {
+    "reivers": 4
+   }
+  },
+  "lmBuilders": {
+   "2": 3,
+   "3": 10,
+   "4": 11
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 4,
+   "3": 1,
+   "4": 2
+  },
+  "maxProducers": 8,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1__scots"
+   ],
+   "2": [
+    "upgrade_econ_resource_food_harvest_rate_2__scots",
+    "upgrade_econ_resource_wood_harvest_rate_2__scots",
+    "upgrade_econ_resource_gold_harvest_rate_2__scots",
+    "upgrade_lowland_and_highland_tier2_sco"
+   ],
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": false,
+   "3": false
+  },
+  "blacksmiths": 0,
+  "pauseForAge": true,
+  "window": 3,
+  "woodFloor": 0.3,
+  "goldBias": 1.6
+ },
+ "ledger": {
+  "id": "scots-skye-reivers",
+  "evaluations": 3774,
+  "seconds": 75,
+  "seed": 33,
+  "objective": {
+   "kind": "done"
+  },
+  "best": {
+   "done": 1168,
+   "at": 900,
+   "army": 37,
+   "armyValue": 5550,
+   "villagers": 71,
+   "population": 112,
+   "age": 4,
+   "ages": [
+    313,
+    604,
+    766
+   ],
+   "firstUnit": 790,
+   "castle": 604,
+   "imperial": 766,
+   "muster": [
+    {
+     "key": "reivers",
+     "name": "Muster Border Reivers",
+     "start": 783,
+     "units": 21,
+     "food": 1350,
+     "tier": 0,
+     "lookout": true,
+     "actionDone": 788,
+     "allOut": 830
+    }
+   ],
+   "cattlePeak": 17,
+   "hallTier": 1,
+   "armyAt": {
+    "900": {
+     "villagers": 71,
+     "army": 37,
+     "byLine": {
+      "border-reiver": 37
+     },
+     "pop": 112
+    },
+    "1200": {
+     "villagers": 97,
+     "army": 102,
+     "byLine": {
+      "border-reiver": 102
+     },
+     "pop": 200
+    },
+    "1500": {
+     "villagers": 97,
+     "army": 102,
+     "byLine": {
+      "border-reiver": 102
+     },
+     "pop": 200
+    }
+   }
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "planId": "scots-skye-reivers",
+     "lines": [
+      "border-reiver"
+     ],
+     "landmarks": {
+      "2": "abbey-of-the-isles",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "armyAge": 4,
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "vilTarget": 100,
+     "mech": {
+      "musters": [
+       "reivers"
+      ],
+      "kirkmen": 0,
+      "fishponds": 0,
+      "towerHouses": {
+       "1": 0,
+       "2": 1,
+       "3": 0
+      },
+      "cattle": {
+       "1": 1,
+       "2": 13,
+       "3": 13,
+       "4": 17
+      },
+      "cattleFrom": 60,
+      "hallAge": 3,
+      "musterAge": {
+       "reivers": 4
+      }
+     },
+     "lmBuilders": {
+      "2": 3,
+      "3": 10,
+      "4": 11
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 8,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__scots"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__scots",
+       "upgrade_econ_resource_wood_harvest_rate_2__scots",
+       "upgrade_econ_resource_gold_harvest_rate_2__scots",
+       "upgrade_lowland_and_highland_tier2_sco"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.6
+    },
+    "result": {
+     "done": 1168,
+     "at": 900,
+     "army": 37,
+     "armyValue": 5550,
+     "villagers": 71,
+     "population": 112,
+     "age": 4,
+     "ages": [
+      313,
+      604,
+      766
+     ],
+     "firstUnit": 790,
+     "castle": 604,
+     "imperial": 766,
+     "muster": [
+      {
+       "key": "reivers",
+       "name": "Muster Border Reivers",
+       "start": 783,
+       "units": 21,
+       "food": 1350,
+       "tier": 0,
+       "lookout": true,
+       "actionDone": 788,
+       "allOut": 830
+      }
+     ],
+     "cattlePeak": 17,
+     "hallTier": 1,
+     "armyAt": {
+      "900": {
+       "villagers": 71,
+       "army": 37,
+       "byLine": {
+        "border-reiver": 37
+       },
+       "pop": 112
+      },
+      "1200": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "scots-skye-reivers",
+     "lines": [
+      "border-reiver"
+     ],
+     "landmarks": {
+      "2": "abbey-of-the-isles",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "armyAge": 4,
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "vilTarget": 100,
+     "mech": {
+      "musters": [
+       "reivers"
+      ],
+      "kirkmen": 0,
+      "fishponds": 0,
+      "towerHouses": {
+       "1": 0,
+       "2": 1,
+       "3": 0
+      },
+      "cattle": {
+       "1": 1,
+       "2": 13,
+       "3": 13,
+       "4": 17
+      },
+      "cattleFrom": 120,
+      "hallAge": 3,
+      "musterAge": {
+       "reivers": 4
+      }
+     },
+     "lmBuilders": {
+      "2": 3,
+      "3": 10,
+      "4": 11
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 8,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__scots"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__scots",
+       "upgrade_econ_resource_wood_harvest_rate_2__scots",
+       "upgrade_econ_resource_gold_harvest_rate_2__scots",
+       "upgrade_lowland_and_highland_tier2_sco"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.6
+    },
+    "result": {
+     "done": 1168,
+     "at": 900,
+     "army": 37,
+     "armyValue": 5550,
+     "villagers": 71,
+     "population": 112,
+     "age": 4,
+     "ages": [
+      313,
+      604,
+      766
+     ],
+     "firstUnit": 790,
+     "castle": 604,
+     "imperial": 766,
+     "muster": [
+      {
+       "key": "reivers",
+       "name": "Muster Border Reivers",
+       "start": 783,
+       "units": 21,
+       "food": 1350,
+       "tier": 0,
+       "lookout": true,
+       "actionDone": 788,
+       "allOut": 830
+      }
+     ],
+     "cattlePeak": 17,
+     "hallTier": 1,
+     "armyAt": {
+      "900": {
+       "villagers": 71,
+       "army": 37,
+       "byLine": {
+        "border-reiver": 37
+       },
+       "pop": 112
+      },
+      "1200": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "scots-skye-reivers",
+     "lines": [
+      "border-reiver"
+     ],
+     "landmarks": {
+      "2": "abbey-of-the-isles",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "armyAge": 4,
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "vilTarget": 100,
+     "mech": {
+      "musters": [
+       "reivers"
+      ],
+      "kirkmen": 0,
+      "fishponds": 0,
+      "towerHouses": {
+       "1": 0,
+       "2": 1,
+       "3": 0
+      },
+      "cattle": {
+       "1": 1,
+       "2": 13,
+       "3": 13,
+       "4": 17
+      },
+      "cattleFrom": 240,
+      "hallAge": 3,
+      "musterAge": {
+       "reivers": 4
+      }
+     },
+     "lmBuilders": {
+      "2": 3,
+      "3": 10,
+      "4": 11
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 8,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__scots"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__scots",
+       "upgrade_econ_resource_wood_harvest_rate_2__scots",
+       "upgrade_econ_resource_gold_harvest_rate_2__scots",
+       "upgrade_lowland_and_highland_tier2_sco"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.6
+    },
+    "result": {
+     "done": 1168,
+     "at": 900,
+     "army": 37,
+     "armyValue": 5550,
+     "villagers": 71,
+     "population": 112,
+     "age": 4,
+     "ages": [
+      313,
+      604,
+      766
+     ],
+     "firstUnit": 790,
+     "castle": 604,
+     "imperial": 766,
+     "muster": [
+      {
+       "key": "reivers",
+       "name": "Muster Border Reivers",
+       "start": 783,
+       "units": 21,
+       "food": 1350,
+       "tier": 0,
+       "lookout": true,
+       "actionDone": 788,
+       "allOut": 830
+      }
+     ],
+     "cattlePeak": 17,
+     "hallTier": 1,
+     "armyAt": {
+      "900": {
+       "villagers": 71,
+       "army": 37,
+       "byLine": {
+        "border-reiver": 37
+       },
+       "pop": 112
+      },
+      "1200": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "scots-skye-reivers",
+     "lines": [
+      "border-reiver"
+     ],
+     "landmarks": {
+      "2": "abbey-of-the-isles",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "armyAge": 4,
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "vilTarget": 105,
+     "mech": {
+      "musters": [
+       "reivers"
+      ],
+      "kirkmen": 0,
+      "fishponds": 0,
+      "towerHouses": {
+       "1": 0,
+       "2": 1,
+       "3": 0
+      },
+      "cattle": {
+       "1": 1,
+       "2": 13,
+       "3": 13,
+       "4": 17
+      },
+      "cattleFrom": 0,
+      "hallAge": 3,
+      "musterAge": {
+       "reivers": 4
+      }
+     },
+     "lmBuilders": {
+      "2": 3,
+      "3": 10,
+      "4": 11
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 8,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__scots"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__scots",
+       "upgrade_econ_resource_wood_harvest_rate_2__scots",
+       "upgrade_econ_resource_gold_harvest_rate_2__scots",
+       "upgrade_lowland_and_highland_tier2_sco"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.6
+    },
+    "result": {
+     "done": 1168,
+     "at": 900,
+     "army": 37,
+     "armyValue": 5550,
+     "villagers": 71,
+     "population": 112,
+     "age": 4,
+     "ages": [
+      313,
+      604,
+      766
+     ],
+     "firstUnit": 790,
+     "castle": 604,
+     "imperial": 766,
+     "muster": [
+      {
+       "key": "reivers",
+       "name": "Muster Border Reivers",
+       "start": 783,
+       "units": 21,
+       "food": 1350,
+       "tier": 0,
+       "lookout": true,
+       "actionDone": 788,
+       "allOut": 830
+      }
+     ],
+     "cattlePeak": 17,
+     "hallTier": 1,
+     "armyAt": {
+      "900": {
+       "villagers": 71,
+       "army": 37,
+       "byLine": {
+        "border-reiver": 37
+       },
+       "pop": 112
+      },
+      "1200": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      }
+     }
+    }
+   },
+   {
+    "params": {
+     "planId": "scots-skye-reivers",
+     "lines": [
+      "border-reiver"
+     ],
+     "landmarks": {
+      "2": "abbey-of-the-isles",
+      "3": "tower-of-skye",
+      "4": "three-loch-lookout"
+     },
+     "armyAge": 4,
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "vilTarget": 110,
+     "mech": {
+      "musters": [
+       "reivers"
+      ],
+      "kirkmen": 0,
+      "fishponds": 0,
+      "towerHouses": {
+       "1": 0,
+       "2": 1,
+       "3": 0
+      },
+      "cattle": {
+       "1": 1,
+       "2": 13,
+       "3": 13,
+       "4": 17
+      },
+      "cattleFrom": 0,
+      "hallAge": 3,
+      "musterAge": {
+       "reivers": 4
+      }
+     },
+     "lmBuilders": {
+      "2": 3,
+      "3": 10,
+      "4": 11
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 8,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1__scots"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2__scots",
+       "upgrade_econ_resource_wood_harvest_rate_2__scots",
+       "upgrade_econ_resource_gold_harvest_rate_2__scots",
+       "upgrade_lowland_and_highland_tier2_sco"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.6
+    },
+    "result": {
+     "done": 1168,
+     "at": 900,
+     "army": 37,
+     "armyValue": 5550,
+     "villagers": 71,
+     "population": 112,
+     "age": 4,
+     "ages": [
+      313,
+      604,
+      766
+     ],
+     "firstUnit": 790,
+     "castle": 604,
+     "imperial": 766,
+     "muster": [
+      {
+       "key": "reivers",
+       "name": "Muster Border Reivers",
+       "start": 783,
+       "units": 21,
+       "food": 1350,
+       "tier": 0,
+       "lookout": true,
+       "actionDone": 788,
+       "allOut": 830
+      }
+     ],
+     "cattlePeak": 17,
+     "hallTier": 1,
+     "armyAt": {
+      "900": {
+       "villagers": 71,
+       "army": 37,
+       "byLine": {
+        "border-reiver": 37
+       },
+       "pop": 112
+      },
+      "1200": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      },
+      "1500": {
+       "villagers": 97,
+       "army": 102,
+       "byLine": {
+        "border-reiver": 102
+       },
+       "pop": 200
+      }
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "method": "Polish: threshold 18 (best army measure over 10 searches minus slack 1); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish.",
+ "score": -1496.982,
+ "build": {
+  "id": "french-knights-10",
+  "title": "Royal Knights by 10:00",
+  "summary": "Royal Knights by 10:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Royal Knight upgrade.",
+  "civilization": "french",
+  "engine": "civ",
+  "patch": "16.3.11308",
+  "reference": {
+   "buildId": "french-observed-4v4"
+  },
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 600,
+   "slack": 1
+  },
+  "lineNames": "Royal Knight",
+  "result": {
+   "done": 1497,
+   "at": 600,
+   "line": 18,
+   "army": 18,
+   "armyValue": 4320,
+   "villagers": 28,
+   "population": 49,
+   "age": 2,
+   "ages": [
+    266,
+    815,
+    1218
+   ]
+  },
+  "lines": [
+   "royal-knight"
+  ],
+  "vilTarget": 25,
+  "landmarks": {
+   "2": "school-of-cavalry",
+   "3": "royal-institute",
+   "4": "red-palace"
+  },
+  "lmBuilders": {
+   "2": 7,
+   "3": 12,
+   "4": 6
+  },
+  "extraTCs": {
+   "2": 0,
+   "3": 2
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 3,
+   "3": 1,
+   "4": 6
+  },
+  "maxProducers": 12,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1"
+   ],
+   "2": "all",
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": true,
+   "3": true
+  },
+  "blacksmiths": 2,
+  "pauseForAge": true,
+  "window": 4,
+  "woodFloor": 0.25,
+  "goldBias": 1.4,
+  "armyAge": 2,
+  "pauseFrom": {
+   "3": 600,
+   "4": 900
+  },
+  "vilTarget2": 140,
+  "vilTarget2At": 540
+ },
+ "ledger": {
+  "id": "french-knights-10",
+  "evaluations": 5570,
+  "seconds": 181,
+  "seed": 20261024,
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 600,
+   "slack": 1
+  },
+  "threshold": 18,
+  "best": {
+   "done": 1497,
+   "at": 600,
+   "line": 18,
+   "army": 18,
+   "armyValue": 4320,
+   "villagers": 28,
+   "population": 49,
+   "age": 2,
+   "ages": [
+    266,
+    815,
+    1218
+   ]
+  },
+  "runnersUp": []
+ }
+}

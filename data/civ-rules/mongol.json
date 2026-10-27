@@ -1,0 +1,4833 @@
+{
+ "civ": "mongol",
+ "catalogCiv": "mongol",
+ "patch": "16.3.11308",
+ "start": {
+  "villagers": 6,
+  "resources": {
+   "food": 200,
+   "wood": 150,
+   "gold": 100,
+   "stone": 0
+  },
+  "popCap": 200,
+  "units": [
+   {
+    "id": "unit_khan_1_mon",
+    "name": "Khan",
+    "count": 1,
+    "pop": 1,
+    "pbgid": 129651
+   },
+   {
+    "id": "building_house_moving_mon",
+    "name": "Ger (packed; unpack before it is a drop-off)",
+    "count": 1,
+    "pop": 0,
+    "pbgid": 168325
+   },
+   {
+    "id": "gaia_herdable_sheep",
+    "name": "Sheep (gaia, herdable, 200 food each)",
+    "count": 5,
+    "pop": 0
+   }
+  ],
+  "buildings": [
+   {
+    "id": "building_town_center_capital_mon",
+    "name": "Town Center (capital; spawns packed as building_town_center_capital_moving_mon and is deployed by the start state tree)",
+    "count": 1,
+    "pbgid": 173907
+   }
+  ],
+  "evidence": [
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/resource_starting_amount/food",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/resource_starting_amount/wood",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/resource_starting_amount/gold",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/resource_starting_amount/stone",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/race_population_cap_table/base_personnel_cap",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/race_population_cap_table/max_personnel_cap",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[0]/$PBGNAME (unit_khan_1_mon; no Scout in the list)",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[1]/$PBGNAME (building_town_center_capital_moving_mon)",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[2]/$PBGNAME (building_house_moving_mon)",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[3]/$PBGNAME .. squad[8] (6 x unit_villager_1_mon)",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[9]/$PBGNAME .. squad[13] (5 gaia herdable sheep)",
+   "raw:ebps/gaia/animals/gaia_herdable_sheep.rgd#default/resource_deposit_ext/initial_amount (200; same in _black/_brown)",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/start_actions_statetree (civ_start\\Mongols state tree, not decoded)",
+   "raw:army/standard_mode/normal_english.rgd#default/army_bag/race_population_cap_table/base_personnel_cap (0 for English: confirms the Mongol 200 base is the civilization bonus)"
+  ]
+ },
+ "villager": {
+  "id": "unit_villager_1_mon",
+  "pbgid": 129272,
+  "cost": {
+   "food": 50
+  },
+  "trainSeconds": 20,
+  "pop": 1,
+  "speedEngineUnits": 4.5,
+  "gather": {
+   "sheep": {
+    "rate": 0.75,
+    "carry": 10,
+    "subType": "herded_animal",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[2]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[2]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[2]/resource_sub_type/$PBGNAME"
+    ],
+    "notes": "herded_animal: starting gaia sheep and Pasture sheep (both herded_animal subtype, 200 food)."
+   },
+   "pasture_sheep": {
+    "rate": 0.75,
+    "carry": 10,
+    "subType": "herded_animal",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[2]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[2]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[2]/resource_sub_type/$PBGNAME"
+    ],
+    "notes": "Pasture sheep (gaia_herdable_sheep_mon) are herded_animal deposits, so they use the herded_animal slot; the separate gather_pasture slot (gather_target[11]) has no Mongol target found in the records."
+   },
+   "berries": {
+    "rate": 0.69,
+    "carry": 10,
+    "subType": "forage_bush",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[9]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[9]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[9]/resource_sub_type/$PBGNAME"
+    ]
+   },
+   "deer": {
+    "rate": 0.825,
+    "carry": 25,
+    "subType": "hunted_animal_flee",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[4]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[4]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[4]/resource_sub_type/$PBGNAME"
+    ]
+   },
+   "boar": {
+    "rate": 0.9,
+    "carry": 25,
+    "subType": "hunted_animal_danger",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[3]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[3]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[3]/resource_sub_type/$PBGNAME"
+    ]
+   },
+   "farm": {
+    "rate": 0.75,
+    "carry": 10,
+    "subType": "farm",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[1]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[1]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[1]/resource_sub_type/$PBGNAME"
+    ],
+    "notes": "Slot exists but Mongols have no Farm: racebps blueprint_archetypes.farm is empty and vps_farm is building_pasture_mon."
+   },
+   "wood": {
+    "rate": 0.75,
+    "carry": 10,
+    "subType": "tree",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[0]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[0]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[0]/resource_sub_type/$PBGNAME"
+    ]
+   },
+   "gold": {
+    "rate": 0.75,
+    "carry": 10,
+    "subType": "gold",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[7]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[7]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[7]/resource_sub_type/$PBGNAME"
+    ]
+   },
+   "stone": {
+    "rate": 0,
+    "carry": 0,
+    "subType": null,
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[6]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[6]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[6]/resource_sub_type/$PBGNAME"
+    ],
+    "notes": "Mongol villagers cannot gather stone: the stone slot (gather_target[6]) is blanked (no sub type, rate 0, carry 0) and the villager carries ability villager_cannot_mine_stone_mon. Stone comes from Ovoos, the White Stupa, Stone Bounty and Stone Commerce."
+   },
+   "fish": {
+    "rate": 1,
+    "carry": 10,
+    "subType": "fish",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[8]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[8]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[8]/resource_sub_type/$PBGNAME"
+    ]
+   },
+   "cattle": {
+    "rate": 0.66,
+    "carry": 10,
+    "subType": "cattle",
+    "evidence": [
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[10]/gather_rate",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[10]/resource_carry_capacity",
+     "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types/gather_target[10]/resource_sub_type/$PBGNAME"
+    ],
+    "notes": "No Mongol cattle source; slot inherited."
+   }
+  },
+  "evidence": [
+   "catalog:units/unit_villager_1_mon#cost",
+   "catalog:units/unit_villager_1_mon#trainTimeSeconds",
+   "catalog:units/unit_villager_1_mon#population",
+   "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/moving_ext/speed_scaling_table/default_speed",
+   "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/cost_ext/time_cost/time_seconds",
+   "raw:ebps/races/mongol/units/unit_villager_1_mon.json#default/resource_gatherer_ext/gather_types (12 slots read in order; slot [6] = stone blanked)",
+   "raw:abilities/always_on_abilities/mongol/villager_cannot_mine_stone_mon.rgd (ability present)",
+   "locale:11164707 (villager help text: Unable to gather Stone (build an Ovoo to gather Stone))"
+  ]
+ },
+ "townCenter": {
+  "id": "building_town_center_capital_mon",
+  "extraId": "building_town_center_mon",
+  "pbgid": 173907,
+  "extraPbgid": 129271,
+  "cost": {
+   "wood": 750
+  },
+  "buildSeconds": 150,
+  "extraRequiresAge": 2,
+  "popProvided": 0,
+  "villagerProductionMultiplierByAge": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 1
+  },
+  "dropoff": [
+   "food",
+   "wood",
+   "gold",
+   "stone"
+  ],
+  "notes": "cost/buildSeconds are the extra Town Center (building_town_center_mon: 750 wood, 150 s, Feudal Age via requirement_ext feudal_age OR fast_expand). The capital starts packed (building_town_center_capital_moving_mon) and is deployed by the civ_start\\Mongols state tree. Population comes from the 200 base cap, so a Town Center adds nothing usable. No Mongol villager-production multiplier was found in the TC, army or upgrade records; villagers train in the entity time (20 s). The TC also trains double villagers (unit_villager_1_double_mon) when inside Ovoo influence, see mechanics.double_production. Researches Textiles / Textiles (Improved).",
+  "evidence": [
+   "catalog:buildings/building_town_center_mon#cost",
+   "catalog:buildings/building_town_center_mon#buildTimeSeconds",
+   "raw:ebps/races/mongol/buildings/building_town_center_mon.json#default/requirement_ext/requirement_table/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name/$PBGNAME (feudal_age)",
+   "catalog:buildings/building_town_center_capital_mon#trainableUnits",
+   "raw:ebps/races/mongol/buildings/building_town_center_capital_mon.json#default/resource_drop_off_ext/accepted_resources/stone",
+   "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[1]/$PBGNAME"
+  ]
+ },
+ "buildings": {
+  "ger": {
+   "id": "building_house_mon",
+   "pbgid": 129843,
+   "name": "Ger",
+   "cost": {
+    "wood": 100
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [
+    "food",
+    "wood",
+    "gold"
+   ],
+   "limit": null,
+   "notes": "Mongol \"house\" archetype and also the lumber_camp and mill archetype (racebps). Drop-off for food, wood and gold; houses the economy technologies. Provides no usable population (Mongols start at the 200 cap). Packable: pack channel 10 s, unpack 8 s (statemodel). The game starts with one packed Ger.",
+   "evidence": [
+    "catalog:buildings/building_house_mon#cost",
+    "catalog:buildings/building_house_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_house_mon.json#default/requirement_ext (no age requirement: Dark Age)",
+    "raw:ebps/races/mongol/buildings/building_house_mon.json#default/resource_drop_off_ext/accepted_resources/{food,wood,gold,stone} -> ['food', 'wood', 'gold']",
+    "raw:statemodel_schema/buildings/civilizations/mongols/house_mon.rgd#default/schema_bag/int_properties/statemodel_int_property[1]/default",
+    "raw:racebps/mongol.json#default/race_bag/blueprint_archetypes/lumber_camp/$PBGNAME (also mill and house = building_house_mon)"
+   ]
+  },
+  "pasture": {
+   "id": "building_pasture_mon",
+   "pbgid": 168713,
+   "name": "Pasture",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 20,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Food building replacing Farms (racebps vps_farm). Spawns herdable sheep (herdable_sheep_mon, 200 food, herded_animal); not a drop-off itself. See mechanics.pasture.",
+   "evidence": [
+    "catalog:buildings/building_pasture_mon#cost",
+    "catalog:buildings/building_pasture_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_pasture_mon.json#default/requirement_ext (no age requirement: Dark Age)",
+    "raw:ebps/races/mongol/buildings/building_pasture_mon.json#default/spawner_ext/spawn_items/spawn_item/squad/$PBGNAME",
+    "raw:ebps/races/mongol/buildings/building_pasture_mon.json#default/type_ext/unit_type_list (no resource_drop_off type)"
+   ]
+  },
+  "ovoo": {
+   "id": "building_stone_deposit_ovoo_mon",
+   "pbgid": 168502,
+   "name": "Ovoo",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 15,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": 1,
+   "notes": "Must be placed on a stone outcrop (normal and _small variants: small deposits, footprint 6; _large: large deposits, footprint 8; same rates). Generates stone without villagers (see mechanics.ovoo_stone); constructing a new Ovoo destroys the prior one, hence limit 1. Source of Ovoo influence (district generator, range 8) that enables double production and Improved technologies. Hosts the Ovoo technologies.",
+   "evidence": [
+    "catalog:buildings/building_stone_deposit_ovoo_mon#cost",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_stone_deposit_ovoo_mon.json#default/requirement_ext (no age requirement: Dark Age)",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#descriptionTemplate",
+    "raw:ebps/races/mongol/buildings/building_stone_deposit_ovoo_mon.json#default/district_generator_ext/range_metres"
+   ]
+  },
+  "stable": {
+   "id": "building_unit_cavalry_mon",
+   "pbgid": 129993,
+   "name": "Stable",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Available in the Dark Age (no age requirement; civ bonus \"Stables available in the Dark Age\"). Trains Early Horseman/Horseman, Keshik, Scout and their double variants.",
+   "evidence": [
+    "catalog:buildings/building_unit_cavalry_mon#cost",
+    "catalog:buildings/building_unit_cavalry_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_unit_cavalry_mon.json#default/requirement_ext (no age requirement: Dark Age)",
+    "catalog:buildings/building_unit_cavalry_mon#trainableUnits"
+   ]
+  },
+  "barracks": {
+   "id": "building_unit_infantry_mon",
+   "pbgid": 130007,
+   "name": "Barracks",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Spearman / Man-at-Arms and double variants.",
+   "evidence": [
+    "catalog:buildings/building_unit_infantry_mon#cost",
+    "catalog:buildings/building_unit_infantry_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_unit_infantry_mon.json#default/requirement_ext (no age requirement: Dark Age)"
+   ]
+  },
+  "archery-range": {
+   "id": "building_unit_ranged_mon",
+   "pbgid": 129848,
+   "name": "Archery Range",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 30,
+   "age": 2,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trains Mangudai (horse archer) and, after Deer Stones, the Khan's Hunter, plus archers/crossbows/handcannons and double variants.",
+   "evidence": [
+    "catalog:buildings/building_unit_ranged_mon#cost",
+    "catalog:buildings/building_unit_ranged_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_unit_ranged_mon.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME (feudal_age)",
+    "catalog:buildings/building_unit_ranged_mon#trainableUnits"
+   ]
+  },
+  "blacksmith": {
+   "id": "building_tech_unit_infantry_mon",
+   "pbgid": 129991,
+   "name": "Blacksmith",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 25,
+   "age": 2,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Blacksmith (melee/ranged damage and armor tiers, Military Academy, Biology).",
+   "evidence": [
+    "catalog:buildings/building_tech_unit_infantry_mon#cost",
+    "catalog:buildings/building_tech_unit_infantry_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_tech_unit_infantry_mon.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME (feudal_age)"
+   ]
+  },
+  "market": {
+   "id": "building_econ_market_mon",
+   "pbgid": 129989,
+   "name": "Market",
+   "cost": {
+    "wood": 100
+   },
+   "buildSeconds": 20,
+   "age": 2,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Trader production; Stone Commerce. Mongols cannot buy or sell stone (allow_mongol_stone_market default false).",
+   "evidence": [
+    "catalog:buildings/building_econ_market_mon#cost",
+    "catalog:buildings/building_econ_market_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_econ_market_mon.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME (feudal_age)"
+   ]
+  },
+  "outpost": {
+   "id": "building_defense_outpost_mon",
+   "pbgid": 130795,
+   "name": "Outpost",
+   "cost": {
+    "wood": 100
+   },
+   "buildSeconds": 60,
+   "age": 1,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Yam aura: +15% move speed to nearby cavalry and Traders (mechanics.yam). Researches Yam Network.",
+   "evidence": [
+    "catalog:buildings/building_defense_outpost_mon#cost",
+    "catalog:buildings/building_defense_outpost_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_defense_outpost_mon.json#default/requirement_ext (no age requirement: Dark Age)",
+    "raw:ebps/races/mongol/buildings/building_defense_outpost_mon.json#default/requirement_ext (only a rogue-mode bedrock_foundations any-list entry; treated as Dark Age)"
+   ]
+  },
+  "arsenal": {
+   "id": "building_tech_unit_ranged_mon",
+   "pbgid": 129992,
+   "name": "Arsenal",
+   "cost": {
+    "wood": 150
+   },
+   "buildSeconds": 25,
+   "age": 3,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Hosts the Improved ranged damage/armor technologies (the Blacksmith only has the normal ones).",
+   "evidence": [
+    "catalog:buildings/building_tech_unit_ranged_mon#cost",
+    "catalog:buildings/building_tech_unit_ranged_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_tech_unit_ranged_mon.json#default/requirement_ext/requirement_table/required_player_upgrade/upgrade_name/$PBGNAME (castle_age)"
+   ]
+  },
+  "prayer-tent": {
+   "id": "building_unit_religious_mon",
+   "pbgid": 137157,
+   "name": "Prayer Tent",
+   "cost": {
+    "wood": 200
+   },
+   "buildSeconds": 25,
+   "age": 3,
+   "popProvided": 0,
+   "dropoff": [],
+   "limit": null,
+   "notes": "Monastic Shrines lets Prayer Tents grant Improved Production within their influence without an Ovoo.",
+   "evidence": [
+    "catalog:buildings/building_unit_religious_mon#cost",
+    "catalog:buildings/building_unit_religious_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_unit_religious_mon.json#default/requirement_ext/requirement_table/required_player_upgrade[0]/upgrade_name/$PBGNAME (castle_age)"
+   ]
+  }
+ },
+ "landmarks": {
+  "2": [
+   {
+    "key": "deer-stones",
+    "id": "building_wonder_age1_deer_stones_mon",
+    "pbgid": 136383,
+    "name": "Deer Stones",
+    "cost": {
+     "food": 400,
+     "gold": 200
+    },
+    "buildSeconds": 190,
+    "effects": [
+     {
+      "kind": "unlock",
+      "target": "unit_khan_hunter_deer_2_mon@archery-range",
+      "op": "set",
+      "value": 1,
+      "notes": "Grants access to the Khan's Hunter (60 wood 60 gold, 20 s, cavalry archer) at the Archery Range."
+     },
+     {
+      "kind": "unlock",
+      "target": "upgrade_ortoo_all_units_mon",
+      "op": "set",
+      "value": 1,
+      "notes": "Instantly researches the Yam Network technology on completion (locale 11265649; the completion state tree mon_deer_stones_construction_complete is not decoded)."
+     },
+     {
+      "kind": "other",
+      "target": "yam_aura@deer-stones",
+      "op": "mul",
+      "value": 1.15,
+      "notes": "Local aura, not a global speed bonus: the landmark carries the Yam ability ortoo_outpost_speed_aura_mon (range 50) giving nearby cavalry and Traders x1.15 move speed (civ statemodel ortoo_speed_bonus_mon)."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_wonder_age1_deer_stones_mon#cost",
+     "catalog:buildings/building_wonder_age1_deer_stones_mon#buildTimeSeconds",
+     "raw:ebps/races/mongol/buildings/building_wonder_age1_deer_stones_mon.json#default/requirement_ext (no age requirement: Dark Age)",
+     "locale:11265649 (Deer Stones grant access to the Khan's Hunter at the Archery Range. Instantly researches the Yam Network technology.)",
+     "raw:ebps/races/mongol/buildings/building_wonder_age1_deer_stones_mon.json#default/ability_ext/abilities/ability[2]/$PBGNAME",
+     "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[15]/default (ortoo_speed_bonus_mon)",
+     "raw:ebps/races/mongol/buildings/building_wonder_age1_deer_stones_mon.json#default/upgrade_ext/standard_upgrades/upgrade/$PBGNAME (also researches Yam Network (Improved))"
+    ]
+   },
+   {
+    "key": "silver-tree",
+    "id": "building_wonder_age2_karakorum_mon",
+    "pbgid": 136385,
+    "name": "The Silver Tree",
+    "cost": {
+     "food": 400,
+     "gold": 200
+    },
+    "buildSeconds": 190,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "market",
+      "op": "set",
+      "value": 1,
+      "notes": "Acts as a Market (trade post / exchange types, market abilities, trains Traders, researches Stone Commerce)."
+     },
+     {
+      "kind": "production_speed",
+      "target": "trader",
+      "op": "mul",
+      "value": 1.4,
+      "notes": "Trader production speed +40% (record tooltip argument)."
+     },
+     {
+      "kind": "cost",
+      "target": "trader.gold",
+      "op": "mul",
+      "value": 0.6,
+      "notes": "Trader gold cost -40% (record tooltip argument)."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_wonder_age2_karakorum_mon#cost",
+     "catalog:buildings/building_wonder_age2_karakorum_mon#buildTimeSeconds",
+     "raw:ebps/races/mongol/buildings/building_wonder_age2_karakorum_mon.json#default/requirement_ext (no age requirement: Dark Age)",
+     "catalog:buildings/building_wonder_age2_karakorum_mon#descriptionTemplate+descriptionArguments ([40, 40])",
+     "locale:11215386",
+     "raw:ebps/races/mongol/buildings/building_wonder_age2_karakorum_mon.json#default/ability_ext/abilities/ability[5]/$PBGNAME (market_silk_road_passive_ui_mon)"
+    ]
+   }
+  ],
+  "3": [
+   {
+    "key": "kurultai",
+    "id": "building_wonder_age1_kurultai_mon",
+    "pbgid": 136384,
+    "name": "Kurultai",
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "heal_in_aura",
+      "op": "add",
+      "value": 1,
+      "notes": "Nearby units heal +1 HP every 1 s."
+     },
+     {
+      "kind": "other",
+      "target": "damage_in_aura",
+      "op": "mul",
+      "value": 1.2,
+      "notes": "+20% damage in the aura; raw ability property id is melee_damage_amplification 1.2 (also cooldown 40)."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_wonder_age1_kurultai_mon#cost",
+     "catalog:buildings/building_wonder_age1_kurultai_mon#buildTimeSeconds",
+     "raw:ebps/races/mongol/buildings/building_wonder_age1_kurultai_mon.json#default/requirement_ext/requirement_table/required_player_upgrade[1]/upgrade_name/$PBGNAME (feudal_age)",
+     "catalog:buildings/building_wonder_age1_kurultai_mon#descriptionTemplate+descriptionArguments ([1, 1, 20])",
+     "locale:11226784",
+     "raw:abilities/always_on_abilities/mongol/kurultai_healing_aura_mon.rgd#default/ability_bag/float_properties/abilitybag_float_property[0]/value (melee_damage_amplification 1.2)",
+     "raw:abilities/always_on_abilities/mongol/kurultai_khan_aura_mon.rgd#default/ability_bag/range (30; a Khan-detection aura - whether the Khan must be present is not decoded)"
+    ]
+   },
+   {
+    "key": "steppe-redoubt",
+    "id": "building_wonder_age2_khara_khoto_mon",
+    "pbgid": 136386,
+    "name": "Steppe Redoubt",
+    "cost": {
+     "food": 1200,
+     "gold": 600
+    },
+    "buildSeconds": 220,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "dropoff",
+      "op": "set",
+      "value": 1,
+      "notes": "Acts as a Ger: drop-off for food, wood, gold and researches every Ger technology."
+     },
+     {
+      "kind": "gather_rate",
+      "target": "gold@steppe-redoubt",
+      "op": "mul",
+      "value": 1.5,
+      "notes": "Gold dropped off at this landmark +50% (drop-off multiplier, only for villagers using this drop-off)."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_wonder_age2_khara_khoto_mon#cost",
+     "catalog:buildings/building_wonder_age2_khara_khoto_mon#buildTimeSeconds",
+     "raw:ebps/races/mongol/buildings/building_wonder_age2_khara_khoto_mon.json#default/requirement_ext/requirement_table/required_player_upgrade[1]/upgrade_name/$PBGNAME (feudal_age)",
+     "catalog:buildings/building_wonder_age2_khara_khoto_mon#descriptionTemplate+descriptionArguments (50)",
+     "locale:11215387",
+     "raw:ebps/races/mongol/buildings/building_wonder_age2_khara_khoto_mon.json#default/resource_drop_off_ext/accepted_resources (food, wood, gold)",
+     "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+    ]
+   }
+  ],
+  "4": [
+   {
+    "key": "khaganate-palace",
+    "id": "building_wonder_age3_khanbaliq_mon",
+    "pbgid": 131452,
+    "name": "Khaganate Palace",
+    "cost": {
+     "food": 2400,
+     "gold": 1200
+    },
+    "buildSeconds": 250,
+    "effects": [
+     {
+      "kind": "other",
+      "target": "free_units",
+      "op": "set",
+      "value": 1,
+      "notes": "Automatically spawns free armies; spawn items (squad x number_to_spawn): unit_khaganate_great_trebuchet_mon x1, unit_khaganate_mangudai_mon x1, unit_khaganate_horsearcher_rus_mon x1, unit_khaganate_knight_rus_mon x3, unit_khaganate_manatarms_china_mon x5, unit_khaganate_monk_rus_mon x2, unit_khaganate_nest_of_bees_4_mon x1, unit_knight_2_mon x4, unit_knight_3_mon x4, unit_knight_4_mon x4. Production needs the Khan within 20 (khaganate_khan_aura_mon range 20, state tree khaganate_khan_presence_aura_mon\\Production_disabled). Cadence and selection are state-tree driven (tooltip argument 90 is not used by the installed text)."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_wonder_age3_khanbaliq_mon#cost",
+     "catalog:buildings/building_wonder_age3_khanbaliq_mon#buildTimeSeconds",
+     "raw:ebps/races/mongol/buildings/building_wonder_age3_khanbaliq_mon.json#default/requirement_ext/requirement_table/required_player_upgrade[1]/upgrade_name/$PBGNAME (castle_age)",
+     "catalog:buildings/building_wonder_age3_khanbaliq_mon#trainableUnits",
+     "raw:ebps/races/mongol/buildings/building_wonder_age3_khanbaliq_mon.json#default/spawner_ext/spawn_items",
+     "raw:abilities/always_on_abilities/mongol/khaganate_khan_aura_mon.rgd#default/ability_bag/range",
+     "locale:11204912"
+    ]
+   },
+   {
+    "key": "white-stupa",
+    "id": "building_wonder_age3_stupa_mon",
+    "pbgid": 136389,
+    "name": "The White Stupa",
+    "cost": {
+     "food": 2400,
+     "gold": 1200
+    },
+    "buildSeconds": 250,
+    "effects": [
+     {
+      "kind": "passive_income",
+      "target": "stone",
+      "op": "add",
+      "value": 4.0,
+      "notes": "Acts as an Ovoo and produces 240 stone per minute (= 4/s) without a stone outcrop."
+     },
+     {
+      "kind": "cost",
+      "target": "double_production.stone",
+      "op": "mul",
+      "value": 0.5,
+      "notes": "Stone cost of double unit production -50% (raw upgrade_free_stupa_unit_stone_discount stupa_stone_discount 0.5, applied to buildings)."
+     },
+     {
+      "kind": "other",
+      "target": "ovoo_influence",
+      "op": "set",
+      "value": 1,
+      "notes": "Root district generator (range 8) like an Ovoo; researches the Ovoo technologies."
+     }
+    ],
+    "evidence": [
+     "catalog:buildings/building_wonder_age3_stupa_mon#cost",
+     "catalog:buildings/building_wonder_age3_stupa_mon#buildTimeSeconds",
+     "raw:ebps/races/mongol/buildings/building_wonder_age3_stupa_mon.json#default/requirement_ext/requirement_table/required_player_upgrade[1]/upgrade_name/$PBGNAME (castle_age)",
+     "catalog:buildings/building_wonder_age3_stupa_mon#descriptionTemplate+descriptionArguments ([240, 50])",
+     "locale:11205466",
+     "raw:upgrade/races/mongol/research/unique/upgrade_free_stupa_unit_stone_discount.json#default/upgrade_bag/float_properties/upgradebag_float_property/value",
+     "raw:ebps/races/mongol/buildings/building_wonder_age3_stupa_mon.json#default/district_generator_ext/range_metres",
+     "raw:ebps/races/mongol/buildings/building_wonder_age3_stupa_mon.json#default/ability_ext/abilities/ability[2]/$PBGNAME (white_stupa_stone_generation_mon)"
+    ]
+   }
+  ]
+ },
+ "technologies": [
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_2",
+   "pbgid": 128049,
+   "name": "Horticulture",
+   "age": 2,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 100,
+    "wood": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "food_soft",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "Food gather rate +10%, not hunted meat (sheep, pasture sheep, berries). raw gather_rate_food 0.1. Raw scalar is a state-tree input; how it stacks with other techs (multiplicative vs additive) is not decoded - see unresolved."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#cost",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#requirements",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Food by 10%. Does not apply to hunted meat.\"",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2#modifiers (gather_rate_food=0.1, mongols_improved_full=0.3)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_2_improved_mon",
+   "pbgid": 171295,
+   "name": "Horticulture (Improved)",
+   "age": 2,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 100,
+    "stone": 500,
+    "wood": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "food_soft",
+     "op": "mul",
+     "value": 1.3,
+     "notes": "Food +30% (raw mongols_improved_full 0.3). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2_improved_mon#cost",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2_improved_mon#requirements",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2_improved_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Food by 30%. Does not apply to hunted meat.  If Horticulture has already been researched, increase it by 20% instead.\"",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2_improved_mon#modifiers (gather_rate_food=0.1, mongols_improved_full=0.3)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_econ_resource_food_harvest_rate_2",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_3",
+   "pbgid": 171292,
+   "name": "Fertilization",
+   "age": 3,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "food_soft",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "Food +10% (raw gather_rate_food 0.1). The record also carries mongols_improved_full 0.175 for Fertilization (Improved), which no standard-mode Mongol building can research. Raw scalar is a state-tree input; how it stacks with other techs (multiplicative vs additive) is not decoded - see unresolved."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#cost",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#requirements",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Food by 10%. Does not apply to hunted meat.\"",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_3#modifiers (gather_rate_food=0.1, mongols_improved_full=0.175)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_food_harvest_rate_4",
+   "pbgid": 171293,
+   "name": "Precision Cross-Breeding",
+   "age": 4,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 500,
+    "wood": 250
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "food_soft",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "Food +10% (raw gather_rate_food 0.1). Raw scalar is a state-tree input; how it stacks with other techs (multiplicative vs additive) is not decoded - see unresolved."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#cost",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#requirements",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Food by 10%. Does not apply to hunted meat.\"",
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_4#modifiers (gather_rate_food=0.1, mongols_improved_full=0.175)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_2",
+   "pbgid": 128070,
+   "name": "Double Broadax",
+   "age": 2,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "food": 50,
+    "gold": 100
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw wood_rate 0.15. Raw scalar is a state-tree input; how it stacks with other techs (multiplicative vs additive) is not decoded - see unresolved."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#requirements",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Wood by 15%.\"",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2#modifiers (wood_rate=0.15, wood_rate_improved_mon=0.2, wood_rate_improved_mon_full=0.35)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_2_improved_mon",
+   "pbgid": 169035,
+   "name": "Double Broadax (Improved)",
+   "age": 2,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "food": 50,
+    "gold": 100,
+    "stone": 500
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.35,
+     "notes": "raw wood_rate_improved_mon_full 0.35 (partial 0.2). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_improved_mon#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_improved_mon#requirements",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_improved_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Wood by 35%.  If Double Broadax has already been researched, increase it by 20% instead.\"",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_2_improved_mon#modifiers (wood_rate=0.15, wood_rate_improved_mon=0.2, wood_rate_improved_mon_full=0.35)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_econ_resource_wood_harvest_rate_2",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_3",
+   "pbgid": 171836,
+   "name": "Lumber Preservation",
+   "age": 3,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw wood_rate 0.15. Raw scalar is a state-tree input; how it stacks with other techs (multiplicative vs additive) is not decoded - see unresolved."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#requirements",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Wood by 15%.\"",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_3#modifiers (wood_rate=0.15)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_harvest_rate_4",
+   "pbgid": 171837,
+   "name": "Crosscut Saw",
+   "age": 4,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "food": 250,
+    "gold": 500
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "wood",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw wood_rate 0.15. Raw scalar is a state-tree input; how it stacks with other techs (multiplicative vs additive) is not decoded - see unresolved."
+    },
+    {
+     "kind": "carry",
+     "target": "wood",
+     "op": "add",
+     "value": 5,
+     "notes": "Wood carry +5 (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#requirements",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Wood by 15% and Wood gatherers carry capacity by +5.\"",
+    "catalog:technologies/upgrade_econ_resource_wood_harvest_rate_4#modifiers (wood_rate=0.15)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_2_mon",
+   "pbgid": 2032216,
+   "name": "Specialized Pick",
+   "age": 2,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 100,
+    "wood": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "gold",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw mining_rate 0.15. Raw scalar is a state-tree input; how it stacks with other techs (multiplicative vs additive) is not decoded - see unresolved."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_mon#cost",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_mon#requirements",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Gold by 15%.\"",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_mon#modifiers (mining_rate=0.15, mining_rate_improved_mon=0.2, mining_rate_stone=0.15, mining_rate_improved_mon_full=0.35)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_2_improved_mon",
+   "pbgid": 171825,
+   "name": "Specialized Pick (Improved)",
+   "age": 2,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 100,
+    "stone": 500,
+    "wood": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "gold",
+     "op": "mul",
+     "value": 1.35,
+     "notes": "raw mining_rate_improved_mon_full 0.35 (partial 0.2). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_improved_mon#cost",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_improved_mon#requirements",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_improved_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Gold by 35%.  If Specialized Pick has already been researched, increase it by 20% instead.\"",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_2_improved_mon#modifiers (mining_rate=0.15, mining_rate_improved_mon=0.2, mining_rate_stone=0.15, mining_rate_improved_mon_full=0.35)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_econ_resource_gold_harvest_rate_2_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_3_mon",
+   "pbgid": 2032215,
+   "name": "Shaft Mining",
+   "age": 3,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "gold",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "Text +15%; raw mining_rate is 0.3, consistent with a cumulative total after Specialized Pick (0.15 + 0.15). If the state tree sets the total, stacking is additive: Pick+Shaft = +30%, not x1.3225. Raw scalar is a state-tree input; how it stacks with other techs (multiplicative vs additive) is not decoded - see unresolved."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_mon#cost",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_mon#requirements",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' gathering rate for Gold by 15%.\"",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_3_mon#modifiers (mining_rate=0.3, mining_rate_stone=0.3)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_gold_harvest_rate_4_mon",
+   "pbgid": 188052,
+   "name": "Cupellation",
+   "age": 4,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 500,
+    "wood": 250
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "gold",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "Drop-off multiplier (\"gold gatherers drop off 15% more\"): scales the effective post-walk rate, so applying it to raw r under-counts at distance."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_mon#cost",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_mon#requirements",
+    "catalog:technologies/upgrade_econ_resource_gold_harvest_rate_4_mon#descriptionTemplate+descriptionArguments: \"Gold gatherers drop off 15% more resources.\"",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_fell_rate_1_mon",
+   "pbgid": 188630,
+   "name": "Forestry",
+   "age": 1,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "food": 25,
+    "gold": 50
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "wood_fell",
+     "op": "mul",
+     "value": 2,
+     "notes": "Tree felling twice as fast (felling is not a gather-rate term in MODEL.md 2.1)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_mon#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_mon#requirements",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_mon#descriptionTemplate+descriptionArguments: \"Double the rate at which Villagers chop down trees.\"",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_resource_wood_fell_rate_1_improved_mon",
+   "pbgid": 172000,
+   "name": "Forestry (Improved)",
+   "age": 1,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "food": 25,
+    "gold": 50,
+    "stone": 75
+   },
+   "researchSeconds": 45,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "wood_fell",
+     "op": "set",
+     "value": 1,
+     "notes": "Trees fall in a single chop."
+    },
+    {
+     "kind": "carry",
+     "target": "wood",
+     "op": "add",
+     "value": 2,
+     "notes": "Wood carry +2."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_improved_mon#cost",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_improved_mon#requirements",
+    "catalog:technologies/upgrade_econ_resource_wood_fell_rate_1_improved_mon#descriptionTemplate+descriptionArguments: \"Villagers fell trees in a single chop.  Wood carry capacity increased by +2.\"",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_econ_resource_wood_fell_rate_1_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_unit_town_center_wheelbarrow_1_mon",
+   "pbgid": 205916,
+   "name": "Wheelbarrow",
+   "age": 1,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 150,
+    "wood": 50
+   },
+   "researchSeconds": 90,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "carry",
+     "target": "all",
+     "op": "add",
+     "value": 5,
+     "notes": "raw carry_capacity 5"
+    },
+    {
+     "kind": "speed",
+     "target": "villager",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw move_speed 1.15"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_mon#cost",
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_mon#requirements",
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_mon#descriptionTemplate+descriptionArguments: \"Increase the carry capacity of Villagers by +5 and their movement speed by +15%.\"",
+    "catalog:technologies/upgrade_unit_town_center_wheelbarrow_1_mon#modifiers (carry_capacity=5, move_speed=1.15)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_wheelbarrow_1_improved_mon",
+   "pbgid": 169038,
+   "name": "Wheelbarrow (Improved)",
+   "age": 1,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 150,
+    "stone": 200,
+    "wood": 50
+   },
+   "researchSeconds": 90,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "carry",
+     "target": "all",
+     "op": "add",
+     "value": 9,
+     "notes": "raw mongols_improved_full 9 (partial 4). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    },
+    {
+     "kind": "speed",
+     "target": "villager",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "Same +15% speed as Wheelbarrow (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_wheelbarrow_1_improved_mon#cost",
+    "catalog:technologies/upgrade_unit_wheelbarrow_1_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_wheelbarrow_1_improved_mon#requirements",
+    "catalog:technologies/upgrade_unit_wheelbarrow_1_improved_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' resource carry capacity by +9 and movement speed by +15%.  If Wheelbarrow has already been researched, increase carry capacity by +4 instead.\"",
+    "catalog:technologies/upgrade_unit_wheelbarrow_1_improved_mon#modifiers (mongols_improved_partial=4, mongols_improved_full=9)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_unit_town_center_wheelbarrow_1_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_econ_villager_hunting_gear_1_mon",
+   "pbgid": 205917,
+   "name": "Survival Techniques",
+   "age": 1,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 75,
+    "wood": 25
+   },
+   "researchSeconds": 25,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "hunt",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "raw survival_techniques_food 0.15"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_mon#cost",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_mon#requirements",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' hunted meat gather rate by +15%.\"",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_mon#modifiers (survival_techniques_food=0.15, survival_techniques_improved_mon=0.25)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_econ_villager_hunting_gear_1_improved_mon",
+   "pbgid": 203469,
+   "name": "Survival Techniques (Improved)",
+   "age": 1,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 75,
+    "stone": 100,
+    "wood": 25
+   },
+   "researchSeconds": 25,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "gather_rate",
+     "target": "hunt",
+     "op": "mul",
+     "value": 1.25,
+     "notes": "raw survival_techniques_improved_mon 0.25. Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_improved_mon#cost",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_improved_mon#requirements",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_improved_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' hunted meat gather rate by +25%.  If Survival Techniques has already been researched, increase hunted meat gather rate by +10% instead.\"",
+    "catalog:technologies/upgrade_econ_villager_hunting_gear_1_improved_mon#modifiers (survival_techniques_food=0.15, survival_techniques_improved_mon=0.25)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_econ_villager_hunting_gear_1_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_scout_forester_mon",
+   "pbgid": 205915,
+   "name": "Professional Scouts",
+   "age": 2,
+   "building": "ger",
+   "alsoAt": [
+    "landmark:steppe-redoubt"
+   ],
+   "cost": {
+    "gold": 300,
+    "wood": 150
+   },
+   "researchSeconds": 75,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "scout",
+     "op": "set",
+     "value": 1,
+     "notes": "Scouts can carry carcasses, +100% damage vs wild animals, -55% speed while carrying; raw deer_decay_rate -1.5."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_scout_forester_mon#cost",
+    "catalog:technologies/upgrade_scout_forester_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_scout_forester_mon#requirements",
+    "catalog:technologies/upgrade_scout_forester_mon#descriptionTemplate+descriptionArguments: \"Scouts gain the ability to carry animal carcasses and +100% damage against wild animals.  Scouts move -55% slower while carrying and cannot pick up Boar. Deer slowly decay while being carried.\"",
+    "catalog:technologies/upgrade_scout_forester_mon#modifiers (deer_decay_rate=-1.5)",
+    "catalog:buildings/building_house_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_khara_khoto_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_villager_health",
+   "pbgid": 2045367,
+   "name": "Textiles",
+   "age": 2,
+   "building": "town-center",
+   "cost": {
+    "food": 50,
+    "gold": 100
+   },
+   "researchSeconds": 20,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "villager_hp",
+     "op": "mul",
+     "value": 1.5,
+     "notes": "Villager health +50%."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_villager_health#cost",
+    "catalog:technologies/upgrade_villager_health#researchTimeSeconds",
+    "catalog:technologies/upgrade_villager_health#requirements",
+    "catalog:technologies/upgrade_villager_health#descriptionTemplate+descriptionArguments: \"Increase Villagers' health by +50%.\"",
+    "catalog:buildings/building_town_center_capital_mon#researchableTechnologies",
+    "catalog:buildings/building_town_center_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_villager_health_improved_mon",
+   "pbgid": 2062167,
+   "name": "Textiles (Improved)",
+   "age": 3,
+   "building": "town-center",
+   "cost": {
+    "food": 50,
+    "gold": 100,
+    "stone": 150
+   },
+   "researchSeconds": 20,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "villager_hp",
+     "op": "mul",
+     "value": 1.5,
+     "notes": "Record text: +50%; \"if Textiles has already been researched, +100% instead\" (wording as installed)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_villager_health_improved_mon#cost",
+    "catalog:technologies/upgrade_villager_health_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_villager_health_improved_mon#requirements",
+    "catalog:technologies/upgrade_villager_health_improved_mon#descriptionTemplate+descriptionArguments: \"Increase Villagers' health by +50%.  If Textiles has already been researched, increase health by +100% instead.\"",
+    "catalog:buildings/building_town_center_capital_mon#researchableTechnologies",
+    "catalog:buildings/building_town_center_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_villager_health",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_tech_military_academy",
+   "pbgid": 128454,
+   "name": "Military Academy",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "gold": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "production_speed",
+     "target": "military",
+     "op": "mul",
+     "value": 1.33,
+     "notes": "raw normal_modifier 1.33; infantry, cavalry, siege, transport at buildings; not religious/support."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_tech_military_academy#cost",
+    "catalog:technologies/upgrade_tech_military_academy#researchTimeSeconds",
+    "catalog:technologies/upgrade_tech_military_academy#requirements",
+    "catalog:technologies/upgrade_tech_military_academy#descriptionTemplate+descriptionArguments: \"Increase the production speed of infantry, cavalry, siege, and transport units at buildings by 33%.  Does not affect religious units or other support units.\"",
+    "catalog:technologies/upgrade_tech_military_academy#modifiers (normal_modifier=1.33)",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_tech_military_academy_improved_mon",
+   "pbgid": 175024,
+   "name": "Military Academy (Improved)",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "gold": 250,
+    "stone": 350,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "economy",
+   "effects": [
+    {
+     "kind": "production_speed",
+     "target": "military",
+     "op": "mul",
+     "value": 1.53,
+     "notes": "raw mongols_improved_full 1.53 (partial 0.2). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_tech_military_academy_improved_mon#cost",
+    "catalog:technologies/upgrade_tech_military_academy_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_tech_military_academy_improved_mon#requirements",
+    "catalog:technologies/upgrade_tech_military_academy_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the production speed of military and transport units at buildings by 53%.  Does not affect religious or other support units.  If Military Academy has already been researched, increase production speed by 20% instead.\"",
+    "catalog:technologies/upgrade_tech_military_academy_improved_mon#modifiers (mongols_improved_partial=0.2, mongols_improved_full=1.53)",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_tech_military_academy",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_tech_university_biology_mon",
+   "pbgid": 188503,
+   "name": "Biology",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "food": 500,
+    "gold": 1000
+   },
+   "researchSeconds": 90,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "cavalry_hp",
+     "op": "mul",
+     "value": 1.25,
+     "notes": "raw health_max 0.25: all cavalry health +25%."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_tech_university_biology_mon#cost",
+    "catalog:technologies/upgrade_tech_university_biology_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_tech_university_biology_mon#requirements",
+    "catalog:technologies/upgrade_tech_university_biology_mon#descriptionTemplate+descriptionArguments: \"Investing in natural sciences increases the health of all cavalry by +25%.\"",
+    "catalog:technologies/upgrade_tech_university_biology_mon#modifiers (health_max=0.25)",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_tech_university_biology_improved_mon",
+   "pbgid": 188502,
+   "name": "Biology (Improved)",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "food": 500,
+    "gold": 1000,
+    "stone": 1500
+   },
+   "researchSeconds": 90,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "cavalry_hp",
+     "op": "mul",
+     "value": 1.35,
+     "notes": "raw mongols_improved_full 0.35 (partial 0.1). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_tech_university_biology_improved_mon#cost",
+    "catalog:technologies/upgrade_tech_university_biology_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_tech_university_biology_improved_mon#requirements",
+    "catalog:technologies/upgrade_tech_university_biology_improved_mon#descriptionTemplate+descriptionArguments: \"Investing in natural sciences increases the health of all cavalry by +35%.  If Biology has already been researched, increase it by +10% instead.\"",
+    "catalog:technologies/upgrade_tech_university_biology_improved_mon#modifiers (mongols_improved_full=0.35, mongols_improved_partial=0.1)",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_tech_university_biology_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_trader_silkroad_stone_mon",
+   "pbgid": 205556,
+   "name": "Stone Commerce",
+   "age": 4,
+   "building": "market",
+   "alsoAt": [
+    "landmark:silver-tree"
+   ],
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 90,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "trader_stone",
+     "op": "add",
+     "value": 0.1,
+     "notes": "Traders supply +10% Stone on their trades (Silk Road tier-4 stone, civ statemodel silk_road_tier_4_stone_bonus_mon 10)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_trader_silkroad_stone_mon#cost",
+    "catalog:technologies/upgrade_trader_silkroad_stone_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_trader_silkroad_stone_mon#requirements",
+    "catalog:technologies/upgrade_trader_silkroad_stone_mon#descriptionTemplate+descriptionArguments: \"Traders supply +10% Stone to their trades.\"",
+    "catalog:buildings/building_econ_market_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_karakorum_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_trader_silkroad_stone_improved_mon",
+   "pbgid": 205810,
+   "name": "Stone Commerce (Improved)",
+   "age": 4,
+   "building": "market",
+   "alsoAt": [
+    "landmark:silver-tree"
+   ],
+   "cost": {
+    "food": 300,
+    "gold": 700,
+    "stone": 1000
+   },
+   "researchSeconds": 90,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "trader_stone",
+     "op": "add",
+     "value": 0.2,
+     "notes": "Traders supply +20% Stone (silk_road_tier_4_stone_bonus_improved_mon 20). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_trader_silkroad_stone_improved_mon#cost",
+    "catalog:technologies/upgrade_trader_silkroad_stone_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_trader_silkroad_stone_improved_mon#requirements",
+    "catalog:technologies/upgrade_trader_silkroad_stone_improved_mon#descriptionTemplate+descriptionArguments: \"Traders supply +20% Stone to their trades.  If Stone Commerce has already been researched, supply +10% Stone instead.\"",
+    "catalog:buildings/building_econ_market_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age2_karakorum_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_trader_silkroad_stone_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_raid_bounty_mon",
+   "pbgid": 205550,
+   "name": "Raid Bounty",
+   "age": 2,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "food": 75,
+    "gold": 150
+   },
+   "researchSeconds": 30,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "raid_bounty",
+     "op": "add",
+     "value": 25,
+     "notes": "Raid income per ignited building raised from +25 to +50 Food and Gold (raw raid_bounty_food 25, raid_bounty_gold 25)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_raid_bounty_mon#cost",
+    "catalog:technologies/upgrade_raid_bounty_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_raid_bounty_mon#requirements",
+    "catalog:technologies/upgrade_raid_bounty_mon#descriptionTemplate+descriptionArguments: \"Increase the raid income for igniting a building to +50 Food and Gold.\"",
+    "catalog:technologies/upgrade_raid_bounty_mon#modifiers (raid_bounty_food=25, raid_bounty_gold=25)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_raid_bounty_improved_mon",
+   "pbgid": 205807,
+   "name": "Raid Bounty (Improved)",
+   "age": 2,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "food": 75,
+    "gold": 150,
+    "stone": 225
+   },
+   "researchSeconds": 30,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "raid_bounty",
+     "op": "add",
+     "value": 50,
+     "notes": "Raid income to +75 Food and Gold. Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_raid_bounty_improved_mon#cost",
+    "catalog:technologies/upgrade_raid_bounty_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_raid_bounty_improved_mon#requirements",
+    "catalog:technologies/upgrade_raid_bounty_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the raid income for igniting a building to +75 Food and Gold.  If Raid Bounty has already been researched, increase the raid income for igniting a building by +25 Food and Gold.\"",
+    "catalog:technologies/upgrade_raid_bounty_improved_mon#modifiers (raid_bounty_food=25, raid_bounty_gold=25)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_raid_bounty_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_raid_stone_bounty_mon",
+   "pbgid": 205555,
+   "name": "Stone Bounty",
+   "age": 4,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "food": 100,
+    "gold": 225
+   },
+   "researchSeconds": 45,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "raid_bounty_stone",
+     "op": "add",
+     "value": 50,
+     "notes": "Adds +50 Stone per ignited building (civ statemodel raid_bounty_stone_mon 50)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_raid_stone_bounty_mon#cost",
+    "catalog:technologies/upgrade_raid_stone_bounty_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_raid_stone_bounty_mon#requirements",
+    "catalog:technologies/upgrade_raid_stone_bounty_mon#descriptionTemplate+descriptionArguments: \"Add +50 Stone to the raid income for igniting a building.\"",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_raid_stone_bounty_improved_mon",
+   "pbgid": 205808,
+   "name": "Stone Bounty (Improved)",
+   "age": 4,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "food": 100,
+    "gold": 225,
+    "stone": 325
+   },
+   "researchSeconds": 45,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "raid_bounty_stone",
+     "op": "add",
+     "value": 75,
+     "notes": "Adds +75 Stone. Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_raid_stone_bounty_improved_mon#cost",
+    "catalog:technologies/upgrade_raid_stone_bounty_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_raid_stone_bounty_improved_mon#requirements",
+    "catalog:technologies/upgrade_raid_stone_bounty_improved_mon#descriptionTemplate+descriptionArguments: \"Add +75 Stone to the raid income for igniting a building.  If Stone Bounty has already been researched, add +25 Stone to the raid income for igniting a building.\"",
+    "catalog:technologies/upgrade_raid_stone_bounty_improved_mon#modifiers (mongols_improved_full=25)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_raid_stone_bounty_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_unit_town_center_faster_packing_1_mon",
+   "pbgid": 178718,
+   "name": "Superior Mobility",
+   "age": 1,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "gold": 75,
+    "wood": 25
+   },
+   "researchSeconds": 45,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "packing",
+     "op": "mul",
+     "value": 1.5,
+     "notes": "Packed buildings move and pack/unpack 50% faster (raw multiplier 1.5)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_mon#cost",
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_mon#requirements",
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_mon#descriptionTemplate+descriptionArguments: \"Packed buildings move and pack/unpack 50% faster.\"",
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_mon#modifiers (multiplier=1.5)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_town_center_faster_packing_1_improved_mon",
+   "pbgid": 9000088,
+   "name": "Superior Mobility (Improved)",
+   "age": 2,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "gold": 75,
+    "stone": 100,
+    "wood": 25
+   },
+   "researchSeconds": 45,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "packing",
+     "op": "mul",
+     "value": 1.5,
+     "notes": "Pack/unpack +50%, packed move speed +70% (raw multiplier 1.2 = the extra +20% move speed). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_improved_mon#cost",
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_improved_mon#requirements",
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_improved_mon#descriptionTemplate+descriptionArguments: \"Packed buildings move +70% faster and pack/unpack +50% faster.  If Superior Mobility has already been researched, increase speed by +20% instead.\"",
+    "catalog:technologies/upgrade_unit_town_center_faster_packing_1_improved_mon#modifiers (multiplier=1.2)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_unit_town_center_faster_packing_1_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_religious_monastery_ovoo_mon",
+   "pbgid": 193988,
+   "name": "Monastic Shrines",
+   "age": 3,
+   "building": "prayer-tent",
+   "alsoAt": [
+    "arsenal"
+   ],
+   "cost": {
+    "gold": 225,
+    "wood": 100
+   },
+   "researchSeconds": 45,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "improved_production@prayer-tent",
+     "op": "set",
+     "value": 1,
+     "notes": "Prayer Tents allow Improved Production (double units, Improved techs) within their influence without an Ovoo."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_religious_monastery_ovoo_mon#cost",
+    "catalog:technologies/upgrade_religious_monastery_ovoo_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_religious_monastery_ovoo_mon#requirements",
+    "catalog:technologies/upgrade_religious_monastery_ovoo_mon#descriptionTemplate+descriptionArguments: \"Prayer Tents allow Improved Production within their influence even without an Ovoo.\"",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies",
+    "catalog:buildings/building_unit_religious_district_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ortoo_all_units_mon",
+   "pbgid": 205554,
+   "name": "Yam Network",
+   "age": 3,
+   "building": "outpost",
+   "cost": {
+    "gold": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "speed",
+     "target": "all_units_in_yam",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "Yam aura applies to all units (not siege) instead of only cavalry and Traders; aura bonus ortoo_speed_bonus_mon 1.15."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ortoo_all_units_mon#cost",
+    "catalog:technologies/upgrade_ortoo_all_units_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ortoo_all_units_mon#requirements",
+    "catalog:technologies/upgrade_ortoo_all_units_mon#descriptionTemplate+descriptionArguments: \"Yam speed aura applies to all units instead of just Traders and cavalry units. Does not apply to siege engines.\"",
+    "catalog:buildings/building_defense_outpost_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ortoo_all_units_improved_mon",
+   "pbgid": 2129166,
+   "name": "Yam Network (Improved)",
+   "age": 4,
+   "building": "outpost",
+   "alsoAt": [
+    "landmark:deer-stones"
+   ],
+   "cost": {
+    "gold": 250,
+    "stone": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "civ-economy",
+   "effects": [
+    {
+     "kind": "speed",
+     "target": "all_units_in_yam",
+     "op": "mul",
+     "value": 1.15,
+     "notes": "As Yam Network, plus Traders in the aura regenerate 1 HP every 2 s (raw heal_amount 1, duration 2). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ortoo_all_units_improved_mon#cost",
+    "catalog:technologies/upgrade_ortoo_all_units_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ortoo_all_units_improved_mon#requirements",
+    "catalog:technologies/upgrade_ortoo_all_units_improved_mon#descriptionTemplate+descriptionArguments: \"Yam speed aura applies to all units instead of just Traders and cavalry units. Does not apply to siege engines.  Improved Yam Network allows Traders to regenerate 1 health every 2 seconds while in Yam's aura.\"",
+    "catalog:technologies/upgrade_ortoo_all_units_improved_mon#modifiers (duration=2, heal_amount=1)",
+    "catalog:buildings/building_defense_outpost_mon#researchableTechnologies",
+    "catalog:buildings/building_wonder_age1_deer_stones_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_ortoo_all_units_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_melee_damage_i",
+   "pbgid": 187694,
+   "name": "Bloomery",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee_damage",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_damage_i#cost",
+    "catalog:technologies/upgrade_melee_damage_i#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_damage_i#requirements",
+    "catalog:technologies/upgrade_melee_damage_i#descriptionTemplate+descriptionArguments: \"Increase the melee damage of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_damage_ii",
+   "pbgid": 187997,
+   "name": "Decarbonization",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee_damage",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_damage_ii#cost",
+    "catalog:technologies/upgrade_melee_damage_ii#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_damage_ii#requirements",
+    "catalog:technologies/upgrade_melee_damage_ii#descriptionTemplate+descriptionArguments: \"Increase the melee damage of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_damage_iii_mon",
+   "pbgid": 188054,
+   "name": "Damascus Steel",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "food": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee_damage",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_damage_iii_mon#cost",
+    "catalog:technologies/upgrade_melee_damage_iii_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_damage_iii_mon#requirements",
+    "catalog:technologies/upgrade_melee_damage_iii_mon#descriptionTemplate+descriptionArguments: \"Increase the melee damage of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_i",
+   "pbgid": 188116,
+   "name": "Fitted Leatherwork",
+   "age": 2,
+   "building": "blacksmith",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee_armor",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_armor_i#cost",
+    "catalog:technologies/upgrade_melee_armor_i#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_armor_i#requirements",
+    "catalog:technologies/upgrade_melee_armor_i#descriptionTemplate+descriptionArguments: \"Increase the melee armor of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_ii",
+   "pbgid": 188121,
+   "name": "Insulated Helm",
+   "age": 3,
+   "building": "blacksmith",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee_armor",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_armor_ii#cost",
+    "catalog:technologies/upgrade_melee_armor_ii#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_armor_ii#requirements",
+    "catalog:technologies/upgrade_melee_armor_ii#descriptionTemplate+descriptionArguments: \"Increase the melee armor of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_melee_armor_iii_mon",
+   "pbgid": 188127,
+   "name": "Master Smiths",
+   "age": 4,
+   "building": "blacksmith",
+   "cost": {
+    "food": 150,
+    "gold": 350
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "melee_armor",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_melee_armor_iii_mon#cost",
+    "catalog:technologies/upgrade_melee_armor_iii_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_melee_armor_iii_mon#requirements",
+    "catalog:technologies/upgrade_melee_armor_iii_mon#descriptionTemplate+descriptionArguments: \"Increase the melee armor of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_i",
+   "pbgid": 188266,
+   "name": "Iron Undermesh",
+   "age": 2,
+   "building": "blacksmith",
+   "alsoAt": [
+    "arsenal"
+   ],
+   "cost": {
+    "gold": 125,
+    "wood": 50
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_armor",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_i#cost",
+    "catalog:technologies/upgrade_ranged_armor_i#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_i#requirements",
+    "catalog:technologies/upgrade_ranged_armor_i#descriptionTemplate+descriptionArguments: \"Increase the ranged armor of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_ii",
+   "pbgid": 188267,
+   "name": "Wedge Rivets",
+   "age": 3,
+   "building": "blacksmith",
+   "alsoAt": [
+    "arsenal"
+   ],
+   "cost": {
+    "gold": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_armor",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_ii#cost",
+    "catalog:technologies/upgrade_ranged_armor_ii#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_ii#requirements",
+    "catalog:technologies/upgrade_ranged_armor_ii#descriptionTemplate+descriptionArguments: \"Increase the ranged armor of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_iii_mon",
+   "pbgid": 188371,
+   "name": "Angled Surfaces",
+   "age": 4,
+   "building": "blacksmith",
+   "alsoAt": [
+    "arsenal"
+   ],
+   "cost": {
+    "gold": 350,
+    "wood": 150
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_armor",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_iii_mon#cost",
+    "catalog:technologies/upgrade_ranged_armor_iii_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_iii_mon#requirements",
+    "catalog:technologies/upgrade_ranged_armor_iii_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged armor of all non-siege units by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_damage_i",
+   "pbgid": 188269,
+   "name": "Steeled Arrow",
+   "age": 2,
+   "building": "blacksmith",
+   "alsoAt": [
+    "arsenal"
+   ],
+   "cost": {
+    "gold": 125,
+    "wood": 50
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_damage",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_i#cost",
+    "catalog:technologies/upgrade_ranged_damage_i#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_i#requirements",
+    "catalog:technologies/upgrade_ranged_damage_i#descriptionTemplate+descriptionArguments: \"Increase the ranged damage of all arrows, bolts, and emplacements by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_damage_ii",
+   "pbgid": 188270,
+   "name": "Balanced Projectiles",
+   "age": 3,
+   "building": "blacksmith",
+   "alsoAt": [
+    "arsenal"
+   ],
+   "cost": {
+    "gold": 250,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_damage",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_ii#cost",
+    "catalog:technologies/upgrade_ranged_damage_ii#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_ii#requirements",
+    "catalog:technologies/upgrade_ranged_damage_ii#descriptionTemplate+descriptionArguments: \"Increase the ranged damage of all arrows, bolts, and emplacements by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_damage_iii_mon",
+   "pbgid": 188374,
+   "name": "Platecutter Point",
+   "age": 4,
+   "building": "blacksmith",
+   "alsoAt": [
+    "arsenal"
+   ],
+   "cost": {
+    "gold": 350,
+    "wood": 150
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_damage",
+     "op": "add",
+     "value": 1,
+     "notes": "All non-siege units (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_iii_mon#cost",
+    "catalog:technologies/upgrade_ranged_damage_iii_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_iii_mon#requirements",
+    "catalog:technologies/upgrade_ranged_damage_iii_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged damage of all arrows, bolts, and emplacements by +1.\"",
+    "catalog:buildings/building_tech_unit_infantry_mon#researchableTechnologies",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_ranged_armor_i_improved_mon",
+   "pbgid": 188369,
+   "name": "Iron Undermesh (Improved)",
+   "age": 2,
+   "building": "arsenal",
+   "cost": {
+    "gold": 125,
+    "stone": 350,
+    "wood": 50
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_armor",
+     "op": "add",
+     "value": 2,
+     "notes": "+2 (Arsenal only). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_i_improved_mon#cost",
+    "catalog:technologies/upgrade_ranged_armor_i_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_i_improved_mon#requirements",
+    "catalog:technologies/upgrade_ranged_armor_i_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged armor of all non-siege units by +2.  If Iron Undermesh has already been researched, increase it by +1 instead.\"",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_ranged_armor_i",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_ranged_armor_ii_improved_mon",
+   "pbgid": 188370,
+   "name": "Wedge Rivets (Improved)",
+   "age": 3,
+   "building": "arsenal",
+   "cost": {
+    "gold": 250,
+    "stone": 700,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_armor",
+     "op": "add",
+     "value": 2,
+     "notes": "+2 (Arsenal only). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_ii_improved_mon#cost",
+    "catalog:technologies/upgrade_ranged_armor_ii_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_ii_improved_mon#requirements",
+    "catalog:technologies/upgrade_ranged_armor_ii_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged armor of all non-siege units by +2.  If Wedge Rivets has already been researched, increase it by +1 instead.\"",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_ranged_armor_ii",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_ranged_armor_iii_improved_mon",
+   "pbgid": 188383,
+   "name": "Angled Surfaces (Improved)",
+   "age": 4,
+   "building": "arsenal",
+   "cost": {
+    "gold": 350,
+    "stone": 1000,
+    "wood": 150
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_armor",
+     "op": "add",
+     "value": 2,
+     "notes": "+2 (Arsenal only). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_armor_iii_improved_mon#cost",
+    "catalog:technologies/upgrade_ranged_armor_iii_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_armor_iii_improved_mon#requirements",
+    "catalog:technologies/upgrade_ranged_armor_iii_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged armor of all non-siege units by +2.  If Angled Surfaces has already been researched, increase it by +1 instead.\"",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_ranged_armor_iii_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_ranged_damage_i_improved_mon",
+   "pbgid": 188372,
+   "name": "Steeled Arrow (Improved)",
+   "age": 2,
+   "building": "arsenal",
+   "cost": {
+    "gold": 125,
+    "stone": 350,
+    "wood": 50
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_damage",
+     "op": "add",
+     "value": 2,
+     "notes": "+2 (Arsenal only). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_i_improved_mon#cost",
+    "catalog:technologies/upgrade_ranged_damage_i_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_i_improved_mon#requirements",
+    "catalog:technologies/upgrade_ranged_damage_i_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged damage of all arrows and bolts by +2.  If Steeled Arrow has already been researched, increase it by +1 instead.\"",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_ranged_damage_i",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_ranged_damage_ii_improved_mon",
+   "pbgid": 188373,
+   "name": "Balanced Projectiles (Improved)",
+   "age": 3,
+   "building": "arsenal",
+   "cost": {
+    "gold": 250,
+    "stone": 700,
+    "wood": 100
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_damage",
+     "op": "add",
+     "value": 2,
+     "notes": "+2 (Arsenal only). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_ii_improved_mon#cost",
+    "catalog:technologies/upgrade_ranged_damage_ii_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_ii_improved_mon#requirements",
+    "catalog:technologies/upgrade_ranged_damage_ii_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged damage of all arrows and bolts by +2.  If Balanced Projectiles has already been researched, increase it by +1 instead.\"",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_ranged_damage_ii",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_ranged_damage_iii_improved_mon",
+   "pbgid": 188382,
+   "name": "Platecutter Point (Improved)",
+   "age": 4,
+   "building": "arsenal",
+   "cost": {
+    "gold": 350,
+    "stone": 1000,
+    "wood": 150
+   },
+   "researchSeconds": 60,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "ranged_damage",
+     "op": "add",
+     "value": 2,
+     "notes": "+2 (Arsenal only). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_ranged_damage_iii_improved_mon#cost",
+    "catalog:technologies/upgrade_ranged_damage_iii_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_ranged_damage_iii_improved_mon#requirements",
+    "catalog:technologies/upgrade_ranged_damage_iii_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged damage of all arrows and bolts by +2.  If Platecutter Point has already been researched, increase it by +1 instead.\"",
+    "catalog:buildings/building_tech_unit_ranged_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_ranged_damage_iii_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_lancer_healing_mon",
+   "pbgid": 2137100,
+   "name": "Steppe Lancers",
+   "age": 3,
+   "building": "stable",
+   "cost": {
+    "food": 150,
+    "gold": 350
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "keshik_heal_per_attack",
+     "op": "add",
+     "value": 1,
+     "notes": "Keshik +1 HP healed per attack."
+    },
+    {
+     "kind": "other",
+     "target": "keshik_attack_speed",
+     "op": "mul",
+     "value": 1.1,
+     "notes": "Text +10% attack speed; raw attack_speed 0.83 (state-tree input)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_lancer_healing_mon#cost",
+    "catalog:technologies/upgrade_lancer_healing_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_lancer_healing_mon#requirements",
+    "catalog:technologies/upgrade_lancer_healing_mon#descriptionTemplate+descriptionArguments: \"Increase Keshik healing by +1 Health per attack and attack speed by +10%.\"",
+    "catalog:technologies/upgrade_lancer_healing_mon#modifiers (mongols_improved_partial=1, attack_speed=0.83)",
+    "catalog:buildings/building_unit_cavalry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_lancer_healing_improved_mon",
+   "pbgid": 2137099,
+   "name": "Steppe Lancers (Improved)",
+   "age": 4,
+   "building": "stable",
+   "cost": {
+    "food": 150,
+    "gold": 350,
+    "stone": 500
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "keshik_heal_per_attack",
+     "op": "add",
+     "value": 2,
+     "notes": "Keshik +2 HP per attack. Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    },
+    {
+     "kind": "other",
+     "target": "keshik_attack_speed",
+     "op": "mul",
+     "value": 1.2,
+     "notes": "Text +20%; raw attack_speed 0.93 / attack_speed_improved 0.77."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_lancer_healing_improved_mon#cost",
+    "catalog:technologies/upgrade_lancer_healing_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_lancer_healing_improved_mon#requirements",
+    "catalog:technologies/upgrade_lancer_healing_improved_mon#descriptionTemplate+descriptionArguments: \"Increase Keshik healing by +2 Health per attack and attack speed by +20%.  If Steppe Lancers has already been researched, increase Keshik healing by +1 Health per attack and attack speed by +10%.\"",
+    "catalog:technologies/upgrade_lancer_healing_improved_mon#modifiers (mongols_improved_partial=1, mongols_improved_full=2, attack_speed=0.93, attack_speed_improved=0.77)",
+    "catalog:buildings/building_unit_cavalry_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_lancer_healing_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_mangudai_weapon_damage_mon",
+   "pbgid": 205553,
+   "name": "Siha Bow Limbs",
+   "age": 4,
+   "building": "archery-range",
+   "cost": {
+    "gold": 200,
+    "wood": 75
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "mangudai_khan_ranged_damage",
+     "op": "add",
+     "value": 1,
+     "notes": "raw ranged_damage 1; Mangudai and the Khan."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_mangudai_weapon_damage_mon#cost",
+    "catalog:technologies/upgrade_mangudai_weapon_damage_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_mangudai_weapon_damage_mon#requirements",
+    "catalog:technologies/upgrade_mangudai_weapon_damage_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged damage of Mangudai and the Khan by +1.\"",
+    "catalog:technologies/upgrade_mangudai_weapon_damage_mon#modifiers (ranged_damage=1)",
+    "catalog:buildings/building_unit_ranged_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_mangudai_weapon_damage_improved_mon",
+   "pbgid": 205803,
+   "name": "Siha Bow Limbs (Improved)",
+   "age": 4,
+   "building": "archery-range",
+   "cost": {
+    "gold": 200,
+    "stone": 275,
+    "wood": 75
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "mangudai_khan_ranged_damage",
+     "op": "add",
+     "value": 2,
+     "notes": "raw mongols_improved_full 2. Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_mangudai_weapon_damage_improved_mon#cost",
+    "catalog:technologies/upgrade_mangudai_weapon_damage_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_mangudai_weapon_damage_improved_mon#requirements",
+    "catalog:technologies/upgrade_mangudai_weapon_damage_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the ranged damage of Mangudai and the Khan by +2.  If Siha Bow Limbs has already been researched, increase the ranged damage of Mangudai and the Khan by +1.\"",
+    "catalog:technologies/upgrade_mangudai_weapon_damage_improved_mon#modifiers (mongols_improved_partial=1, mongols_improved_full=2)",
+    "catalog:buildings/building_unit_ranged_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_mangudai_weapon_damage_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_weapon_fire_damage_mon",
+   "pbgid": 205552,
+   "name": "Additional Torches",
+   "age": 3,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "food": 150,
+    "gold": 350
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "torch_damage",
+     "op": "add",
+     "value": 3,
+     "notes": "Infantry and cavalry torch damage +3 (raw siege_damage 3)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_weapon_fire_damage_mon#cost",
+    "catalog:technologies/upgrade_weapon_fire_damage_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_weapon_fire_damage_mon#requirements",
+    "catalog:technologies/upgrade_weapon_fire_damage_mon#descriptionTemplate+descriptionArguments: \"Increase the torch damage of all infantry and cavalry by +3.\"",
+    "catalog:technologies/upgrade_weapon_fire_damage_mon#modifiers (siege_damage=3)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_weapon_fire_damage_improved_mon",
+   "pbgid": 205811,
+   "name": "Additional Torches (Improved)",
+   "age": 3,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "food": 150,
+    "gold": 350,
+    "stone": 400
+   },
+   "researchSeconds": 45,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "torch_damage",
+     "op": "add",
+     "value": 5,
+     "notes": "Torch +5. Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_weapon_fire_damage_improved_mon#cost",
+    "catalog:technologies/upgrade_weapon_fire_damage_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_weapon_fire_damage_improved_mon#requirements",
+    "catalog:technologies/upgrade_weapon_fire_damage_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the torch damage of all infantry and cavalry by +5.  If Additional Torches has already been researched, increase the torch damage from all infantry and cavalry by +2.\"",
+    "catalog:technologies/upgrade_weapon_fire_damage_improved_mon#modifiers (mongols_improved_partial=2, mongols_improved_full=5)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_weapon_fire_damage_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_khan_signal_arrow_mon",
+   "pbgid": 205551,
+   "name": "Whistling Arrows",
+   "age": 1,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "food": 50,
+    "gold": 75
+   },
+   "researchSeconds": 30,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "khan_signal_arrow",
+     "op": "add",
+     "value": 5,
+     "notes": "Signal Arrow duration +5 s and range +2 tiles (raw duration 5, weapon_range 8)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_khan_signal_arrow_mon#cost",
+    "catalog:technologies/upgrade_khan_signal_arrow_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_khan_signal_arrow_mon#requirements",
+    "catalog:technologies/upgrade_khan_signal_arrow_mon#descriptionTemplate+descriptionArguments: \"Increase the Khan's Signal Arrow duration by +5 seconds and range by +2 tiles.\"",
+    "catalog:technologies/upgrade_khan_signal_arrow_mon#modifiers (weapon_range=8, duration=5)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_khan_signal_arrow_improved_mon",
+   "pbgid": 205802,
+   "name": "Whistling Arrows (Improved)",
+   "age": 2,
+   "building": "ovoo",
+   "alsoAt": [
+    "landmark:white-stupa"
+   ],
+   "cost": {
+    "food": 50,
+    "gold": 75,
+    "stone": 125
+   },
+   "researchSeconds": 30,
+   "category": "military",
+   "effects": [
+    {
+     "kind": "other",
+     "target": "khan_signal_arrow",
+     "op": "add",
+     "value": 7,
+     "notes": "Duration +7 s, range +3 tiles (raw mongols_improved_full 7, range_full 12). Improved variant supersedes the normal one: researched alone it gives the full value; after the normal tech it adds only the difference, so the total equals this value (record text)."
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_khan_signal_arrow_improved_mon#cost",
+    "catalog:technologies/upgrade_khan_signal_arrow_improved_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_khan_signal_arrow_improved_mon#requirements",
+    "catalog:technologies/upgrade_khan_signal_arrow_improved_mon#descriptionTemplate+descriptionArguments: \"Increase the Khan's Signal Arrow duration by +7 seconds and range by +3 tiles.  If Whistling Arrows has already been researched, increase the Khan's Signal Arrow duration by +2 seconds and range by +1 tile.\"",
+    "catalog:technologies/upgrade_khan_signal_arrow_improved_mon#modifiers (mongols_improved_range_full=12, mongols_improved_full=7, mongols_improved_range_partial=4, mongols_improved_partial=2)",
+    "catalog:buildings/building_stone_deposit_ovoo_large_mon#researchableTechnologies",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#researchableTechnologies",
+    "locale:11155011 (Building must be within the influence of an Ovoo) / locale:11153032 (researches have improved effect)"
+   ],
+   "improvedOf": "upgrade_khan_signal_arrow_mon",
+   "requiresOvooInfluence": true
+  },
+  {
+   "id": "upgrade_unit_horseman_2_mon",
+   "pbgid": 129562,
+   "name": "Upgrade to Horseman",
+   "age": 2,
+   "building": "stable",
+   "cost": {
+    "food": 15,
+    "gold": 35
+   },
+   "researchSeconds": 15,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_horseman_2_mon",
+     "op": "set",
+     "value": 1,
+     "notes": "horseman line tier upgrade (record text: \"Upgrade Early Horsemen to Horsemen.\")"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_horseman_2_mon#cost",
+    "catalog:technologies/upgrade_unit_horseman_2_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_horseman_2_mon#requirements",
+    "catalog:technologies/upgrade_unit_horseman_2_mon#descriptionTemplate+descriptionArguments: \"Upgrade Early Horsemen to Horsemen.\"",
+    "catalog:buildings/building_unit_cavalry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_horseman_3_mon",
+   "pbgid": 130353,
+   "name": "Upgrade to Veteran",
+   "age": 3,
+   "building": "stable",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_horseman_3_mon",
+     "op": "set",
+     "value": 1,
+     "notes": "horseman line tier upgrade (record text: \"Upgrade Horsemen to Veteran Horsemen.\")"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_horseman_3_mon#cost",
+    "catalog:technologies/upgrade_unit_horseman_3_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_horseman_3_mon#requirements",
+    "catalog:technologies/upgrade_unit_horseman_3_mon#descriptionTemplate+descriptionArguments: \"Upgrade Horsemen to Veteran Horsemen.\"",
+    "catalog:buildings/building_unit_cavalry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_horseman_4_mon",
+   "pbgid": 136266,
+   "name": "Upgrade to Elite",
+   "age": 4,
+   "building": "stable",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_horseman_4_mon",
+     "op": "set",
+     "value": 1,
+     "notes": "horseman line tier upgrade (record text: \"Upgrade Veteran Horsemen to Elite Horsemen.\")"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_horseman_4_mon#cost",
+    "catalog:technologies/upgrade_unit_horseman_4_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_horseman_4_mon#requirements",
+    "catalog:technologies/upgrade_unit_horseman_4_mon#descriptionTemplate+descriptionArguments: \"Upgrade Veteran Horsemen to Elite Horsemen.\"",
+    "catalog:buildings/building_unit_cavalry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_knight_3_mon",
+   "pbgid": 129611,
+   "name": "Upgrade to Veteran",
+   "age": 3,
+   "building": "stable",
+   "cost": {
+    "food": 50,
+    "gold": 125
+   },
+   "researchSeconds": 30,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_knight_3_mon",
+     "op": "set",
+     "value": 1,
+     "notes": "keshik line tier upgrade (record text: \"Upgrade Keshiks to Veteran Keshiks.\")"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_knight_3_mon#cost",
+    "catalog:technologies/upgrade_unit_knight_3_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_knight_3_mon#requirements",
+    "catalog:technologies/upgrade_unit_knight_3_mon#descriptionTemplate+descriptionArguments: \"Upgrade Keshiks to Veteran Keshiks.\"",
+    "catalog:technologies/upgrade_unit_knight_3_mon#modifiers (heal_amount=0)",
+    "catalog:buildings/building_unit_cavalry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_knight_4_mon",
+   "pbgid": 136267,
+   "name": "Upgrade to Elite",
+   "age": 4,
+   "building": "stable",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_knight_4_mon",
+     "op": "set",
+     "value": 1,
+     "notes": "keshik line tier upgrade (record text: \"Upgrade Veteran Keshiks to Elite Keshiks.\")"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_knight_4_mon#cost",
+    "catalog:technologies/upgrade_unit_knight_4_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_knight_4_mon#requirements",
+    "catalog:technologies/upgrade_unit_knight_4_mon#descriptionTemplate+descriptionArguments: \"Upgrade Veteran Keshiks to Elite Keshiks.\"",
+    "catalog:technologies/upgrade_unit_knight_4_mon#modifiers (heal_amount=0)",
+    "catalog:buildings/building_unit_cavalry_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_horsearcher_3_mon",
+   "pbgid": 130355,
+   "name": "Upgrade to Veteran",
+   "age": 3,
+   "building": "archery-range",
+   "cost": {
+    "food": 100,
+    "gold": 250
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_horsearcher_3_mon",
+     "op": "set",
+     "value": 1,
+     "notes": "mangudai line tier upgrade (record text: \"Upgrade Mangudai to Veteran Mangudai.\")"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_horsearcher_3_mon#cost",
+    "catalog:technologies/upgrade_unit_horsearcher_3_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_horsearcher_3_mon#requirements",
+    "catalog:technologies/upgrade_unit_horsearcher_3_mon#descriptionTemplate+descriptionArguments: \"Upgrade Mangudai to Veteran Mangudai.\"",
+    "catalog:buildings/building_unit_ranged_mon#researchableTechnologies"
+   ]
+  },
+  {
+   "id": "upgrade_unit_horsearcher_4_mon",
+   "pbgid": 130357,
+   "name": "Upgrade to Elite",
+   "age": 4,
+   "building": "archery-range",
+   "cost": {
+    "food": 300,
+    "gold": 700
+   },
+   "researchSeconds": 60,
+   "category": "unit-tier",
+   "effects": [
+    {
+     "kind": "unlock",
+     "target": "unit_horsearcher_4_mon",
+     "op": "set",
+     "value": 1,
+     "notes": "mangudai line tier upgrade (record text: \"Upgrade Veteran Mangudai to Elite Mangudai.\")"
+    }
+   ],
+   "evidence": [
+    "catalog:technologies/upgrade_unit_horsearcher_4_mon#cost",
+    "catalog:technologies/upgrade_unit_horsearcher_4_mon#researchTimeSeconds",
+    "catalog:technologies/upgrade_unit_horsearcher_4_mon#requirements",
+    "catalog:technologies/upgrade_unit_horsearcher_4_mon#descriptionTemplate+descriptionArguments: \"Upgrade Veteran Mangudai to Elite Mangudai.\"",
+    "catalog:buildings/building_unit_ranged_mon#researchableTechnologies"
+   ]
+  }
+ ],
+ "army": {
+  "lines": [
+   {
+    "key": "horseman",
+    "name": "Horseman (Early Horseman in Dark Age)",
+    "producers": [
+     "stable"
+    ],
+    "tiers": [
+     {
+      "id": "unit_horseman_1_mon",
+      "pbgid": 129569,
+      "name": "Early Horseman",
+      "age": 1,
+      "cost": {
+       "food": 100,
+       "wood": 20
+      },
+      "trainSeconds": 18,
+      "pop": 1,
+      "hp": 115
+     },
+     {
+      "id": "unit_horseman_2_mon",
+      "pbgid": 129570,
+      "name": "Horseman",
+      "age": 2,
+      "cost": {
+       "food": 100,
+       "wood": 20
+      },
+      "trainSeconds": 18,
+      "pop": 1,
+      "hp": 125
+     },
+     {
+      "id": "unit_horseman_3_mon",
+      "pbgid": 129575,
+      "name": "Veteran Horseman",
+      "age": 3,
+      "cost": {
+       "food": 100,
+       "wood": 20
+      },
+      "trainSeconds": 18,
+      "pop": 1,
+      "hp": 155
+     },
+     {
+      "id": "unit_horseman_4_mon",
+      "pbgid": 136251,
+      "name": "Elite Horseman",
+      "age": 4,
+      "cost": {
+       "food": 100,
+       "wood": 20
+      },
+      "trainSeconds": 18,
+      "pop": 1,
+      "hp": 180
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_horseman_2_mon",
+     "upgrade_unit_horseman_3_mon",
+     "upgrade_unit_horseman_4_mon"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i",
+     "upgrade_melee_damage_ii",
+     "upgrade_melee_damage_iii_mon",
+     "upgrade_melee_armor_i",
+     "upgrade_melee_armor_ii",
+     "upgrade_melee_armor_iii_mon",
+     "upgrade_ranged_armor_i",
+     "upgrade_ranged_armor_ii",
+     "upgrade_ranged_armor_iii_mon",
+     "upgrade_ranged_armor_i_improved_mon",
+     "upgrade_ranged_armor_ii_improved_mon",
+     "upgrade_ranged_armor_iii_improved_mon",
+     "upgrade_tech_military_academy",
+     "upgrade_tech_military_academy_improved_mon",
+     "upgrade_tech_university_biology_mon",
+     "upgrade_tech_university_biology_improved_mon",
+     "upgrade_weapon_fire_damage_mon",
+     "upgrade_weapon_fire_damage_improved_mon"
+    ],
+    "doubleProduction": [
+     {
+      "singleId": "unit_horseman_1_mon",
+      "doubleId": "unit_horseman_1_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -50,
+       "stone": 60,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "wood": 30,
+       "food": 150
+      },
+      "trainSeconds": 18
+     },
+     {
+      "singleId": "unit_horseman_2_mon",
+      "doubleId": "unit_horseman_2_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -50,
+       "stone": 60,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "wood": 30,
+       "food": 150
+      },
+      "trainSeconds": 18
+     },
+     {
+      "singleId": "unit_horseman_3_mon",
+      "doubleId": "unit_horseman_3_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -50,
+       "stone": 60,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "wood": 30,
+       "food": 150
+      },
+      "trainSeconds": 18
+     },
+     {
+      "singleId": "unit_horseman_4_mon",
+      "doubleId": "unit_horseman_4_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -50,
+       "stone": 60,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "wood": 30,
+       "food": 150
+      },
+      "trainSeconds": 18
+     }
+    ],
+    "notes": "Train time 18 s already includes the civ bonus \"Horsemen train +25% faster\" (other civs: 22.5 s, e.g. unit_horseman_2_eng); do not apply it again. Early Horseman is the Dark Age tier (Stable has no age requirement).",
+    "evidence": [
+     "catalog:units/unit_horseman_1_mon#cost",
+     "catalog:units/unit_horseman_2_mon#cost",
+     "catalog:units/unit_horseman_3_mon#cost",
+     "catalog:units/unit_horseman_4_mon#cost",
+     "catalog:units/unit_horseman_1_mon#trainTimeSeconds",
+     "catalog:units/unit_horseman_1_mon#hp",
+     "raw:ebps/races/mongol/buildings/building_unit_cavalry_mon.json#default/spawner_ext/spawn_items (double items: number_to_spawn + item_cost_adjustment)",
+     "catalog:units/unit_horseman_2_eng#trainTimeSeconds (22.5)",
+     "locale:11227209 (Horsemen train +25% faster, args from raw:army/standard_mode/normal_mongol.rgd#default/army_bag/ui/global_traits_summary/trait[0])"
+    ]
+   },
+   {
+    "key": "keshik",
+    "name": "Keshik (Mongol knight archetype)",
+    "producers": [
+     "stable"
+    ],
+    "tiers": [
+     {
+      "id": "unit_knight_2_mon",
+      "pbgid": 129609,
+      "name": "Keshik",
+      "age": 2,
+      "cost": {
+       "food": 120,
+       "gold": 80
+      },
+      "trainSeconds": 30,
+      "pop": 1,
+      "hp": 150
+     },
+     {
+      "id": "unit_knight_3_mon",
+      "pbgid": 129610,
+      "name": "Veteran Keshik",
+      "age": 3,
+      "cost": {
+       "food": 120,
+       "gold": 80
+      },
+      "trainSeconds": 30,
+      "pop": 1,
+      "hp": 180
+     },
+     {
+      "id": "unit_knight_4_mon",
+      "pbgid": 136254,
+      "name": "Elite Keshik",
+      "age": 4,
+      "cost": {
+       "food": 120,
+       "gold": 80
+      },
+      "trainSeconds": 30,
+      "pop": 1,
+      "hp": 215
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_knight_3_mon",
+     "upgrade_unit_knight_4_mon"
+    ],
+    "applicableTechs": [
+     "upgrade_melee_damage_i",
+     "upgrade_melee_damage_ii",
+     "upgrade_melee_damage_iii_mon",
+     "upgrade_melee_armor_i",
+     "upgrade_melee_armor_ii",
+     "upgrade_melee_armor_iii_mon",
+     "upgrade_ranged_armor_i",
+     "upgrade_ranged_armor_ii",
+     "upgrade_ranged_armor_iii_mon",
+     "upgrade_ranged_armor_i_improved_mon",
+     "upgrade_ranged_armor_ii_improved_mon",
+     "upgrade_ranged_armor_iii_improved_mon",
+     "upgrade_tech_military_academy",
+     "upgrade_tech_military_academy_improved_mon",
+     "upgrade_tech_university_biology_mon",
+     "upgrade_tech_university_biology_improved_mon",
+     "upgrade_weapon_fire_damage_mon",
+     "upgrade_weapon_fire_damage_improved_mon",
+     "upgrade_lancer_healing_mon",
+     "upgrade_lancer_healing_improved_mon"
+    ],
+    "doubleProduction": [
+     {
+      "singleId": "unit_knight_2_mon",
+      "doubleId": "unit_knight_2_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -60,
+       "gold": -40,
+       "stone": 100
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 120,
+       "stone": 100,
+       "food": 180
+      },
+      "trainSeconds": 30
+     },
+     {
+      "singleId": "unit_knight_3_mon",
+      "doubleId": "unit_knight_3_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -60,
+       "gold": -40,
+       "stone": 100
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 120,
+       "stone": 100,
+       "food": 180
+      },
+      "trainSeconds": 30
+     },
+     {
+      "singleId": "unit_knight_4_mon",
+      "doubleId": "unit_knight_4_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -60,
+       "gold": -40,
+       "stone": 100
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 120,
+       "stone": 100,
+       "food": 180
+      },
+      "trainSeconds": 30
+     }
+    ],
+    "notes": "Feudal heavy cavalry that heals after each attack (Steppe Lancers raise it). racebps knight archetype = unit_knight_2_mon. No Lancer unit exists in the 16.3 Mongol roster (the \"Early Lancers\" line in codex 11197943 is a historical copy).",
+    "evidence": [
+     "catalog:units/unit_knight_2_mon#cost",
+     "catalog:units/unit_knight_3_mon#cost",
+     "catalog:units/unit_knight_4_mon#cost",
+     "catalog:units/unit_knight_2_mon#trainTimeSeconds",
+     "catalog:units/unit_knight_2_mon#hp",
+     "raw:ebps/races/mongol/buildings/building_unit_cavalry_mon.json#default/spawner_ext/spawn_items (double items: number_to_spawn + item_cost_adjustment)",
+     "raw:racebps/mongol.json#default/race_bag/blueprint_archetypes/knight/$PBGNAME",
+     "locale:11227207"
+    ]
+   },
+   {
+    "key": "mangudai",
+    "name": "Mangudai (horse archer)",
+    "producers": [
+     "archery-range"
+    ],
+    "tiers": [
+     {
+      "id": "unit_horsearcher_2_mon",
+      "pbgid": 129666,
+      "name": "Mangudai",
+      "age": 2,
+      "cost": {
+       "food": 90,
+       "gold": 60
+      },
+      "trainSeconds": 28,
+      "pop": 1,
+      "hp": 85
+     },
+     {
+      "id": "unit_horsearcher_3_mon",
+      "pbgid": 129667,
+      "name": "Veteran Mangudai",
+      "age": 3,
+      "cost": {
+       "food": 90,
+       "gold": 60
+      },
+      "trainSeconds": 28,
+      "pop": 1,
+      "hp": 105
+     },
+     {
+      "id": "unit_horsearcher_4_mon",
+      "pbgid": 136250,
+      "name": "Elite Mangudai",
+      "age": 4,
+      "cost": {
+       "food": 90,
+       "gold": 60
+      },
+      "trainSeconds": 28,
+      "pop": 1,
+      "hp": 120
+     }
+    ],
+    "tierUpgrades": [
+     "upgrade_unit_horsearcher_3_mon",
+     "upgrade_unit_horsearcher_4_mon"
+    ],
+    "applicableTechs": [
+     "upgrade_ranged_damage_i",
+     "upgrade_ranged_damage_ii",
+     "upgrade_ranged_damage_iii_mon",
+     "upgrade_ranged_damage_i_improved_mon",
+     "upgrade_ranged_damage_ii_improved_mon",
+     "upgrade_ranged_damage_iii_improved_mon",
+     "upgrade_ranged_armor_i",
+     "upgrade_ranged_armor_ii",
+     "upgrade_ranged_armor_iii_mon",
+     "upgrade_ranged_armor_i_improved_mon",
+     "upgrade_ranged_armor_ii_improved_mon",
+     "upgrade_ranged_armor_iii_improved_mon",
+     "upgrade_melee_armor_i",
+     "upgrade_melee_armor_ii",
+     "upgrade_melee_armor_iii_mon",
+     "upgrade_tech_military_academy",
+     "upgrade_tech_military_academy_improved_mon",
+     "upgrade_tech_university_biology_mon",
+     "upgrade_tech_university_biology_improved_mon",
+     "upgrade_mangudai_weapon_damage_mon",
+     "upgrade_mangudai_weapon_damage_improved_mon"
+    ],
+    "doubleProduction": [
+     {
+      "singleId": "unit_horsearcher_2_mon",
+      "doubleId": "unit_horsearcher_2_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -45,
+       "gold": -30,
+       "stone": 75
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 75,
+       "food": 135
+      },
+      "trainSeconds": 28
+     },
+     {
+      "singleId": "unit_horsearcher_3_mon",
+      "doubleId": "unit_horsearcher_3_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -45,
+       "gold": -30,
+       "stone": 75
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 75,
+       "food": 135
+      },
+      "trainSeconds": 28
+     },
+     {
+      "singleId": "unit_horsearcher_4_mon",
+      "doubleId": "unit_horsearcher_4_double_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "food": -45,
+       "gold": -30,
+       "stone": 75
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 75,
+       "food": 135
+      },
+      "trainSeconds": 28
+     }
+    ],
+    "notes": "Fires while moving. Trained at the Archery Range.",
+    "evidence": [
+     "catalog:units/unit_horsearcher_2_mon#cost",
+     "catalog:units/unit_horsearcher_3_mon#cost",
+     "catalog:units/unit_horsearcher_4_mon#cost",
+     "catalog:units/unit_horsearcher_2_mon#trainTimeSeconds",
+     "catalog:units/unit_horsearcher_2_mon#hp",
+     "raw:ebps/races/mongol/buildings/building_unit_ranged_mon.json#default/spawner_ext/spawn_items (double items: number_to_spawn + item_cost_adjustment)",
+     "locale:11227207"
+    ]
+   },
+   {
+    "key": "khans-hunter",
+    "name": "Khan's Hunter (needs Deer Stones)",
+    "producers": [
+     "archery-range"
+    ],
+    "tiers": [
+     {
+      "id": "unit_khan_hunter_deer_2_mon",
+      "pbgid": 9000101,
+      "name": "Khan's Hunter",
+      "age": 2,
+      "cost": {
+       "gold": 60,
+       "wood": 60
+      },
+      "trainSeconds": 20,
+      "pop": 1,
+      "hp": 75
+     },
+     {
+      "id": "unit_khan_hunter_deer_3_mon",
+      "pbgid": 9000103,
+      "name": "Veteran Khan's Hunter",
+      "age": 3,
+      "cost": {
+       "gold": 60,
+       "wood": 60
+      },
+      "trainSeconds": 20,
+      "pop": 1,
+      "hp": 90
+     },
+     {
+      "id": "unit_khan_hunter_deer_4_mon",
+      "pbgid": 9000105,
+      "name": "Elite Khan's Hunter",
+      "age": 4,
+      "cost": {
+       "gold": 60,
+       "wood": 60
+      },
+      "trainSeconds": 20,
+      "pop": 1,
+      "hp": 110
+     }
+    ],
+    "tierUpgrades": [],
+    "applicableTechs": [
+     "upgrade_ranged_damage_i",
+     "upgrade_ranged_damage_ii",
+     "upgrade_ranged_damage_iii_mon",
+     "upgrade_ranged_damage_i_improved_mon",
+     "upgrade_ranged_damage_ii_improved_mon",
+     "upgrade_ranged_damage_iii_improved_mon",
+     "upgrade_ranged_armor_i",
+     "upgrade_ranged_armor_ii",
+     "upgrade_ranged_armor_iii_mon",
+     "upgrade_ranged_armor_i_improved_mon",
+     "upgrade_ranged_armor_ii_improved_mon",
+     "upgrade_ranged_armor_iii_improved_mon",
+     "upgrade_melee_armor_i",
+     "upgrade_melee_armor_ii",
+     "upgrade_melee_armor_iii_mon",
+     "upgrade_tech_military_academy",
+     "upgrade_tech_military_academy_improved_mon",
+     "upgrade_tech_university_biology_mon",
+     "upgrade_tech_university_biology_improved_mon"
+    ],
+    "doubleProduction": [
+     {
+      "singleId": "unit_khan_hunter_deer_2_mon",
+      "doubleId": "unit_khan_hunter_deer_double_2_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "gold": -30,
+       "stone": 60,
+       "wood": -30
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 60,
+       "wood": 90
+      },
+      "trainSeconds": 20
+     },
+     {
+      "singleId": "unit_khan_hunter_deer_3_mon",
+      "doubleId": "unit_khan_hunter_deer_double_3_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "gold": -30,
+       "stone": 60,
+       "wood": -30
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 60,
+       "wood": 90
+      },
+      "trainSeconds": 20
+     },
+     {
+      "singleId": "unit_khan_hunter_deer_4_mon",
+      "doubleId": "unit_khan_hunter_deer_double_4_mon",
+      "unitsPerItem": 2,
+      "itemCostAdjustment": {
+       "gold": -30,
+       "stone": 60,
+       "wood": -30
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 60,
+       "wood": 90
+      },
+      "trainSeconds": 20
+     }
+    ],
+    "notes": "Unlocked by the Deer Stones landmark. Tier entities exist per age (_2/_3/_4) but no tier-upgrade research is listed at the Archery Range; tier change is presumably automatic with age (not decoded).",
+    "evidence": [
+     "catalog:units/unit_khan_hunter_deer_2_mon#cost",
+     "catalog:units/unit_khan_hunter_deer_3_mon#cost",
+     "catalog:units/unit_khan_hunter_deer_4_mon#cost",
+     "catalog:units/unit_khan_hunter_deer_2_mon#trainTimeSeconds",
+     "catalog:units/unit_khan_hunter_deer_2_mon#hp",
+     "raw:ebps/races/mongol/buildings/building_unit_ranged_mon.json#default/spawner_ext/spawn_items (double items: number_to_spawn + item_cost_adjustment)",
+     "locale:11265649"
+    ],
+    "requiresLandmark": "deer-stones"
+   }
+  ]
+ },
+ "mechanics": [
+  {
+   "key": "population",
+   "summary": "Start at the 200 population cap; no Houses. The Ger is the house archetype but has nothing to add because base cap = max cap = 200.",
+   "params": {
+    "noHouses": true,
+    "popCap": 200,
+    "maxPopCap": 200,
+    "gerPopProvided": 0,
+    "tcPopProvided": 0,
+    "checkPopCapWhenQueuing": false
+   },
+   "status": "resolved",
+   "evidence": [
+    "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/race_population_cap_table/base_personnel_cap",
+    "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/race_population_cap_table/max_personnel_cap",
+    "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/resource_max_cap/popcap",
+    "raw:army/standard_mode/normal_english.rgd#default/army_bag/race_population_cap_table/base_personnel_cap (0)",
+    "locale:11227209 (Start with a packed Ger, maximum population limit, and no need for Houses)"
+   ]
+  },
+  {
+   "key": "ger",
+   "summary": "Ger: 100 wood, 20 s, drop-off for food, wood and gold (not stone); Mongol lumber camp + mill + house in one. One starts packed.",
+   "params": {
+    "id": "building_house_mon",
+    "cost": {
+     "wood": 100
+    },
+    "buildSeconds": 20,
+    "dropoff": [
+     "food",
+     "wood",
+     "gold"
+    ],
+    "startsPacked": 1,
+    "unpackSeconds": 8,
+    "packChannelSeconds": 10,
+    "packedSpeedEngineUnits": 3
+   },
+   "status": "resolved",
+   "evidence": [
+    "catalog:buildings/building_house_mon#cost",
+    "catalog:buildings/building_house_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_house_mon.json#default/resource_drop_off_ext/accepted_resources/{food,wood,gold,stone} -> ['food', 'wood', 'gold']",
+    "raw:statemodel_schema/buildings/civilizations/mongols/house_mon.rgd#default/schema_bag/int_properties/statemodel_int_property[1]/default",
+    "raw:abilities/toggle_abilities/mongol/pack_building_mon.rgd#default/ability_bag/channeling/channeling_time_second",
+    "locale:11161060"
+   ]
+  },
+  {
+   "key": "pasture",
+   "summary": "No Farms. Pastures (150 wood, 20 s) spawn one herdable 200-food sheep per interval; sheep are gathered as herded_animal (0.75/s, carry 10) and dropped at a Ger/TC. Ovoo influence shortens the interval; spawning stops when too many ungathered sheep accumulate.",
+   "params": {
+    "id": "building_pasture_mon",
+    "cost": {
+     "wood": 150
+    },
+    "buildSeconds": 20,
+    "interval": 140,
+    "intervalSource": "installed Pasture tooltip argument (current record)",
+    "sheepEntityProductionSeconds": 112,
+    "intervalCandidates": {
+     "tooltipArg": 140,
+     "sheepEntityTime": 112,
+     "statemodelDefault": 90,
+     "legacyLocale11153023": 90
+    },
+    "ovooInfluenceFaster": true,
+    "ovooInfluenceInterval": null,
+    "sheepFood": 200,
+    "sheepSubType": "herded_animal",
+    "gatherRate": 0.75,
+    "carry": 10,
+    "dropoffOnPasture": false,
+    "sheepCapPerPasture": null,
+    "foodGenerationSlots": 3,
+    "husbandry": {
+     "id": "upgrade_econ_resource_pasture_spawn_rate_mon",
+     "cost": {
+      "food": 25,
+      "gold": 75
+     },
+     "researchSeconds": 45,
+     "age": 3,
+     "effect": {
+      "kind": "other",
+      "target": "pasture_interval",
+      "op": "add",
+      "value": -20,
+      "notes": "Pastures produce sheep 20 s faster."
+     },
+     "availableInStandardMode": false
+    },
+    "husbandryImproved": {
+     "id": "upgrade_econ_resource_pasture_spawn_rate_improved_mon",
+     "cost": {
+      "food": 25,
+      "gold": 75,
+      "stone": 100
+     },
+     "researchSeconds": 45,
+     "age": 3,
+     "effect": {
+      "kind": "other",
+      "target": "pasture_interval",
+      "op": "add",
+      "value": -30,
+      "notes": "30 s faster (10 s more after Husbandry)."
+     },
+     "availableInStandardMode": false
+    },
+    "startingSheep": {
+     "count": 5,
+     "food": 200,
+     "subType": "herded_animal",
+     "note": "gaia sheep from the army start list, gathered like any sheep"
+    },
+    "packable": true,
+    "unpackSeconds": 8,
+    "packedCostRecord": {
+     "wood": 100
+    }
+   },
+   "status": "partial",
+   "evidence": [
+    "catalog:buildings/building_pasture_mon#cost",
+    "catalog:buildings/building_pasture_mon#buildTimeSeconds",
+    "raw:ebps/races/mongol/buildings/building_pasture_mon.json#default/ui_ext/help_text_formatter/formatter_arguments/int_value with locale:11217665 (Automatically produces a gatherable Sheep every 140 seconds. Will eventually stop producing if too many Sheep are produced and not gathered.)",
+    "raw:ebps/races/mongol/animals/gaia_herdable_sheep_mon.json#default/cost_ext/time_cost/time_seconds",
+    "raw:ebps/races/mongol/animals/gaia_herdable_sheep_mon.json#default/resource_deposit_ext/initial_amount",
+    "raw:ebps/races/mongol/animals/gaia_herdable_sheep_mon.json#default/resource_deposit_ext/resource_sub_type/$PBGNAME",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[16]/default (pasture_default_sheep_spawn_time_mon)",
+    "raw:ebps/races/mongol/buildings/building_pasture_mon.json#default/interactive_object_ext/type_list/type[3]/max_number (interaction food_generation)",
+    "raw:ebps/races/mongol/buildings/building_pasture_mon.json#default/district_bonuses_ext/district_bonuses/district_bonus/action_tree/ActionTree_OpeningBranch (district_ovoo\\root; Ovoo/Stupa/Prayer Tent district)",
+    "locale:11227198 (Pastures produce Sheep quicker when within the influence of an Ovoo)",
+    "locale:11196996",
+    "catalog:technologies/upgrade_econ_resource_pasture_spawn_rate_mon#descriptionTemplate+descriptionArguments (20)",
+    "catalog:technologies/upgrade_econ_resource_pasture_spawn_rate_improved_mon#descriptionTemplate+descriptionArguments ([30, 10])",
+    "raw:ebps/races/mongol/buildings/building_house_mon.json#default/upgrade_ext/standard_upgrades (no Husbandry; campaign/upgrade_ext lists it at [18],[19])",
+    "catalog:buildings/building_pasture_mon#researchableTechnologies (ages only)",
+    "raw:racebps/mongol.json#default/race_bag/blueprint_archetypes/farm/$PBGNAME (empty)",
+    "raw:racebps/mongol.json#default/race_bag/blueprint_archetypes/vps_farm/$PBGNAME (building_pasture_mon)"
+   ]
+  },
+  {
+   "key": "ovoo_stone",
+   "summary": "Stone only from Ovoos (built on a stone outcrop) and the White Stupa: passive income, no villagers. Rate per Ovoo by age.",
+   "params": {
+    "stonePerSecondByAge": {
+     "1": 1.167,
+     "2": 1.67,
+     "3": 2.34,
+     "4": 2.84
+    },
+    "stonePerMinuteTooltipByAge": {
+     "1": 70,
+     "2": 100,
+     "3": 140,
+     "4": 170
+    },
+    "op": "set per age (age-up upgrade sets gather_rate_stone)",
+    "ovooLimit": 1,
+    "ovooCost": {
+     "wood": 150
+    },
+    "ovooBuildSeconds": 15,
+    "villagersCanGatherStone": false,
+    "marketStoneTrade": false,
+    "influenceRadiusMetres": 8,
+    "whiteStupaStonePerSecond": 4.0,
+    "otherStoneSources": [
+     "Stone Bounty (+50/+75 stone per ignited enemy building)",
+     "Stone Commerce (Silk Road tier 4: traders +10%/+20% stone)"
+    ]
+   },
+   "status": "resolved",
+   "evidence": [
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[20]/default (stone_rate_mon)",
+    "raw:upgrade/races/mongol/research/ovoo/upgrade_ovoo_feudal.json#default/upgrade_bag/float_properties/upgradebag_float_property/value",
+    "raw:upgrade/races/mongol/research/ovoo/upgrade_ovoo_castle.json#default/upgrade_bag/float_properties/upgradebag_float_property/value",
+    "raw:upgrade/races/mongol/research/ovoo/upgrade_ovoo_imperial.json#default/upgrade_bag/float_properties/upgradebag_float_property/value",
+    "raw:upgrade/races/mongol/research/ovoo/upgrade_ovoo_feudal.json#default/upgrade_bag/float_properties/upgradebag_float_property/id (gather_rate_stone)",
+    "locale:11227206 (Ovoos harvest +70, 100, 140, 170 Stone per minute after each age up; args raw:army/standard_mode/normal_mongol.rgd#default/army_bag/ui/global_traits_summary/trait[8])",
+    "catalog:buildings/building_stone_deposit_ovoo_mon#descriptionTemplate+descriptionArguments ([70, 100, 140, 170])",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/bool_properties/statemodel_bool_property[16]/default (allow_mongol_stone_market)",
+    "locale:11155058 (Villagers cannot gather Stone, nor can it be gained through the Market or tribute)",
+    "locale:11153030 (Constructing a new Ovoo will destroy the prior one)"
+   ]
+  },
+  {
+   "key": "ovoo_depletion",
+   "summary": "An Ovoo draws on the outcrop it stands on: placement requires a stone deposit with gatherable stone > 0 that is not already claimed, and the game has an \"Ovoo is Depleted\" state. Default deposit records hold 1200 (small) / 2400 (large); maps may override.",
+   "params": {
+    "smallDeposit": 1200,
+    "largeDeposit": 2400,
+    "minutesToDepleteSmallAtFeudal": 12.0,
+    "minutesToDepleteLargeAtFeudal": 24.0
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:ebps/races/mongol/buildings/building_stone_deposit_ovoo_mon.json#default/construction_ext/placement_requirements/requirements/required_near_entity/near_entity_requirement/required_entity_gatherable_resources_remaining (stone > 0)",
+    "raw:ebps/gameplay/resources/stone/resource_stone_deposit_small.rgd#default/resource_deposit_ext/initial_amount",
+    "raw:ebps/gameplay/resources/stone/resource_stone_deposit.rgd#default/resource_deposit_ext/initial_amount",
+    "locale:11158476 (Ovoo is Depleted)",
+    "locale:11181006"
+   ]
+  },
+  {
+   "key": "white_stupa_stone",
+   "summary": "White Stupa (Imperial landmark): acts as an Ovoo with 240 stone/min without an outcrop and halves the stone cost of double unit production.",
+   "params": {
+    "stonePerMinute": 240,
+    "stonePerSecond": 4.0,
+    "doubleProductionStoneMultiplier": 0.5,
+    "stacksWithOutcropOvoo": null
+   },
+   "status": "partial",
+   "evidence": [
+    "catalog:buildings/building_wonder_age3_stupa_mon#descriptionTemplate+descriptionArguments ([240, 50])",
+    "raw:upgrade/races/mongol/research/unique/upgrade_free_stupa_unit_stone_discount.json#default/upgrade_bag/float_properties/upgradebag_float_property/value"
+   ]
+  },
+  {
+   "key": "double_production",
+   "summary": "Producers inside Ovoo influence (or a Prayer Tent influence after Monastic Shrines; the TC for villagers) can queue a *_double_* item: same entity, number_to_spawn 2, with an item cost adjustment of -50% of one unit's normal resources and +stone. The *_double_* catalog records are these items, not separate units.",
+   "params": {
+    "requires": "producer within Ovoo influence (district range 8) / White Stupa / Prayer Tent with Monastic Shrines",
+    "costRule": "chargedCostIfMultiplied = 2 x single unit cost + itemCostAdjustment (= 1.5 x single unit resources + stone per pair). Whether the engine multiplies squad cost by number_to_spawn is not decoded; the alternative (1 x cost + adjustment = 0.5 x for two units) is implausible.",
+    "timeRule": "item uses the squad production time (same as one unit), giving 2 units per production cycle",
+    "whiteStupaStoneMultiplier": 0.5,
+    "items": {
+     "unit_villager_1_double_mon": {
+      "producer": "town-center",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 50
+      },
+      "itemCostAdjustment": {
+       "food": -25,
+       "stone": 60
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "food": 75
+      },
+      "stone": 60,
+      "trainSeconds": 20
+     },
+     "unit_horseman_1_double_mon": {
+      "producer": "stable",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 100,
+       "wood": 20
+      },
+      "itemCostAdjustment": {
+       "food": -50,
+       "stone": 60,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "wood": 30,
+       "food": 150
+      },
+      "stone": 60,
+      "trainSeconds": 18
+     },
+     "unit_horseman_2_double_mon": {
+      "producer": "stable",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 100,
+       "wood": 20
+      },
+      "itemCostAdjustment": {
+       "food": -50,
+       "stone": 60,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "wood": 30,
+       "food": 150
+      },
+      "stone": 60,
+      "trainSeconds": 18
+     },
+     "unit_horseman_3_double_mon": {
+      "producer": "stable",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 100,
+       "wood": 20
+      },
+      "itemCostAdjustment": {
+       "food": -50,
+       "stone": 60,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "wood": 30,
+       "food": 150
+      },
+      "stone": 60,
+      "trainSeconds": 18
+     },
+     "unit_horseman_4_double_mon": {
+      "producer": "stable",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 100,
+       "wood": 20
+      },
+      "itemCostAdjustment": {
+       "food": -50,
+       "stone": 60,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 60,
+       "wood": 30,
+       "food": 150
+      },
+      "stone": 60,
+      "trainSeconds": 18
+     },
+     "unit_knight_2_double_mon": {
+      "producer": "stable",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 120,
+       "gold": 80
+      },
+      "itemCostAdjustment": {
+       "food": -60,
+       "gold": -40,
+       "stone": 100
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 120,
+       "stone": 100,
+       "food": 180
+      },
+      "stone": 100,
+      "trainSeconds": 30
+     },
+     "unit_knight_3_double_mon": {
+      "producer": "stable",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 120,
+       "gold": 80
+      },
+      "itemCostAdjustment": {
+       "food": -60,
+       "gold": -40,
+       "stone": 100
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 120,
+       "stone": 100,
+       "food": 180
+      },
+      "stone": 100,
+      "trainSeconds": 30
+     },
+     "unit_knight_4_double_mon": {
+      "producer": "stable",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 120,
+       "gold": 80
+      },
+      "itemCostAdjustment": {
+       "food": -60,
+       "gold": -40,
+       "stone": 100
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 120,
+       "stone": 100,
+       "food": 180
+      },
+      "stone": 100,
+      "trainSeconds": 30
+     },
+     "unit_spearman_1_double_mon": {
+      "producer": "barracks",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 60,
+       "wood": 20
+      },
+      "itemCostAdjustment": {
+       "food": -30,
+       "stone": 40,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 40,
+       "wood": 30,
+       "food": 90
+      },
+      "stone": 40,
+      "trainSeconds": 15
+     },
+     "unit_spearman_2_double_mon": {
+      "producer": "barracks",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 60,
+       "wood": 20
+      },
+      "itemCostAdjustment": {
+       "food": -30,
+       "stone": 40,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 40,
+       "wood": 30,
+       "food": 90
+      },
+      "stone": 40,
+      "trainSeconds": 15
+     },
+     "unit_spearman_3_double_mon": {
+      "producer": "barracks",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 60,
+       "wood": 20
+      },
+      "itemCostAdjustment": {
+       "food": -30,
+       "stone": 40,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 40,
+       "wood": 30,
+       "food": 90
+      },
+      "stone": 40,
+      "trainSeconds": 15
+     },
+     "unit_spearman_4_double_mon": {
+      "producer": "barracks",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 60,
+       "wood": 20
+      },
+      "itemCostAdjustment": {
+       "food": -30,
+       "stone": 40,
+       "wood": -10
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 40,
+       "wood": 30,
+       "food": 90
+      },
+      "stone": 40,
+      "trainSeconds": 15
+     },
+     "unit_manatarms_3_double_mon": {
+      "producer": "barracks",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 90,
+       "gold": 20
+      },
+      "itemCostAdjustment": {
+       "food": -45,
+       "gold": -10,
+       "stone": 55
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 30,
+       "stone": 55,
+       "food": 135
+      },
+      "stone": 55,
+      "trainSeconds": 20.5
+     },
+     "unit_manatarms_4_double_mon": {
+      "producer": "barracks",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 90,
+       "gold": 20
+      },
+      "itemCostAdjustment": {
+       "food": -45,
+       "gold": -10,
+       "stone": 55
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 30,
+       "stone": 55,
+       "food": 135
+      },
+      "stone": 55,
+      "trainSeconds": 20.5
+     },
+     "unit_archer_2_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 30,
+       "wood": 50
+      },
+      "itemCostAdjustment": {
+       "food": -15,
+       "stone": 40,
+       "wood": -25
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 40,
+       "wood": 75,
+       "food": 45
+      },
+      "stone": 40,
+      "trainSeconds": 15
+     },
+     "unit_archer_3_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 30,
+       "wood": 50
+      },
+      "itemCostAdjustment": {
+       "food": -15,
+       "stone": 40,
+       "wood": -25
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 40,
+       "wood": 75,
+       "food": 45
+      },
+      "stone": 40,
+      "trainSeconds": 15
+     },
+     "unit_archer_4_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 30,
+       "wood": 50
+      },
+      "itemCostAdjustment": {
+       "food": -15,
+       "stone": 40,
+       "wood": -25
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 40,
+       "wood": 75,
+       "food": 45
+      },
+      "stone": 40,
+      "trainSeconds": 15
+     },
+     "unit_crossbowman_3_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 80,
+       "gold": 40
+      },
+      "itemCostAdjustment": {
+       "food": -40,
+       "gold": -20,
+       "stone": 60
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 60,
+       "stone": 60,
+       "food": 120
+      },
+      "stone": 60,
+      "trainSeconds": 22.5
+     },
+     "unit_crossbowman_4_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 80,
+       "gold": 40
+      },
+      "itemCostAdjustment": {
+       "food": -40,
+       "gold": -20,
+       "stone": 60
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 60,
+       "stone": 60,
+       "food": 120
+      },
+      "stone": 60,
+      "trainSeconds": 22.5
+     },
+     "unit_handcannon_4_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 120,
+       "gold": 120
+      },
+      "itemCostAdjustment": {
+       "food": -60,
+       "gold": -60,
+       "stone": 120
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 180,
+       "stone": 120,
+       "food": 180
+      },
+      "stone": 120,
+      "trainSeconds": 35
+     },
+     "unit_horsearcher_2_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 90,
+       "gold": 60
+      },
+      "itemCostAdjustment": {
+       "food": -45,
+       "gold": -30,
+       "stone": 75
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 75,
+       "food": 135
+      },
+      "stone": 75,
+      "trainSeconds": 28
+     },
+     "unit_horsearcher_3_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 90,
+       "gold": 60
+      },
+      "itemCostAdjustment": {
+       "food": -45,
+       "gold": -30,
+       "stone": 75
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 75,
+       "food": 135
+      },
+      "stone": 75,
+      "trainSeconds": 28
+     },
+     "unit_horsearcher_4_double_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "food": 90,
+       "gold": 60
+      },
+      "itemCostAdjustment": {
+       "food": -45,
+       "gold": -30,
+       "stone": 75
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 75,
+       "food": 135
+      },
+      "stone": 75,
+      "trainSeconds": 28
+     },
+     "unit_khan_hunter_deer_double_2_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 60,
+       "gold": 60
+      },
+      "itemCostAdjustment": {
+       "gold": -30,
+       "stone": 60,
+       "wood": -30
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 60,
+       "wood": 90
+      },
+      "stone": 60,
+      "trainSeconds": 20
+     },
+     "unit_khan_hunter_deer_double_3_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 60,
+       "gold": 60
+      },
+      "itemCostAdjustment": {
+       "gold": -30,
+       "stone": 60,
+       "wood": -30
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 60,
+       "wood": 90
+      },
+      "stone": 60,
+      "trainSeconds": 20
+     },
+     "unit_khan_hunter_deer_double_4_mon": {
+      "producer": "archery-range",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 60,
+       "gold": 60
+      },
+      "itemCostAdjustment": {
+       "gold": -30,
+       "stone": 60,
+       "wood": -30
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 60,
+       "wood": 90
+      },
+      "stone": 60,
+      "trainSeconds": 20
+     },
+     "unit_trade_cart_double_mon": {
+      "producer": "market",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 60,
+       "gold": 60
+      },
+      "itemCostAdjustment": {
+       "gold": -30,
+       "stone": 60,
+       "wood": -30
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 90,
+       "stone": 60,
+       "wood": 90
+      },
+      "stone": 60,
+      "trainSeconds": 30
+     },
+     "unit_monk_3_double_mon": {
+      "producer": "prayer-tent",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "gold": 150
+      },
+      "itemCostAdjustment": {
+       "gold": -75,
+       "stone": 75
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 225,
+       "stone": 75
+      },
+      "stone": 75,
+      "trainSeconds": 30
+     },
+     "unit_springald_3_double_mon": {
+      "producer": "siege-workshop",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 150,
+       "gold": 100
+      },
+      "itemCostAdjustment": {
+       "gold": -50,
+       "stone": 125,
+       "wood": -75
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 150,
+       "stone": 125,
+       "wood": 225
+      },
+      "stone": 125,
+      "trainSeconds": 20
+     },
+     "unit_mangonel_3_double_mon": {
+      "producer": "siege-workshop",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 400,
+       "gold": 200
+      },
+      "itemCostAdjustment": {
+       "gold": -100,
+       "stone": 300,
+       "wood": -200
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 300,
+       "stone": 300,
+       "wood": 600
+      },
+      "stone": 300,
+      "trainSeconds": 40
+     },
+     "unit_trebuchet_4_tr_double_mon": {
+      "producer": "siege-workshop",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 300,
+       "gold": 100
+      },
+      "itemCostAdjustment": {
+       "gold": -50,
+       "stone": 200,
+       "wood": -150
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 150,
+       "stone": 200,
+       "wood": 450
+      },
+      "stone": 200,
+      "trainSeconds": 30
+     },
+     "unit_bombard_4_double_mon": {
+      "producer": "siege-workshop",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 350,
+       "gold": 500
+      },
+      "itemCostAdjustment": {
+       "gold": -250,
+       "stone": 425,
+       "wood": -175
+      },
+      "chargedCostIfMultiplied": {
+       "gold": 750,
+       "stone": 425,
+       "wood": 525
+      },
+      "stone": 425,
+      "trainSeconds": 45
+     },
+     "unit_workshop_ram_3_double_mon": {
+      "producer": "siege-workshop",
+      "unitsPerItem": 2,
+      "singleUnitCost": {
+       "wood": 200
+      },
+      "itemCostAdjustment": {
+       "stone": 100,
+       "wood": -100
+      },
+      "chargedCostIfMultiplied": {
+       "stone": 100,
+       "wood": 300
+      },
+      "stone": 100,
+      "trainSeconds": 35
+     }
+    }
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:ebps/races/mongol/buildings/building_unit_cavalry_mon.json#default/spawner_ext/spawn_items/spawn_item[11] (unit_knight_2_double_mon: number_to_spawn 2, adjustment food -60 gold -40 stone +100)",
+    "raw:ebps/races/mongol/buildings/building_unit_cavalry_mon.json#default/spawner_ext/spawn_items/spawn_item[7] (unit_horseman_1_double_mon: number_to_spawn 2, food -50 wood -10 stone +60)",
+    "raw:ebps/races/mongol/buildings/building_town_center_capital_mon.json#default/spawner_ext/spawn_items/spawn_item[2] (unit_villager_1_double_mon: food -25 stone +60)",
+    "raw:sbps/races/mongol/unit_knight_2_double_mon.json#default/squad_loadout_ext/unit_list/loadout_data/type/$PBGNAME (num 1, type unit_knight_2_mon: same entity as the single Keshik)",
+    "catalog:units/unit_knight_2_double_mon#trainTimeSeconds",
+    "locale:11153032 (Unit production produces two units instead of one)",
+    "locale:11167684 (Your Town Center must be within the influence of an Ovoo to access Improved Production for Villagers)",
+    "catalog:technologies/upgrade_religious_monastery_ovoo_mon#descriptionTemplate"
+   ]
+  },
+  {
+   "key": "improved_technologies",
+   "summary": "Buildings inside Ovoo influence offer Improved versions of some technologies: same base cost plus stone, stronger effect. There is no single multiplier: each record states its own improved value, and after the normal tech the Improved one adds only the difference.",
+   "params": {
+    "examples": {
+     "Horticulture": [
+      0.1,
+      0.3
+     ],
+     "Double Broadax": [
+      0.15,
+      0.35
+     ],
+     "Specialized Pick": [
+      0.15,
+      0.35
+     ],
+     "Survival Techniques": [
+      0.15,
+      0.25
+     ],
+     "Wheelbarrow carry": [
+      5,
+      9
+     ],
+     "Military Academy": [
+      1.33,
+      1.53
+     ],
+     "Biology": [
+      0.25,
+      0.35
+     ],
+     "Husbandry seconds": [
+      20,
+      30
+     ]
+    },
+    "stoneCostsAvailable": {
+     "upgrade_econ_resource_food_harvest_rate_2_improved_mon": 500,
+     "upgrade_econ_resource_wood_harvest_rate_2_improved_mon": 500,
+     "upgrade_econ_resource_gold_harvest_rate_2_improved_mon": 500,
+     "upgrade_econ_resource_wood_fell_rate_1_improved_mon": 75,
+     "upgrade_unit_wheelbarrow_1_improved_mon": 200,
+     "upgrade_econ_villager_hunting_gear_1_improved_mon": 100,
+     "upgrade_villager_health_improved_mon": 150,
+     "upgrade_tech_military_academy_improved_mon": 350,
+     "upgrade_tech_university_biology_improved_mon": 1500,
+     "upgrade_trader_silkroad_stone_improved_mon": 1000,
+     "upgrade_raid_bounty_improved_mon": 225,
+     "upgrade_raid_stone_bounty_improved_mon": 325,
+     "upgrade_unit_town_center_faster_packing_1_improved_mon": 100,
+     "upgrade_ortoo_all_units_improved_mon": 250,
+     "upgrade_ranged_armor_i_improved_mon": 350,
+     "upgrade_ranged_armor_ii_improved_mon": 700,
+     "upgrade_ranged_armor_iii_improved_mon": 1000,
+     "upgrade_ranged_damage_i_improved_mon": 350,
+     "upgrade_ranged_damage_ii_improved_mon": 700,
+     "upgrade_ranged_damage_iii_improved_mon": 1000,
+     "upgrade_lancer_healing_improved_mon": 500,
+     "upgrade_mangudai_weapon_damage_improved_mon": 275,
+     "upgrade_weapon_fire_damage_improved_mon": 400,
+     "upgrade_khan_signal_arrow_improved_mon": 125
+    },
+    "standardModeAvailability": "Only the Improved ids listed in technologies[] are in a default (standard-mode) building research list. Fertilization/Precision Cross-Breeding/Lumber Preservation/Crosscut Saw/Shaft Mining/Cupellation (Improved), Husbandry (both), Professional Scouts (Improved), Steel Barding, Grapered Lances and the melee Blacksmith Improved techs exist as records but no default building lists them."
+   },
+   "status": "resolved",
+   "evidence": [
+    "catalog:technologies/upgrade_econ_resource_food_harvest_rate_2_improved_mon#descriptionTemplate",
+    "catalog:technologies/upgrade_tech_military_academy_improved_mon#modifiers",
+    "raw:ebps/races/mongol/buildings/building_house_mon.json#default/upgrade_ext/standard_upgrades",
+    "raw:ebps/races/mongol/buildings/building_tech_unit_infantry_mon.json#default/upgrade_ext/standard_upgrades",
+    "locale:11155011 (Building must be within the influence of an Ovoo)"
+   ]
+  },
+  {
+   "key": "khan",
+   "summary": "Khan (horse archer) is a free start unit instead of a Scout, scales each age, respawns, and has Signal Arrows (maneuver +33% speed, attack speed +50%, armor +2). Note only.",
+   "params": {
+    "startUnit": "unit_khan_1_mon",
+    "tiers": {
+     "unit_khan_1_mon": 90,
+     "unit_khan_2_mon": 115,
+     "unit_khan_3_mon": 300,
+     "unit_khan_4_mon": 450
+    },
+    "respawnSeconds": 120,
+    "signalArrowDurationSeconds": 5,
+    "signalArrowRange": 35
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[0]/$PBGNAME",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[19]/default (khan_respawn_time_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[21]/default (khan_signal_arrow_duration)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[0]/default (khan_signal_arrow_range)",
+    "locale:11227207",
+    "locale:11227197"
+   ]
+  },
+  {
+   "key": "silk_road",
+   "summary": "Silk Road: Traders get extra resources by active trader count (+10% food at 5, +10% wood at 10, +10% gold at 15; with Stone Commerce +10%/+20% stone at 20). Silver Tree: trader production +40%, gold cost -40%. Note only (trade not modelled).",
+   "params": {
+    "tiers": [
+     {
+      "traders": 5,
+      "food": 0.1
+     },
+     {
+      "traders": 10,
+      "wood": 0.1
+     },
+     {
+      "traders": 15,
+      "gold": 0.1
+     },
+     {
+      "traders": 20,
+      "stone": 0.1,
+      "stoneImproved": 0.2,
+      "requires": "Stone Commerce"
+     }
+    ],
+    "silverTree": {
+     "traderProductionSpeed": 1.4,
+     "traderGoldCostMultiplier": 0.6
+    }
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/int_properties/statemodel_int_property[1]/default (silk_road_requirement_tier_1_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/int_properties/statemodel_int_property[2]/default (silk_road_requirement_tier_2_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/int_properties/statemodel_int_property[3]/default (silk_road_requirement_tier_3_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/int_properties/statemodel_int_property[4]/default (silk_road_requirement_tier_4_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[10]/default (silk_road_tier_1_food_bonus_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[9]/default (silk_road_tier_2_wood_bonus_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[8]/default (silk_road_tier_3_gold_bonus_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[7]/default (silk_road_tier_4_stone_bonus_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[5]/default (silk_road_tier_4_stone_bonus_improved_mon)",
+    "locale:11227209 (args 10, 5/10/15)",
+    "locale:11227205",
+    "catalog:buildings/building_wonder_age2_karakorum_mon#descriptionArguments"
+   ]
+  },
+  {
+   "key": "plunder",
+   "summary": "Raid Bounty: +25 food and +25 gold per enemy building ignited or destroyed under construction (Raid Bounty to 50, Improved to 75; Stone Bounty +50 stone, Improved +75).",
+   "params": {
+    "food": 25,
+    "gold": 25,
+    "stoneWithStoneBounty": 50,
+    "wood": 0
+   },
+   "status": "resolved",
+   "evidence": [
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[13]/default (raid_bounty_food_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[12]/default (raid_bounty_gold_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[11]/default (raid_bounty_stone_mon)",
+    "locale:11227209 (Plunder +25 Food and Gold; args raw:army/standard_mode/normal_mongol.rgd#default/army_bag/ui/global_traits_summary/trait[0]/description_formatter/formatter_arguments/int_value[0])",
+    "locale:11227201"
+   ]
+  },
+  {
+   "key": "yam",
+   "summary": "Yam: Outposts (and the Deer Stones) give +15% move speed to nearby cavalry and Traders; Yam Network extends it to all non-siege units.",
+   "params": {
+    "speedMultiplier": 1.15,
+    "auraAbilityRange": 50,
+    "statemodelRadius": 50
+   },
+   "status": "resolved",
+   "evidence": [
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[15]/default (ortoo_speed_bonus_mon)",
+    "raw:statemodel_schema/civs/mongols.rgd#default/schema_bag/float_properties/statemodel_float_property[14]/default (ortoo_aura_radius_mon)",
+    "raw:abilities/always_on_abilities/mongol/ortoo_outpost_speed_aura_mon.rgd#default/ability_bag/range",
+    "locale:11227209 (args int_value[2] = 15)"
+   ]
+  },
+  {
+   "key": "horseman_train_speed",
+   "summary": "Horsemen train +25% faster: already baked into the Mongol horseman entity time (18 s vs 22.5 s elsewhere). Do not reapply.",
+   "params": {
+    "trainSeconds": 18,
+    "otherCivTrainSeconds": 22.5,
+    "bonus": 0.25,
+    "baked": true
+   },
+   "status": "resolved",
+   "evidence": [
+    "catalog:units/unit_horseman_2_mon#trainTimeSeconds",
+    "catalog:units/unit_horseman_2_eng#trainTimeSeconds",
+    "raw:ebps/races/mongol/units/unit_horseman_1_mon.json#default/cost_ext/time_cost/time_seconds",
+    "locale:11272632"
+   ]
+  },
+  {
+   "key": "packing",
+   "summary": "Every Mongol building can pack into a mobile form (the *_moving_* catalog records) and redeploy. These are the same buildings, not extra building types.",
+   "params": {
+    "packChannelSeconds": 10,
+    "unpackSecondsBySchema": {
+     "house_mon": 8,
+     "pasture_mon": 8,
+     "town_center_capital_mon": 40,
+     "unit_cavalry_mon": 40,
+     "market_mon": 40,
+     "deer_stones_landmark_mon": 40
+    },
+    "packedSpeedEngineUnits": 3,
+    "movingRecordCostTime": {
+     "building_town_center_capital_moving_mon": [
+      {
+       "stone": 90,
+       "wood": 175
+      },
+      30
+     ]
+    },
+    "superiorMobility": 1.5
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:abilities/toggle_abilities/mongol/pack_building_mon.rgd#default/ability_bag/channeling/channeling_time_second",
+    "raw:ebps/races/mongol/buildings/building_town_center_capital_moving_mon.json#default/moving_ext/speed_scaling_table/default_speed",
+    "raw:statemodel_schema/buildings/civilizations/mongols/*.rgd (building_unpack_time)",
+    "locale:11227209 (All buildings can be packed up and redeployed)"
+   ]
+  },
+  {
+   "key": "start_deploy",
+   "summary": "The capital Town Center and one Ger start packed. The engine treats the capital TC as deployed at t=0 (per the start state tree); the Ger must be walked and unpacked before it serves as a drop-off.",
+   "params": {
+    "tcStartsDeployed": true,
+    "tcUnpackSecondsIfManual": 40,
+    "gerUnpackSeconds": 8,
+    "startWoodVsEnglish": [
+     150,
+     200
+    ]
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/start_actions_statetree",
+    "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[1]/$PBGNAME",
+    "raw:army/standard_mode/normal_mongol.rgd#default/army_bag/starting_units/squad[2]/$PBGNAME",
+    "raw:statemodel_schema/buildings/civilizations/mongols/town_center_capital_mon.rgd#default/schema_bag/int_properties/statemodel_int_property[1]/default"
+   ]
+  },
+  {
+   "key": "khaganate_palace",
+   "summary": "Khaganate Palace (Imperial): free armies from its spawn list while the Khan is near. Note only.",
+   "params": {
+    "spawnItems": {
+     "unit_khaganate_great_trebuchet_mon": 1,
+     "unit_khaganate_mangudai_mon": 1,
+     "unit_khaganate_horsearcher_rus_mon": 1,
+     "unit_khaganate_knight_rus_mon": 3,
+     "unit_khaganate_manatarms_china_mon": 5,
+     "unit_khaganate_monk_rus_mon": 2,
+     "unit_khaganate_nest_of_bees_4_mon": 1,
+     "unit_knight_2_mon": 4,
+     "unit_knight_3_mon": 4,
+     "unit_knight_4_mon": 4
+    },
+    "khanRange": 20
+   },
+   "status": "partial",
+   "evidence": [
+    "raw:ebps/races/mongol/buildings/building_wonder_age3_khanbaliq_mon.json#default/spawner_ext/spawn_items",
+    "raw:abilities/always_on_abilities/mongol/khaganate_khan_aura_mon.rgd#default/ability_bag/range"
+   ]
+  },
+  {
+   "key": "transport",
+   "summary": "Transport ships +50% health and +15% speed. Note only.",
+   "params": {
+    "hp": 1.5,
+    "speed": 1.15
+   },
+   "status": "resolved",
+   "evidence": [
+    "locale:11227209 (args int_value[7]=50, [8]=15 from raw:army/standard_mode/normal_mongol.rgd#default/army_bag/ui/global_traits_summary/trait[0])"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "item": "Pasture sheep interval",
+   "why": "Installed Pasture tooltip argument says 140 s, the pasture sheep entity production time is 112 s, the civ statemodel default pasture_default_sheep_spawn_time_mon is 90 s, and a legacy unreferenced string says 90 s. Spawning runs through the pasture_sheep_spawn_mon state tree (not in Attrib), and Ovoo influence makes it faster by an unstated amount (140/112 = 1.25 would fit 140 outside / 112 inside).",
+   "fallback": "interval 140 s outside Ovoo influence; treat 112 s as the in-influence candidate; calibrate against a timing check (MODEL.md 0.2) before trusting either."
+  },
+  {
+   "item": "Pasture sheep cap and villagers per pasture",
+   "why": "\"Will eventually stop producing if too many Sheep are produced\" has no number in the records; the pasture food_generation interaction slot count is 3 but its link to sheep gathering is not decoded.",
+   "fallback": "no cap; engine sizes pastures by food rate = sheepFood / interval per pasture."
+  },
+  {
+   "item": "Husbandry availability",
+   "why": "Husbandry and Husbandry (Improved) records exist (castle age) but no default (standard-mode) Mongol building lists them; only the campaign Ger variant does.",
+   "fallback": "not available in the engine."
+  },
+  {
+   "item": "Castle/Imperial Improved eco techs, melee Blacksmith Improved techs, Steel Barding, Grapered Lances, Professional Scouts (Improved)",
+   "why": "Records exist and the xp3/campaign variants of the Ger/Blacksmith list some of them, but the default variant used for standard play (its Ovoo rates match the live tooltips) does not.",
+   "fallback": "omitted from technologies[]."
+  },
+  {
+   "item": "Double production charged cost",
+   "why": "item_cost_adjustment and number_to_spawn are raw; whether the charged cost is number_to_spawn x squad cost + adjustment is engine logic not in Attrib.",
+   "fallback": "2 x unit cost + adjustment (1.5x resources + stone per pair), same production time as one unit."
+  },
+  {
+   "item": "Gather technology stacking",
+   "why": "Tech scalars feed state trees that are not decoded; Shaft Mining raw 0.3 against a +15% text suggests cumulative (additive) totals for mining.",
+   "fallback": "multiply as listed (engine mulOf); flag mining as possibly additive."
+  },
+  {
+   "item": "Capital TC deploy at game start",
+   "why": "The start list spawns building_town_center_capital_moving_mon; the civ_start\\Mongols state tree that deploys it is not decoded. Schema unpack time is 40 s while the packed record cost_ext says 30 s.",
+   "fallback": "TC deployed at t=0."
+  },
+  {
+   "item": "Ovoo depletion and White Stupa stacking",
+   "why": "Map-generation stone amounts may differ from the 1200/2400 deposit records; whether the White Stupa income adds to an outcrop Ovoo is not stated.",
+   "fallback": "outcrop Ovoo depletes its deposit; Stupa adds 4 stone/s on top."
+  },
+  {
+   "item": "Khaganate Palace cadence, Kurultai Khan requirement, Khan's Hunter tier changes",
+   "why": "State-tree driven; tooltip argument 90 for the Palace is not used by its installed text.",
+   "fallback": "not modelled (notes only)."
+  },
+  {
+   "item": "Effects shown only as tooltip text",
+   "why": "Landmark and tech effects whose raw scalar is absent (Silver Tree, Steppe Redoubt, White Stupa stone rate, Kurultai heal) come from installed record tooltip arguments, not executed state trees.",
+   "fallback": "use tooltip arguments as given."
+  }
+ ]
+}

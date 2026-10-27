@@ -87,6 +87,8 @@ const DEFAULTS = {
 };
 
 function simulate(user) {
+  // Non-Abbasid civilizations run the multi-civilization engine on the installed 16.3 rules (engine-civs.js).
+  if (user && user.civilization && user.civilization !== "abbasid") return civEngine().simulateCiv(user);
   const P = Object.assign({}, DEFAULTS, user || {}); P.map = Object.assign({}, DEFAULTS.map, (user && user.map) || {}); P.raw = Object.assign({}, DEFAULTS.raw, (user && user.raw) || {});
   if (!Number.isFinite(P.villagerLossPerMinute) || P.villagerLossPerMinute < 0 || P.villagerLossPerMinute > 10) throw new RangeError("villagerLossPerMinute must be between 0 and 10");
   if (!Number.isInteger(P.villagerLossStart) || P.villagerLossStart < 0 || P.villagerLossStart > 86400) throw new RangeError("villagerLossStart must be an integer between 0 and 86400 seconds");
@@ -344,6 +346,7 @@ function simulate(user) {
 }
 const UNIT = { villager: { hp: 50, speed: 1.125, carry: 10, carryHunt: 25, cost: "50 food (30 with Fresh Foodstuffs)", time: 20 },
   camel: { hp: [270, 320], dmg: [14, 16], period: 1.125, bonusCav: [14, 16], bonusSiege: 10, speed: 1.625, cost: "130 food 45 wood 45 gold", time: 35, pop: 1 } };
+function civEngine() { const e = root.AoE4CivEngine || (typeof require === "function" ? require("./engine-civs.js") : null); if (!e) throw new Error("engine-civs.js is not loaded"); return e; }
 const api = { simulate, DEFAULTS, TECH, CAMEL_TECHS, EFFECT, rEff, ECO_TECH, RAW, UNIT, sheepGroupRate, POP_MAX };
 if (typeof module !== "undefined" && module.exports) module.exports = api; else root.AoE4Engine = api;
 })(typeof window !== "undefined" ? window : globalThis);

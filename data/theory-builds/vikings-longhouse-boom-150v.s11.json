@@ -1,0 +1,804 @@
+{
+ "method": "Seeded random sampling (3000 candidates plus the civilization defaults) then coordinate hill-climbing from the best 6; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": -1814230.8,
+ "build": {
+  "id": "vikings-longhouse-boom-150v",
+  "title": "Vikings Longhouse boom, 150 villagers",
+  "summary": "The same two-Town-Center, fourteen-Longhouse boom with the whole villager capacity filled: 150 villagers and 50 army population reached in Feudal or Castle Age as soon as possible, the Gullínn Temple started only once population is 150, then the soonest Imperial Age with every upgrade of the infantry it trains.",
+  "civilization": "vikings",
+  "engine": "civ",
+  "patch": "17.0-preview",
+  "objective": {
+   "kind": "pop200",
+   "t": 900,
+   "slack": 30
+  },
+  "lineNames": "Bondi",
+  "result": {
+   "done": 2308,
+   "at": 900,
+   "army": 0,
+   "armyValue": 0,
+   "villagers": 69,
+   "population": 72,
+   "age": 2,
+   "ages": [
+    295,
+    1765,
+    1850
+   ],
+   "firstUnit": 1780,
+   "pop200": 1814,
+   "pop200Age": "Castle Age",
+   "gullinnStart": 1717,
+   "gullinnStartPop": 150,
+   "atPop200": {
+    "longhouses": 14,
+    "villagers": 150,
+    "army": 50
+   },
+   "longhouses": 14,
+   "attachments": {
+    "bee": 6,
+    "farm": 6,
+    "smithy": 1,
+    "loom": 1
+   },
+   "villagerCapacity": 150,
+   "sagas": [
+    "falkr",
+    "jofurr",
+    "dreki",
+    "ulfr"
+   ],
+   "groveBerserkers": 0
+  },
+  "planId": "vikings-longhouse-boom-150v",
+  "lines": [
+   "bondi"
+  ],
+  "extraTCs": {
+   "2": 1,
+   "3": 0
+  },
+  "landmarks": {
+   "2": "baugr-fort",
+   "3": "gullinn-temple",
+   "4": "kongens-dor-cathedral"
+  },
+  "mech": {
+   "gullinnMinPop": 150,
+   "groves": 0,
+   "kongensLonghouses": 0,
+   "callMaidens": false,
+   "lh": {
+    "1": 1,
+    "2": 13,
+    "3": 0,
+    "4": 0
+   },
+   "attach": [
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "bee",
+    "smithy",
+    "loom",
+    "farm",
+    "farm",
+    "farm",
+    "farm",
+    "farm",
+    "farm"
+   ],
+   "lhLead": 8,
+   "lhBuilders": 1,
+   "longhouseBondi": true,
+   "openWood": true,
+   "reserveWood": false
+  },
+  "vilTarget": 150,
+  "lmBuilders": {
+   "2": 3,
+   "3": 12,
+   "4": 7
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 1,
+   "2": 2,
+   "3": 7,
+   "4": 2
+  },
+  "maxProducers": 14,
+  "ecoTechs": {
+   "1": [],
+   "2": [],
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": false,
+   "3": true
+  },
+  "blacksmiths": 0,
+  "pauseForAge": true,
+  "window": 3,
+  "woodFloor": 0.1,
+  "goldBias": 1,
+  "armyAge": 3,
+  "pauseFrom": {
+   "3": null,
+   "4": null
+  }
+ },
+ "ledger": {
+  "id": "vikings-longhouse-boom-150v",
+  "evaluations": 6194,
+  "seconds": 470,
+  "seed": 11,
+  "objective": {
+   "kind": "pop200",
+   "t": 900,
+   "slack": 30
+  },
+  "best": {
+   "done": 2308,
+   "at": 900,
+   "army": 0,
+   "armyValue": 0,
+   "villagers": 69,
+   "population": 72,
+   "age": 2,
+   "ages": [
+    295,
+    1765,
+    1850
+   ],
+   "firstUnit": 1780,
+   "pop200": 1814,
+   "pop200Age": "Castle Age",
+   "gullinnStart": 1717,
+   "gullinnStartPop": 150,
+   "atPop200": {
+    "longhouses": 14,
+    "villagers": 150,
+    "army": 50
+   },
+   "longhouses": 14,
+   "attachments": {
+    "bee": 6,
+    "farm": 6,
+    "smithy": 1,
+    "loom": 1
+   },
+   "villagerCapacity": 150,
+   "sagas": [
+    "falkr",
+    "jofurr",
+    "dreki",
+    "ulfr"
+   ],
+   "groveBerserkers": 0
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom-150v",
+     "lines": [
+      "bondi"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "kongens-dor-cathedral"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 1,
+       "2": 13,
+       "3": 0,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 8,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 150,
+     "lmBuilders": {
+      "2": 3,
+      "3": 12,
+      "4": 7
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 1,
+      "2": 2,
+      "3": 7,
+      "4": 2
+     },
+     "maxProducers": 14,
+     "ecoTechs": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 3,
+     "pauseFrom": {
+      "3": null,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 2308,
+     "at": 900,
+     "army": 0,
+     "armyValue": 0,
+     "villagers": 69,
+     "population": 72,
+     "age": 2,
+     "ages": [
+      295,
+      1765,
+      1850
+     ],
+     "firstUnit": 1780,
+     "pop200": 1814,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 1717,
+     "gullinnStartPop": 150,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 150,
+      "army": 50
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "falkr",
+      "jofurr",
+      "dreki",
+      "ulfr"
+     ],
+     "groveBerserkers": 0
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom-150v",
+     "lines": [
+      "bondi"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "kongens-dor-cathedral"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 1,
+       "2": 13,
+       "3": 0,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 8,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 150,
+     "lmBuilders": {
+      "2": 3,
+      "3": 12,
+      "4": 7
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 1,
+      "2": 2,
+      "3": 7,
+      "4": 2
+     },
+     "maxProducers": 14,
+     "ecoTechs": {
+      "1": [],
+      "2": [],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 3,
+     "pauseFrom": {
+      "3": null,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 2308,
+     "at": 900,
+     "army": 0,
+     "armyValue": 0,
+     "villagers": 69,
+     "population": 72,
+     "age": 2,
+     "ages": [
+      295,
+      1765,
+      1850
+     ],
+     "firstUnit": 1780,
+     "pop200": 1814,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 1717,
+     "gullinnStartPop": 150,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 150,
+      "army": 50
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "falkr",
+      "jofurr",
+      "dreki",
+      "ulfr"
+     ],
+     "groveBerserkers": 0
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom-150v",
+     "lines": [
+      "bondi"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "kongens-dor-cathedral"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 1,
+       "2": 13,
+       "3": 0,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 8,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 150,
+     "lmBuilders": {
+      "2": 3,
+      "3": 12,
+      "4": 7
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 1,
+      "2": 2,
+      "3": 7,
+      "4": 2
+     },
+     "maxProducers": 14,
+     "ecoTechs": {
+      "1": [],
+      "2": [],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 1,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 3,
+     "pauseFrom": {
+      "3": null,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 2308,
+     "at": 900,
+     "army": 0,
+     "armyValue": 0,
+     "villagers": 69,
+     "population": 72,
+     "age": 2,
+     "ages": [
+      295,
+      1765,
+      1850
+     ],
+     "firstUnit": 1780,
+     "pop200": 1814,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 1717,
+     "gullinnStartPop": 150,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 150,
+      "army": 50
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "falkr",
+      "jofurr",
+      "dreki",
+      "ulfr"
+     ],
+     "groveBerserkers": 0
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom-150v",
+     "lines": [
+      "bondi"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "kongens-dor-cathedral"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 1,
+       "2": 13,
+       "3": 0,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 8,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 150,
+     "lmBuilders": {
+      "2": 3,
+      "3": 12,
+      "4": 7
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 1,
+      "2": 2,
+      "3": 7,
+      "4": 2
+     },
+     "maxProducers": 14,
+     "ecoTechs": {
+      "1": [],
+      "2": [],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 3,
+     "pauseFrom": {
+      "3": null,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 2308,
+     "at": 900,
+     "army": 0,
+     "armyValue": 0,
+     "villagers": 69,
+     "population": 72,
+     "age": 2,
+     "ages": [
+      295,
+      1765,
+      1850
+     ],
+     "firstUnit": 1780,
+     "pop200": 1814,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 1717,
+     "gullinnStartPop": 150,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 150,
+      "army": 50
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "falkr",
+      "jofurr",
+      "dreki",
+      "ulfr"
+     ],
+     "groveBerserkers": 0
+    }
+   },
+   {
+    "params": {
+     "planId": "vikings-longhouse-boom-150v",
+     "lines": [
+      "bondi"
+     ],
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "landmarks": {
+      "2": "baugr-fort",
+      "3": "gullinn-temple",
+      "4": "kongens-dor-cathedral"
+     },
+     "mech": {
+      "gullinnMinPop": 150,
+      "groves": 0,
+      "kongensLonghouses": 0,
+      "callMaidens": false,
+      "lh": {
+       "1": 1,
+       "2": 13,
+       "3": 0,
+       "4": 0
+      },
+      "attach": [
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "bee",
+       "smithy",
+       "loom",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm",
+       "farm"
+      ],
+      "lhLead": 8,
+      "lhBuilders": 1,
+      "longhouseBondi": true,
+      "openWood": true,
+      "reserveWood": false
+     },
+     "vilTarget": 150,
+     "lmBuilders": {
+      "2": 3,
+      "3": 12,
+      "4": 7
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 1,
+      "2": 2,
+      "3": 7,
+      "4": 2
+     },
+     "maxProducers": 14,
+     "ecoTechs": {
+      "1": [],
+      "2": [],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.1,
+     "goldBias": 1,
+     "armyAge": 3,
+     "pauseFrom": {
+      "3": null,
+      "4": null
+     }
+    },
+    "result": {
+     "done": 2308,
+     "at": 900,
+     "army": 0,
+     "armyValue": 0,
+     "villagers": 69,
+     "population": 72,
+     "age": 2,
+     "ages": [
+      295,
+      1765,
+      1850
+     ],
+     "firstUnit": 1780,
+     "pop200": 1814,
+     "pop200Age": "Castle Age",
+     "gullinnStart": 1717,
+     "gullinnStartPop": 150,
+     "atPop200": {
+      "longhouses": 14,
+      "villagers": 150,
+      "army": 50
+     },
+     "longhouses": 14,
+     "attachments": {
+      "bee": 6,
+      "farm": 6,
+      "smithy": 1,
+      "loom": 1
+     },
+     "villagerCapacity": 150,
+     "sagas": [
+      "falkr",
+      "jofurr",
+      "dreki",
+      "ulfr"
+     ],
+     "groveBerserkers": 0
+    }
+   }
+  ]
+ }
+}

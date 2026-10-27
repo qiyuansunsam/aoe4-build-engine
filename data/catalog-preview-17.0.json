@@ -21653,7 +21653,44 @@
     "tier": null,
     "fields": {},
     "landmark": false
-   }
+   },
+   "sagas": [
+    {
+     "name": "Björn's Forage",
+     "goal": "Regaining 1000 health on Infantry",
+     "reward": "All Infantry gain 10% health and charge range is increased by 2 tiles."
+    },
+    {
+     "name": "Falkr's Village",
+     "goal": "Upgrading 6 Longhouses with attachments",
+     "reward": "Villager production speed reduced by 2 seconds and reduced Longhouse attachment cost by 20%."
+    },
+    {
+     "name": "Hrafn's Raid",
+     "goal": "Destroying 2 Technology or Economy buildings",
+     "reward": "All technologies cost 15% less and Smithy/Loom research 45 seconds faster."
+    },
+    {
+     "name": "Jörmungandr's Trade",
+     "goal": "Earning 1000 Gold by Traders or Trade Ships",
+     "reward": "Ships and Siege Weapons cost 8% less."
+    },
+    {
+     "name": "Jofurr's Hunt",
+     "goal": "Gathering 2500 Food from Boar, Deer, or Shore Fish with Villagers",
+     "reward": "Villagers gather 10% faster and get +5 carry capacity."
+    },
+    {
+     "name": "Ulfr's Forester",
+     "goal": "Recruiting 25 infantry",
+     "reward": "Melee Infantry gain +5 torch damage and +1 tile torch attack range."
+    },
+    {
+     "name": "Dreki's Temple",
+     "goal": "Constructing the Gullinn Temple Landmark",
+     "reward": "Sacred Groves produce Berserkers 15% faster."
+    }
+   ]
   },
   {
    "id": "building_unit_naval_vik",
@@ -43106,6 +43143,12 @@
      ]
     },
     {
+     "buildingId": "building_tech_university_vik",
+     "technologyIds": [
+      "upgrade_ranged_incendiary__vikings"
+     ]
+    },
+    {
      "buildingId": "building_unit_ranged_vik",
      "technologyIds": [
       "upgrade_unit_crossbowman_4_vik"
@@ -43604,6 +43647,12 @@
       "upgrade_smithy_damage_2_vik",
       "upgrade_smithy_damage_3_vik"
      ]
+    },
+    {
+     "buildingId": "building_tech_university_vik",
+     "technologyIds": [
+      "upgrade_ranged_incendiary__vikings"
+     ]
     }
    ]
   },
@@ -43997,6 +44046,12 @@
       "muster_lowlanders_age2_sco",
       "upgrade_highland_tier2_sco",
       "upgrade_lowland_tier1_sco"
+     ]
+    },
+    {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_manatarms_elite_army_tactics__scots"
      ]
     },
     {
@@ -44416,6 +44471,12 @@
      ]
     },
     {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_manatarms_elite_army_tactics__scots"
+     ]
+    },
+    {
      "buildingId": "building_tech_unit_infantry_control_sco",
      "technologyIds": [
       "upgrade_melee_armor_i__scots",
@@ -44622,6 +44683,12 @@
      ]
     },
     {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_manatarms_elite_army_tactics__scots"
+     ]
+    },
+    {
      "buildingId": "building_tech_unit_infantry_control_sco",
      "technologyIds": [
       "upgrade_melee_armor_i__scots",
@@ -44746,6 +44813,12 @@
       "upgrade_ranged_damage_iii__scots",
       "upgrade_siege_engineers__scots",
       "upgrade_wallace_rally_sco"
+     ]
+    },
+    {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_ranged_incendiary__scots"
      ]
     },
     {
@@ -45152,6 +45225,12 @@
      ]
     },
     {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_manatarms_elite_army_tactics__scots"
+     ]
+    },
+    {
      "buildingId": "building_tech_unit_infantry_control_sco",
      "technologyIds": [
       "upgrade_melee_armor_i__scots",
@@ -45269,6 +45348,12 @@
      ]
     },
     {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_manatarms_elite_army_tactics__scots"
+     ]
+    },
+    {
      "buildingId": "building_tech_unit_infantry_control_sco",
      "technologyIds": [
       "upgrade_melee_armor_i__scots",
@@ -45370,6 +45455,12 @@
       "upgrade_ranged_damage_iii__scots",
       "upgrade_siege_engineers__scots",
       "upgrade_wallace_rally_sco"
+     ]
+    },
+    {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_ranged_incendiary__scots"
      ]
     }
    ]
@@ -45700,6 +45791,12 @@
      ]
     },
     {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_manatarms_elite_army_tactics__scots"
+     ]
+    },
+    {
      "buildingId": "building_tech_unit_infantry_control_sco",
      "technologyIds": [
       "upgrade_melee_armor_i__scots",
@@ -45737,6 +45834,12 @@
       "muster_lowlanders_age2_sco",
       "upgrade_highland_tier2_sco",
       "upgrade_lowland_tier1_sco"
+     ]
+    },
+    {
+     "buildingId": "building_tech_university_control_sco",
+     "technologyIds": [
+      "upgrade_manatarms_elite_army_tactics__scots"
      ]
     },
     {

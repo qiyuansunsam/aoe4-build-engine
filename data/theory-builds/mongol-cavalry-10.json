@@ -1,0 +1,431 @@
+{
+ "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "build": {
+  "id": "mongol-cavalry-10",
+  "title": "Mongol cavalry by 10:00",
+  "summary": "The most stable cavalry value the engine can complete by 10:00 (Ovoo double production and Improved technologies chosen by the search), then on to 200 population with every upgrade of its line.",
+  "civilization": "mongol",
+  "engine": "civ",
+  "patch": "16.3.11308",
+  "reference": {
+   "buildId": "mongols-observed-4v4"
+  },
+  "objective": {
+   "kind": "valueAt",
+   "t": 600
+  },
+  "lineNames": "Horseman",
+  "result": {
+   "done": 2168,
+   "at": 600,
+   "army": 43,
+   "armyValue": 5160,
+   "villagers": 30,
+   "population": 76,
+   "age": 2,
+   "ages": [
+    345,
+    1857,
+    1912
+   ]
+  },
+  "lines": [
+   "horseman"
+  ],
+  "vilTarget": 30,
+  "landmarks": {
+   "2": "silver-tree",
+   "3": "steppe-redoubt",
+   "4": "white-stupa"
+  },
+  "lmBuilders": {
+   "2": 2,
+   "3": 2,
+   "4": 14
+  },
+  "extraTCs": {
+   "2": 0,
+   "3": 0
+  },
+  "tcBuilders": 2,
+  "producers": {
+   "1": 0,
+   "2": 3,
+   "3": 1,
+   "4": 2
+  },
+  "maxProducers": 13,
+  "ecoTechs": {
+   "1": [],
+   "2": "all",
+   "3": [],
+   "4": []
+  },
+  "milTechAge": {
+   "2": true,
+   "3": false
+  },
+  "blacksmiths": 2,
+  "pauseForAge": false,
+  "window": 3,
+  "woodFloor": 0.25,
+  "goldBias": 1,
+  "armyAge": 1,
+  "mech": {
+   "doubleVillagers": true,
+   "doubleArmy": true,
+   "improved": true
+  }
+ },
+ "ledger": {
+  "id": "mongol-cavalry-10",
+  "evaluations": 4216,
+  "seconds": 164,
+  "seed": 20261024,
+  "objective": {
+   "kind": "valueAt",
+   "t": 600
+  },
+  "best": {
+   "done": 2168,
+   "at": 600,
+   "army": 43,
+   "armyValue": 5160,
+   "villagers": 30,
+   "population": 76,
+   "age": 2,
+   "ages": [
+    345,
+    1857,
+    1912
+   ]
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "lines": [
+      "horseman"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 2,
+      "4": 12
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 2,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.25,
+     "goldBias": 1,
+     "armyAge": 1,
+     "mech": {
+      "doubleVillagers": true,
+      "doubleArmy": true,
+      "improved": true
+     }
+    },
+    "result": {
+     "done": 2168,
+     "at": 600,
+     "army": 43,
+     "armyValue": 5160,
+     "villagers": 30,
+     "population": 76,
+     "age": 2,
+     "ages": [
+      345,
+      1857,
+      1919
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "horseman"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 2,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 2,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.25,
+     "goldBias": 1,
+     "armyAge": 1,
+     "mech": {
+      "doubleVillagers": true,
+      "doubleArmy": true,
+      "improved": true
+     }
+    },
+    "result": {
+     "done": 2168,
+     "at": 600,
+     "army": 43,
+     "armyValue": 5160,
+     "villagers": 30,
+     "population": 76,
+     "age": 2,
+     "ages": [
+      345,
+      1857,
+      1915
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "horseman"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 2,
+      "4": 14
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 4,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.25,
+     "goldBias": 1,
+     "armyAge": 1,
+     "mech": {
+      "doubleVillagers": true,
+      "doubleArmy": true,
+      "improved": true
+     }
+    },
+    "result": {
+     "done": 2168,
+     "at": 600,
+     "army": 43,
+     "armyValue": 5160,
+     "villagers": 30,
+     "population": 76,
+     "age": 2,
+     "ages": [
+      345,
+      1857,
+      1912
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "horseman"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 2,
+      "4": 14
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 6,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.25,
+     "goldBias": 1,
+     "armyAge": 1,
+     "mech": {
+      "doubleVillagers": true,
+      "doubleArmy": true,
+      "improved": true
+     }
+    },
+    "result": {
+     "done": 2168,
+     "at": 600,
+     "army": 43,
+     "armyValue": 5160,
+     "villagers": 30,
+     "population": 76,
+     "age": 2,
+     "ages": [
+      345,
+      1857,
+      1912
+     ]
+    }
+   },
+   {
+    "params": {
+     "lines": [
+      "horseman"
+     ],
+     "vilTarget": 30,
+     "landmarks": {
+      "2": "silver-tree",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 2,
+      "4": 14
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 0
+     },
+     "tcBuilders": 8,
+     "producers": {
+      "1": 0,
+      "2": 3,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 3,
+     "woodFloor": 0.25,
+     "goldBias": 1,
+     "armyAge": 1,
+     "mech": {
+      "doubleVillagers": true,
+      "doubleArmy": true,
+      "improved": true
+     }
+    },
+    "result": {
+     "done": 2168,
+     "at": 600,
+     "army": 43,
+     "armyValue": 5160,
+     "villagers": 30,
+     "population": 76,
+     "age": 2,
+     "ages": [
+      345,
+      1857,
+      1912
+     ]
+    }
+   }
+  ]
+ }
+}
