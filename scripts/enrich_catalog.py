@@ -2,7 +2,7 @@
 import base64,hashlib,json,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-DATA=ROOT/'data'; RAW=ROOT.parent/'games/kb/aoe4/extract/UIArt/ui/icons'; CACHE=ROOT.parent/'mcaoe/public/assets/icons'
+DATA=ROOT/'data'; RAW=ROOT.parent/'games/kb/aoe4/extract/UIArt/ui/icons'; CACHE=ROOT/'aoe4world/public/assets/icons'
 c=json.loads((DATA/'game-catalog.json').read_text(encoding='utf-8'))
 icons=json.loads((DATA/'game-icons.json').read_text(encoding='utf-8')); prov=json.loads((DATA/'game-icons-provenance.json').read_text(encoding='utf-8'))
 records={r['id']:r for kind in ('units','buildings','technologies') for r in c[kind]}; units={r['id']:r for r in c['units']}; techs={r['id']:r for r in c['technologies']}

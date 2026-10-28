@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-OLD=ROOT.parent/'mcaoe/data'
+OLD=ROOT/'aoe4world/data'
 RES=('food','wood','gold','stone')
 CIV={'abbasid_dynasty':'abbasid','holy_roman_empire':'hre','delhi_sultanate':'delhi','mongol':'mongols','malian':'malians','templar':'knights_templar'}
 def civ(x): return CIV.get(x,x or 'unknown')

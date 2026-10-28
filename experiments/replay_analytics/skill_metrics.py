@@ -61,6 +61,26 @@ AFFORDABLE = 400
 GRID = 16
 DEFENSE_RANGE = [(re.compile(r'keep|castle|fortress|citadel', re.I), 40.0), (re.compile(r'town_center', re.I), 32.0), (re.compile(r'outpost|tower|bastion', re.I), 32.0)]
 MARKS = (300, 480, 600, 720, 900, 1200)
+VISION_GRID = 64  # vision occupied: the map as 64x64 cells, sampled every VISION_STEP seconds from PVP_FROM
+VISION_STEP = 10
+
+
+def load_sight():
+    """Sight radius per blueprint from the installed catalog dumps (the 'line' radius, world units: an archer sees 36
+    with a 20-unit bow range, a Town Center 52)."""
+    sight = {}
+    for name in ('units_all.json', 'buildings_all.json'):
+        path = HERE.parents[1] / 'data' / name
+        if not path.exists():
+            continue
+        raw = json.loads(path.read_text(encoding='utf-8'))
+        for e in (raw if isinstance(raw, list) else raw.get('data', [])):
+            if isinstance(e, dict) and e.get('attribName') and isinstance(e.get('sight'), dict) and e['sight'].get('line'):
+                sight[e['attribName']] = float(e['sight']['line'])
+    return sight
+
+
+SIGHT = load_sight()
 
 
 # PvP measures averaged by minute count only game time from 6:00 (Sam, 2026-10-28: the pre-contact minutes dilute them).
@@ -341,6 +361,40 @@ def analyze_match(gid, recorder, tracked):
                     if e.owner_at(sec) == idx:
                         per_second[sec] |= cells
         defense_cells[idx] = [len(c) for c in per_second]
+
+    # Vision occupied (Sam, 2026-10-28: "can we just do vision occupied?"): the share of the map inside the sight radius
+    # of any of the player's units or buildings, every VISION_STEP s from PVP_FROM. Blueprints missing from the catalog
+    # see 28 (unit, the villager's sight) or 25 (building, the common production-building sight).
+    import numpy as np
+    vcell = world / VISION_GRID
+    vis_t = list(range(int(PVP_FROM), int(duration) + 1, VISION_STEP))
+    vis_grids = {idx: np.zeros((len(vis_t), VISION_GRID, VISION_GRID), dtype=bool) for idx in teams}
+    discs = {}
+    for e in log.ents:
+        if not vis_t or e.bp.startswith('wpn_'):
+            continue
+        r = SIGHT.get(e.bp) or (25.0 if e.building else 28.0)
+        k = max(1, int(round(r / vcell)))
+        if k not in discs:
+            yy, xx = np.mgrid[-k:k + 1, -k:k + 1]
+            discs[k] = (xx * xx + yy * yy) <= k * k
+        disc = discs[k]
+        for s_, end in e.spans:
+            hi = duration if end is None else end
+            for i in range(bisect.bisect_left(vis_t, s_), bisect.bisect_right(vis_t, hi)):
+                t = vis_t[i]
+                o = e.owner_at(t)
+                if o not in vis_grids:
+                    continue
+                x, z, hp = e.position_at(t)
+                if hp <= 0:
+                    continue
+                cx, cz = int((x + world / 2) / vcell), int((z + world / 2) / vcell)
+                x0, x1, z0, z1 = max(0, cx - k), min(VISION_GRID, cx + k + 1), max(0, cz - k), min(VISION_GRID, cz + k + 1)
+                if x0 >= x1 or z0 >= z1:
+                    continue
+                vis_grids[o][i, x0:x1, z0:z1] |= disc[x0 - (cx - k):x1 - (cx - k), z0 - (cz - k):z1 - (cz - k)]
+    vision_share = {idx: (round(float(g.mean()), 4) if vis_t else None) for idx, g in vis_grids.items()}
     villager_series = {idx: [] for idx in teams}
     for minute in range(0, int(duration) // 60 + 1):
         t = minute * 60
@@ -894,7 +948,7 @@ def analyze_match(gid, recorder, tracked):
                        'fights': len(my_fights), 'fightsWithStake': len(with_stake), 'fightsWonPersonal': fights_won, 'teamFightsWon': team_fights_won,
                        'damagePerCombatMinute': round(damage_dealt / (combat.total() / 60), 1) if combat.total() > 30 else None, 'combatSeconds': round(combat.total(), 1), 'firstHostileHitDealt': round(first_dealt[0], 1) if first_dealt else None, 'damage1000At': damage_1000_at},
             'aggression': {'firstMilitaryInEnemyHalf': first_enemy_half.get(idx), 'enemyHalfSeconds': sum(enemy_half_sec[idx]), 'enemyHalfShare': round(sum(enemy_half_sec[idx][pvp_sec0:]) / pvp_seconds, 3), 'weightedDamageDealtPerMinute': round(w_dealt, 1)},
-            'map': {'cellSecondsPerMinute': round(cell_seconds / pvp_minutes, 1), 'defenseCellsMean': round(sum(defense_cells[idx][pvp_sec0:]) / pvp_seconds, 2), 'defenseCellsPeak': max(defense_cells[idx]), 'cellsVisited': len(visited), 'cellsVisitedShare': round(len(visited) / (GRID * GRID), 3), 'contestedCellSecondsPerMinute': round(contested / pvp_minutes, 1)},
+            'map': {'cellSecondsPerMinute': round(cell_seconds / pvp_minutes, 1), 'defenseCellsMean': round(sum(defense_cells[idx][pvp_sec0:]) / pvp_seconds, 2), 'defenseCellsPeak': max(defense_cells[idx]), 'cellsVisited': len(visited), 'cellsVisitedShare': round(len(visited) / (GRID * GRID), 3), 'contestedCellSecondsPerMinute': round(contested / pvp_minutes, 1), 'visionShareMean': vision_share.get(idx)},
             'growth': {'villagersAt': vill_at, 'populationAt': pop_at_marks, 'villagersTrained': len(vill_built), 'lastVillagerAt': round(last_vill, 1) if last_vill else None, 'villagerSeries': villager_series[idx],
                        'gathered': round(gathered), 'gatheredWeighted': round(gathered_w), 'gatherPerMinute': round(gather_pm, 1) if gather_pm is not None else None, 'weightedGatherPerMinute': round(gathered_w / minutes, 1), 'gatheredBy': gathered_by,
                        'ages': {k: round(v, 1) for k, v in ages.items()}, 'ecoTechs': {k: round(v, 1) for k, v in eco.items()},
@@ -911,7 +965,7 @@ def analyze_match(gid, recorder, tracked):
                          'attackersAtOnceMean': attackers_mean, 'attackersAtOnceMax': attackers_max, 'peakAttackersPerMinute': peak_attackers_minute, 'minutesAttackedBy2': attacked_by[2], 'minutesAttackedBy3': attacked_by[3], 'minutesAttackedBy4': attacked_by[4], 'side': side_label.get(idx), 'weightedDamageTakenPerMinute': round(w_taken, 1), 'offSideDamageTakenPerMinute': round(w_off_side, 1) if w_off_side is not None else None, 'targetsAtOnceMean': targets_mean, 'targetsAtOnceMax': targets_max, 'episodeList': episode_rows[:120]},
             'harassment': {'enemyVillagersKilled': len(vill_kills), 'villagerKillValueWeighted': round(vk_weighted), 'villagerKillValuePer10': round(vk_weighted / (max(duration - PVP_FROM, 60.0) / 600)) if duration else None, 'firstVillagerKill': vill_kills[0]['t'] if vill_kills else None,
                            'villagerKillsBefore10': sum(1 for v in vill_kills if v['t'] <= 600), 'villagerKillsBefore15': sum(1 for v in vill_kills if v['t'] <= 900),
-                           'raids': len(raids), 'killsPerRaid': round(len(vill_kills) / len(raids), 2) if raids else None, 'assistedVillagerKills': sum(1 for v in vill_kills if v['assists']), 'ownVillagersLost': len(own_vill_lost), 'villagerKills': vill_kills[:200], 'raidList': raids},
+                           'raids': len(raids), 'raidsPer10': round(len(raids) / (max(duration - PVP_FROM, 60.0) / 600), 2) if duration else None, 'killsPerRaid': round(len(vill_kills) / len(raids), 2) if raids else None, 'assistedVillagerKills': sum(1 for v in vill_kills if v['assists']), 'ownVillagersLost': len(own_vill_lost), 'villagerKills': vill_kills[:200], 'raidList': raids},
             'timing': {'ages': {k: round(v, 1) for k, v in ages.items()}, 'wheelbarrow': eco.get('wheelbarrow'), 'firstAttackAdvantage': first_attack_adv, 'firstAttackOwnArmy': round(army_value_at(idx, first_dealt[0])) if first_dealt else None, 'firstAttackEnemyArmy': round(army_value_at(first_dealt[4], first_dealt[0])) if first_dealt else None,
                        'armyStrongPhase': strong_phase, 'armyPeakValue': round(peak), 'armySeries': army_series[idx]},
             'multitasking': {'meanConcurrentFronts': mean_fronts, 'fightsMicroed': microed if cmds_mine else None, 'fightsMicroedShare': round(microed / len(my_fights), 3) if cmds_mine and len(my_fights) >= 3 else None,
@@ -937,10 +991,10 @@ def analyze_match(gid, recorder, tracked):
 AXES = {
     'Fighting efficiency': [('combat.tradeRatio', True, 2), ('combat.netValueTraded', True, 1), ('combat.damagePerResource', True, 1), ('combat.fightsWonPersonalShare', True, 1)],
     'Aggression': [('combat.valueKilledShare', True, 2), ('combat.teamDamageShare', True, 1), ('combat.damage1000At', False, 1), ('aggression.enemyHalfShare', True, 1), ('aggression.weightedDamageDealtPerMinute', True, 1)],
-    'Map control': [('map.cellsVisitedShare', True, 2), ('map.defenseCellsMean', True, 1), ('map.contestedCellSecondsPerMinute', True, 1)],
+    'Map control': [('map.cellsVisitedShare', True, 2), ('map.visionShareMean', True, 1), ('map.contestedCellSecondsPerMinute', True, 1)],
     'Growth': [('growth.populationAt.900', True, 1), ('growth.gatheredBy.900', True, 2), ('growth.weightedGatherPerMinute', True, 1), ('growth.ages.feudal', False, 1), ('growth.ages.castle', False, 1), ('growth.weightedArmyValue', True, 2)],
     'Efficiency': [('efficiency.floatShare', False, 2), ('efficiency.tcEmptyShare', False, 1), ('efficiency.idleVillagerShare', False, 1), ('efficiency.queuedShare', False, 1)],
-    'Harassment': [('harassment.villagerKillValuePer10', True, 2), ('harassment.firstVillagerKill', False, 1), ('harassment.killsPerRaid', True, 1)],
+    'Harassment': [('harassment.villagerKillValuePer10', True, 2), ('harassment.firstVillagerKill', False, 1), ('harassment.raidsPer10', True, 1)],
     'Pressure handling': [('pressure.growthLostPer1000Pressure', False, 2), ('pressure.incomeKeptUnderPressure', True, 1), ('pressure.villagersLostPer1000Pressure', False, 1), ('pressure.targetsAtOnceMean', True, 1), ('pressure.offSideDamageTakenPerMinute', True, 1), ('pressure.weightedDamageTakenPerMinute', True, 1)],
     'Multitasking': [('multitasking.meanConcurrentFronts', True, 2), ('multitasking.fightsMicroedShare', True, 1), ('multitasking.allFrontsMicroedShare', True, 1), ('multitasking.combatEfficiency', True, 1)],
     'Reaction': [('reaction.answeredPerMinute', True, 2), ('reaction.responseRate', True, 1), ('reaction.medianLatency', False, 1)],
@@ -1007,7 +1061,9 @@ def main():
     ap.add_argument('--only', type=int, nargs='*')
     ap.add_argument('--recorder', type=Path, default=DEFAULT_RECORDER)
     ap.add_argument('--reuse', action='store_true', help='recompute pools and profiles from the saved per-match results instead of re-analysing recordings')
-    ap.add_argument('--min-pool-games', type=int, default=1, help='games a player needs to enter the percentile pool')
+    ap.add_argument('--incremental', action='store_true', help='reuse saved per-match results and analyse only matches '
+                    'not in data/skill-analysis.json yet (valid while the metric code is unchanged)')
+    ap.add_argument('--min-pool-games', type=int, default=2, help='games a player needs to enter the percentile pool (Sam, 2026-10-28: 2)')
     args = ap.parse_args()
     recorder = args.recorder.resolve()
     manifest = json.loads((DATA / 'latest10-manifest.json').read_text(encoding='utf-8'))
@@ -1015,19 +1071,21 @@ def main():
     status_path = DATA / 'recording-status.json'
     recorded = json.loads(status_path.read_text(encoding='utf-8'))['matches'] if status_path.exists() else {}
     matches = []
-    saved = json.loads((DATA / 'skill-analysis.json').read_text(encoding='utf-8'))['matches'] if args.reuse and (DATA / 'skill-analysis.json').exists() else []
+    saved = json.loads((DATA / 'skill-analysis.json').read_text(encoding='utf-8'))['matches'] if (args.reuse or args.incremental) and (DATA / 'skill-analysis.json').exists() else []
     for entry in manifest['unique_games']:
         gid = entry['game']['game_id']
         if args.only and gid not in args.only:
             continue
-        if args.reuse:
+        if args.reuse or args.incremental:
             found = next((m for m in saved if m['gameId'] == gid), None)
             if found:
                 for m in found['players']:
                     m.pop('radar', None)
                 fill_results(found, entry)
                 matches.append(found)
-            continue
+                continue
+            if args.reuse:
+                continue
         if not (recorder / 'recordings' / f'aoe4_{gid}.rlog').exists() or not (DATA / f'replay-{gid}.rec').exists():
             continue
         if recorded and recorded.get(str(gid), {}).get('status') != 'complete':

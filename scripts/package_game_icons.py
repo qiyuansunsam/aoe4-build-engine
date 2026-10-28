@@ -1,7 +1,7 @@
 """Package local game artwork for the comparison workspace (no network required)."""
 import base64, hashlib, json, pathlib, re
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-CACHE=ROOT.parent/'mcaoe/public/assets/icons'
+CACHE=ROOT/'aoe4world/public/assets/icons'
 RAW=ROOT.parent/'games/kb/aoe4/extract/UIArt/ui/icons'
 def slug(s): return re.sub('[^a-z0-9]+','-',s.lower()).strip('-')
 catalog=json.loads((ROOT/'data/game-catalog.json').read_text(encoding='utf-8'))

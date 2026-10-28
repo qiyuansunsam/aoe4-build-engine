@@ -2,14 +2,14 @@
 
 ## Replacement and source
 
-The starting point is `qiyuansunsam/aoe4-build-engine`, commit `fde6a76`, cloned into `C:/Users/Sam/projects/aoe4-build-crafter`. Work is on `feat/build-crafter`. The old `MathmaticallyCorrectAoe4` junction pointed to missing `C:/Users/Sam/projects/aoe4-data`; it is preserved as `MathmaticallyCorrectAoe4.previous-link`. The original path now points to this new checkout. The separate `mcaoe` application is an observational stats collector and is retained as a source, not mistaken for the simulation engine.
+The starting point is `qiyuansunsam/aoe4-build-engine`, commit `fde6a76`, cloned into `C:/Users/Sam/projects/aoe4-build-crafter`. Work is on `feat/build-crafter`. `MathmaticallyCorrectAoe4` is a junction to this checkout. The retired `mcaoe` stats app was folded in on 2026-10-28: its aoe4world collector (`aoe4world/engine`, run `python -m engine.collection --daemon` from `aoe4world/`), collection (`aoe4world/data/strategy`) and artwork cache (`aoe4world/public/assets`) live here; the rest of mcaoe is archived in `projects/_archive/mcaoe`.
 
 The replacement is a new interaction design over the remote engine, named AoE Build Crafter. The primary workflow compares two plans, scrubs a shared timeline, and opens unit/technology detail in context. The build library focuses on ranked 4v4, French cavalry, Mongol openings, Malian cow boom and Japanese two-TC play.
 
 ## Three distinct kinds of evidence
 
 1. **Installed game attributes:** local reference XML and localization under `games/kb/aoe4/extract`. Normalize with original asset paths, source hashes, inheritance and explicit unresolved fields. These describe rules, not how popular a strategy is.
-2. **Observed play:** `mcaoe/data/strategy/aggregate.json` and individual summaries. The discovered sample covers 143 matches / 756 appearances, September 29–October 4, patch 11308. Its per-build samples are exploratory; civilization win rates do not establish build popularity. Mongol starting TC placement must not be counted as a second TC.
+2. **Observed play:** `aoe4world/data/strategy/aggregate.json` and individual summaries. The discovered sample covers 143 matches / 756 appearances, September 29–October 4, patch 11308. Its per-build samples are exploratory; civilization win rates do not establish build popularity. Mongol starting TC placement must not be counted as a second TC.
 3. **Theoretical simulation:** `site/engine.js`, with historical 16.2.10604 parameters and manually applied changes documented in `data/PATCH_STATUS.md`, runs the Abbasid three-TC camel plans. `site/engine-civs.js` runs French, Mongol, Malian and Japanese plans on the installed **16.3.11308** rules: `data/civ-rules/<civ>.json` (rule packs, every value with installed-file evidence) compiled by `scripts/build_civ_engine_rules.py` into `data/civ-engine-rules.json`. Their plans in `data/theory-builds.json` are searched from the engine alone by `scripts/optimize_theory_builds.cjs`; each names a recorded reference game that is shown beside it for comparison and is never an input.
 
 Never silently combine these rulesets. Show provenance where a player inspects a number.

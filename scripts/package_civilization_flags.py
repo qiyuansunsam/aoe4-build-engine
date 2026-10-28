@@ -7,7 +7,7 @@ import json
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT.parent / 'mcaoe/public/assets/flags'
+CACHE = ROOT / 'aoe4world/public/assets/flags'
 SOURCE = 'https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/'
 FILES = {
     'abbasid': 'abbasid_dynasty', 'abbasid_ha_01': 'ayyubids',

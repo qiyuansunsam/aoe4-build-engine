@@ -31,9 +31,12 @@ def main():
     ap.add_argument('--max-new', type=int, default=12)
     ap.add_argument('--min-seconds', type=int, default=600)
     ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--min-present', type=int, default=0,
+                    help='instead of all-four/epsilon-win: every game with at least N of the four friends (Sam, 2026-10-28: more '
+                         'games for the four; each shared game adds N friend appearances), most friends first, newest first')
     args = ap.parse_args()
     manifest = json.loads((DATA / 'latest10-manifest.json').read_text(encoding='utf-8'))
-    tracked = [int(p) for p in manifest['players']]
+    tracked = [int(p) for p in manifest['players'] if manifest.get('roles', {}).get(p) != 'tracked']  # the four friends
     known = {g['game']['game_id'] for g in manifest['unique_games']}
     games = {}
     for pid in tracked:
@@ -54,25 +57,28 @@ def main():
         members = {p['player']['profile_id']: p['player'] for team in g.get('teams', []) for p in team}
         present = [pid for pid in tracked if pid in members]
         eps_win = EPSILON in members and members[EPSILON].get('result') == 'win'
-        if len(present) == 4 or eps_win:
+        if (args.min_present and len(present) >= args.min_present) or (not args.min_present and (len(present) == 4 or eps_win)):
             candidates.append({'game_id': gid, 'started_at': g.get('started_at'), 'duration': g.get('duration'), 'kind': g.get('kind'), 'map': g.get('map'), 'present': present, 'allFour': len(present) == 4, 'epsilonWin': eps_win, 'raw': g})
     candidates.sort(key=lambda c: (not c['allFour'], not c['epsilonWin'], c['started_at'] or ''), reverse=False)
     # all-four first (newest first within), then epsilon wins newest first
     all_four = sorted([c for c in candidates if c['allFour']], key=lambda c: c['started_at'] or '', reverse=True)
     wins = sorted([c for c in candidates if not c['allFour'] and c['epsilonWin']], key=lambda c: c['started_at'] or '', reverse=True)
     chosen = (all_four + wins)[:args.max_new]
+    if args.min_present:
+        chosen = sorted(candidates, key=lambda c: (-len(c['present']), c['started_at'] or ''), reverse=False)
+        chosen = sorted(chosen, key=lambda c: (len(c['present']), c['started_at'] or ''), reverse=True)[:args.max_new]
     print(f'candidates: {len(all_four)} with all four, {len(wins)} other epsilon wins; choosing {len(chosen)}')
     for c in chosen:
-        print(' ', c['game_id'], c['started_at'], c['kind'], c['map'], f"{(c['duration'] or 0)//60}:{(c['duration'] or 0)%60:02d}", 'all four' if c['allFour'] else 'epsilon win', c['present'])
+        print(' ', c['game_id'], c['started_at'], c['kind'], c['map'], f"{(c['duration'] or 0)//60}:{(c['duration'] or 0)%60:02d}", f"{len(c['present'])} friends" if args.min_present else 'all four' if c['allFour'] else 'epsilon win', c['present'])
     if args.dry_run:
         return
     for c in chosen:
         raw = dict(c['raw'])
-        manifest['unique_games'].append({'profile_for_download': EPSILON if EPSILON in c['present'] else c['present'][0], 'requested_by': c['present'], 'game': raw, 'selection': 'all-four' if c['allFour'] else 'epsilon-win'})
+        manifest['unique_games'].append({'profile_for_download': EPSILON if EPSILON in c['present'] else c['present'][0], 'requested_by': c['present'], 'game': raw, 'selection': f"{len(c['present'])}-friends" if args.min_present else 'all-four' if c['allFour'] else 'epsilon-win'})
     manifest['extended_at'] = datetime.now(timezone.utc).isoformat()
     (DATA / 'latest10-manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
     (HERE / 'evidence' / 'latest10-manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
-    (DATA / 'selection.json').write_text(json.dumps({'selected_at': manifest['extended_at'], 'rule': 'all four tracked players together first, then epsilon wins; completed ranked team games on patch 11308 longer than %d s' % args.min_seconds, 'chosen': [{k: v for k, v in c.items() if k != 'raw'} for c in chosen]}, indent=2), encoding='utf-8')
+    (DATA / f'selection-{datetime.now().strftime("%Y%m%d-%H%M")}.json').write_text(json.dumps({'selected_at': manifest['extended_at'], 'rule': (f'at least {args.min_present} of the four friends, most friends first, newest first' if args.min_present else 'all four tracked players together first, then epsilon wins') + '; completed ranked team games on patch 11308 longer than %d s' % args.min_seconds, 'chosen': [{k: v for k, v in c.items() if k != 'raw'} for c in chosen]}, indent=2), encoding='utf-8')
     print('manifest extended:', len(manifest['unique_games']), 'games')
 
 

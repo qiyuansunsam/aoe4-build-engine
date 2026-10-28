@@ -8,7 +8,7 @@
    "name": "Abbasid Dynasty",
    "alias": "abbasid_dynasty",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\abbasid_dynasty.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\abbasid_dynasty.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/abbasid_dynasty.png",
    "sha256": "e3be96516673d7aa212cb6f1cf94c95575a4b025c0faceb1919670fc864f6ddf",
    "size": [
@@ -23,7 +23,7 @@
    "name": "Ayyubids",
    "alias": "ayyubids",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\ayyubids.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\ayyubids.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/ayyubids.png",
    "sha256": "9a60b16b9918670ee9fc36fe36174cb98b9c94a4a2f971c297d566c65c9629fe",
    "size": [
@@ -38,7 +38,7 @@
    "name": "Byzantines",
    "alias": "byzantines",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\byzantines.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\byzantines.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/byzantines.png",
    "sha256": "5fa0ea3fdb31877d051f806804c175dccb9676e80e4df9d403bd4b7111005a01",
    "size": [
@@ -53,7 +53,7 @@
    "name": "Macedonian Dynasty",
    "alias": "macedonian_dynasty",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\macedonian_dynasty.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\macedonian_dynasty.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/macedonian_dynasty.png",
    "sha256": "bbc4a7d51275f7ca965876f62d3fdd02c63174f6386557ead303b6fcbab7d2c9",
    "size": [
@@ -68,7 +68,7 @@
    "name": "Chinese",
    "alias": "chinese",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\chinese.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\chinese.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/chinese.png",
    "sha256": "889d99202ee15838547a6145e36a85404cb3a16d7d56760c6e71990f858423dd",
    "size": [
@@ -83,7 +83,7 @@
    "name": "Zhu Xi's Legacy",
    "alias": "zhu_xis_legacy",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\zhu_xis_legacy.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\zhu_xis_legacy.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/zhu_xis_legacy.png",
    "sha256": "f21662c7de271f6a2a51b3b91f4960722687601607722d897c907c8ce90c992e",
    "size": [
@@ -98,7 +98,7 @@
    "name": "English",
    "alias": "english",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\english.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\english.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/english.png",
    "sha256": "9cb03e75529f7b97fb10fade72f04fb514a857e1d1b83c79e5519b08c5fba56c",
    "size": [
@@ -113,7 +113,7 @@
    "name": "French",
    "alias": "french",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\french.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\french.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/french.png",
    "sha256": "6a04e05dbc3d79e8e3dc0d82cf64f3c65888317f76b70b2cbb2206f17cbfd58d",
    "size": [
@@ -128,7 +128,7 @@
    "name": "Jeanne d'Arc",
    "alias": "jeanne_darc",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\jeanne_darc.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\jeanne_darc.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/jeanne_darc.png",
    "sha256": "9c70961e6a93e2c5988fa541a635d3382d62513bc8d281a8978c9c47fd826f51",
    "size": [
@@ -143,7 +143,7 @@
    "name": "Holy Roman Empire",
    "alias": "holy_roman_empire",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\holy_roman_empire.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\holy_roman_empire.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/holy_roman_empire.png",
    "sha256": "3bbbd5e3719a0915b81632f37e5772e5b2fcda5665ebf9d1190a236d3536054f",
    "size": [
@@ -158,7 +158,7 @@
    "name": "Order of the Dragon",
    "alias": "order_of_the_dragon",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\order_of_the_dragon.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\order_of_the_dragon.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/order_of_the_dragon.png",
    "sha256": "835af597e3d57fd685e27f7ec59e8d42ac17cdd6bddc610c9ef7b09656627ca2",
    "size": [
@@ -173,7 +173,7 @@
    "name": "Japanese",
    "alias": "japanese",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\japanese.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\japanese.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/japanese.png",
    "sha256": "11f498ae1c3cd327d3db4dd6ad3cbfc27cb376d9378a3f98162ffe8541062c7c",
    "size": [
@@ -188,7 +188,7 @@
    "name": "Sengoku Daimyo",
    "alias": "sengoku_daimyo",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\sengoku_daimyo.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\sengoku_daimyo.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/sengoku_daimyo.png",
    "sha256": "c65a80febfb76a521d483a5d741bee6860650a40d2fd2fecf32ad1045ada2f60",
    "size": [
@@ -203,7 +203,7 @@
    "name": "Jin Dynasty",
    "alias": "jin_dynasty",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\jin_dynasty.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\jin_dynasty.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/jin_dynasty.png",
    "sha256": "b20ce0d29bee026102e45efc8d495b6fcbc9259d827b50ffa7f3df330a388730",
    "size": [
@@ -218,7 +218,7 @@
    "name": "House of Lancaster",
    "alias": "house_of_lancaster",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\house_of_lancaster.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\house_of_lancaster.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/house_of_lancaster.png",
    "sha256": "17263954871f8b27ac7707c9f2ac7c802d79b66072ced6f8692f33fc0a4dff75",
    "size": [
@@ -233,7 +233,7 @@
    "name": "Malians",
    "alias": "malians",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\malians.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\malians.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/malians.png",
    "sha256": "c194643c831e2eccfa8d9c273b0108499a365eb5229c7feb30fbf19b0357c1de",
    "size": [
@@ -248,7 +248,7 @@
    "name": "Mongols",
    "alias": "mongols",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\mongols.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\mongols.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/mongols.png",
    "sha256": "47536d491b7e90b82457f56b1dd9b13bd34488c122b12e71547c03874c1ae84e",
    "size": [
@@ -263,7 +263,7 @@
    "name": "Golden Horde",
    "alias": "golden_horde",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\golden_horde.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\golden_horde.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/golden_horde.png",
    "sha256": "a5df7da45c1b8c028438f2cf25965cee15bd5a11f430f00fba203feffc60a9a6",
    "size": [
@@ -278,7 +278,7 @@
    "name": "Ottomans",
    "alias": "ottomans",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\ottomans.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\ottomans.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/ottomans.png",
    "sha256": "1e330a73b970541a2fe6dff648a8911ef73851989f32170ff5c86ca71dcf5cb9",
    "size": [
@@ -293,7 +293,7 @@
    "name": "Rus",
    "alias": "rus",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\rus.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\rus.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/rus.png",
    "sha256": "6182764ae973706b60206847fac81e770f0575f5ab150b52f4663be15acceab8",
    "size": [
@@ -308,7 +308,7 @@
    "name": "Delhi Sultanate",
    "alias": "delhi_sultanate",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\delhi_sultanate.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\delhi_sultanate.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/delhi_sultanate.png",
    "sha256": "47cad142dd4d7a1382ddf5020e91fd9bbdeab1a123fb49edc00605798e06725d",
    "size": [
@@ -323,7 +323,7 @@
    "name": "Tughlaq Dynasty",
    "alias": "tughlaq_dynasty",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\tughlaq_dynasty.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\tughlaq_dynasty.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/tughlaq_dynasty.png",
    "sha256": "7b4b43dcf9c4600ca7e5738f265aa2ede8794aa6a941ffb6cf8387de4617c88c",
    "size": [
@@ -338,7 +338,7 @@
    "name": "Knights Templar",
    "alias": "knights_templar",
    "sourceType": "existing-aoe4world-art-cache",
-   "cachePath": "C:\\Users\\Sam\\projects\\mcaoe\\public\\assets\\flags\\knights_templar.png",
+   "cachePath": "C:\\Users\\Sam\\projects\\aoe4-build-crafter\\aoe4world\\public\\assets\\flags\\knights_templar.png",
    "sourceUrl": "https://raw.githubusercontent.com/aoe4world/overlay/main/src/assets/flags/knights_templar.png",
    "sha256": "d78c3272497f4db7aea1cb652e616cf585e6df26cade5886677b78be0784e059",
    "size": [

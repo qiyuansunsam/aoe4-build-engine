@@ -27,3 +27,7 @@ site/uplift/gallery.html
 # (re-fetch with scripts/fetch_video_transcripts.py, whisper_transcribe.py, scrape_jeando_explorer.py, extract_jeando_dataset.py)
 data/upcoming-civs/transcripts/
 data/upcoming-civs/raw/jeando/
+
+# aoe4world collection folded in from the retired mcaoe app (third-party summaries/art stay local)
+aoe4world/data/
+aoe4world/public/
