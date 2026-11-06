@@ -1160,7 +1160,7 @@
         ["Build (\\d[\\d.]*)", "版本 $1"],
         ["released (\\d+) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\\d{4})", "$3 年 {2} $1 日发布"],
         ["hotfix (\\d+) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\\d{4})", "$3 年 {2} $1 日热修复"],
-        ["(\\d+) lines", "$1 条"],
+        ["(\\d+) lines?", "$1 条"],
         ["Update (\\d[\\d.]*) notes", "$1 更新说明"],
         ["went live on (\\d{4}-\\d{2}-\\d{2}) and is the installed patch\\.", "已于 $1 上线，是当前安装的版本。"],
         ["Update (\\d[\\d.]*)", "$1 更新"],
