@@ -1,6 +1,13 @@
 {
     "_comment": "Simplified Chinese UI dictionary for site/i18n.js. Sections: strings (UI text, English -> 简体中文), data (text that comes from data files such as build titles and summaries in data/build-library.json; add new entries here in the same English -> Chinese form), patterns ([regex, replacement] pairs for text with embedded numbers or names; the regex is matched against the whole whitespace-collapsed text, $1 inserts a group as is and {1} inserts it translated), overrides (wins over the game locale when a game term must read differently in the UI). Keys are exact English text; whitespace is collapsed before lookup and a trailing plural s is tried automatically. Game names (units, buildings, technologies, civilizations, ages, resources) come from data/i18n-zh-game.json, built from the game's official locale by scripts/build_zh_locale.py; do not repeat them here. Terms: Build 开局, Build order 建造顺序, Path 路线, Match 比赛, Games 对局, Library 资料库, Patch 版本, Metric 指标, Snapshot 快照, Theoretical 理论, Recorded 记录, Reference build 参考开局, Draft 草稿.",
     "strings": {
+        "Patch notes": "更新说明",
+        "Official notes ↗": "官方说明 ↗",
+        "All patch notes": "全部更新说明",
+        "No lines match.": "没有匹配的条目。",
+        "No patch notes in this build.": "此版本没有更新说明。",
+        "Sections": "章节",
+        "Unit, building, technology or text": "单位、建筑、科技或文字",
         "Release notes": "发布说明",
         "Win rates": "胜率榜",
         "Solo": "单人",
@@ -1150,6 +1157,11 @@
         "One or two extra Town Centers (Feudal or Castle Age). Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds. Stage 1: the earliest Castle Age with the first military unit out by 5:00. Stage 2: Castle Age within 30 s of that, Kirkmen gathering relics from Castle Age, and the fastest 200 population (at most 120 villagers) with every upgrade of its infantry lines, without Imperial economy technologies. The infantry mix (Pikeman, Cateran, Man-at-Arms, Gallowglass), musters, Castle and Imperial landmarks and timings come from the engine search.": "加建一到两座城镇中心（封建或城堡时代）。封建时代建造 Stone of Destiny（所有建筑均建在其范围内），由 Kirkman 经营 Fishpond。第一阶段：在 5:00 前出第一个军事单位的前提下最早进入城堡时代。第二阶段：城堡时代时间不晚于该值 30 秒，从城堡时代起由 Kirkman 收集圣物，并以最快速度达到 200 人口（村民最多 120 名）且完成其步兵兵种的全部升级，不研究帝王时代经济科技。步兵组合（Pikeman、Cateran、武士、Gallowglass）、集结、城堡与帝王时代地标及时机均由引擎搜索得出。"
     },
     "patterns": [
+        ["Build (\\d[\\d.]*)", "版本 $1"],
+        ["released (\\d+) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\\d{4})", "$3 年 {2} $1 日发布"],
+        ["hotfix (\\d+) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\\d{4})", "$3 年 {2} $1 日热修复"],
+        ["(\\d+) lines", "$1 条"],
+        ["Update (\\d[\\d.]*) notes", "$1 更新说明"],
         ["went live on (\\d{4}-\\d{2}-\\d{2}) and is the installed patch\\.", "已于 $1 上线，是当前安装的版本。"],
         ["Update (\\d[\\d.]*)", "$1 更新"],
         ["(\\d[\\d.]*) release notes ↗", "$1 发布说明 ↗"],

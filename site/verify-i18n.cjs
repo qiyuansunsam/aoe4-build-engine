@@ -30,6 +30,8 @@ const VIEWS=[
  {name:'workspace-menus',run:async p=>{await go(p,'#workspace');await p.evaluate(()=>{document.querySelectorAll('#page details').forEach(d=>{if(!d.classList.contains('graph-event-cluster'))d.open=true;});const c=document.querySelector('#overview-chart .graph-event-cluster');if(c)c.open=true;});await settle(p);}},
  {name:'builds',run:p=>go(p,'#builds')},
  {name:'winrates',run:p=>go(p,'#winrates')},
+ {name:'notes',run:p=>go(p,'#notes')},
+ {name:'notes-civ',run:p=>go(p,'#notes/vikings')},
  {name:'winrates-sizes',run:async p=>{await go(p,'#winrates');await p.click('[data-wr-view="sizes"]');await settle(p);await p.click('[data-wr-view="overall"]');}},
  {name:'build-context-menu',run:async p=>{await go(p,'#builds');await p.locator('.build-item').first().click({button:'right'});await settle(p);}},
  {name:'build-comments',run:async p=>{await go(p,'#builds');await p.locator('.build-item').first().click({button:'right'});await p.locator('.object-context-menu [role=menuitem]').nth(1).click();await settle(p);}},

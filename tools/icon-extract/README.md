@@ -7,3 +7,5 @@ Extraction used the installed `cardinal/archives/UIArt.sga` (Steam build 2423123
 Run `python scripts/package_game_icons.py` from the project root after extraction. It selects only comparison-relevant art, preferring installed icons and using the existing mcaoe artwork cache when needed. `data/game-icons-provenance.json` identifies each source and SHA-256. `data/game-icons.json` is a flat normalized-name-to-data-URL map embedded by `site/build.py` as `window.GAME_ICONS`. Missing art is listed explicitly; never use an unrelated icon as a substitute.
 
 Artwork is used in Sam's local workspace. Image availability does not establish any unit statistic or patch equivalence.
+
+2026-11-06: `python -X utf8 scripts/extract_missing_icons.py` adds every catalog icon path without local art to `requested.json`, extracts it from the installed `UIArt.sga` (Steam build 26400362) and decodes it; 1,053 textures added, 25 paths are not in the archive.
