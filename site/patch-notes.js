@@ -1,10 +1,9 @@
-/* Patch notes section (#notes, #notes/<civilization id>) and the Library's per-civilization notes panel.
+/* Patch notes section (#notes, #notes/<civilization id>).
  * Data: data/patch-notes.json (window.PATCH_NOTES), built by scripts/build_patch_notes.py from the official article.
  * Each line is the article's own text split into plain text and references; a reference links to the record's Library
  * page and carries the record's game icon. The civilization filter shows that civilization's own section plus every
  * line elsewhere in the notes that concerns it (item.civs). Note text stays in the language it was published in. */
 const PATCH_NOTES=window.PATCH_NOTES&&Array.isArray(window.PATCH_NOTES.sections)?window.PATCH_NOTES:{sections:[],version:''};
-const PN_OPEN_KEY='aoe-crafter-civ-notes-open';
 let pnQuery='';
 // Hotfix sections (titled "Update <build>") read first, newest build on top; the rest keeps the article's order.
 function pnSections(){const hot=PATCH_NOTES.sections.filter(s=>/^Update \d/.test(s.title)).sort((a,b)=>b.title.localeCompare(a.title,undefined,{numeric:true}));return [...hot,...PATCH_NOTES.sections.filter(s=>!hot.includes(s))];}
@@ -36,10 +35,3 @@ function renderPatchNotes(){const parts=location.hash.replace(/^#notes\/?/,'').s
   $('#pn-civ').onchange=e=>{location.hash='notes'+(e.target.value?'/'+encodeURIComponent(e.target.value):'');};
   $$('[data-pn-jump]').forEach(b=>b.onclick=()=>document.getElementById('pn-'+b.dataset.pnJump)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}));
 }
-// Library: the chosen civilization's notes above its roster (own section first, then lines elsewhere that concern it).
-function pnRemember(open){try{localStorage.setItem(PN_OPEN_KEY,open?'1':'0');}catch{}}
-function civPatchNotesPanel(civ){if(!PATCH_NOTES.sections.length)return '';
-  const sections=pnSections().map(s=>({...s,groups:s.groups.map(g=>pnFilterGroup(g,civ,[])).filter(Boolean)})).filter(s=>s.groups.length);if(!sections.length)return '';
-  const own=sections.flatMap(s=>s.groups.filter(g=>g.civ===civ)),other=sections.map(s=>({...s,groups:s.groups.filter(g=>g.civ!==civ)})).filter(s=>s.groups.length),lines=sections.reduce((n,s)=>n+s.groups.reduce((m,g)=>m+pnCount(g.blocks),0),0);
-  let open=true;try{open=localStorage.getItem(PN_OPEN_KEY)!=='0';}catch{}
-  return `<details class="page-panel pn-civ-panel" ${open?'open':''} ontoggle="pnRemember(this.open)"><summary><span class="pn-civ-summary">${civFlag(civ)}<b>${esc(PATCH_NOTES.title||'Patch notes')} notes</b><span class="meta">${lines} ${lines===1?'line':'lines'}</span></span><a class="pn-source" href="#notes/${esc(civ)}">All patch notes</a></summary>${own.map(g=>pnGroupHtml(g,false)).join('')}${other.map(s=>`<div class="pn-elsewhere"><h3 data-i18n-skip>${esc(s.title)}</h3>${s.groups.map(g=>`<div class="pn-body" data-i18n-skip>${g.blocks.map(pnBlock).join('')}</div>`).join('')}</div>`).join('')}</details>`;}

@@ -39,7 +39,8 @@ assert.ok(title.width<box.width,'title is a link inside the tile');
 const link=tile.locator('.upgrade-title');assert.equal(await link.getAttribute('href'),'#database/'+tiers.upgrade);
 await link.click();await p.locator('.database-record').waitFor();assert.equal(new URL(p.url()).hash,'#database/'+tiers.upgrade,'title opens the technology page');
 // Builds: Saved and Drafts (pending review); engine-crafted plans start as drafts; Save / Move to draft persist
-await p.goto('http://127.0.0.1:8765/#builds',{waitUntil:'networkidle'});await p.locator('#draft-results .build-item').first().waitFor();
+// 'load', not 'networkidle': a web font fetched lazily on the record page leaves Playwright waiting for an idle that already passed
+await p.goto('http://127.0.0.1:8765/#builds',{waitUntil:'load'});await p.locator('#draft-results .build-item').first().waitFor();
 const ids=await p.evaluate(()=>({civ:theory.filter(t=>t.engine==='civ').map(t=>t.id),other:theory.filter(t=>t.engine!=='civ').map(t=>t.id)}));
 const section=sel=>p.locator(sel+' .build-item h2 a').evaluateAll(as=>as.map(a=>decodeURIComponent(a.getAttribute('href').replace('#builds/',''))));
 assert.deepEqual((await section('#draft-results')).sort(),ids.civ.slice().sort(),'engine-crafted plans start in Drafts');

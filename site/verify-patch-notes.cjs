@@ -1,7 +1,6 @@
-// Patch notes section and the Library's civilization notes panel: every line of data/patch-notes.json is rendered,
-// hotfix sections come first, every reference links to an existing Library record and opens it, the civilization
-// filter shows that civilization's section plus the lines elsewhere that concern it, search narrows the lines, the
-// Library shows the same notes above a civilization's roster (also for civilizations with no section of their own),
+// Patch notes section: every line of data/patch-notes.json is rendered, hotfix sections come first, every reference
+// links to an existing Library record and opens it, the civilization filter shows that civilization's section plus the
+// lines elsewhere that concern it (also for civilizations with no section of their own), search narrows the lines,
 // the Chinese layer covers the page chrome, and nothing overflows at 390 px.
 // Run with the server up: node site/verify-patch-notes.cjs [--shots]
 const {chromium}=require('C:/Users/Sam/projects/codex-setup/browser-tools/node_modules/playwright');
@@ -36,12 +35,9 @@ if(shots)await p.screenshot({path:path.join(shotDir,'patch-notes-civ-dark.png'),
 await p.goto(BASE+'#notes',{waitUntil:'networkidle'});await p.fill('#pn-search','longhouse');await p.waitForFunction(()=>document.querySelectorAll('.pn-body li').length<40);
 const found=await p.locator('.pn-body>ul>li').allTextContents();assert.ok(found.length>3&&found.every(t=>/longhouse/i.test(t)),'search keeps matching lines only');
 assert.equal(await p.evaluate(()=>document.activeElement.id),'pn-search','search keeps focus while typing');await p.fill('#pn-search','');
-// Library: the civilization's notes above its roster
-for(const civ of ['byzantine_ha_mac','vikings']){await p.goto(BASE+'#database',{waitUntil:'networkidle'});await p.evaluate(c=>{const s=document.querySelector('#catalog-civ');s.value=c;s.dispatchEvent(new Event('change',{bubbles:true}));},civ);await p.waitForSelector('.pn-civ-panel');const want=concerns(civ);
-  assert.equal(await p.locator('.pn-civ-panel .pn-body li').count(),want.own+want.other,`Library ${civ} notes`);assert.ok(await p.locator('.pn-civ-panel .pn-ref img.game-icon').count()>0,`Library ${civ} notes carry icons`);
-  assert.ok(await p.evaluate(()=>document.querySelector('.pn-civ-panel').compareDocumentPosition(document.querySelector('.catalog-browser'))&Node.DOCUMENT_POSITION_FOLLOWING),'notes sit above the roster');}
-if(shots)await p.screenshot({path:path.join(shotDir,'patch-notes-library-dark.png')});
-await p.evaluate(()=>{const s=document.querySelector('#catalog-civ');s.value='';s.dispatchEvent(new Event('change',{bubbles:true}));});assert.equal(await p.locator('.pn-civ-panel').count(),0,'no notes panel without a civilization');
+// the Library's overview links here with the civilization chosen (site/verify-patch-changes.cjs covers the overview)
+await p.goto(BASE+'#database',{waitUntil:'networkidle'});await p.evaluate(()=>{const s=document.querySelector('#catalog-civ');s.value='byzantine_ha_mac';s.dispatchEvent(new Event('change',{bubbles:true}));});await p.waitForSelector('#lib-changes .pn-source');
+assert.equal(await p.locator('#lib-changes .pn-source').getAttribute('href'),'#notes/byzantine_ha_mac','Library links to the civilization\'s patch notes');
 // Chinese layer: page chrome translates, the article's own text stays as published
 await p.goto(BASE+'#notes',{waitUntil:'networkidle'});await p.click('#lang-toggle');await p.waitForFunction(()=>document.querySelector('nav [data-page="games"]').textContent.includes('\u5bf9\u5c40'));await p.waitForSelector('.pn-section');
 const zh=await p.evaluate(()=>[...document.querySelectorAll('nav [data-page="notes"],.pn-head h2,.pn-head .meta,.pn-source,.pn-filter label,.pn-count,.pn-civ-title a')].map(e=>(e.childNodes[0]?.nodeType===3?e.childNodes[0].data:e.textContent).trim()).filter(Boolean));
