@@ -1,0 +1,49 @@
+/* Win rates section (site/winrates.js). Bars diverge from the 50% midline: above uses --a, below uses --b, the
+   same pair the comparison uses for its two slots; the midline and the 95% range stay neutral. */
+.wr-filter{align-items:end}
+.wr-filter>label{flex:0 1 200px}
+.wr-view{display:grid;gap:6px;margin-left:auto}
+.wr-view-label{font-size:11px;color:var(--muted)}
+.wr-grid{display:grid;gap:20px;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.wr-grid .page-panel{margin:0;min-height:0;display:block;padding:22px 22px 14px}
+.wr-grid .page-panel+.page-panel{margin-top:0}
+.wr-board .panel-head{margin-bottom:8px;align-items:baseline}
+.wr-board .panel-head .meta{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.wr-table{font-size:13px;font-variant-numeric:tabular-nums;border-collapse:collapse;width:100%}
+.wr-table th,.wr-table td{padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:middle;white-space:nowrap}
+.wr-table thead th{font-size:11px;font-weight:500;color:var(--muted);padding-bottom:7px}
+.wr-table tbody th,.wr-table tbody td{background:transparent}
+.wr-table tbody tr:last-child>*{border-bottom:0}
+.wr-table tbody tr:not(.wr-divider):hover>*{background:var(--subtle)}
+.wr-table .wr-rank{width:26px;padding-left:2px;padding-right:2px;color:var(--muted);text-align:right}
+.wr-table .wr-name{font-weight:500;text-align:left}
+.wr-table .wr-name .civ-flag{width:30px;height:18px;margin:0 9px 0 0}
+.wr-table .wr-name span,.wr-table .wr-name .wr-link{vertical-align:middle}
+.wr-link{border:0;background:none;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left}
+.wr-link:hover{color:var(--a);text-decoration:underline;text-underline-offset:3px}
+.wr-table tr.wr-total>*{border-bottom:1px solid color-mix(in srgb,var(--muted) 45%,transparent)}
+.wr-table tr.wr-total .wr-rate{font-weight:600}
+.wr-table .wr-rate,.wr-table .wr-games,.wr-table .wr-pick{text-align:right;width:1%}
+.wr-table td.wr-rate{font-weight:600;color:var(--text)}
+.wr-table td.wr-games,.wr-table td.wr-pick{color:var(--muted)}
+.wr-table .wr-barcell{width:38%;min-width:120px;padding-left:10px;padding-right:10px}
+.wr-axis{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);font-weight:400}
+.wr-bar{position:relative;display:block;height:14px}
+.wr-bar i{position:absolute;display:block}
+.wr-mid{left:50%;top:0;bottom:0;width:1px;background:color-mix(in srgb,var(--muted) 55%,transparent)}
+.wr-fill{top:3px;height:8px;min-width:1px}
+.wr-fill.up{background:var(--a);border-radius:0 4px 4px 0}
+.wr-fill.down{background:var(--b);border-radius:4px 0 0 4px}
+.wr-range{top:6px;height:2px;background:color-mix(in srgb,var(--text) 30%,transparent);border-radius:1px}
+.wr-sort{border:0;background:none;padding:0;font:inherit;color:inherit;cursor:pointer;white-space:nowrap}
+.wr-sort:hover{color:var(--text)}
+.wr-sort[aria-pressed=true]{color:var(--text);font-weight:600}
+.wr-sort[aria-pressed=true]::after{content:'';display:inline-block;margin-left:4px;border:4px solid transparent;border-top-color:currentColor;border-bottom-width:0;vertical-align:middle}
+.wr-table tr.wr-divider td{font-size:11px;color:var(--muted);padding-top:12px;border-bottom:1px solid var(--line)}
+.wr-table tr.wr-thin>*{color:var(--muted);font-weight:400}
+.wr-table tr.wr-thin .civ-flag,.wr-table tr.wr-thin .wr-bar{opacity:.55}
+.wr-source{margin:16px 2px 0;font-size:12px;line-height:1.5;color:var(--muted)}
+@media(min-width:1750px){.wr-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.wr-grid-4 .wr-table .wr-pick{display:none}}
+@media(max-width:1100px){.wr-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){.wr-view{margin-left:0;flex-basis:100%}.wr-filter>label{flex:1 1 140px}.wr-grid .page-panel{padding:16px 12px 8px}.wr-table .wr-pick{display:none}.wr-table .wr-barcell{width:30%;min-width:84px;padding-left:4px;padding-right:4px}.wr-table th,.wr-table td{padding:5px}}
+@media(max-width:540px){.wr-table .wr-name .civ-flag{width:24px;height:15px;margin-right:6px}.wr-table .wr-name{white-space:normal}.wr-table .wr-games{display:none}}

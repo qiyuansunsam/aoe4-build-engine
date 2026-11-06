@@ -28,7 +28,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-EXTRACT = Path('C:/Users/Sam/projects/games/kb/aoe4/extract/installed-24231237')
+EXTRACT = Path('C:/Users/Sam/projects/games/kb/aoe4/extract/installed-26400362')
 AGES = ['Dark Age', 'Feudal Age', 'Castle Age', 'Imperial Age']
 ARMOR = ['Melee', 'Ranged', 'Fire', 'True Damage', 'Siege', 'Melee Armor', 'Ranged Armor']
 # Game terms the engine, metrics and match summaries show that are not catalog record names.
@@ -68,7 +68,8 @@ def js_number(value):
 
 def resolve_template(template, args):
     value = (args or {}).get('int_value', (args or {}).get('float_value'))
-    filled = template.replace('%1%', js_number(value) if value is not None else '\u2014')
+    values = value if isinstance(value, list) else [value]  # 17.0 packs %1%, %2% into one list (as observedTechDescription)
+    filled = re.sub(r'%(\d)%', lambda m: js_number(values[int(m[1]) - 1]) if int(m[1]) <= len(values) and values[int(m[1]) - 1] is not None else '\u2014', template)
     return filled.replace('%%', '%')
 
 

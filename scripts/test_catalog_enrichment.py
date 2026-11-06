@@ -14,8 +14,9 @@ aids={t for g in a['upgradeGroups'] for t in g['technologyIds']};assert 'upgrade
 for i,x in m.items():
  for b in x['producerIds']:assert b in rs
  for g in x['upgradeGroups']:
-  assert g['buildingId'] in rs
-  assert all(t in rs[g['buildingId']].get('researchableTechnologies',[]) for t in g['technologyIds'])
+  # 'datamined' = links only the 17.0 records name (attachment research); everything else is research-list backed
+  assert g['buildingId'] in rs or (g['buildingId'] is None and g.get('datamined'))
+  assert all(t in g.get('datamined',[]) or t in rs[g['buildingId']].get('researchableTechnologies',[]) for t in g['technologyIds'])
  if x['iconKey']:assert x['iconKey'] in icons
 for key,data in icons.items():
  raw=base64.b64decode(data.split(',',1)[1]);assert raw[:8]==b'\x89PNG\r\n\x1a\n';assert hashlib.sha256(raw).hexdigest()==p['icons'][key]['sha256'];w,h=struct.unpack('>II',raw[16:24]);assert w>0 and h>0

@@ -28,7 +28,11 @@ def main():
     ap.add_argument('--min-seconds', type=int, default=600)
     ap.add_argument('--team-only', action='store_true', help='ranked team games only (2v2, 3v3, 4v4)')
     ap.add_argument('--kinds', nargs='*', default=None, help='only these game kinds, e.g. rm_4v4')
+    ap.add_argument('--patch', type=int, default=PATCH, help='installed patch; replays from other patches no longer play')
+    ap.add_argument('--games', type=int, nargs='*', default=None, help='exact game ids to add (any kind, incl. qm_); --count ignored')
     args = ap.parse_args()
+    if args.games:
+        args.count = len(args.games)
     manifest = json.loads((DATA / 'latest10-manifest.json').read_text(encoding='utf-8'))
     # Replace the player's previous selection: drop games only this player requested.
     previous = set(manifest['players'].get(str(args.profile), []))
@@ -43,7 +47,13 @@ def main():
     for page in range(1, 11):
         raw = fetch(f'https://aoe4world.com/api/v0/players/{args.profile}/games?page={page}&limit=40&include_alts=false')
         for g in raw.get('games') or []:
-            if g.get('ongoing') or g.get('patch') != PATCH or (g.get('duration') or 0) < args.min_seconds or not str(g.get('kind', '')).startswith('rm_'):
+            if args.games:
+                if g.get('game_id') in args.games and not g.get('ongoing'):
+                    chosen.append(g)
+                if len(chosen) >= args.count:
+                    break
+                continue
+            if g.get('ongoing') or g.get('patch') != args.patch or (g.get('duration') or 0) < args.min_seconds or not str(g.get('kind', '')).startswith('rm_'):
                 continue
             if args.team_only and g.get('kind') == 'rm_1v1':
                 continue

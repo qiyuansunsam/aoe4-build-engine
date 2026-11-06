@@ -39,7 +39,10 @@
       for (const obj of objects) for (const k in obj || {}) if (k[0] !== '_' && typeof obj[k] === 'string') m.set(norm(k), obj[k]);
       return m;
     };
-    maps = [toMap(ui.overrides), toMap(game.terms, game.text), toMap(ui.strings, ui.data)];
+    // map names of the Win rates section: the installed game's own Chinese names, carried in data/winrates.json
+    const mapNames = {};
+    for (const m of Object.values((window.WINRATES || {}).maps || {})) if (m && m.name && m.zh) mapNames[m.name] = m.zh;
+    maps = [toMap(ui.overrides), toMap(game.terms, game.text), toMap(mapNames, ui.strings, ui.data)];
     lower = new Map(); loose = new Map();
     for (let i = maps.length - 1; i >= 0; i--) for (const [k, v] of maps[i]) {
       lower.set(k.toLowerCase(), v);

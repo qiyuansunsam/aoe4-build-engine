@@ -1,22 +1,30 @@
 # Installed game data
 
-The catalog is populated from the installed game's `cardinal/archives/Attrib.sga`, not the existing AoE4 World mirror. Steam build **24231237**, game-save data version **3637877**. The installed `RelicCardinal.exe` ProductVersion is **16.3.11308.0**. The official release notes contain a matching **16.3.11308** hotfix section; Steam build ID and game version remain distinct identifiers. The historical Abbasid 16.2 simulation retains its own ruleset.
+The catalog is populated from the installed game's `cardinal/archives/Attrib.sga`, not the existing AoE4 World mirror. Steam build **26400362**, game-save data version **3637877**. The installed `RelicCardinal.exe` ProductVersion is **17.0.12260.0**, and the official notes are titled **Update 17.0.12260** (the 2026-11-04 hotfix to Update 17.0.12182, Steam build 26146704). Steam build ID and game version remain distinct identifiers. The historical Abbasid 16.2 simulation and the 16.3.11308 theory-plan rule packs keep their own rulesets. Earlier extracts stay beside it: `installed-26146704/` (17.0.12182) and `installed-24231237/` (16.3.11308).
 
-Raw records stay in the gitignored knowledge base at `C:/Users/Sam/projects/games/kb/aoe4/extract/installed-24231237/`. `decoded/extraction-manifest.json` records each selected asset's SHA-256. `data/game-catalog.json` holds normalized facts, source PBG IDs, archive/locale fingerprints and individual source hashes.
+Raw records stay in the gitignored knowledge base at `C:/Users/Sam/projects/games/kb/aoe4/extract/installed-26400362/`. `data/game-catalog.json` holds normalized facts, source PBG IDs, archive/locale fingerprints and individual source hashes.
 
-## Reproduce
+## Reproduce (after every game update; use the new Steam build id from `steamapps/appmanifest_1466860.acf`)
 
-```powershell
+```bash
 dotnet build tools/game-extract/GameExtract.csproj -c Release
-dotnet tools/game-extract/bin/Release/net8.0/GameExtract.dll 'C:/Program Files (x86)/Steam/steamapps/common/Age of Empires IV/cardinal/archives/Attrib.sga' C:/Users/Sam/projects/games/kb/aoe4/extract/installed-24231237/decoded-all
-python scripts/populate_game_catalog.py --decoded C:/Users/Sam/projects/games/kb/aoe4/extract/installed-24231237/decoded-all --locale C:/Users/Sam/projects/games/kb/aoe4/extract/installed-24231237/LocaleEnglish/en/cardinal.en.ucs --archive 'C:/Program Files (x86)/Steam/steamapps/common/Age of Empires IV/cardinal/archives/Attrib.sga' --steam-build 24231237 --executable-version 16.3.11308.0
+dotnet tools/game-extract/bin/Release/net8.0/GameExtract.dll 'C:/Program Files (x86)/Steam/steamapps/common/Age of Empires IV/cardinal/archives/Attrib.sga' C:/Users/Sam/projects/games/kb/aoe4/extract/installed-26400362/decoded-all
+C:/Users/Sam/projects/games/tools/aoe4-essence/AOEMods.Essence.CLI/bin/Release/net6.0/AOEMods.Essence.CLI.exe sga-unpack 'C:/Program Files (x86)/Steam/steamapps/common/Age of Empires IV/cardinal/archives/LocaleEnglish.sga' C:/Users/Sam/projects/games/kb/aoe4/extract/installed-26400362/LocaleEnglish
+C:/Users/Sam/projects/games/tools/aoe4-essence/AOEMods.Essence.CLI/bin/Release/net6.0/AOEMods.Essence.CLI.exe sga-unpack 'C:/Program Files (x86)/Steam/steamapps/common/Age of Empires IV/cardinal/archives/LocaleSimplifiedChinese.sga' C:/Users/Sam/projects/games/kb/aoe4/extract/installed-26400362/LocaleSimplifiedChinese
+python -X utf8 scripts/populate_game_catalog.py --decoded C:/Users/Sam/projects/games/kb/aoe4/extract/installed-26400362/decoded-all --locale C:/Users/Sam/projects/games/kb/aoe4/extract/installed-26400362/LocaleEnglish/en/cardinal.en.ucs --archive 'C:/Program Files (x86)/Steam/steamapps/common/Age of Empires IV/cardinal/archives/Attrib.sga' --steam-build 26400362 --executable-version 17.0.12260.0
 python -X utf8 scripts/test_game_catalog.py
-python -X utf8 scripts/build_patch_audit.py
+python -X utf8 scripts/build_patch_audit.py        # reviewed claims: re-read the official notes first
+python -X utf8 scripts/enrich_catalog.py && python -X utf8 scripts/test_catalog_enrichment.py
+python -X utf8 scripts/build_catalog_ages.py
+python -X utf8 scripts/build_zh_locale.py          # EXTRACT path at the top names the extract folder
+python -X utf8 site/build.py
 ```
+
+`test_game_catalog.py` pins the patch string, the civilization count and one Byzantine mercenary cost; update those pins with the evidence. The 2026-10-30 update to 17.0 checked all 139 values transcribed in `data/patch-next.json` against the new files: every one matched. The 2026-11-06 update to the 17.0.12260 hotfix found all 9,203 decoded records byte-identical to 17.0.12182 (the archive hash differs; the hotfix notes list AI, Crucible and Longhouse-attachment fixes and no balance values), so every catalog value is unchanged.
 
 The English UCS is freshly unpacked from the same installation's `LocaleEnglish.sga` with AOEMods.Essence CLI `sga-unpack`. The CLI is built at `C:/Users/Sam/projects/games/tools/aoe4-essence`, upstream commit `2bb952f292ac9c2a1a1c84019d97b406018f7938`. Build with `dotnet build AOEMods.Essence.CLI/AOEMods.Essence.CLI.csproj -c Release -p:NoWarn=CA2252`; the old upstream library marks APIs as preview. The project extractor pins NuGet `AOEMods.Essence` **0.6.0**.
 
-Extraction decodes **8,330 of 28,059 archive records**, covering every race's squads/entities, shared upgrades/weapons, race metadata and data-version records. The catalog includes all **23 visible playable civilizations and variants** found in root race definitions: **1,291 unit forms, 795 buildings and 1,269 technologies**. Civilization names are localized from installed files. Nonplayable campaign/rogue records, dummy bundles and scenario objects without usable costs/stat fields are excluded. These are definition variants, not unique unit families.
+Extraction decodes **9,203 of 30,753 archive records**, covering every race's squads/entities, shared upgrades/weapons, race metadata and data-version records. The catalog includes all **25 visible playable civilizations and variants** found in root race definitions (Vikings and Scots joined in 17.0): **1,396 unit forms, 864 buildings and 1,340 technologies**. Civilization names are localized from installed files. Nonplayable campaign/rogue records, dummy bundles and scenario objects without usable costs/stat fields are excluded. These are definition variants, not unique unit families.
 
 The database is comprehensive for these catalog categories, not every game asset: ability execution graphs, complete state-tree logic, graphics, maps and campaign scripts are not represented as playable stats. Units are linked to their resolved entity; there are no unresolved entity references in the exported scope.
 

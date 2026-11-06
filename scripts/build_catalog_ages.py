@@ -87,7 +87,12 @@ def main():
         same = installed.get(base_id(b['id']))
         if same and len(same) == 1 and b.get('age') != next(iter(same)):
             ages['buildings'][b['id']] = next(iter(same))
-            method[b['id']] = f"installed requirement of {base_id(b['id'])} in every 16.3 civilization (preview record said {b.get('age')})"
+            method[b['id']] = f"installed requirement of {base_id(b['id'])} in every installed civilization (preview record said {b.get('age')})"
+    # records with no installed age requirement keep the age the datamined 17.0 record gives (Vikings/Scots attachments, tiers)
+    for k in ('buildings', 'technologies'):
+        for r in preview[k]:
+            if r['id'] not in ages[k] and isinstance(r.get('age'), int) and r['age'] > 0:
+                ages[k][r['id']], method[r['id']] = r['age'], 'datamined 17.0 record (data/catalog-preview-17.0.json)'
     out = {'source': 'installed game files (building and technology requirements) and data/buildings_all.json / tech_all.json (aoe4world), matched to data/game-catalog.json ids',
            **ages, 'method': method,
            'unmatched': sorted(r['id'] for k in ('buildings', 'technologies') for r in cat[k] if r['id'] not in ages[k] and method.get(r['id']) != 'age-up')}

@@ -71,6 +71,21 @@ for i,r in records.items():
   valid=[t for t in r.get('researchableTechnologies',[]) if t in techs and not t.endswith('_age')]
   if valid:groups[i]=valid
  meta[i]={'tags':tags,'producerIds':producers[i] if i in units else tech_producers.get(i,[]),'familyKey':root(i) if i in units else i,'available':bool(producers[i]) if i in units else True,'upgradeGroups':[{'buildingId':b,'technologyIds':sorted(ids)} for b,ids in groups.items()],'iconKey':iconkey}
+# Upgrades researched from attachments (Viking Longhouse Loom/Smithy) are not on any building's research list; the
+# datamined 17.0 records still name them. Keep those links when the installed catalog has both ends.
+preview_meta=json.loads((DATA/'catalog-preview-17.0.json').read_text(encoding='utf-8')).get('meta',{})
+same=lambda t:t if t in records else re.sub(r'__(vikings|scots)$','',t) if re.sub(r'__(vikings|scots)$','',t) in records else None
+for i,pm in preview_meta.items():
+ if i not in meta: continue
+ groups=meta[i]['upgradeGroups']; have={t for g in groups for t in g['technologyIds']}
+ for pg in pm.get('upgradeGroups',[]):
+  add=sorted({same(t) for t in pg['technologyIds'] if same(t)}-have)
+  if not add: continue
+  b=pg['buildingId'] if pg['buildingId'] in records else None
+  g=next((g for g in groups if g['buildingId']==b),None)
+  if not g: g={'buildingId':b,'technologyIds':[]}; groups.append(g)
+  g['technologyIds']=sorted(set(g['technologyIds'])|set(add)); g['datamined']=sorted(set(g.get('datamined',[]))|set(add))
+  have|=set(add)
 (DATA/'catalog-enrichment.json').write_text(json.dumps(meta,separators=(',',':')),encoding='utf-8')
 (DATA/'game-icons.json').write_text(json.dumps(icons,separators=(',',':')),encoding='utf-8')
 prov['catalogMissing']=missing

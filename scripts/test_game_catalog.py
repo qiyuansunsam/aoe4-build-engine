@@ -99,7 +99,7 @@ class GameCatalogTests(unittest.TestCase):
             base=plain(json.loads(path.read_text(encoding='utf-8-sig'))['data'])['default']
             if base.get('race_bag',{}).get('ui_visibility') and path.stem!='rogue_neutral':visible.append(path.stem)
         self.assertEqual(set(visible),{c['id'] for c in CAT['civilizations']})
-        self.assertEqual(len(visible),23)
+        self.assertEqual(len(visible),25)
 
     def test_nonstandard_resource_costs_are_never_discarded(self):
         for group in ('units','buildings','technologies'):
@@ -109,8 +109,8 @@ class GameCatalogTests(unittest.TestCase):
                 nonzero={k:v for k,v in cost.items() if isinstance(v,(int,float)) and v!=0}
                 self.assertEqual({k:v for k,v in obj['cost'].items() if v!=0},nonzero,obj['id'])
         merc=next(u for u in CAT['units'] if u['id']=='unit_landsknecht_3_merc_byz')
-        self.assertEqual(merc['cost']['merc_byz'],160)
-        self.assertEqual(merc['displayCost']['merc_byz'],160)
+        self.assertEqual(merc['cost']['merc_byz'],150)  # 160 in 16.3; 17.0 lowers it without a note line
+        self.assertEqual(merc['displayCost']['merc_byz'],150)
         self.assertEqual(merc['costLabels']['merc_byz'],'Olive Oil')
         mac=next(u for u in CAT['units'] if u['civilization']=='byzantine_ha_mac')
         self.assertEqual(mac['costLabels']['merc_byz'],'Silver')
@@ -150,7 +150,7 @@ class GameCatalogTests(unittest.TestCase):
                 self.assertRegex(obj['source']['sha256'],r'^[a-f0-9]{64}$')
                 self.assertIsInstance(obj['source']['pbgid'],int)
         self.assertFalse(CAT['coverage']['unresolvedEntityReferences'])
-        self.assertEqual(CAT['provenance']['patch'],'16.3.11308')
+        self.assertEqual(CAT['provenance']['patch'],'17.0.12260')
 
     def test_each_source_fingerprint_matches_extracted_binary(self):
         result=subprocess.run(['dotnet',str(ROOT/'tools/game-extract/bin/Release/net8.0/GameExtract.dll'),

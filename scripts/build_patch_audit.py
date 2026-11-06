@@ -23,23 +23,24 @@ for group, ident, field, expected, future in [
     for key in field.split('.'):value=value[key]
     checks.append({'id':ident,'name':record['name'],'field':field,'installed':value,
         'announcedPrevious':expected,'announcedNext':future,
-        'status':'matches-pre-release-value' if value==expected else 'requires-review',
+        'status':'matches-released-value' if value==future else 'requires-review',
         'source':record.get('entitySource',record['source']),'notesUrl':preview,
-        'applied':False,'reason':'17.0 is a preview scheduled for 2026-10-29; audit date is 2026-10-23.'})
+        'applied':True,'reason':'Installed 17.0.12260 files carry the value the notes announce.'})
 out={
-    'schemaVersion':1,'checkedAt':'2026-10-23','status':'installed-build-matches-latest-released-notes',
+    'schemaVersion':1,'checkedAt':'2026-11-06','status':'installed-build-matches-latest-released-notes',
     'installed':{'patch':catalog['provenance']['patch'],'steamBuildId':catalog['provenance']['steamBuildId'],
         'executableVersion':catalog['provenance']['executableVersion'],
         'executablePath':'C:/Program Files (x86)/Steam/steamapps/common/Age of Empires IV/RelicCardinal.exe',
         'evidence':'Windows executable ProductVersion read without launching the game.',
         'archiveSha256':catalog['provenance']['sha256']},
-    'latestReleased':{'version':'16.3.11308','url':released,'notesPublishedAt':'2026-06-18',
-        'releaseDate':None,'dateNote':'Hotfix appended to older notes; no separate publication date stated.',
-        'summary':'The appended hotfix addresses a console startup crash. No balance changes are listed for it.',
-        'balanceChangesListed':False},
-    'preview':{'version':'17.0','status':'announced-not-released','publishedAt':'2026-10-22',
-        'scheduledRelease':'2026-10-29','url':preview,'appliedToCatalog':False,
-        'summary':'Upcoming changes remain separate from installed facts. Re-extract after the game updates.'},
+    'latestReleased':{'version':'17.0.12260','url':preview,'notesPublishedAt':'2026-11-03',
+        'releaseDate':'2026-10-29','dateNote':'Notes retitled "Update 17.0.12260" on 2026-11-03 (hotfix section appended); Steam installed build 26400362 on 2026-11-04. Update 17.0.12182 (Steam build 26146704) went live 2026-10-29.',
+        'summary':'Raiders of the North update: Vikings and Scots plus balance changes; every transcribed note value matches the installed files. The 17.0.12260 hotfix lists AI, Crucible and Longhouse-attachment fixes and no balance values: all 9,203 decoded attribute records are byte-identical to 17.0.12182.',
+        'balanceChangesListed':True},
+    'previous':{'version':'16.3.11308','url':released,'steamBuildId':'24231237'},
+    'preview':{'version':'17.0','status':'released','publishedAt':'2026-10-22',
+        'scheduledRelease':'2026-10-29','url':preview,'appliedToCatalog':True,
+        'summary':'17.0 is the installed build; the notes overlay is now history, not a forecast.'},
     'checks':checks,
     'verification':{'mode':'all-populated-base-fields','tests':'python -X utf8 scripts/test_game_catalog.py',
         'scope':['unit health, cost, train time, armor, movement and population','building health, armor, cost and build time',
@@ -54,4 +55,4 @@ out={
         'Historical simulation parameters use a separate ruleset and are not silently upgraded by this database audit.'
     ]}
 (ROOT/'data/patch-audit.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
-print(f'Patch audit: {len(checks)} preview comparisons; {out["latestReleased"]["version"]} released; no preview changes applied')
+print(f'Patch audit: {len(checks)} note comparisons; {out["latestReleased"]["version"]} released; {sum(c["status"]=="matches-released-value" for c in checks)} match installed')

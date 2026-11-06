@@ -31,3 +31,7 @@ data/upcoming-civs/raw/jeando/
 # aoe4world collection folded in from the retired mcaoe app (third-party summaries/art stay local)
 aoe4world/data/
 aoe4world/public/
+
+# raw ranked match rows from Relic's API carry player ids (scripts/collect_relic_matches.py); only the aggregate
+# data/winrates.json is published
+data/winrates/
