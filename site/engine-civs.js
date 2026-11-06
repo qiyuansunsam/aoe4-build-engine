@@ -1,4 +1,4 @@
-/* AoE4 multi-civilization theoretical engine: French, Mongols, Malians and Japanese on the installed 16.3.11308 rules.
+/* AoE4 multi-civilization theoretical engine: French, Mongols, Malians, Japanese, Scots and Vikings on the installed 17.0.12260 rules.
    Same arithmetic as engine.js (1 s steps; gather C / (C/r + 2d/v + t_turn); construction T1 x 3/(n+2); greedy plan executor
    with deficit-weighted worker shares), driven by data/civ-engine-rules.json (compiled from data/civ-rules/*.json by
    scripts/build_civ_engine_rules.py) and a parameterised plan. No value is taken from recorded games.

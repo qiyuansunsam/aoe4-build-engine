@@ -1,4 +1,4 @@
-"""Vikings glue for scripts/build_civ_engine_rules.py (17.0 preview pack data/civ-rules/vikings.json).
+"""Vikings glue for scripts/build_civ_engine_rules.py (17.0.12260 pack data/civ-rules/vikings.json).
 
 Feeds the pack mechanics into the engine slots read by site/civ-mech/vikings.js: Northern Migration (free villagers per Town
 Center up to the Longhouse villager capacity), Longhouses as the population building, the four Longhouse attachments, the
@@ -25,7 +25,7 @@ def glue(p, s, h):
     for k in ('bee', 'farm', 'smithy', 'loom'):
         a = at[k]
         att[k] = {'id': a['id'], 'name': {'bee': 'Bee Skeps', 'farm': 'Farmstead', 'smithy': 'Smithy', 'loom': 'Pasture and Loom'}[k], 'cost': cost(a['cost']), 'time': a['seconds'],
-                  'age': a['age'], 'limit': a['limit']}
+                  'age': a['age'], 'limit': a['limit'], 'pbgid': h['pbgid'](a['id'])}
         if k == 'bee': att[k]['goldPerSecond'] = a['goldPerMinute'] / 60
         if k == 'farm': att[k].update({'fields': a['fields'], 'fieldRate': a['fieldRate']})
         if k in ('smithy', 'loom'): att[k].update({'techs': a['techs'], 'researchSeconds': a['researchSeconds'], 'earlierAgeFaster': a['earlierAgeFaster']})
@@ -34,12 +34,13 @@ def glue(p, s, h):
         'longhouse': {'bondiRate': lh['bondiProductionRate'], 'pop': lh['popProvided']},
         'attach': att,
         'feast': {'interval': kf['intervalSeconds'], 'food': kf['food'], 'perLonghouse': kf['perLonghouse']},
-        'maidens': {'cost': cost(cm['cost']), 'time': cm['seconds'], 'base': cm['base'], 'perLonghouse': cm['perLonghouse'], 'pbgid': cm['unit']},
+        'maidens': {'cost': cost(cm['cost']), 'time': cm['seconds'], 'base': cm['base'], 'perLonghouse': cm['perLonghouse'], 'pbgid': h['pbgid'](cm['unit'])},
         'baugr': {'rate': bf['barracksWorkRate'], 'grants': bf['grants']},
-        'grove': {'gullinn': sg['gullinnSeconds'], 'grove': sg['groveSeconds'], 'dreki': sg['drekiRate'], 'limit': sg['limit'], 'volur': {'cost': cost(sg['volur']['cost']), 'time': sg['volur']['seconds']}},
+        'grove': {'gullinn': sg['gullinnSeconds'], 'grove': sg['groveSeconds'], 'dreki': sg['drekiRate'], 'limit': sg['limit'], 'volur': {'cost': cost(sg['volur']['cost']), 'time': sg['volur']['seconds'], 'pbgid': h['pbgid'](sg['volur']['id'])}, 'pbgid': h['pbgid']('building_sacred_grove_vik'),
+                  'groveUnit': h['pbgid']('unit_berserker_2_vik'), 'gullinnUnit': h['pbgid']('unit_berserker_3_vik')},
         'sagas': {'falkr': sa['falkr'], 'ulfr': sa['ulfr'], 'jofurr': sa['jofurr']},
         'forester': {'perBondi': fo['woodPerBondiPerMinute'] / 60, 'max': fo['maxPerMinute'] / 60},
-        'rikets': {'units': rk['crossbowmen'], 'pbgid': 'unit_crossbowman_rikets_vik'},
+        'rikets': {'units': rk['crossbowmen'], 'pbgid': h['pbgid']('unit_crossbowman_rikets_vik')},
         'kongens': {'gold': kd['goldPerLonghouse'], 'interval': kd['intervalSeconds']},
         'auto': AUTO,
     }
@@ -67,10 +68,10 @@ def glue(p, s, h):
 
     s['assumptions'].update({
         'migrationPerTC': 'Every Town Center recruits a free villager every 22 s in parallel (ability attached to both Town Center types; "auto queue on all your town centers", Beastyqt 19:17). No frame times two Town Centers side by side.',
-        'gatherRates': 'Viking villagers gather at the installed 16.3 standard rates (no 17.0 record lists a Viking gather table).',
+        'gatherRates': 'Viking villagers gather at the rates of the installed Viking villager record, which equal the standard villager.',
         'vegetableFields': 'Farmstead vegetable fields are infinite farms beside the Longhouse (one villager each) gathered at 1.5x the farm rate; villagers still empty sheep, berries and deer first.',
         'beeSkeps': 'Bee Skeps pay 50 gold per minute continuously (tooltip and record; the on-screen tick is about 8 gold per 10 s).',
-        'autoResearch': 'Smithy and Pasture and Loom research one tier at a time, the next tier whose age is reached: 270 s, or 210 s when that tier belongs to an earlier age than the current one.',
+        'autoResearch': 'Smithy and Pasture and Loom research one tier at a time, the next tier whose age is reached: 300 s, or 240 s when that tier belongs to an earlier age than the current one.',
         'codeOfJylland': 'Code of Jylland is researched at the Stable in Castle Age (age and building are in no record).',
         'veteranBerserker': 'Upgrade to Veteran Berserker is researched at the Barracks (building in no record).',
         'baugrResearch': 'Once Baugr Fort stands, Barracks technologies are researched at Baugr Fort (one at a time), 25% faster and 15% cheaper.',

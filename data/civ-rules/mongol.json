@@ -1,7 +1,7 @@
 {
  "civ": "mongol",
  "catalogCiv": "mongol",
- "patch": "16.3.11308",
+ "patch": "17.0.12260",
  "start": {
   "villagers": 6,
   "resources": {
@@ -203,7 +203,7 @@
   "cost": {
    "wood": 750
   },
-  "buildSeconds": 150,
+  "buildSeconds": 165,
   "extraRequiresAge": 2,
   "popProvided": 0,
   "villagerProductionMultiplierByAge": {
@@ -218,7 +218,7 @@
    "gold",
    "stone"
   ],
-  "notes": "cost/buildSeconds are the extra Town Center (building_town_center_mon: 750 wood, 150 s, Feudal Age via requirement_ext feudal_age OR fast_expand). The capital starts packed (building_town_center_capital_moving_mon) and is deployed by the civ_start\\Mongols state tree. Population comes from the 200 base cap, so a Town Center adds nothing usable. No Mongol villager-production multiplier was found in the TC, army or upgrade records; villagers train in the entity time (20 s). The TC also trains double villagers (unit_villager_1_double_mon) when inside Ovoo influence, see mechanics.double_production. Researches Textiles / Textiles (Improved).",
+  "notes": "cost/buildSeconds are the extra Town Center (building_town_center_mon: 750 wood, 165 s since Update 17.0 (150 s before), Feudal Age via requirement_ext feudal_age OR fast_expand). The capital starts packed (building_town_center_capital_moving_mon) and is deployed by the civ_start\\Mongols state tree. Population comes from the 200 base cap, so a Town Center adds nothing usable. No Mongol villager-production multiplier was found in the TC, army or upgrade records; villagers train in the entity time (20 s). The TC also trains double villagers (unit_villager_1_double_mon) when inside Ovoo influence, see mechanics.double_production. Researches Textiles / Textiles (Improved).",
   "evidence": [
    "catalog:buildings/building_town_center_mon#cost",
    "catalog:buildings/building_town_center_mon#buildTimeSeconds",
@@ -3315,7 +3315,7 @@
       "trainSeconds": 30
      }
     ],
-    "notes": "Feudal heavy cavalry that heals after each attack (Steppe Lancers raise it). racebps knight archetype = unit_knight_2_mon. No Lancer unit exists in the 16.3 Mongol roster (the \"Early Lancers\" line in codex 11197943 is a historical copy).",
+    "notes": "Feudal heavy cavalry that heals after each attack (Steppe Lancers raise it). racebps knight archetype = unit_knight_2_mon. No Lancer unit exists in the installed Mongol roster (the \"Early Lancers\" line in codex 11197943 is a historical copy).",
     "evidence": [
      "catalog:units/unit_knight_2_mon#cost",
      "catalog:units/unit_knight_3_mon#cost",
@@ -4701,7 +4701,7 @@
      "market_mon": 40,
      "deer_stones_landmark_mon": 40
     },
-    "packedSpeedEngineUnits": 3,
+    "packedSpeedEngineUnits": 3.6,
     "movingRecordCostTime": {
      "building_town_center_capital_moving_mon": [
       {
@@ -4716,7 +4716,7 @@
    "status": "partial",
    "evidence": [
     "raw:abilities/toggle_abilities/mongol/pack_building_mon.rgd#default/ability_bag/channeling/channeling_time_second",
-    "raw:ebps/races/mongol/buildings/building_town_center_capital_moving_mon.json#default/moving_ext/speed_scaling_table/default_speed",
+    "raw:ebps/races/mongol/buildings/building_town_center_capital_moving_mon.json#default/moving_ext/speed_scaling_table/default_speed = 3.6 in 17.0.12260 (3 in 16.3.11308; the 17.0 notes: landmark movement speed 0.75 -> 0.9 tiles per second)",
     "raw:statemodel_schema/buildings/civilizations/mongols/*.rgd (building_unpack_time)",
     "locale:11227209 (All buildings can be packed up and redeployed)"
    ]

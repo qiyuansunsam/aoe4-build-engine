@@ -1,4 +1,4 @@
-/* Vikings theory builds (17.0 preview rules). Crafted by the engine alone: no recorded games exist for this civilization.
+/* Vikings theory builds (installed 17.0.12260 rules). Crafted by the engine alone: no recorded games exist for this civilization.
    mech.lh = Longhouses allowed per age (built when spare villager capacity falls to mech.lhLead), mech.attach = attachment
    priority list for the completed Longhouses (bee = Bee Skeps, farm = Farmstead, smithy = Smithy, loom = Pasture and Loom).
    Sam, 2026-10-28: two strategies compared, both on the two-Town-Center, six-Longhouse opening (the six with Bee Skeps):

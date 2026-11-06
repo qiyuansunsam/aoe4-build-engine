@@ -1,7 +1,7 @@
 {
   "civ": "French",
   "catalogCiv": "french",
-  "patch": "16.3.11308",
+  "patch": "17.0.12260",
   "start": {
     "villagers": 6,
     "resources": {
@@ -217,7 +217,7 @@
       "wood": 400,
       "stone": 300
     },
-    "buildSeconds": 150,
+    "buildSeconds": 165,
     "age": 2,
     "popProvided": null,
     "villagerProductionMultiplierByAge": {
@@ -232,7 +232,7 @@
       "3": 1.2,
       "4": 1.2
     },
-    "notes": "Production-speed (rate) multiplier on every French Town Center queue, villagers, scouts and TC research (Textiles); effective villager time = 20 / multiplier. Primary candidate +15/+15/+20/+25% comes from the current civ-summary trait formatter in the standard army record (same formatter carries -50% drop-off and -35% eco-tech args, both confirmed by raw records). Alternative +10/+15/+20/+20% comes from the three always-on TC abilities town_center_production_age1/2/3_fre (attached to both capital and extra TC; age3 record also covers Imperial, no age4 record), matching the older codex copy 11197894 that also states a stale 30% tech discount. Runtime value lives in an undecoded state tree. Extra TC: requires feudal_age (or the rogue-mode fast_expand boon).",
+    "notes": "Production-speed (rate) multiplier on every French Town Center queue, villagers, scouts and TC research (Textiles); effective villager time = 20 / multiplier. Primary candidate +15/+15/+20/+25% comes from the current civ-summary trait formatter in the standard army record (same formatter carries -50% drop-off and -35% eco-tech args, both confirmed by raw records). Alternative +10/+15/+20/+20% comes from the three always-on TC abilities town_center_production_age1/2/3_fre (attached to both capital and extra TC; age3 record also covers Imperial, no age4 record), matching the older codex copy 11197894 that also states a stale 30% tech discount. Runtime value lives in an undecoded state tree. Extra TC: requires feudal_age (or the rogue-mode fast_expand boon). Extra Town Center build time is 165 s (150 s before Update 17.0).",
     "evidence": [
       "raw:Attrib-raw/army/standard_mode/normal_french.rgd#default/army_bag/ui/global_traits_summary/trait[2]/description_formatter/formatter_arguments/int_value[2..5]",
       "locale:11227033 | Town Center production speed increased per age +15%, +15%, +20%, +25% (args from army record)",
@@ -257,7 +257,7 @@
         "wood": 400,
         "stone": 300
       },
-      "buildSeconds": 150,
+      "buildSeconds": 165,
       "age": 2,
       "popProvided": null,
       "dropoff": [
@@ -453,7 +453,7 @@
       "popProvided": null,
       "dropoff": [],
       "limit": null,
-      "notes": "Installed 16.3 entity requires imperial_age. French University has no Biology.",
+      "notes": "Installed entity requires imperial_age. French University has no Biology.",
       "evidence": [
         "catalog:buildings/building_tech_university_control_fre#cost",
         "catalog:buildings/building_tech_university_control_fre#buildTimeSeconds",

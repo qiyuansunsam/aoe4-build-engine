@@ -1,0 +1,500 @@
+{
+ "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": 16036860.3,
+ "build": {
+  "id": "french-knights-10",
+  "title": "Royal Knights by 10:00",
+  "summary": "Royal Knights by 10:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Royal Knight upgrade.",
+  "civilization": "french",
+  "engine": "civ",
+  "patch": "17.0.12260",
+  "reference": {
+   "buildId": "french-observed-4v4"
+  },
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 600,
+   "slack": 1
+  },
+  "lineNames": "Royal Knight",
+  "result": {
+   "done": 1397,
+   "at": 600,
+   "line": 16,
+   "army": 16,
+   "armyValue": 3840,
+   "villagers": 37,
+   "population": 57,
+   "age": 2,
+   "ages": [
+    254,
+    716,
+    1202
+   ],
+   "firstUnit": 320,
+   "pop150": 1229,
+   "pop200": 1374
+  },
+  "planId": "french-knights-10",
+  "lines": [
+   "royal-knight"
+  ],
+  "vilTarget": 45,
+  "landmarks": {
+   "2": "school-of-cavalry",
+   "3": "royal-institute",
+   "4": "red-palace"
+  },
+  "lmBuilders": {
+   "2": 9,
+   "3": 11,
+   "4": 3
+  },
+  "extraTCs": {
+   "2": 0,
+   "3": 2
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 1,
+   "3": 1,
+   "4": 5
+  },
+  "maxProducers": 4,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1"
+   ],
+   "2": [
+    "upgrade_econ_resource_food_harvest_rate_2"
+   ],
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": true,
+   "3": true
+  },
+  "blacksmiths": 0,
+  "pauseForAge": true,
+  "window": 3,
+  "woodFloor": 0.3,
+  "goldBias": 1,
+  "armyAge": 2,
+  "pauseFrom": {
+   "3": 600,
+   "4": 900
+  },
+  "vilTarget2": 140,
+  "vilTarget2At": 660
+ },
+ "ledger": {
+  "id": "french-knights-10",
+  "evaluations": 5251,
+  "seconds": 169,
+  "seed": 11,
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 600,
+   "slack": 1
+  },
+  "best": {
+   "done": 1397,
+   "at": 600,
+   "line": 16,
+   "army": 16,
+   "armyValue": 3840,
+   "villagers": 37,
+   "population": 57,
+   "age": 2,
+   "ages": [
+    254,
+    716,
+    1202
+   ],
+   "firstUnit": 320,
+   "pop150": 1229,
+   "pop200": 1374
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "planId": "french-knights-10",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 45,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "red-palace"
+     },
+     "lmBuilders": {
+      "2": 6,
+      "3": 11,
+      "4": 3
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 2,
+      "3": 1,
+      "4": 5
+     },
+     "maxProducers": 4,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.4,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 140,
+     "vilTarget2At": 660
+    },
+    "result": {
+     "done": 1414,
+     "at": 600,
+     "line": 17,
+     "army": 17,
+     "armyValue": 4080,
+     "villagers": 37,
+     "population": 57,
+     "age": 2,
+     "ages": [
+      274,
+      725,
+      1225
+     ],
+     "firstUnit": 339,
+     "pop150": 1243,
+     "pop200": 1384
+    }
+   },
+   {
+    "params": {
+     "planId": "french-knights-10",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 45,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "red-palace"
+     },
+     "lmBuilders": {
+      "2": 6,
+      "3": 11,
+      "4": 3
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 2,
+      "3": 2,
+      "4": 5
+     },
+     "maxProducers": 5,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.4,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 140,
+     "vilTarget2At": 660
+    },
+    "result": {
+     "done": 1414,
+     "at": 600,
+     "line": 17,
+     "army": 17,
+     "armyValue": 4080,
+     "villagers": 37,
+     "population": 57,
+     "age": 2,
+     "ages": [
+      274,
+      725,
+      1225
+     ],
+     "firstUnit": 339,
+     "pop150": 1243,
+     "pop200": 1384
+    }
+   },
+   {
+    "params": {
+     "planId": "french-knights-10",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 45,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "red-palace"
+     },
+     "lmBuilders": {
+      "2": 6,
+      "3": 11,
+      "4": 3
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 2,
+      "3": 2,
+      "4": 5
+     },
+     "maxProducers": 6,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.4,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 140,
+     "vilTarget2At": 660
+    },
+    "result": {
+     "done": 1414,
+     "at": 600,
+     "line": 17,
+     "army": 17,
+     "armyValue": 4080,
+     "villagers": 37,
+     "population": 57,
+     "age": 2,
+     "ages": [
+      274,
+      725,
+      1225
+     ],
+     "firstUnit": 339,
+     "pop150": 1243,
+     "pop200": 1384
+    }
+   },
+   {
+    "params": {
+     "planId": "french-knights-10",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 45,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "red-palace"
+     },
+     "lmBuilders": {
+      "2": 6,
+      "3": 11,
+      "4": 3
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 2,
+      "3": 2,
+      "4": 5
+     },
+     "maxProducers": 7,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.4,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 140,
+     "vilTarget2At": 660
+    },
+    "result": {
+     "done": 1414,
+     "at": 600,
+     "line": 17,
+     "army": 17,
+     "armyValue": 4080,
+     "villagers": 37,
+     "population": 57,
+     "age": 2,
+     "ages": [
+      274,
+      725,
+      1225
+     ],
+     "firstUnit": 339,
+     "pop150": 1243,
+     "pop200": 1384
+    }
+   },
+   {
+    "params": {
+     "planId": "french-knights-10",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 45,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "red-palace"
+     },
+     "lmBuilders": {
+      "2": 6,
+      "3": 11,
+      "4": 3
+     },
+     "extraTCs": {
+      "2": 0,
+      "3": 2
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 2,
+      "3": 2,
+      "4": 5
+     },
+     "maxProducers": 8,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1"
+      ],
+      "2": [
+       "upgrade_econ_resource_food_harvest_rate_2"
+      ],
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 0,
+     "pauseForAge": true,
+     "window": 3,
+     "woodFloor": 0.3,
+     "goldBias": 1.4,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 140,
+     "vilTarget2At": 660
+    },
+    "result": {
+     "done": 1414,
+     "at": 600,
+     "line": 17,
+     "army": 17,
+     "armyValue": 4080,
+     "villagers": 37,
+     "population": 57,
+     "age": 2,
+     "ages": [
+      274,
+      725,
+      1225
+     ],
+     "firstUnit": 339,
+     "pop150": 1243,
+     "pop200": 1384
+    }
+   }
+  ]
+ }
+}

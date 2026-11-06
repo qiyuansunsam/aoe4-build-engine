@@ -1,9 +1,9 @@
-/* Vikings mechanics for site/engine-civs.js (17.0 preview rules, data/civ-rules/vikings.json via scripts/civ_glue/vikings.py).
+/* Vikings mechanics for site/engine-civs.js (installed 17.0.12260 rules, data/civ-rules/vikings.json via scripts/civ_glue/vikings.py).
    Northern Migration: every Town Center recruits a free villager every 22 s (20 s after Falkr's Village) while villagers are
    below the villager capacity (10 + 10 per Longhouse). Longhouses (+25 population, +10 capacity) are built from plan items
    ["x","lh"] the module inserts when spare capacity falls to mech.lhLead, up to mech.lh[age] per age; each completed
    Longhouse takes one attachment from the priority list mech.attach (["x","att"]): Bee Skeps (50 gold/min), Farmstead (two
-   vegetable fields at 1.5x the farm rate), Smithy / Pasture and Loom (auto-research one damage / armor tier per age, 270 s,
+   vegetable fields at 1.5x the farm rate), Smithy / Pasture and Loom (auto-research one damage / armor tier per age, 300 s,
    earlier ages 60 s faster). Konungr Hall feasts and Call Shield Maidens, Baugr Fort (Barracks +25% work rate, Hardened on
    completion), Gullinn Temple Berserkers, Rikets Nyckel crossbowmen, Kongens Dor tithe, Bondi Forester wood and the sagas a
    plan completes by itself (Falkr, Ulfr, Jofurr, Dreki). mech.gullinnMinPop holds the Gullinn Temple until population
@@ -81,7 +81,7 @@ const mod = {
       const k = nextAttach(ctx); if (!k || freeLH(S) <= 0) return drop();
       const c = attachCost(ctx, k); if (!ctx.can(c)) return false;
       ctx.pay(c, "techs_eco"); const a = M.attach[k]; V.attaching.push({ kind: k, left: a.time, start: S.t });
-      ctx.ev("tech", "economy", `${a.name} (Longhouse attachment)`, "Longhouse without attachment and cost reached", `research start (${a.time} s)`, c, { entity: a.id, pbgid: a.id });
+      ctx.ev("tech", "economy", `${a.name} (Longhouse attachment)`, "Longhouse without attachment and cost reached", `research start (${a.time} s)`, c, { entity: a.id, pbgid: a.pbgid ?? a.id });
       return true;
     }
     if (name === "maidens") {
@@ -111,7 +111,7 @@ const mod = {
       const d = M.attach[a.kind];
       if (a.kind === "farm") { S.farms += d.fields; V.veg += d.fields; }
       if (a.kind === "smithy" || a.kind === "loom") S.bld["longhouse-" + a.kind] = 1;
-      ctx.ev("done", "economy", `${d.name} (Longhouse attachment)`, "attachment complete", a.kind === "bee" ? "50 gold per minute" : a.kind === "farm" ? "food drop-off, 2 vegetable fields" : "automatic damage/armor research", null, { entity: d.id, pbgid: d.id });
+      ctx.ev("done", "economy", `${d.name} (Longhouse attachment)`, "attachment complete", a.kind === "bee" ? "50 gold per minute" : a.kind === "farm" ? "food drop-off, 2 vegetable fields" : "automatic damage/armor research", null, { entity: d.id, pbgid: d.pbgid ?? d.id });
       if (V.sagas.falkr == null && V.attTotal >= M.sagas.falkr.attachments) { V.sagas.falkr = S.t; ctx.mark("saga_falkr"); ctx.ev("done", "economy", "Falkr's Village saga", `${V.attTotal} Longhouse attachments`, "villagers recruited 2 s faster, attachments 20% cheaper", null, { keep: true }); }
     }
     // Smithy / Pasture and Loom: one tier at a time, the next tier whose age is reached
@@ -127,13 +127,13 @@ const mod = {
     if (V.sagas.ulfr == null) { const n = INFANTRY.reduce((s, k) => s + (S.army[k]?.produced || 0), 0) + V.groveUnits + V.maidens; if (n >= M.sagas.ulfr.infantry) { V.sagas.ulfr = S.t; ctx.mark("saga_ulfr"); ctx.ev("done", "military", "Ulfr's Forester saga", `${n} infantry recruited`, "+5 torch damage, +1 tile torch range", null, { keep: true }); } }
     if (V.sagas.jofurr == null && V.deer0 - S.stock.deer >= M.sagas.jofurr.food) { V.sagas.jofurr = S.t; ctx.mark("saga_jofurr"); ctx.addEffects([{ kind: "gather_rate", target: "all", op: "mul", value: M.sagas.jofurr.gather }, { kind: "carry", target: "all", op: "add", value: M.sagas.jofurr.carry }], "saga:jofurr"); ctx.ev("done", "economy", "Jofurr's Hunt saga", `${M.sagas.jofurr.food} food hunted`, "villagers gather 10% faster, carry +5", null, { keep: true }); }
     // Gullinn Temple and Sacred Grove Berserkers
-    if (V.gullinnNext != null && S.t >= V.gullinnNext) { if (spawn(ctx, "berserker", 1, { name: "Berserker", text: "Gullinn Temple recruits a Berserker" }, "landmark:gullinn-temple", "unit_berserker_3_vik")) { V.groveUnits++; V.gullinnNext += M.grove.gullinn / V.groveRate; } }
+    if (V.gullinnNext != null && S.t >= V.gullinnNext) { if (spawn(ctx, "berserker", 1, { name: "Berserker", text: "Gullinn Temple recruits a Berserker" }, "landmark:gullinn-temple", M.grove.gullinnUnit ?? "unit_berserker_3_vik")) { V.groveUnits++; V.gullinnNext += M.grove.gullinn / V.groveRate; } }
     const want = Math.min(+(P.mech.groves || 0), M.grove.limit);
-    if (S.age >= 2 && V.groves.length + V.volur.length < want) { const c = M.grove.volur.cost; if (ctx.can(c)) { ctx.pay(c, "units"); const q = V.groves.length + V.volur.length; V.volur.push({ due: S.t + M.grove.volur.time + 10, q }); ctx.ev("train", "unit", "Völur", "Sacred Grove on a relic (mech.groves)", "trained, then sacrificed to establish a Sacred Grove", c, { producer: "volur", queue: q, count: 1, duration: M.grove.volur.time + 10, readyAt: S.t + M.grove.volur.time + 10, pbgid: "unit_volva_2_vik" }); } }
-    for (const v of [...V.volur]) if (S.t >= v.due) { const q = v.q; V.volur.splice(V.volur.indexOf(v), 1); V.groves.push(S.t + M.grove.grove / V.groveRate); ctx.ev("done", "unit", "Sacred Grove", "Völur sacrificed on a relic", "Berserkers every 100 s, +1 armor aura", null, { producer: "volur", queue: q, count: 1, pbgid: "building_sacred_grove_vik" }); }
-    for (let i = 0; i < V.groves.length; i++) if (S.t >= V.groves[i] && spawn(ctx, "berserker", 1, { name: "Berserker", text: "Sacred Grove recruits a Berserker" }, "sacred-grove", "unit_berserker_2_vik")) { V.groveUnits++; V.groves[i] += M.grove.grove / V.groveRate; }
+    if (S.age >= 2 && V.groves.length + V.volur.length < want) { const c = M.grove.volur.cost; if (ctx.can(c)) { ctx.pay(c, "units"); const q = V.groves.length + V.volur.length; V.volur.push({ due: S.t + M.grove.volur.time + 10, q }); ctx.ev("train", "unit", "Völur", "Sacred Grove on a relic (mech.groves)", "trained, then sacrificed to establish a Sacred Grove", c, { producer: "volur", queue: q, count: 1, duration: M.grove.volur.time + 10, readyAt: S.t + M.grove.volur.time + 10, pbgid: M.grove.volur.pbgid ?? "unit_volva_2_vik" }); } }
+    for (const v of [...V.volur]) if (S.t >= v.due) { const q = v.q; V.volur.splice(V.volur.indexOf(v), 1); V.groves.push(S.t + M.grove.grove / V.groveRate); ctx.ev("done", "unit", "Sacred Grove", "Völur sacrificed on a relic", "Berserkers every 100 s, +1 armor aura", null, { producer: "volur", queue: q, count: 1, pbgid: M.grove.pbgid ?? "building_sacred_grove_vik" }); }
+    for (let i = 0; i < V.groves.length; i++) if (S.t >= V.groves[i] && spawn(ctx, "berserker", 1, { name: "Berserker", text: "Sacred Grove recruits a Berserker" }, "sacred-grove", M.grove.groveUnit ?? "unit_berserker_2_vik")) { V.groveUnits++; V.groves[i] += M.grove.grove / V.groveRate; }
     // Call Shield Maidens arrive
-    if (V.maidensDue != null && S.t >= V.maidensDue) { const n = spawn(ctx, "shield-maiden", M.maidens.base + M.maidens.perLonghouse * (S.bld.longhouse || 0), { name: "Shield Maiden", text: "Call Shield Maidens arrive" }, "landmark:konungr-hall", "unit_shield_maiden_konungr_vik", { queue: 0 }); V.maidens += n; V.maidensDue = null; }
+    if (V.maidensDue != null && S.t >= V.maidensDue) { const n = spawn(ctx, "shield-maiden", M.maidens.base + M.maidens.perLonghouse * (S.bld.longhouse || 0), { name: "Shield Maiden", text: "Call Shield Maidens arrive" }, "landmark:konungr-hall", M.maidens.pbgid ?? "unit_shield_maiden_konungr_vik", { queue: 0 }); V.maidens += n; V.maidensDue = null; }
     // Allocation: Longhouse wood is what keeps Northern Migration running (150 wood per 10 villagers, plus the next planned
     // attachment), so it is reserved like the food other civilizations reserve for continuous villager production. The
     // engine places flow workers from flow need minus passive income; this lowers next step's passive wood by that flow.

@@ -1,0 +1,122 @@
+{
+ "method": "Polish: threshold 4910 (best army measure over 7 searches minus slack 250); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish.",
+ "score": -1371.96,
+ "build": {
+  "id": "mongol-cavalry-10",
+  "title": "Mongol cavalry by 10:00",
+  "summary": "Stable cavalry value at 10:00 within one unit of the most any searched plan completes (Ovoo double production and Improved technologies chosen by the search), finishing soonest at 200 population with every upgrade of its line.",
+  "civilization": "mongol",
+  "engine": "civ",
+  "patch": "16.3.11308",
+  "reference": {
+   "buildId": "mongols-observed-4v4"
+  },
+  "objective": {
+   "kind": "valueAt",
+   "t": 600,
+   "slack": 250
+  },
+  "lineNames": "Keshik and Horseman",
+  "result": {
+   "done": 1377,
+   "at": 600,
+   "army": 42,
+   "armyValue": 5040,
+   "villagers": 34,
+   "population": 80,
+   "age": 1,
+   "ages": [
+    717,
+    1024,
+    1217
+   ]
+  },
+  "lines": [
+   "keshik",
+   "horseman"
+  ],
+  "vilTarget": 140,
+  "landmarks": {
+   "2": "silver-tree",
+   "3": "steppe-redoubt",
+   "4": "white-stupa"
+  },
+  "lmBuilders": {
+   "2": 9,
+   "3": 9,
+   "4": 14
+  },
+  "extraTCs": {
+   "2": 2,
+   "3": 0
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 2,
+   "2": 0,
+   "3": 2,
+   "4": 2
+  },
+  "maxProducers": 12,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_wheelbarrow_1_improved_mon"
+   ],
+   "2": [
+    "upgrade_econ_resource_food_harvest_rate_2",
+    "upgrade_econ_resource_wood_harvest_rate_2",
+    "upgrade_econ_resource_gold_harvest_rate_2_mon"
+   ],
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": true,
+   "3": true
+  },
+  "blacksmiths": 2,
+  "pauseForAge": true,
+  "window": 3,
+  "woodFloor": 0.25,
+  "goldBias": 1.6,
+  "armyAge": 1,
+  "pauseFrom": {
+   "3": 540,
+   "4": 900
+  },
+  "vilTarget2": null,
+  "vilTarget2At": 420,
+  "mech": {
+   "doubleVillagers": false,
+   "doubleArmy": true,
+   "improved": false
+  }
+ },
+ "ledger": {
+  "id": "mongol-cavalry-10",
+  "evaluations": 5125,
+  "seconds": 122,
+  "seed": 20261024,
+  "objective": {
+   "kind": "valueAt",
+   "t": 600,
+   "slack": 250
+  },
+  "threshold": 4910,
+  "best": {
+   "done": 1377,
+   "at": 600,
+   "army": 42,
+   "armyValue": 5040,
+   "villagers": 34,
+   "population": 80,
+   "age": 1,
+   "ages": [
+    717,
+    1024,
+    1217
+   ]
+  },
+  "runnersUp": []
+ }
+}

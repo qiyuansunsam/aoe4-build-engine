@@ -1,4 +1,4 @@
-/* Scots mechanics for site/engine-civs.js (Update 17.0 preview rules, spec.mech.scots from scripts/civ_glue/scots.py).
+/* Scots mechanics for site/engine-civs.js (installed 17.0.12260 rules, spec.mech.scots from scripts/civ_glue/scots.py).
    Highland Cattle (Tower House production, grazing food at Berry Bushes), Mustering Hall (charges, Influence tiers, musters:
    5 s action then one warrior every 2 s), Snowdoun Gate free infantry, Abbey of the Isles relic production, Stone of Destiny
    gold rebate, Kirkmen with relics and Fishponds. Plan parameters live under params.mech (see spec.defaults.mech).
@@ -69,12 +69,12 @@ const scots = {
     while (C.timers.length < producers) C.timers.push(0);
     for (let i = 0; i < C.timers.length; i++) {
       if (C.timers[i] > 0) { C.timers[i]--; if (!C.timers[i]) { C.training--; C.grazing++; C.bought++; C.peak = Math.max(C.peak, C.grazing);
-        ctx.ev("done", "unit", "Highland Cattle", "training complete", "grazing at Berry Bushes (30 food per minute)", null, { producer: "tower-house", queue: i, count: 1, pbgid: "highland_cattle_sco" }); } continue; }
+        ctx.ev("done", "unit", "Highland Cattle", "training complete", "grazing at Berry Bushes (30 food per minute)", null, { producer: "tower-house", queue: i, count: 1, pbgid: X.pbg?.cattle ?? "highland_cattle_sco" }); } continue; }
       const want = Math.min(C.cap, pm.cattle?.[S.age] ?? 0);
       if (S.t < (pm.cattleFrom || 0) || C.grazing + C.training >= want) continue;
       const c = ctx.priced(X.cattle.cost, "unit", "highland-cattle"); if (!ctx.can(c)) continue;
       ctx.pay(c); C.timers[i] = X.cattle.time; C.training++;
-      ctx.ev("train", "unit", "Highland Cattle", "Tower House free and below the cattle target", "training started", c, { producer: "tower-house", queue: i, count: 1, duration: X.cattle.time, readyAt: S.t + X.cattle.time, pbgid: "highland_cattle_sco" });
+      ctx.ev("train", "unit", "Highland Cattle", "Tower House free and below the cattle target", "training started", c, { producer: "tower-house", queue: i, count: 1, duration: X.cattle.time, readyAt: S.t + X.cattle.time, pbgid: X.pbg?.cattle ?? "highland_cattle_sco" });
     }
     // ----- Mustering Hall Influence: tiers from military production buildings; a charge per tier reached
     if (Z.hall) {
@@ -120,11 +120,11 @@ const scots = {
     // ----- Kirkmen: relics from Castle Age, then Fishponds (Kirkmen take population; it is reserved while they train)
     const pondCap = pondCapacity(ctx), wantK = (pm.kirkmen || 0) + Math.min(pm.fishponds || 0, pondCap);
     const kirkSite = (S.bld.monastery || 0) > 0 ? "monastery" : Z.sod && (pm.fishponds || 0) > 0 ? "landmark:stone-of-destiny" : null;
-    if (K.timer > 0) { K.timer--; if (!K.timer) { K.training--; K.kirkmen++; K.idle++; ctx.ev("done", "unit", "Kirkman", "training complete", "religious unit available", null, { producer: K.site, queue: 0, count: 1, pbgid: "unit_monk_3_sco" }); } }
+    if (K.timer > 0) { K.timer--; if (!K.timer) { K.training--; K.kirkmen++; K.idle++; ctx.ev("done", "unit", "Kirkman", "training complete", "religious unit available", null, { producer: K.site, queue: 0, count: 1, pbgid: X.pbg?.kirkman ?? "unit_monk_3_sco" }); } }
     else if (kirkSite && K.kirkmen + K.training < wantK && room(ctx) >= 1) {
       const c = ctx.priced(X.kirkman.cost, "unit", "kirkman");
       if (ctx.can(c)) { ctx.pay(c, "units"); K.timer = X.kirkman.time; K.training++; K.site = kirkSite; S.others++;
-        ctx.ev("train", "unit", "Kirkman", K.relicsLeft > 0 ? "relics on the map" : "a Fishpond to work", "training started", c, { producer: kirkSite, queue: 0, count: 1, duration: X.kirkman.time, readyAt: S.t + X.kirkman.time, pbgid: "unit_monk_3_sco" }); }
+        ctx.ev("train", "unit", "Kirkman", K.relicsLeft > 0 ? "relics on the map" : "a Fishpond to work", "training started", c, { producer: kirkSite, queue: 0, count: 1, duration: X.kirkman.time, readyAt: S.t + X.kirkman.time, pbgid: X.pbg?.kirkman ?? "unit_monk_3_sco" }); }
     }
     for (const tr of K.trips) if (!tr.done && S.t >= tr.end) { tr.done = true; K.relicsIn++; K.idle++; ctx.ev("done", "economy", "Relic placed in the Monastery", "Kirkman returned with a relic", `${K.relicsIn} relic(s) generating gold`, null, { relics: K.relicsIn }); if (K.relicsIn === 1) ctx.mark("first_relic"); }
     K.trips = K.trips.filter(t => !t.done);
@@ -193,7 +193,7 @@ const scots = {
     if (ctx.T[name]?.building === "mustering-hall") Z.hallTechs++;
     // Stew Ponds: Fishpond capacity +1, pond buff 10% -> 20%, one free Kirkman (who works a pond)
     if (sp && name === sp.id && !Z.stew) { Z.stew = true; const n = sp.freeKirkmen || 0; Z.kirk.kirkmen += n; Z.kirk.idle += n; S.others += n;
-      if (n) ctx.ev("done", "unit", "Kirkman", "free Kirkman from Stew Ponds", "religious unit available", null, { producer: "mustering-hall", queue: 0, count: n, pbgid: "unit_monk_3_sco" }); }
+      if (n) ctx.ev("done", "unit", "Kirkman", "free Kirkman from Stew Ponds", "religious unit available", null, { producer: "mustering-hall", queue: 0, count: n, pbgid: M.scots.pbg?.kirkman ?? "unit_monk_3_sco" }); }
   },
 
   snapshot(ctx, row) {

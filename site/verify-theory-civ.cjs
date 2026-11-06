@@ -1,4 +1,4 @@
-// Non-Abbasid theory plans: each opens beside its reference game (Vikings/Scots 17.0-preview plans have none and open beside
+// Non-Abbasid theory plans: each opens beside its reference game (Vikings/Scots plans have none and open beside
 // the other plan of their civilization), every comparison metric and detail panel renders from the engine-civs.js run, and
 // the build page lists its actions. Run with the server up: node site/verify-theory-civ.cjs
 const {chromium}=require('C:/Users/Sam/projects/codex-setup/browser-tools/node_modules/playwright');

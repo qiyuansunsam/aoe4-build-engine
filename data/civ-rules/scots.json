@@ -1,8 +1,8 @@
 {
  "civ": "scots",
  "catalogCiv": "scots",
- "patch": "17.0-preview",
- "notes": "Scots (Update 17.0, ships 2026-10-29; not in the installed game). Unique values come from the datamined 17.0 records (jeando17), the reviewed checklist (frames read on screen and blind re-read, transcripts) and named footage moments. Standard values the 17.0 records do not carry (villager gather rates) come from the installed 16.3 standard villager. Values no source gives are in mechanics[].params as named assumptions and in unresolved[].",
+ "patch": "17.0.12260",
+ "notes": "Scots (Update 17.0, installed). Written before release from the datamined 17.0 records and footage; re-checked value by value against the installed 17.0.12260 files on 2026-11-06 (scripts/verify_rule_packs_17.py, data/civ-rules/patch-17-recheck.json). The villager gather table, start state, costs, times, health and population of every pack object with an installed record equal the installed files; ids ending in __scots stand in for the shared standard technology of the same name. Values no installed record gives are in mechanics[].params as named assumptions and in unresolved[].",
  "start": {
   "villagers": 6,
   "resources": {
@@ -28,6 +28,21 @@
     "name": "Highland Cattle",
     "count": 1,
     "pop": 0
+   },
+   {
+    "id": "gaia_herdable_sheep",
+    "name": "Sheep",
+    "count": 2
+   },
+   {
+    "id": "gaia_herdable_sheep_black",
+    "name": "Sheep (black)",
+    "count": 1
+   },
+   {
+    "id": "gaia_herdable_sheep_brown",
+    "name": "Sheep (brown)",
+    "count": 2
    }
   ],
   "buildings": [
@@ -42,7 +57,8 @@
    "checklist:scots/bonus/Starting conditions#effectText (HUD 00:05: 1/9 cattle, 7/10 population, 200 food, 200 wood, 100 gold, 0 stone)",
    "transcript:BV1Lvn46dEbY_p1@21:22 (\"start with six villagers and one cow ... 200 food, 200 wood and 100 gold\")",
    "checklist:scots/bonus/Highland Wealth#effectText",
-   "jeando17:unit_scout_1_sco#name (Ghillie)"
+   "jeando17:unit_scout_1_sco#name (Ghillie)",
+   "raw:army/standard_mode/normal_scots.rgd#default/army_bag/starting_units (installed 17.0.12260: Ghillie, 6 Villagers, Highland Cattle, 5 sheep) and #default/army_bag/resource_starting_amount (food 200, wood 200, gold 100)"
   ]
  },
  "villager": {
@@ -142,7 +158,8 @@
    "jeando17:unit_villager_1_sco#costs.time",
    "jeando17:unit_villager_1_sco#speed (1.125 tiles/s = 4.5 engine units)",
    "jeando17:unit_villager_1_sco#hitpoints",
-   "checklist:scots/unit/Villager#trainTimeSeconds (20 s; UPCOMING_CIVS: Scots stay at 20 s, Vikings 22 s)"
+   "checklist:scots/unit/Villager#trainTimeSeconds (20 s; UPCOMING_CIVS: Scots stay at 20 s, Vikings 22 s)",
+   "raw:ebps/races/scots/units/unit_villager_1_sco#resource_gatherer_ext/gather_types (installed 17.0.12260 gather table: every rate and carry equals the values below)"
   ]
  },
  "townCenter": {
@@ -2017,7 +2034,7 @@
       "hp": 140,
       "armorMelee": 0,
       "armorRanged": 4,
-      "speedTiles": 1.688
+      "speedTiles": 1.6875
      }
     ],
     "tierUpgrades": [],
@@ -2052,7 +2069,7 @@
     ],
     "tiers": [
      {
-      "id": "unit_muster_tacksmen_sco",
+      "id": "unit_handcannon_4_sco",
       "name": "Tacksman",
       "age": 4,
       "cost": {
@@ -2081,8 +2098,11 @@
     ],
     "muster": "tacksmen",
     "evidence": [
+     "catalog:units/unit_handcannon_4_sco#cost",
+     "catalog:units/unit_handcannon_4_sco#trainTimeSeconds",
+     "catalog:units/unit_handcannon_4_sco#hp",
+     "catalog:units/unit_handcannon_4_sco#age (installed 17.0.12260: the trained Tacksman, 160 food 90 gold, 35 s, 130 health, Imperial Age; the mustered Tacksman is unit_muster_tacksmen_sco, 80 gold, 2 s)",
      "data/upcoming-civs/stats.json civilizations.scots.unit.Tacksman (text sources, confirmed: Archery Range, Imperial, 160 food 90 gold, 35 s, 130 health, 0/0 armor, 1.125 tiles/s)",
-     "jeando17:unit_muster_tacksmen_sco (the only datamined Tacksman record is the mustered one; its id stands in for the trained unit, its 80 gold and 2 s are the muster's)",
      "data/catalog-preview-17.0.json meta.unit_muster_tacksmen_sco.upgradeGroups (armor tiers, Feuds Aside, Lion's Duty); Snaphance Locks names Tacksmen in its description",
      "Steeled Arrow / Balanced Projectiles / Platecutter Point raise arrows, bolts and emplacements only, so they do not apply to the gunpowder Tacksman"
     ]

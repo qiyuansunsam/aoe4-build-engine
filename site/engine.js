@@ -87,7 +87,7 @@ const DEFAULTS = {
 };
 
 function simulate(user) {
-  // Non-Abbasid civilizations run the multi-civilization engine on the installed 16.3 rules (engine-civs.js).
+  // Non-Abbasid civilizations run the multi-civilization engine on the installed 17.0.12260 rules (engine-civs.js).
   if (user && user.civilization && user.civilization !== "abbasid") return civEngine().simulateCiv(user);
   const P = Object.assign({}, DEFAULTS, user || {}); P.map = Object.assign({}, DEFAULTS.map, (user && user.map) || {}); P.raw = Object.assign({}, DEFAULTS.raw, (user && user.raw) || {});
   if (!Number.isFinite(P.villagerLossPerMinute) || P.villagerLossPerMinute < 0 || P.villagerLossPerMinute > 10) throw new RangeError("villagerLossPerMinute must be between 0 and 10");

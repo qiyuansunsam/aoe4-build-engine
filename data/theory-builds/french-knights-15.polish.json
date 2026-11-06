@@ -1,13 +1,13 @@
 {
- "method": "Polish: threshold 52 (best army measure over 10 searches minus slack 1); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish.",
- "score": -1576.948,
+ "method": "Polish: threshold 52 (best army measure over 14 searches minus slack 1); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish.",
+ "score": -1483.948,
  "build": {
   "id": "french-knights-15",
   "title": "Royal Knights by 15:00",
   "summary": "Royal Knights by 15:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Royal Knight upgrade.",
   "civilization": "french",
   "engine": "civ",
-  "patch": "16.3.11308",
+  "patch": "17.0.12260",
   "reference": {
    "buildId": "french-knights-observed-4v4"
   },
@@ -19,7 +19,7 @@
   },
   "lineNames": "Royal Knight",
   "result": {
-   "done": 1577,
+   "done": 1484,
    "at": 900,
    "line": 52,
    "army": 52,
@@ -29,9 +29,12 @@
    "age": 2,
    "ages": [
     352,
-    1058,
-    1332
-   ]
+    1274,
+    1414
+   ],
+   "firstUnit": 447,
+   "pop150": 1088,
+   "pop200": 1278
   },
   "lines": [
    "royal-knight"
@@ -39,13 +42,13 @@
   "vilTarget": 50,
   "landmarks": {
    "2": "school-of-cavalry",
-   "3": "guild-hall",
+   "3": "royal-institute",
    "4": "red-palace"
   },
   "lmBuilders": {
    "2": 2,
-   "3": 7,
-   "4": 7
+   "3": 1,
+   "4": 6
   },
   "extraTCs": {
    "2": 1,
@@ -55,40 +58,39 @@
   "producers": {
    "1": 0,
    "2": 4,
-   "3": 6,
-   "4": 5
+   "3": 1,
+   "4": 2
   },
-  "maxProducers": 12,
+  "maxProducers": 5,
   "ecoTechs": {
    "1": [
     "upgrade_unit_town_center_wheelbarrow_1",
     "upgrade_econ_villager_hunting_gear_1"
    ],
    "2": "all",
-   "3": "all",
+   "3": [],
    "4": []
   },
   "milTechAge": {
    "2": false,
    "3": true
   },
-  "blacksmiths": 1,
+  "blacksmiths": 2,
   "pauseForAge": false,
   "window": 6,
-  "woodFloor": 0.2,
+  "woodFloor": 0.3,
   "goldBias": 0.6,
   "armyAge": 2,
   "pauseFrom": {
-   "3": 900,
-   "4": 1200
+   "3": 960
   },
-  "vilTarget2": 80,
-  "vilTarget2At": 840
+  "vilTarget2At": 840,
+  "vilTarget2": 120
  },
  "ledger": {
   "id": "french-knights-15",
-  "evaluations": 6048,
-  "seconds": 161,
+  "evaluations": 7273,
+  "seconds": 177,
   "seed": 20261024,
   "objective": {
    "kind": "lineAt",
@@ -98,7 +100,7 @@
   },
   "threshold": 52,
   "best": {
-   "done": 1577,
+   "done": 1484,
    "at": 900,
    "line": 52,
    "army": 52,
@@ -108,9 +110,12 @@
    "age": 2,
    "ages": [
     352,
-    1058,
-    1332
-   ]
+    1274,
+    1414
+   ],
+   "firstUnit": 447,
+   "pop150": 1088,
+   "pop200": 1278
   },
   "runnersUp": []
  }

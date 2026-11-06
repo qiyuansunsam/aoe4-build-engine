@@ -1,0 +1,2142 @@
+{
+ "schemaVersion": 1,
+ "from": {
+  "patch": "16.3.11308",
+  "steamBuildId": "24231237",
+  "catalogRevision": "e9e7591"
+ },
+ "to": {
+  "patch": "17.0.12260",
+  "steamBuildId": "26400362"
+ },
+ "rawUnpack17": true,
+ "packs": {
+  "french": {
+   "packPatch": "17.0.12260",
+   "references": {
+    "checked": 342,
+    "unchanged": 339,
+    "changed": [
+     {
+      "ref": "catalog:buildings/building_town_center_fre#buildTimeSeconds",
+      "firstCitedAt": "/townCenter/evidence[11]",
+      "detail": [
+       {
+        "field": "buildTimeSeconds",
+        "old": 150,
+        "new": 165
+       }
+      ]
+     },
+     {
+      "ref": "raw:ebps/races/french/buildings/building_landmark_age1_casernes_centrales_fre/building_landmark_age1_casernes_centrales_fre.json#default/spawner_ext/spawn_items",
+      "firstCitedAt": "/landmarks/2[0]/evidence[5]",
+      "detail": {
+       "file": "ebps/races/french/buildings/building_landmark_age1_casernes_centrales_fre/building_landmark_age1_casernes_centrales_fre.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[0]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[1]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[2]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[3]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[4]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[5]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[6]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 7
+      }
+     },
+     {
+      "ref": "raw:upgrade/races/common/research/economy/upgrade_tech_university_biology.json#default/upgrade_bag/upgrade_type",
+      "firstCitedAt": "/army/lines[0]/evidence[9]",
+      "detail": {
+       "file": "upgrade/races/common/research/economy/upgrade_tech_university_biology.json",
+       "changedLeaves": [
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[16]",
+         "old": null,
+         "new": "templar_upgrade"
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[17]",
+         "old": null,
+         "new": "vikings_upgrade"
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[18]",
+         "old": null,
+         "new": "scots_upgrade"
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[19]",
+         "old": null,
+         "new": "hre_ha_01_upgrade"
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[20]",
+         "old": null,
+         "new": "lancaster_upgrade"
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[21]",
+         "old": null,
+         "new": "japanese_ha_sen_upgrade"
+        }
+       ],
+       "changedLeafCount": 6
+      }
+     }
+    ],
+    "notMachineCheckable": []
+   },
+   "values": {
+    "objectsWithInstalledId": 64,
+    "fieldsCompared": 134,
+    "equal17": 115,
+    "stale": [],
+    "packValueDiffersFromBothPatches": [
+     {
+      "at": "/technologies[0]",
+      "id": "upgrade_unit_town_center_wheelbarrow_1",
+      "name": "Wheelbarrow",
+      "field": "cost",
+      "pack": {
+       "gold": 97.5,
+       "wood": 32.5
+      },
+      "installed17": {
+       "gold": 150,
+       "wood": 50
+      },
+      "installed16_3": {
+       "gold": 150,
+       "wood": 50
+      }
+     },
+     {
+      "at": "/technologies[1]",
+      "id": "upgrade_econ_villager_hunting_gear_1",
+      "name": "Survival Techniques",
+      "field": "cost",
+      "pack": {
+       "gold": 48.75,
+       "wood": 16.25
+      },
+      "installed17": {
+       "gold": 75,
+       "wood": 25
+      },
+      "installed16_3": {
+       "gold": 75,
+       "wood": 25
+      }
+     },
+     {
+      "at": "/technologies[2]",
+      "id": "upgrade_econ_resource_food_harvest_rate_2",
+      "name": "Horticulture",
+      "field": "cost",
+      "pack": {
+       "gold": 65.0,
+       "wood": 32.5
+      },
+      "installed17": {
+       "gold": 100,
+       "wood": 50
+      },
+      "installed16_3": {
+       "gold": 100,
+       "wood": 50
+      }
+     },
+     {
+      "at": "/technologies[3]",
+      "id": "upgrade_econ_resource_food_harvest_rate_3",
+      "name": "Fertilization",
+      "field": "cost",
+      "pack": {
+       "gold": 162.5,
+       "wood": 65.0
+      },
+      "installed17": {
+       "gold": 250,
+       "wood": 100
+      },
+      "installed16_3": {
+       "gold": 250,
+       "wood": 100
+      }
+     },
+     {
+      "at": "/technologies[4]",
+      "id": "upgrade_econ_resource_food_harvest_rate_4",
+      "name": "Precision Cross-Breeding",
+      "field": "cost",
+      "pack": {
+       "gold": 325.0,
+       "wood": 162.5
+      },
+      "installed17": {
+       "gold": 500,
+       "wood": 250
+      },
+      "installed16_3": {
+       "gold": 500,
+       "wood": 250
+      }
+     },
+     {
+      "at": "/technologies[5]",
+      "id": "upgrade_scout_forester",
+      "name": "Professional Scouts",
+      "field": "cost",
+      "pack": {
+       "gold": 195.0,
+       "wood": 97.5
+      },
+      "installed17": {
+       "gold": 300,
+       "wood": 150
+      },
+      "installed16_3": {
+       "gold": 300,
+       "wood": 150
+      }
+     },
+     {
+      "at": "/technologies[6]",
+      "id": "upgrade_econ_resource_wood_fell_rate_1",
+      "name": "Forestry",
+      "field": "cost",
+      "pack": {
+       "food": 16.25,
+       "gold": 32.5
+      },
+      "installed17": {
+       "food": 25,
+       "gold": 50
+      },
+      "installed16_3": {
+       "food": 25,
+       "gold": 50
+      }
+     },
+     {
+      "at": "/technologies[7]",
+      "id": "upgrade_econ_resource_wood_harvest_rate_2",
+      "name": "Double Broadax",
+      "field": "cost",
+      "pack": {
+       "food": 32.5,
+       "gold": 65.0
+      },
+      "installed17": {
+       "food": 50,
+       "gold": 100
+      },
+      "installed16_3": {
+       "food": 50,
+       "gold": 100
+      }
+     },
+     {
+      "at": "/technologies[8]",
+      "id": "upgrade_econ_resource_wood_harvest_rate_3",
+      "name": "Lumber Preservation",
+      "field": "cost",
+      "pack": {
+       "food": 65.0,
+       "gold": 162.5
+      },
+      "installed17": {
+       "food": 100,
+       "gold": 250
+      },
+      "installed16_3": {
+       "food": 100,
+       "gold": 250
+      }
+     },
+     {
+      "at": "/technologies[9]",
+      "id": "upgrade_econ_resource_wood_harvest_rate_4",
+      "name": "Crosscut Saw",
+      "field": "cost",
+      "pack": {
+       "food": 162.5,
+       "gold": 325.0
+      },
+      "installed17": {
+       "food": 250,
+       "gold": 500
+      },
+      "installed16_3": {
+       "food": 250,
+       "gold": 500
+      }
+     },
+     {
+      "at": "/technologies[10]",
+      "id": "upgrade_econ_resource_gold_harvest_rate_2",
+      "name": "Specialized Pick",
+      "field": "cost",
+      "pack": {
+       "gold": 65.0,
+       "wood": 32.5
+      },
+      "installed17": {
+       "gold": 100,
+       "wood": 50
+      },
+      "installed16_3": {
+       "gold": 100,
+       "wood": 50
+      }
+     },
+     {
+      "at": "/technologies[11]",
+      "id": "upgrade_econ_resource_gold_harvest_rate_3",
+      "name": "Shaft Mining",
+      "field": "cost",
+      "pack": {
+       "gold": 162.5,
+       "wood": 65.0
+      },
+      "installed17": {
+       "gold": 250,
+       "wood": 100
+      },
+      "installed16_3": {
+       "gold": 250,
+       "wood": 100
+      }
+     },
+     {
+      "at": "/technologies[12]",
+      "id": "upgrade_econ_resource_gold_harvest_rate_4",
+      "name": "Cupellation",
+      "field": "cost",
+      "pack": {
+       "gold": 325.0,
+       "wood": 162.5
+      },
+      "installed17": {
+       "gold": 500,
+       "wood": 250
+      },
+      "installed16_3": {
+       "gold": 500,
+       "wood": 250
+      }
+     },
+     {
+      "at": "/technologies[14]",
+      "id": "upgrade_market_trickle_fre",
+      "name": "Merchant Guilds",
+      "field": "cost",
+      "pack": {
+       "food": 130.0,
+       "gold": 325.0
+      },
+      "installed17": {
+       "food": 200,
+       "gold": 500
+      },
+      "installed16_3": {
+       "food": 200,
+       "gold": 500
+      }
+     },
+     {
+      "at": "/technologies[15]",
+      "id": "upgrade_landmark_market_trickle_fre",
+      "name": "Merchant Guilds",
+      "field": "cost",
+      "pack": {
+       "food": 140.0,
+       "gold": 350.0
+      },
+      "installed17": {
+       "food": 200,
+       "gold": 500
+      },
+      "installed16_3": {
+       "food": 200,
+       "gold": 500
+      }
+     },
+     {
+      "at": "/technologies[27]",
+      "id": "upgrade_landmark_cavalry_chivalry_fre",
+      "name": "Chivalry",
+      "field": "cost",
+      "pack": {
+       "gold": 140.0,
+       "wood": 70.0
+      },
+      "installed17": {
+       "gold": 200,
+       "wood": 100
+      },
+      "installed16_3": {
+       "gold": 200,
+       "wood": 100
+      }
+     },
+     {
+      "at": "/technologies[29]",
+      "id": "upgrade_landmark_cavalry_cantled_saddle_fre",
+      "name": "Cantled Saddles",
+      "field": "cost",
+      "pack": {
+       "food": 52.5,
+       "gold": 140.0
+      },
+      "installed17": {
+       "food": 75,
+       "gold": 200
+      },
+      "installed16_3": {
+       "food": 75,
+       "gold": 200
+      }
+     },
+     {
+      "at": "/technologies[31]",
+      "id": "upgrade_landmark_cavalry_bloodline_fre",
+      "name": "Royal Bloodlines",
+      "field": "cost",
+      "pack": {
+       "food": 210.0,
+       "gold": 490.0
+      },
+      "installed17": {
+       "food": 300,
+       "gold": 700
+      },
+      "installed16_3": {
+       "food": 300,
+       "gold": 700
+      }
+     },
+     {
+      "at": "/technologies[33]",
+      "id": "upgrade_landmark_enlistment_incentives_fre",
+      "name": "Enlistment Incentives",
+      "field": "cost",
+      "pack": {
+       "food": 105.0,
+       "gold": 245.0
+      },
+      "installed17": {
+       "food": 150,
+       "gold": 350
+      },
+      "installed16_3": {
+       "food": 150,
+       "gold": 350
+      }
+     }
+    ],
+    "idsNotInstalled": []
+   },
+   "startAndGather": {
+    "compared": 21,
+    "different": []
+   }
+  },
+  "mongol": {
+   "packPatch": "17.0.12260",
+   "references": {
+    "checked": 569,
+    "unchanged": 557,
+    "changed": [
+     {
+      "ref": "catalog:buildings/building_defense_outpost_mon#researchableTechnologies",
+      "firstCitedAt": "/technologies[34]/evidence[4]",
+      "detail": [
+       {
+        "field": "researchableTechnologies",
+        "old": [
+         "dark_age",
+         "feudal_age",
+         "castle_age",
+         "imperial_age",
+         "upgrade_outpost_arrowslits_mon",
+         "upgrade_outpost_springald_mon",
+         "upgrade_outpost_cannon_mon",
+         "upgrade_ortoo_all_units_mon",
+         "upgrade_ortoo_all_units_improved_mon",
+         "bedrock_foundations"
+        ],
+        "new": [
+         "dark_age",
+         "feudal_age",
+         "castle_age",
+         "imperial_age",
+         "upgrade_outpost_arrowslits_mon",
+         "upgrade_outpost_springald_mon",
+         "upgrade_outpost_cannon_mon",
+         "upgrade_ortoo_all_units_mon",
+         "upgrade_ortoo_all_units_improved_mon",
+         "bedrock_foundations",
+         "bedrock_foundations_ascended"
+        ]
+       }
+      ]
+     },
+     {
+      "ref": "catalog:buildings/building_town_center_mon#buildTimeSeconds",
+      "firstCitedAt": "/townCenter/evidence[1]",
+      "detail": [
+       {
+        "field": "buildTimeSeconds",
+        "old": 150,
+        "new": 165
+       }
+      ]
+     },
+     {
+      "ref": "raw:abilities/always_on_abilities/mongol/villager_cannot_mine_stone_mon.rgd",
+      "firstCitedAt": "/villager/evidence[6]",
+      "detail": {
+       "file": "abilities/always_on_abilities/mongol/villager_cannot_mine_stone_mon.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "campaign/ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "campaign/ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "xp3/ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "xp3/ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 6
+      }
+     },
+     {
+      "ref": "raw:ebps/races/mongol/buildings/building_defense_outpost_mon.json#default/requirement_ext",
+      "firstCitedAt": "/buildings/outpost/evidence[2]",
+      "detail": {
+       "file": "ebps/races/mongol/buildings/building_defense_outpost_mon.json",
+       "changedLeaves": [
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/$REF",
+         "old": null,
+         "new": "requirements\\required_any_in_list"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/reason",
+         "old": null,
+         "new": "usage"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/$REF",
+         "old": null,
+         "new": "requirements\\required_player_upgrade"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/include_completed",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/include_pbg_parenting/include_child_pbgs",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/include_pbg_parenting/include_parent_pbgs",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/include_queued",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/is_present",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/max_completed",
+         "old": null,
+         "new": 100
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/min_completed",
+         "old": null,
+         "new": 1
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/reason",
+         "old": null,
+         "new": "usage"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name/$PBGMAP",
+         "old": null,
+         "new": "upgrade"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name/$PBGNAME",
+         "old": null,
+         "new": "bedrock_foundations"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/$REF",
+         "old": null,
+         "new": "requirements\\required_player_upgrade"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/include_completed",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/include_pbg_parenting/include_child_pbgs",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/include_pbg_parenting/include_parent_pbgs",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/include_queued",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/is_present",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/max_completed",
+         "old": null,
+         "new": 100
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/min_completed",
+         "old": null,
+         "new": 1
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/reason",
+         "old": null,
+         "new": "usage"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/upgrade_name/$PBGMAP",
+         "old": null,
+         "new": "upgrade"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/upgrade_name/$PBGNAME",
+         "old": null,
+         "new": "bedrock_foundations_ascended"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_player_upgrade/$REF",
+         "old": "requirements\\required_player_upgrade",
+         "new": null
+        }
+       ],
+       "changedLeafCount": 70
+      }
+     },
+     {
+      "ref": "raw:ebps/races/mongol/buildings/building_town_center_capital_mon.json#default/spawner_ext/spawn_items/spawn_item[2]",
+      "firstCitedAt": "/mechanics[6]/evidence[2]",
+      "detail": {
+       "file": "ebps/races/mongol/buildings/building_town_center_capital_mon.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[2]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/mongol/buildings/building_town_center_capital_moving_mon.json#default/moving_ext/speed_scaling_table/default_speed",
+      "firstCitedAt": "/mechanics[13]/evidence[1]",
+      "detail": {
+       "file": "ebps/races/mongol/buildings/building_town_center_capital_moving_mon.json",
+       "changedLeaves": [
+        {
+         "path": "moving_ext/speed_scaling_table/default_speed",
+         "old": 3,
+         "new": 3.6
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/mongol/buildings/building_unit_cavalry_mon.json#default/spawner_ext/spawn_items",
+      "firstCitedAt": "/army/lines[0]/evidence[6]",
+      "detail": {
+       "file": "ebps/races/mongol/buildings/building_unit_cavalry_mon.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[0]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[10]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[11]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[12]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[13]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[14]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[15]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[1]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[2]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[3]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[4]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[5]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[6]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[7]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[8]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[9]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 16
+      }
+     },
+     {
+      "ref": "raw:ebps/races/mongol/buildings/building_unit_cavalry_mon.json#default/spawner_ext/spawn_items/spawn_item[11]",
+      "firstCitedAt": "/mechanics[6]/evidence[0]",
+      "detail": {
+       "file": "ebps/races/mongol/buildings/building_unit_cavalry_mon.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[11]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/mongol/buildings/building_unit_cavalry_mon.json#default/spawner_ext/spawn_items/spawn_item[7]",
+      "firstCitedAt": "/mechanics[6]/evidence[1]",
+      "detail": {
+       "file": "ebps/races/mongol/buildings/building_unit_cavalry_mon.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[7]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/mongol/buildings/building_unit_ranged_mon.json#default/spawner_ext/spawn_items",
+      "firstCitedAt": "/army/lines[2]/evidence[5]",
+      "detail": {
+       "file": "ebps/races/mongol/buildings/building_unit_ranged_mon.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[0]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[10]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[11]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[12]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[13]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[14]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[15]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[16]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[17]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[18]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[19]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[1]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[20]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[21]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[22]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[23]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[2]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[3]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[4]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[5]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[6]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[7]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[8]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[9]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 24
+      }
+     },
+     {
+      "ref": "raw:ebps/races/mongol/buildings/building_wonder_age3_khanbaliq_mon.json#default/spawner_ext/spawn_items",
+      "firstCitedAt": "/landmarks/4[0]/evidence[4]",
+      "detail": {
+       "file": "ebps/races/mongol/buildings/building_wonder_age3_khanbaliq_mon.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[0]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[1]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[2]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[3]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[4]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[5]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[6]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[7]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[8]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[9]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 10
+      }
+     },
+     {
+      "ref": "raw:statemodel_schema/buildings/civilizations/mongols/",
+      "firstCitedAt": "/mechanics[13]/evidence[2]",
+      "detail": {
+       "file": "statemodel_schema/civs/mongols.rgd",
+       "changedLeaves": [
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/bool_properties/statemodel_bool_property[rogue_mode_endless_oak_used]/$REF",
+         "old": null,
+         "new": "statemodel_bool_property"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/bool_properties/statemodel_bool_property[rogue_mode_endless_oak_used]/bool_property_id",
+         "old": null,
+         "new": "rogue_mode_endless_oak_used"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/bool_properties/statemodel_bool_property[rogue_mode_endless_oak_used]/default",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[num_idle_fishponds]/$REF",
+         "old": null,
+         "new": "statemodel_int_property"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[num_idle_fishponds]/default",
+         "old": null,
+         "new": 0
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[num_idle_fishponds]/int_property_id",
+         "old": null,
+         "new": "num_idle_fishponds"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[num_idle_highland_cattle]/$REF",
+         "old": null,
+         "new": "statemodel_int_property"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[num_idle_highland_cattle]/default",
+         "old": null,
+         "new": 0
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[num_idle_highland_cattle]/int_property_id",
+         "old": null,
+         "new": "num_idle_highland_cattle"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[rogue_divine_warriors_bit]/$REF",
+         "old": "statemodel_int_property",
+         "new": null
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[rogue_divine_warriors_bit]/default",
+         "old": 0,
+         "new": null
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/int_properties/statemodel_int_property[rogue_divine_warriors_bit]/int_property_id",
+         "old": "rogue_divine_warriors_bit",
+         "new": null
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/bool_properties/statemodel_bool_property[has_stealthed_spies]/$REF",
+         "old": null,
+         "new": "statemodel_bool_property"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/bool_properties/statemodel_bool_property[has_stealthed_spies]/bool_property_id",
+         "old": null,
+         "new": "has_stealthed_spies"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/bool_properties/statemodel_bool_property[has_stealthed_spies]/default",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[endless_oak_gathered_rogue]/$REF",
+         "old": null,
+         "new": "statemodel_float_property"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[endless_oak_gathered_rogue]/default",
+         "old": null,
+         "new": 0
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[endless_oak_gathered_rogue]/float_property_id",
+         "old": null,
+         "new": "endless_oak_gathered_rogue"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[ndama_respawn_time_rogue]/$REF",
+         "old": null,
+         "new": "statemodel_float_property"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[ndama_respawn_time_rogue]/default",
+         "old": null,
+         "new": 180
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[ndama_respawn_time_rogue]/float_property_id",
+         "old": null,
+         "new": "ndama_respawn_time_rogue"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[snap_build_recharge_duration_rogue]/$REF",
+         "old": null,
+         "new": "statemodel_float_property"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[snap_build_recharge_duration_rogue]/default",
+         "old": null,
+         "new": 300
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[snap_build_recharge_duration_rogue]/float_property_id",
+         "old": null,
+         "new": "snap_build_recharge_duration_rogue"
+        },
+        {
+         "path": "campaign/schema_bag/sub_schemas/schema/default/schema_bag/sub_schemas/schema/default/schema_bag/float_properties/statemodel_float_property[snap_build_recharge_progress_rogue]/$REF",
+         "old": null,
+         "new": "statemodel_float_property"
+        }
+       ],
+       "changedLeafCount": 292
+      }
+     }
+    ],
+    "notMachineCheckable": []
+   },
+   "values": {
+    "objectsWithInstalledId": 108,
+    "fieldsCompared": 239,
+    "equal17": 239,
+    "stale": [],
+    "packValueDiffersFromBothPatches": [],
+    "idsNotInstalled": []
+   },
+   "startAndGather": {
+    "compared": 11,
+    "different": []
+   }
+  },
+  "malian": {
+   "packPatch": "17.0.12260",
+   "references": {
+    "checked": 535,
+    "unchanged": 519,
+    "changed": [
+     {
+      "ref": "catalog:buildings/building_town_center_mal#buildTimeSeconds",
+      "firstCitedAt": "/townCenter/evidence[1]",
+      "detail": [
+       {
+        "field": "buildTimeSeconds",
+        "old": 150,
+        "new": 165
+       }
+      ]
+     },
+     {
+      "ref": "raw:abilities/always_on_abilities/malian/book_trade_mal",
+      "firstCitedAt": "/mechanics[7]/evidence[2]",
+      "detail": {
+       "file": "abilities/always_on_abilities/malian/book_trade_mal.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:abilities/timed_abilities/malian/festival_food_mal",
+      "firstCitedAt": "/mechanics[10]/evidence[0]",
+      "detail": {
+       "file": "abilities/timed_abilities/malian/festival_food_mal.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:abilities/timed_abilities/malian/festival_food_mal#ability_bag",
+      "firstCitedAt": "/landmarks/4[0]/evidence[4]",
+      "detail": {
+       "file": "abilities/timed_abilities/malian/festival_food_mal.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:abilities/timed_abilities/malian/festival_military_mal",
+      "firstCitedAt": "/mechanics[10]/evidence[1]",
+      "detail": {
+       "file": "abilities/timed_abilities/malian/festival_military_mal.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:abilities/timed_abilities/malian/festival_military_mal#ability_bag",
+      "firstCitedAt": "/landmarks/4[0]/evidence[5]",
+      "detail": {
+       "file": "abilities/timed_abilities/malian/festival_military_mal.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:abilities/timed_abilities/malian/festival_siege_mal",
+      "firstCitedAt": "/mechanics[10]/evidence[2]",
+      "detail": {
+       "file": "abilities/timed_abilities/malian/festival_siege_mal.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:abilities/timed_abilities/malian/festival_siege_mal#ability_bag",
+      "firstCitedAt": "/landmarks/4[0]/evidence[6]",
+      "detail": {
+       "file": "abilities/timed_abilities/malian/festival_siege_mal.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:ebps/races/malian/animals/gaia_herdable_cattle_mal#resource_deposit_ext",
+      "firstCitedAt": "/mechanics[1]/evidence[6]",
+      "detail": {
+       "file": "ebps/races/malian/animals/gaia_herdable_cattle_mal.json",
+       "changedLeaves": [
+        {
+         "path": "resource_deposit_ext/regrowth_visual_update_period",
+         "old": null,
+         "new": -1
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/malian/buildings/building_defense_outpost_mal#requirement_ext",
+      "firstCitedAt": "/buildings/toll-outpost/evidence[3]",
+      "detail": {
+       "file": "ebps/races/malian/buildings/building_defense_outpost_mal.json",
+       "changedLeaves": [
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/$REF",
+         "old": null,
+         "new": "requirements\\required_any_in_list"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/reason",
+         "old": null,
+         "new": "usage"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/$REF",
+         "old": null,
+         "new": "requirements\\required_player_upgrade"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/include_completed",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/include_pbg_parenting/include_child_pbgs",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/include_pbg_parenting/include_parent_pbgs",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/include_queued",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/is_present",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/max_completed",
+         "old": null,
+         "new": 100
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/min_completed",
+         "old": null,
+         "new": 1
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/reason",
+         "old": null,
+         "new": "usage"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name/$PBGMAP",
+         "old": null,
+         "new": "upgrade"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[0]/upgrade_name/$PBGNAME",
+         "old": null,
+         "new": "bedrock_foundations"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/$REF",
+         "old": null,
+         "new": "requirements\\required_player_upgrade"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/include_completed",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/include_pbg_parenting/include_child_pbgs",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/include_pbg_parenting/include_parent_pbgs",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/include_queued",
+         "old": null,
+         "new": false
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/is_present",
+         "old": null,
+         "new": true
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/max_completed",
+         "old": null,
+         "new": 100
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/min_completed",
+         "old": null,
+         "new": 1
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/reason",
+         "old": null,
+         "new": "usage"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/upgrade_name/$PBGMAP",
+         "old": null,
+         "new": "upgrade"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_any_in_list/requirements/required_player_upgrade[1]/upgrade_name/$PBGNAME",
+         "old": null,
+         "new": "bedrock_foundations_ascended"
+        },
+        {
+         "path": "requirement_ext/requirement_table/required_any_in_list/requirements/required_all_in_list/requirements/required_player_upgrade/$REF",
+         "old": "requirements\\required_player_upgrade",
+         "new": null
+        }
+       ],
+       "changedLeafCount": 70
+      }
+     },
+     {
+      "ref": "raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ui_ext/help_text_formatter",
+      "firstCitedAt": "/landmarks/3[0]/evidence[4]",
+      "detail": {
+       "file": "ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal.json",
+       "changedLeaves": [
+        {
+         "path": "ui_ext/help_text_formatter/formatter_arguments/int_value",
+         "old": 18,
+         "new": 16
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/malian/buildings/building_open_pit_mine_small_mal#...required_near_entity/required_unit_type[1]",
+      "firstCitedAt": "/buildings/pit-mine/evidence[7]",
+      "detail": {
+       "file": "ebps/races/malian/buildings/building_open_pit_mine_small_mal.json",
+       "old": "cited field path not resolved",
+       "new": "record changed",
+       "changedLeaves": [
+        {
+         "path": "upgrade_ext/clear_all_upgrades_on_owner_death",
+         "old": null,
+         "new": false
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/malian/buildings/building_open_pit_mine_tiny_mal#...required_near_entity/required_unit_type[1]",
+      "firstCitedAt": "/buildings/pit-mine/evidence[8]",
+      "detail": {
+       "file": "ebps/races/malian/buildings/building_open_pit_mine_tiny_mal.json",
+       "old": "cited field path not resolved",
+       "new": "record changed",
+       "changedLeaves": [
+        {
+         "path": "upgrade_ext/clear_all_upgrades_on_owner_death",
+         "old": null,
+         "new": false
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/malian/buildings/building_resource_farm_mal#resource_deposit_ext",
+      "firstCitedAt": "/buildings/farm/evidence[4]",
+      "detail": {
+       "file": "ebps/races/malian/buildings/building_resource_farm_mal.json",
+       "changedLeaves": [
+        {
+         "path": "resource_deposit_ext/regrowth_visual_update_period",
+         "old": null,
+         "new": -1
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/malian/buildings/building_town_center_mal#cost_ext/time_cost",
+      "firstCitedAt": "/townCenter/evidence[2]",
+      "detail": {
+       "file": "ebps/races/malian/buildings/building_town_center_mal.json",
+       "changedLeaves": [
+        {
+         "path": "cost_ext/time_cost/time_seconds",
+         "old": 150,
+         "new": 165
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:statemodel_schema/civs/malian#float_properties/cattle_landmark_food_rate_mal.default",
+      "firstCitedAt": "/landmarks/3[0]/evidence[3]",
+      "detail": {
+       "file": "statemodel_schema/civs/malian.rgd",
+       "changedLeaves": [
+        {
+         "path": "schema_bag/float_properties/statemodel_float_property[cattle_landmark_food_rate_mal]/default",
+         "old": 10,
+         "new": 15
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     }
+    ],
+    "notMachineCheckable": []
+   },
+   "values": {
+    "objectsWithInstalledId": 91,
+    "fieldsCompared": 205,
+    "equal17": 205,
+    "stale": [],
+    "packValueDiffersFromBothPatches": [],
+    "idsNotInstalled": []
+   },
+   "startAndGather": {
+    "compared": 17,
+    "different": []
+   }
+  },
+  "japanese": {
+   "packPatch": "17.0.12260",
+   "references": {
+    "checked": 489,
+    "unchanged": 478,
+    "changed": [
+     {
+      "ref": "catalog:buildings/building_town_center_jpn#buildTimeSeconds",
+      "firstCitedAt": "/townCenter/evidence[1]",
+      "detail": [
+       {
+        "field": "buildTimeSeconds",
+        "old": 150,
+        "new": 165
+       }
+      ]
+     },
+     {
+      "ref": "raw:abilities/always_on_abilities/japanese/storehouse_rice_field_spawn_jpn.rgd",
+      "firstCitedAt": "/mechanics[5]/evidence[3]",
+      "detail": {
+       "file": "abilities/always_on_abilities/japanese/storehouse_rice_field_spawn_jpn.rgd",
+       "changedLeaves": [
+        {
+         "path": "ability_bag/ui_info/portrait_name",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "ability_bag/ui_info/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:ebps/races/japanese/buildings/building_econ_mining_camp_jpn",
+      "firstCitedAt": "/buildings/forge/evidence[6]",
+      "detail": {
+       "file": "ebps/races/japanese/buildings/building_econ_mining_camp_jpn.json",
+       "changedLeaves": [
+        {
+         "path": "upgrade_ext/clear_all_upgrades_on_owner_death",
+         "old": null,
+         "new": false
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/japanese/buildings/building_econ_wood_jpn",
+      "firstCitedAt": "/buildings/lumber_camp/evidence[3]",
+      "detail": {
+       "file": "ebps/races/japanese/buildings/building_econ_wood_jpn.json",
+       "changedLeaves": [
+        {
+         "path": "upgrade_ext/clear_all_upgrades_on_owner_death",
+         "old": null,
+         "new": false
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/japanese/buildings/building_house_jpn",
+      "firstCitedAt": "/buildings/farmhouse/evidence[8]",
+      "detail": {
+       "file": "ebps/races/japanese/buildings/building_house_jpn.json",
+       "changedLeaves": [
+        {
+         "path": "upgrade_ext/clear_all_upgrades_on_owner_death",
+         "old": null,
+         "new": false
+        }
+       ],
+       "changedLeafCount": 1
+      }
+     },
+     {
+      "ref": "raw:ebps/races/japanese/buildings/building_landmark_age2_shinto_jpn",
+      "firstCitedAt": "/mechanics[8]/evidence[4]",
+      "detail": {
+       "file": "ebps/races/japanese/buildings/building_landmark_age2_shinto_jpn.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "upgrade_ext/clear_all_upgrades_on_owner_death",
+         "old": null,
+         "new": false
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:ebps/races/japanese/buildings/building_unit_infantry_jpn",
+      "firstCitedAt": "/buildings/barracks/evidence[4]",
+      "detail": {
+       "file": "ebps/races/japanese/buildings/building_unit_infantry_jpn.json",
+       "changedLeaves": [
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[0]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[10]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[11]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[1]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[2]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[3]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[4]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[5]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[6]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[7]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[8]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "spawner_ext/spawn_items/spawn_item[9]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "upgrade_ext/clear_all_upgrades_on_owner_death",
+         "old": null,
+         "new": false
+        }
+       ],
+       "changedLeafCount": 13
+      }
+     },
+     {
+      "ref": "raw:sbps/races/japanese/bannerman_samurai/unit_banner_samurai_melee_2_jpn",
+      "firstCitedAt": "/army/lines[4]/evidence[6]",
+      "detail": {
+       "file": "sbps/races/japanese/bannerman_samurai/unit_banner_samurai_melee_2_jpn.json",
+       "changedLeaves": [
+        {
+         "path": "squad_engineer_ext/construction_groups/construction_group/construction_items/construction_item[0]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        },
+        {
+         "path": "squad_engineer_ext/construction_groups/construction_group/construction_items/construction_item[1]/ui_info_extended/ui_caster_info/$REF",
+         "old": null,
+         "new": ""
+        }
+       ],
+       "changedLeafCount": 2
+      }
+     },
+     {
+      "ref": "raw:upgrade/dev/ages/castle_age",
+      "firstCitedAt": "/technologies[1]/evidence[3]",
+      "detail": {
+       "file": "upgrade/dev/ages/castle_age.json",
+       "changedLeaves": [
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type",
+         "old": "wonder_age_upgrade",
+         "new": null
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[0]",
+         "old": null,
+         "new": "wonder_age_upgrade"
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[1]",
+         "old": null,
+         "new": "scar_rogue_metagame"
+        }
+       ],
+       "changedLeafCount": 3
+      }
+     },
+     {
+      "ref": "raw:upgrade/dev/ages/feudal_age",
+      "firstCitedAt": "/technologies[0]/evidence[3]",
+      "detail": {
+       "file": "upgrade/dev/ages/feudal_age.json",
+       "changedLeaves": [
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type",
+         "old": "wonder_age_upgrade",
+         "new": null
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[0]",
+         "old": null,
+         "new": "wonder_age_upgrade"
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[1]",
+         "old": null,
+         "new": "scar_rogue_metagame"
+        }
+       ],
+       "changedLeafCount": 3
+      }
+     },
+     {
+      "ref": "raw:upgrade/dev/ages/imperial_age",
+      "firstCitedAt": "/technologies[2]/evidence[3]",
+      "detail": {
+       "file": "upgrade/dev/ages/imperial_age.json",
+       "changedLeaves": [
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type",
+         "old": "wonder_age_upgrade",
+         "new": null
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[0]",
+         "old": null,
+         "new": "wonder_age_upgrade"
+        },
+        {
+         "path": "upgrade_bag/upgrade_type/upgrade_type[1]",
+         "old": null,
+         "new": "scar_rogue_metagame"
+        }
+       ],
+       "changedLeafCount": 3
+      }
+     }
+    ],
+    "notMachineCheckable": [
+     {
+      "ref": "raw:sbps/races/japanese/bannerman_samurai/unit_banner_samurai_",
+      "firstCitedAt": "/mechanics[4]/evidence[3]",
+      "why": "record not found in either extract (reference path is descriptive, not a file path)"
+     }
+    ]
+   },
+   "values": {
+    "objectsWithInstalledId": 104,
+    "fieldsCompared": 229,
+    "equal17": 229,
+    "stale": [],
+    "packValueDiffersFromBothPatches": [],
+    "idsNotInstalled": []
+   },
+   "startAndGather": {
+    "compared": 21,
+    "different": []
+   }
+  },
+  "scots": {
+   "packPatch": "17.0.12260",
+   "references": {
+    "checked": 15,
+    "unchanged": 9,
+    "changed": [
+     {
+      "ref": "catalog:units/unit_handcannon_4_sco#age",
+      "firstCitedAt": "/army/lines[5]/evidence[3]",
+      "detail": {
+       "old": "absent",
+       "new": "present"
+      }
+     },
+     {
+      "ref": "catalog:units/unit_handcannon_4_sco#cost",
+      "firstCitedAt": "/army/lines[5]/evidence[0]",
+      "detail": {
+       "old": "absent",
+       "new": "present"
+      }
+     },
+     {
+      "ref": "catalog:units/unit_handcannon_4_sco#hp",
+      "firstCitedAt": "/army/lines[5]/evidence[2]",
+      "detail": {
+       "old": "absent",
+       "new": "present"
+      }
+     },
+     {
+      "ref": "catalog:units/unit_handcannon_4_sco#trainTimeSeconds",
+      "firstCitedAt": "/army/lines[5]/evidence[1]",
+      "detail": {
+       "old": "absent",
+       "new": "present"
+      }
+     },
+     {
+      "ref": "raw:army/standard_mode/normal_scots.rgd#default/army_bag/starting_units",
+      "firstCitedAt": "/start/evidence[4]",
+      "detail": {
+       "file": "army/standard_mode/normal_scots.rgd",
+       "old": "record absent from 16.3.11308",
+       "new": "present (new in 17.0)"
+      }
+     },
+     {
+      "ref": "raw:ebps/races/scots/units/unit_villager_1_sco#resource_gatherer_ext/gather_types",
+      "firstCitedAt": "/villager/evidence[5]",
+      "detail": {
+       "file": "ebps/races/scots/units/unit_villager_1_sco.json",
+       "old": "record absent from 16.3.11308",
+       "new": "present (new in 17.0)"
+      }
+     }
+    ],
+    "notMachineCheckable": []
+   },
+   "values": {
+    "objectsWithInstalledId": 90,
+    "fieldsCompared": 188,
+    "equal17": 188,
+    "stale": [],
+    "packValueDiffersFromBothPatches": [],
+    "idsNotInstalled": []
+   },
+   "startAndGather": {
+    "compared": 21,
+    "different": []
+   }
+  },
+  "vikings": {
+   "packPatch": "17.0.12260",
+   "references": {
+    "checked": 45,
+    "unchanged": 40,
+    "changed": [
+     {
+      "ref": "raw:army/standard_mode/normal_vikings.rgd#default/army_bag/starting_units",
+      "firstCitedAt": "/start/evidence[5]",
+      "detail": {
+       "file": "army/standard_mode/normal_vikings.rgd",
+       "old": "record absent from 16.3.11308",
+       "new": "present (new in 17.0)"
+      }
+     },
+     {
+      "ref": "raw:ebps/races/vikings/buildings/building_landmark_age3_kongens_cathedral_vik#default/ui_ext/help_text_formatter/formatter_arguments",
+      "firstCitedAt": "/landmarks/4[0]/evidence[0]",
+      "detail": {
+       "file": "ebps/races/vikings/buildings/building_landmark_age3_kongens_cathedral_vik.json",
+       "old": "record absent from 16.3.11308",
+       "new": "present (new in 17.0)"
+      }
+     },
+     {
+      "ref": "raw:ebps/races/vikings/units/unit_villager_1_vik#resource_gatherer_ext/gather_types",
+      "firstCitedAt": "/villager/evidence[6]",
+      "detail": {
+       "file": "ebps/races/vikings/units/unit_villager_1_vik.json",
+       "old": "record absent from 16.3.11308",
+       "new": "present (new in 17.0)"
+      }
+     },
+     {
+      "ref": "raw:upgrade/races/vikings/buildings/upgrade_longhouse_pasture_loom_vik#default/upgrade_bag/float_properties",
+      "firstCitedAt": "/technologies[31]/evidence[0]",
+      "detail": {
+       "file": "upgrade/races/vikings/buildings/upgrade_longhouse_pasture_loom_vik.json",
+       "old": "record absent from 16.3.11308",
+       "new": "present (new in 17.0)"
+      }
+     },
+     {
+      "ref": "raw:upgrade/races/vikings/buildings/upgrade_longhouse_smithy_vik#default/upgrade_bag/float_properties",
+      "firstCitedAt": "/technologies[28]/evidence[0]",
+      "detail": {
+       "file": "upgrade/races/vikings/buildings/upgrade_longhouse_smithy_vik.json",
+       "old": "record absent from 16.3.11308",
+       "new": "present (new in 17.0)"
+      }
+     }
+    ],
+    "notMachineCheckable": []
+   },
+   "values": {
+    "objectsWithInstalledId": 70,
+    "fieldsCompared": 160,
+    "equal17": 160,
+    "stale": [],
+    "packValueDiffersFromBothPatches": [],
+    "idsNotInstalled": []
+   },
+   "startAndGather": {
+    "compared": 21,
+    "different": []
+   }
+  }
+ },
+ "applied": [
+  {
+   "packs": [
+    "french",
+    "mongol",
+    "malian",
+    "japanese"
+   ],
+   "value": "extra Town Center build time",
+   "from": 150,
+   "to": 165,
+   "source": "catalog:buildings/building_town_center_<civ>#buildTimeSeconds"
+  },
+  {
+   "packs": [
+    "mongol"
+   ],
+   "value": "packed capital Town Center speed (engine units)",
+   "from": 3,
+   "to": 3.6,
+   "source": "raw:ebps/races/mongol/buildings/building_town_center_capital_moving_mon#moving_ext/speed_scaling_table/default_speed"
+  },
+  {
+   "packs": [
+    "malian"
+   ],
+   "value": "Grand Fulani Corral food per nearby cattle",
+   "from": "3 every 10 s (18 per minute)",
+   "to": "4 every 15 s (16 per minute)",
+   "source": "raw:statemodel_schema/civs/malian#float_properties/cattle_landmark_food_rate_mal.default, cattle_landmark_food_amount_mal.default"
+  },
+  {
+   "packs": [
+    "vikings"
+   ],
+   "value": "Smithy / Pasture and Loom automatic research time",
+   "from": 270,
+   "to": 300,
+   "source": "raw:upgrade/races/vikings/buildings/upgrade_longhouse_smithy_vik#upgrade_bag/float_properties (research_time), upgrade_longhouse_pasture_loom_vik likewise"
+  },
+  {
+   "packs": [
+    "vikings"
+   ],
+   "value": "Kongens Dør tithe, gold per Longhouse every 30 s",
+   "from": 10,
+   "to": 12.5,
+   "source": "raw:ebps/races/vikings/buildings/building_landmark_age3_kongens_cathedral_vik#ui_ext/help_text_formatter/formatter_arguments"
+  },
+  {
+   "packs": [
+    "scots"
+   ],
+   "value": "trained Tacksman record id",
+   "from": "unit_muster_tacksmen_sco (stand-in)",
+   "to": "unit_handcannon_4_sco",
+   "source": "catalog:units/unit_handcannon_4_sco (160 food 90 gold, 35 s, 130 health: the values the pack already carried)"
+  },
+  {
+   "packs": [
+    "scots"
+   ],
+   "value": "Border Reiver speed (tiles per second)",
+   "from": 1.688,
+   "to": 1.6875,
+   "source": "catalog:units/unit_border_reiver_4_sco#speedEngineUnits (6.75 / 4)"
+  },
+  {
+   "packs": [
+    "scots",
+    "vikings"
+   ],
+   "value": "starting sheep listed",
+   "from": "not listed",
+   "to": "5 sheep",
+   "source": "raw:army/standard_mode/normal_<civ>.rgd#army_bag/starting_units"
+  }
+ ],
+ "notCompared": {
+  "scots": [
+   "Mustering Hall tier thresholds and cost reductions, muster charge counts (state trees and ability records outside the decoded scope)",
+   "Abbey relic move cooldown 120 s",
+   "relic gold per minute and relic distance (map assumptions)",
+   "Stone of Destiny reach (placement assumption)",
+   "Highland Cattle one cow per Berry Bush (footage)"
+  ],
+  "vikings": [
+   "saga goals and rewards (ability records outside the decoded scope)",
+   "Call Shield Maidens cost 800 food (ability record)",
+   "Sacred Grove and Gullinn Temple Berserker intervals 100 s / 50 s (state tree)",
+   "Bondi at the Longhouse 25% slower is compared only through the Longhouse tooltip argument",
+   "Farmstead field rate 1.5x is the installed tooltip argument 50; the record scalar gather_rate_food 1.833333 is untraced",
+   "Northern Migration one recruit per Town Center in parallel (footage)",
+   "Jylland Knight gold on death, Living off the Land, Local Rituals (combat and healing values, not used by the plans)"
+  ],
+  "french, mongol, malian, japanese": [
+   "every cited reference resolved in both patches except one descriptive Japanese reference (see notMachineCheckable); state-tree behaviour the packs already list under unresolved[] is unchanged by this re-check"
+  ]
+ }
+}

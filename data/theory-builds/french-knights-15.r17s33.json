@@ -1,0 +1,494 @@
+{
+ "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": 52049813.6,
+ "build": {
+  "id": "french-knights-15",
+  "title": "Royal Knights by 15:00",
+  "summary": "Royal Knights by 15:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Royal Knight upgrade.",
+  "civilization": "french",
+  "engine": "civ",
+  "patch": "17.0.12260",
+  "reference": {
+   "buildId": "french-knights-observed-4v4"
+  },
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 900,
+   "slack": 1
+  },
+  "lineNames": "Royal Knight",
+  "result": {
+   "done": 1864,
+   "at": 900,
+   "line": 52,
+   "army": 52,
+   "armyValue": 12480,
+   "villagers": 50,
+   "population": 108,
+   "age": 2,
+   "ages": [
+    352,
+    1026,
+    1439
+   ],
+   "firstUnit": 447,
+   "pop150": 1376,
+   "pop200": 1749
+  },
+  "planId": "french-knights-15",
+  "lines": [
+   "royal-knight"
+  ],
+  "vilTarget": 50,
+  "landmarks": {
+   "2": "school-of-cavalry",
+   "3": "royal-institute",
+   "4": "college-of-artillery"
+  },
+  "lmBuilders": {
+   "2": 2,
+   "3": 10,
+   "4": 1
+  },
+  "extraTCs": {
+   "2": 1,
+   "3": 0
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 4,
+   "3": 1,
+   "4": 2
+  },
+  "maxProducers": 11,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1",
+    "upgrade_econ_villager_hunting_gear_1"
+   ],
+   "2": "all",
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": false,
+   "3": false
+  },
+  "blacksmiths": 2,
+  "pauseForAge": true,
+  "window": 6,
+  "woodFloor": 0.05,
+  "goldBias": 1.6,
+  "armyAge": 2,
+  "pauseFrom": {
+   "3": 900,
+   "4": 1200
+  },
+  "vilTarget2": null,
+  "vilTarget2At": 780
+ },
+ "ledger": {
+  "id": "french-knights-15",
+  "evaluations": 5431,
+  "seconds": 176,
+  "seed": 33,
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 900,
+   "slack": 1
+  },
+  "best": {
+   "done": 1864,
+   "at": 900,
+   "line": 52,
+   "army": 52,
+   "armyValue": 12480,
+   "villagers": 50,
+   "population": 108,
+   "age": 2,
+   "ages": [
+    352,
+    1026,
+    1439
+   ],
+   "firstUnit": 447,
+   "pop150": 1376,
+   "pop200": 1749
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "planId": "french-knights-15",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 8,
+      "4": 1
+     },
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 6,
+     "woodFloor": 0.25,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 900,
+      "4": 1200
+     },
+     "vilTarget2": null,
+     "vilTarget2At": 780
+    },
+    "result": {
+     "done": 1865,
+     "at": 900,
+     "line": 53,
+     "army": 53,
+     "armyValue": 12720,
+     "villagers": 50,
+     "population": 108,
+     "age": 2,
+     "ages": [
+      352,
+      1031,
+      1552
+     ],
+     "firstUnit": 447,
+     "pop150": 1377,
+     "pop200": 1741
+    }
+   },
+   {
+    "params": {
+     "planId": "french-knights-15",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 8,
+      "4": 1
+     },
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 900,
+      "4": 1200
+     },
+     "vilTarget2": null,
+     "vilTarget2At": 720
+    },
+    "result": {
+     "done": 1865,
+     "at": 900,
+     "line": 53,
+     "army": 53,
+     "armyValue": 12720,
+     "villagers": 50,
+     "population": 108,
+     "age": 2,
+     "ages": [
+      352,
+      1035,
+      1552
+     ],
+     "firstUnit": 447,
+     "pop150": 1377,
+     "pop200": 1741
+    }
+   },
+   {
+    "params": {
+     "planId": "french-knights-15",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 8,
+      "4": 1
+     },
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 900,
+      "4": 1200
+     },
+     "vilTarget2": null,
+     "vilTarget2At": 840
+    },
+    "result": {
+     "done": 1865,
+     "at": 900,
+     "line": 53,
+     "army": 53,
+     "armyValue": 12720,
+     "villagers": 50,
+     "population": 108,
+     "age": 2,
+     "ages": [
+      352,
+      1035,
+      1552
+     ],
+     "firstUnit": 447,
+     "pop150": 1377,
+     "pop200": 1741
+    }
+   },
+   {
+    "params": {
+     "planId": "french-knights-15",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 8,
+      "4": 1
+     },
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 900,
+      "4": 1200
+     },
+     "vilTarget2": null,
+     "vilTarget2At": 900
+    },
+    "result": {
+     "done": 1865,
+     "at": 900,
+     "line": 53,
+     "army": 53,
+     "armyValue": 12720,
+     "villagers": 50,
+     "population": 108,
+     "age": 2,
+     "ages": [
+      352,
+      1035,
+      1552
+     ],
+     "firstUnit": 447,
+     "pop150": 1377,
+     "pop200": 1741
+    }
+   },
+   {
+    "params": {
+     "planId": "french-knights-15",
+     "lines": [
+      "royal-knight"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "school-of-cavalry",
+      "3": "royal-institute",
+      "4": "college-of-artillery"
+     },
+     "lmBuilders": {
+      "2": 2,
+      "3": 8,
+      "4": 1
+     },
+     "extraTCs": {
+      "2": 1,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 0,
+      "2": 4,
+      "3": 1,
+      "4": 2
+     },
+     "maxProducers": 11,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_town_center_wheelbarrow_1",
+       "upgrade_econ_villager_hunting_gear_1"
+      ],
+      "2": "all",
+      "3": "all",
+      "4": []
+     },
+     "milTechAge": {
+      "2": false,
+      "3": false
+     },
+     "blacksmiths": 2,
+     "pauseForAge": false,
+     "window": 6,
+     "woodFloor": 0.1,
+     "goldBias": 0.6,
+     "armyAge": 2,
+     "pauseFrom": {
+      "3": 900,
+      "4": 1200
+     },
+     "vilTarget2": null,
+     "vilTarget2At": 960
+    },
+    "result": {
+     "done": 1865,
+     "at": 900,
+     "line": 53,
+     "army": 53,
+     "armyValue": 12720,
+     "villagers": 50,
+     "population": 108,
+     "age": 2,
+     "ages": [
+      352,
+      1035,
+      1552
+     ],
+     "firstUnit": 447,
+     "pop150": 1377,
+     "pop200": 1741
+    }
+   }
+  ]
+ }
+}

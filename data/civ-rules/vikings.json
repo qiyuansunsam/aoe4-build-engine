@@ -1,8 +1,8 @@
 {
  "civ": "vikings",
  "catalogCiv": "vikings",
- "patch": "17.0-preview",
- "notes": "Vikings (Raiders of the North, Update 17.0, releases 2026-10-29; not in the installed game). Unique values come from the datamined 17.0 records (jeandogaming explorer, data/upcoming-civs/raw/jeando/vikings_dataset.json) and the merged frame/transcript checklist (data/upcoming-civs/checklist.json). Standard values (villager gather table, technology effect sizes) are the installed 16.3 values; the 17.0 standard records equal 16.3 in 1268 of 1275 values (data/UPCOMING_CIVS.md).",
+ "patch": "17.0.12260",
+ "notes": "Vikings (Raiders of the North, Update 17.0, installed). Written before release from the datamined 17.0 records and footage; re-checked value by value against the installed 17.0.12260 files on 2026-11-06 (scripts/verify_rule_packs_17.py, data/civ-rules/patch-17-recheck.json). The villager gather table, start state, costs, times, health and population of every pack object with an installed record equal the installed files; ids ending in __vikings stand in for the shared standard technology of the same name. Two values moved between the pre-release sources and the installed files: the Smithy / Pasture and Loom automatic research time (270 s read on screen before release, research_time 300 in the installed attachment records) and the Kongens Dør tithe (10 gold before release, 12.5 in the installed landmark record).",
  "start": {
   "villagers": 6,
   "resources": {
@@ -17,6 +17,21 @@
     "id": "unit_scout_1_vik",
     "name": "Scout",
     "count": 1
+   },
+   {
+    "id": "gaia_herdable_sheep",
+    "name": "Sheep",
+    "count": 2
+   },
+   {
+    "id": "gaia_herdable_sheep_black",
+    "name": "Sheep (black)",
+    "count": 1
+   },
+   {
+    "id": "gaia_herdable_sheep_brown",
+    "name": "Sheep (brown)",
+    "count": 2
    }
   ],
   "buildings": [
@@ -32,7 +47,8 @@
    "frame:uNw-K34ZDPs@00:48 (game 00:07 HUD \"6/10 | 0/7 | 7/10 | 6 | 0 | 200 | 100 | 0\")",
    "frame:ehO1BOe7wG8@02:22 (game 00:02 villager counter 6/10 before any Longhouse)",
    "transcript:ehO1BOe7wG8@02:50 (\"they start with zero food\")",
-   "jeando17:unit_scout_1_vik#costs"
+   "jeando17:unit_scout_1_vik#costs",
+   "raw:army/standard_mode/normal_vikings.rgd#default/army_bag/starting_units (installed 17.0.12260: Scout, 6 Villagers, 5 sheep) and #default/army_bag/resource_starting_amount (food 0, wood 200, gold 100)"
   ]
  },
  "villager": {
@@ -144,7 +160,8 @@
    "jeando17:unit_villager_1_vik#hitpoints",
    "checklist:vikings/unit/Villager#cost.food = 0 [confirmed] (Northern Migration: no cost)",
    "checklist:vikings/unit/Villager#trainTimeSeconds = 22 [confirmed]",
-   "frame:BV1dSny6uE4j_p1@00:28 (Town Center tooltip: villager 22 s)"
+   "frame:BV1dSny6uE4j_p1@00:28 (Town Center tooltip: villager 22 s)",
+   "raw:ebps/races/vikings/units/unit_villager_1_vik#resource_gatherer_ext/gather_types (installed 17.0.12260 gather table: every rate and carry equals the values below)"
   ]
  },
  "townCenter": {
@@ -489,12 +506,13 @@
       "kind": "passive_income",
       "target": "gold",
       "op": "add",
-      "value": 10,
-      "notes": "10 gold per Longhouse inside its slowly expanding area every 30 s"
+      "value": 12.5,
+      "notes": "12.5 gold per Longhouse inside its slowly expanding area every 30 s"
      }
     ],
-    "notes": "Age IV economic landmark. Acts as a Monastery; +10 population; tithe of 10 gold per Longhouse inside a slowly expanding area every 30 s; Folkekirken (+10 population).",
+    "notes": "Age IV economic landmark. Acts as a Monastery; +10 population; tithe of 12.5 gold per Longhouse (10 before release) inside a slowly expanding area every 30 s; Folkekirken (+10 population).",
     "evidence": [
+     "raw:ebps/races/vikings/buildings/building_landmark_age3_kongens_cathedral_vik#default/ui_ext/help_text_formatter/formatter_arguments (installed 17.0.12260, in record order: 10, 12.5, 30, 20; the tooltip reads %1% population, %2% Gold for each Longhouse, every %3% seconds)",
      "jeando17:building_landmark_age3_kongens_cathedral_vik#costs",
      "jeando17:building_landmark_age3_kongens_cathedral_vik#description",
      "checklist:vikings/landmark/Kongens Dør Cathedral#effectText [confirmed]",
@@ -1336,7 +1354,7 @@
    "age": 2,
    "building": "longhouse-smithy",
    "cost": {},
-   "researchSeconds": 270,
+   "researchSeconds": 300,
    "category": "military",
    "effects": [
     {
@@ -1346,14 +1364,16 @@
      "value": 1
     }
    ],
-   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 300 s each (the attachment record; the technology record itself carries no time or cost); tiers of earlier ages research 60 s faster.",
    "evidence": [
+    "raw:upgrade/races/vikings/buildings/upgrade_longhouse_smithy_vik#default/upgrade_bag/float_properties (installed 17.0.12260: research_time 300, research_time_reduction 60)",
     "jeando17:upgrade_smithy_damage_1_vik#costs",
     "jeando17:upgrade_smithy_damage_1_vik#description",
-    "checklist:vikings/technology/Forge Welding#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Forge Welding#researchTimeSeconds = 270 (read on screen before release; superseded by the installed attachment record)",
     "checklist:vikings/technology/Forge Welding#age = Feudal",
     "checklist:vikings/technology/Forge Welding#effectText"
-   ]
+   ],
+   "autoResearch": true
   },
   {
    "id": "upgrade_smithy_damage_2_vik",
@@ -1361,7 +1381,7 @@
    "age": 3,
    "building": "longhouse-smithy",
    "cost": {},
-   "researchSeconds": 270,
+   "researchSeconds": 300,
    "category": "military",
    "effects": [
     {
@@ -1371,14 +1391,16 @@
      "value": 1
     }
    ],
-   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 300 s each (the attachment record; the technology record itself carries no time or cost); tiers of earlier ages research 60 s faster.",
    "evidence": [
+    "raw:upgrade/races/vikings/buildings/upgrade_longhouse_smithy_vik#default/upgrade_bag/float_properties (installed 17.0.12260: research_time 300, research_time_reduction 60)",
     "jeando17:upgrade_smithy_damage_2_vik#costs",
     "jeando17:upgrade_smithy_damage_2_vik#description",
-    "checklist:vikings/technology/Bone Ash Steel#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Bone Ash Steel#researchTimeSeconds = 270 (read on screen before release; superseded by the installed attachment record)",
     "checklist:vikings/technology/Bone Ash Steel#age = Castle",
     "checklist:vikings/technology/Bone Ash Steel#effectText"
-   ]
+   ],
+   "autoResearch": true
   },
   {
    "id": "upgrade_smithy_damage_3_vik",
@@ -1386,7 +1408,7 @@
    "age": 4,
    "building": "longhouse-smithy",
    "cost": {},
-   "researchSeconds": 270,
+   "researchSeconds": 300,
    "category": "military",
    "effects": [
     {
@@ -1396,14 +1418,16 @@
      "value": 1
     }
    ],
-   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "notes": "Researched automatically and at no cost by the Smithy attachment, one tier per age, 300 s each (the attachment record; the technology record itself carries no time or cost); tiers of earlier ages research 60 s faster.",
    "evidence": [
+    "raw:upgrade/races/vikings/buildings/upgrade_longhouse_smithy_vik#default/upgrade_bag/float_properties (installed 17.0.12260: research_time 300, research_time_reduction 60)",
     "jeando17:upgrade_smithy_damage_3_vik#costs",
     "jeando17:upgrade_smithy_damage_3_vik#description",
-    "checklist:vikings/technology/Crucible Steel#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Crucible Steel#researchTimeSeconds = 270 (read on screen before release; superseded by the installed attachment record)",
     "checklist:vikings/technology/Crucible Steel#age = Imperial",
     "checklist:vikings/technology/Crucible Steel#effectText"
-   ]
+   ],
+   "autoResearch": true
   },
   {
    "id": "upgrade_loom_armor_1_vik",
@@ -1411,7 +1435,7 @@
    "age": 2,
    "building": "longhouse-loom",
    "cost": {},
-   "researchSeconds": 270,
+   "researchSeconds": 300,
    "category": "military",
    "effects": [
     {
@@ -1421,14 +1445,16 @@
      "value": 1
     }
    ],
-   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 300 s each (the attachment record; the technology record itself carries no time or cost); tiers of earlier ages research 60 s faster.",
    "evidence": [
+    "raw:upgrade/races/vikings/buildings/upgrade_longhouse_pasture_loom_vik#default/upgrade_bag/float_properties (installed 17.0.12260: research_time 300, research_time_reduction 60)",
     "jeando17:upgrade_loom_armor_1_vik#costs",
     "jeando17:upgrade_loom_armor_1_vik#description",
-    "checklist:vikings/technology/Heavy Tunics#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Heavy Tunics#researchTimeSeconds = 270 (read on screen before release; superseded by the installed attachment record)",
     "checklist:vikings/technology/Heavy Tunics#age = Feudal",
     "checklist:vikings/technology/Heavy Tunics#effectText"
-   ]
+   ],
+   "autoResearch": true
   },
   {
    "id": "upgrade_loom_armor_2_vik",
@@ -1436,7 +1462,7 @@
    "age": 3,
    "building": "longhouse-loom",
    "cost": {},
-   "researchSeconds": 270,
+   "researchSeconds": 300,
    "category": "military",
    "effects": [
     {
@@ -1446,14 +1472,16 @@
      "value": 1
     }
    ],
-   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 300 s each (the attachment record; the technology record itself carries no time or cost); tiers of earlier ages research 60 s faster.",
    "evidence": [
+    "raw:upgrade/races/vikings/buildings/upgrade_longhouse_pasture_loom_vik#default/upgrade_bag/float_properties (installed 17.0.12260: research_time 300, research_time_reduction 60)",
     "jeando17:upgrade_loom_armor_2_vik#costs",
     "jeando17:upgrade_loom_armor_2_vik#description",
-    "checklist:vikings/technology/Mail Shirts#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Mail Shirts#researchTimeSeconds = 270 (read on screen before release; superseded by the installed attachment record)",
     "checklist:vikings/technology/Mail Shirts#age = Castle",
     "checklist:vikings/technology/Mail Shirts#effectText"
-   ]
+   ],
+   "autoResearch": true
   },
   {
    "id": "upgrade_loom_armor_3_vik",
@@ -1461,7 +1489,7 @@
    "age": 4,
    "building": "longhouse-loom",
    "cost": {},
-   "researchSeconds": 270,
+   "researchSeconds": 300,
    "category": "military",
    "effects": [
     {
@@ -1471,14 +1499,16 @@
      "value": 1
     }
    ],
-   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 270 s each; tiers of earlier ages research 60 s faster.",
+   "notes": "Researched automatically and at no cost by the Pasture and Loom attachment, one tier per age, 300 s each (the attachment record; the technology record itself carries no time or cost); tiers of earlier ages research 60 s faster.",
    "evidence": [
+    "raw:upgrade/races/vikings/buildings/upgrade_longhouse_pasture_loom_vik#default/upgrade_bag/float_properties (installed 17.0.12260: research_time 300, research_time_reduction 60)",
     "jeando17:upgrade_loom_armor_3_vik#costs",
     "jeando17:upgrade_loom_armor_3_vik#description",
-    "checklist:vikings/technology/Lamellar Plating#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Lamellar Plating#researchTimeSeconds = 270 (read on screen before release; superseded by the installed attachment record)",
     "checklist:vikings/technology/Lamellar Plating#age = Imperial",
     "checklist:vikings/technology/Lamellar Plating#effectText"
-   ]
+   ],
+   "autoResearch": true
   }
  ],
  "army": {
@@ -1811,7 +1841,7 @@
   },
   {
    "key": "longhouse-attachments",
-   "summary": "One attachment per Longhouse. Bee Skeps 200 wood, 20 s: 50 gold per minute, limit 6. Farmstead 200 wood, 2 s: food drop-off and two vegetable fields gathered 50% faster than a farm, limit 6. Smithy and Pasture and Loom 100 wood 100 gold, 20 s, Feudal Age, limit 1 each: auto-research one damage / armor tier per age at no cost (270 s; earlier ages 60 s faster).",
+   "summary": "One attachment per Longhouse. Bee Skeps 200 wood, 20 s: 50 gold per minute, limit 6. Farmstead 200 wood, 2 s: food drop-off and two vegetable fields gathered 50% faster than a farm, limit 6. Smithy and Pasture and Loom 100 wood 100 gold, 20 s, Feudal Age, limit 1 each: auto-research one damage / armor tier per age at no cost (300 s; earlier ages 60 s faster).",
    "params": {
     "bee": {
      "id": "upgrade_longhouse_bee_skeps_vik",
@@ -1848,7 +1878,7 @@
       "upgrade_smithy_damage_2_vik",
       "upgrade_smithy_damage_3_vik"
      ],
-     "researchSeconds": 270,
+     "researchSeconds": 300,
      "earlierAgeFaster": 60
     },
     "loom": {
@@ -1865,12 +1895,14 @@
       "upgrade_loom_armor_2_vik",
       "upgrade_loom_armor_3_vik"
      ],
-     "researchSeconds": 270,
+     "researchSeconds": 300,
      "earlierAgeFaster": 60
     }
    },
    "status": "resolved",
    "evidence": [
+    "raw:upgrade/races/vikings/buildings/upgrade_longhouse_smithy_vik#default/upgrade_bag/float_properties (installed 17.0.12260: research_time 300, research_time_reduction 60)",
+    "raw:upgrade/races/vikings/buildings/upgrade_longhouse_pasture_loom_vik#default/upgrade_bag/float_properties (installed 17.0.12260: research_time 300, research_time_reduction 60)",
     "jeando17:upgrade_longhouse_bee_skeps_vik#costs",
     "jeando17:upgrade_longhouse_bee_skeps_vik#description",
     "jeando17:upgrade_longhouse_farmstead_vik#costs",
@@ -1882,7 +1914,7 @@
     "checklist:vikings/technology/Bee Skeps#effectValue = 50 [confirmed]",
     "checklist:vikings/technology/Farmstead#effectValue = 50 [confirmed]",
     "checklist:vikings/technology/Smithy#effectValue = 60 [confirmed]",
-    "checklist:vikings/technology/Forge Welding#researchTimeSeconds = 270",
+    "checklist:vikings/technology/Forge Welding#researchTimeSeconds = 270 (read on screen before release; superseded by the installed attachment record)",
     "frame:ehO1BOe7wG8@07:44 (overlay \"ATTACHMENTS IN DARK AGE: BEE SKEP OR FARMSTEAD\")",
     "checklist:vikings/bonus/Bee Skep Production#effectValue = 8 (on screen: 8 gold per 10 s tick)"
    ]
@@ -2044,14 +2076,15 @@
   },
   {
    "key": "kongens-dor",
-   "summary": "Kongens Dør Cathedral: tithe of 10 gold per Longhouse inside its slowly expanding area every 30 s; +10 population.",
+   "summary": "Kongens Dør Cathedral: tithe of 12.5 gold per Longhouse inside its slowly expanding area every 30 s; +10 population.",
    "params": {
-    "goldPerLonghouse": 10,
+    "goldPerLonghouse": 12.5,
     "intervalSeconds": 30,
     "pop": 10
    },
    "status": "partial",
    "evidence": [
+    "raw:ebps/races/vikings/buildings/building_landmark_age3_kongens_cathedral_vik#default/ui_ext/help_text_formatter/formatter_arguments (installed 17.0.12260, in record order: 10, 12.5, 30, 20; the tooltip reads %1% population, %2% Gold for each Longhouse, every %3% seconds)",
     "jeando17:building_landmark_age3_kongens_cathedral_vik#description",
     "transcript:nd74LibluQ0@41:14"
    ]
@@ -2146,7 +2179,7 @@
   {
    "item": "Smithy / Loom research order",
    "why": "\"one tier per age\" and \"earlier ages 60 s faster\" are text; whether two tiers can research at once is not shown.",
-   "fallback": "one tier at a time per attachment, next tier whose age is reached; 270 s, or 210 s when the tier's age is below the current age at its start"
+   "fallback": "one tier at a time per attachment, next tier whose age is reached; 300 s, or 240 s when the tier's age is below the current age at its start"
   },
   {
    "item": "Viking villager gather rates",

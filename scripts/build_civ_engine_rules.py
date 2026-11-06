@@ -1,4 +1,4 @@
-"""Compile data/civ-rules/<civ>.json (installed 16.3.11308 rule packs with evidence) into the compact tables the
+"""Compile data/civ-rules/<civ>.json (rule packs on the installed game patch, 17.0.12260, with evidence) into the compact tables the
 multi-civilization engine reads: data/civ-engine-rules.json.
 
 Every number comes from a rule pack (which cites the installed catalog, decoded Attrib records or the installed
@@ -13,12 +13,14 @@ import importlib, json, os, pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 CATALOG = json.loads((ROOT / 'data/game-catalog.json').read_text(encoding='utf-8'))
 BY_ID = {r['id']: r for k in ('units', 'buildings', 'technologies') for r in CATALOG[k]}
+PATCH = CATALOG['provenance']['patch']  # the installed patch the catalog was extracted from
 RES = ('food', 'wood', 'gold', 'stone')
 TILE = 4.0  # engine units per tile: installed movement values / 4 = tiles per second (as the Library shows speed)
 CIVS = ('french', 'mongol', 'malian', 'japanese')
 NAMES = {'french': 'French', 'mongol': 'Mongols', 'malian': 'Malians', 'japanese': 'Japanese', 'scots': 'Scots', 'vikings': 'Vikings'}
-# Civilizations whose glue lives in scripts/civ_glue/<civ>.py (a `glue(p, s, helpers)` function); their packs may target a
-# preview patch (17.0 records for Vikings/Scots), in which case ids stand in for installed pbgids.
+# Civilizations whose glue lives in scripts/civ_glue/<civ>.py (a `glue(p, s, helpers)` function). Vikings and Scots were written
+# from datamined 17.0 records before release: a few of their ids are stand-ins with no installed record, so their packs keep the
+# record id as the key wherever the installed catalog has no pbgid for it.
 GLUE_DIR = ROOT / 'scripts/civ_glue'
 EXTRA = tuple(sorted(f.stem for f in GLUE_DIR.glob('*.py') if not f.stem.startswith('_') and (ROOT / 'data/civ-rules' / f'{f.stem}.json').exists())) if GLUE_DIR.exists() else ()
 # Not stat upgrades of the line itself: researched when planned, not part of the done condition.
@@ -29,13 +31,14 @@ def cost(c):
     return {r: round(float((c or {}).get(r, 0) or 0), 4) for r in RES}
 
 
-PREVIEW = {'on': False}  # set while compiling a pack that is not on the installed patch
+PREVIEW = {'on': False}  # set while compiling a pack whose ids may be stand-ins (the scripts/civ_glue civilizations)
 
 
 def pbgid(record_id, fallback=None):
-    r = BY_ID.get(record_id)
+    # ids ending in __scots / __vikings stand in for the shared standard technology of the same name
+    r = BY_ID.get(record_id) or BY_ID.get(re.sub(r'__(scots|vikings)$', '', str(record_id)))
     got = (r or {}).get('source', {}).get('pbgid') or fallback
-    return got if got or not PREVIEW['on'] else record_id  # preview civs: the 17.0 record id is the key
+    return got if got or not PREVIEW['on'] else record_id  # stand-in id: the record id is the key
 
 
 def kebab(s):
@@ -94,7 +97,7 @@ def building_key(raw, landmark_ids):
 
 def compile_civ(civ):
     p = load(civ)
-    PREVIEW['on'] = not str(p.get('patch', '16.3.11308')).startswith('16.3')
+    PREVIEW['on'] = civ in EXTRA
     lm_ids = {}
     landmarks = {}
     for age, opts in (p.get('landmarks') or {}).items():
@@ -166,7 +169,7 @@ def compile_civ(civ):
     start = p['start']
     units = [{'pbgid': pbgid(u['id'], u.get('pbgid')), 'name': u['name'], 'count': u['count'], 'pop': 1}
              for u in start.get('units', []) if u['id'].startswith('unit_') and 'villager' not in u['id']]
-    spec = {'key': civ, 'name': NAMES[civ], 'patch': p.get('patch', '16.3.11308'),
+    spec = {'key': civ, 'name': NAMES[civ], 'patch': p.get('patch', PATCH),
             'start': {'villagers': start['villagers'], 'res': cost(start['resources']), 'popCap': start.get('popCap') or 10, 'units': units},
             'villager': {'pbgid': pbgid(v['id']), 'cost': cost(v['cost']), 'time': v['trainSeconds'], 'speed': (v.get('speedEngineUnits') or 4.5) / TILE, 'gather': gather},
             'tc': {'pbgid': pbgid(tc.get('extraId')), 'pop': tc.get('popProvided') if tc.get('popProvided') is not None else 10, 'prodByAge': {int(k): v for k, v in (tc.get('villagerProductionMultiplierByAge') or {}).items()}},
@@ -304,7 +307,7 @@ def extra_glue(civ):
 
 
 if __name__ == '__main__':
-    out = {'schemaVersion': 1, 'patch': '16.3.11308', 'generatedBy': 'scripts/build_civ_engine_rules.py', 'civs': {}}
+    out = {'schemaVersion': 1, 'patch': PATCH, 'generatedBy': 'scripts/build_civ_engine_rules.py', 'civs': {}}
     for civ in CIVS + EXTRA:
         p, s = compile_civ(civ)
         (GLUE.get(civ) or extra_glue(civ))(p, s)

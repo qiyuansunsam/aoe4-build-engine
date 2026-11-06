@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-27T14:05:52.409Z",
+ "generatedAt": "2026-11-06T09:19:52.967Z",
  "builds": [
   {
    "id": "french-knights-10",
-   "evaluations": 5570,
-   "seconds": 181,
+   "evaluations": 7090,
+   "seconds": 200,
    "seed": 20261024,
    "objective": {
     "kind": "lineAt",
@@ -14,7 +14,7 @@
    },
    "threshold": 18,
    "best": {
-    "done": 1497,
+    "done": 1491,
     "at": 600,
     "line": 18,
     "army": 18,
@@ -24,18 +24,24 @@
     "age": 2,
     "ages": [
      266,
-     815,
-     1218
-    ]
+     792,
+     1165
+    ],
+    "firstUnit": 323,
+    "pop150": 1316,
+    "pop200": 1474
    },
    "runnersUp": [],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "17.0.12260",
    "searches": [
     {
      "seed": 20261024,
-     "evaluations": 5570,
-     "score": -1496.982,
+     "evaluations": 7090,
+     "searchedOn": "17.0.12260",
+     "score": -1490.982,
      "best": {
-      "done": 1497,
+      "done": 1491,
       "at": 600,
       "line": 18,
       "army": 18,
@@ -45,15 +51,19 @@
       "age": 2,
       "ages": [
        266,
-       815,
-       1218
-      ]
+       792,
+       1165
+      ],
+      "firstUnit": 323,
+      "pop150": 1316,
+      "pop200": 1474
      }
     },
     {
      "seed": 33,
      "evaluations": 12119,
-     "score": -1497.982,
+     "searchedOn": "16.3.11308",
+     "score": -1505.982,
      "best": {
       "done": 1498,
       "at": 600,
@@ -72,7 +82,29 @@
     },
     {
      "seed": 20261024,
+     "evaluations": 5570,
+     "searchedOn": "16.3.11308",
+     "score": -1505.982,
+     "best": {
+      "done": 1497,
+      "at": 600,
+      "line": 18,
+      "army": 18,
+      "armyValue": 4320,
+      "villagers": 28,
+      "population": 49,
+      "age": 2,
+      "ages": [
+       266,
+       815,
+       1218
+      ]
+     }
+    },
+    {
+     "seed": 20261024,
      "evaluations": 3789,
+     "searchedOn": "16.3.11308",
      "score": -1581.982,
      "best": {
       "done": 1582,
@@ -93,6 +125,7 @@
     {
      "seed": 33,
      "evaluations": 10846,
+     "searchedOn": "16.3.11308",
      "score": -1838.982,
      "best": {
       "done": 1817,
@@ -113,6 +146,7 @@
     {
      "seed": 11,
      "evaluations": 11741,
+     "searchedOn": "16.3.11308",
      "score": -1846.982,
      "best": {
       "done": 1847,
@@ -133,7 +167,8 @@
     {
      "seed": 22,
      "evaluations": 10682,
-     "score": -2802.982,
+     "searchedOn": "16.3.11308",
+     "score": -2799.982,
      "best": {
       "done": 2803,
       "at": 600,
@@ -153,6 +188,7 @@
     {
      "seed": 22,
      "evaluations": 9651,
+     "searchedOn": "16.3.11308",
      "score": -3175.981,
      "best": {
       "done": 3176,
@@ -173,6 +209,7 @@
     {
      "seed": 33,
      "evaluations": 9791,
+     "searchedOn": "16.3.11308",
      "score": -3182.981,
      "best": {
       "done": 3183,
@@ -193,6 +230,7 @@
     {
      "seed": 11,
      "evaluations": 10297,
+     "searchedOn": "16.3.11308",
      "score": -3299.981,
      "best": {
       "done": 3300,
@@ -213,6 +251,7 @@
     {
      "seed": 11,
      "evaluations": 12073,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1424,
@@ -233,6 +272,7 @@
     {
      "seed": 22,
      "evaluations": 12523,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1412,
@@ -249,13 +289,85 @@
        1099
       ]
      }
+    },
+    {
+     "seed": 11,
+     "evaluations": 5251,
+     "searchedOn": "17.0.12260",
+     "score": null,
+     "best": {
+      "done": 1397,
+      "at": 600,
+      "line": 16,
+      "army": 16,
+      "armyValue": 3840,
+      "villagers": 37,
+      "population": 57,
+      "age": 2,
+      "ages": [
+       254,
+       716,
+       1202
+      ],
+      "firstUnit": 320,
+      "pop150": 1229,
+      "pop200": 1374
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 5537,
+     "searchedOn": "17.0.12260",
+     "score": null,
+     "best": {
+      "done": 1419,
+      "at": 600,
+      "line": 17,
+      "army": 17,
+      "armyValue": 4080,
+      "villagers": 37,
+      "population": 58,
+      "age": 2,
+      "ages": [
+       323,
+       770,
+       1134
+      ],
+      "firstUnit": 359,
+      "pop150": 1224,
+      "pop200": 1379
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 4918,
+     "searchedOn": "17.0.12260",
+     "score": null,
+     "best": {
+      "done": 1445,
+      "at": 600,
+      "line": 17,
+      "army": 17,
+      "armyValue": 4080,
+      "villagers": 37,
+      "population": 58,
+      "age": 2,
+      "ages": [
+       314,
+       789,
+       1107
+      ],
+      "firstUnit": 348,
+      "pop150": 1232,
+      "pop200": 1407
+     }
     }
    ]
   },
   {
    "id": "french-knights-15",
-   "evaluations": 6048,
-   "seconds": 161,
+   "evaluations": 7273,
+   "seconds": 177,
    "seed": 20261024,
    "objective": {
     "kind": "lineAt",
@@ -265,7 +377,7 @@
    },
    "threshold": 52,
    "best": {
-    "done": 1577,
+    "done": 1484,
     "at": 900,
     "line": 52,
     "army": 52,
@@ -275,18 +387,24 @@
     "age": 2,
     "ages": [
      352,
-     1058,
-     1332
-    ]
+     1274,
+     1414
+    ],
+    "firstUnit": 447,
+    "pop150": 1088,
+    "pop200": 1278
    },
    "runnersUp": [],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "17.0.12260",
    "searches": [
     {
      "seed": 20261024,
-     "evaluations": 6048,
-     "score": -1576.948,
+     "evaluations": 7273,
+     "searchedOn": "17.0.12260",
+     "score": -1483.948,
      "best": {
-      "done": 1577,
+      "done": 1484,
       "at": 900,
       "line": 52,
       "army": 52,
@@ -296,35 +414,91 @@
       "age": 2,
       "ages": [
        352,
-       1058,
-       1332
-      ]
+       1274,
+       1414
+      ],
+      "firstUnit": 447,
+      "pop150": 1088,
+      "pop200": 1278
      }
     },
     {
      "seed": 22,
-     "evaluations": 14493,
-     "score": -1587.948,
+     "evaluations": 4696,
+     "searchedOn": "17.0.12260",
+     "score": -1554.948,
      "best": {
-      "done": 1588,
+      "done": 1555,
       "at": 900,
       "line": 52,
       "army": 52,
       "armyValue": 12480,
-      "villagers": 56,
-      "population": 114,
+      "villagers": 50,
+      "population": 107,
       "age": 2,
       "ages": [
-       352,
-       1072,
-       1338
-      ]
+       345,
+       1176,
+       1292
+      ],
+      "firstUnit": 443,
+      "pop150": 1118,
+      "pop200": 1477
      }
     },
     {
-     "seed": 20261024,
-     "evaluations": 3525,
-     "score": -1958.947,
+     "seed": 33,
+     "evaluations": 5431,
+     "searchedOn": "17.0.12260",
+     "score": -1863.948,
+     "best": {
+      "done": 1864,
+      "at": 900,
+      "line": 52,
+      "army": 52,
+      "armyValue": 12480,
+      "villagers": 50,
+      "population": 108,
+      "age": 2,
+      "ages": [
+       352,
+       1026,
+       1439
+      ],
+      "firstUnit": 447,
+      "pop150": 1376,
+      "pop200": 1749
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 5592,
+     "searchedOn": "17.0.12260",
+     "score": -1864.948,
+     "best": {
+      "done": 1865,
+      "at": 900,
+      "line": 52,
+      "army": 52,
+      "armyValue": 12480,
+      "villagers": 50,
+      "population": 108,
+      "age": 2,
+      "ages": [
+       352,
+       1005,
+       1577
+      ],
+      "firstUnit": 446,
+      "pop150": 1417,
+      "pop200": 1763
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 10296,
+     "searchedOn": "16.3.11308",
+     "score": -1959.947,
      "best": {
       "done": 1959,
       "at": 900,
@@ -336,15 +510,16 @@
       "age": 2,
       "ages": [
        352,
-       1715,
-       1891
+       1726,
+       1867
       ]
      }
     },
     {
      "seed": 11,
-     "evaluations": 10296,
-     "score": -1958.947,
+     "evaluations": 11336,
+     "searchedOn": "16.3.11308",
+     "score": -1959.947,
      "best": {
       "done": 1959,
       "at": 900,
@@ -364,7 +539,8 @@
     {
      "seed": 22,
      "evaluations": 10858,
-     "score": -1958.947,
+     "searchedOn": "16.3.11308",
+     "score": -1961.947,
      "best": {
       "done": 1959,
       "at": 900,
@@ -377,26 +553,6 @@
       "ages": [
        352,
        1720,
-       1867
-      ]
-     }
-    },
-    {
-     "seed": 11,
-     "evaluations": 11336,
-     "score": -1958.947,
-     "best": {
-      "done": 1959,
-      "at": 900,
-      "line": 53,
-      "army": 53,
-      "armyValue": 12720,
-      "villagers": 50,
-      "population": 108,
-      "age": 2,
-      "ages": [
-       352,
-       1726,
        1867
       ]
      }
@@ -404,7 +560,8 @@
     {
      "seed": 22,
      "evaluations": 11895,
-     "score": -1958.947,
+     "searchedOn": "16.3.11308",
+     "score": -1961.947,
      "best": {
       "done": 1959,
       "at": 900,
@@ -422,8 +579,30 @@
      }
     },
     {
+     "seed": 20261024,
+     "evaluations": 3525,
+     "searchedOn": "16.3.11308",
+     "score": -1962.948,
+     "best": {
+      "done": 1959,
+      "at": 900,
+      "line": 53,
+      "army": 53,
+      "armyValue": 12720,
+      "villagers": 50,
+      "population": 108,
+      "age": 2,
+      "ages": [
+       352,
+       1715,
+       1891
+      ]
+     }
+    },
+    {
      "seed": 11,
      "evaluations": 13626,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1359,
@@ -442,8 +621,30 @@
      }
     },
     {
+     "seed": 22,
+     "evaluations": 14493,
+     "searchedOn": "16.3.11308",
+     "score": null,
+     "best": {
+      "done": 1588,
+      "at": 900,
+      "line": 52,
+      "army": 52,
+      "armyValue": 12480,
+      "villagers": 56,
+      "population": 114,
+      "age": 2,
+      "ages": [
+       352,
+       1072,
+       1338
+      ]
+     }
+    },
+    {
      "seed": 33,
      "evaluations": 12385,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1436,
@@ -462,8 +663,30 @@
      }
     },
     {
+     "seed": 20261024,
+     "evaluations": 6048,
+     "searchedOn": "16.3.11308",
+     "score": null,
+     "best": {
+      "done": 1577,
+      "at": 900,
+      "line": 52,
+      "army": 52,
+      "armyValue": 12480,
+      "villagers": 56,
+      "population": 114,
+      "age": 2,
+      "ages": [
+       352,
+       1058,
+       1332
+      ]
+     }
+    },
+    {
      "seed": 33,
      "evaluations": 10267,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1957,
@@ -484,6 +707,7 @@
     {
      "seed": 33,
      "evaluations": 11320,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1884,
@@ -505,8 +729,8 @@
   },
   {
    "id": "mongol-cavalry-10",
-   "evaluations": 5125,
-   "seconds": 122,
+   "evaluations": 6275,
+   "seconds": 160,
    "seed": 20261024,
    "objective": {
     "kind": "valueAt",
@@ -515,7 +739,7 @@
    },
    "threshold": 4910,
    "best": {
-    "done": 1377,
+    "done": 1375,
     "at": 600,
     "army": 42,
     "armyValue": 5040,
@@ -523,17 +747,92 @@
     "population": 80,
     "age": 1,
     "ages": [
-     717,
-     1024,
+     713,
+     995,
      1217
-    ]
+    ],
+    "firstUnit": 228,
+    "pop150": 1162,
+    "pop200": 1342
    },
    "runnersUp": [],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "17.0.12260",
    "searches": [
     {
      "seed": 20261024,
+     "evaluations": 6275,
+     "searchedOn": "17.0.12260",
+     "score": -1369.96,
+     "best": {
+      "done": 1375,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       713,
+       995,
+       1217
+      ],
+      "firstUnit": 228,
+      "pop150": 1162,
+      "pop200": 1342
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 5499,
+     "searchedOn": "17.0.12260",
+     "score": -1369.96,
+     "best": {
+      "done": 1375,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       713,
+       995,
+       1217
+      ],
+      "firstUnit": 228,
+      "pop150": 1162,
+      "pop200": 1342
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 6233,
+     "searchedOn": "17.0.12260",
+     "score": -1389.96,
+     "best": {
+      "done": 1395,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       717,
+       1000,
+       1241
+      ],
+      "firstUnit": 228,
+      "pop150": 1140,
+      "pop200": 1369
+     }
+    },
+    {
+     "seed": 20261024,
      "evaluations": 5125,
-     "score": -1371.96,
+     "searchedOn": "16.3.11308",
+     "score": -1390.96,
      "best": {
       "done": 1377,
       "at": 600,
@@ -550,47 +849,10 @@
      }
     },
     {
-     "seed": 22,
-     "evaluations": 11382,
-     "score": -1443.96,
-     "best": {
-      "done": 1449,
-      "at": 600,
-      "army": 42,
-      "armyValue": 5040,
-      "villagers": 34,
-      "population": 80,
-      "age": 1,
-      "ages": [
-       722,
-       1051,
-       1293
-      ]
-     }
-    },
-    {
-     "seed": 11,
-     "evaluations": 10262,
-     "score": -1446.96,
-     "best": {
-      "done": 1452,
-      "at": 600,
-      "army": 42,
-      "armyValue": 5040,
-      "villagers": 34,
-      "population": 80,
-      "age": 1,
-      "ages": [
-       722,
-       1048,
-       1292
-      ]
-     }
-    },
-    {
      "seed": 33,
      "evaluations": 11268,
-     "score": -1447.96,
+     "searchedOn": "16.3.11308",
+     "score": -1451.96,
      "best": {
       "done": 1453,
       "at": 600,
@@ -607,8 +869,49 @@
      }
     },
     {
+     "seed": 11,
+     "evaluations": 10262,
+     "searchedOn": "16.3.11308",
+     "score": -1460.96,
+     "best": {
+      "done": 1452,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       722,
+       1048,
+       1292
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 11382,
+     "searchedOn": "16.3.11308",
+     "score": -1467.96,
+     "best": {
+      "done": 1449,
+      "at": 600,
+      "army": 42,
+      "armyValue": 5040,
+      "villagers": 34,
+      "population": 80,
+      "age": 1,
+      "ages": [
+       722,
+       1051,
+       1293
+      ]
+     }
+    },
+    {
      "seed": 20261024,
      "evaluations": 4216,
+     "searchedOn": "16.3.11308",
      "score": -2162.84,
      "best": {
       "done": 2168,
@@ -628,6 +931,7 @@
     {
      "seed": 11,
      "evaluations": 13542,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1344,
@@ -647,6 +951,7 @@
     {
      "seed": 22,
      "evaluations": 14299,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1342,
@@ -666,6 +971,7 @@
     {
      "seed": 33,
      "evaluations": 12990,
+     "searchedOn": "16.3.11308",
      "score": null,
      "best": {
       "done": 1339,
@@ -681,47 +987,74 @@
        1163
       ]
      }
+    },
+    {
+     "seed": 22,
+     "evaluations": 5274,
+     "searchedOn": "17.0.12260",
+     "score": null,
+     "best": {
+      "done": 1331,
+      "at": 600,
+      "army": 40,
+      "armyValue": 4800,
+      "villagers": 34,
+      "population": 77,
+      "age": 1,
+      "ages": [
+       647,
+       967,
+       1145
+      ],
+      "firstUnit": 278,
+      "pop150": 1131,
+      "pop200": 1308
+     }
     }
    ]
   },
   {
    "id": "malian-cattle-boom",
-   "evaluations": 11894,
-   "seconds": 472,
-   "seed": 33,
+   "evaluations": 4887,
+   "seconds": 144,
+   "seed": 11,
    "objective": {
     "kind": "done"
    },
    "best": {
-    "done": 1124,
+    "done": 1120,
     "at": 900,
-    "army": 5,
-    "armyValue": 900,
-    "villagers": 102,
-    "population": 117,
+    "army": 6,
+    "armyValue": 1080,
+    "villagers": 100,
+    "population": 114,
     "age": 3,
     "ages": [
      360,
-     686,
-     927
-    ]
+     669,
+     908
+    ],
+    "firstUnit": 696,
+    "pop150": 988,
+    "pop200": 1093
    },
    "runnersUp": [
     {
      "params": {
+      "planId": "malian-cattle-boom",
       "lines": [
        "sofa"
       ],
-      "vilTarget": 150,
+      "vilTarget": 155,
       "landmarks": {
        "2": "mansa-quarry",
        "3": "grand-fulani-corral",
-       "4": "fort-of-the-huntress"
+       "4": "griot-bara"
       },
       "lmBuilders": {
        "2": 2,
-       "3": 7,
-       "4": 5
+       "3": 10,
+       "4": 10
       },
       "extraTCs": {
        "2": 2,
@@ -734,17 +1067,13 @@
        "3": 1,
        "4": 5
       },
-      "maxProducers": 10,
+      "maxProducers": 12,
       "ecoTechs": {
        "1": [
         "upgrade_unit_town_center_wheelbarrow_1"
        ],
-       "2": [
-        "upgrade_econ_resource_food_harvest_rate_2",
-        "upgrade_econ_resource_wood_harvest_rate_2",
-        "upgrade_econ_resource_gold_harvest_rate_2"
-       ],
-       "3": [],
+       "2": "all",
+       "3": "all",
        "4": []
       },
       "milTechAge": {
@@ -752,54 +1081,214 @@
        "3": true
       },
       "blacksmiths": 2,
-      "pauseForAge": true,
-      "window": 5,
-      "woodFloor": 0.2,
+      "pauseForAge": false,
+      "window": 4,
+      "woodFloor": 0.3,
       "goldBias": 1.6,
       "armyAge": 3,
       "cattle": {
        "ranches": {
-        "2": 6,
-        "3": 1,
-        "4": 4
+        "2": 5,
+        "3": 7,
+        "4": 6
        },
        "herdTarget": 0,
-       "age": 1
+       "age": 2
       },
       "mech": {
        "pitMines": 1
       }
      },
      "result": {
-      "done": 1124,
+      "done": 1120,
       "at": 900,
-      "army": 5,
-      "armyValue": 900,
-      "villagers": 102,
-      "population": 117,
+      "army": 6,
+      "armyValue": 1080,
+      "villagers": 99,
+      "population": 114,
       "age": 3,
       "ages": [
        360,
-       686,
-       927
-      ]
+       664,
+       908
+      ],
+      "firstUnit": 691,
+      "pop150": 988,
+      "pop200": 1093
      }
     },
     {
      "params": {
+      "planId": "malian-cattle-boom",
       "lines": [
        "sofa"
       ],
-      "vilTarget": 150,
+      "vilTarget": 155,
       "landmarks": {
        "2": "mansa-quarry",
        "3": "grand-fulani-corral",
-       "4": "fort-of-the-huntress"
+       "4": "griot-bara"
       },
       "lmBuilders": {
        "2": 2,
-       "3": 7,
+       "3": 12,
+       "4": 10
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 2
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 1,
+       "3": 1,
        "4": 5
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1"
+       ],
+       "2": "all",
+       "3": "all",
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": false,
+      "window": 4,
+      "woodFloor": 0.3,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "cattle": {
+       "ranches": {
+        "2": 5,
+        "3": 7,
+        "4": 6
+       },
+       "herdTarget": 0,
+       "age": 2
+      },
+      "mech": {
+       "pitMines": 1
+      }
+     },
+     "result": {
+      "done": 1120,
+      "at": 900,
+      "army": 6,
+      "armyValue": 1080,
+      "villagers": 99,
+      "population": 114,
+      "age": 3,
+      "ages": [
+       360,
+       657,
+       907
+      ],
+      "firstUnit": 684,
+      "pop150": 988,
+      "pop200": 1093
+     }
+    },
+    {
+     "params": {
+      "planId": "malian-cattle-boom",
+      "lines": [
+       "sofa"
+      ],
+      "vilTarget": 155,
+      "landmarks": {
+       "2": "mansa-quarry",
+       "3": "grand-fulani-corral",
+       "4": "griot-bara"
+      },
+      "lmBuilders": {
+       "2": 2,
+       "3": 9,
+       "4": 10
+      },
+      "extraTCs": {
+       "2": 2,
+       "3": 2
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 0,
+       "2": 0,
+       "3": 1,
+       "4": 5
+      },
+      "maxProducers": 12,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1"
+       ],
+       "2": "all",
+       "3": "all",
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 2,
+      "pauseForAge": false,
+      "window": 4,
+      "woodFloor": 0.3,
+      "goldBias": 1.6,
+      "armyAge": 3,
+      "cattle": {
+       "ranches": {
+        "2": 5,
+        "3": 7,
+        "4": 6
+       },
+       "herdTarget": 0,
+       "age": 2
+      },
+      "mech": {
+       "pitMines": 1
+      }
+     },
+     "result": {
+      "done": 1120,
+      "at": 900,
+      "army": 6,
+      "armyValue": 1080,
+      "villagers": 100,
+      "population": 114,
+      "age": 3,
+      "ages": [
+       360,
+       669,
+       908
+      ],
+      "firstUnit": 696,
+      "pop150": 988,
+      "pop200": 1093
+     }
+    },
+    {
+     "params": {
+      "planId": "malian-cattle-boom",
+      "lines": [
+       "sofa"
+      ],
+      "vilTarget": 155,
+      "landmarks": {
+       "2": "mansa-quarry",
+       "3": "grand-fulani-corral",
+       "4": "griot-bara"
+      },
+      "lmBuilders": {
+       "2": 2,
+       "3": 9,
+       "4": 10
       },
       "extraTCs": {
        "2": 2,
@@ -812,17 +1301,13 @@
        "3": 1,
        "4": 5
       },
-      "maxProducers": 10,
+      "maxProducers": 12,
       "ecoTechs": {
        "1": [
         "upgrade_unit_town_center_wheelbarrow_1"
        ],
-       "2": [
-        "upgrade_econ_resource_food_harvest_rate_2",
-        "upgrade_econ_resource_wood_harvest_rate_2",
-        "upgrade_econ_resource_gold_harvest_rate_2"
-       ],
-       "3": [],
+       "2": "all",
+       "3": "all",
        "4": []
       },
       "milTechAge": {
@@ -830,54 +1315,58 @@
        "3": true
       },
       "blacksmiths": 2,
-      "pauseForAge": true,
-      "window": 5,
-      "woodFloor": 0.2,
+      "pauseForAge": false,
+      "window": 4,
+      "woodFloor": 0.3,
       "goldBias": 1.6,
       "armyAge": 3,
       "cattle": {
        "ranches": {
-        "2": 6,
-        "3": 1,
-        "4": 4
+        "2": 5,
+        "3": 7,
+        "4": 6
        },
        "herdTarget": 0,
-       "age": 1
+       "age": 2
       },
       "mech": {
        "pitMines": 1
       }
      },
      "result": {
-      "done": 1124,
+      "done": 1120,
       "at": 900,
-      "army": 5,
-      "armyValue": 900,
-      "villagers": 102,
-      "population": 117,
+      "army": 6,
+      "armyValue": 1080,
+      "villagers": 100,
+      "population": 114,
       "age": 3,
       "ages": [
        360,
-       686,
-       927
-      ]
+       669,
+       908
+      ],
+      "firstUnit": 696,
+      "pop150": 988,
+      "pop200": 1093
      }
     },
     {
      "params": {
+      "planId": "malian-cattle-boom",
       "lines": [
        "sofa"
       ],
-      "vilTarget": 150,
+      "vilTarget": 155,
       "landmarks": {
        "2": "mansa-quarry",
        "3": "grand-fulani-corral",
-       "4": "fort-of-the-huntress"
+       "4": "griot-bara"
       },
       "lmBuilders": {
        "2": 2,
-       "3": 7,
-       "4": 5
+       "3": 9,
+       "4": 10
       },
       "extraTCs": {
        "2": 2,
@@ -890,17 +1379,13 @@
        "3": 1,
        "4": 5
       },
-      "maxProducers": 10,
+      "maxProducers": 12,
       "ecoTechs": {
        "1": [
         "upgrade_unit_town_center_wheelbarrow_1"
        ],
-       "2": [
-        "upgrade_econ_resource_food_harvest_rate_2",
-        "upgrade_econ_resource_wood_harvest_rate_2",
-        "upgrade_econ_resource_gold_harvest_rate_2"
-       ],
-       "3": [],
+       "2": "all",
+       "3": "all",
        "4": []
       },
       "milTechAge": {
@@ -908,201 +1393,74 @@
        "3": true
       },
       "blacksmiths": 2,
-      "pauseForAge": true,
-      "window": 5,
-      "woodFloor": 0.2,
+      "pauseForAge": false,
+      "window": 4,
+      "woodFloor": 0.3,
       "goldBias": 1.6,
       "armyAge": 3,
       "cattle": {
        "ranches": {
-        "2": 6,
-        "3": 1,
-        "4": 4
+        "2": 5,
+        "3": 7,
+        "4": 6
        },
        "herdTarget": 0,
-       "age": 1
+       "age": 2
       },
       "mech": {
        "pitMines": 1
       }
      },
      "result": {
-      "done": 1124,
+      "done": 1120,
       "at": 900,
-      "army": 5,
-      "armyValue": 900,
-      "villagers": 102,
-      "population": 117,
+      "army": 6,
+      "armyValue": 1080,
+      "villagers": 100,
+      "population": 114,
       "age": 3,
       "ages": [
        360,
-       686,
-       927
-      ]
-     }
-    },
-    {
-     "params": {
-      "lines": [
-       "sofa"
+       669,
+       908
       ],
-      "vilTarget": 150,
-      "landmarks": {
-       "2": "mansa-quarry",
-       "3": "grand-fulani-corral",
-       "4": "fort-of-the-huntress"
-      },
-      "lmBuilders": {
-       "2": 2,
-       "3": 7,
-       "4": 5
-      },
-      "extraTCs": {
-       "2": 2,
-       "3": 2
-      },
-      "tcBuilders": 10,
-      "producers": {
-       "1": 0,
-       "2": 4,
-       "3": 1,
-       "4": 5
-      },
-      "maxProducers": 10,
-      "ecoTechs": {
-       "1": [
-        "upgrade_unit_town_center_wheelbarrow_1"
-       ],
-       "2": [
-        "upgrade_econ_resource_food_harvest_rate_2",
-        "upgrade_econ_resource_wood_harvest_rate_2",
-        "upgrade_econ_resource_gold_harvest_rate_2"
-       ],
-       "3": [],
-       "4": []
-      },
-      "milTechAge": {
-       "2": false,
-       "3": true
-      },
-      "blacksmiths": 2,
-      "pauseForAge": true,
-      "window": 5,
-      "woodFloor": 0.2,
-      "goldBias": 1.6,
-      "armyAge": 3,
-      "cattle": {
-       "ranches": {
-        "2": 6,
-        "3": 1,
-        "4": 4
-       },
-       "herdTarget": 0,
-       "age": 1
-      },
-      "mech": {
-       "pitMines": 1
-      }
-     },
-     "result": {
-      "done": 1124,
-      "at": 900,
-      "army": 5,
-      "armyValue": 900,
-      "villagers": 102,
-      "population": 117,
-      "age": 3,
-      "ages": [
-       360,
-       686,
-       927
-      ]
-     }
-    },
-    {
-     "params": {
-      "lines": [
-       "sofa"
-      ],
-      "vilTarget": 150,
-      "landmarks": {
-       "2": "mansa-quarry",
-       "3": "grand-fulani-corral",
-       "4": "fort-of-the-huntress"
-      },
-      "lmBuilders": {
-       "2": 2,
-       "3": 7,
-       "4": 5
-      },
-      "extraTCs": {
-       "2": 2,
-       "3": 2
-      },
-      "tcBuilders": 10,
-      "producers": {
-       "1": 0,
-       "2": 5,
-       "3": 1,
-       "4": 5
-      },
-      "maxProducers": 10,
-      "ecoTechs": {
-       "1": [
-        "upgrade_unit_town_center_wheelbarrow_1"
-       ],
-       "2": [
-        "upgrade_econ_resource_food_harvest_rate_2",
-        "upgrade_econ_resource_wood_harvest_rate_2",
-        "upgrade_econ_resource_gold_harvest_rate_2"
-       ],
-       "3": [],
-       "4": []
-      },
-      "milTechAge": {
-       "2": false,
-       "3": true
-      },
-      "blacksmiths": 2,
-      "pauseForAge": true,
-      "window": 5,
-      "woodFloor": 0.2,
-      "goldBias": 1.6,
-      "armyAge": 3,
-      "cattle": {
-       "ranches": {
-        "2": 6,
-        "3": 1,
-        "4": 4
-       },
-       "herdTarget": 0,
-       "age": 1
-      },
-      "mech": {
-       "pitMines": 1
-      }
-     },
-     "result": {
-      "done": 1124,
-      "at": 900,
-      "army": 5,
-      "armyValue": 900,
-      "villagers": 102,
-      "population": 117,
-      "age": 3,
-      "ages": [
-       360,
-       686,
-       927
-      ]
+      "firstUnit": 696,
+      "pop150": 988,
+      "pop200": 1093
      }
     }
    ],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "17.0.12260",
    "searches": [
+    {
+     "seed": 11,
+     "evaluations": 4887,
+     "searchedOn": "17.0.12260",
+     "score": -1119998.92,
+     "best": {
+      "done": 1120,
+      "at": 900,
+      "army": 6,
+      "armyValue": 1080,
+      "villagers": 100,
+      "population": 114,
+      "age": 3,
+      "ages": [
+       360,
+       669,
+       908
+      ],
+      "firstUnit": 696,
+      "pop150": 988,
+      "pop200": 1093
+     }
+    },
     {
      "seed": 33,
      "evaluations": 11894,
-     "score": -1123999.1,
+     "searchedOn": "16.3.11308",
+     "score": -1142999.1,
      "best": {
       "done": 1124,
       "at": 900,
@@ -1121,7 +1479,8 @@
     {
      "seed": 11,
      "evaluations": 11531,
-     "score": -1134998.74,
+     "searchedOn": "16.3.11308",
+     "score": -1144998.92,
      "best": {
       "done": 1135,
       "at": 900,
@@ -1138,28 +1497,10 @@
      }
     },
     {
-     "seed": 20261024,
-     "evaluations": 4029,
-     "score": -1135998.2,
-     "best": {
-      "done": 1136,
-      "at": 900,
-      "army": 10,
-      "armyValue": 1800,
-      "villagers": 93,
-      "population": 111,
-      "age": 4,
-      "ages": [
-       360,
-       723,
-       879
-      ]
-     }
-    },
-    {
      "seed": 22,
      "evaluations": 11563,
-     "score": -1138997.12,
+     "searchedOn": "16.3.11308",
+     "score": -1148997.12,
      "best": {
       "done": 1139,
       "at": 900,
@@ -1178,7 +1519,8 @@
     {
      "seed": 22,
      "evaluations": 11238,
-     "score": -1138997.12,
+     "searchedOn": "16.3.11308",
+     "score": -1148997.12,
      "best": {
       "done": 1139,
       "at": 900,
@@ -1195,9 +1537,53 @@
      }
     },
     {
+     "seed": 20261024,
+     "evaluations": 4029,
+     "searchedOn": "16.3.11308",
+     "score": -1150998.02,
+     "best": {
+      "done": 1136,
+      "at": 900,
+      "army": 10,
+      "armyValue": 1800,
+      "villagers": 93,
+      "population": 111,
+      "age": 4,
+      "ages": [
+       360,
+       723,
+       879
+      ]
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 3660,
+     "searchedOn": "17.0.12260",
+     "score": -1159997.12,
+     "best": {
+      "done": 1160,
+      "at": 900,
+      "army": 16,
+      "armyValue": 2880,
+      "villagers": 95,
+      "population": 120,
+      "age": 3,
+      "ages": [
+       360,
+       772,
+       944
+      ],
+      "firstUnit": 799,
+      "pop150": 993,
+      "pop200": 1140
+     }
+    },
+    {
      "seed": 11,
      "evaluations": 11619,
-     "score": -1146997.66,
+     "searchedOn": "16.3.11308",
+     "score": -1159997.84,
      "best": {
       "done": 1147,
       "at": 900,
@@ -1215,8 +1601,32 @@
     },
     {
      "seed": 33,
+     "evaluations": 3411,
+     "searchedOn": "17.0.12260",
+     "score": -1163998.92,
+     "best": {
+      "done": 1164,
+      "at": 900,
+      "army": 6,
+      "armyValue": 1080,
+      "villagers": 94,
+      "population": 106,
+      "age": 4,
+      "ages": [
+       371,
+       692,
+       885
+      ],
+      "firstUnit": 719,
+      "pop150": 1025,
+      "pop200": 1135
+     }
+    },
+    {
+     "seed": 33,
      "evaluations": 11381,
-     "score": -1148998.02,
+     "searchedOn": "16.3.11308",
+     "score": -1187998.2,
      "best": {
       "done": 1149,
       "at": 900,
@@ -1647,11 +2057,14 @@
      }
     }
    ],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "16.3.11308",
    "searches": [
     {
      "seed": 33,
      "evaluations": 10851,
-     "score": -1057997.84,
+     "searchedOn": "16.3.11308",
+     "score": -1060997.84,
      "best": {
       "done": 1058,
       "at": 900,
@@ -1668,9 +2081,33 @@
      }
     },
     {
+     "seed": 33,
+     "evaluations": 4397,
+     "searchedOn": "17.0.12260",
+     "score": -1067998.72,
+     "best": {
+      "done": 1068,
+      "at": 900,
+      "army": 16,
+      "armyValue": 1280,
+      "villagers": 104,
+      "population": 128,
+      "age": 4,
+      "ages": [
+       329,
+       657,
+       857
+      ],
+      "firstUnit": 734,
+      "pop150": 951,
+      "pop200": 1048
+     }
+    },
+    {
      "seed": 22,
      "evaluations": 12044,
-     "score": -1061997.44,
+     "searchedOn": "16.3.11308",
+     "score": -1070997.44,
      "best": {
       "done": 1062,
       "at": 900,
@@ -1689,7 +2126,8 @@
     {
      "seed": 22,
      "evaluations": 11004,
-     "score": -1067997.44,
+     "searchedOn": "16.3.11308",
+     "score": -1070997.44,
      "best": {
       "done": 1068,
       "at": 900,
@@ -1708,7 +2146,8 @@
     {
      "seed": 20261024,
      "evaluations": 4088,
-     "score": -1067997.84,
+     "searchedOn": "16.3.11308",
+     "score": -1072997.92,
      "best": {
       "done": 1068,
       "at": 900,
@@ -1725,9 +2164,33 @@
      }
     },
     {
+     "seed": 22,
+     "evaluations": 3680,
+     "searchedOn": "17.0.12260",
+     "score": -1072998.64,
+     "best": {
+      "done": 1073,
+      "at": 900,
+      "army": 17,
+      "armyValue": 1360,
+      "villagers": 103,
+      "population": 128,
+      "age": 4,
+      "ages": [
+       329,
+       671,
+       834
+      ],
+      "firstUnit": 788,
+      "pop150": 959,
+      "pop200": 1057
+     }
+    },
+    {
      "seed": 33,
      "evaluations": 10711,
-     "score": -1067998,
+     "searchedOn": "16.3.11308",
+     "score": -1073998,
      "best": {
       "done": 1068,
       "at": 900,
@@ -1745,27 +2208,32 @@
     },
     {
      "seed": 11,
-     "evaluations": 10266,
-     "score": -1068998.16,
+     "evaluations": 3357,
+     "searchedOn": "17.0.12260",
+     "score": -1080997.84,
      "best": {
-      "done": 1069,
+      "done": 1081,
       "at": 900,
-      "army": 23,
-      "armyValue": 1840,
-      "villagers": 105,
-      "population": 135,
+      "army": 27,
+      "armyValue": 2160,
+      "villagers": 96,
+      "population": 129,
       "age": 4,
       "ages": [
-       327,
-       651,
-       878
-      ]
+       282,
+       621,
+       852
+      ],
+      "firstUnit": 617,
+      "pop150": 958,
+      "pop200": 1064
      }
     },
     {
      "seed": 11,
      "evaluations": 10805,
-     "score": -1070998.32,
+     "searchedOn": "16.3.11308",
+     "score": -1085998.64,
      "best": {
       "done": 1071,
       "at": 900,
@@ -1778,6 +2246,26 @@
        314,
        697,
        851
+      ]
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 10266,
+     "searchedOn": "16.3.11308",
+     "score": -1281000,
+     "best": {
+      "done": 1069,
+      "at": 900,
+      "army": 23,
+      "armyValue": 1840,
+      "villagers": 105,
+      "population": 135,
+      "age": 4,
+      "ages": [
+       327,
+       651,
+       878
       ]
      }
     }
@@ -2833,10 +3321,13 @@
      }
     }
    ],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "17.0-preview",
    "searches": [
     {
      "seed": 11,
      "evaluations": 5507,
+     "searchedOn": "17.0-preview",
      "score": -1836696,
      "best": {
       "done": 1696,
@@ -2937,6 +3428,7 @@
     {
      "seed": 22,
      "evaluations": 4275,
+     "searchedOn": "17.0-preview",
      "score": -1849690,
      "best": {
       "done": 1690,
@@ -3941,10 +4433,13 @@
      }
     }
    ],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "17.0-preview",
    "searches": [
     {
      "seed": 11,
      "evaluations": 5165,
+     "searchedOn": "17.0-preview",
      "score": -1770584,
      "best": {
       "done": 1584,
@@ -4025,6 +4520,7 @@
     {
      "seed": 22,
      "evaluations": 4172,
+     "searchedOn": "17.0-preview",
      "score": -1782587,
      "best": {
       "done": 1587,
@@ -4106,32 +4602,32 @@
   },
   {
    "id": "vikings-feudal-melee",
-   "evaluations": 4328,
-   "seconds": 125,
+   "evaluations": 4622,
+   "seconds": 200,
    "seed": 22,
    "objective": {
     "kind": "done"
    },
    "best": {
-    "done": 1749,
+    "done": 1913,
     "at": 900,
-    "army": 88,
-    "armyValue": 10940,
-    "villagers": 62,
-    "population": 158,
+    "army": 93,
+    "armyValue": 11570,
+    "villagers": 64,
+    "population": 164,
     "age": 2,
     "ages": [
-     502,
-     1034,
-     1162
+     419,
+     1177,
+     1225
     ],
-    "firstUnit": 517,
-    "pop150": 878,
-    "pop200": 1035,
+    "firstUnit": 434,
+    "pop150": 855,
+    "pop200": 1042,
     "mixGap": 0.002,
-    "pop200Age": "Castle Age",
-    "castle": 1034,
-    "imperial": 1162,
+    "pop200Age": "Feudal Age",
+    "castle": 1177,
+    "imperial": 1225,
     "longhouses": 8,
     "attachments": {
      "bee": 6,
@@ -4141,50 +4637,50 @@
     },
     "villagerCapacity": 90,
     "sagas": [
-     "falkr",
      "ulfr",
+     "falkr",
      "jofurr"
     ],
     "groveBerserkers": 0,
     "shieldMaidens": 0,
     "armyAt": {
      "600": {
-      "villagers": 34,
-      "army": 13,
+      "villagers": 37,
+      "army": 24,
       "byLine": {
-       "bondi": 4,
-       "berserker": 4,
-       "hirdman": 5
+       "bondi": 8,
+       "berserker": 7,
+       "hirdman": 9
       },
-      "pop": 54
+      "pop": 68
      },
      "900": {
-      "villagers": 62,
-      "army": 88,
+      "villagers": 64,
+      "army": 93,
       "byLine": {
-       "bondi": 27,
-       "berserker": 26,
-       "hirdman": 35
+       "bondi": 28,
+       "berserker": 28,
+       "hirdman": 37
       },
-      "pop": 158
+      "pop": 164
      },
      "1200": {
-      "villagers": 76,
-      "army": 123,
+      "villagers": 72,
+      "army": 127,
       "byLine": {
-       "bondi": 37,
-       "berserker": 37,
-       "hirdman": 49
+       "bondi": 38,
+       "berserker": 38,
+       "hirdman": 51
       },
       "pop": 200
      },
      "1500": {
-      "villagers": 76,
-      "army": 123,
+      "villagers": 72,
+      "army": 127,
       "byLine": {
-       "bondi": 37,
-       "berserker": 37,
-       "hirdman": 49
+       "bondi": 38,
+       "berserker": 38,
+       "hirdman": 51
       },
       "pop": 200
      }
@@ -4211,8 +4707,8 @@
       "armyAge": 2,
       "mech": {
        "lh": {
-        "1": 6,
-        "2": 0,
+        "1": 3,
+        "2": 3,
         "3": 0,
         "4": 0
        },
@@ -4221,17 +4717,17 @@
         "bee",
         "bee",
         "bee",
-        "bee",
-        "bee",
         "smithy",
-        "loom"
+        "loom",
+        "bee",
+        "bee"
        ],
        "gullinnMinPop": 0,
        "groves": 0,
        "kongensLonghouses": 0,
-       "callMaidens": false,
+       "callMaidens": true,
        "lhLead": 99,
-       "lhBuilders": 2,
+       "lhBuilders": 1,
        "longhouseBondi": false,
        "openWood": true,
        "reserveWood": true,
@@ -4245,14 +4741,14 @@
       },
       "lmBuilders": {
        "2": 2,
-       "3": 6,
+       "3": 1,
        "4": 14
       },
       "tcBuilders": 10,
       "producers": {
        "1": 1,
        "2": 4,
-       "3": 5,
+       "3": 6,
        "4": 2
       },
       "maxProducers": 6,
@@ -4269,35 +4765,35 @@
        "4": []
       },
       "milTechAge": {
-       "2": true,
+       "2": false,
        "3": true
       },
       "blacksmiths": 1,
       "pauseForAge": false,
       "window": 4,
       "woodFloor": 0.3,
-      "goldBias": 1.4
+      "goldBias": 0.8
      },
      "result": {
-      "done": 1749,
+      "done": 1913,
       "at": 900,
-      "army": 88,
-      "armyValue": 10940,
-      "villagers": 62,
-      "population": 158,
+      "army": 93,
+      "armyValue": 11570,
+      "villagers": 64,
+      "population": 164,
       "age": 2,
       "ages": [
-       502,
-       1034,
-       1162
+       419,
+       1177,
+       1225
       ],
-      "firstUnit": 517,
-      "pop150": 878,
-      "pop200": 1035,
+      "firstUnit": 434,
+      "pop150": 855,
+      "pop200": 1042,
       "mixGap": 0.002,
-      "pop200Age": "Castle Age",
-      "castle": 1034,
-      "imperial": 1162,
+      "pop200Age": "Feudal Age",
+      "castle": 1177,
+      "imperial": 1225,
       "longhouses": 8,
       "attachments": {
        "bee": 6,
@@ -4307,50 +4803,50 @@
       },
       "villagerCapacity": 90,
       "sagas": [
-       "falkr",
        "ulfr",
+       "falkr",
        "jofurr"
       ],
       "groveBerserkers": 0,
       "shieldMaidens": 0,
       "armyAt": {
        "600": {
-        "villagers": 34,
-        "army": 13,
+        "villagers": 37,
+        "army": 24,
         "byLine": {
-         "bondi": 4,
-         "berserker": 4,
-         "hirdman": 5
+         "bondi": 8,
+         "berserker": 7,
+         "hirdman": 9
         },
-        "pop": 54
+        "pop": 68
        },
        "900": {
-        "villagers": 62,
-        "army": 88,
+        "villagers": 64,
+        "army": 93,
         "byLine": {
-         "bondi": 27,
-         "berserker": 26,
-         "hirdman": 35
+         "bondi": 28,
+         "berserker": 28,
+         "hirdman": 37
         },
-        "pop": 158
+        "pop": 164
        },
        "1200": {
-        "villagers": 76,
-        "army": 123,
+        "villagers": 72,
+        "army": 127,
         "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
         },
         "pop": 200
        },
        "1500": {
-        "villagers": 76,
-        "army": 123,
+        "villagers": 72,
+        "army": 127,
         "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
         },
         "pop": 200
        }
@@ -4377,184 +4873,18 @@
       "armyAge": 2,
       "mech": {
        "lh": {
-        "1": 6,
-        "2": 0,
+        "1": 3,
+        "2": 3,
         "3": 0,
         "4": 0
        },
        "attach": [
         "bee",
         "bee",
-        "bee",
-        "bee",
-        "bee",
-        "bee",
-        "loom",
-        "smithy"
-       ],
-       "gullinnMinPop": 0,
-       "groves": 0,
-       "kongensLonghouses": 0,
-       "callMaidens": false,
-       "lhLead": 99,
-       "lhBuilders": 2,
-       "longhouseBondi": false,
-       "openWood": true,
-       "reserveWood": true,
-       "callMaidensAt": 8
-      },
-      "vilTarget": 90,
-      "landmarks": {
-       "2": "baugr-fort",
-       "3": "valdemar-castle",
-       "4": "kongens-dor-cathedral"
-      },
-      "lmBuilders": {
-       "2": 2,
-       "3": 6,
-       "4": 14
-      },
-      "tcBuilders": 10,
-      "producers": {
-       "1": 1,
-       "2": 4,
-       "3": 5,
-       "4": 2
-      },
-      "maxProducers": 6,
-      "ecoTechs": {
-       "1": [
-        "upgrade_unit_town_center_wheelbarrow_1__vikings"
-       ],
-       "2": [
-        "upgrade_econ_resource_food_harvest_rate_2__vikings",
-        "upgrade_econ_resource_wood_harvest_rate_2__vikings",
-        "upgrade_econ_resource_gold_harvest_rate_2__vikings"
-       ],
-       "3": "all",
-       "4": []
-      },
-      "milTechAge": {
-       "2": true,
-       "3": true
-      },
-      "blacksmiths": 1,
-      "pauseForAge": false,
-      "window": 4,
-      "woodFloor": 0.3,
-      "goldBias": 1.4
-     },
-     "result": {
-      "done": 1749,
-      "at": 900,
-      "army": 88,
-      "armyValue": 10940,
-      "villagers": 62,
-      "population": 158,
-      "age": 2,
-      "ages": [
-       502,
-       1034,
-       1162
-      ],
-      "firstUnit": 517,
-      "pop150": 878,
-      "pop200": 1035,
-      "mixGap": 0.002,
-      "pop200Age": "Castle Age",
-      "castle": 1034,
-      "imperial": 1162,
-      "longhouses": 8,
-      "attachments": {
-       "bee": 6,
-       "farm": 0,
-       "smithy": 1,
-       "loom": 1
-      },
-      "villagerCapacity": 90,
-      "sagas": [
-       "falkr",
-       "ulfr",
-       "jofurr"
-      ],
-      "groveBerserkers": 0,
-      "shieldMaidens": 0,
-      "armyAt": {
-       "600": {
-        "villagers": 34,
-        "army": 13,
-        "byLine": {
-         "bondi": 4,
-         "berserker": 4,
-         "hirdman": 5
-        },
-        "pop": 54
-       },
-       "900": {
-        "villagers": 62,
-        "army": 88,
-        "byLine": {
-         "bondi": 27,
-         "berserker": 26,
-         "hirdman": 35
-        },
-        "pop": 158
-       },
-       "1200": {
-        "villagers": 76,
-        "army": 123,
-        "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
-        },
-        "pop": 200
-       },
-       "1500": {
-        "villagers": 76,
-        "army": 123,
-        "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
-        },
-        "pop": 200
-       }
-      }
-     }
-    },
-    {
-     "params": {
-      "planId": "vikings-feudal-melee",
-      "lines": [
-       "bondi",
-       "berserker",
-       "hirdman"
-      ],
-      "lineMix": {
-       "hirdman": 0.4,
-       "bondi": 0.3,
-       "berserker": 0.3
-      },
-      "extraTCs": {
-       "2": 1,
-       "3": 0
-      },
-      "armyAge": 2,
-      "mech": {
-       "lh": {
-        "1": 6,
-        "2": 0,
-        "3": 0,
-        "4": 0
-       },
-       "attach": [
         "bee",
         "bee",
         "smithy",
         "loom",
-        "bee",
-        "bee",
         "bee",
         "bee"
        ],
@@ -4563,11 +4893,11 @@
        "kongensLonghouses": 0,
        "callMaidens": false,
        "lhLead": 99,
-       "lhBuilders": 2,
+       "lhBuilders": 1,
        "longhouseBondi": false,
        "openWood": true,
        "reserveWood": true,
-       "callMaidensAt": 8
+       "callMaidensAt": 4
       },
       "vilTarget": 90,
       "landmarks": {
@@ -4577,14 +4907,14 @@
       },
       "lmBuilders": {
        "2": 2,
-       "3": 6,
+       "3": 1,
        "4": 14
       },
       "tcBuilders": 10,
       "producers": {
        "1": 1,
        "2": 4,
-       "3": 5,
+       "3": 6,
        "4": 2
       },
       "maxProducers": 6,
@@ -4601,35 +4931,35 @@
        "4": []
       },
       "milTechAge": {
-       "2": true,
+       "2": false,
        "3": true
       },
       "blacksmiths": 1,
       "pauseForAge": false,
       "window": 4,
       "woodFloor": 0.3,
-      "goldBias": 1.4
+      "goldBias": 0.8
      },
      "result": {
-      "done": 1749,
+      "done": 1913,
       "at": 900,
-      "army": 88,
-      "armyValue": 10940,
-      "villagers": 62,
-      "population": 158,
+      "army": 93,
+      "armyValue": 11570,
+      "villagers": 64,
+      "population": 164,
       "age": 2,
       "ages": [
-       502,
-       1034,
-       1162
+       419,
+       1177,
+       1225
       ],
-      "firstUnit": 517,
-      "pop150": 878,
-      "pop200": 1035,
+      "firstUnit": 434,
+      "pop150": 855,
+      "pop200": 1042,
       "mixGap": 0.002,
-      "pop200Age": "Castle Age",
-      "castle": 1034,
-      "imperial": 1162,
+      "pop200Age": "Feudal Age",
+      "castle": 1177,
+      "imperial": 1225,
       "longhouses": 8,
       "attachments": {
        "bee": 6,
@@ -4639,50 +4969,50 @@
       },
       "villagerCapacity": 90,
       "sagas": [
-       "falkr",
        "ulfr",
+       "falkr",
        "jofurr"
       ],
       "groveBerserkers": 0,
       "shieldMaidens": 0,
       "armyAt": {
        "600": {
-        "villagers": 34,
-        "army": 13,
+        "villagers": 37,
+        "army": 24,
         "byLine": {
-         "bondi": 4,
-         "berserker": 4,
-         "hirdman": 5
+         "bondi": 8,
+         "berserker": 7,
+         "hirdman": 9
         },
-        "pop": 54
+        "pop": 68
        },
        "900": {
-        "villagers": 62,
-        "army": 88,
+        "villagers": 64,
+        "army": 93,
         "byLine": {
-         "bondi": 27,
-         "berserker": 26,
-         "hirdman": 35
+         "bondi": 28,
+         "berserker": 28,
+         "hirdman": 37
         },
-        "pop": 158
+        "pop": 164
        },
        "1200": {
-        "villagers": 76,
-        "army": 123,
+        "villagers": 72,
+        "army": 127,
         "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
         },
         "pop": 200
        },
        "1500": {
-        "villagers": 76,
-        "army": 123,
+        "villagers": 72,
+        "army": 127,
         "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
         },
         "pop": 200
        }
@@ -4709,18 +5039,18 @@
       "armyAge": 2,
       "mech": {
        "lh": {
-        "1": 6,
-        "2": 0,
+        "1": 3,
+        "2": 3,
         "3": 0,
         "4": 0
        },
        "attach": [
+        "bee",
+        "bee",
+        "bee",
+        "bee",
         "smithy",
         "loom",
-        "bee",
-        "bee",
-        "bee",
-        "bee",
         "bee",
         "bee"
        ],
@@ -4729,11 +5059,11 @@
        "kongensLonghouses": 0,
        "callMaidens": false,
        "lhLead": 99,
-       "lhBuilders": 2,
+       "lhBuilders": 1,
        "longhouseBondi": false,
        "openWood": true,
        "reserveWood": true,
-       "callMaidensAt": 8
+       "callMaidensAt": 6
       },
       "vilTarget": 90,
       "landmarks": {
@@ -4743,14 +5073,14 @@
       },
       "lmBuilders": {
        "2": 2,
-       "3": 6,
+       "3": 1,
        "4": 14
       },
       "tcBuilders": 10,
       "producers": {
        "1": 1,
        "2": 4,
-       "3": 5,
+       "3": 6,
        "4": 2
       },
       "maxProducers": 6,
@@ -4767,35 +5097,35 @@
        "4": []
       },
       "milTechAge": {
-       "2": true,
+       "2": false,
        "3": true
       },
       "blacksmiths": 1,
       "pauseForAge": false,
       "window": 4,
       "woodFloor": 0.3,
-      "goldBias": 1.4
+      "goldBias": 0.8
      },
      "result": {
-      "done": 1749,
+      "done": 1913,
       "at": 900,
-      "army": 88,
-      "armyValue": 10940,
-      "villagers": 62,
-      "population": 158,
+      "army": 93,
+      "armyValue": 11570,
+      "villagers": 64,
+      "population": 164,
       "age": 2,
       "ages": [
-       502,
-       1034,
-       1162
+       419,
+       1177,
+       1225
       ],
-      "firstUnit": 517,
-      "pop150": 878,
-      "pop200": 1035,
+      "firstUnit": 434,
+      "pop150": 855,
+      "pop200": 1042,
       "mixGap": 0.002,
-      "pop200Age": "Castle Age",
-      "castle": 1034,
-      "imperial": 1162,
+      "pop200Age": "Feudal Age",
+      "castle": 1177,
+      "imperial": 1225,
       "longhouses": 8,
       "attachments": {
        "bee": 6,
@@ -4805,50 +5135,50 @@
       },
       "villagerCapacity": 90,
       "sagas": [
-       "falkr",
        "ulfr",
+       "falkr",
        "jofurr"
       ],
       "groveBerserkers": 0,
       "shieldMaidens": 0,
       "armyAt": {
        "600": {
-        "villagers": 34,
-        "army": 13,
+        "villagers": 37,
+        "army": 24,
         "byLine": {
-         "bondi": 4,
-         "berserker": 4,
-         "hirdman": 5
+         "bondi": 8,
+         "berserker": 7,
+         "hirdman": 9
         },
-        "pop": 54
+        "pop": 68
        },
        "900": {
-        "villagers": 62,
-        "army": 88,
+        "villagers": 64,
+        "army": 93,
         "byLine": {
-         "bondi": 27,
-         "berserker": 26,
-         "hirdman": 35
+         "bondi": 28,
+         "berserker": 28,
+         "hirdman": 37
         },
-        "pop": 158
+        "pop": 164
        },
        "1200": {
-        "villagers": 76,
-        "army": 123,
+        "villagers": 72,
+        "army": 127,
         "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
         },
         "pop": 200
        },
        "1500": {
-        "villagers": 76,
-        "army": 123,
+        "villagers": 72,
+        "army": 127,
         "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
         },
         "pop": 200
        }
@@ -4875,8 +5205,8 @@
       "armyAge": 2,
       "mech": {
        "lh": {
-        "1": 6,
-        "2": 0,
+        "1": 3,
+        "2": 3,
         "3": 0,
         "4": 0
        },
@@ -4885,21 +5215,21 @@
         "bee",
         "bee",
         "bee",
-        "bee",
         "smithy",
+        "loom",
         "bee",
-        "loom"
+        "bee"
        ],
        "gullinnMinPop": 0,
        "groves": 0,
        "kongensLonghouses": 0,
        "callMaidens": false,
        "lhLead": 99,
-       "lhBuilders": 2,
+       "lhBuilders": 1,
        "longhouseBondi": false,
        "openWood": true,
        "reserveWood": true,
-       "callMaidensAt": 8
+       "callMaidensAt": 10
       },
       "vilTarget": 90,
       "landmarks": {
@@ -4909,14 +5239,14 @@
       },
       "lmBuilders": {
        "2": 2,
-       "3": 6,
+       "3": 1,
        "4": 14
       },
       "tcBuilders": 10,
       "producers": {
        "1": 1,
        "2": 4,
-       "3": 5,
+       "3": 6,
        "4": 2
       },
       "maxProducers": 6,
@@ -4933,35 +5263,35 @@
        "4": []
       },
       "milTechAge": {
-       "2": true,
+       "2": false,
        "3": true
       },
       "blacksmiths": 1,
       "pauseForAge": false,
       "window": 4,
       "woodFloor": 0.3,
-      "goldBias": 1.4
+      "goldBias": 0.8
      },
      "result": {
-      "done": 1749,
+      "done": 1913,
       "at": 900,
-      "army": 88,
-      "armyValue": 10940,
-      "villagers": 62,
-      "population": 158,
+      "army": 93,
+      "armyValue": 11570,
+      "villagers": 64,
+      "population": 164,
       "age": 2,
       "ages": [
-       502,
-       1034,
-       1162
+       419,
+       1177,
+       1225
       ],
-      "firstUnit": 517,
-      "pop150": 878,
-      "pop200": 1035,
+      "firstUnit": 434,
+      "pop150": 855,
+      "pop200": 1042,
       "mixGap": 0.002,
-      "pop200Age": "Castle Age",
-      "castle": 1034,
-      "imperial": 1162,
+      "pop200Age": "Feudal Age",
+      "castle": 1177,
+      "imperial": 1225,
       "longhouses": 8,
       "attachments": {
        "bee": 6,
@@ -4971,50 +5301,216 @@
       },
       "villagerCapacity": 90,
       "sagas": [
-       "falkr",
        "ulfr",
+       "falkr",
        "jofurr"
       ],
       "groveBerserkers": 0,
       "shieldMaidens": 0,
       "armyAt": {
        "600": {
-        "villagers": 34,
-        "army": 13,
+        "villagers": 37,
+        "army": 24,
         "byLine": {
-         "bondi": 4,
-         "berserker": 4,
-         "hirdman": 5
+         "bondi": 8,
+         "berserker": 7,
+         "hirdman": 9
         },
-        "pop": 54
+        "pop": 68
        },
        "900": {
-        "villagers": 62,
-        "army": 88,
+        "villagers": 64,
+        "army": 93,
         "byLine": {
-         "bondi": 27,
-         "berserker": 26,
-         "hirdman": 35
+         "bondi": 28,
+         "berserker": 28,
+         "hirdman": 37
         },
-        "pop": 158
+        "pop": 164
        },
        "1200": {
-        "villagers": 76,
-        "army": 123,
+        "villagers": 72,
+        "army": 127,
         "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
         },
         "pop": 200
        },
        "1500": {
-        "villagers": 76,
-        "army": 123,
+        "villagers": 72,
+        "army": 127,
         "byLine": {
-         "bondi": 37,
-         "berserker": 37,
-         "hirdman": 49
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "params": {
+      "planId": "vikings-feudal-melee",
+      "lines": [
+       "bondi",
+       "berserker",
+       "hirdman"
+      ],
+      "lineMix": {
+       "hirdman": 0.4,
+       "bondi": 0.3,
+       "berserker": 0.3
+      },
+      "extraTCs": {
+       "2": 1,
+       "3": 0
+      },
+      "armyAge": 2,
+      "mech": {
+       "lh": {
+        "1": 3,
+        "2": 3,
+        "3": 0,
+        "4": 0
+       },
+       "attach": [
+        "bee",
+        "bee",
+        "bee",
+        "bee",
+        "smithy",
+        "loom",
+        "bee",
+        "bee"
+       ],
+       "gullinnMinPop": 0,
+       "groves": 0,
+       "kongensLonghouses": 0,
+       "callMaidens": false,
+       "lhLead": 99,
+       "lhBuilders": 1,
+       "longhouseBondi": false,
+       "openWood": true,
+       "reserveWood": true,
+       "callMaidensAt": 12
+      },
+      "vilTarget": 90,
+      "landmarks": {
+       "2": "baugr-fort",
+       "3": "valdemar-castle",
+       "4": "kongens-dor-cathedral"
+      },
+      "lmBuilders": {
+       "2": 2,
+       "3": 1,
+       "4": 14
+      },
+      "tcBuilders": 10,
+      "producers": {
+       "1": 1,
+       "2": 4,
+       "3": 6,
+       "4": 2
+      },
+      "maxProducers": 6,
+      "ecoTechs": {
+       "1": [
+        "upgrade_unit_town_center_wheelbarrow_1__vikings"
+       ],
+       "2": [
+        "upgrade_econ_resource_food_harvest_rate_2__vikings",
+        "upgrade_econ_resource_wood_harvest_rate_2__vikings",
+        "upgrade_econ_resource_gold_harvest_rate_2__vikings"
+       ],
+       "3": "all",
+       "4": []
+      },
+      "milTechAge": {
+       "2": false,
+       "3": true
+      },
+      "blacksmiths": 1,
+      "pauseForAge": false,
+      "window": 4,
+      "woodFloor": 0.3,
+      "goldBias": 0.8
+     },
+     "result": {
+      "done": 1913,
+      "at": 900,
+      "army": 93,
+      "armyValue": 11570,
+      "villagers": 64,
+      "population": 164,
+      "age": 2,
+      "ages": [
+       419,
+       1177,
+       1225
+      ],
+      "firstUnit": 434,
+      "pop150": 855,
+      "pop200": 1042,
+      "mixGap": 0.002,
+      "pop200Age": "Feudal Age",
+      "castle": 1177,
+      "imperial": 1225,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 6,
+       "farm": 0,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "ulfr",
+       "falkr",
+       "jofurr"
+      ],
+      "groveBerserkers": 0,
+      "shieldMaidens": 0,
+      "armyAt": {
+       "600": {
+        "villagers": 37,
+        "army": 24,
+        "byLine": {
+         "bondi": 8,
+         "berserker": 7,
+         "hirdman": 9
+        },
+        "pop": 68
+       },
+       "900": {
+        "villagers": 64,
+        "army": 93,
+        "byLine": {
+         "bondi": 28,
+         "berserker": 28,
+         "hirdman": 37
+        },
+        "pop": 164
+       },
+       "1200": {
+        "villagers": 72,
+        "army": 127,
+        "byLine": {
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 72,
+        "army": 127,
+        "byLine": {
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
         },
         "pop": 200
        }
@@ -5022,11 +5518,182 @@
      }
     }
    ],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "17.0.12260",
    "searches": [
     {
      "seed": 22,
+     "evaluations": 4622,
+     "searchedOn": "17.0.12260",
+     "score": -1898913,
+     "best": {
+      "done": 1913,
+      "at": 900,
+      "army": 93,
+      "armyValue": 11570,
+      "villagers": 64,
+      "population": 164,
+      "age": 2,
+      "ages": [
+       419,
+       1177,
+       1225
+      ],
+      "firstUnit": 434,
+      "pop150": 855,
+      "pop200": 1042,
+      "mixGap": 0.002,
+      "pop200Age": "Feudal Age",
+      "castle": 1177,
+      "imperial": 1225,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 6,
+       "farm": 0,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "ulfr",
+       "falkr",
+       "jofurr"
+      ],
+      "groveBerserkers": 0,
+      "shieldMaidens": 0,
+      "armyAt": {
+       "600": {
+        "villagers": 37,
+        "army": 24,
+        "byLine": {
+         "bondi": 8,
+         "berserker": 7,
+         "hirdman": 9
+        },
+        "pop": 68
+       },
+       "900": {
+        "villagers": 64,
+        "army": 93,
+        "byLine": {
+         "bondi": 28,
+         "berserker": 28,
+         "hirdman": 37
+        },
+        "pop": 164
+       },
+       "1200": {
+        "villagers": 72,
+        "army": 127,
+        "byLine": {
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 72,
+        "army": 127,
+        "byLine": {
+         "bondi": 38,
+         "berserker": 38,
+         "hirdman": 51
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 33,
+     "evaluations": 4497,
+     "searchedOn": "17.0.12260",
+     "score": -1901891,
+     "best": {
+      "done": 1891,
+      "at": 900,
+      "army": 84,
+      "armyValue": 10425,
+      "villagers": 62,
+      "population": 160,
+      "age": 2,
+      "ages": [
+       432,
+       1178,
+       1226
+      ],
+      "firstUnit": 450,
+      "pop150": 861,
+      "pop200": 1039,
+      "mixGap": 0.003,
+      "pop200Age": "Feudal Age",
+      "castle": 1178,
+      "imperial": 1226,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 6,
+       "farm": 0,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "ulfr",
+       "falkr",
+       "jofurr"
+      ],
+      "groveBerserkers": 0,
+      "shieldMaidens": 7,
+      "armyAt": {
+       "600": {
+        "villagers": 36,
+        "army": 23,
+        "byLine": {
+         "bondi": 7,
+         "berserker": 7,
+         "hirdman": 9
+        },
+        "pop": 66
+       },
+       "900": {
+        "villagers": 62,
+        "army": 84,
+        "byLine": {
+         "bondi": 26,
+         "berserker": 25,
+         "hirdman": 33
+        },
+        "pop": 160
+       },
+       "1200": {
+        "villagers": 76,
+        "army": 116,
+        "byLine": {
+         "bondi": 35,
+         "berserker": 35,
+         "hirdman": 46
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 76,
+        "army": 116,
+        "byLine": {
+         "bondi": 35,
+         "berserker": 35,
+         "hirdman": 46
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
      "evaluations": 4328,
-     "score": -1914749,
+     "searchedOn": "17.0-preview",
+     "score": -1914839,
      "best": {
       "done": 1749,
       "at": 900,
@@ -5108,8 +5775,94 @@
     },
     {
      "seed": 11,
+     "evaluations": 4139,
+     "searchedOn": "17.0.12260",
+     "score": -1931858,
+     "best": {
+      "done": 1858,
+      "at": 900,
+      "army": 76,
+      "armyValue": 9445,
+      "villagers": 66,
+      "population": 157,
+      "age": 3,
+      "ages": [
+       333,
+       659,
+       1158
+      ],
+      "firstUnit": 556,
+      "pop150": 878,
+      "pop200": 1052,
+      "mixGap": 0.003,
+      "pop200Age": "Castle Age",
+      "castle": 659,
+      "imperial": 1158,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 6,
+       "farm": 0,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "dreki",
+       "ulfr",
+       "jofurr",
+       "falkr"
+      ],
+      "groveBerserkers": 9,
+      "shieldMaidens": 7,
+      "armyAt": {
+       "600": {
+        "villagers": 40,
+        "army": 8,
+        "byLine": {
+         "bondi": 3,
+         "berserker": 2,
+         "hirdman": 3
+        },
+        "pop": 54
+       },
+       "900": {
+        "villagers": 66,
+        "army": 76,
+        "byLine": {
+         "bondi": 23,
+         "berserker": 23,
+         "hirdman": 30
+        },
+        "pop": 157
+       },
+       "1200": {
+        "villagers": 76,
+        "army": 116,
+        "byLine": {
+         "bondi": 35,
+         "berserker": 35,
+         "hirdman": 46
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 76,
+        "army": 116,
+        "byLine": {
+         "bondi": 35,
+         "berserker": 35,
+         "hirdman": 46
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
      "evaluations": 4581,
-     "score": -1953764,
+     "searchedOn": "17.0-preview",
+     "score": -1953854,
      "best": {
       "done": 1764,
       "at": 900,
@@ -5195,13 +5948,13 @@
   {
    "id": "vikings-valdemar-knights",
    "evaluations": 4224,
-   "seconds": 131,
+   "seconds": 150,
    "seed": 22,
    "objective": {
     "kind": "done"
    },
    "best": {
-    "done": 1894,
+    "done": 1984,
     "at": 900,
     "army": 47,
     "armyValue": 9870,
@@ -5216,6 +5969,7 @@
     "firstUnit": 664,
     "pop150": 996,
     "pop200": 1177,
+    "mixGap": 0,
     "pop200Age": "Imperial Age",
     "castle": 633,
     "imperial": 1176,
@@ -5347,7 +6101,7 @@
       "goldBias": 0.6
      },
      "result": {
-      "done": 1894,
+      "done": 1984,
       "at": 900,
       "army": 47,
       "armyValue": 9870,
@@ -5362,6 +6116,7 @@
       "firstUnit": 664,
       "pop150": 996,
       "pop200": 1177,
+      "mixGap": 0,
       "pop200Age": "Imperial Age",
       "castle": 633,
       "imperial": 1176,
@@ -5493,7 +6248,7 @@
       "goldBias": 0.6
      },
      "result": {
-      "done": 1894,
+      "done": 1984,
       "at": 900,
       "army": 47,
       "armyValue": 9870,
@@ -5508,6 +6263,7 @@
       "firstUnit": 664,
       "pop150": 996,
       "pop200": 1177,
+      "mixGap": 0,
       "pop200Age": "Imperial Age",
       "castle": 633,
       "imperial": 1176,
@@ -5639,7 +6395,7 @@
       "goldBias": 0.6
      },
      "result": {
-      "done": 1894,
+      "done": 1984,
       "at": 900,
       "army": 47,
       "armyValue": 9870,
@@ -5654,6 +6410,7 @@
       "firstUnit": 664,
       "pop150": 996,
       "pop200": 1177,
+      "mixGap": 0,
       "pop200Age": "Imperial Age",
       "castle": 633,
       "imperial": 1176,
@@ -5785,7 +6542,7 @@
       "goldBias": 0.6
      },
      "result": {
-      "done": 1894,
+      "done": 1984,
       "at": 900,
       "army": 47,
       "armyValue": 9870,
@@ -5800,6 +6557,7 @@
       "firstUnit": 664,
       "pop150": 996,
       "pop200": 1177,
+      "mixGap": 0,
       "pop200Age": "Imperial Age",
       "castle": 633,
       "imperial": 1176,
@@ -5931,7 +6689,7 @@
       "goldBias": 0.6
      },
      "result": {
-      "done": 1894,
+      "done": 1984,
       "at": 900,
       "army": 47,
       "armyValue": 9870,
@@ -5946,6 +6704,7 @@
       "firstUnit": 664,
       "pop150": 996,
       "pop200": 1177,
+      "mixGap": 0,
       "pop200Age": "Imperial Age",
       "castle": 633,
       "imperial": 1176,
@@ -6000,11 +6759,89 @@
      }
     }
    ],
+   "rulesPatch": "17.0.12260",
+   "searchedOn": "17.0.12260",
    "searches": [
     {
      "seed": 22,
      "evaluations": 4224,
-     "score": -2174894,
+     "searchedOn": "17.0.12260",
+     "score": -2174984,
+     "best": {
+      "done": 1984,
+      "at": 900,
+      "army": 47,
+      "armyValue": 9870,
+      "villagers": 65,
+      "population": 121,
+      "age": 3,
+      "ages": [
+       349,
+       633,
+       1176
+      ],
+      "firstUnit": 664,
+      "pop150": 996,
+      "pop200": 1177,
+      "mixGap": 0,
+      "pop200Age": "Imperial Age",
+      "castle": 633,
+      "imperial": 1176,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 6,
+       "farm": 0,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "jofurr",
+       "falkr"
+      ],
+      "groveBerserkers": 0,
+      "shieldMaidens": 7,
+      "armyAt": {
+       "600": {
+        "villagers": 39,
+        "army": 0,
+        "byLine": {
+         "jylland-knight": 0
+        },
+        "pop": 42
+       },
+       "900": {
+        "villagers": 65,
+        "army": 47,
+        "byLine": {
+         "jylland-knight": 47
+        },
+        "pop": 121
+       },
+       "1200": {
+        "villagers": 80,
+        "army": 102,
+        "byLine": {
+         "jylland-knight": 102
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 104,
+        "byLine": {
+         "jylland-knight": 104
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 22,
+     "evaluations": 4224,
+     "searchedOn": "17.0-preview",
+     "score": -2174984,
      "best": {
       "done": 1894,
       "at": 900,
@@ -6075,9 +6912,160 @@
      }
     },
     {
+     "seed": 33,
+     "evaluations": 5030,
+     "searchedOn": "17.0.12260",
+     "score": -2197001,
+     "best": {
+      "done": 2001,
+      "at": 900,
+      "army": 50,
+      "armyValue": 10500,
+      "villagers": 60,
+      "population": 117,
+      "age": 3,
+      "ages": [
+       337,
+       557,
+       1191
+      ],
+      "firstUnit": 588,
+      "pop150": 1003,
+      "pop200": 1192,
+      "mixGap": 0,
+      "pop200Age": "Imperial Age",
+      "castle": 557,
+      "imperial": 1191,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 6,
+       "farm": 0,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "jofurr",
+       "falkr"
+      ],
+      "groveBerserkers": 0,
+      "shieldMaidens": 7,
+      "armyAt": {
+       "600": {
+        "villagers": 41,
+        "army": 4,
+        "byLine": {
+         "jylland-knight": 4
+        },
+        "pop": 52
+       },
+       "900": {
+        "villagers": 60,
+        "army": 50,
+        "byLine": {
+         "jylland-knight": 50
+        },
+        "pop": 117
+       },
+       "1200": {
+        "villagers": 78,
+        "army": 98,
+        "byLine": {
+         "jylland-knight": 98
+        },
+        "pop": 200
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 102,
+        "byLine": {
+         "jylland-knight": 102
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
+     "seed": 11,
+     "evaluations": 4337,
+     "searchedOn": "17.0.12260",
+     "score": -2219015,
+     "best": {
+      "done": 2015,
+      "at": 900,
+      "army": 48,
+      "armyValue": 10080,
+      "villagers": 60,
+      "population": 115,
+      "age": 3,
+      "ages": [
+       334,
+       569,
+       1201
+      ],
+      "firstUnit": 600,
+      "pop150": 1015,
+      "pop200": 1202,
+      "mixGap": 0,
+      "pop200Age": "Imperial Age",
+      "castle": 569,
+      "imperial": 1201,
+      "longhouses": 8,
+      "attachments": {
+       "bee": 6,
+       "farm": 0,
+       "smithy": 1,
+       "loom": 1
+      },
+      "villagerCapacity": 90,
+      "sagas": [
+       "jofurr",
+       "falkr"
+      ],
+      "groveBerserkers": 0,
+      "shieldMaidens": 7,
+      "armyAt": {
+       "600": {
+        "villagers": 41,
+        "army": 0,
+        "byLine": {
+         "jylland-knight": 0
+        },
+        "pop": 49
+       },
+       "900": {
+        "villagers": 60,
+        "army": 48,
+        "byLine": {
+         "jylland-knight": 48
+        },
+        "pop": 115
+       },
+       "1200": {
+        "villagers": 78,
+        "army": 97,
+        "byLine": {
+         "jylland-knight": 97
+        },
+        "pop": 189
+       },
+       "1500": {
+        "villagers": 80,
+        "army": 102,
+        "byLine": {
+         "jylland-knight": 102
+        },
+        "pop": 200
+       }
+      }
+     }
+    },
+    {
      "seed": 11,
      "evaluations": 4166,
-     "score": -2218925,
+     "searchedOn": "17.0-preview",
+     "score": -2219015,
      "best": {
       "done": 1925,
       "at": 900,

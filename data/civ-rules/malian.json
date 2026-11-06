@@ -1,7 +1,7 @@
 {
  "civ": "malian",
  "catalogCiv": "malian",
- "patch": "16.3.11308",
+ "patch": "17.0.12260",
  "start": {
   "villagers": 6,
   "resources": {
@@ -178,7 +178,7 @@
    "wood": 400,
    "gold": 350
   },
-  "buildSeconds": 150,
+  "buildSeconds": 165,
   "popProvided": 10,
   "villagerProductionMultiplierByAge": {
    "1": 1,
@@ -186,17 +186,17 @@
    "3": 1,
    "4": 1
   },
-  "notes": "Extra Town Centers cost 400 wood + 350 gold (Malian bonus: gold instead of stone) and need Feudal Age (or the fast_expand upgrade). No Malian Town Center production-speed modifier was found in any installed record, so the per-age multiplier is 1 (absence of evidence; state trees are not decoded). 17.0 preview raises TC build time 150 -> 165 s; not applied.",
+  "notes": "Extra Town Centers cost 400 wood + 350 gold (Malian bonus: gold instead of stone) and need Feudal Age (or the fast_expand upgrade). No Malian Town Center production-speed modifier was found in any installed record, so the per-age multiplier is 1 (absence of evidence; state trees are not decoded). Extra Town Center build time is 165 s (150 s before Update 17.0).",
   "evidence": [
    "catalog:buildings/building_town_center_mal#cost",
    "catalog:buildings/building_town_center_mal#buildTimeSeconds",
-   "raw:ebps/races/malian/buildings/building_town_center_mal#cost_ext/time_cost (wood 400, gold 350, stone 0, 150 s)",
+   "raw:ebps/races/malian/buildings/building_town_center_mal#cost_ext/time_cost (wood 400, gold 350, stone 0, 165 s)",
    "raw:ebps/races/malian/buildings/building_town_center_mal#requirement_ext/requirement_table/required_any_in_list (feudal_age or fast_expand)",
    "raw:statemodel_schema/buildings/town_center#int_properties/population_cap_increase.default=10",
    "raw:statemodel_schema/buildings/town_center_capital#int_properties/population_cap_increase.default=10",
    "locale:11265630 = \"Each House and Mining Camp constructed within the influence of Pit Mines increases its Gold generation. Town Centers cost gold instead of stone to construct.\"",
    "catalog:buildings/building_town_center_mal#trainableUnits",
-   "data/patch-next.json building_town_center_mal buildTimeSeconds 150 -> 165 (17.0 preview, not applied)"
+   "data/patch-next.json building_town_center_mal buildTimeSeconds 150 -> 165 (Update 17.0; the installed 17.0.12260 record carries 165)"
   ]
  },
  "buildings": {
@@ -639,20 +639,20 @@
       "kind": "passive_income",
       "target": "food per cattle within 25 range of the landmark",
       "op": "add",
-      "value": 0.3,
-      "notes": "18 food per minute per nearby cattle = 3 food every 10 s (0.3/s). No cattle spawning, cattle discount or ranch-rate change found in the record. 17.0 preview lowers 18 -> 16 (not applied)."
+      "value": 0.266667,
+      "notes": "16 food per minute per nearby cattle = 4 food every 15 s (0.266667/s). No cattle spawning, cattle discount or ranch-rate change found in the record. Before Update 17.0 it was 3 food every 10 s (18 per minute)."
      }
     ],
     "evidence": [
      "catalog:buildings/building_landmark_age2_landmarkc_control_mal#cost",
      "catalog:buildings/building_landmark_age2_landmarkc_control_mal#buildTimeSeconds",
      "raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#cost_ext/time_cost",
-     "raw:statemodel_schema/civs/malian#float_properties/cattle_landmark_food_rate_mal.default=10, cattle_landmark_food_amount_mal.default=3",
-     "locale:11231847 = \"Nearby cattle provide 18 Food per minute.\" (%1% = 18 from raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ui_ext/help_text_formatter)",
+     "raw:statemodel_schema/civs/malian#float_properties/cattle_landmark_food_rate_mal.default=15, cattle_landmark_food_amount_mal.default=4 (16.3.11308: 10 and 3)",
+     "locale:11231847 = \"Nearby cattle provide 16 Food per minute.\" (%1% = 16 from raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ui_ext/help_text_formatter; 18 in 16.3.11308)",
      "raw:abilities/always_on_abilities/malian/cattle_landmark_passive_food_mal#ability_bag/range=25, entity_tree=landmark_c_cattle_food_mal",
      "raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ability_ext/abilities/ability=cattle_landmark_passive_food_mal; construction_ext/ui_range_radius=25",
      "catalog:buildings/building_landmark_age2_landmarkc_control_mal#trainableUnits (empty)",
-     "data/patch-next.json Grand Fulani Corral: \"Fulani Corral Food generation per Cattle reduced from 18 Food -> 16 Food\" (17.0 before-value 18 matches installed)"
+     "data/patch-next.json: Update 17.0 \"Fulani Corral Food generation per Cattle reduced from 18 Food -> 16 Food\" (the installed 17.0.12260 records carry 16)"
     ]
    },
    {
@@ -2717,7 +2717,7 @@
   },
   {
    "key": "grand-fulani-corral",
-   "summary": "Castle-Age landmark: every cattle within range 25 of it provides 3 food every 10 s (18 food/min). No cattle spawning, discount or ranch change found.",
+   "summary": "Castle-Age landmark: every cattle within range 25 of it provides 4 food every 15 s (16 food/min). No cattle spawning, discount or ranch change found.",
    "params": {
     "landmark": "grand-fulani-corral",
     "age": 3,
@@ -2726,21 +2726,20 @@
      "gold": 600
     },
     "buildSeconds": 220,
-    "foodPerTick": 3,
-    "tickSeconds": 10,
-    "foodPerMinutePerCattle": 18,
-    "foodPerSecond": 0.3,
+    "foodPerTick": 4,
+    "tickSeconds": 15,
+    "foodPerMinutePerCattle": 16,
+    "foodPerSecond": 0.266667,
     "rangeRaw": 25,
     "stacksWithRanch": null,
-    "cattleDeplete": null,
-    "next17_0": "16 food/min (preview, not applied)"
+    "cattleDeplete": null
    },
    "status": "partial",
    "evidence": [
-    "raw:statemodel_schema/civs/malian#float_properties/cattle_landmark_food_rate_mal.default=10, cattle_landmark_food_amount_mal.default=3",
-    "locale:11231847 = \"Nearby cattle provide 18 Food per minute.\" (%1% = 18 from raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ui_ext/help_text_formatter)",
+    "raw:statemodel_schema/civs/malian#float_properties/cattle_landmark_food_rate_mal.default=15, cattle_landmark_food_amount_mal.default=4 (16.3.11308: 10 and 3)",
+    "locale:11231847 = \"Nearby cattle provide 16 Food per minute.\" (%1% = 16 from raw:ebps/races/malian/buildings/building_landmark_age2_landmarkc_control_mal#ui_ext/help_text_formatter; 18 in 16.3.11308)",
     "raw:abilities/always_on_abilities/malian/cattle_landmark_passive_food_mal#ability_bag/range=25, entity_tree=landmark_c_cattle_food_mal",
-    "data/patch-next.json: 17.0 \"Fulani Corral Food generation per Cattle reduced from 18 Food -> 16 Food\" (before-value matches installed 18)"
+    "data/patch-next.json: Update 17.0 \"Fulani Corral Food generation per Cattle reduced from 18 Food -> 16 Food\" (the installed 17.0.12260 records carry 16)"
    ]
   },
   {
@@ -2909,7 +2908,7 @@
   {
    "item": "Grand Fulani Corral stacking and depletion",
    "why": "Unknown whether ranched cattle also count as \"nearby\" and whether corral income draws down the cattle deposit.",
-   "fallback": "18 food/min per cattle within range 25, additive with ranch income, not consumed"
+   "fallback": "16 food/min per cattle within range 25, additive with ranch income, not consumed"
   },
   {
    "item": "Cattle population cap",

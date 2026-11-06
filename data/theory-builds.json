@@ -1,9 +1,9 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-27T14:05:52.409Z",
+ "generatedAt": "2026-11-06T09:19:52.967Z",
  "engine": "site/engine-civs.js",
  "rules": "data/civ-engine-rules.json",
- "patch": "16.3.11308",
+ "patch": "17.0.12260",
  "builds": [
   {
    "id": "french-knights-10",
@@ -11,7 +11,7 @@
    "summary": "Royal Knights by 10:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Royal Knight upgrade.",
    "civilization": "french",
    "engine": "civ",
-   "patch": "16.3.11308",
+   "patch": "17.0.12260",
    "reference": {
     "buildId": "french-observed-4v4"
    },
@@ -23,7 +23,7 @@
    },
    "lineNames": "Royal Knight",
    "result": {
-    "done": 1497,
+    "done": 1491,
     "at": 600,
     "line": 18,
     "army": 18,
@@ -33,12 +33,12 @@
     "age": 2,
     "ages": [
      266,
-     815,
-     1218
+     792,
+     1165
     ],
-    "firstUnit": 322,
-    "pop150": 1326,
-    "pop200": 1475
+    "firstUnit": 323,
+    "pop150": 1316,
+    "pop200": 1474
    },
    "lines": [
     "royal-knight"
@@ -52,7 +52,7 @@
    "lmBuilders": {
     "2": 7,
     "3": 12,
-    "4": 6
+    "4": 11
    },
    "extraTCs": {
     "2": 0,
@@ -63,7 +63,7 @@
     "1": 0,
     "2": 3,
     "3": 1,
-    "4": 6
+    "4": 4
    },
    "maxProducers": 12,
    "ecoTechs": {
@@ -75,14 +75,14 @@
     "4": []
    },
    "milTechAge": {
-    "2": true,
+    "2": false,
     "3": true
    },
    "blacksmiths": 2,
    "pauseForAge": true,
    "window": 4,
    "woodFloor": 0.25,
-   "goldBias": 1.4,
+   "goldBias": 0.6,
    "armyAge": 2,
    "pauseFrom": {
     "3": 600,
@@ -97,7 +97,7 @@
    "summary": "Royal Knights by 15:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Royal Knight upgrade.",
    "civilization": "french",
    "engine": "civ",
-   "patch": "16.3.11308",
+   "patch": "17.0.12260",
    "reference": {
     "buildId": "french-knights-observed-4v4"
    },
@@ -109,7 +109,7 @@
    },
    "lineNames": "Royal Knight",
    "result": {
-    "done": 1577,
+    "done": 1484,
     "at": 900,
     "line": 52,
     "army": 52,
@@ -119,12 +119,12 @@
     "age": 2,
     "ages": [
      352,
-     1058,
-     1332
+     1274,
+     1414
     ],
     "firstUnit": 447,
-    "pop150": 1089,
-    "pop200": 1389
+    "pop150": 1088,
+    "pop200": 1278
    },
    "lines": [
     "royal-knight"
@@ -132,13 +132,13 @@
    "vilTarget": 50,
    "landmarks": {
     "2": "school-of-cavalry",
-    "3": "guild-hall",
+    "3": "royal-institute",
     "4": "red-palace"
    },
    "lmBuilders": {
     "2": 2,
-    "3": 7,
-    "4": 7
+    "3": 1,
+    "4": 6
    },
    "extraTCs": {
     "2": 1,
@@ -148,35 +148,34 @@
    "producers": {
     "1": 0,
     "2": 4,
-    "3": 6,
-    "4": 5
+    "3": 1,
+    "4": 2
    },
-   "maxProducers": 12,
+   "maxProducers": 5,
    "ecoTechs": {
     "1": [
      "upgrade_unit_town_center_wheelbarrow_1",
      "upgrade_econ_villager_hunting_gear_1"
     ],
     "2": "all",
-    "3": "all",
+    "3": [],
     "4": []
    },
    "milTechAge": {
     "2": false,
     "3": true
    },
-   "blacksmiths": 1,
+   "blacksmiths": 2,
    "pauseForAge": false,
    "window": 6,
-   "woodFloor": 0.2,
+   "woodFloor": 0.3,
    "goldBias": 0.6,
    "armyAge": 2,
    "pauseFrom": {
-    "3": 900,
-    "4": 1200
+    "3": 960
    },
-   "vilTarget2": 80,
-   "vilTarget2At": 840
+   "vilTarget2At": 840,
+   "vilTarget2": 120
   },
   {
    "id": "mongol-cavalry-10",
@@ -184,7 +183,7 @@
    "summary": "Stable cavalry value at 10:00 within one unit of the most any searched plan completes (Ovoo double production and Improved technologies chosen by the search), finishing soonest at 200 population with every upgrade of its line.",
    "civilization": "mongol",
    "engine": "civ",
-   "patch": "16.3.11308",
+   "patch": "17.0.12260",
    "reference": {
     "buildId": "mongols-observed-4v4"
    },
@@ -195,7 +194,7 @@
    },
    "lineNames": "Keshik and Horseman",
    "result": {
-    "done": 1377,
+    "done": 1375,
     "at": 600,
     "army": 42,
     "armyValue": 5040,
@@ -203,51 +202,48 @@
     "population": 80,
     "age": 1,
     "ages": [
-     717,
-     1024,
+     713,
+     995,
      1217
     ],
     "firstUnit": 228,
-    "pop150": 1156,
-    "pop200": 1352
+    "pop150": 1162,
+    "pop200": 1342
    },
+   "planId": "mongol-cavalry-10",
    "lines": [
     "keshik",
     "horseman"
    ],
-   "vilTarget": 140,
+   "vilTarget": 70,
    "landmarks": {
-    "2": "silver-tree",
+    "2": "deer-stones",
     "3": "steppe-redoubt",
     "4": "white-stupa"
    },
    "lmBuilders": {
-    "2": 9,
-    "3": 9,
-    "4": 14
+    "2": 10,
+    "3": 12,
+    "4": 9
    },
    "extraTCs": {
     "2": 2,
     "3": 0
    },
-   "tcBuilders": 10,
+   "tcBuilders": 8,
    "producers": {
     "1": 2,
-    "2": 0,
-    "3": 2,
-    "4": 2
+    "2": 1,
+    "3": 1,
+    "4": 3
    },
-   "maxProducers": 12,
+   "maxProducers": 7,
    "ecoTechs": {
     "1": [
      "upgrade_unit_wheelbarrow_1_improved_mon"
     ],
-    "2": [
-     "upgrade_econ_resource_food_harvest_rate_2",
-     "upgrade_econ_resource_wood_harvest_rate_2",
-     "upgrade_econ_resource_gold_harvest_rate_2_mon"
-    ],
-    "3": "all",
+    "2": "all",
+    "3": [],
     "4": []
    },
    "milTechAge": {
@@ -256,15 +252,15 @@
    },
    "blacksmiths": 2,
    "pauseForAge": true,
-   "window": 3,
-   "woodFloor": 0.25,
-   "goldBias": 1.6,
+   "window": 4,
+   "woodFloor": 0.15,
+   "goldBias": 1.2,
    "armyAge": 1,
    "pauseFrom": {
-    "3": 540,
+    "3": 660,
     "4": 900
    },
-   "vilTarget2": null,
+   "vilTarget2": 120,
    "vilTarget2At": 420,
    "mech": {
     "doubleVillagers": false,
@@ -278,7 +274,7 @@
    "summary": "The fastest 200 population with every Sofa upgrade, built on cattle ranches and a Pit Mine; ranch count, cattle timing and every other choice come from the engine search.",
    "civilization": "malian",
    "engine": "civ",
-   "patch": "16.3.11308",
+   "patch": "17.0.12260",
    "reference": {
     "buildId": "malians-observed-4v4"
    },
@@ -287,35 +283,36 @@
    },
    "lineNames": "Sofa",
    "result": {
-    "done": 1124,
+    "done": 1120,
     "at": 900,
-    "army": 5,
-    "armyValue": 900,
-    "villagers": 102,
-    "population": 117,
+    "army": 6,
+    "armyValue": 1080,
+    "villagers": 100,
+    "population": 114,
     "age": 3,
     "ages": [
      360,
-     686,
-     927
+     669,
+     908
     ],
-    "firstUnit": 744,
-    "pop150": 980,
-    "pop200": 1096
+    "firstUnit": 696,
+    "pop150": 988,
+    "pop200": 1093
    },
+   "planId": "malian-cattle-boom",
    "lines": [
     "sofa"
    ],
-   "vilTarget": 150,
+   "vilTarget": 155,
    "landmarks": {
     "2": "mansa-quarry",
     "3": "grand-fulani-corral",
-    "4": "fort-of-the-huntress"
+    "4": "griot-bara"
    },
    "lmBuilders": {
     "2": 2,
-    "3": 7,
-    "4": 5
+    "3": 9,
+    "4": 10
    },
    "extraTCs": {
     "2": 2,
@@ -324,21 +321,17 @@
    "tcBuilders": 10,
    "producers": {
     "1": 0,
-    "2": 0,
+    "2": 1,
     "3": 1,
     "4": 5
    },
-   "maxProducers": 10,
+   "maxProducers": 12,
    "ecoTechs": {
     "1": [
      "upgrade_unit_town_center_wheelbarrow_1"
     ],
-    "2": [
-     "upgrade_econ_resource_food_harvest_rate_2",
-     "upgrade_econ_resource_wood_harvest_rate_2",
-     "upgrade_econ_resource_gold_harvest_rate_2"
-    ],
-    "3": [],
+    "2": "all",
+    "3": "all",
     "4": []
    },
    "milTechAge": {
@@ -346,19 +339,19 @@
     "3": true
    },
    "blacksmiths": 2,
-   "pauseForAge": true,
-   "window": 5,
-   "woodFloor": 0.2,
+   "pauseForAge": false,
+   "window": 4,
+   "woodFloor": 0.3,
    "goldBias": 1.6,
    "armyAge": 3,
    "cattle": {
     "ranches": {
-     "2": 6,
-     "3": 1,
-     "4": 4
+     "2": 5,
+     "3": 7,
+     "4": 6
     },
     "herdTarget": 0,
-    "age": 1
+    "age": 2
    },
    "mech": {
     "pitMines": 1
@@ -370,7 +363,7 @@
    "summary": "The fastest 200 population with every upgrade of its infantry lines from at least two Town Centers; Daimyo upgrades, landmarks, Yorishiro placement and timings come from the engine search.",
    "civilization": "japanese",
    "engine": "civ",
-   "patch": "16.3.11308",
+   "patch": "17.0.12260",
    "reference": {
     "buildId": "japanese-observed-4v4"
    },
@@ -379,21 +372,21 @@
    },
    "lineNames": "Onna-Bugeisha",
    "result": {
-    "done": 1058,
+    "done": 1061,
     "at": 900,
     "army": 27,
     "armyValue": 2160,
     "villagers": 95,
-    "population": 130,
+    "population": 129,
     "age": 4,
     "ages": [
      314,
-     611,
-     835
+     614,
+     838
     ],
-    "firstUnit": 688,
-    "pop150": 946,
-    "pop200": 1042
+    "firstUnit": 691,
+    "pop150": 949,
+    "pop200": 1045
    },
    "lines": [
     "onna-bugeisha"
@@ -461,7 +454,7 @@
    "summary": "Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, then the army only from Imperial Age: all four melee lines (Pikeman, Cateran, Man-at-Arms, Gallowglass) balanced with Man-at-Arms the largest share, trained Tacksmen, and Border Reivers only from the one Muster Border Reivers fired in Imperial Age (a muster is a one-time trigger). Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the army lines. The Tacksman and Man-at-Arms shares, Castle and Imperial landmarks, Town Centers, Highland Cattle, Tower Houses and every timing come from the engine search; no Imperial economy technologies.",
    "civilization": "scots",
    "engine": "civ",
-   "patch": "17.0-preview",
+   "patch": "17.0.12260",
    "objective": {
     "kind": "done"
    },
@@ -658,7 +651,7 @@
    "summary": "Stone of Destiny in Feudal Age with every building in its reach and Kirkmen on Fishponds, then the army from Castle Age without a Mustering Hall: all four melee lines (Pikeman, Cateran, Man-at-Arms, Gallowglass) balanced with Man-at-Arms the largest share. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the army lines. The Man-at-Arms share, Castle and Imperial landmarks, Town Centers, Highland Cattle, Tower Houses and every timing come from the engine search; no Imperial economy technologies.",
    "civilization": "scots",
    "engine": "civ",
-   "patch": "17.0-preview",
+   "patch": "17.0.12260",
    "objective": {
     "kind": "done"
    },
@@ -830,31 +823,31 @@
    "summary": "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), then all three melee infantry lines from Feudal Age, balanced with Hirdman the largest share and Bondi and Berserker sharing the rest. Key metrics: the time to 150 population and the time to 200 population, each with every upgrade of the infantry lines. The Hirdman share, landmarks, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
    "civilization": "vikings",
    "engine": "civ",
-   "patch": "17.0-preview",
+   "patch": "17.0.12260",
    "objective": {
     "kind": "done"
    },
    "lineNames": "Bondi and Berserker and Hirdman",
    "result": {
-    "done": 1749,
+    "done": 1913,
     "at": 900,
-    "army": 88,
-    "armyValue": 10940,
-    "villagers": 62,
-    "population": 158,
+    "army": 93,
+    "armyValue": 11570,
+    "villagers": 64,
+    "population": 164,
     "age": 2,
     "ages": [
-     502,
-     1034,
-     1162
+     419,
+     1177,
+     1225
     ],
-    "firstUnit": 517,
-    "pop150": 878,
-    "pop200": 1035,
+    "firstUnit": 434,
+    "pop150": 855,
+    "pop200": 1042,
     "mixGap": 0.002,
-    "pop200Age": "Castle Age",
-    "castle": 1034,
-    "imperial": 1162,
+    "pop200Age": "Feudal Age",
+    "castle": 1177,
+    "imperial": 1225,
     "longhouses": 8,
     "attachments": {
      "bee": 6,
@@ -864,50 +857,50 @@
     },
     "villagerCapacity": 90,
     "sagas": [
-     "falkr",
      "ulfr",
+     "falkr",
      "jofurr"
     ],
     "groveBerserkers": 0,
     "shieldMaidens": 0,
     "armyAt": {
      "600": {
-      "villagers": 34,
-      "army": 13,
+      "villagers": 37,
+      "army": 24,
       "byLine": {
-       "bondi": 4,
-       "berserker": 4,
-       "hirdman": 5
+       "bondi": 8,
+       "berserker": 7,
+       "hirdman": 9
       },
-      "pop": 54
+      "pop": 68
      },
      "900": {
-      "villagers": 62,
-      "army": 88,
+      "villagers": 64,
+      "army": 93,
       "byLine": {
-       "bondi": 27,
-       "berserker": 26,
-       "hirdman": 35
+       "bondi": 28,
+       "berserker": 28,
+       "hirdman": 37
       },
-      "pop": 158
+      "pop": 164
      },
      "1200": {
-      "villagers": 76,
-      "army": 123,
+      "villagers": 72,
+      "army": 127,
       "byLine": {
-       "bondi": 37,
-       "berserker": 37,
-       "hirdman": 49
+       "bondi": 38,
+       "berserker": 38,
+       "hirdman": 51
       },
       "pop": 200
      },
      "1500": {
-      "villagers": 76,
-      "army": 123,
+      "villagers": 72,
+      "army": 127,
       "byLine": {
-       "bondi": 37,
-       "berserker": 37,
-       "hirdman": 49
+       "bondi": 38,
+       "berserker": 38,
+       "hirdman": 51
       },
       "pop": 200
      }
@@ -931,8 +924,8 @@
    "armyAge": 2,
    "mech": {
     "lh": {
-     "1": 6,
-     "2": 0,
+     "1": 3,
+     "2": 3,
      "3": 0,
      "4": 0
     },
@@ -951,7 +944,7 @@
     "kongensLonghouses": 0,
     "callMaidens": false,
     "lhLead": 99,
-    "lhBuilders": 2,
+    "lhBuilders": 1,
     "longhouseBondi": false,
     "openWood": true,
     "reserveWood": true,
@@ -965,14 +958,14 @@
    },
    "lmBuilders": {
     "2": 2,
-    "3": 6,
+    "3": 1,
     "4": 14
    },
    "tcBuilders": 10,
    "producers": {
     "1": 1,
     "2": 4,
-    "3": 5,
+    "3": 6,
     "4": 2
    },
    "maxProducers": 6,
@@ -989,14 +982,14 @@
     "4": []
    },
    "milTechAge": {
-    "2": true,
+    "2": false,
     "3": true
    },
    "blacksmiths": 1,
    "pauseForAge": false,
    "window": 4,
    "woodFloor": 0.3,
-   "goldBias": 1.4
+   "goldBias": 0.8
   },
   {
    "id": "vikings-valdemar-knights",
@@ -1004,13 +997,13 @@
    "summary": "Two Town Centers and six Longhouses with Bee Skeps (the Smithy and the Pasture and Loom sit on the Longhouses raised as houses), the Valdemar Castle in Castle Age, then Jylland Knights from Castle Age. Key metrics: the time to 150 population and the time to 200 population, each with every Jylland Knight upgrade. The Feudal and Imperial landmarks, Longhouse timing and every other choice come from the engine search; no Imperial economy technologies.",
    "civilization": "vikings",
    "engine": "civ",
-   "patch": "17.0-preview",
+   "patch": "17.0.12260",
    "objective": {
     "kind": "done"
    },
    "lineNames": "Jylland Knight",
    "result": {
-    "done": 1894,
+    "done": 1984,
     "at": 900,
     "army": 47,
     "armyValue": 9870,
@@ -1154,5 +1147,5 @@
    "goldBias": 0.6
   }
  ],
- "method": "Polish: threshold 18 (best army measure over 10 searches minus slack 1); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish."
+ "method": "Polish: threshold 18 (best army measure over 14 searches minus slack 1); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish."
 }

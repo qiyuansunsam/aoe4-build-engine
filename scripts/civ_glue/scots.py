@@ -1,9 +1,9 @@
-"""Engine glue for the Scots (Update 17.0 preview pack data/civ-rules/scots.json).
+"""Engine glue for the Scots (17.0.12260 pack data/civ-rules/scots.json).
 
 Same role as malian()/japanese() in scripts/build_civ_engine_rules.py: puts the pack's mechanics into the engine slots
 (spec['mech']['scots'] is read by site/civ-mech/scots.js), sets landmark effects the engine applies directly (regional
 technology halving), technology effects the generic compiler cannot infer (Fermtouns and Pastures, Wallace's Rally), and
-records the named assumptions. Every number is read from the pack (which cites the 17.0 records, the checklist or footage).
+records the named assumptions. Every number is read from the pack (which cites the installed 17.0.12260 records, the datamined 17.0 records, the checklist or footage).
 """
 
 
@@ -63,6 +63,7 @@ def glue(p, s, helpers):
         'fishpond': {'goldPerSecond': fish['goldPerMinute'] / 60, 'build': fish['buildSeconds'], 'aura': fish['aura'], 'capPerLowland': fish['capPerLowlandLandmark'],
                      'capLandmarkMax': fish.get('capLandmarkMax', 4), 'stewPonds': fish.get('stewPonds')},
         'abbeyMultiplier': abbey['productionMultiplier'], 'rebate': sod['fraction'],
+        'pbg': {'cattle': helpers['pbgid']('highland_cattle_sco'), 'kirkman': helpers['pbgid']('unit_monk_3_sco')},
         'highland': sorted(k for k, v in region_of.items() if v == 'highland'), 'lowland': sorted(k for k, v in region_of.items() if v == 'lowland'),
     }}
     s['start']['cattle'] = cat['startCount']
@@ -74,7 +75,7 @@ def glue(p, s, helpers):
     s['planExtras'] = {}
     s['ageUpGrants'] = {}
     s['assumptions'].update({
-        'patch': 'Scots are not in the installed game: every unique value is Update 17.0 preview data (datamined records, footage); standard villager gather rates come from the installed 16.3 standard villager.',
+        'patch': 'Pack values were written before release from datamined 17.0 records and footage and re-checked against the installed 17.0.12260 files (data/civ-rules/patch-17-recheck.json); mechanics no installed record states stay named assumptions.',
         'musterSpawn': 'A muster is a 5 s action; its warriors then come out one at a time, 2 s apart (mustered unit records; one test game shows about one every 2 s). A cheat sandbox showed a faster burst.',
         'musterOnce': 'Each muster type is used once per player (record: "Each type of muster is one-time use"; a second Mustering Hall is not shown to reset it).',
         'musterPop': 'A muster starts only when all its warriors fit under the population cap.',

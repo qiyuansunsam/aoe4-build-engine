@@ -1,0 +1,517 @@
+{
+ "method": "Seeded random sampling (1500 candidates plus the civilization defaults) then coordinate hill-climbing from the best 5; every candidate is a full engine run scored by the build objective. Recorded games are not inputs.",
+ "score": 4800033.8669,
+ "build": {
+  "id": "mongol-cavalry-10",
+  "title": "Mongol cavalry by 10:00",
+  "summary": "Stable cavalry value at 10:00 within one unit of the most any searched plan completes (Ovoo double production and Improved technologies chosen by the search), finishing soonest at 200 population with every upgrade of its line.",
+  "civilization": "mongol",
+  "engine": "civ",
+  "patch": "17.0.12260",
+  "reference": {
+   "buildId": "mongols-observed-4v4"
+  },
+  "objective": {
+   "kind": "valueAt",
+   "t": 600,
+   "slack": 250
+  },
+  "lineNames": "Keshik and Horseman",
+  "result": {
+   "done": 1331,
+   "at": 600,
+   "army": 40,
+   "armyValue": 4800,
+   "villagers": 34,
+   "population": 77,
+   "age": 1,
+   "ages": [
+    647,
+    967,
+    1145
+   ],
+   "firstUnit": 278,
+   "pop150": 1131,
+   "pop200": 1308
+  },
+  "planId": "mongol-cavalry-10",
+  "lines": [
+   "keshik",
+   "horseman"
+  ],
+  "vilTarget": 120,
+  "landmarks": {
+   "2": "deer-stones",
+   "3": "steppe-redoubt",
+   "4": "white-stupa"
+  },
+  "lmBuilders": {
+   "2": 10,
+   "3": 10,
+   "4": 13
+  },
+  "extraTCs": {
+   "2": 2,
+   "3": 0
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 2,
+   "2": 0,
+   "3": 3,
+   "4": 2
+  },
+  "maxProducers": 12,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1_mon",
+    "upgrade_unit_wheelbarrow_1_improved_mon",
+    "upgrade_econ_villager_hunting_gear_1_mon"
+   ],
+   "2": "all",
+   "3": [],
+   "4": []
+  },
+  "milTechAge": {
+   "2": true,
+   "3": true
+  },
+  "blacksmiths": 2,
+  "pauseForAge": false,
+  "window": 3,
+  "woodFloor": 0.25,
+  "goldBias": 1.4,
+  "armyAge": 1,
+  "pauseFrom": {
+   "3": 540,
+   "4": 900
+  },
+  "vilTarget2": null,
+  "vilTarget2At": 420,
+  "mech": {
+   "doubleVillagers": false,
+   "doubleArmy": true,
+   "improved": false
+  }
+ },
+ "ledger": {
+  "id": "mongol-cavalry-10",
+  "evaluations": 5274,
+  "seconds": 191,
+  "seed": 22,
+  "objective": {
+   "kind": "valueAt",
+   "t": 600,
+   "slack": 250
+  },
+  "best": {
+   "done": 1331,
+   "at": 600,
+   "army": 40,
+   "armyValue": 4800,
+   "villagers": 34,
+   "population": 77,
+   "age": 1,
+   "ages": [
+    647,
+    967,
+    1145
+   ],
+   "firstUnit": 278,
+   "pop150": 1131,
+   "pop200": 1308
+  },
+  "runnersUp": [
+   {
+    "params": {
+     "planId": "mongol-cavalry-10",
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "deer-stones",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 9,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.05,
+     "goldBias": 1.6,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 600,
+      "4": 900
+     },
+     "vilTarget2": 120,
+     "vilTarget2At": 480,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1381,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1008,
+      1202
+     ],
+     "firstUnit": 228,
+     "pop150": 1156,
+     "pop200": 1343
+    }
+   },
+   {
+    "params": {
+     "planId": "mongol-cavalry-10",
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "deer-stones",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 9,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.05,
+     "goldBias": 1.6,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 660,
+      "4": 900
+     },
+     "vilTarget2": 120,
+     "vilTarget2At": 480,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1381,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1008,
+      1202
+     ],
+     "firstUnit": 228,
+     "pop150": 1156,
+     "pop200": 1343
+    }
+   },
+   {
+    "params": {
+     "planId": "mongol-cavalry-10",
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "deer-stones",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 9,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.05,
+     "goldBias": 1.6,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 540,
+      "4": 900
+     },
+     "vilTarget2": 140,
+     "vilTarget2At": 480,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1381,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1008,
+      1202
+     ],
+     "firstUnit": 228,
+     "pop150": 1156,
+     "pop200": 1343
+    }
+   },
+   {
+    "params": {
+     "planId": "mongol-cavalry-10",
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "deer-stones",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 9,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.05,
+     "goldBias": 1.6,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 540,
+      "4": 900
+     },
+     "vilTarget2": 120,
+     "vilTarget2At": 420,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1381,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1008,
+      1202
+     ],
+     "firstUnit": 228,
+     "pop150": 1156,
+     "pop200": 1343
+    }
+   },
+   {
+    "params": {
+     "planId": "mongol-cavalry-10",
+     "lines": [
+      "keshik",
+      "horseman"
+     ],
+     "vilTarget": 50,
+     "landmarks": {
+      "2": "deer-stones",
+      "3": "steppe-redoubt",
+      "4": "white-stupa"
+     },
+     "lmBuilders": {
+      "2": 9,
+      "3": 9,
+      "4": 13
+     },
+     "extraTCs": {
+      "2": 2,
+      "3": 0
+     },
+     "tcBuilders": 10,
+     "producers": {
+      "1": 2,
+      "2": 0,
+      "3": 1,
+      "4": 3
+     },
+     "maxProducers": 13,
+     "ecoTechs": {
+      "1": [
+       "upgrade_unit_wheelbarrow_1_improved_mon"
+      ],
+      "2": "all",
+      "3": [],
+      "4": []
+     },
+     "milTechAge": {
+      "2": true,
+      "3": true
+     },
+     "blacksmiths": 2,
+     "pauseForAge": true,
+     "window": 6,
+     "woodFloor": 0.05,
+     "goldBias": 1.6,
+     "armyAge": 1,
+     "pauseFrom": {
+      "3": 540,
+      "4": 900
+     },
+     "vilTarget2": 120,
+     "vilTarget2At": 540,
+     "mech": {
+      "doubleVillagers": false,
+      "doubleArmy": true,
+      "improved": false
+     }
+    },
+    "result": {
+     "done": 1381,
+     "at": 600,
+     "army": 42,
+     "armyValue": 5040,
+     "villagers": 34,
+     "population": 80,
+     "age": 1,
+     "ages": [
+      717,
+      1008,
+      1202
+     ],
+     "firstUnit": 228,
+     "pop150": 1156,
+     "pop200": 1343
+    }
+   }
+  ]
+ }
+}

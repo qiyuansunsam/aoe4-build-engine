@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T09:22:36.309Z",
+ "generatedAt": "2026-11-06T09:19:57.171Z",
  "times": [
   300,
   600,
@@ -26,10 +26,10 @@
    "theory": {
     "ages": [
      266,
-     815,
-     1218
+     792,
+     1165
     ],
-    "done": 1497,
+    "done": 1491,
     "at": {
      "300": {
       "villagers": 21,
@@ -46,18 +46,18 @@
       "age": 2
      },
      "900": {
-      "villagers": 43,
-      "population": 72,
-      "line": 27,
-      "armyValue": 6480,
+      "villagers": 44,
+      "population": 74,
+      "line": 28,
+      "armyValue": 6720,
       "age": 3
      },
      "1200": {
-      "villagers": 73,
-      "population": 112,
-      "line": 32,
-      "armyValue": 7680,
-      "age": 3
+      "villagers": 74,
+      "population": 116,
+      "line": 35,
+      "armyValue": 8400,
+      "age": 4
      }
     }
    },
@@ -118,10 +118,10 @@
    "theory": {
     "ages": [
      352,
-     1058,
-     1332
+     1274,
+     1414
     ],
-    "done": 1577,
+    "done": 1484,
     "at": {
      "300": {
       "villagers": 21,
@@ -145,11 +145,11 @@
       "age": 2
      },
      "1200": {
-      "villagers": 80,
-      "population": 168,
-      "line": 82,
-      "armyValue": 19680,
-      "age": 3
+      "villagers": 86,
+      "population": 177,
+      "line": 83,
+      "armyValue": 19920,
+      "age": 2
      }
     }
    },
@@ -208,11 +208,11 @@
    },
    "theory": {
     "ages": [
-     717,
-     1024,
+     713,
+     995,
      1217
     ],
-    "done": 1377,
+    "done": 1375,
     "at": {
      "300": {
       "villagers": 20,
@@ -229,17 +229,17 @@
       "age": 1
      },
      "900": {
-      "villagers": 50,
-      "population": 109,
-      "line": 56,
-      "armyValue": 6720,
+      "villagers": 49,
+      "population": 107,
+      "line": 55,
+      "armyValue": 6600,
       "age": 2
      },
      "1200": {
-      "villagers": 92,
-      "population": 162,
-      "line": 63,
-      "armyValue": 8120,
+      "villagers": 90,
+      "population": 161,
+      "line": 61,
+      "armyValue": 7800,
       "age": 3
      }
     }
@@ -298,10 +298,10 @@
    "theory": {
     "ages": [
      360,
-     686,
-     927
+     669,
+     908
     ],
-    "done": 1124,
+    "done": 1120,
     "at": {
      "300": {
       "villagers": 20,
@@ -318,17 +318,17 @@
       "age": 2
      },
      "900": {
-      "villagers": 102,
-      "population": 117,
-      "line": 5,
-      "armyValue": 900,
+      "villagers": 100,
+      "population": 114,
+      "line": 6,
+      "armyValue": 1080,
       "age": 3
      },
      "1200": {
-      "villagers": 150,
+      "villagers": 151,
       "population": 200,
-      "line": 49,
-      "armyValue": 8820,
+      "line": 48,
+      "armyValue": 8640,
       "age": 4
      }
     }
@@ -387,10 +387,10 @@
    "theory": {
     "ages": [
      314,
-     611,
-     835
+     614,
+     838
     ],
-    "done": 1058,
+    "done": 1061,
     "at": {
      "300": {
       "villagers": 20,
@@ -400,15 +400,15 @@
       "age": 1
      },
      "600": {
-      "villagers": 52,
-      "population": 56,
+      "villagers": 51,
+      "population": 55,
       "line": 0,
       "armyValue": 0,
       "age": 2
      },
      "900": {
       "villagers": 95,
-      "population": 130,
+      "population": 129,
       "line": 27,
       "armyValue": 2160,
       "age": 4
@@ -457,6 +457,230 @@
       "armyValue": 9690,
       "age": null
      }
+    }
+   }
+  },
+  {
+   "id": "scots-imperial-muster",
+   "title": "Scots Imperial aggression: mixed melee, Tacksmen, mustered Border Reivers",
+   "civilization": "scots",
+   "objective": {
+    "kind": "done"
+   },
+   "reference": null,
+   "theory": {
+    "ages": [
+     373,
+     584,
+     754
+    ],
+    "done": 1696,
+    "at": {
+     "300": {
+      "villagers": 20,
+      "population": 22,
+      "line": 0,
+      "armyValue": 0,
+      "age": 1
+     },
+     "600": {
+      "villagers": 42,
+      "population": 51,
+      "line": 0,
+      "armyValue": 0,
+      "age": 3
+     },
+     "900": {
+      "villagers": 84,
+      "population": 165,
+      "line": 54,
+      "armyValue": 6895,
+      "age": 4
+     },
+     "1200": {
+      "villagers": 96,
+      "population": 200,
+      "line": 100,
+      "armyValue": 13965,
+      "age": 4
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [],
+    "at": {
+     "300": null,
+     "600": null,
+     "900": null,
+     "1200": null
+    }
+   }
+  },
+  {
+   "id": "scots-castle-aggression",
+   "title": "Scots Castle aggression: mixed melee",
+   "civilization": "scots",
+   "objective": {
+    "kind": "done"
+   },
+   "reference": null,
+   "theory": {
+    "ages": [
+     340,
+     616,
+     1084
+    ],
+    "done": 1584,
+    "at": {
+     "300": {
+      "villagers": 20,
+      "population": 22,
+      "line": 0,
+      "armyValue": 0,
+      "age": 1
+     },
+     "600": {
+      "villagers": 42,
+      "population": 47,
+      "line": 0,
+      "armyValue": 0,
+      "age": 2
+     },
+     "900": {
+      "villagers": 70,
+      "population": 179,
+      "line": 93,
+      "armyValue": 11140,
+      "age": 3
+     },
+     "1200": {
+      "villagers": 76,
+      "population": 200,
+      "line": 120,
+      "armyValue": 14390,
+      "age": 4
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [],
+    "at": {
+     "300": null,
+     "600": null,
+     "900": null,
+     "1200": null
+    }
+   }
+  },
+  {
+   "id": "vikings-feudal-melee",
+   "title": "Vikings Feudal mixed melee aggression, two Town Centers, six Longhouses",
+   "civilization": "vikings",
+   "objective": {
+    "kind": "done"
+   },
+   "reference": null,
+   "theory": {
+    "ages": [
+     419,
+     1177,
+     1225
+    ],
+    "done": 1913,
+    "at": {
+     "300": {
+      "villagers": 19,
+      "population": 21,
+      "line": 0,
+      "armyValue": 0,
+      "age": 1
+     },
+     "600": {
+      "villagers": 37,
+      "population": 68,
+      "line": 24,
+      "armyValue": 2955,
+      "age": 2
+     },
+     "900": {
+      "villagers": 64,
+      "population": 164,
+      "line": 93,
+      "armyValue": 11570,
+      "age": 2
+     },
+     "1200": {
+      "villagers": 72,
+      "population": 200,
+      "line": 127,
+      "armyValue": 15820,
+      "age": 3
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [],
+    "at": {
+     "300": null,
+     "600": null,
+     "900": null,
+     "1200": null
+    }
+   }
+  },
+  {
+   "id": "vikings-valdemar-knights",
+   "title": "Vikings Castle Jylland Knight aggression with the Valdemar Castle, two Town Centers, six Longhouses",
+   "civilization": "vikings",
+   "objective": {
+    "kind": "done"
+   },
+   "reference": null,
+   "theory": {
+    "ages": [
+     349,
+     633,
+     1176
+    ],
+    "done": 1984,
+    "at": {
+     "300": {
+      "villagers": 19,
+      "population": 21,
+      "line": 0,
+      "armyValue": 0,
+      "age": 1
+     },
+     "600": {
+      "villagers": 39,
+      "population": 42,
+      "line": 0,
+      "armyValue": 0,
+      "age": 2
+     },
+     "900": {
+      "villagers": 65,
+      "population": 121,
+      "line": 47,
+      "armyValue": 9870,
+      "age": 3
+     },
+     "1200": {
+      "villagers": 80,
+      "population": 200,
+      "line": 102,
+      "armyValue": 21420,
+      "age": 4
+     }
+    }
+   },
+   "referenceGame": {
+    "ages": [],
+    "at": {
+     "300": null,
+     "600": null,
+     "900": null,
+     "1200": null
     }
    }
   }

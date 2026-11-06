@@ -1,7 +1,7 @@
 {
   "civ": "Japanese",
   "catalogCiv": "japanese",
-  "patch": "16.3.11308",
+  "patch": "17.0.12260",
   "start": {
     "villagers": 6,
     "resources": {
@@ -190,7 +190,7 @@
       "wood": 400,
       "stone": 300
     },
-    "buildSeconds": 150,
+    "buildSeconds": 165,
     "popProvided": 10,
     "villagerProductionMultiplierByAge": {
       "1": 1,
@@ -198,7 +198,7 @@
       "3": 1,
       "4": 1
     },
-    "notes": "Extra TC needs Feudal Age (requirement_ext any-of feudal_age / fast_expand game-mode tech) and an existing capital. Capital HP 7000 (15 garrison), extra TC HP 2500 (8 garrison). Accepts food, wood, gold, stone. No age-based villager production modifier exists for Japanese (none in codex 11257921 or records); a Yorishiro in a TC gives +30% production speed (see mechanics yorishiro_placement). Each TC is upgraded separately with Daimyo Manor/Palace/Shogunate Castle (see mechanics daimyo_town_center_upgrades). The 17.0 preview raises TC build time 150 -> 165 s; not applied (data/patch-next.json, scheduled 2026-10-29).",
+    "notes": "Extra TC needs Feudal Age (requirement_ext any-of feudal_age / fast_expand game-mode tech) and an existing capital. Capital HP 7000 (15 garrison), extra TC HP 2500 (8 garrison). Accepts food, wood, gold, stone. No age-based villager production modifier exists for Japanese (none in codex 11257921 or records); a Yorishiro in a TC gives +30% production speed (see mechanics yorishiro_placement). Each TC is upgraded separately with Daimyo Manor/Palace/Shogunate Castle (see mechanics daimyo_town_center_upgrades). Extra Town Center build time is 165 s (150 s before Update 17.0).",
     "evidence": [
       "catalog:buildings/building_town_center_jpn#cost",
       "catalog:buildings/building_town_center_jpn#buildTimeSeconds",
@@ -3475,11 +3475,6 @@
       "item": "Villager speed unit",
       "why": "speedEngineUnits 4.5 is a raw engine value; tile conversion is a repo-wide open item.",
       "fallback": "Use the same conversion as the other civ packs."
-    },
-    {
-      "item": "17.0 preview changes",
-      "why": "data/patch-next.json lists Town Center build time 150 -> 165 s (all civs) and Ram HP 370 -> 410 for 2026-10-29; not applied here (16.3.11308 values).",
-      "fallback": "Switch only when the patch ships and the catalog is re-extracted."
     }
   ]
 }

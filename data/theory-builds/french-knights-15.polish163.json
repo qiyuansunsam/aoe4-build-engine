@@ -1,0 +1,117 @@
+{
+ "method": "Polish: threshold 52 (best army measure over 10 searches minus slack 1); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish.",
+ "score": -1576.948,
+ "build": {
+  "id": "french-knights-15",
+  "title": "Royal Knights by 15:00",
+  "summary": "Royal Knights by 15:00 within one knight of the most any searched plan completes, finishing soonest at 200 population with every Royal Knight upgrade.",
+  "civilization": "french",
+  "engine": "civ",
+  "patch": "16.3.11308",
+  "reference": {
+   "buildId": "french-knights-observed-4v4"
+  },
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 900,
+   "slack": 1
+  },
+  "lineNames": "Royal Knight",
+  "result": {
+   "done": 1577,
+   "at": 900,
+   "line": 52,
+   "army": 52,
+   "armyValue": 12480,
+   "villagers": 56,
+   "population": 114,
+   "age": 2,
+   "ages": [
+    352,
+    1058,
+    1332
+   ]
+  },
+  "lines": [
+   "royal-knight"
+  ],
+  "vilTarget": 50,
+  "landmarks": {
+   "2": "school-of-cavalry",
+   "3": "guild-hall",
+   "4": "red-palace"
+  },
+  "lmBuilders": {
+   "2": 2,
+   "3": 7,
+   "4": 7
+  },
+  "extraTCs": {
+   "2": 1,
+   "3": 0
+  },
+  "tcBuilders": 10,
+  "producers": {
+   "1": 0,
+   "2": 4,
+   "3": 6,
+   "4": 5
+  },
+  "maxProducers": 12,
+  "ecoTechs": {
+   "1": [
+    "upgrade_unit_town_center_wheelbarrow_1",
+    "upgrade_econ_villager_hunting_gear_1"
+   ],
+   "2": "all",
+   "3": "all",
+   "4": []
+  },
+  "milTechAge": {
+   "2": false,
+   "3": true
+  },
+  "blacksmiths": 1,
+  "pauseForAge": false,
+  "window": 6,
+  "woodFloor": 0.2,
+  "goldBias": 0.6,
+  "armyAge": 2,
+  "pauseFrom": {
+   "3": 900,
+   "4": 1200
+  },
+  "vilTarget2": 80,
+  "vilTarget2At": 840
+ },
+ "ledger": {
+  "id": "french-knights-15",
+  "evaluations": 6048,
+  "seconds": 161,
+  "seed": 20261024,
+  "objective": {
+   "kind": "lineAt",
+   "line": "royal-knight",
+   "t": 900,
+   "slack": 1
+  },
+  "threshold": 52,
+  "best": {
+   "done": 1577,
+   "at": 900,
+   "line": 52,
+   "army": 52,
+   "armyValue": 12480,
+   "villagers": 56,
+   "population": 114,
+   "age": 2,
+   "ages": [
+    352,
+    1058,
+    1332
+   ]
+  },
+  "runnersUp": []
+ }
+}

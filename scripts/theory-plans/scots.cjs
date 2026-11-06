@@ -1,4 +1,4 @@
-/* Scots theory builds (Update 17.0 preview rules, data/civ-rules/scots.json). Crafted by the engine search alone from game rules;
+/* Scots theory builds (installed 17.0.12260 rules, data/civ-rules/scots.json). Crafted by the engine search alone from game rules;
    no recorded games or guide build orders are inputs. Loaded by scripts/optimize_theory_builds.cjs.
    Sam, 2026-10-25: Stone of Destiny in Feudal with every building in its reach, Kirkmen working Fishponds (the pond buff does
    not stack), and no Imperial (tier 3) economy technologies in any build.

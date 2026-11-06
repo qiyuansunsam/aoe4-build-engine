@@ -1,13 +1,13 @@
 {
- "method": "Polish: threshold 4910 (best army measure over 7 searches minus slack 250); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish.",
- "score": -1371.96,
+ "method": "Polish: threshold 4910 (best army measure over 11 searches minus slack 250); 800 random 1-3 coordinate mutations per searched plan, then hill-climbing from the best 10 for the soonest finish.",
+ "score": -1369.96,
  "build": {
   "id": "mongol-cavalry-10",
   "title": "Mongol cavalry by 10:00",
   "summary": "Stable cavalry value at 10:00 within one unit of the most any searched plan completes (Ovoo double production and Improved technologies chosen by the search), finishing soonest at 200 population with every upgrade of its line.",
   "civilization": "mongol",
   "engine": "civ",
-  "patch": "16.3.11308",
+  "patch": "17.0.12260",
   "reference": {
    "buildId": "mongols-observed-4v4"
   },
@@ -18,7 +18,7 @@
   },
   "lineNames": "Keshik and Horseman",
   "result": {
-   "done": 1377,
+   "done": 1375,
    "at": 600,
    "army": 42,
    "armyValue": 5040,
@@ -26,48 +26,48 @@
    "population": 80,
    "age": 1,
    "ages": [
-    717,
-    1024,
+    713,
+    995,
     1217
-   ]
+   ],
+   "firstUnit": 228,
+   "pop150": 1162,
+   "pop200": 1342
   },
+  "planId": "mongol-cavalry-10",
   "lines": [
    "keshik",
    "horseman"
   ],
-  "vilTarget": 140,
+  "vilTarget": 70,
   "landmarks": {
-   "2": "silver-tree",
+   "2": "deer-stones",
    "3": "steppe-redoubt",
    "4": "white-stupa"
   },
   "lmBuilders": {
-   "2": 9,
-   "3": 9,
-   "4": 14
+   "2": 10,
+   "3": 12,
+   "4": 9
   },
   "extraTCs": {
    "2": 2,
    "3": 0
   },
-  "tcBuilders": 10,
+  "tcBuilders": 8,
   "producers": {
    "1": 2,
-   "2": 0,
-   "3": 2,
-   "4": 2
+   "2": 1,
+   "3": 1,
+   "4": 3
   },
-  "maxProducers": 12,
+  "maxProducers": 7,
   "ecoTechs": {
    "1": [
     "upgrade_unit_wheelbarrow_1_improved_mon"
    ],
-   "2": [
-    "upgrade_econ_resource_food_harvest_rate_2",
-    "upgrade_econ_resource_wood_harvest_rate_2",
-    "upgrade_econ_resource_gold_harvest_rate_2_mon"
-   ],
-   "3": "all",
+   "2": "all",
+   "3": [],
    "4": []
   },
   "milTechAge": {
@@ -76,15 +76,15 @@
   },
   "blacksmiths": 2,
   "pauseForAge": true,
-  "window": 3,
-  "woodFloor": 0.25,
-  "goldBias": 1.6,
+  "window": 4,
+  "woodFloor": 0.15,
+  "goldBias": 1.2,
   "armyAge": 1,
   "pauseFrom": {
-   "3": 540,
+   "3": 660,
    "4": 900
   },
-  "vilTarget2": null,
+  "vilTarget2": 120,
   "vilTarget2At": 420,
   "mech": {
    "doubleVillagers": false,
@@ -94,8 +94,8 @@
  },
  "ledger": {
   "id": "mongol-cavalry-10",
-  "evaluations": 5125,
-  "seconds": 122,
+  "evaluations": 6275,
+  "seconds": 160,
   "seed": 20261024,
   "objective": {
    "kind": "valueAt",
@@ -104,7 +104,7 @@
   },
   "threshold": 4910,
   "best": {
-   "done": 1377,
+   "done": 1375,
    "at": 600,
    "army": 42,
    "armyValue": 5040,
@@ -112,10 +112,13 @@
    "population": 80,
    "age": 1,
    "ages": [
-    717,
-    1024,
+    713,
+    995,
     1217
-   ]
+   ],
+   "firstUnit": 228,
+   "pop150": 1162,
+   "pop200": 1342
   },
   "runnersUp": []
  }

@@ -1,1 +1,1 @@
-french-knights-10 polish: 5570 runs in 181 s, threshold 18 -> {"done":1497,"at":600,"line":18,"army":18,"armyValue":4320,"villagers":28,"population":49,"age":2,"ages":[266,815,1218]}
+french-knights-10 polish: 7090 runs in 200 s, threshold 18 -> {"done":1491,"at":600,"line":18,"army":18,"armyValue":4320,"villagers":28,"population":49,"age":2,"ages":[266,792,1165],"firstUnit":323,"pop150":1316,"pop200":1474}

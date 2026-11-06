@@ -187,7 +187,8 @@ if (process.argv.includes("--polish")) {
       const thr = Math.max(...rs.map(x => x.m)) - b.objective.slack; for (const x of rs) x.score = x.m >= thr && Number.isFinite(x.d) ? -x.d + x.m / 1e3 : -Infinity; }
     rs.sort((x, y) => y.score - x.score); const r = rs[0];
     const { result: _r, objective: _o, ...plan } = r.build; const run = simulateCiv({ ...plan, lite: true });
-    out.builds.push({ ...r.build, title: b.title, summary: b.summary, objective: b.objective, result: describe(run, b.objective) }); ledger.builds.push({ ...r.ledger, searches: rs.map(x => ({ seed: x.ledger.seed, evaluations: x.ledger.evaluations, score: x.score, best: x.ledger.best })) }); if (!out.method) out.method = r.method; console.log(b.id, "best of", rs.length, JSON.stringify(r.build.result)); }
+    // every stored search is re-scored above with the current rules, so the merged plan carries the patch of those rules; the ledger keeps the patch each search ran on
+    out.builds.push({ ...r.build, patch: RULES.civs[b.civilization].patch || RULES.patch, title: b.title, summary: b.summary, objective: b.objective, result: describe(run, b.objective) }); ledger.builds.push({ ...r.ledger, rulesPatch: RULES.civs[b.civilization].patch || RULES.patch, searchedOn: r.build.patch, searches: rs.map(x => ({ seed: x.ledger.seed, evaluations: x.ledger.evaluations, searchedOn: x.build.patch, score: x.score, best: x.ledger.best })) }); if (!out.method) out.method = r.method; console.log(b.id, "best of", rs.length, JSON.stringify(r.build.result)); }
   fs.writeFileSync(path.join(ROOT, "data/theory-builds.json"), JSON.stringify(out, null, 1));
   fs.writeFileSync(path.join(ROOT, "data/theory-builds-search.json"), JSON.stringify(ledger, null, 1));
   console.log("merged", out.builds.length, "builds");
