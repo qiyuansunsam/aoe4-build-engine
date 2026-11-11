@@ -38,6 +38,7 @@ SEED_MIN_RATING = 1200                               # Diamond floor
 BUILD_RE = re.compile(r'/replay/[^/]+/[^/]+/(\d+)/')
 
 lock = threading.Lock()
+SAVE_REPLAY_METADATA = False
 
 
 def get(path, params, timeout=90, tries=4):
@@ -47,7 +48,10 @@ def get(path, params, timeout=90, tries=4):
         try:
             req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/json'})
             with urllib.request.urlopen(req, timeout=timeout) as r:
-                return json.loads(r.read().decode('utf-8', 'replace'))
+                result = json.loads(r.read().decode('utf-8', 'replace'))
+                if result.get('result', {}).get('code') != 0:
+                    raise ValueError('Official API returned an unsuccessful result envelope')
+                return result
         except urllib.error.HTTPError as e:
             wait = int(e.headers.get('Retry-After') or delay) if e.code == 429 else delay
             if attempt == tries - 1 or e.code in (400, 401, 403, 404):
@@ -134,19 +138,35 @@ def compact(match):
 
 def fetch_profile(pid):
     d = get('getRecentMatchHistory', {'title': 'age4', 'profile_ids': f'[{pid}]'})
-    return pid, [row for row in (compact(m) for m in d.get('matchHistoryStats') or []) if row]
+    matches = [m for m in d.get('matchHistoryStats') or [] if compact(m)]
+    if SAVE_REPLAY_METADATA:
+        records = []
+        for match in matches:
+            record = {k: match.get(k) for k in ('id', 'matchtype_id', 'startgametime', 'completiontime', 'mapname')}
+            record['matchurls'] = [{k: u.get(k) for k in ('profile_id', 'url', 'datatype')} for u in match.get('matchurls', []) if u.get('datatype') == 0]
+            record['matchhistoryreportresults'] = [{k: p.get(k) for k in ('profile_id', 'teamid', 'civilization_id', 'resulttype')} for p in match.get('matchhistoryreportresults', [])]
+            record['matchhistorymember'] = [{k: p.get(k) for k in ('profile_id', 'teamid', 'civilization_id', 'oldrating', 'newrating', 'outcome')} for p in match.get('matchhistorymember', [])]
+            records.append(record)
+        path = ROOT / '.cache/rankings/history-refresh' / f'{pid}.json'
+        path.parent.mkdir(parents=True, exist_ok=True)
+        temp = path.with_suffix('.tmp')
+        temp.write_text(json.dumps({'matches': records, 'aliases': {p['profile_id']: p.get('alias', '') for p in d.get('profiles', [])}}, ensure_ascii=False), encoding='utf-8')
+        temp.replace(path)
+    return pid, [compact(m) for m in matches]
 
 
 def main():
-    global SEED_MIN_RATING
+    global SEED_MIN_RATING,SAVE_REPLAY_METADATA
     ap = argparse.ArgumentParser()
     ap.add_argument('--max-profiles', type=int, default=4000, help='players to fetch in this run')
     ap.add_argument('--workers', type=int, default=4)
     ap.add_argument('--refresh-seeds', action='store_true', help='re-read the ladders even if seeds are stored')
     ap.add_argument('--refetch-after-hours', type=float, default=20, help='fetch a player again once this old')
     ap.add_argument('--seed-min-rating',type=int,default=1200)
+    ap.add_argument('--save-replay-metadata', action='store_true', help='Save compact official metadata for the independent headless replay collector.')
     args = ap.parse_args()
     SEED_MIN_RATING=args.seed_min_rating
+    SAVE_REPLAY_METADATA=args.save_replay_metadata
     OUT.mkdir(parents=True, exist_ok=True)
     state = load_state()
 

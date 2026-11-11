@@ -22,6 +22,19 @@ Never silently combine these rulesets. Show provenance where a player inspects a
 - Distance, idle time, stacking and construction scaling remain model assumptions. Neither a successful build nor parameter arithmetic validates them against live games.
 - The UI must support hovering, keyboard focus and touch/click for equivalent depth; explanations belong to the selected object.
 
+## Headless win-rate additions
+
+The November 10, 2026 source handover is documented in
+`docs/headless-rankings-handover.md`. Work starts from production source `9beea99`,
+preserves the large civilization dataset and adds aggregate-only unit,
+technology and landmark tables to Win rates. Production-share means compare
+wins and losses using official replay orders, not completed production.
+The collection was rate limited and remains incomplete; consult the handover
+before resuming or publishing. No AoE4 World data or game playback is required.
+
 ## Scope boundaries
 
 Game-file extraction is read-only. Raw proprietary extracts stay local and out of the repository. No game launch is required. Local redesign and verification are authorized; no remote deployment has been requested in this session.
+
+
+The current Tier lists UI uses `site/unit-tiers.js`, `site/winrates.js` and `data/unit-usage-tiers.json` with shared mode/rating selectors. `scripts/patch_pipeline.py` decodes official statistical summaries and `scripts/publish_patch_analysis.py` verifies and refreshes the local site. The earlier command-replay collector and its data remain available for research, but its separate Win rates choices interface is superseded by the unified tier tabs. Five profiles are configured in `data/tracked-player-ids.json`; the tactical matrix retains recorded telemetry while publisher-supported age components update headlessly. See README for worker operation and coverage limits.
