@@ -1,0 +1,15 @@
+const {chromium}=require('C:/Users/Sam/projects/codex-setup/browser-tools/node_modules/playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+(async()=>{const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:8765/#database/unit_crossbowman_3_vik');await page.locator('#catalog-unit-tier').waitFor({state:'attached'});
+const stat=label=>page.locator('.catalog-base-stats .stat').filter({has:page.locator('small',{hasText:new RegExp('^'+label+'$')})}).locator('strong');
+const options=await page.locator('#catalog-unit-tier option').allTextContents();assert.deepEqual(options,['Skåne Crossbowmen','Elite Skåne Crossbowmen']);assert.equal(await stat('Crossbow damage').innerText(),'9');assert.equal(await stat('Base bonus vs Heavy').innerText(),'+9');
+await page.locator('[data-catalog-apply="upgrade_ranged_incendiary"]').click();assert.equal(await stat('Crossbow damage').innerText(),'10.8');
+await page.locator('#catalog-unit-tier').selectOption('unit_crossbowman_4_vik',{force:true});await page.waitForURL('**/#database/unit_crossbowman_4_vik');await page.waitForFunction(()=>document.querySelector('.record-identity h2')?.textContent==='Elite Skåne Crossbowmen');assert.equal(await stat('Crossbow damage').innerText(),'14.4');assert.equal(await stat('Base bonus vs Heavy').innerText(),'+11');
+assert.equal(await page.locator('[data-catalog-apply="upgrade_unit_crossbowman_4_vik"]').count(),0);
+const colors=await page.evaluate(()=>Object.fromEntries([...document.querySelectorAll('.catalog-base-stats .stat')].map(el=>[el.querySelector('small').textContent,el.className])));assert.match(colors['Ranged armor'],/stat-defense/);assert.match(colors['Crossbow damage'],/stat-attack/);assert.match(colors['Train time'],/stat-other/);assert.match(colors['Base bonus vs Heavy'],/stat-attack/);
+const controls=await page.evaluate(()=>{const hand=catalog.find(r=>r.id==='unit_handcannon_4_abb'),tech=catalog.find(t=>t.id==='upgrade_ranged_incendiary');return {handEffect:observedTechEffect(hand,tech).list,descriptionSize:getComputedStyle(document.querySelector('.catalog-upgrade-desc')).fontSize}});assert.equal(controls.handEffect.length,0);assert.equal(controls.descriptionSize,'14px');
+fs.mkdirSync('site/shots/library-upgrades',{recursive:true});for(const [theme,width]of[['light',1440],['dark',390]]){await page.locator('#theme').selectOption(theme,{force:true});await page.setViewportSize({width,height:1000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.screenshot({path:`site/shots/library-upgrades/${theme}-${width}.png`,animations:'disabled'});}
+assert.deepEqual(errors,[]);const report={options,damage:[9,10.8,14.4],baseBonus:[9,11],colors,errors};fs.writeFileSync('site/shots/library-upgrades/verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));await browser.close();})().catch(e=>{console.error(e);process.exit(1)});
+
+

@@ -16,8 +16,14 @@ const wrNumber=n=>Math.round(n).toLocaleString('en-US');
 const wrPercent=(x,digits=1)=>(100*x).toFixed(digits)+'%';
 // Wilson score interval for a win share: the range the true rate lies in at 95% confidence given this many games.
 function wrInterval(wins,games){if(!games)return [0,1];const z=1.96,p=wins/games,d=1+z*z/games,c=(p+z*z/(2*games))/d,h=z*Math.sqrt(p*(1-p)/games+z*z/(4*games*games))/d;return [Math.max(0,c-h),Math.min(1,c+h)];}
-function wrBand(){const bands=WINRATES.bands||[];return bands.find(b=>b.id===wrState.rank)||bands[0]||null;}
-function wrMode(mode){const band=wrBand();return band&&WINRATES.ranks[band.id]?.modes?.[mode]||null;}
+function wrBand(){const bands=WINRATES.bands||[];return bands.find(b=>b.id===tierRankState.rank)||bands[0]||null;}
+function wrCombined(){
+ const band=wrBand(),modes=WINRATES.ranks[band?.id]?.modes||{},result={games:0,civs:{},maps:{}};
+ const add=(target,source)=>{target.games+=source.games||0;for(const [civ,counts] of Object.entries(source.civs||{})){target.civs[civ]??=[0,0,0];counts.forEach((n,i)=>target.civs[civ][i]+=n);}};
+ for(const id of tierModeState.modes){const source=modes[{'1':'solo','2':'2v2','3':'3v3','4':'4v4'}[id]];if(!source)continue;add(result,source);for(const [slug,map] of Object.entries(source.maps||{})){result.maps[slug]??={games:0,civs:{}};add(result.maps[slug],map);}}
+ return result;
+}
+function wrMode(mode){return mode==='combined'?wrCombined():WINRATES.ranks[wrBand()?.id]?.modes?.[mode]||null;}
 function wrMapName(slug){return WINRATES.maps?.[slug]?.name||slug;}
 const wrPicks=scope=>Object.values(scope.civs).reduce((s,v)=>s+v[2],0);
 const wrMake=(kind,key,[games,wins,picked],picks)=>({kind,key,games,wins,picked,rate:games?wins/games:0,pick:picks?picked/picks:0,interval:wrInterval(wins,games)});
@@ -35,27 +41,25 @@ function wrBar(row,span){const pos=x=>50+50*Math.max(-1,Math.min(1,(x-.5)/span))
 function wrRow(row,index,span,cls){const name=row.kind==='civ'?civName(row.key):wrMapName(row.key),tip=`${name}: ${wrNumber(row.wins)} wins in ${wrNumber(row.games)} games, 95% range ${wrPercent(row.interval[0])} to ${wrPercent(row.interval[1])}, picked ${wrNumber(row.picked)} times`;
   const label=cls==='wr-total'?`${civFlag(row.key)}<span>All maps</span>`:row.kind==='civ'?`${civFlag(row.key)}<button type="button" class="wr-link" data-wr-civ="${esc(row.key)}">${esc(name)}</button>`:`<button type="button" class="wr-link" data-wr-map="${esc(row.key)}">${esc(name)}</button>`;
   return `<tr class="${cls}" data-wr-row="${esc(row.key)}" title="${esc(tip)}"><td class="wr-rank">${cls?'':index+1}</td><th scope="row" class="wr-name">${label}</th><td class="wr-barcell">${row.games?wrBar(row,span):''}</td><td class="wr-rate">${row.games?wrPercent(row.rate):'–'}</td><td class="wr-games">${wrNumber(row.games)}</td><td class="wr-pick">${wrPercent(row.pick)}</td></tr>`;}
-function wrBoardHtml(board,span){const [title,sub]=WR_MODE_LABELS[board.mode],head=(key,label,cls)=>`<th scope="col" class="${cls}"><button type="button" class="wr-sort" data-wr-sort="${key}" aria-pressed="${wrState.sort===key}">${label}</button></th>`;
+function wrBoardHtml(board,span){const [title,sub]=board.mode==='combined'?['Civilizations',tierModeOptions.filter(([id])=>tierModeState.modes.includes(id)).map(([,name])=>name).join(' + ')]:WR_MODE_LABELS[board.mode],head=(key,label,cls)=>`<th scope="col" class="${cls}"><button type="button" class="wr-sort" data-wr-sort="${key}" aria-pressed="${wrState.sort===key}">${label}</button></th>`;
   const lo=wrPercent(.5-span,0),hi=wrPercent(.5+span,0),any=board.ranked.length||board.thin.length;
   return `<section class="page-panel wr-board" data-wr-mode="${board.mode}"><div class="panel-head"><h2>${title}</h2><span class="meta">${esc(sub)} · ${wrNumber(board.games)} games</span></div>${any?`<div class="table-scroll"><table class="wr-table"><thead><tr><th scope="col" class="wr-rank">#</th><th scope="col">${wrState.civ?'Map':'Civilization'}</th><th scope="col" class="wr-barcell"><span class="wr-axis" aria-hidden="true"><span>${lo}</span><span>50%</span><span>${hi}</span></span></th>${head('rate','Win rate','wr-rate')}${head('games','Games','wr-games')}${head('pick','Pick rate','wr-pick')}</tr></thead><tbody>${board.total?wrRow(board.total,0,span,'wr-total'):''}${board.ranked.map((r,i)=>wrRow(r,i,span,'')).join('')}${board.thin.length?`<tr class="wr-divider"><td colspan="6">Under ${WR_MIN_GAMES} games</td></tr>${board.thin.map((r,i)=>wrRow(r,i,span,'wr-thin')).join('')}`:''}</tbody></table></div>`:'<p class="meta">No games recorded.</p>'}</section>`;}
 function wrDate(iso){if(!iso)return '';const [y,m,d]=iso.split('-').map(Number);return `${d} ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]} ${y}`;}
 function renderWinrates(){const bands=WINRATES.bands||[],band=wrBand();
-  if(!band){$('#page').innerHTML=pageTop('Win rates','')+'<section class="page-panel"><p class="meta">No win-rate data in this build.</p></section>';return;}
-  const all=WINRATES.ranks[band.id]?.modes||{},mapGames={},civs=new Set();
-  for(const mode of ['solo','team']){for(const [slug,m] of Object.entries(all[mode]?.maps||{}))mapGames[slug]=(mapGames[slug]||0)+m.games;for(const civ of Object.keys(all[mode]?.civs||{}))civs.add(civ);}
+  if(!band){$('#page').innerHTML=pageTop('Tier lists','')+tierListTabs('civilizations')+'<section class="page-panel"><p class="meta">No win-rate data in this build.</p></section>';return;}
+  const combined=wrCombined(),mapGames=Object.fromEntries(Object.entries(combined.maps).map(([slug,m])=>[slug,m.games])),civs=new Set(Object.keys(combined.civs));
   if(wrState.map&&!mapGames[wrState.map])wrState.map='';
   if(wrState.civ&&!civs.has(wrState.civ))wrState.civ='';
   if(wrState.civ)wrState.map='';
-  if(!WR_VIEWS[wrState.view])wrState.view='overall';
-  const boards=WR_VIEWS[wrState.view].map(wrBoard).filter(Boolean),span=wrSpan(boards);
+  const boards=[wrBoard('combined')],span=wrSpan(boards);
   const maps=Object.entries(mapGames).sort((a,b)=>b[1]-a[1]),sample=WINRATES.sample||{},patch=WINRATES.patch||{},rules=WINRATES.rules||{};
-  const source=[`Relic match history`,`Update ${patch.label||''}${patch.builds?.length?` (builds ${patch.builds.join(', ')})`:''}`,`${wrNumber(WINRATES.ranks[band.id]?.games||0)} ranked games`,sample.firstMatch&&sample.lastMatch?`${wrDate(sample.firstMatch)} to ${wrDate(sample.lastMatch)}`:'',`average rating ${band.minRating}+ before the match`,rules.minDurationSeconds?`games under ${Math.round(rules.minDurationSeconds/60)}:00 left out`:'',rules.soloMirrorsExcluded?'1v1 mirror games left out of win rate':''].filter(Boolean);
-  $('#page').innerHTML=pageTop('Win rates','')+`<div class="page-filter library-filter wr-filter"><label>Rank<select id="wr-rank">${bands.map(b=>`<option value="${esc(b.id)}"${b.id===band.id?' selected':''}>${esc(b.label)}</option>`).join('')}</select></label><label>Map<select id="wr-map"><option value="">All maps</option>${maps.map(([slug])=>`<option value="${esc(slug)}"${slug===wrState.map?' selected':''}>${esc(wrMapName(slug))}</option>`).join('')}</select></label><label>Civilization<select id="wr-civ"><option value="">All civilizations</option>${civOptions([...civs]).replace(`value="${esc(wrState.civ)}"`,`value="${esc(wrState.civ)}" selected`)}</select></label><div class="wr-view"><span class="wr-view-label" id="wr-view-label">Boards</span><div class="segmented" role="group" aria-labelledby="wr-view-label"><button type="button" data-wr-view="overall" aria-pressed="${wrState.view==='overall'}">Solo and team</button><button type="button" data-wr-view="sizes" aria-pressed="${wrState.view==='sizes'}">By team size</button></div></div></div><div class="wr-grid wr-grid-${boards.length}">${boards.map(b=>wrBoardHtml(b,span)).join('')}</div><p class="wr-source meta">${source.map(esc).join(' · ')}</p>`;
+  const source=[`Relic match history`,`Update ${patch.label||''}${patch.builds?.length?` (builds ${patch.builds.join(', ')})`:''}`,`${wrNumber(WINRATES.ranks[band.id]?.games||0)} ranked games`,sample.firstMatch&&sample.lastMatch?`${wrDate(sample.firstMatch)} to ${wrDate(sample.lastMatch)}`:'',`match-average pre-match rating: ${band.label}`,rules.minDurationSeconds?`games under ${Math.round(rules.minDurationSeconds/60)}:00 left out`:'',rules.soloMirrorsExcluded?'1v1 mirror games left out of win rate':''].filter(Boolean);
+  $('#page').innerHTML=pageTop('Tier lists','')+tierListTabs('civilizations')+`<div class="page-filter library-filter wr-filter">${tierRankPicker()}<label>Map<select id="wr-map"><option value="">All maps</option>${maps.map(([slug])=>`<option value="${esc(slug)}"${slug===wrState.map?' selected':''}>${esc(wrMapName(slug))}</option>`).join('')}</select></label><label>Civilization<select id="wr-civ"><option value="">All civilizations</option>${civOptions([...civs]).replace(`value="${esc(wrState.civ)}"`,`value="${esc(wrState.civ)}" selected`)}</select></label>${tierModePicker()}</div><div class="wr-grid wr-grid-${boards.length}">${boards.map(b=>wrBoardHtml(b,span)).join('')}</div><p class="wr-source meta">${source.map(esc).join(' · ')}</p>`;
   const save=()=>{try{localStorage.setItem(WR_KEY,JSON.stringify(wrState));}catch{}},again=focus=>{save();renderWinrates();enhanceSelects();if(focus)document.querySelector(focus)?.focus({preventScroll:true});};
-  $('#wr-rank').onchange=e=>{wrState.rank=e.target.value;again();};
+  bindTierRank(renderWinrates);
   $('#wr-map').onchange=e=>{wrState.map=e.target.value;if(wrState.map)wrState.civ='';again();};
   $('#wr-civ').onchange=e=>{wrState.civ=e.target.value;if(wrState.civ)wrState.map='';again();};
-  $$('[data-wr-view]').forEach(b=>b.onclick=()=>{if(wrState.view===b.dataset.wrView)return;wrState.view=b.dataset.wrView;again(`[data-wr-view="${wrState.view}"]`);});
+  bindTierModes(renderWinrates);
   $$('[data-wr-sort]').forEach(b=>b.onclick=()=>{const mode=b.closest('[data-wr-mode]').dataset.wrMode;wrState.sort=b.dataset.wrSort;again(`[data-wr-mode="${mode}"] [data-wr-sort="${wrState.sort}"]`);});
   $$('[data-wr-civ]').forEach(b=>b.onclick=()=>{wrState.civ=b.dataset.wrCiv;wrState.map='';again('.wr-board .wr-link');});
   $$('[data-wr-map]').forEach(b=>b.onclick=()=>{wrState.map=b.dataset.wrMap;wrState.civ='';again('.wr-board .wr-link');});

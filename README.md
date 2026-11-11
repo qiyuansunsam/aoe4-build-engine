@@ -17,6 +17,18 @@ The neutral glass interfaces, in white and VS Code dark, have Comparison, Builds
 
 Public deployment (Cloudflare + Fly, read-only): [deploy/README.md](deploy/README.md).
 
+The Players page retains five configured profiles (`data/tracked-player-ids.json`) and the original tactical matrix. Publisher summaries refresh supported Feudal/Castle timings and recent match records; tactical radar scores remain sourced from the recorded telemetry because summaries lack continuous damage, positions, vision and queues.
+
+Tier lists share civilization, multi-mode and pre-match rating filters. Units use production-share-weighted wins and losses; usage uses games of eligible civilizations. Per-game count/share evidence loads on demand. Buildings includes landmarks, House of Wisdom wings, wonders, generic Keeps and concurrent TC milestones. Numeric Elo bands are not historical Bronze–Conqueror divisions.
+
+Headless patch collection (no game client or AoE4World service):
+```powershell
+python -X utf8 scripts/patch_pipeline.py --watch --refresh-discovery --publish-script scripts/publish_patch_analysis.py --publish-every 500
+```
+The worker analyzes every known ranked match of patch builds 12182/12260, broadens discovery to all ranked rating levels, caches verified compressed files, and resumes through a SQLite manifest. Official recent-history limits mean this is not a census of every match worldwide. Progress is `.cache/patch-analysis/status.json`; last successful local publication is `published.json` in the same directory. Create `.cache/patch-analysis/STOP` to stop gracefully; remove that file before resuming. A 20 GB free-space reserve pauses collection. The worker updates the local site; it does not automatically commit, push or deploy future snapshots.
+
+Manual publication of a coherent worker snapshot: `python -X utf8 scripts/patch_pipeline.py --export`, then `python -X utf8 scripts/publish_patch_analysis.py --base .cache/patch-analysis`. Publication verifies item arithmetic and official outcomes before rebuilding. Per-game calculation evidence lives in `data/tier-evidence/`. Browser checks: `node site/verify-production-rankings.cjs`; artifacts are in `site/shots/production-rankings/`.
+
 The [local API](server/README.md) serves the app and proxies AI text drafting to the existing loopback CLI proxy. Credentials remain server-side. AI proposals stay unvalidated and are saved only when the user chooses. Backend fixture tests: `python -X utf8 -m unittest discover -s server -p 'test_*.py'`.
 
 ## Original engine context

@@ -32,11 +32,11 @@ html = open(here / "index.template.html", encoding="utf-8").read()
 for marker, filename in [("/*__CRAFTER_CSS__*/", "crafter.css"), ("/*__CRAFTER_JS__*/", "crafter.js"), ("/*__CONTEXT_CSS__*/", "context-actions.css"), ("/*__CATALOG_CSS__*/", "catalog.css"), ("/*__GAMES_CSS__*/", "games.css"), ("/*__CONTEXT_JS__*/", "context-actions.js"), ("/*__I18N_CSS__*/", "i18n.css"), ("/*__I18N_JS__*/", "i18n.js")]:
     content = (here / filename).read_text(encoding="utf-8")
     if filename == "crafter.js":
-        content = (here / "observed-army.js").read_text(encoding="utf-8") + "\n" + (here / "observed-derived.js").read_text(encoding="utf-8") + "\n" + content + "\n" + (here / "players.js").read_text(encoding="utf-8") + "\n" + (here / "winrates.js").read_text(encoding="utf-8") + "\n" + (here / "patch-notes.js").read_text(encoding="utf-8") + "\n" + (here / "patch-changes.js").read_text(encoding="utf-8")
+        content = (here / "observed-army.js").read_text(encoding="utf-8") + "\n" + (here / "observed-derived.js").read_text(encoding="utf-8") + "\n" + (here / "unit-tiers.js").read_text(encoding="utf-8") + "\n" + content + "\n" + (here / "players.js").read_text(encoding="utf-8") + "\n" + (here / "winrates.js").read_text(encoding="utf-8") + "\n" + (here / "patch-notes.js").read_text(encoding="utf-8") + "\n" + (here / "patch-changes.js").read_text(encoding="utf-8")
     if filename == "crafter.css":
         content += "\n" + (here / "build-timeline.css").read_text(encoding="utf-8")
     if filename == "games.css":
-        content += "\n" + (here / "players.css").read_text(encoding="utf-8") + "\n" + (here / "winrates.css").read_text(encoding="utf-8") + "\n" + (here / "patch-notes.css").read_text(encoding="utf-8") + "\n" + (here / "patch-changes.css").read_text(encoding="utf-8")
+        content += "\n" + (here / "unit-tiers.css").read_text(encoding="utf-8") + "\n" + (here / "players.css").read_text(encoding="utf-8") + "\n" + (here / "winrates.css").read_text(encoding="utf-8") + "\n" + (here / "patch-notes.css").read_text(encoding="utf-8") + "\n" + (here / "patch-changes.css").read_text(encoding="utf-8")
         for extra in args.extra_css:
             content += "\n/* extra: " + extra + " */\n" + pathlib.Path(extra).read_text(encoding="utf-8")
     if filename == "context-actions.js":
@@ -46,7 +46,7 @@ for marker, filename in [("/*__CRAFTER_CSS__*/", "crafter.css"), ("/*__CRAFTER_J
 html = html.replace("/*__ENGINE__*/", eng.replace("</script", "<\\/script"))
 out.mkdir(parents=True, exist_ok=True)
 data_scripts = []
-for marker, filename in [("/*__BUILD_LIBRARY__*/", "build-library.json"), ("/*__GAME_CATALOG__*/", "game-catalog.json"), ("/*__PATCH_AUDIT__*/", "patch-audit.json"), ("/*__GAME_LIBRARY__*/", "game-library.json"), ("/*__GAME_ICONS__*/", "game-icons.json"), ("/*__CIV_FLAGS__*/", "civilization-flags.json"), ("/*__CATALOG_META__*/", "catalog-enrichment.json"), ("/*__PATCH_NEXT__*/", "patch-next.json"), ("/*__PREVIEW_CATALOG__*/", "catalog-preview-17.0.json"), ("/*__CATALOG_AGES__*/", "catalog-ages.json"), ("/*__I18N_ZH_GAME__*/", "i18n-zh-game.json"), ("/*__I18N_ZH_UI__*/", "i18n-zh-ui.json"), ("/*__CIV_ENGINE_RULES__*/", "civ-engine-rules.json"), ("/*__THEORY_BUILDS__*/", "theory-builds.json"), ("/*__PLAYER_PROFILES__*/", "player-profiles.json"), ("/*__PLAYER_ANALYSIS__*/", "player-analysis.json"), ("/*__WINRATES__*/", "winrates.json"), ("/*__PATCH_NOTES__*/", "patch-notes.json"), ("/*__PATCH_CHANGES__*/", "patch-changes.json")]:
+for marker, filename in [("/*__BUILD_LIBRARY__*/", "build-library.json"), ("/*__GAME_CATALOG__*/", "game-catalog.json"), ("/*__PATCH_AUDIT__*/", "patch-audit.json"), ("/*__GAME_LIBRARY__*/", "game-library.json"), ("/*__GAME_ICONS__*/", "game-icons.json"), ("/*__CIV_FLAGS__*/", "civilization-flags.json"), ("/*__CATALOG_META__*/", "catalog-enrichment.json"), ("/*__PATCH_NEXT__*/", "patch-next.json"), ("/*__PREVIEW_CATALOG__*/", "catalog-preview-17.0.json"), ("/*__CATALOG_AGES__*/", "catalog-ages.json"), ("/*__I18N_ZH_GAME__*/", "i18n-zh-game.json"), ("/*__I18N_ZH_UI__*/", "i18n-zh-ui.json"), ("/*__CIV_ENGINE_RULES__*/", "civ-engine-rules.json"), ("/*__THEORY_BUILDS__*/", "theory-builds.json"), ("/*__PLAYER_PROFILES__*/", "player-profiles.json"), ("/*__PLAYER_ANALYSIS__*/", "player-analysis.json"), ("/*__UNIT_USAGE_TIERS__*/", "unit-usage-tiers.json"), ("/*__WINRATES__*/", "winrates.json"), ("/*__PATCH_NOTES__*/", "patch-notes.json"), ("/*__PATCH_CHANGES__*/", "patch-changes.json")]:
     if marker in html:
         source = here.parent / "data" / filename
         if not source.exists():
@@ -64,7 +64,12 @@ for marker, filename in [("/*__BUILD_LIBRARY__*/", "build-library.json"), ("/*__
 if data_scripts:
     html = html.replace("</head>", "".join(data_scripts) + "</head>", 1)
 os.makedirs(out, exist_ok=True)
-open(out / "index.html", "w", encoding="utf-8").write(html)
+
+if (here.parent / "data/tier-evidence").exists():
+    shutil.copytree(here.parent / "data/tier-evidence", out / "data/tier-evidence", dirs_exist_ok=True)
+
+(out / "index.html.tmp").write_text(html, encoding="utf-8")
+(out / "index.html.tmp").replace(out / "index.html")
 print(str(out / "index.html"), len(html) // 1024, "KB")
 
 if (out.resolve() == (here / "dist").resolve() or args.split_data) and (here.parent / "data/game-perspectives").exists():

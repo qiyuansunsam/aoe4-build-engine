@@ -7,9 +7,10 @@ Source: https://aoe-api.worldsedgelink.com/community/leaderboard (the service th
                            names the game build the match was played on
 
 Step 1 (seeds): every player rated SEED_MIN_RATING or higher on a ranked ladder who has played since the patch
-went live. A game whose average rating reaches the Diamond floor must contain at least one such player.
-Step 2 (matches): fetch those players' recent matches in random order (fixed seed, so a capped run is an unbiased
-sample of the seed list) and append every ranked match of a target build to data/winrates/relic-games.jsonl.
+went live. These are current ratings, so this seed list is not guaranteed to cover every historical Diamond game.
+Step 2 (matches): fetch those players' recent matches in shuffled order (fixed seed for reproducibility)
+and append every ranked match of a target build to data/winrates/relic-games.jsonl. This is a leaderboard-seeded
+sample, not an unbiased sample of matches: recent history limits and repeated players affect inclusion.
 
 The run is resumable and incremental: fetched players and stored match ids are remembered in
 data/winrates/relic-state.json, so a later run only adds newer matches.
@@ -137,16 +138,19 @@ def fetch_profile(pid):
 
 
 def main():
+    global SEED_MIN_RATING
     ap = argparse.ArgumentParser()
     ap.add_argument('--max-profiles', type=int, default=4000, help='players to fetch in this run')
     ap.add_argument('--workers', type=int, default=4)
     ap.add_argument('--refresh-seeds', action='store_true', help='re-read the ladders even if seeds are stored')
     ap.add_argument('--refetch-after-hours', type=float, default=20, help='fetch a player again once this old')
+    ap.add_argument('--seed-min-rating',type=int,default=1200)
     args = ap.parse_args()
+    SEED_MIN_RATING=args.seed_min_rating
     OUT.mkdir(parents=True, exist_ok=True)
     state = load_state()
 
-    if args.refresh_seeds or not state['seeds']:
+    if args.refresh_seeds or not state['seeds'] or state.get('seedMinRating',1200)!=SEED_MIN_RATING:
         print('Reading ranked ladders', flush=True)
         seeds = {}
         with ThreadPoolExecutor(4) as pool:
@@ -154,6 +158,7 @@ def main():
                 for pid, rating in found.items():
                     seeds.setdefault(str(pid), {})[RANKED[board]] = rating
         state['seeds'], state['seedsAt'] = seeds, int(time.time())
+        state['seedMinRating']=SEED_MIN_RATING
         save_state(state)
     print(f'{len(state["seeds"])} seed players', flush=True)
 

@@ -117,9 +117,11 @@ def tracked_players(root):
     if not path.exists():
         return []
     manifest = read(path)
+    allowed_path=Path(root)/'data/tracked-player-ids.json'
+    allowed=set(read(allowed_path)['profileIds']) if allowed_path.exists() else None
     names = manifest.get('names') or {}
     roles = manifest.get('roles') or {}
-    return [{'profileId': int(pid), 'name': names.get(pid) or str(pid), 'reference': None, 'tracked': True, 'role': roles.get(pid, 'tracked')} for pid in manifest.get('players', {})]
+    return [{'profileId': int(pid), 'name': names.get(pid) or str(pid), 'reference': None, 'tracked': True, 'role': roles.get(pid, 'tracked')} for pid in manifest.get('players', {}) if allowed is None or int(pid) in allowed]
 
 
 def build_snapshot(root, transport=fetch_api, pages=GAMES_PAGES, only=None, now=None):

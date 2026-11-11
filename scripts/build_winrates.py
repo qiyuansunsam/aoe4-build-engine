@@ -6,7 +6,7 @@ Counting rules, all applied to the match rows as Relic recorded them:
   * a match counts when it is ranked 1v1/2v2/3v3/4v4 on a target build, has two full teams, one team recorded
     as winner and the other as loser, and ran for MIN_DURATION seconds or longer (shorter matches are drops);
   * rank band: the average of every player's rating before the match (Relic's rating for that ladder) falls in
-    the band. Diamond+ is 1200 and higher, the Diamond floor;
+    the numeric band. The historical 1200+ shortcut is retained; actual medal divisions are not inferred;
   * a civilization's games are its player appearances and its wins are the appearances on the winning team.
     1v1 mirror matches cannot say anything about the civilization and are left out of its win rate; they still
     count toward its pick rate;
@@ -14,7 +14,7 @@ Counting rules, all applied to the match rows as Relic recorded them:
 
 Usage: python -X utf8 scripts/build_winrates.py
 """
-import json, re, sys, urllib.request
+import argparse, json, math, re, sys, urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,10 +30,28 @@ PATCH = {'label': '17.0', 'builds': [12182, 12260], 'liveSince': '2026-10-29'}
 PATCH_START = int(datetime(2026, 10, 29, tzinfo=timezone.utc).timestamp())
 MIN_DURATION = 300
 MODES = {1: 'solo', 2: '2v2', 3: '3v3', 4: '4v4'}
-BANDS = [{'id': 'diamond_plus', 'label': 'Diamond+', 'minRating': 1200, 'maxRating': None}]
+# The API supplies oldrating, not historical Rank Points/divisions. Numeric bands
+# avoid presenting Elo-like per-queue ratings as confirmed competitive medals.
+BANDS = [
+    {'id': 'all', 'label': 'All ratings', 'minRating': 0, 'maxRating': None},
+    {'id': 'below_500', 'label': 'Below 500', 'minRating': 0, 'maxRating': 500},
+    {'id': '500_699', 'label': '500–699', 'minRating': 500, 'maxRating': 700},
+    {'id': '700_999', 'label': '700–999', 'minRating': 700, 'maxRating': 1000},
+    {'id': '1000_1199', 'label': '1000–1199', 'minRating': 1000, 'maxRating': 1200},
+    {'id': '1200_1399', 'label': '1200–1399', 'minRating': 1200, 'maxRating': 1400},
+    {'id': '1400_plus', 'label': '1400+', 'minRating': 1400, 'maxRating': None},
+    {'id': 'diamond_plus', 'label': '1200+', 'minRating': 1200, 'maxRating': None},
+]
+
 ASCII_NAME = re.compile(r"^[A-Za-z0-9 '&.\-]+$")
 CJK = re.compile(r'[\u4e00-\u9fff]')
 KANA_HANGUL = re.compile(r'[\u3040-\u30ff\uac00-\ud7af]')
+
+
+def rating_in_band(rating, band):
+    return (isinstance(rating, (int, float)) and not isinstance(rating, bool)
+            and math.isfinite(rating) and rating >= band['minRating']
+            and (band['maxRating'] is None or rating < band['maxRating']))
 
 
 def races():
@@ -81,7 +99,16 @@ def valid(row, race_to_civ):
 
 
 def main():
+    global OUT
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, default=OUT)
+    OUT = parser.parse_args().output
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     race_to_civ = races()
+    state_path = RAW / 'relic-state.json'
+    collection_state = json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else {}
+    def iso_timestamp(value):
+        return datetime.fromtimestamp(value, timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ') if value else None
     catalog = {c['id'] for c in json.loads((ROOT / 'data/game-catalog.json').read_text(encoding='utf-8'))['civilizations']}
     missing = sorted(set(race_to_civ.values()) - catalog)
     if missing:
@@ -115,12 +142,13 @@ def main():
         modes = {m: bucket() for m in ['solo', 'team', '2v2', '3v3', '4v4']}
         counted = 0
         for row, average in rated:
-            if average < band['minRating'] or (band['maxRating'] is not None and average >= band['maxRating']):
+            if not rating_in_band(average, band):
                 continue
             counted += 1
-            builds[str(row['build'] or 'unknown')] += 1
-            span[0] = row['start'] if span[0] is None else min(span[0], row['start'])
-            span[1] = row['start'] if span[1] is None else max(span[1], row['start'])
+            if band['id'] == 'all':
+                builds[str(row['build'] or 'unknown')] += 1
+                span[0] = row['start'] if span[0] is None else min(span[0], row['start'])
+                span[1] = row['start'] if span[1] is None else max(span[1], row['start'])
             mode = MODES[row['mt']]
             civs = [race_to_civ[p[2]] for p in row['players']]
             mirror = mode == 'solo' and civs[0] == civs[1]
@@ -165,16 +193,28 @@ def main():
         'source': {'name': "Relic community API (the game's own match service)", 'url': 'https://aoe-api.worldsedgelink.com/community/leaderboard',
                    'calls': ['getLeaderBoard2', 'getRecentMatchHistory']},
         'patch': PATCH,
-        'rules': {'minDurationSeconds': MIN_DURATION, 'ratingField': 'average player rating before the match, as Relic recorded it for that ladder',
-                  'soloMirrorsExcluded': True, 'teamModes': ['2v2', '3v3', '4v4']},
-        'sample': {'matchesStored': len(rows), 'matchesCounted': sum(r['games'] for r in out_ranks.values()), 'dropped': dict(dropped), 'builds': dict(builds),
+        'rules': {'rankBandMeaning': 'Numeric bands of mean matchhistorymember.oldrating across the match. Historical Rank Points and medal divisions are not supplied by this endpoint.', 'rankPointsReference': 'https://support.ageofempires.com/hc/en-us/articles/5777012678036-What-s-the-difference-between-Elo-and-Rank-Points', 'minDurationSeconds': MIN_DURATION, 'ratingField': 'average player rating before the match, as Relic recorded it for that ladder',
+                  'soloMirrorsExcluded': True, 'teamModes': ['2v2', '3v3', '4v4'],
+                  'winRate': 'winning civilization appearances / (winning + losing civilization appearances)',
+                  'pickRate': 'civilization appearances / all civilization appearances; does not affect ranking'},
+        'sample': {'matchesStored': len(rows), 'matchesCounted': out_ranks['all']['games'], 'dropped': dict(dropped), 'builds': dict(builds),
                    'firstMatch': span[0] and datetime.fromtimestamp(span[0], timezone.utc).strftime('%Y-%m-%d'),
                    'lastMatch': span[1] and datetime.fromtimestamp(span[1], timezone.utc).strftime('%Y-%m-%d')},
+        'sampling': {
+            'method': 'Deduplicated recent ranked match histories of active leaderboard players rated 1200+; accumulated across collection runs.',
+            'limitations': 'A leaderboard-seeded sample, not a census or a random sample of all ladder games. Team appearances within a match share an outcome.',
+            'rawStore': 'data/winrates/relic-games.jsonl',
+            'seedPlayers': len(collection_state.get('seeds', {})),
+            'seedListAsOf': iso_timestamp(collection_state.get('seedsAt')),
+            'latestHistoryFetch': iso_timestamp(max(collection_state.get('fetched', {}).values(), default=0)),
+        },
         'bands': BANDS,
         'maps': maps,
         'ranks': out_ranks,
     }
-    OUT.write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    temporary = OUT.with_suffix('.json.tmp')
+    temporary.write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    temporary.replace(OUT)
     for band in BANDS:
         r = out_ranks[band['id']]
         print(band['label'], r['games'], 'matches;', {m: v['games'] for m, v in r['modes'].items()})
