@@ -52,7 +52,7 @@ def main():
             if selected is None:
                 continue
             kind, unit = selected
-            if kind == 'units' and 'military' in unit.get('classes', []) and not re.search(r'dummy|scout|villager|trade_cart|fishing_boat|transport|scholar|priest|monk', unit['id']):
+            if kind == 'units' and 'military' in unit.get('classes', []) and not re.search(r'dummy|scout|villager|trade_cart|fishing_boat|transport|scholar|priest|monk|abbey_king', unit['id']):
                 total += row['nonstartingAppearances']
         production[identity] = total
     indexed = {(r.get('rankBand','all'),r['category'], r['civilization'], r['matchTypeId'], r['id']): r for r in audit}
@@ -60,6 +60,7 @@ def main():
     count = 0
     all_unit_totals = defaultdict(int)
     for cohort in data['cohorts']:
+        assert all('abbey_king' not in form for item in cohort['items'] for form in item.get('forms',[]))
         rates = [r['winRate'] for r in cohort['items']]
         assert rates == sorted(rates, reverse=True)
         band_def=next(b for b in BANDS if b['id']==cohort.get('rankBand','all'))

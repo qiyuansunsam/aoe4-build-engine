@@ -47,3 +47,14 @@
 @media(max-width:1100px){.wr-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:760px){.wr-view{margin-left:0;flex-basis:100%}.wr-filter>label{flex:1 1 140px}.wr-grid .page-panel{padding:16px 12px 8px}.wr-table .wr-pick{display:none}.wr-table .wr-barcell{width:30%;min-width:84px;padding-left:4px;padding-right:4px}.wr-table th,.wr-table td{padding:5px}}
 @media(max-width:540px){.wr-table .wr-name .civ-flag{width:24px;height:15px;margin-right:6px}.wr-table .wr-name{white-space:normal}.wr-table .wr-games{display:none}}
+/* Keep the diverging plot centered in the board: the rank/name columns on the
+   left balance the three numerical columns on the right. The plot's 50% scale
+   remains unchanged; it receives all remaining width. */
+@media(min-width:761px){
+ .wr-table{table-layout:fixed}
+ .wr-table tr>:nth-child(2){width:190px}
+ .wr-table .wr-name{white-space:normal;overflow-wrap:anywhere}
+ .wr-table .wr-rate,.wr-table .wr-games,.wr-table .wr-pick{width:72px}
+ .wr-table .wr-barcell{width:auto}
+}
+@media(min-width:761px) and (max-width:1100px){.wr-table tr>:nth-child(2){width:166px}.wr-table .wr-rate,.wr-table .wr-games,.wr-table .wr-pick{width:64px}}

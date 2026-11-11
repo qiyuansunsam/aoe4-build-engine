@@ -11,7 +11,7 @@ CATALOG=ROOT/'data/game-catalog.json'
 META=ROOT/'data/catalog-enrichment.json'
 def load(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-def combat(u):return 'military' in u.get('classes',[]) and not re.search(r'(?:dummy|scout|villager|trade_cart|fishing_boat|transport|scholar|priest|monk)',u['id'])
+def combat(u):return 'military' in u.get('classes',[]) and not re.search(r'(?:dummy|scout|villager|trade_cart|fishing_boat|transport|scholar|priest|monk|abbey_king)',u['id'])
 def landmark(u):return u['id'].startswith(('building_landmark_','building_house_of_wisdom_','building_wonder_')) or u['id']=='building_defense_fortress_tem'
 def significant(u):return ('town_center' in u['id'] and 'capital' not in u['id']) or 'keep' in u['id']
 def band(score,n):
@@ -193,7 +193,7 @@ def main():
         'minimumAppearances':30,'civilizations':{c['id']:c['name'] for c in catalog['civilizations']}|{'__all__':'All civilizations','generic':'Generic'},
         'cohorts':output,'provenance':{'tcTimelinesSha256':sha(args.tc_cache),'sourceSha256':sha(SOURCE),'outcomesSha256':sha(HISTORY),'catalogSha256':sha(CATALOG),'familyMetadataSha256':sha(META),'startTimestamp':min(g['startedAt'] for g in games),'endTimestamp':max(g['startedAt'] for g in games)},
         'method':[
-            'Unit share in each game = recorded nonstarting appearances of that unit family / all classified military unit appearances. Weighted win rate = sum(share in wins) / (sum(share in wins) + sum(share in losses)). Counts, not resource costs, determine shares.',
+            'Unit share in each game = recorded nonstarting appearances of that unit family / all classified military unit appearances, excluding the single-active King. Weighted win rate = sum(share in wins) / (sum(share in wins) + sum(share in losses)). Counts, not resource costs, determine shares.',
             'Average share when used is the arithmetic mean of those per-game shares among games using the unit. Usage is games using the item divided by games of its relevant civilization(s) in the selected mode. Generic units pool civilizations with that catalog unit; civilization filters restrict the denominator to that civilization.',
             'Generic unit tiers and production variants are merged. Named special units such as Gilded Spearman and Clocktower Battering Ram stay distinct. Recorded appearances can include free units and transformations, so these are not guaranteed paid production counts.',
             'Technologies and buildings use ordinary win rate among games using them. Buildings include wonders, landmarks, House of Wisdom wing completions, Golden Tent, generic Keeps and TC milestones. TC milestones mean reaching one, two or three concurrently owned TCs, using verified construction and destruction timelines. Replacements do not inflate the count. Packed TCs remain the same owned building; unpacking does not create another. Incomplete TC timelines are excluded from TC usage denominators.',

@@ -17,6 +17,9 @@ additions to the game library live on the machine's disk and reset when it resta
 
 ## Redeploy
 
+The repository is `qiyuansunsam/mcaoe4`, branch `master`. Git pushes do not themselves deploy. Run `python -X utf8 scripts/deploy_live.py` from the repo root to build, check asset limits and publish the existing Worker. Data files are split into hashed chunks when needed; only referenced calculation evidence is copied.
+
+
 ```bash
 # front end: the 31 MB single page is split into data/*.js files (Cloudflare caps a file at 25 MiB)
 python -X utf8 site/build.py --split-data --out deploy/cloudflare/dist

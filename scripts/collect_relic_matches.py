@@ -28,7 +28,7 @@ OUT = ROOT / 'data' / 'winrates'
 GAMES = OUT / 'relic-games.jsonl'
 STATE = OUT / 'relic-state.json'
 API = 'https://aoe-api.worldsedgelink.com/community/leaderboard'
-UA = 'mcaoe4-build-crafter/1.0 (ranked win-rate aggregation; github.com/qiyuansunsam/aoe4-build-engine)'
+UA = 'mcaoe4-build-crafter/1.0 (ranked win-rate aggregation; github.com/qiyuansunsam/mcaoe4)'
 
 # Update 17.0 went live 2026-10-29 (build 12182); the 2026-11-04 hotfix is build 12260.
 TARGET_BUILDS = (12182, 12260)

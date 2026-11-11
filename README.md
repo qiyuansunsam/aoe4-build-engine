@@ -1,5 +1,7 @@
 # Mathmatically Correct AoE 4
 
+Repository: [qiyuansunsam/mcaoe4](https://github.com/qiyuansunsam/mcaoe4), default branch `master`. Local canonical path: `C:/Users/Sam/projects/mcaoe4` (junction to the existing checkout). Production: https://mcaoe4.qiyuansunsam.workers.dev.
+
 A local strategy workspace rebuilt from `aoe4-build-engine`: compare theoretical plans, explore upgrades at a selected time, and study sourced historical 4v4 openings. The original local path `C:/Users/Sam/projects/MathmaticallyCorrectAoe4` now links to this checkout. See [context](CONTEXT.md) and [design](DESIGN.md).
 
 ```powershell
@@ -25,7 +27,9 @@ Headless patch collection (no game client or AoE4World service):
 ```powershell
 python -X utf8 scripts/patch_pipeline.py --watch --refresh-discovery --publish-script scripts/publish_patch_analysis.py --publish-every 500
 ```
-The worker analyzes every known ranked match of patch builds 12182/12260, broadens discovery to all ranked rating levels, caches verified compressed files, and resumes through a SQLite manifest. Official recent-history limits mean this is not a census of every match worldwide. Progress is `.cache/patch-analysis/status.json`; last successful local publication is `published.json` in the same directory. Create `.cache/patch-analysis/STOP` to stop gracefully; remove that file before resuming. A 20 GB free-space reserve pauses collection. The worker updates the local site; it does not automatically commit, push or deploy future snapshots.
+The worker analyzes every known ranked match of patch builds 12182/12260, broadens discovery to all ranked rating levels, caches verified compressed files, and resumes through a SQLite manifest. Official recent-history limits mean this is not a census of every match worldwide. Progress is `.cache/patch-analysis/status.json`; last successful local publication is `published.json` in the same directory. Create `.cache/patch-analysis/STOP` to stop gracefully; remove that file before resuming. A 20 GB free-space reserve pauses collection. The worker always updates the local site. With `.cache/patch-analysis/live-publication.json` set to `{"enabled":true}`, each verified publication also rebuilds and deploys the existing Cloudflare Worker. It does not automatically commit or push snapshots.
+
+Deploy the current verified snapshot with `python -X utf8 scripts/deploy_live.py`. Git push alone does not deploy.
 
 Manual publication of a coherent worker snapshot: `python -X utf8 scripts/patch_pipeline.py --export`, then `python -X utf8 scripts/publish_patch_analysis.py --base .cache/patch-analysis`. Publication verifies item arithmetic and official outcomes before rebuilding. Per-game calculation evidence lives in `data/tier-evidence/`. Browser checks: `node site/verify-production-rankings.cjs`; artifacts are in `site/shots/production-rankings/`.
 
