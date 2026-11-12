@@ -19,6 +19,8 @@ def main():
     else:
         import fcntl
         fcntl.flock(lock_file.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)
+    # Every deploy carries current ladder ranks (Sam, 2026-11-13); a failed AoE4 World call keeps the previous ones.
+    subprocess.run([sys.executable, '-X', 'utf8', 'scripts/refresh_player_ranks.py'], cwd=ROOT, check=False)
     subprocess.run([sys.executable, '-X', 'utf8', 'site/build.py', '--split-data', '--out', str(TARGET / 'dist')], cwd=ROOT, check=True)
     files = [p for p in (TARGET / 'dist').rglob('*') if p.is_file()]
     if len(files) > 20000 or any(p.stat().st_size > 25 * 1024 * 1024 for p in files):

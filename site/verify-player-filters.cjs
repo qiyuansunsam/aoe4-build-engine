@@ -20,6 +20,23 @@ const ph=phaseFromGames(fulls);if(JSON.stringify(ph.phase)!==JSON.stringify(a.st
 for(const [civ,c] of Object.entries(a.byCiv||{})){out.civs++;cmp(radarFromGames(fulls.filter(f=>f.civ===civ)),c.radar,pid+':'+civ);}}
 return out;});
 assert.deepEqual(parity.bad.slice(0,5),[],'browser recomputation equals the stored radars');assert.ok(parity.players>=4&&parity.components>100,'parity covered the profiles');
+// Live ranks: after the AoE4 World read every card shows the rating now held in memory; the read itself is reported.
+await p.evaluate(()=>window.playerRanksReady());
+const ranks=await p.evaluate(()=>playerProfiles.players.map(x=>({id:x.profileId,live:!!x.ranksAsOf,rating:x.modes?.rm_team?.rating??null,snapshot:PLAYER_PROFILES.players.find(y=>y.profileId===x.profileId)?.modeSnapshotAsOf||null})));
+for(const r of ranks){if(r.rating==null)continue;const text=await p.locator(`.player-card:has(a[href="#players/${r.id}"]) .player-meta`).innerText();assert.ok(text.replace(/,/g,'').includes(String(r.rating)),`card ${r.id} shows rating ${r.rating}: ${text}`);}
+// Home page pills: the cards' game counts and radars follow the result / recency choice, and the choice carries into a profile.
+const homeFacts=await p.evaluate(()=>Object.fromEntries(Object.entries(PLAYER_ANALYSIS.players).map(([id,a])=>[id,{all:a.analyzedGames.length,wins:a.matches.filter(m=>m.result==='win').length}])));
+const cardGames=()=>p.evaluate(()=>Object.fromEntries([...document.querySelectorAll('.player-card')].map(c=>[c.querySelector('a.match-open').getAttribute('href').split('/')[1],+c.querySelector('.player-card-recent b').textContent])));
+assert.deepEqual(await cardGames(),Object.fromEntries(Object.entries(homeFacts).map(([k,v])=>[k,v.all])),'home: every analysed game counted');
+await p.locator('.players-filter .filter-pill[data-key="result"][data-value="win"]').click();
+assert.deepEqual(await cardGames(),Object.fromEntries(Object.entries(homeFacts).map(([k,v])=>[k,v.wins])),'home: wins only');
+const homeScores=await p.evaluate(()=>Object.fromEntries([...document.querySelectorAll('.player-card')].map(c=>{const id=c.querySelector('a.match-open').getAttribute('href').split('/')[1],a=PLAYER_ANALYSIS.players[id],fulls=a.matches.filter(m=>m.result==='win').map(m=>PLAYER_ANALYSIS.matches.find(x=>x.gameId===m.gameId).players.find(x=>String(x.profileId)===id)),r=radarFromGames(fulls);
+return [id,[[...c.querySelectorAll('.axis-mini b')].map(b=>b.textContent.trim()),Object.keys(PLAYER_ANALYSIS.axes).map(ax=>r[ax].score==null?'—':String(r[ax].score))]];})));
+for(const [id,[shown,expected]] of Object.entries(homeScores))assert.deepEqual(shown,expected,`home: card ${id} axis scores are those of its wins`);
+await p.locator('.player-card a.match-open').first().click();await p.waitForSelector('.game-filter .filter-pill');
+assert.equal(await p.locator('.filter-pill.active[data-key="result"]').getAttribute('data-value'),'win','the home choice carries into the profile');
+await p.locator('.filter-pill[data-key="result"][data-value=""]').click();
+await p.goto(`http://127.0.0.1:${port}/#players`,{waitUntil:'networkidle'});assert.deepEqual(await cardGames(),Object.fromEntries(Object.entries(homeFacts).map(([k,v])=>[k,v.all])),'home: cleared');
 const pid=await p.evaluate(()=>Object.entries(PLAYER_ANALYSIS.players).sort((x,y)=>y[1].matches.length-x[1].matches.length)[0][0]);
 await p.goto(`http://127.0.0.1:${port}/#players/${pid}`,{waitUntil:'networkidle'});
 const facts=await p.evaluate(pid=>{const a=PLAYER_ANALYSIS.players[pid];return {all:a.matches.length,wins:a.matches.filter(m=>m.result==='win').length,losses:a.matches.filter(m=>m.result==='loss').length,
@@ -51,4 +68,4 @@ assert.equal(await p.locator('.radar-area').count(),1,'radar drawn');
 await p.setViewportSize({width:390,height:800});assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1),'no page scroll at 390 px');
 await p.screenshot({path:process.argv[3]||'player-filters.png',fullPage:false});
 assert.deepEqual(errors,[],'no page errors');
-console.log('player filters OK',JSON.stringify({parity:{players:parity.players,axes:parity.axes,components:parity.components,civs:parity.civs,worstScoreDiff:parity.worst},facts}));await b.close();})().catch(e=>{console.error(e);process.exit(1);});
+console.log('player filters OK',JSON.stringify({ranks,parity:{players:parity.players,axes:parity.axes,components:parity.components,civs:parity.civs,worstScoreDiff:parity.worst},facts}));await b.close();})().catch(e=>{console.error(e);process.exit(1);});
