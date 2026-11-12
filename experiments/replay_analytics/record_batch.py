@@ -91,14 +91,22 @@ def record_one(gid, staged, row, status, recorder, record_replay, args):
         cmd += ['--game-dir', str(args.game_dir)]
     t0 = time.time()
     log_path = DATA / f'record-{gid}.log'
-    with log_path.open('w', encoding='utf-8') as log:
-        proc = subprocess.Popen(cmd, cwd=recorder, stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL)
-        # No Windows session mute: Windows keeps it per executable after the game closes, so Sam's own game stayed muted
-        # (2026-10-28). The recorder's RECORDING_GRAPHICS sets the in-game volumes to 0 and restores them instead.
-        while proc.poll() is None:
-            time.sleep(5)
-            if time.time() - t0 > 3600:
-                proc.kill()
+    for attempt in range(3):
+        with log_path.open('w', encoding='utf-8') as log:
+            proc = subprocess.Popen(cmd, cwd=recorder, stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL)
+            # No Windows session mute: Windows keeps it per executable after the game closes, so Sam's own game stayed muted
+            # (2026-10-28). The recorder's RECORDING_GRAPHICS sets the in-game volumes to 0 and restores them instead.
+            while proc.poll() is None:
+                time.sleep(5)
+                if time.time() - t0 > 3600:
+                    proc.kill()
+        # A direct copy started beside others sometimes quits while still loading (2026-11-13: "game exited before it
+        # opened its scarlog" read in one log; 6 of 18 earlier launches with three at once also failed within 85-185 s and every
+        # solo relaunch worked). Relaunch it in place.
+        if args.workers > 1 and 'exited before it opened its scarlog' in log_path.read_text(encoding='utf-8', errors='replace'):
+            print(f'  {gid} quit while loading (attempt {attempt + 1}); relaunching', flush=True)
+            continue
+        break
     rlog = recorder / 'recordings' / f'aoe4_{gid}.rlog'
     row['wall_seconds'] = round(time.time() - t0, 1)
     row['exit_code'] = proc.returncode

@@ -1191,7 +1191,8 @@ def main():
         players_out[pid_s] = {'profileId': pid, 'name': rows[0][1]['name'] if rows else pid_s, 'requestedGames': requested, 'analyzedGames': analyzed, 'missingGames': [g for g in requested if g not in set(analyzed)],
                               'radar': axes, 'byCiv': by_civ, 'armyPercentileCurve': curve, 'strongestPhase': strongest,
                               'matches': [{'gameId': g, 'map': next(mm['map'] for mm in matches if mm['gameId'] == g), 'civ': m['civ'], 'result': (m.get('summary') or {}).get('result'), 'durationSeconds': m['durationSeconds'], 'radar': {a: m['radar'][a]['score'] for a in AXES}, 'strongestPhase': m['growth'].get('strongestPhase')} for g, m in rows]}
-    out = {'schemaVersion': 2, 'generatedAt': datetime.now(timezone.utc).isoformat(), 'definitions': __doc__, 'axes': {a: [p for p, _, _ in c] for a, c in AXES.items()}, 'primary': {a: [p for p, _, w in c if w > 1] for a, c in AXES.items()}, 'poolSize': len(pool), 'playerPoolSize': len(player_means),
+    out = {'schemaVersion': 2, 'generatedAt': datetime.now(timezone.utc).isoformat(), 'definitions': __doc__, 'axes': {a: [p for p, _, _ in c] for a, c in AXES.items()}, 'primary': {a: [p for p, _, w in c if w > 1] for a, c in AXES.items()}, 'higher': {p: h for c in AXES.values() for p, h, _ in c}, 'minGameSeconds': MIN_GAME_SECONDS, 'minPoolGames': MIN_POOL_GAMES,
+           'poolSize': len(pool), 'playerPoolSize': len(player_means),
            'normalization': 'profiles: each component is the player mean over their recorded games, ranked against every other player mean in the dataset (n = players); game pages: each game ranked within all player-matches; axis = weighted mean of component percentiles (primary components double); raw values and n beside every percentile',
            'players': players_out, 'matches': matches}
     (DATA / 'skill-analysis.json').write_text(json.dumps(out, ensure_ascii=False), encoding='utf-8')

@@ -31,11 +31,11 @@ def main():
     matches = []
     for match in analysis['matches']:
         meta = games.get(match['gameId'], {}).get('game', {})
-        matches.append({**match, 'startedAt': meta.get('started_at'), 'mode': meta.get('kind'), 'mapName': meta.get('map'), 'requestedBy': games.get(match['gameId'], {}).get('requested_by', []),
+        matches.append({**match, 'startedAt': meta.get('started_at'), 'mode': meta.get('kind'), 'patch': meta.get('patch'), 'mapName': meta.get('map'), 'requestedBy': games.get(match['gameId'], {}).get('requested_by', []),
                         'players': [p if p.get('tracked') else slim(p) for p in match['players']]})
     out = {k: v for k, v in analysis.items() if k != 'matches'}
     out['matches'] = matches
-    out['manifestFetchedAt'] = manifest.get('fetched_at')
+    out['manifestFetchedAt'] = manifest.get('extended_at') or manifest.get('fetched_at')  # when games were last added
     out['roles'] = manifest.get('roles', {})
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     print('wrote', OUT, OUT.stat().st_size // 1024, 'KB', len(matches), 'matches')

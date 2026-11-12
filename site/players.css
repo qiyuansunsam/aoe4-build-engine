@@ -101,3 +101,6 @@
 /* Secondary stat beside the value, not under it (Sam, 2026-10-28). */
 .axis-block .metric-table td.metric-value{width:112px}
 .axis-block .metric-table td.metric-value small{display:inline;margin:0 0 0 6px;font-size:9.5px;line-height:1}
+/* Game filters (2026-11-13): result and recency pills, per-game checkboxes in the games table. */
+.game-filter{margin-bottom:8px!important}.filter-gap{width:1px;align-self:stretch;background:var(--line);margin:0 4px}.filter-count{align-self:center;font:10px var(--mono);color:var(--muted)}
+.analysis-games .pick-col{width:26px;text-align:center;padding-right:0}.analysis-games .pick-col input{margin:0;vertical-align:middle;accent-color:var(--a)}.analysis-games tr.off td:not(.pick-col){opacity:.4}
